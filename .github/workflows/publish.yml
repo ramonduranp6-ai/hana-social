@@ -1,0 +1,50 @@
+name: Publicar posts da Hana
+
+# Roda a cada 30 min: sincroniza aprovações, avisa pendentes e publica o que venceu.
+# Também pode ser disparado na mão em Actions -> Run workflow.
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch: {}
+
+# Permite que o job faça commit de volta (status dos posts, arquivamento).
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: hana-publish
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Rodar publicador
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          MEDIA_BASE_URL: ${{ secrets.MEDIA_BASE_URL }}
+          REQUIRE_APPROVAL: ${{ vars.REQUIRE_APPROVAL || '1' }}
+        run: python publisher/run.py
+
+      - name: Salvar estado da fila
+        run: |
+          git config user.name "hana-bot"
+          git config user.email "hana-bot@users.noreply.github.com"
+          git add content/ publisher/.telegram_offset || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: atualiza estado da fila [skip ci]"
+            git push
+          else
+            echo "Nada mudou na fila."
+          fi
