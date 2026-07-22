@@ -11,10 +11,16 @@ Requisitos (ver SETUP.md):
 Documentação: https://developers.facebook.com/docs/instagram-api/guides/content-publishing
 """
 
+import os
 import time
 import requests
 
-GRAPH = "https://graph.facebook.com/v21.0"
+# Base da API. Dois caminhos possíveis (ver SETUP.md):
+#   - "Instagram API with Instagram Login" (novo, sem Página do Facebook):
+#         GRAPH_BASE=https://graph.instagram.com/v21.0
+#   - "Instagram Graph API" clássico (via Página do Facebook):
+#         GRAPH_BASE=https://graph.facebook.com/v21.0  (padrão)
+GRAPH = os.environ.get("GRAPH_BASE", "https://graph.facebook.com/v21.0").rstrip("/")
 
 
 class IGError(RuntimeError):
