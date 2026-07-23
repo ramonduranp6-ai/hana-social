@@ -30,28 +30,27 @@ Sistema para crescer e automatizar o Instagram da cadela Hana
     (fluxo novo, Instagram API with Instagram Login, sem Página do Facebook).
   - App ainda **não publicado** (modo desenvolvimento).
 
+## FEITO em 23/07/2026 (token + secrets) ✅
+- Conta @hanaduransanches conectada ao app (Business Login) e token gerado
+  pelo painel da Meta (via extensão do Claude no Chrome + aprovação do Ramón).
+- `IG_USER_ID = 17841471483838197`.
+- Secrets gravados no GitHub (repo ramonduranp6-ai/hana-social):
+  `IG_ACCESS_TOKEN` e `IG_USER_ID`. Variables: `REQUIRE_APPROVAL=0` (modo
+  simples, sem Telegram) e `GRAPH_BASE=https://graph.instagram.com/v21.0`.
+- Token testado com sucesso (`GET /me` retornou username e user_id corretos).
+- ⚠️ Token vence em ~60 dias (por volta de **21/09/2026**). Renovar antes,
+  senão os posts param calados.
+
 ## PRÓXIMO PASSO IMEDIATO (onde paramos)
-No painel do app (developers.facebook.com/apps/1776084913751376), o Ramón ia
-clicar em **"Personalizar o caso de uso 'Gerenciar mensagens e conteúdo no
-Instagram'"** para:
-1. Conectar a conta @hanaduransanches (Business Login for Instagram).
-2. Pedir os escopos `instagram_business_basic` e `instagram_business_content_publish`.
-3. **Gerar o token de longa duração** → `IG_ACCESS_TOKEN`.
-4. Pegar o **id numérico da conta** → `IG_USER_ID`.
-
-> Essa etapa é no navegador da Meta. Claude Code não clica em site — é guiada por
-> print (Ramón manda screenshot, Claude diz o próximo clique) ou pela extensão
-> do Claude no Chrome.
-
-## O que ainda falta depois do token
 1. Deixar o repositório **público** (ou usar bucket) para hospedar a mídia →
-   definir `MEDIA_BASE_URL`.
-2. Cadastrar os Secrets no GitHub Actions (ver `SETUP.md`): `IG_USER_ID`,
-   `IG_ACCESS_TOKEN`, `MEDIA_BASE_URL`; Variables `REQUIRE_APPROVAL` e `GRAPH_BASE`.
-3. Testar o disparo manual do workflow.
-4. **App Review da Meta** (2-4 semanas) para publicação em produção. Até lá,
-   testar em modo desenvolvimento na própria conta.
-5. Enquanto o review não sai, postar pelo Meta Business Suite (grátis) o conteúdo
+   definir o secret `MEDIA_BASE_URL` (Claude passa o valor pronto).
+2. Testar o disparo manual do workflow (Actions → Publicar posts da Hana).
+
+## O que ainda falta depois disso
+1. **App Review da Meta** (2-4 semanas) para publicação em produção. Até lá,
+   testar em modo desenvolvimento na própria conta (a conta conectada é
+   testadora, então já dá pra publicar nela).
+2. Enquanto o review não sai, postar pelo Meta Business Suite (grátis) o conteúdo
    que o Claude edita.
 
 ## Decisões de estilo/marca já firmadas
