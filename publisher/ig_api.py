@@ -99,7 +99,9 @@ def publish(ig_user_id, token, media_type, media_url, caption):
         creation_id = create_image_container(ig_user_id, media_url, caption, token)
     elif media_type == "reel":
         creation_id = create_reel_container(ig_user_id, media_url, caption, token)
-        wait_until_ready(creation_id, token)
     else:
         raise IGError(f"Tipo de mídia não suportado: {media_type}")
+    # Foto também processa de forma assíncrona ("Media ID is not available"
+    # se publicar cedo demais), então espera o container em ambos os casos.
+    wait_until_ready(creation_id, token)
     return publish_container(ig_user_id, creation_id, token)

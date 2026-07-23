@@ -42,7 +42,8 @@ jobs:
         run: |
           git config user.name "hana-bot"
           git config user.email "hana-bot@users.noreply.github.com"
-          git add content/ publisher/.telegram_offset || true
+          git add content/
+          git add publisher/.telegram_offset 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "chore: atualiza estado da fila [skip ci]"
             git push
