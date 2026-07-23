@@ -2,3 +2,6 @@
 publisher/.telegram_offset
 __pycache__/
 *.pyc
+
+# Fotos brutas nunca vao para o repo publico
+Fotos da Hana/
