@@ -31,7 +31,12 @@ estética. Também alcança o público amplo de pet pela fofura.
   caramelo comum — o tom acinzentado/lilás é o diferencial da raça.
 - Fundo limpo. Sem bagunça (roupa secando, tralha). Vinheta ajuda a focar nela.
 - Câmera lenta e grade de cor com moderação; nitidez sim.
-- Nunca inventar/gerar imagem da Hana. Só material real editado.
+- Fotos reais editadas são a BASE da conta. Conteúdo gerado por IA (nano
+  banana/Gemini) é permitido como formato criativo à parte — decisão do Ramón
+  em 23/07/2026 — desde que seja claramente estilizado ou fantasioso (cartoon,
+  cenas inventadas tipo "lineup de tamanhos", "shopping com as amigas").
+  Nunca passar IA como registro real do dia a dia dela.
+- Por ora, sem fotos do Ramón nos posts — só a Hana (instrução de 23/07/2026).
 
 ## Regras de legenda
 - Tom leve, direto, brasileiro. Primeira linha é gancho (aparece antes do "ver mais").

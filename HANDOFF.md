@@ -41,10 +41,17 @@ Sistema para crescer e automatizar o Instagram da cadela Hana
 - ⚠️ Token vence em ~60 dias (por volta de **21/09/2026**). Renovar antes,
   senão os posts param calados.
 
+## FEITO em 23/07/2026 (primeiro post publicado) ✅
+- Repositório tornado **público** e secret `MEDIA_BASE_URL` configurado.
+- Workflow testado via disparo manual — 3 execuções com sucesso.
+- **Primeiro post publicado no Instagram**: `2026-07-22_bar-hana` (foto do bar),
+  movido para `content/posted/`, `instagram_id = 18118796690302997`.
+- Pipeline completo funcionando ponta a ponta em modo desenvolvimento.
+
 ## PRÓXIMO PASSO IMEDIATO (onde paramos)
-1. Deixar o repositório **público** (ou usar bucket) para hospedar a mídia →
-   definir o secret `MEDIA_BASE_URL` (Claude passa o valor pronto).
-2. Testar o disparo manual do workflow (Actions → Publicar posts da Hana).
+1. **Produzir o próximo lote de conteúdo** (6-10 arquivos): Ramón manda as
+   fotos/vídeos, Claude edita e monta os posts na fila. A fila está vazia.
+2. Gravar clipes do pilar "dor do dono de bully" (roupa/coleira não serve).
 
 ## O que ainda falta depois disso
 1. **App Review da Meta** (2-4 semanas) para publicação em produção. Até lá,
@@ -62,4 +69,7 @@ Sistema para crescer e automatizar o Instagram da cadela Hana
   falta gravar clipes desse pilar.
 
 ## Branch
-Trabalho na branch `claude/ola-513skx`.
+Trabalho direto na `main`. O repositório agora vive na máquina local do Ramón
+(`Desktop\Hana Social`), que funciona como servidor — sessões são comandadas
+pelo celular via claude.ai/code. Fotos brutas vão na pasta local
+`Fotos da Hana/` (fora do git).
