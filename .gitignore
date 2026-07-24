@@ -5,3 +5,6 @@ __pycache__/
 
 # Fotos brutas nunca vao para o repo publico
 Fotos da Hana/
+
+# log do vigia local
+studio/sentinela.log

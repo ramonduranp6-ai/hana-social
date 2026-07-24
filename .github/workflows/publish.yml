@@ -50,3 +50,9 @@ jobs:
           else
             echo "Nada mudou na fila."
           fi
+
+      # Falha alto se algum post falhou ou ficou vencido sem publicar.
+      # Job vermelho => GitHub avisa por e-mail. Custo zero.
+      - name: Sentinela
+        if: always()
+        run: python publisher/sentinel.py
