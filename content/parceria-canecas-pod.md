@@ -1,51 +1,40 @@
-# Parceria — Hana Social x Canecas POD (@sanchesdefranca.studio)
+# Parceria comercial — Hana Social x Canecas POD
 
-Negociada em 25/07/2026 entre os dois projetos do Ramón, por orientação dele
-("sejam amigos e se ajudem no que for possível").
+Definida em 25/07/2026 pelo Ramón, acionista dos dois projetos.
 
-## Contexto dos dois lados
-- **Hana Social**: @hanaduransanches, 332 seguidores, público majoritariamente
-  brasileiro, tese de "cultura bully premium", fase de construção de audiência.
-- **Canecas POD**: loja Etsy + @sanchesdefranca.studio, retratos de pet em
-  caneca, público AMERICANO, conteúdo em inglês, venda em dólar.
+## REGRA DE FRONTEIRA (a mais importante)
 
-## Tese da parceria
-Os públicos não se cruzam (BR x EUA), então **trocamos ativos de conteúdo, não
-tráfego**. Cross-promo pesado converteria pouco e desgastaria as duas marcas.
+Os projetos são **independentes**. Parceria comercial entre empresas do mesmo
+dono é uma coisa; uma fazer o trabalho da outra, opinar na marca dela ou
+misturar identidades é outra — e essa segunda **não acontece**.
 
-## Termos ACEITOS pelos dois lados em 25/07/2026 ✅
-O Canecas POD aceitou integralmente, incluindo a recusa técnica do link na bio
-(revisão em 3-5 mil seguidores) e o story por evento em vez de semanal.
+Na prática, para este projeto:
+- Não opinar sobre marca, logo, nome, estratégia ou execução do outro projeto.
+- Não mexer em arquivos da pasta do outro projeto (nem adicionar, nem remover).
+- Nada da identidade do outro projeto entra aqui. A identidade da Hana **não
+  muda**: paleta lilás, Bodoni, design kit e tom de voz seguem como estão.
+- O que precisar atravessar entre os projetos passa pelo Ramón, não direto.
 
-### Hana dá
-- Acervo de fotos editadas em alta, atualizado semanalmente
-  (`OneDrive\Fotos da Hana\03 - editadas` → `Canecas POD\Hana-Fotos`).
-  8 fotos já entregues em 25/07/2026.
-- Uso livre da Hana como caso demonstrativo ("meet Hana", antes e depois) no
-  conteúdo em inglês do studio — ela é o melhor material de demonstração deles.
-- Story marcando @sanchesdefranca.studio **por evento** (quando sair arte boa),
-  estimativa 1-2 por mês, em vez de 1 por semana no calendário.
-- Menção em legenda quando a arte for o assunto do post.
-- Reaproveitamento do nosso pipeline (`publisher/`, `studio/preparar_lote.py`,
-  sentinelas) para o Instagram do studio.
+Registro honesto: em 25/07/2026 este projeto extrapolou — opinou sobre os logos
+do outro time e produziu identidade de grupo. O Ramón corrigiu, a opinião foi
+retirada formalmente e a fronteira acima passa a valer.
 
-### Hana recebe
-- Retratos da Hana (aquarela, cartoon, pop art) gerados pelo motor deles,
-  devolvidos em alta para virar conteúdo do pilar estética/status.
-- Aviso de quais conceitos performaram bem no público americano, para adaptar.
+## O que a parceria É (autorizado e mantido)
 
-### Hana recusa por ora
-- **Link do studio na bio.** Com 332 seguidores e posicionamento em construção,
-  link de loja em dólar custa mais em credibilidade do que traz em clique.
-  Revisar quando a conta passar de ~3-5 mil seguidores ou quando existir
-  produto próprio da Hana. Decisão final é do Ramón — se ele mandar, entra.
+**Hana fornece:** acervo de fotos editadas em alta
+(`OneDrive\Fotos da Hana\03 - editadas` → `Canecas POD\Hana-Fotos`, atualizado
+semanalmente) e uso da Hana como caso demonstrativo no conteúdo em inglês deles.
 
-## Regras de uso das fotos (inegociáveis)
+**Hana recebe:** os retratos artísticos da Hana em alta, para publicar como
+conteúdo do pilar estética/status.
+
+**Divulgação cruzada:** story marcando o perfil deles **por evento** (quando
+sair arte boa de verdade), nunca por calendário. Sem link na bio da Hana por
+ora — revisar em 3-5 mil seguidores ou quando existir produto próprio dela.
+
+**Aprovação:** nenhum story ou post sai sem o "aprovado" do Ramón.
+
+## Regras de uso das fotos
 - Preservar as marcas dela: manchas merle e lista branca da testa.
 - Nada de foto do Ramón em conteúdo público.
 - Arte de IA sempre claramente estilizada, nunca passada como foto real.
-
-## Próximo passo
-Canecas POD manda 2-3 retratos (sugeridos: `post_gramado.jpg` e
-`edit_C_tight.jpg`) → levo ao Ramón com o lote da semana → aprovado, sai o
-primeiro story marcando o studio.
