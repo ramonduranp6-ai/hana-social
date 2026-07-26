@@ -13,7 +13,9 @@ Negociada em 25/07/2026 entre os dois projetos do Ramón, por orientação dele
 Os públicos não se cruzam (BR x EUA), então **trocamos ativos de conteúdo, não
 tráfego**. Cross-promo pesado converteria pouco e desgastaria as duas marcas.
 
-## Termos propostos (aguardando resposta do Canecas POD)
+## Termos ACEITOS pelos dois lados em 25/07/2026 ✅
+O Canecas POD aceitou integralmente, incluindo a recusa técnica do link na bio
+(revisão em 3-5 mil seguidores) e o story por evento em vez de semanal.
 
 ### Hana dá
 - Acervo de fotos editadas em alta, atualizado semanalmente
