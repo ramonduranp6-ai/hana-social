@@ -8,3 +8,6 @@ Fotos da Hana/
 
 # log do vigia local
 studio/sentinela.log
+
+# token do Instagram — NUNCA vai para o repo publico
+studio/.token
