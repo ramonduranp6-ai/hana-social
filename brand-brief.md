@@ -36,7 +36,17 @@ estética. Também alcança o público amplo de pet pela fofura.
   em 23/07/2026 — desde que seja claramente estilizado ou fantasioso (cartoon,
   cenas inventadas tipo "lineup de tamanhos", "shopping com as amigas").
   Nunca passar IA como registro real do dia a dia dela.
-- Por ora, sem fotos do Ramón nos posts — só a Hana (instrução de 23/07/2026).
+- **Imagem do Ramón — regra corrigida em 25/07/2026:** aqui PODE. A Hana é
+  família, é o cachorro dele, e ele autoriza aparecer no conteúdo deste projeto.
+  A restrição de imagem vale só para o projeto de negócio dele (Canecas /
+  Brushed & Brewed), que é confidencial.
+  **A ESTRELA É A HANA.** O Ramón aparecer não é problema, mas nunca é o foco:
+  ele entra como coadjuvante, na dinâmica dele com ela (o "assistente de palco
+  da patroa"). Nada de post cujo assunto seja ele. Regra prática: a Hana é o
+  motivo do post; se ela puder ser cortada do quadro sem mudar a piada, o post
+  está errado.
+- **Ao FORNECER fotos para o outro projeto:** só a Hana sozinha, nunca com o
+  Ramón. Ver `content/parceria-canecas-pod.md`.
 
 ## Regras de legenda
 - Tom leve, direto, brasileiro. Primeira linha é gancho (aparece antes do "ver mais").

@@ -35,7 +35,9 @@ def main():
             if p.get("status") not in ("pending", "approved"):
                 continue
             t = dt.datetime.fromisoformat(p["scheduled_for"].replace("Z", "+00:00"))
-            if (agora - t).total_seconds() > 30 * 60:
+            # tolerancia curta: o cron do GitHub e estrangulado (roda a cada ~4h
+            # em vez dos 30 min pedidos), entao quem garante a hora e este vigia.
+            if (agora - t).total_seconds() > 5 * 60:
                 atrasados.append(pasta)
 
     if atrasados:
