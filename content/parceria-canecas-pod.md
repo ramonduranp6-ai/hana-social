@@ -25,8 +25,16 @@ retirada formalmente e a fronteira acima passa a valer.
 (`OneDrive\Fotos da Hana\03 - editadas` → `Canecas POD\Hana-Fotos`, atualizado
 semanalmente) e uso da Hana como caso demonstrativo no conteúdo em inglês deles.
 
-**Hana recebe:** os retratos artísticos da Hana em alta, para publicar como
-conteúdo do pilar estética/status.
+⚠️ **FILTRO OBRIGATÓRIO AO FORNECER:** só fotos em que a Hana aparece
+**sozinha**. Nunca fotos com o Ramón (as três variantes da selfie —
+`edit_A_clean`, `edit_B_cinematic`, `edit_C_tight` — são exatamente esse caso)
+nem com terceiros. Em 25/07/2026 essas três foram compartilhadas por descuido e
+a remoção foi pedida ao outro time. Aplicar o filtro na origem, inclusive na
+rotina automática de domingo.
+
+**Hana recebe:** os retratos artísticos da Hana em alta, depositados em
+`OneDrive\Fotos da Hana\04 - artes recebidas` (único caminho de escrita deles
+aqui), para publicar como conteúdo do pilar estética/status.
 
 **Divulgação cruzada:** story marcando o perfil deles **por evento** (quando
 sair arte boa de verdade), nunca por calendário. Sem link na bio da Hana por
