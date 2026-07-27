@@ -32,6 +32,17 @@ no futuro.
 pessoal — Reels, hashtag de nicho, presença nos perfis grandes da raça. Ganhar
 100 seguidores de amigos vale menos que ganhar 20 do nicho.
 
+## Checagem de 26/07/2026
+- 330 seguidores (331 em 25/07 — variação normal, mesma faixa de ruído já vista).
+- Nenhum post do sistema novo publicou entre 25/07 e 26/07 (fila só teve
+  aprovação depois da baseline; o próximo post agendado é 27/07). Sem post
+  novo, não há curtida/comentário novo pra medir — tabela de engajamento
+  continua igual à de 25/07.
+- Lote da semana (05, 07 e 10/08) inclui o **primeiro Reel do perfil**
+  (montado com fotos reais dela, sem IA) — é a medição mais importante da
+  próxima rodada, junto com o resultado dos 3 posts que já estão na fila
+  aprovada (27, 29 e 31/07 + 03/08).
+
 ## Próximas medições
 - Reels: zero publicados até agora. Medir alcance do primeiro contra a média de
   foto — é a hipótese mais importante a testar.
