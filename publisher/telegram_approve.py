@@ -24,30 +24,46 @@ def _call(token, method, **params):
 
 
 def notify_pending(token, chat_id, posts, media_base_url):
-    """Envia pro Telegram os posts que ainda precisam de aprovação."""
+    """
+    Envia pro Telegram os posts que ainda precisam de aprovação.
+
+    Manda a MÍDIA (foto ou vídeo), não só o texto: o Ramón aprova olhando a
+    imagem no celular. Se o envio da mídia falhar (URL fora do ar, arquivo
+    grande demais), cai para mensagem de texto — melhor avisar torto do que
+    não avisar.
+    """
     from postqueue import media_url
 
     for post in posts:
-        if post.get("status") != "pending" or post.get("_notified"):
+        if post.get("status") != "pending" or post.get("notified"):
             continue
         caption = (
-            f"🐾 *Novo post da Hana pra aprovar*\n\n"
+            f"🐾 Novo post da Hana pra aprovar\n\n"
             f"{post['caption']}\n\n"
             f"🕒 Agendado: {post['scheduled_for']}\n"
             f"🆔 {post['_id']}"
         )
-        keyboard = {
+        keyboard = json.dumps({
             "inline_keyboard": [[
                 {"text": "✅ Aprovar", "callback_data": f"approve:{post['_id']}"},
                 {"text": "❌ Recusar", "callback_data": f"reject:{post['_id']}"},
             ]]
-        }
-        _call(
-            token, "sendMessage",
-            chat_id=chat_id, text=caption, parse_mode="Markdown",
-            reply_markup=json.dumps(keyboard),
-        )
-        post["_notified"] = True  # marcação em memória; persistida pelo chamador
+        })
+        url = media_url(post, media_base_url)
+        if post["type"] == "reel":
+            resp = _call(token, "sendVideo", chat_id=chat_id, video=url,
+                         caption=caption, reply_markup=keyboard)
+        else:
+            resp = _call(token, "sendPhoto", chat_id=chat_id, photo=url,
+                         caption=caption, reply_markup=keyboard)
+        if not resp.get("ok"):
+            print(f"[aviso] midia nao foi pro Telegram ({post['_id']}): "
+                  f"{resp.get('description')} — mandando so o texto")
+            _call(token, "sendMessage", chat_id=chat_id,
+                  text=f"{caption}\n\n🖼 {url}", reply_markup=keyboard)
+        # sem prefixo "_": postqueue.save() descarta chaves com "_", e sem
+        # persistir isso o cron reenviava o mesmo post a cada 30 minutos.
+        post["notified"] = True
 
 
 def _read_offset():
