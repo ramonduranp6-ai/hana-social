@@ -1,13 +1,12 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/07/2026 14:25. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/07/2026 14:43. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
 
 | Quando (UTC) | Post | Tipo | Status |
 |---|---|---|---|
-| 2026-07-27T21:00:00Z | 2026-07-27_pijama-oncinha | image | approved |
 | 2026-07-29T21:00:00Z | 2026-07-29_lilac-ao-sol | image | approved |
 | 2026-07-31T21:00:00Z | 2026-07-31_roda-gigante | image | approved |
 | 2026-08-03T21:00:00Z | 2026-08-03_dia-de-praia | image | approved |
@@ -15,16 +14,17 @@ decisões, use `DECISOES.md`.
 | 2026-08-07T21:00:00Z | 2026-08-07_banho-de-sol | image | approved |
 | 2026-08-10T21:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
 
-## Publicados: 2
+## Publicados: 3
 - 2026-07-22_bar-hana — IG `18118796690302997`
 - 2026-07-23_olhar-no-tapete — IG `18140672137562244`
+- 2026-07-27_pijama-oncinha — IG `18073337600408952`
 
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-07-27T17:42:23Z workflow_dispatch success
 2026-07-27T12:39:28Z schedule success
 2026-07-26T23:45:55Z schedule success
-2026-07-26T20:15:45Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução segunda-feira, 27 de julho de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -53,31 +53,14 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+0335b27 chore: atualiza estado da fila [skip ci]
+f32c80d chore: antecipa o post pijama-oncinha para agora (pedido do Ramon)
+2ddbab8 feat: token renovando sozinho, trava de aprovacao religada e checagem de foto repetida
 cb45731 docs: skill aprende os canais que funcionam com o Ramon e a checagem de repeticao
 2ca48a3 feat: skill do projeto + estado que se regenera sozinho (retomar conversa sem perder o fio)
 b56fd01 fix: aviso do Telegram manda a foto/video e para de reenviar a cada 30 min
 d6079df docs: checagem de metricas 26/07 - sem post novo publicado desde a baseline
 07c536e chore: previews do lote da semana para aprovacao [skip ci]
-d80d524 docs: linha de base de metricas medida no perfil
-fb04d0f feat: renovacao automatica de token e gerador de reel via ffmpeg (benchmark tecnico)
-2772a40 fix: vigia local com tolerancia de 5 min (cron do GitHub e estrangulado) e regra de imagem do Ramon corrigida
-```
-Alterações não commitadas:
-```
-M .gitignore
- M DECISOES.md
- M content/queue/2026-07-27_pijama-oncinha/post.json
- M content/queue/2026-07-29_lilac-ao-sol/post.json
- M content/queue/2026-07-31_roda-gigante/post.json
- M content/queue/2026-08-03_dia-de-praia/post.json
- M content/queue/2026-08-05_navio-importacao/post.json
- M content/queue/2026-08-07_banho-de-sol/post.json
- M content/queue/2026-08-10_escolheu-o-canal/post.json
- M studio/renovar_token.py
- M studio/sentinela.bat
-?? content/videos-usados.json
-?? studio/checar_repetida.py
-?? studio/painel_aprovacao.py
 ```
 
 ## Decisões e contexto
