@@ -103,6 +103,21 @@ def gerar():
         f"{'CONFIGURADO' if os.path.isfile(os.path.join(RAIZ, 'studio', '.token')) else 'FALTA criar studio/.token'}")
     add("")
 
+    # --- pasta de aprovação (o canal que o Ramón enxerga) ---
+    aprov = os.path.join(FOTOS, "03 - APROVAR (semana)")
+    add("## Esperando o OK do Ramón")
+    if os.path.isdir(aprov) and os.listdir(aprov):
+        add(f"Mídias numeradas em `{aprov}` (ele abre no OneDrive do celular):")
+        add("")
+        for f in sorted(os.listdir(aprov)):
+            add(f"- {f}")
+        add("")
+        add("Ele responde pelos números. Enquanto não responder, **não commitar**")
+        add("mudança de status nem publicar.")
+    else:
+        add("Nada esperando aprovação (pasta vazia ou inexistente).")
+    add("")
+
     # --- acervo ---
     add("## Acervo de fotos")
     add(f"- Brutas a processar: {contar(os.path.join(FOTOS, '01 - brutas (suba aqui)'), ('.jpg','.jpeg','.png','.heic','.mov','.mp4'))} arquivos")

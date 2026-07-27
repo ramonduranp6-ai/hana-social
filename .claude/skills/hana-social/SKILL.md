@@ -3,7 +3,7 @@ name: hana-social
 description: Estado vivo e regras do projeto Hana Social (Instagram @hanaduransanches da cadela do Ramón). Use SEMPRE ao abrir conversa nova nesta pasta, e sempre que o assunto for a Hana, o Instagram dela, post, Reel, legenda, fila de publicação, seguidores, engajamento, métricas do perfil, edição de foto ou vídeo dela, ou a parceria com o projeto Canecas/Brushed & Brewed. Também ao perguntar "onde paramos", "o que falta", "como está o projeto".
 metadata:
   author: Ramón Duran
-  version: 1.0.0
+  version: 1.1.0
   atualizada_em: 2026-07-27
 ---
 
@@ -36,6 +36,15 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    se a Hana puder ser cortada do quadro sem mudar a piada, o post está errado.
 2. **Nada é publicado sem o "aprovado" dele.** A automação prepara, mostra os
    previews numerados e espera. Sem resposta, não sobe.
+2b. **COMO mostrar pra ele — não improvisar.** Ele **não enxerga** link do
+   `raw.githubusercontent.com`, arquivo anexado na conversa, nem link de página
+   publicada: os três já falharam. Gravar as mídias numeradas em
+   `OneDrive\Fotos da Hana\03 - APROVAR (semana)` com um `00_LEGENDAS.txt` na
+   mesma ordem (ele abre no celular), e contar com o Telegram, que agora manda
+   foto e vídeo com botões Aprovar/Recusar.
+2c. **Conferir repetição antes de propor.** Abrir o perfil no Chrome, rolar os
+   38 posts e comparar cena por cena — inclusive entre os posts do mesmo lote.
+   Duas fotos do mesmo passeio em dias diferentes contam como repetido.
 3. **Preservar a cor tri lilac merle**; legenda em PT-BR terminando com
    pergunta; máx. 4 hashtags; posts seg/qua/sex às 21:00Z (18h de Itajaí).
 4. **Um robô só** (`hana-rotina`: domingo produz o lote, terça e quinta faz a
@@ -57,6 +66,7 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
 | Editar fotos brutas em lote | `python studio/preparar_lote.py editar` |
 | Criar post na fila | `python studio/preparar_lote.py post <foto> <id> <data> "<legenda>"` |
 | Montar Reel de fotos | `python studio/gerar_reel.py saida.mp4 f1.jpg f2.jpg --texto "gancho"` |
+| Preparar o lote pra ele aprovar | `python studio/para_aprovar.py` |
 | Arte sobre foto (capa/poster) | `python studio/design_kit.py <foto> capa\|poster <saida>` |
 | Renovar token do Instagram | `python studio/renovar_token.py` |
 | Ver se algo ficou para trás | `python studio/sentinela.py` |
@@ -64,6 +74,15 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
 
 Reel sempre com **gancho em texto grande na primeira tela** — no nicho, Reel
 com gancho rende o dobro de alcance (dados em `content/benchmark-instagram.md`).
+
+**Reel de vídeo real ganha do slideshow.** `gerar_reel.py` só monta fotos; para
+usar os MOVs da pasta de brutas, duas pegadinhas já pagas:
+- Os MOVs do iPhone têm **rotação nos metadados**. Cortar direto no
+  `-filter_complex` sai deitado. Normalizar antes (`ffmpeg -i entrada.MOV
+  -c:v libx264 saida.mp4`), conferir a resolução resultante e só então cortar 9:16.
+- Gancho longo **vaza da tela**. Acima de ~25 caracteres, quebrar em 2 linhas
+  com fonte grande em vez de uma linha só.
+- Sempre extrair alguns frames do resultado e **olhar** antes de dar por pronto.
 
 ## 4. ÚLTIMO PASSO, OBRIGATÓRIO: deixar o estado pronto para a próxima conversa
 

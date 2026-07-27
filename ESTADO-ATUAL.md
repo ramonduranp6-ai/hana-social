@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/07/2026 11:56. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/07/2026 13:09. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -29,6 +29,22 @@ decisões, use `DECISOES.md`.
 - Vigia local (Agendador do Windows): próxima execução segunda-feira, 27 de julho de 2026 18:10:00
 - Token renovável automático: FALTA criar studio/.token
 
+## Esperando o OK do Ramón
+Mídias numeradas em `C:\Users\Ramón França\OneDrive\Fotos da Hana\03 - APROVAR (semana)` (ele abre no OneDrive do celular):
+
+- 00_LEGENDAS.txt
+- 01_27-07.jpg
+- 02_29-07.jpg
+- 03_31-07.jpg
+- 04_03-08.jpg
+- 05_05-08.jpg
+- 06_07-08.jpg
+- 07_10-08_REEL.mp4
+- 07_10-08_REEL_capa.jpg
+
+Ele responde pelos números. Enquanto não responder, **não commitar**
+mudança de status nem publicar.
+
 ## Acervo de fotos
 - Brutas a processar: 26 arquivos
 - Editadas prontas: 9
@@ -37,6 +53,7 @@ decisões, use `DECISOES.md`.
 
 ## Últimas mudanças no projeto
 ```
+2ca48a3 feat: skill do projeto + estado que se regenera sozinho (retomar conversa sem perder o fio)
 b56fd01 fix: aviso do Telegram manda a foto/video e para de reenviar a cada 30 min
 d6079df docs: checagem de metricas 26/07 - sem post novo publicado desde a baseline
 07c536e chore: previews do lote da semana para aprovacao [skip ci]
@@ -44,17 +61,14 @@ d80d524 docs: linha de base de metricas medida no perfil
 fb04d0f feat: renovacao automatica de token e gerador de reel via ffmpeg (benchmark tecnico)
 2772a40 fix: vigia local com tolerancia de 5 min (cron do GitHub e estrangulado) e regra de imagem do Ramon corrigida
 a472e43 docs: filtro de privacidade no fornecimento de fotos (so Hana sozinha)
-8322685 docs: fronteira entre projetos - parceria comercial, sem interferencia mutua
 ```
 Alterações não commitadas:
 ```
-?? .claude/
-?? DECISOES.md
-?? ESTADO-ATUAL.md
-?? content/queue/2026-08-05_navio-importacao/
-?? content/queue/2026-08-07_banho-de-sol/
-?? content/queue/2026-08-10_escolheu-o-canal/
-?? studio/estado.py
+M .claude/skills/hana-social/SKILL.md
+ M DECISOES.md
+ M ESTADO-ATUAL.md
+ M studio/estado.py
+?? studio/para_aprovar.py
 ```
 
 ## Decisões e contexto
@@ -66,7 +80,12 @@ Mais recente em cima.
 
 ## Onde paramos (27/07/2026)
 
-**Aguardando o Ramón:**
+**Aguardando o Ramón — o mais urgente:**
+- **Aprovar os 7 posts da fila pelos números.** Todos estão `pending`; nenhum
+  publica sem ele. Estão na pasta do OneDrive `Fotos da Hana\03 - APROVAR
+  (semana)` (numerados + `00_LEGENDAS.txt`) e chegam no Telegram como foto/vídeo.
+  Ressalva aberta: o post 4 (03/08, praia na canga amarela) é do mesmo dia de
+  praia do vídeo na areia que já está no ar — cena diferente, decisão dele.
 - Gerar token novo do Instagram no painel da Meta (2 min, com ele junto) para
   criar `studio/.token` e ligar a renovação automática. Sem isso, o token vence
   por volta de 21/09/2026 e **os posts param calados**.
@@ -87,15 +106,38 @@ Mais recente em cima.
    se a Hana puder ser cortada do quadro sem mudar a piada, o post está errado.
 2. **Nada é publicado sem aprovação explícita dele.** A automação prepara e
    pergunta; ele responde pelos números.
-3. **Fronteira com o projeto Canecas / Brushed & Brewed:** parceria comercial
+3. **COMO mostrar post pra ele aprovar — testado em 26-27/07/2026.**
+   O que **NÃO funciona** (ele não enxerga, já falhou três vezes seguidas):
+   link markdown do `raw.githubusercontent.com`, arquivo anexado na conversa
+   (SendUserFile) e link de página publicada (Artifact). Não insistir nesses.
+   O que **funciona**: gravar as mídias numeradas na pasta do OneDrive dele
+   `Fotos da Hana\03 - APROVAR (semana)`, junto de um `00_LEGENDAS.txt` com as
+   legendas na mesma ordem — ele abre no app do OneDrive no celular. O segundo
+   canal é o Telegram, que manda foto e vídeo de verdade com botões
+   Aprovar/Recusar. Ele responde pelos números.
+4. **Conferir repetição ANTES de propor qualquer foto.** Abrir
+   `instagram.com/hanaduransanches` no Chrome, rolar os 38 posts do grid e
+   comparar cena por cena — inclusive entre os posts do próprio lote (dois posts
+   do mesmo passeio, com dias de diferença, também contam como repetido). Ele
+   pegou uma repetida que passou batido; é obrigatório desde então.
+5. **Fronteira com o projeto Canecas / Brushed & Brewed:** parceria comercial
    sim, interferência não. Não opinar sobre marca, estratégia ou execução deles;
    não mexer na pasta deles. Ao fornecer fotos, **só a Hana sozinha** — nunca
    com o Ramón (a imagem dele é livre aqui, vedada no projeto comercial dele).
-4. **Um robô só.** Não criar agendamento novo; expandir o `hana-rotina`.
-5. **Verificar a conta ativa no Instagram** antes de qualquer ação no navegador
+6. **Um robô só.** Não criar agendamento novo; expandir o `hana-rotina`.
+7. **Verificar a conta ativa no Instagram** antes de qualquer ação no navegador
    — o Chrome do Ramón alterna entre 3 contas.
-6. **Fechar as abas** do navegador ao terminar qualquer trabalho.
-7. **Economia:** trabalho mecânico em Python local; IA só onde agrega.
+8. **Fechar as abas** do navegador ao terminar qualquer trabalho.
+9. **Economia:** trabalho mecânico em Python local; IA só onde agrega.
+
+## Becos sem saída (não repetir a tentativa)
+
+- **A pasta do iPhone (`iCloudPhotos\Photos`) é o rolo de câmera inteiro** —
+  ~34 mil arquivos sem organização, a maioria sem nenhuma relação com a Hana.
+  Não dá para garimpar por ali. As fotos boas vêm de `01 - brutas (suba aqui)`,
+  onde o Ramón coloca o que quer usar.
+- **Mostrar imagem dentro da conversa não funciona**: o widget inline bloqueia
+  imagem de fora e embutir mídia em base64 estoura o limite da mensagem.
 
 ## Norte estratégico
 
