@@ -37,7 +37,7 @@ def ler():
         print("    EXPIRA_EM=2026-09-21")
         sys.exit(1)
     dados = {}
-    with open(ARQ, encoding="utf-8") as f:
+    with open(ARQ, encoding="utf-8-sig") as f:
         for linha in f:
             if "=" in linha and not linha.strip().startswith("#"):
                 k, v = linha.strip().split("=", 1)

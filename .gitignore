@@ -11,3 +11,6 @@ studio/sentinela.log
 
 # token do Instagram — NUNCA vai para o repo publico
 studio/.token
+
+# painel de aprovacao (gerado, pesado - refaz com painel_aprovacao.py)
+studio/aprovar.html
