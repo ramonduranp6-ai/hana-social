@@ -104,7 +104,7 @@ def gerar():
     add("")
 
     # --- pasta de aprovação (o canal que o Ramón enxerga) ---
-    aprov = os.path.join(FOTOS, "03 - APROVAR (semana)")
+    aprov = os.path.join(FOTOS, "05 - APROVAR (semana)")
     add("## Esperando o OK do Ramón")
     if os.path.isdir(aprov) and os.listdir(aprov):
         add(f"Mídias numeradas em `{aprov}` (ele abre no OneDrive do celular):")

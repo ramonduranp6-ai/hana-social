@@ -45,17 +45,26 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
 2b. **COMO mostrar pra ele — não improvisar.** Ele **não enxerga** link do
    `raw.githubusercontent.com`, arquivo anexado na conversa, nem link de página
    publicada: os três já falharam. Gravar as mídias numeradas em
-   `Hana Social\Fotos da Hana\03 - APROVAR (semana)` com um `00_LEGENDAS.txt`
+   `Hana Social\Fotos da Hana\05 - APROVAR (semana)` com um `00_LEGENDAS.txt`
    na mesma ordem (ele abre no celular). **Canal principal desde 27/07/2026: o
    Telegram** — bot `@Hanasocial_aproval_bot`, secrets já no GitHub, testado
    ponta a ponta (manda foto/vídeo com botões Aprovar/Recusar e o clique volta).
 2b-i. **SEMPRE escrever o caminho COMPLETO na mensagem** (ele pediu em
    27/07/2026, depois de não achar uma pasta que descrevi só pelo nome):
-   `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\03 - APROVAR (semana)`.
+   `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)`.
    Nunca "a pasta de sempre", nunca só o nome da subpasta.
-2b-ii. **Não criar pasta nova.** Tudo numerado dentro de
-   `03 - APROVAR (semana)`, que ele já conhece. Subpasta nova ele não encontra —
-   já aconteceu com as prévias de trilha (08/09/10), que tive que achatar.
+2b-ii. **Não criar pasta nova dentro da de aprovação.** Tudo numerado direto em
+   `05 - APROVAR (semana)`. Subpasta nova ele não encontra — já aconteceu com as
+   prévias de trilha (08/09/10), que tive que achatar.
+2b-iii. **Layout da `Fotos da Hana`** (arrumado em 28/07/2026 — havia duas
+   pastas numeradas 03, e vídeo, trilha e foto misturados):
+   `01 - brutas (suba aqui)` → `02 - selecionadas` → `03 - editadas` →
+   `04 - artes recebidas` → `05 - APROVAR (semana)` → `06 - videos e trilhas` →
+   `07 - nao compartilhar (com o Ramon)`.
+   **Não renomear `03 - editadas` nem `04 - artes recebidas`**: são a interface
+   com o projeto Canecas (leitura e escrita deles). Renomear quebra o parceiro.
+   A `07` existe para cumprir o filtro da parceria por construção — foto com o
+   Ramón fica fora da pasta que eles leem, não só na regra escrita.
 2c. **Conferir repetição antes de propor.** Abrir o perfil no Chrome, rolar os
    38 posts e comparar cena por cena — inclusive entre os posts do mesmo lote.
    Duas fotos do mesmo passeio em dias diferentes contam como repetido.

@@ -5,7 +5,7 @@ Uso (a partir da raiz do repo):
     python studio/para_aprovar.py
 
 Copia tudo que está na fila para
-"Fotos da Hana/03 - APROVAR (semana)" — dentro do próprio projeto, que por sua
+"Fotos da Hana/05 - APROVAR (semana)" — dentro do próprio projeto, que por sua
 vez mora no OneDrive e sincroniza no celular dele. Numerado na ordem de
 publicação, com 00_LEGENDAS.txt trazendo as legendas na mesma numeração.
 Reel também ganha uma capa .jpg, senão não aparece na galeria do celular.
@@ -26,7 +26,7 @@ from PIL import Image
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QUEUE = os.path.join(RAIZ, "content", "queue")
-DESTINO = os.path.join(RAIZ, "Fotos da Hana", "03 - APROVAR (semana)")
+DESTINO = os.path.join(RAIZ, "Fotos da Hana", "05 - APROVAR (semana)")
 
 
 def capa_do_reel(video, destino):

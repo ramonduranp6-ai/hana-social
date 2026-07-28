@@ -63,7 +63,7 @@ Mais recente em cima.
    **Nunca usar `webbrowser.open` nem `start`**: o navegador padrão do Windows
    é o perfil da marca Canecas, e abrir ali é erro que já custou três avisos
    dele na mesma conversa.
-   No celular: `Hana Social\Fotos da Hana\03 - APROVAR (semana)`, numerada com
+   No celular: `Hana Social\Fotos da Hana\05 - APROVAR (semana)`, numerada com
    `00_LEGENDAS.txt`. **Sempre escrever o caminho COMPLETO na mensagem** e nunca
    criar subpasta nova — ele não acha (pedido dele em 27/07/2026).
 4. **Conferir repetição ANTES de propor qualquer foto** — rodar

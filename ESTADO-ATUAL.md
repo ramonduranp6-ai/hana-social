@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/07/2026 22:08. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/07/2026 22:11. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -30,7 +30,7 @@ decisões, use `DECISOES.md`.
 - Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
-Mídias numeradas em `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\03 - APROVAR (semana)` (ele abre no OneDrive do celular):
+Mídias numeradas em `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
 
 - 00_LEGENDAS.txt
 - 01_27-07.jpg
@@ -50,12 +50,13 @@ mudança de status nem publicar.
 
 ## Acervo de fotos
 - Brutas a processar: 26 arquivos
-- Editadas prontas: 9
+- Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
 - Fotos do iPhone sincronizadas (iCloud): 34381
 
 ## Últimas mudanças no projeto
 ```
+5d90897 refactor: fotos da Hana passam a morar dentro do projeto (pedido do Ramon)
 d78246b ï»¿docs: sempre passar o caminho completo e nao criar pasta nova (pedido do Ramon)
 7d7295d feat: trilha propria para os Reels (Lyria 3 via Gemini) + 3 opcoes para o Ramon ouvir
 e862273 docs: so sugerir conversa nova depois de salvar tudo (pedido do Ramon)
@@ -63,18 +64,13 @@ e862273 docs: so sugerir conversa nova depois de salvar tudo (pedido do Ramon)
 0bc340f feat: aprovacao por Telegram no ar (bot criado e testado ponta a ponta)
 157567d docs: skill aprende a falar curto e um assunto por vez
 c822544 docs: estado apos publicar pijama-oncinha antecipado
-0335b27 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
 M .claude/skills/hana-social/SKILL.md
- M .gitignore
  M DECISOES.md
- M HANDOFF.md
- M content/parceria-canecas-pod.md
  M studio/estado.py
  M studio/para_aprovar.py
- M studio/preparar_lote.py
 ```
 
 ## Decisões e contexto
@@ -143,7 +139,7 @@ Mais recente em cima.
    **Nunca usar `webbrowser.open` nem `start`**: o navegador padrão do Windows
    é o perfil da marca Canecas, e abrir ali é erro que já custou três avisos
    dele na mesma conversa.
-   No celular: `Hana Social\Fotos da Hana\03 - APROVAR (semana)`, numerada com
+   No celular: `Hana Social\Fotos da Hana\05 - APROVAR (semana)`, numerada com
    `00_LEGENDAS.txt`. **Sempre escrever o caminho COMPLETO na mensagem** e nunca
    criar subpasta nova — ele não acha (pedido dele em 27/07/2026).
 4. **Conferir repetição ANTES de propor qualquer foto** — rodar
