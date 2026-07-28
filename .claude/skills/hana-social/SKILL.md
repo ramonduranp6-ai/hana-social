@@ -89,6 +89,50 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    30s pelo Lyria 3 (Gemini, US$ 0,04 cada). Sempre instrumental — voz cantada
    rouba a atenção do gancho em texto. Dizer o limite toda vez que o assunto
    voltar: trilha própria resolve QUALIDADE, não ALCANCE.
+3d. **Áudio de tendência via API: LIBERADO desde 28/07/2026** (provado, não
+   suposto). Caminho: app **"Hana Audio"** (id `2297820570982525`), fluxo
+   **Facebook Login**, permissões `instagram_basic` + `instagram_content_publish`
+   + `pages_show_list`. Busca: `GET /ig_audio?audio_type=music&user_id=
+   17841471483838197` (sem `search_query` = as faixas em alta). Anexa no Reel com
+   `audio_configuration={"audio_id":"…","audio_volume":80,"video_volume":20}` no
+   POST de `/media`. Container testado: chegou a `FINISHED` com trilha licenciada.
+   **O app antigo "Hana Social" NÃO serve** — nasceu no fluxo Instagram Login e
+   recusa essas permissões ("Ocorreu um erro"). Os dois apps convivem; o
+   publicador de sempre não foi tocado.
+   Limites reais: `download_url` vem **null** para música de gravadora (não dá
+   para montar prévia local); `search_query` busca por **nome de música/artista**,
+   não por clima ("patroa" devolve vazio); não existe pré-visualização do Reel
+   com o áudio montado — só publicando.
+3e. **MÚSICA PRECISA COMBINAR COM O PERFIL DA HANA** (regra dele, 28/07/2026,
+   depois que ofereci a primeira faixa da lista de tendências — um rap nostálgico
+   — e ele cortou: "não tem nada a ver com o perfil de cachorro dela"). Estar em
+   alta **não basta**: a faixa tem que servir ao posicionamento aprovado
+   (**"a patroa mimada"** — ela manda na casa, o Ramón obedece; humor com
+   atitude). Antes de propor qualquer trilha, dizer em uma linha **por que aquela
+   faixa combina com a cena**. Se nenhuma faixa em alta servir, é melhor cair na
+   trilha própria (`gerar_trilha.py`) do que forçar uma que não tem a ver.
+3e-i. **O TOM DO PERFIL É CRIANÇA E CACHORRO** — não adulto (regra dele,
+   28/07/2026). Vale para trilha, legenda e escolha de cena. Consequências que
+   ele mesmo declarou: **funk está fora** e **música triste ou lenta está fora**.
+   Nada de vibe adulta, romântica arrastada ou melancólica: o perfil é leve,
+   infantil e engraçado.
+3e-ii. **SENTIDO GANHA DE VIRAL — decisão dele, 28/07/2026.** Palavras dele:
+   *"não me importo se não for viral, acho que fica melhor sendo o que faz
+   sentido com o post"*. Ou seja: a régua de escolha da trilha é **encaixe com a
+   cena**, não posição na lista de tendências. Faixa de biblioteca temática (ex.:
+   "Good Dog", "Bark Avenue") é escolha legítima mesmo sem alcance. Não vender
+   "está em alta" como argumento — ele já recusou duas vezes por isso.
+3e-iii. **ASSISTIR O VÍDEO ANTES DE ESCOLHER A MÚSICA — obrigatório.** Ele
+   cobrou isso em 28/07/2026: *"veja o que ela está fazendo no vídeo para definir
+   a melhor música"*. Eu tinha proposto trilha lendo só a legenda, e a legenda
+   contava a cena errada. Extrair frames (`imageio_ffmpeg.get_ffmpeg_exe()`,
+   `select='not(mod(n\,45))'`) e **olhar** antes de sugerir qualquer faixa.
+3f. **VETO PERMANENTE: NENHUMA MÚSICA DA ANITTA.** Nunca, em nenhum post, por
+   melhor que a letra se encaixe (ele cortou "Não Me Cutuca" na hora, mesmo eu
+   tendo achado o título perfeito para a cena). Ele não gosta da artista — não é
+   sobre a faixa. **Filtrar por `display_artist` ANTES de propor**: a lista de
+   tendências brasileiras vem cheia dela (3 das 50 primeiras em 28/07/2026).
+   Não reabrir, não reapresentar com outro argumento.
 4. **Um robô só** (`hana-rotina`: domingo produz o lote, terça e quinta faz a
    ronda de engajamento). Nunca criar agendamento novo — expandir esse.
 5. **Fronteira com o projeto Canecas / Brushed & Brewed:** parceria comercial

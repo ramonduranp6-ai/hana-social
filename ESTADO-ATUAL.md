@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/07/2026 22:58. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/07/2026 00:12. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -44,6 +44,7 @@ Mídias numeradas em `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos
 - 08_MUSICA-1-fofo.mp4
 - 09_MUSICA-2-lofi.mp4
 - 10_MUSICA-3-comica.mp4
+- 11_PREVIA-MUSICA-good-dog.mp4
 
 Ele responde pelos números. Enquanto não responder, **não commitar**
 mudança de status nem publicar.
@@ -56,6 +57,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+67070cd docs: revisar configuracoes da Pagina (ele deu enter em tudo para destravar)
 ecef4fc feat: Pagina do Facebook da Hana criada e ligada ao Instagram
 45afd5b docs: a conta ja era Criador de conteudo + achar o Chrome da Hana sem perguntar
 49e6502 docs: conta da Hana fica como Criador de conteudo (decisao do Ramon)
@@ -63,11 +65,15 @@ d92b249 feat: Reel de 10/08 ganha trilha (lo-fi) - liberado pelo Ramon
 ba805b4 chore: arruma a pasta Fotos da Hana (pedido do Ramon)
 5d90897 refactor: fotos da Hana passam a morar dentro do projeto (pedido do Ramon)
 d78246b ï»¿docs: sempre passar o caminho completo e nao criar pasta nova (pedido do Ramon)
-7d7295d feat: trilha propria para os Reels (Lyria 3 via Gemini) + 3 opcoes para o Ramon ouvir
 ```
 Alterações não commitadas:
 ```
-M DECISOES.md
+M .claude/skills/hana-social/SKILL.md
+ M DECISOES.md
+ M ESTADO-ATUAL.md
+ M content/queue/2026-08-10_escolheu-o-canal/post.json
+ M publisher/ig_api.py
+ M publisher/run.py
 ```
 
 ## Decisões e contexto
@@ -80,23 +86,57 @@ Mais recente em cima.
 ## Onde paramos (28/07/2026 — madrugada)
 
 **Próxima conversa começa por aqui:**
-- **Testar a API de áudio** (o assunto que ficou pela metade). Gerar token pelo
-  **Facebook Login** no app "Hana Social" (id 1776084913751376), buscar faixas
-  em alta e tentar anexar por `musicSoundInfo.musicSoundId`. **Não prometer
-  nada antes de rodar** — o que existe hoje é indício de integradores, não
-  documentação da Meta. Não trocar o `IG_ACCESS_TOKEN` que está funcionando.
+- **Escolher a trilha certa para o Reel de 10/08.** O caminho técnico está
+  provado (ver abaixo), mas a primeira faixa em alta que ofereci — *Legado
+  (feat. Chorão)*, Marcelo Falcão — foi recusada por ele: rap nostálgico não
+  combina com perfil de cachorro. Buscar faixas alinhadas à **"patroa mimada"**.
+  Lembrar: `search_query` só acha por **nome de música/artista**, não por clima.
 - **Revisar as configurações da Página do Facebook.** Em 28/07/2026 o Ramón
   terminou o assistente de configuração "dando enter em tudo" para destravar a
   tela, e pediu revisão depois. Conferir o que entrou (contato, localização,
   botão de ação, foto de perfil e capa) e corrigir o que não faz sentido para a
-  Hana. A Página ainda está sem foto de perfil e sem capa.
+  Hana. A Página ainda está sem foto de perfil e sem capa. **Assunto ainda não
+  tocado nesta conversa.**
 
 **Aguardando o Ramón:**
 - **Decidir se monta a biblioteca de 12 trilhas** (US$ 0,48 no crédito do
   Gemini) ou fica só com as 3 atuais.
-- **Decidir se quer publicar Reel pelo celular com áudio de tendência.** Agora
-  que se sabe que a conta é Criador, isso está liberado — o único custo são
-  ~3 minutos dele por Reel, porque a API não anexa áudio de tendência.
+- **Decidir se publica o Reel de 10/08 como "Reel de teste"** (trial reel: só
+  não-seguidores veem, não aparece no perfil) para conferir o resultado com a
+  trilha antes de valer. É a única forma de ver o Reel montado com o áudio.
+
+**DECIDIDO em 28/07/2026 — posicionamento do perfil: "A PATROA MIMADA".**
+Ele escolheu entre duas opções que apresentei. A Hana manda na casa, o Ramón
+obedece; humor com atitude, ele no papel de "funcionário". Descartada a opção
+"fofa premium" (beleza/cor rara), com o argumento que ele aceitou: **fofura é o
+piso do nicho, não diferencial** — todo Exotic Bully é fofo, e foto bonita
+concorre com todo mundo. Personalidade é o que faz seguir. A bio já vinha
+apontando para lá ("A patroa: aqui quem manda sou eu"). Isso agora manda em
+legenda, escolha de cena, gancho de Reel e **escolha de trilha**.
+
+**PROVADO em 28/07/2026 — áudio de tendência via API FUNCIONA.**
+Era o gargalo de alcance do projeto e caiu. O que foi feito e testado na tela:
+- **A Audio API é oficial** (`developers.facebook.com/docs/instagram-platform/
+  content-publishing/audio-api/`) — eu vinha tratando como "indício de
+  integradores"; é documentação da Meta.
+- **App novo `Hana Audio` criado** (id `2297820570982525`), ligado ao portfólio
+  `616358434290372`. Foi preciso porque o app antigo **"Hana Social" recusa** as
+  permissões do fluxo Facebook Login ("Ocorreu um erro" em toda tentativa) — ele
+  nasceu no fluxo Instagram Login e os dois não convivem no mesmo app.
+  **O publicador não foi tocado**: `IG_ACCESS_TOKEN` e fluxo de sempre intactos.
+- **Token gerado** pelo Facebook Login com `instagram_basic`,
+  `instagram_content_publish` e `pages_show_list`. O ig-user-id por esse caminho
+  é **`17841471483838197`** (diferente do `27631851599815469` do Instagram Login).
+- **Busca de faixas em alta funcionou**: devolveu música brasileira licenciada
+  (Marcelo Falcão, Anitta/Los Brasileiros, Anitta/Alceu Valença).
+- **Anexar funcionou**: container do Reel de 10/08 criado com
+  `audio_configuration` e chegou a `status_code: FINISHED` — "pronto para
+  publicar". **Nada foi publicado** (não chamei `media_publish`).
+- **Limites que ficaram claros:** `download_url` é **null** para música de
+  gravadora, então **não dá para montar prévia local** do vídeo com a faixa; e a
+  Meta não oferece pré-visualização do Reel com áudio — só publicando.
+- **Consequência:** cai a pendência antiga de "publicar Reel pelo celular para
+  ter áudio de tendência". A automação faz sozinha.
 
 **Estrutura nova em 28/07/2026 — Página do Facebook criada e ligada:**
 - **Página `Hana Duran Sanches`** criada (id `1235806802950209`), categoria

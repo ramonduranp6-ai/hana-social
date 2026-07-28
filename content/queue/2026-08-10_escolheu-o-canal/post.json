@@ -3,5 +3,11 @@
   "media_file": "video.mp4",
   "caption": "Ela escolheu o canal, sentou na frente e ninguém teve coragem de mudar. Qual UMA palavra descreve essa cena? 📺\n\n#exoticbullymicro #trililacmerle #bullylife #dogsofinstagram",
   "scheduled_for": "2026-08-10T21:00:00Z",
-  "status": "approved"
+  "status": "approved",
+  "audio_configuration": {
+    "audio_id": "3293453587651336",
+    "audio_volume": 90,
+    "video_volume": 20
+  },
+  "audio_titulo": "Good Dog - Global Genius (aprovada pelo Ramon em 28/07/2026)"
 }

@@ -11,6 +11,7 @@ Requisitos (ver SETUP.md):
 Documentação: https://developers.facebook.com/docs/instagram-api/guides/content-publishing
 """
 
+import json
 import os
 import time
 import requests
@@ -52,17 +53,24 @@ def create_image_container(ig_user_id, image_url, caption, token):
     return data["id"]
 
 
-def create_reel_container(ig_user_id, video_url, caption, token):
-    """Cria o container de um Reel. Retorna o creation_id."""
-    data = _post(
-        f"{ig_user_id}/media",
-        {
-            "media_type": "REELS",
-            "video_url": video_url,
-            "caption": caption,
-            "access_token": token,
-        },
-    )
+def create_reel_container(ig_user_id, video_url, caption, token, audio_configuration=None):
+    """
+    Cria o container de um Reel. Retorna o creation_id.
+
+    audio_configuration: dict opcional com a trilha do catálogo do Instagram, no
+    formato {"audio_id": "...", "audio_volume": 90, "video_volume": 20}.
+    Só funciona no fluxo Facebook Login (app "Hana Audio") — o token do fluxo
+    Instagram Login não enxerga a Audio API. Ver DECISOES.md (28/07/2026).
+    """
+    params = {
+        "media_type": "REELS",
+        "video_url": video_url,
+        "caption": caption,
+        "access_token": token,
+    }
+    if audio_configuration:
+        params["audio_configuration"] = json.dumps(audio_configuration)
+    data = _post(f"{ig_user_id}/media", params)
     return data["id"]
 
 
@@ -89,16 +97,19 @@ def publish_container(ig_user_id, creation_id, token):
     return data["id"]
 
 
-def publish(ig_user_id, token, media_type, media_url, caption):
+def publish(ig_user_id, token, media_type, media_url, caption, audio_configuration=None):
     """
     Fluxo completo de publicação.
     media_type: "image" ou "reel".
+    audio_configuration: só para reel, e só no fluxo Facebook Login.
     Retorna o id do post publicado.
     """
     if media_type == "image":
         creation_id = create_image_container(ig_user_id, media_url, caption, token)
     elif media_type == "reel":
-        creation_id = create_reel_container(ig_user_id, media_url, caption, token)
+        creation_id = create_reel_container(
+            ig_user_id, media_url, caption, token, audio_configuration
+        )
     else:
         raise IGError(f"Tipo de mídia não suportado: {media_type}")
     # Foto também processa de forma assíncrona ("Media ID is not available"

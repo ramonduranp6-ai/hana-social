@@ -67,9 +67,34 @@ def main():
         if not q.is_due(post):
             continue
         url = q.media_url(post, media_base)
+        # Trilha do catálogo do Instagram (Audio API). Só existe no fluxo
+        # Facebook Login — se o post pede áudio e as variáveis do app "Hana
+        # Audio" não estão configuradas, publica SEM trilha e AVISA, em vez de
+        # falhar calado. Ver DECISOES.md (28/07/2026).
+        audio_cfg = post.get("audio_configuration")
+        user_for_post, token_for_post = ig_user, ig_token
+        if audio_cfg:
+            fb_user = env("IG_USER_ID_FB")
+            fb_token = env("FB_ACCESS_TOKEN")
+            if fb_user and fb_token:
+                user_for_post, token_for_post = fb_user, fb_token
+            else:
+                aviso = (
+                    f"[AVISO] {post['_id']} pede trilha "
+                    f"({post.get('audio_titulo', audio_cfg.get('audio_id'))}) mas "
+                    "IG_USER_ID_FB/FB_ACCESS_TOKEN não estão configurados. "
+                    "Publicando SEM a trilha."
+                )
+                print(aviso)
+                if tg_token and tg_chat:
+                    tg.notify(tg_token, tg_chat, "⚠️ " + aviso)
+                audio_cfg = None
         try:
             print(f"[publicando] {post['_id']} ({post['type']}) -> {url}")
-            post_id = ig_api.publish(ig_user, ig_token, post["type"], url, post["caption"])
+            post_id = ig_api.publish(
+                user_for_post, token_for_post, post["type"], url,
+                post["caption"], audio_cfg,
+            )
             post["status"] = "posted"
             post["instagram_id"] = post_id
             q.save(post)
