@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/07/2026 14:43. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/07/2026 15:05. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -53,6 +53,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+c822544 docs: estado apos publicar pijama-oncinha antecipado
 0335b27 chore: atualiza estado da fila [skip ci]
 f32c80d chore: antecipa o post pijama-oncinha para agora (pedido do Ramon)
 2ddbab8 feat: token renovando sozinho, trava de aprovacao religada e checagem de foto repetida
@@ -60,7 +61,10 @@ cb45731 docs: skill aprende os canais que funcionam com o Ramon e a checagem de 
 2ca48a3 feat: skill do projeto + estado que se regenera sozinho (retomar conversa sem perder o fio)
 b56fd01 fix: aviso do Telegram manda a foto/video e para de reenviar a cada 30 min
 d6079df docs: checagem de metricas 26/07 - sem post novo publicado desde a baseline
-07c536e chore: previews do lote da semana para aprovacao [skip ci]
+```
+Alterações não commitadas:
+```
+M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto

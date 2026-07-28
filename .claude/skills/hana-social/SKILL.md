@@ -58,6 +58,11 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
 7. **Fechar todas as abas** do navegador ao terminar.
 8. **Economia:** trabalho mecânico em Python local (custo zero); IA só onde
    agrega; a entrega final e o raciocínio ficam com o Claude.
+9. **RESPOSTA CURTA — ele pediu em 27/07/2026.** Textão ele não consegue
+   acompanhar e acaba não lendo. Régua: **máximo ~5 linhas por resposta**, uma
+   coisa por vez, sem lista longa nem tabela na conversa. Se ele pedir "um a
+   um", é literal: tratar um assunto, esperar a resposta dele, só então o
+   próximo. Detalhe e histórico vão para arquivo, não para a mensagem.
 
 ## 3. Ferramentas do projeto (usar, não reinventar)
 
