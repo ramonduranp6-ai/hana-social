@@ -192,8 +192,16 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    1ª linha como `<música> • <artista>` ou `<perfil> • Áudio original`.
    **Delegar essa varredura a subagente** — o texto bruto é enorme e não precisa
    entrar na conversa; peça de volta só a tabela e a contagem.
-4. **Um robô só** (`hana-rotina`: domingo produz o lote, terça e quinta faz a
-   ronda de engajamento). Nunca criar agendamento novo — expandir esse.
+4. **Um robô só. E ele é MENOR do que esta skill dizia** — conferido no
+   Agendador do Windows em 28/07/2026. **O `hana-rotina` NUNCA EXISTIU**: era
+   texto na documentação, igual à "ronda de terça e quinta" já desmascarada em
+   27/07. A única tarefa agendada na máquina é **`Hana Sentinela`**
+   (`studio\sentinela.bat`: vigia o que ficou para trás + renova o token).
+   **Consequência que não pode ser esquecida: NÃO existe robô que produza o lote
+   no domingo.** Quem escolhe foto, escreve legenda e monta Reel é o Claude, na
+   conversa — e isso é a parte cara. Se o Ramón disser "o robô faz", corrigir na
+   hora em vez de deixar passar. Nunca criar agendamento novo — expandir o
+   `Hana Sentinela` ou o workflow `publish.yml`.
 4b. **O PLACAR EXISTE — NÃO CHUTAR NÚMERO** (criado em 28/07/2026 a pedido dele:
    *"faz a 1"*). `publisher/metrics.py` roda dentro do publicador, **uma coleta
    por dia**, e escreve `content/metricas.json` (série histórica) +

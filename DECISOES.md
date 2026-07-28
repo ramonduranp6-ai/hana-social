@@ -35,6 +35,13 @@ não converte quem vê em seguidor. Confirma por número o que estava escrito em
 `content/metricas.md`: **o gargalo é alcance**. Próxima leitura fica mais rica
 quando o Reel de 10/08 entrar (aí dá para comparar Reel x Foto de verdade).
 
+**CORRIGIDO em 28/07/2026 — o robô `hana-rotina` NUNCA EXISTIU.** Ele perguntou o
+que ainda gasta token; fui conferir o Agendador do Windows e a única tarefa é
+**`Hana Sentinela`** (`studio\sentinela.bat`). O "robô que produz o lote no
+domingo" era **texto na documentação** — mesmo erro já pego em 27/07 com a "ronda
+de terça e quinta". Removido da skill. **Nada produz conteúdo sozinho:** escolher
+foto, escrever legenda e montar Reel é sempre o Claude, na conversa.
+
 **Próxima conversa começa por aqui:**
 - **Ler `content/placar.md` antes de opinar sobre o que funciona.**
 - **Ampliar a amostra do nicho antes de escolher trilha do próximo Reel** (ver

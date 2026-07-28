@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/07/2026 01:01. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/07/2026 01:07. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -57,6 +57,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+6e56b63 feat: placar automatico - o projeto passou a medir alcance, salvos e seguidores ganhos por post
 a82ecb7 docs: Pagina do Facebook fica vazia de proposito (decisao do Ramon)
 854b65e docs: nada do Instagram da Hana vai para o Facebook pessoal do Ramon (2 chaves desligadas)
 be16559 docs(skill): nicho roda em audio original, veto de artista, como fazer ele ouvir a faixa, estado da Pagina
@@ -64,16 +65,11 @@ be16559 docs(skill): nicho roda em audio original, veto de artista, como fazer e
 9029e85 feat: audio de tendencia via API funciona (app Hana Audio) + regras de trilha do Ramon
 67070cd docs: revisar configuracoes da Pagina (ele deu enter em tudo para destravar)
 ecef4fc feat: Pagina do Facebook da Hana criada e ligada ao Instagram
-45afd5b docs: a conta ja era Criador de conteudo + achar o Chrome da Hana sem perguntar
 ```
 Alterações não commitadas:
 ```
 M .claude/skills/hana-social/SKILL.md
- M .github/workflows/publish.yml
  M DECISOES.md
-?? content/metricas.json
-?? content/placar.md
-?? publisher/metrics.py
 ```
 
 ## Decisões e contexto
@@ -113,6 +109,13 @@ real. **Primeiro número medido, e ele é duro:** 329 seguidores, alcance de
 não converte quem vê em seguidor. Confirma por número o que estava escrito em
 `content/metricas.md`: **o gargalo é alcance**. Próxima leitura fica mais rica
 quando o Reel de 10/08 entrar (aí dá para comparar Reel x Foto de verdade).
+
+**CORRIGIDO em 28/07/2026 — o robô `hana-rotina` NUNCA EXISTIU.** Ele perguntou o
+que ainda gasta token; fui conferir o Agendador do Windows e a única tarefa é
+**`Hana Sentinela`** (`studio\sentinela.bat`). O "robô que produz o lote no
+domingo" era **texto na documentação** — mesmo erro já pego em 27/07 com a "ronda
+de terça e quinta". Removido da skill. **Nada produz conteúdo sozinho:** escolher
+foto, escrever legenda e montar Reel é sempre o Claude, na conversa.
 
 **Próxima conversa começa por aqui:**
 - **Ler `content/placar.md` antes de opinar sobre o que funciona.**
