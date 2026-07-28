@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/07/2026 00:51. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/07/2026 00:56. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -57,6 +57,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+854b65e docs: nada do Instagram da Hana vai para o Facebook pessoal do Ramon (2 chaves desligadas)
 be16559 docs(skill): nicho roda em audio original, veto de artista, como fazer ele ouvir a faixa, estado da Pagina
 72b4762 docs: trilha do 10/08 fica como esta + veto Xuxa + nicho roda em audio original
 9029e85 feat: audio de tendencia via API funciona (app Hana Audio) + regras de trilha do Ramon
@@ -64,7 +65,6 @@ be16559 docs(skill): nicho roda em audio original, veto de artista, como fazer e
 ecef4fc feat: Pagina do Facebook da Hana criada e ligada ao Instagram
 45afd5b docs: a conta ja era Criador de conteudo + achar o Chrome da Hana sem perguntar
 49e6502 docs: conta da Hana fica como Criador de conteudo (decisao do Ramon)
-d92b249 feat: Reel de 10/08 ganha trilha (lo-fi) - liberado pelo Ramon
 ```
 Alterações não commitadas:
 ```
@@ -93,16 +93,13 @@ o compartilhamento automático para alimentar a Página de graça e **estava err
 Não liguei. E encontrei o **story já ligado** (stories da Hana caindo no Facebook
 pessoal dele): **desliguei as duas chaves** com o OK dele — *"não podemos
 misturar o pessoal com o da hana"*. Regra na skill (3b-ii).
-**Ele mesmo vai pôr a foto de perfil e a capa da Página** — deixei a Página
-aberta no Chrome dele e apontei a pasta `Fotos da Hana\03 - editadas`.
+**ENCERRADO: a Página do Facebook fica vazia, de propósito.** Eu ia deixar ele
+pôr foto de perfil e capa; ele cortou e está certo — *"como não vamos usar o
+facebook, não tem porque a Hana estar com foto de capa e perfil"*. A Página é só
+encanamento da Graph API (áudio de tendência). Não reabrir. Só não pode ser
+apagada nem desligada do Instagram, senão a API de áudio cai.
 
 **Próxima conversa começa por aqui:**
-- **Página do Facebook — conferir se ele pôs a foto de perfil e a capa.** Se pôs,
-  o assunto Página está encerrado (foi o combinado: só o mínimo). Estado em
-  28/07/2026 antes de ele mexer: **vazia** — sem foto de perfil, sem capa, sem
-  informações de contato, 0 post, 0 seguidor; só a bio, que veio certa do
-  Instagram. **Nada além do mínimo** — a Página existe como infraestrutura da API
-  de áudio, não traz seguidor, e enfeitar não é prioridade.
 - **Ampliar a amostra do nicho antes de escolher trilha do próximo Reel** (ver
   achado abaixo). Faltou cobrir `ohanabulls_club`, `omundobully` e
   `canilelohimbull`.

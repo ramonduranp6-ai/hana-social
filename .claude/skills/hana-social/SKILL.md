@@ -106,6 +106,14 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    duas chaves** a pedido dele (story e posts, ambas OFF em 28/07/2026).
    Se o assunto voltar: a Página só recebe post do Instagram por publicação
    manual ou pelo Meta Business Suite; não prometer automação sem testar.
+3b-iii. **A PÁGINA DO FACEBOOK FICA VAZIA DE PROPÓSITO — assunto encerrado**
+   (decisão dele, 28/07/2026: *"como não vamos usar o facebook, não tem porque a
+   Hana estar com foto de capa e perfil"*). Sem foto de perfil, sem capa, sem
+   post. Eu tinha sugerido "o mínimo, foto + capa"; ele foi mais longe e está
+   certo — **não usamos o Facebook como canal**, ninguém vai olhar a Página. Ela
+   existe só como encanamento da Graph API (áudio de tendência). **Não propor de
+   novo enfeitar, alimentar ou divulgar a Página.** O que NÃO pode acontecer:
+   apagar a Página ou desligá-la do Instagram — isso derrubaria a API de áudio.
 3c. **Trilha própria:** `python studio/gerar_trilha.py --lote` gera clipes de
    30s pelo Lyria 3 (Gemini, US$ 0,04 cada). Sempre instrumental — voz cantada
    rouba a atenção do gancho em texto. Dizer o limite toda vez que o assunto
