@@ -24,7 +24,19 @@ facebook, não tem porque a Hana estar com foto de capa e perfil"*. A Página é
 encanamento da Graph API (áudio de tendência). Não reabrir. Só não pode ser
 apagada nem desligada do Instagram, senão a API de áudio cai.
 
+**NOVO em 28/07/2026 — o projeto passou a MEDIR.** Ele escolheu a automação do
+placar (*"faz a 1"*). `publisher/metrics.py` roda dentro do publicador que já
+existia (regra do robô único), **uma coleta por dia**, e escreve
+`content/metricas.json` + `content/placar.md`. Testado ponta a ponta com o token
+real. **Primeiro número medido, e ele é duro:** 329 seguidores, alcance de
+**30 a 50 por post** (~13% da base), **0 salvamento** e **0 seguidor ganho** nos
+3 posts publicados. Tradução: o conteúdo circula só na rede pessoal do Ramón e
+não converte quem vê em seguidor. Confirma por número o que estava escrito em
+`content/metricas.md`: **o gargalo é alcance**. Próxima leitura fica mais rica
+quando o Reel de 10/08 entrar (aí dá para comparar Reel x Foto de verdade).
+
 **Próxima conversa começa por aqui:**
+- **Ler `content/placar.md` antes de opinar sobre o que funciona.**
 - **Ampliar a amostra do nicho antes de escolher trilha do próximo Reel** (ver
   achado abaixo). Faltou cobrir `ohanabulls_club`, `omundobully` e
   `canilelohimbull`.

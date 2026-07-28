@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/07/2026 00:56. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/07/2026 01:01. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -57,6 +57,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+a82ecb7 docs: Pagina do Facebook fica vazia de proposito (decisao do Ramon)
 854b65e docs: nada do Instagram da Hana vai para o Facebook pessoal do Ramon (2 chaves desligadas)
 be16559 docs(skill): nicho roda em audio original, veto de artista, como fazer ele ouvir a faixa, estado da Pagina
 72b4762 docs: trilha do 10/08 fica como esta + veto Xuxa + nicho roda em audio original
@@ -64,12 +65,15 @@ be16559 docs(skill): nicho roda em audio original, veto de artista, como fazer e
 67070cd docs: revisar configuracoes da Pagina (ele deu enter em tudo para destravar)
 ecef4fc feat: Pagina do Facebook da Hana criada e ligada ao Instagram
 45afd5b docs: a conta ja era Criador de conteudo + achar o Chrome da Hana sem perguntar
-49e6502 docs: conta da Hana fica como Criador de conteudo (decisao do Ramon)
 ```
 Alterações não commitadas:
 ```
 M .claude/skills/hana-social/SKILL.md
+ M .github/workflows/publish.yml
  M DECISOES.md
+?? content/metricas.json
+?? content/placar.md
+?? publisher/metrics.py
 ```
 
 ## Decisões e contexto
@@ -99,7 +103,19 @@ facebook, não tem porque a Hana estar com foto de capa e perfil"*. A Página é
 encanamento da Graph API (áudio de tendência). Não reabrir. Só não pode ser
 apagada nem desligada do Instagram, senão a API de áudio cai.
 
+**NOVO em 28/07/2026 — o projeto passou a MEDIR.** Ele escolheu a automação do
+placar (*"faz a 1"*). `publisher/metrics.py` roda dentro do publicador que já
+existia (regra do robô único), **uma coleta por dia**, e escreve
+`content/metricas.json` + `content/placar.md`. Testado ponta a ponta com o token
+real. **Primeiro número medido, e ele é duro:** 329 seguidores, alcance de
+**30 a 50 por post** (~13% da base), **0 salvamento** e **0 seguidor ganho** nos
+3 posts publicados. Tradução: o conteúdo circula só na rede pessoal do Ramón e
+não converte quem vê em seguidor. Confirma por número o que estava escrito em
+`content/metricas.md`: **o gargalo é alcance**. Próxima leitura fica mais rica
+quando o Reel de 10/08 entrar (aí dá para comparar Reel x Foto de verdade).
+
 **Próxima conversa começa por aqui:**
+- **Ler `content/placar.md` antes de opinar sobre o que funciona.**
 - **Ampliar a amostra do nicho antes de escolher trilha do próximo Reel** (ver
   achado abaixo). Faltou cobrir `ohanabulls_club`, `omundobully` e
   `canilelohimbull`.

@@ -38,6 +38,16 @@ jobs:
           REQUIRE_APPROVAL: ${{ vars.REQUIRE_APPROVAL || '1' }}
         run: python publisher/run.py
 
+      # Placar do projeto: uma coleta por dia (o script sai sozinho se já coletou).
+      # Nunca derruba o job — falha de métrica não pode impedir publicação.
+      - name: Coletar métricas
+        continue-on-error: true
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GRAPH_BASE: ${{ vars.GRAPH_BASE || 'https://graph.instagram.com/v21.0' }}
+        run: python publisher/metrics.py
+
       - name: Salvar estado da fila
         run: |
           git config user.name "hana-bot"

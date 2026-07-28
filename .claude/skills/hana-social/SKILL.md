@@ -194,6 +194,18 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    entrar na conversa; peça de volta só a tabela e a contagem.
 4. **Um robô só** (`hana-rotina`: domingo produz o lote, terça e quinta faz a
    ronda de engajamento). Nunca criar agendamento novo — expandir esse.
+4b. **O PLACAR EXISTE — NÃO CHUTAR NÚMERO** (criado em 28/07/2026 a pedido dele:
+   *"faz a 1"*). `publisher/metrics.py` roda dentro do publicador, **uma coleta
+   por dia**, e escreve `content/metricas.json` (série histórica) +
+   `content/placar.md` (versão legível). Traz seguidores, alcance, curtidas,
+   comentários, salvos, compartilhamentos e seguidores ganhos por post, mais a
+   média **Reel x Foto**. **Antes de opinar sobre o que funciona — gancho,
+   trilha, horário, tipo de post — ler `content/placar.md`.**
+   Primeira medição (28/07/2026, 329 seguidores, só fotos publicadas):
+   alcance de **30 a 50 por post** (~13% da base), **0 salvamentos** e
+   **0 seguidor ganho** em nenhum dos 3 posts. Ou seja: o post fica preso na
+   rede pessoal e não converte visita em seguidor — confirma que o gargalo é
+   alcance, não frequência. Não repetir o erro de comemorar curtida de amigo.
 5. **Fronteira com o projeto Canecas / Brushed & Brewed:** parceria comercial
    sim, interferência não. Não opinar sobre a marca deles, não mexer na pasta
    deles. Ao fornecer fotos, **só a Hana sozinha**, nunca com o Ramón (a imagem
@@ -235,6 +247,8 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
 | Arte sobre foto (capa/poster) | `python studio/design_kit.py <foto> capa\|poster <saida>` |
 | Renovar token do Instagram | `python studio/renovar_token.py` |
 | Ver se algo ficou para trás | `python studio/sentinela.py` |
+| Ver o placar (o que cada post rendeu) | ler `content/placar.md` — não editar |
+| Forçar uma coleta de métricas agora | `python publisher/metrics.py --forcar` |
 | Publicar agora (fora do horário) | `gh workflow run publish.yml -R ramonduranp6-ai/hana-social` |
 
 Reel sempre com **gancho em texto grande na primeira tela** — no nicho, Reel
