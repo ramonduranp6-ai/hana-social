@@ -127,12 +127,25 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    a melhor música"*. Eu tinha proposto trilha lendo só a legenda, e a legenda
    contava a cena errada. Extrair frames (`imageio_ffmpeg.get_ffmpeg_exe()`,
    `select='not(mod(n\,45))'`) e **olhar** antes de sugerir qualquer faixa.
-3f. **VETO PERMANENTE: NENHUMA MÚSICA DA ANITTA.** Nunca, em nenhum post, por
-   melhor que a letra se encaixe (ele cortou "Não Me Cutuca" na hora, mesmo eu
-   tendo achado o título perfeito para a cena). Ele não gosta da artista — não é
-   sobre a faixa. **Filtrar por `display_artist` ANTES de propor**: a lista de
-   tendências brasileiras vem cheia dela (3 das 50 primeiras em 28/07/2026).
+3f. **VETO PERMANENTE DE ARTISTA — lista negra: ANITTA e XUXA.** Nunca, em
+   nenhum post, por melhor que a faixa encaixe. Ele cortou "Não Me Cutuca"
+   (Anitta) e "Lua de Cristal" (Xuxa) na hora — nos dois casos eu tinha achado o
+   encaixe perfeito com a cena e não adiantou: **é a artista que ele não gosta,
+   não a música**. Argumento de encaixe não reabre veto de artista.
+   **Filtrar por `display_artist` ANTES de propor** — a lista de tendências
+   brasileiras vem cheia de Anitta (3 das 50 primeiras em 28/07/2026).
    Não reabrir, não reapresentar com outro argumento.
+3g. **ELE PRECISA OUVIR ANTES DE APROVAR UMA FAIXA** (ele disse em 28/07/2026:
+   *"sem ouvir eu não consigo te dizer sobre essa música"*). Não adianta vender
+   faixa por descrição — proposta sem áudio audível não é decidível.
+   Como fazer ouvir, em ordem de preferência:
+   1. **`on_platform_audio_preview_link`** — vem em toda faixa da resposta do
+      `/ig_audio` (`instagram.com/reels/audio/<id>/`). Abrir **no Chrome da Hana**
+      e avisar que é só dar play. É o único caminho para música de gravadora,
+      porque `download_url` vem null.
+   2. Faixa de biblioteca (`download_url` preenchido): baixar, montar o clipe de
+      prévia sobre o vídeo real e mandar no Telegram/pasta `05 - APROVAR`.
+   Nunca pedir decisão de trilha só com o nome da música na mensagem.
 4. **Um robô só** (`hana-rotina`: domingo produz o lote, terça e quinta faz a
    ronda de engajamento). Nunca criar agendamento novo — expandir esse.
 5. **Fronteira com o projeto Canecas / Brushed & Brewed:** parceria comercial

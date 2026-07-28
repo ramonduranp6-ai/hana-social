@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/07/2026 00:12. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/07/2026 00:39. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -57,6 +57,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+9029e85 feat: audio de tendencia via API funciona (app Hana Audio) + regras de trilha do Ramon
 67070cd docs: revisar configuracoes da Pagina (ele deu enter em tudo para destravar)
 ecef4fc feat: Pagina do Facebook da Hana criada e ligada ao Instagram
 45afd5b docs: a conta ja era Criador de conteudo + achar o Chrome da Hana sem perguntar
@@ -64,16 +65,12 @@ ecef4fc feat: Pagina do Facebook da Hana criada e ligada ao Instagram
 d92b249 feat: Reel de 10/08 ganha trilha (lo-fi) - liberado pelo Ramon
 ba805b4 chore: arruma a pasta Fotos da Hana (pedido do Ramon)
 5d90897 refactor: fotos da Hana passam a morar dentro do projeto (pedido do Ramon)
-d78246b ï»¿docs: sempre passar o caminho completo e nao criar pasta nova (pedido do Ramon)
 ```
 Alterações não commitadas:
 ```
 M .claude/skills/hana-social/SKILL.md
  M DECISOES.md
  M ESTADO-ATUAL.md
- M content/queue/2026-08-10_escolheu-o-canal/post.json
- M publisher/ig_api.py
- M publisher/run.py
 ```
 
 ## Decisões e contexto
@@ -83,20 +80,43 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
-## Onde paramos (28/07/2026 — madrugada)
+## Onde paramos (28/07/2026 — fim do dia)
+
+**FECHADO: a trilha do Reel de 10/08 fica como está** (a lo-fi própria já
+aplicada). Palavras dele: *"por enquanto vamos manter como está, nos próximos eu
+aprovo novamente"*. Ou seja: **não mexer mais na trilha do 10/08**; a conversa de
+música volta na produção dos PRÓXIMOS Reels.
 
 **Próxima conversa começa por aqui:**
-- **Escolher a trilha certa para o Reel de 10/08.** O caminho técnico está
-  provado (ver abaixo), mas a primeira faixa em alta que ofereci — *Legado
-  (feat. Chorão)*, Marcelo Falcão — foi recusada por ele: rap nostálgico não
-  combina com perfil de cachorro. Buscar faixas alinhadas à **"patroa mimada"**.
-  Lembrar: `search_query` só acha por **nome de música/artista**, não por clima.
-- **Revisar as configurações da Página do Facebook.** Em 28/07/2026 o Ramón
-  terminou o assistente de configuração "dando enter em tudo" para destravar a
-  tela, e pediu revisão depois. Conferir o que entrou (contato, localização,
-  botão de ação, foto de perfil e capa) e corrigir o que não faz sentido para a
-  Hana. A Página ainda está sem foto de perfil e sem capa. **Assunto ainda não
-  tocado nesta conversa.**
+- **Página do Facebook — decisão pendente com ele.** Conferi na tela em
+  28/07/2026: a Página não está bagunçada, está **vazia** — sem foto de perfil,
+  sem capa, sem informações de contato, 0 post, 0 seguidor. A bio veio certa do
+  Instagram. Proposta que fiz e ele ainda não respondeu: como a Página só existe
+  para destravar a API de áudio, fazer **só o mínimo — foto de perfil + capa com
+  fotos da Hana** — e parar por aí. Não investir tempo enfeitando: ela não traz
+  seguidor.
+- **Ampliar a amostra do nicho antes de escolher trilha do próximo Reel** (ver
+  achado abaixo). Faltou cobrir `ohanabulls_club`, `omundobully` e
+  `canilelohimbull`.
+
+**ACHADO em 28/07/2026 — o nicho não roda em música, roda em ÁUDIO ORIGINAL.**
+Ideia dele: em vez de pegar a lista de tendências geral do Brasil (que vem cheia
+de funk e pop adulto), olhar **o que está dando like em perfil de cachorro**.
+Varredura feita (subagente, via navegador): dos Reels de maior alcance do nicho
+bully BR — incluindo um de **1 milhão** de views (@guerreirobully) e um de 119
+mil (@americanbullymicro) — **4 de 4 usam "Áudio original"**, nenhum usa faixa
+licenciada. **Limite declarado: amostra de só 4 Reels em 2 perfis** — o Instagram
+não renderizou a grade de 5 dos 7 perfis alvo. Não virou regra ainda, mas aponta
+que eu vinha caçando a coisa errada: o gargalo do Reel pode ser o gancho e o som
+da cena, não a trilha.
+
+**Recusas de trilha nesta rodada (todas dele):** *Legado (feat. Chorão)* —
+Marcelo Falcão; *Lua de Cristal* — Xuxa; *Animal* — KATSEYE. As duas primeiras
+por artista (viraram veto permanente na skill, junto com Anitta); a terceira
+depois de ouvir. **Regra nova que ele deu: sem ouvir, ele não decide trilha** —
+proposta por descrição não serve. Caminho para ele ouvir música de gravadora:
+abrir o `on_platform_audio_preview_link` no Chrome da Hana (a página do áudio tem
+player). Está registrado na skill como regra 3g.
 
 **Aguardando o Ramón:**
 - **Decidir se monta a biblioteca de 12 trilhas** (US$ 0,48 no crédito do
