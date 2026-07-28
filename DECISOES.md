@@ -4,15 +4,41 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
-## Onde paramos (27/07/2026 — tarde)
+## Onde paramos (28/07/2026 — madrugada)
 
 **Aguardando o Ramón:**
-- Decidir se o Reel de 10/08 vai pela automação (trilha original) ou se ele
-  publica pelo celular com áudio de tendência — áudio em alta rende mais
-  alcance e é licenciado, mas **não existe via API** (limite da Meta, não falta
-  de ferramenta).
+- **Trocar a conta da Hana para "Criador de conteúdo"** (decisão dele em
+  28/07/2026). Só ele pode fazer — é ajuste de conta, no celular:
+  Instagram → Configurações → Tipo de conta. **Conferir antes qual é o tipo
+  atual**; eu não consegui descobrir pela API.
+  Assim que trocar, **me avisar para eu testar a automação na hora**: a conta
+  pode precisar refazer o vínculo com a Página do Facebook, e é por esse vínculo
+  que a publicação automática funciona. Se quebrar, quero descobrir na mesma
+  hora e não no dia do post.
+- **Decidir se ele monta a biblioteca de 12 trilhas** (US$ 0,48 no crédito do
+  Gemini) ou fica só com as 3 atuais.
 
-**Resolvido hoje:**
+**Decidido em 28/07/2026:**
+- **Conta vira "Criador de conteúdo" agora; Business fica para depois**, quando
+  houver base grande. Motivo: só conta Criador enxerga a biblioteca de áudios em
+  tendência — Business fica presa à Meta Sound Collection, porque os acordos da
+  Meta com as gravadoras não cobrem uso comercial. Hoje o gargalo é alcance, e
+  áudio em alta é a alavanca mais barata que existe (custa R$ 0). Quando a Hana
+  tiver audiência e o produto existir, aí Business passa a valer pelas
+  ferramentas de loja — e ele mencionou que nessa hora compraria algum app de
+  apoio.
+- **Trilha do Reel de 10/08: a lo-fi** (escolha delegada a mim). Já aplicada na
+  fila e na pasta de aprovação.
+- **Trilha própria virou capacidade do projeto:** `studio/gerar_trilha.py` gera
+  clipes de 30s pelo Lyria 3 (Gemini, US$ 0,04 cada). Fica claro o limite: isso
+  resolve QUALIDADE de áudio, não ALCANCE — quem move alcance é o áudio de
+  tendência, que não existe via API.
+- **Descoberta:** os Reels nunca tiveram música. O de 10/08 subia com o áudio
+  cru do MOV (som da casa). Eu havia afirmado que não existia trilha nenhuma no
+  projeto e estava errado: havia um `musica_hana.wav` de 25/07 largado na pasta
+  de editadas, que nunca entrou em Reel.
+
+**Resolvido em 27/07:**
 - **Ronda de engajamento começou (27/07/2026).** Descoberto que a "ronda de
   terça e quinta" descrita aqui **nunca existiu em código** — era só texto.
   Agora é processo manual meu, aprovado por ele: **3x por semana, ~10

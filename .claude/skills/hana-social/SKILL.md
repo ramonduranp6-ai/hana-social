@@ -70,6 +70,14 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    Duas fotos do mesmo passeio em dias diferentes contam como repetido.
 3. **Preservar a cor tri lilac merle**; legenda em PT-BR terminando com
    pergunta; máx. 4 hashtags; posts seg/qua/sex às 21:00Z (18h de Itajaí).
+3b. **A conta fica como "Criador de conteúdo"** (decisão dele em 28/07/2026),
+   não Business — só Criador enxerga a biblioteca de áudios em tendência, e hoje
+   o gargalo é alcance. Business volta à mesa só quando houver audiência grande
+   e produto para vender. **Não reabrir sozinho.**
+3c. **Trilha própria:** `python studio/gerar_trilha.py --lote` gera clipes de
+   30s pelo Lyria 3 (Gemini, US$ 0,04 cada). Sempre instrumental — voz cantada
+   rouba a atenção do gancho em texto. Dizer o limite toda vez que o assunto
+   voltar: trilha própria resolve QUALIDADE, não ALCANCE.
 4. **Um robô só** (`hana-rotina`: domingo produz o lote, terça e quinta faz a
    ronda de engajamento). Nunca criar agendamento novo — expandir esse.
 5. **Fronteira com o projeto Canecas / Brushed & Brewed:** parceria comercial
