@@ -17,7 +17,7 @@ import subprocess
 import sys
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FOTOS = os.path.join(os.path.expanduser("~"), "OneDrive", "Fotos da Hana")
+FOTOS = os.path.join(RAIZ, "Fotos da Hana")
 ICLOUD = os.path.join(os.path.expanduser("~"), "iCloudPhotos", "Photos")
 SAIDA = os.path.join(RAIZ, "ESTADO-ATUAL.md")
 

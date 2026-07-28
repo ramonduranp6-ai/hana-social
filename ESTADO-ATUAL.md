@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/07/2026 21:34. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/07/2026 22:08. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -30,7 +30,7 @@ decisões, use `DECISOES.md`.
 - Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
-Mídias numeradas em `C:\Users\Ramón França\OneDrive\Fotos da Hana\03 - APROVAR (semana)` (ele abre no OneDrive do celular):
+Mídias numeradas em `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\03 - APROVAR (semana)` (ele abre no OneDrive do celular):
 
 - 00_LEGENDAS.txt
 - 01_27-07.jpg
@@ -41,6 +41,9 @@ Mídias numeradas em `C:\Users\Ramón França\OneDrive\Fotos da Hana\03 - APROVA
 - 06_07-08.jpg
 - 07_10-08_REEL.mp4
 - 07_10-08_REEL_capa.jpg
+- 08_MUSICA-1-fofo.mp4
+- 09_MUSICA-2-lofi.mp4
+- 10_MUSICA-3-comica.mp4
 
 Ele responde pelos números. Enquanto não responder, **não commitar**
 mudança de status nem publicar.
@@ -53,14 +56,25 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+d78246b ï»¿docs: sempre passar o caminho completo e nao criar pasta nova (pedido do Ramon)
+7d7295d feat: trilha propria para os Reels (Lyria 3 via Gemini) + 3 opcoes para o Ramon ouvir
 e862273 docs: so sugerir conversa nova depois de salvar tudo (pedido do Ramon)
 8758c51 feat: ronda de engajamento comeca (4 comentarios no ar) + caminho barato na skill
 0bc340f feat: aprovacao por Telegram no ar (bot criado e testado ponta a ponta)
 157567d docs: skill aprende a falar curto e um assunto por vez
 c822544 docs: estado apos publicar pijama-oncinha antecipado
 0335b27 chore: atualiza estado da fila [skip ci]
-f32c80d chore: antecipa o post pijama-oncinha para agora (pedido do Ramon)
-2ddbab8 feat: token renovando sozinho, trava de aprovacao religada e checagem de foto repetida
+```
+Alterações não commitadas:
+```
+M .claude/skills/hana-social/SKILL.md
+ M .gitignore
+ M DECISOES.md
+ M HANDOFF.md
+ M content/parceria-canecas-pod.md
+ M studio/estado.py
+ M studio/para_aprovar.py
+ M studio/preparar_lote.py
 ```
 
 ## Decisões e contexto
@@ -129,9 +143,9 @@ Mais recente em cima.
    **Nunca usar `webbrowser.open` nem `start`**: o navegador padrão do Windows
    é o perfil da marca Canecas, e abrir ali é erro que já custou três avisos
    dele na mesma conversa.
-   No celular: pasta do OneDrive `Fotos da Hana\03 - APROVAR (semana)` numerada
-   com `00_LEGENDAS.txt`. O Telegram é o canal que ele quer ligar — os secrets
-   nunca foram criados, então hoje ele não funciona.
+   No celular: `Hana Social\Fotos da Hana\03 - APROVAR (semana)`, numerada com
+   `00_LEGENDAS.txt`. **Sempre escrever o caminho COMPLETO na mensagem** e nunca
+   criar subpasta nova — ele não acha (pedido dele em 27/07/2026).
 4. **Conferir repetição ANTES de propor qualquer foto** — rodar
    `python studio/checar_repetida.py`, que compara por impressão digital de
    imagem contra tudo publicado no perfil e a fila contra ela mesma.

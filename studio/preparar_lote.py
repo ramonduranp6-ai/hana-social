@@ -6,7 +6,7 @@ Uso (a partir da raiz do repo):
 1. Editar tudo que estiver em "01 - brutas" e gerar folha de contato:
        python studio/preparar_lote.py editar
    -> corrige rotação EXIF, corta 4:5, aplica o tratamento "clean premium",
-      exporta 1080x1350 em "OneDrive/Fotos da Hana/02 - selecionadas/" e
+      exporta 1080x1350 em "Fotos da Hana/02 - selecionadas/" (dentro do repo) e
       salva contact_sheet.jpg lá (grade numerada para escolher no celular).
 
 2. Criar um post na fila a partir de uma foto editada:
@@ -30,9 +30,11 @@ except ImportError:
     pass
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ONEDRIVE = os.path.join(os.path.expanduser("~"), "OneDrive", "Fotos da Hana")
-BRUTAS = os.path.join(ONEDRIVE, "01 - brutas (suba aqui)")
-SELECIONADAS = os.path.join(ONEDRIVE, "02 - selecionadas")
+# As fotos moram DENTRO do projeto (28/07/2026, pedido do Ramón): antes ficavam
+# soltas na raiz do OneDrive. Caminho relativo ao repo — nao depende do usuario.
+FOTOS = os.path.join(ROOT, "Fotos da Hana")
+BRUTAS = os.path.join(FOTOS, "01 - brutas (suba aqui)")
+SELECIONADAS = os.path.join(FOTOS, "02 - selecionadas")
 QUEUE = os.path.join(ROOT, "content", "queue")
 FOTO_EXTS = (".jpg", ".jpeg", ".png", ".heic")
 

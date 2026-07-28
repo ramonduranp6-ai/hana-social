@@ -32,6 +32,12 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
 
 ## 2. Regras que não se reabrem sem ordem dele
 
+0. **TUDO do projeto mora dentro de uma pasta só** (ele mandou em 28/07/2026):
+   `C:\Users\Ramón França\OneDrive\Desktop\Hana Social`. Nada de arquivo solto
+   na raiz do OneDrive nem em outro canto — as fotos, que ficavam em
+   `OneDrive\Fotos da Hana`, foram movidas para `Hana Social\Fotos da Hana`.
+   Ao criar qualquer pasta ou saída nova, ela nasce aqui dentro. Continua
+   sincronizando no celular normalmente, porque o projeto inteiro está no OneDrive.
 1. **A estrela é a Hana.** O Ramón pode aparecer, mas nunca é o assunto. Régua:
    se a Hana puder ser cortada do quadro sem mudar a piada, o post está errado.
 2. **Nada é publicado sem o "aprovado" dele.** A automação prepara, mostra os
@@ -39,13 +45,13 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
 2b. **COMO mostrar pra ele — não improvisar.** Ele **não enxerga** link do
    `raw.githubusercontent.com`, arquivo anexado na conversa, nem link de página
    publicada: os três já falharam. Gravar as mídias numeradas em
-   `OneDrive\Fotos da Hana\03 - APROVAR (semana)` com um `00_LEGENDAS.txt` na
-   mesma ordem (ele abre no celular). **Canal principal desde 27/07/2026: o
+   `Hana Social\Fotos da Hana\03 - APROVAR (semana)` com um `00_LEGENDAS.txt`
+   na mesma ordem (ele abre no celular). **Canal principal desde 27/07/2026: o
    Telegram** — bot `@Hanasocial_aproval_bot`, secrets já no GitHub, testado
    ponta a ponta (manda foto/vídeo com botões Aprovar/Recusar e o clique volta).
 2b-i. **SEMPRE escrever o caminho COMPLETO na mensagem** (ele pediu em
    27/07/2026, depois de não achar uma pasta que descrevi só pelo nome):
-   `C:\Users\Ramón França\OneDrive\Fotos da Hana\03 - APROVAR (semana)`.
+   `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\03 - APROVAR (semana)`.
    Nunca "a pasta de sempre", nunca só o nome da subpasta.
 2b-ii. **Não criar pasta nova.** Tudo numerado dentro de
    `03 - APROVAR (semana)`, que ele já conhece. Subpasta nova ele não encontra —

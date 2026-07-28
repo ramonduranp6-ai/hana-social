@@ -3,8 +3,9 @@ publisher/.telegram_offset
 __pycache__/
 *.pyc
 
-# Fotos brutas nunca vao para o repo publico
-Fotos da Hana/
+# Fotos nunca vao para o repo publico (~195 MB). Desde 28/07/2026 a pasta mora
+# DENTRO do projeto, entao este ignore passou a ser o que segura tudo.
+/Fotos da Hana/
 
 # log do vigia local
 studio/sentinela.log

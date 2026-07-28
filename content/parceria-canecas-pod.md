@@ -22,7 +22,7 @@ retirada formalmente e a fronteira acima passa a valer.
 ## O que a parceria É (autorizado e mantido)
 
 **Hana fornece:** acervo de fotos editadas em alta
-(`OneDrive\Fotos da Hana\03 - editadas` → `Canecas POD\Hana-Fotos`, atualizado
+(`Hana Social\Fotos da Hana\03 - editadas` → `Canecas POD\Hana-Fotos`, atualizado
 semanalmente) e uso da Hana como caso demonstrativo no conteúdo em inglês deles.
 
 ⚠️ **FILTRO OBRIGATÓRIO AO FORNECER:** só fotos em que a Hana aparece
@@ -33,7 +33,7 @@ a remoção foi pedida ao outro time. Aplicar o filtro na origem, inclusive na
 rotina automática de domingo.
 
 **Hana recebe:** os retratos artísticos da Hana em alta, depositados em
-`OneDrive\Fotos da Hana\04 - artes recebidas` (único caminho de escrita deles
+`Hana Social\Fotos da Hana\04 - artes recebidas` (único caminho de escrita deles
 aqui), para publicar como conteúdo do pilar estética/status.
 
 **Divulgação cruzada:** story marcando o perfil deles **por evento** (quando

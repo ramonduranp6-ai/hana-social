@@ -63,9 +63,9 @@ Mais recente em cima.
    **Nunca usar `webbrowser.open` nem `start`**: o navegador padrão do Windows
    é o perfil da marca Canecas, e abrir ali é erro que já custou três avisos
    dele na mesma conversa.
-   No celular: pasta do OneDrive `Fotos da Hana\03 - APROVAR (semana)` numerada
-   com `00_LEGENDAS.txt`. O Telegram é o canal que ele quer ligar — os secrets
-   nunca foram criados, então hoje ele não funciona.
+   No celular: `Hana Social\Fotos da Hana\03 - APROVAR (semana)`, numerada com
+   `00_LEGENDAS.txt`. **Sempre escrever o caminho COMPLETO na mensagem** e nunca
+   criar subpasta nova — ele não acha (pedido dele em 27/07/2026).
 4. **Conferir repetição ANTES de propor qualquer foto** — rodar
    `python studio/checar_repetida.py`, que compara por impressão digital de
    imagem contra tudo publicado no perfil e a fila contra ela mesma.

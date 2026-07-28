@@ -71,5 +71,6 @@ Sistema para crescer e automatizar o Instagram da cadela Hana
 ## Branch
 Trabalho direto na `main`. O repositório agora vive na máquina local do Ramón
 (`Desktop\Hana Social`), que funciona como servidor — sessões são comandadas
-pelo celular via claude.ai/code. Fotos brutas vão na pasta local
-`Fotos da Hana/` (fora do git).
+pelo celular via claude.ai/code. Fotos brutas vão em
+`Hana Social\Fotos da Hana\01 - brutas (suba aqui)` — dentro do projeto desde
+28/07/2026 (antes ficavam soltas na raiz do OneDrive), e fora do git.
