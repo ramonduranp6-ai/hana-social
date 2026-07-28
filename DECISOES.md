@@ -7,26 +7,28 @@ Mais recente em cima.
 ## Onde paramos (28/07/2026 — madrugada)
 
 **Aguardando o Ramón:**
-- **Trocar a conta da Hana para "Criador de conteúdo"** (decisão dele em
-  28/07/2026). Só ele pode fazer — é ajuste de conta, no celular:
-  Instagram → Configurações → Tipo de conta. **Conferir antes qual é o tipo
-  atual**; eu não consegui descobrir pela API.
-  Assim que trocar, **me avisar para eu testar a automação na hora**: a conta
-  pode precisar refazer o vínculo com a Página do Facebook, e é por esse vínculo
-  que a publicação automática funciona. Se quebrar, quero descobrir na mesma
-  hora e não no dia do post.
-- **Decidir se ele monta a biblioteca de 12 trilhas** (US$ 0,48 no crédito do
+- **Decidir se monta a biblioteca de 12 trilhas** (US$ 0,48 no crédito do
   Gemini) ou fica só com as 3 atuais.
+- **Decidir se quer publicar Reel pelo celular com áudio de tendência.** Agora
+  que se sabe que a conta é Criador, isso está liberado — o único custo são
+  ~3 minutos dele por Reel, porque a API não anexa áudio de tendência.
 
 **Decidido em 28/07/2026:**
-- **Conta vira "Criador de conteúdo" agora; Business fica para depois**, quando
-  houver base grande. Motivo: só conta Criador enxerga a biblioteca de áudios em
-  tendência — Business fica presa à Meta Sound Collection, porque os acordos da
-  Meta com as gravadoras não cobrem uso comercial. Hoje o gargalo é alcance, e
-  áudio em alta é a alavanca mais barata que existe (custa R$ 0). Quando a Hana
-  tiver audiência e o produto existir, aí Business passa a valer pelas
-  ferramentas de loja — e ele mencionou que nessa hora compraria algum app de
-  apoio.
+- **A conta JÁ ERA Criador de conteúdo** — conferido na tela, não havia nada a
+  trocar. Ele decidiu manter assim e deixar Business para quando houver base
+  grande. Motivo: só Criador enxerga a biblioteca de áudios em tendência —
+  Business fica presa à Meta Sound Collection, porque os acordos da Meta com as
+  gravadoras não cobrem uso comercial. Quando a Hana tiver audiência e o produto
+  existir, Business passa a valer pelas ferramentas de loja — e ele mencionou
+  que nessa hora compraria algum app de apoio.
+  **Consequência que muda o jogo:** o áudio de tendência **já está disponível
+  pra ele hoje**. O que separava a Hana dele nunca foi permissão — é só o fato
+  de a API não anexar áudio de tendência, então o Reel tem que subir pelo
+  celular. Custo: ~3 minutos por Reel.
+- **Como achar o Chrome da Hana sem perguntar** (ele reclamou que a mesma
+  pergunta veio 3x na mesma noite): `list_connected_browsers` →
+  `select_browser` → `instagram.com/accounts/edit/` → `screenshot`, conferindo
+  o @ na tela. Nome e id do navegador não são confiáveis. Receita na skill.
 - **Trilha do Reel de 10/08: a lo-fi** (escolha delegada a mim). Já aplicada na
   fila e na pasta de aprovação.
 - **Trilha própria virou capacidade do projeto:** `studio/gerar_trilha.py` gera

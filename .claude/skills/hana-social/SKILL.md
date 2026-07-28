@@ -70,10 +70,15 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    Duas fotos do mesmo passeio em dias diferentes contam como repetido.
 3. **Preservar a cor tri lilac merle**; legenda em PT-BR terminando com
    pergunta; máx. 4 hashtags; posts seg/qua/sex às 21:00Z (18h de Itajaí).
-3b. **A conta fica como "Criador de conteúdo"** (decisão dele em 28/07/2026),
-   não Business — só Criador enxerga a biblioteca de áudios em tendência, e hoje
-   o gargalo é alcance. Business volta à mesa só quando houver audiência grande
-   e produto para vender. **Não reabrir sozinho.**
+3b. **A conta JÁ É "Criador de conteúdo"** — conferido na tela em 28/07/2026
+   (`instagram.com/accounts/professional_account_tools/` só oferece "trocar para
+   conta comercial" e "trocar para conta pessoal", ou seja, Criador é o estado
+   atual). Ele decidiu manter assim: só Criador enxerga a biblioteca de áudios
+   em tendência, e hoje o gargalo é alcance. Business volta à mesa quando houver
+   audiência grande e produto para vender. **Não reabrir sozinho.**
+   Consequência prática: **o áudio de tendência já está liberado pra ele hoje** —
+   o que falta não é permissão, é publicar pelo celular (a API não anexa áudio
+   de tendência).
 3c. **Trilha própria:** `python studio/gerar_trilha.py --lote` gera clipes de
    30s pelo Lyria 3 (Gemini, US$ 0,04 cada). Sempre instrumental — voz cantada
    rouba a atenção do gancho em texto. Dizer o limite toda vez que o assunto
@@ -84,8 +89,18 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    sim, interferência não. Não opinar sobre a marca deles, não mexer na pasta
    deles. Ao fornecer fotos, **só a Hana sozinha**, nunca com o Ramón (a imagem
    dele é livre aqui e vedada no projeto comercial confidencial dele).
-6. **Verificar qual conta do Instagram está ativa** no Chrome antes de qualquer
-   ação — ele alterna entre 3 contas e uma delas é do outro projeto.
+6. **Descobrir sozinho qual Chrome é o da Hana — NÃO perguntar a ele.**
+   Ele reclamou em 28/07/2026 que essa mesma pergunta já tinha vindo três vezes
+   na mesma noite. Existem 3 Chromes conectados e uma das contas é do outro
+   projeto, então conferir continua obrigatório — o que muda é quem confere.
+   Receita (custa 3 chamadas): `list_connected_browsers` → `select_browser` →
+   `navigate` em `instagram.com/accounts/edit/` → `screenshot`. A tela de editar
+   perfil mostra o @ e a bio; a da Hana diz **hanaduransanches / "A patroa"**.
+   Se não for ela, repetir com o próximo deviceId. Só perguntar se os três
+   falharem.
+   Em 28/07/2026 era o deviceId `92a8df1a-a73f-4182-92d1-1112c540ee86` — mas
+   **não confiar nem no id nem no nome**: ele aparecia como "Browser 1" na lista
+   e conectou como "Browser 2". Confirmar sempre pela tela.
 7. **Fechar todas as abas** do navegador ao terminar.
 8. **Economia:** trabalho mecânico em Python local (custo zero); IA só onde
    agrega; a entrega final e o raciocínio ficam com o Claude.
