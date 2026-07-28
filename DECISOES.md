@@ -35,6 +35,17 @@ não converte quem vê em seguidor. Confirma por número o que estava escrito em
 `content/metricas.md`: **o gargalo é alcance**. Próxima leitura fica mais rica
 quando o Reel de 10/08 entrar (aí dá para comparar Reel x Foto de verdade).
 
+**NOVO em 28/07/2026 — o lote de domingo virou robô de verdade** (*"faz o 1"*).
+`studio/lote_automatico.py`: edita as brutas, separa as inéditas, pede a legenda
+ao **Gemini Flash mostrando a foto** e cria 3 posts `pending`. Entrou dentro da
+tarefa `Hana Sentinela`, que passou a rodar **também aos domingos** — nenhum
+agendamento novo. **Custo: zero token Claude**, fração de centavo do crédito
+Gemini por foto. Testado com foto real; as duas legendas saíram no tom da patroa
+mimada, com pergunta e 4 hashtags. Detectou 7 fotos inéditas das 14 editadas e
+agendaria a partir de 12/08 (respeitando a fila que já existe).
+**O que continua comigo:** Reel (montagem e gancho), trilha, e a ronda de
+engajamento.
+
 **CORRIGIDO em 28/07/2026 — o robô `hana-rotina` NUNCA EXISTIU.** Ele perguntou o
 que ainda gasta token; fui conferir o Agendador do Windows e a única tarefa é
 **`Hana Sentinela`** (`studio\sentinela.bat`). O "robô que produz o lote no

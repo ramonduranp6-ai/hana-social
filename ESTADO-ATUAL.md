@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/07/2026 01:07. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/07/2026 01:18. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -57,14 +57,14 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+a786af6 feat: lote automatico de domingo - Gemini Flash ve a foto e escreve a legenda, custo zero de token
+8bf78f6 fix(docs): o robo hana-rotina nunca existiu - so a Hana Sentinela esta agendada
 6e56b63 feat: placar automatico - o projeto passou a medir alcance, salvos e seguidores ganhos por post
 a82ecb7 docs: Pagina do Facebook fica vazia de proposito (decisao do Ramon)
 854b65e docs: nada do Instagram da Hana vai para o Facebook pessoal do Ramon (2 chaves desligadas)
 be16559 docs(skill): nicho roda em audio original, veto de artista, como fazer ele ouvir a faixa, estado da Pagina
 72b4762 docs: trilha do 10/08 fica como esta + veto Xuxa + nicho roda em audio original
 9029e85 feat: audio de tendencia via API funciona (app Hana Audio) + regras de trilha do Ramon
-67070cd docs: revisar configuracoes da Pagina (ele deu enter em tudo para destravar)
-ecef4fc feat: Pagina do Facebook da Hana criada e ligada ao Instagram
 ```
 Alterações não commitadas:
 ```
@@ -109,6 +109,17 @@ real. **Primeiro número medido, e ele é duro:** 329 seguidores, alcance de
 não converte quem vê em seguidor. Confirma por número o que estava escrito em
 `content/metricas.md`: **o gargalo é alcance**. Próxima leitura fica mais rica
 quando o Reel de 10/08 entrar (aí dá para comparar Reel x Foto de verdade).
+
+**NOVO em 28/07/2026 — o lote de domingo virou robô de verdade** (*"faz o 1"*).
+`studio/lote_automatico.py`: edita as brutas, separa as inéditas, pede a legenda
+ao **Gemini Flash mostrando a foto** e cria 3 posts `pending`. Entrou dentro da
+tarefa `Hana Sentinela`, que passou a rodar **também aos domingos** — nenhum
+agendamento novo. **Custo: zero token Claude**, fração de centavo do crédito
+Gemini por foto. Testado com foto real; as duas legendas saíram no tom da patroa
+mimada, com pergunta e 4 hashtags. Detectou 7 fotos inéditas das 14 editadas e
+agendaria a partir de 12/08 (respeitando a fila que já existe).
+**O que continua comigo:** Reel (montagem e gancho), trilha, e a ronda de
+engajamento.
 
 **CORRIGIDO em 28/07/2026 — o robô `hana-rotina` NUNCA EXISTIU.** Ele perguntou o
 que ainda gasta token; fui conferir o Agendador do Windows e a única tarefa é

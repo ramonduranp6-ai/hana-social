@@ -202,6 +202,23 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    conversa — e isso é a parte cara. Se o Ramón disser "o robô faz", corrigir na
    hora em vez de deixar passar. Nunca criar agendamento novo — expandir o
    `Hana Sentinela` ou o workflow `publish.yml`.
+4c. **O LOTE DE DOMINGO AGORA É AUTOMÁTICO — não refazer na conversa**
+   (criado em 28/07/2026 a pedido dele: *"faz o 1"*, para tirar o trabalho
+   semanal do plano Claude). `studio/lote_automatico.py` edita as brutas, separa
+   as inéditas por impressão digital, pede a legenda ao **Gemini Flash mostrando
+   a foto** (multimodal, fração de centavo do crédito do IA-Hub) e cria 3 posts
+   `pending`. Roda dentro da tarefa **`Hana Sentinela`**, que passou a incluir
+   **domingo** (`--so-domingo` faz o script sair calado nos outros dias) — nenhum
+   agendamento novo foi criado. **Custo zero de token Claude.**
+   Ao abrir conversa: **não montar lote na mão** — rodar `--simular` e ver o que
+   o robô já faria. O Claude entra só se ele pedir revisão de legenda.
+   Pegadinhas já pagas: (a) `maxOutputTokens` baixo corta a legenda no meio,
+   porque o Flash gasta tokens "pensando" — está em 2000; (b) `thinkingConfig`
+   este endpoint recusa; (c) o console do Windows quebra com emoji, por isso o
+   script força UTF-8 na saída; (d) só FOTO entra na comparação de repetida —
+   Reel a API devolve como .mp4 e o dhash não abre.
+   O script **recusa** legenda sem pergunta ou cortada, em vez de criar post
+   errado calado.
 4b. **O PLACAR EXISTE — NÃO CHUTAR NÚMERO** (criado em 28/07/2026 a pedido dele:
    *"faz a 1"*). `publisher/metrics.py` roda dentro do publicador, **uma coleta
    por dia**, e escreve `content/metricas.json` (série histórica) +
@@ -257,6 +274,8 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
 | Ver se algo ficou para trás | `python studio/sentinela.py` |
 | Ver o placar (o que cada post rendeu) | ler `content/placar.md` — não editar |
 | Forçar uma coleta de métricas agora | `python publisher/metrics.py --forcar` |
+| Montar o lote da semana sem gastar token | `python studio/lote_automatico.py` |
+| Ver o plano do lote sem gastar nada | `python studio/lote_automatico.py --simular` |
 | Publicar agora (fora do horário) | `gh workflow run publish.yml -R ramonduranp6-ai/hana-social` |
 
 Reel sempre com **gancho em texto grande na primeira tela** — no nicho, Reel
