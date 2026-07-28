@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/07/2026 22:53. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/07/2026 22:58. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -56,6 +56,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+ecef4fc feat: Pagina do Facebook da Hana criada e ligada ao Instagram
 45afd5b docs: a conta ja era Criador de conteudo + achar o Chrome da Hana sem perguntar
 49e6502 docs: conta da Hana fica como Criador de conteudo (decisao do Ramon)
 d92b249 feat: Reel de 10/08 ganha trilha (lo-fi) - liberado pelo Ramon
@@ -63,12 +64,10 @@ ba805b4 chore: arruma a pasta Fotos da Hana (pedido do Ramon)
 5d90897 refactor: fotos da Hana passam a morar dentro do projeto (pedido do Ramon)
 d78246b ï»¿docs: sempre passar o caminho completo e nao criar pasta nova (pedido do Ramon)
 7d7295d feat: trilha propria para os Reels (Lyria 3 via Gemini) + 3 opcoes para o Ramon ouvir
-e862273 docs: so sugerir conversa nova depois de salvar tudo (pedido do Ramon)
 ```
 Alterações não commitadas:
 ```
-M .claude/skills/hana-social/SKILL.md
- M DECISOES.md
+M DECISOES.md
 ```
 
 ## Decisões e contexto
@@ -79,6 +78,18 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 Mais recente em cima.
 
 ## Onde paramos (28/07/2026 — madrugada)
+
+**Próxima conversa começa por aqui:**
+- **Testar a API de áudio** (o assunto que ficou pela metade). Gerar token pelo
+  **Facebook Login** no app "Hana Social" (id 1776084913751376), buscar faixas
+  em alta e tentar anexar por `musicSoundInfo.musicSoundId`. **Não prometer
+  nada antes de rodar** — o que existe hoje é indício de integradores, não
+  documentação da Meta. Não trocar o `IG_ACCESS_TOKEN` que está funcionando.
+- **Revisar as configurações da Página do Facebook.** Em 28/07/2026 o Ramón
+  terminou o assistente de configuração "dando enter em tudo" para destravar a
+  tela, e pediu revisão depois. Conferir o que entrou (contato, localização,
+  botão de ação, foto de perfil e capa) e corrigir o que não faz sentido para a
+  Hana. A Página ainda está sem foto de perfil e sem capa.
 
 **Aguardando o Ramón:**
 - **Decidir se monta a biblioteca de 12 trilhas** (US$ 0,48 no crédito do

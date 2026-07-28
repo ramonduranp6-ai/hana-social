@@ -6,6 +6,18 @@ Mais recente em cima.
 
 ## Onde paramos (28/07/2026 — madrugada)
 
+**Próxima conversa começa por aqui:**
+- **Testar a API de áudio** (o assunto que ficou pela metade). Gerar token pelo
+  **Facebook Login** no app "Hana Social" (id 1776084913751376), buscar faixas
+  em alta e tentar anexar por `musicSoundInfo.musicSoundId`. **Não prometer
+  nada antes de rodar** — o que existe hoje é indício de integradores, não
+  documentação da Meta. Não trocar o `IG_ACCESS_TOKEN` que está funcionando.
+- **Revisar as configurações da Página do Facebook.** Em 28/07/2026 o Ramón
+  terminou o assistente de configuração "dando enter em tudo" para destravar a
+  tela, e pediu revisão depois. Conferir o que entrou (contato, localização,
+  botão de ação, foto de perfil e capa) e corrigir o que não faz sentido para a
+  Hana. A Página ainda está sem foto de perfil e sem capa.
+
 **Aguardando o Ramón:**
 - **Decidir se monta a biblioteca de 12 trilhas** (US$ 0,48 no crédito do
   Gemini) ou fica só com as 3 atuais.
