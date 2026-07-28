@@ -95,6 +95,17 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    (app **Hana Audio** e as 3 permissões já ficam selecionados) — e dá para rodar
    a query de áudio ali mesmo, colando o endpoint na barra e lendo a resposta com
    `get_page_text`, sem precisar copiar o token para lugar nenhum.
+3b-ii. **NÃO EXISTE compartilhamento automático do Instagram da Hana para a
+   PÁGINA dela — e não se mistura o pessoal com o da Hana** (regra dele,
+   28/07/2026: *"não podemos misturar o pessoal com o da hana"*). Eu propus ligar
+   o compartilhamento automático achando que alimentaria a Página de graça; ao
+   abrir a tela (Central de Contas → Experiências conectadas → **Compartilhar
+   conteúdo entre perfis**), o único destino oferecido é o **perfil pessoal do
+   Ramón no Facebook**. Não liguei. De quebra, achei o **story já ligado** — os
+   stories da Hana estavam indo para o Facebook pessoal dele — e **desliguei as
+   duas chaves** a pedido dele (story e posts, ambas OFF em 28/07/2026).
+   Se o assunto voltar: a Página só recebe post do Instagram por publicação
+   manual ou pelo Meta Business Suite; não prometer automação sem testar.
 3c. **Trilha própria:** `python studio/gerar_trilha.py --lote` gera clipes de
    30s pelo Lyria 3 (Gemini, US$ 0,04 cada). Sempre instrumental — voz cantada
    rouba a atenção do gancho em texto. Dizer o limite toda vez que o assunto

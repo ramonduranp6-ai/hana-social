@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/07/2026 00:42. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/07/2026 00:51. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -57,6 +57,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+be16559 docs(skill): nicho roda em audio original, veto de artista, como fazer ele ouvir a faixa, estado da Pagina
 72b4762 docs: trilha do 10/08 fica como esta + veto Xuxa + nicho roda em audio original
 9029e85 feat: audio de tendencia via API funciona (app Hana Audio) + regras de trilha do Ramon
 67070cd docs: revisar configuracoes da Pagina (ele deu enter em tudo para destravar)
@@ -64,11 +65,11 @@ ecef4fc feat: Pagina do Facebook da Hana criada e ligada ao Instagram
 45afd5b docs: a conta ja era Criador de conteudo + achar o Chrome da Hana sem perguntar
 49e6502 docs: conta da Hana fica como Criador de conteudo (decisao do Ramon)
 d92b249 feat: Reel de 10/08 ganha trilha (lo-fi) - liberado pelo Ramon
-ba805b4 chore: arruma a pasta Fotos da Hana (pedido do Ramon)
 ```
 Alterações não commitadas:
 ```
 M .claude/skills/hana-social/SKILL.md
+ M DECISOES.md
 ```
 
 ## Decisões e contexto
@@ -85,14 +86,23 @@ aplicada). Palavras dele: *"por enquanto vamos manter como está, nos próximos 
 aprovo novamente"*. Ou seja: **não mexer mais na trilha do 10/08**; a conversa de
 música volta na produção dos PRÓXIMOS Reels.
 
+**FEITO em 28/07/2026 — separação do pessoal e do da Hana.** Ele perguntou se os
+posts vão para o Facebook: **não vão**, o publicador é só Instagram. Propus ligar
+o compartilhamento automático para alimentar a Página de graça e **estava errado**
+— a tela só oferece mandar para o **perfil pessoal do Ramón**, não para a Página.
+Não liguei. E encontrei o **story já ligado** (stories da Hana caindo no Facebook
+pessoal dele): **desliguei as duas chaves** com o OK dele — *"não podemos
+misturar o pessoal com o da hana"*. Regra na skill (3b-ii).
+**Ele mesmo vai pôr a foto de perfil e a capa da Página** — deixei a Página
+aberta no Chrome dele e apontei a pasta `Fotos da Hana\03 - editadas`.
+
 **Próxima conversa começa por aqui:**
-- **Página do Facebook — decisão pendente com ele.** Conferi na tela em
-  28/07/2026: a Página não está bagunçada, está **vazia** — sem foto de perfil,
-  sem capa, sem informações de contato, 0 post, 0 seguidor. A bio veio certa do
-  Instagram. Proposta que fiz e ele ainda não respondeu: como a Página só existe
-  para destravar a API de áudio, fazer **só o mínimo — foto de perfil + capa com
-  fotos da Hana** — e parar por aí. Não investir tempo enfeitando: ela não traz
-  seguidor.
+- **Página do Facebook — conferir se ele pôs a foto de perfil e a capa.** Se pôs,
+  o assunto Página está encerrado (foi o combinado: só o mínimo). Estado em
+  28/07/2026 antes de ele mexer: **vazia** — sem foto de perfil, sem capa, sem
+  informações de contato, 0 post, 0 seguidor; só a bio, que veio certa do
+  Instagram. **Nada além do mínimo** — a Página existe como infraestrutura da API
+  de áudio, não traz seguidor, e enfeitar não é prioridade.
 - **Ampliar a amostra do nicho antes de escolher trilha do próximo Reel** (ver
   achado abaixo). Faltou cobrir `ohanabulls_club`, `omundobully` e
   `canilelohimbull`.
