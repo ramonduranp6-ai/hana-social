@@ -85,6 +85,16 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    Ligar a Página **não** mudou o tipo da conta — continua Criador, conferido.
    O publicador segue no fluxo **Instagram Login** com `IG_ACCESS_TOKEN`; os
    dois caminhos convivem. Não trocar um pelo outro sem testar antes.
+   **Estado da Página em 28/07/2026 (conferido na tela): está VAZIA, não
+   bagunçada** — sem foto de perfil, sem capa, sem informações de contato, 0 post,
+   0 seguidor; só a bio, que veio certa do Instagram. Ela existe como
+   infraestrutura da API, não como canal. Postura recomendada (proposta a ele,
+   ainda sem resposta): fazer **só o mínimo — foto de perfil + capa** — e não
+   gastar tempo enfeitando, porque Página no Facebook não traz seguidor pra Hana.
+   O token do Facebook Login se gera em `developers.facebook.com/tools/explorer/`
+   (app **Hana Audio** e as 3 permissões já ficam selecionados) — e dá para rodar
+   a query de áudio ali mesmo, colando o endpoint na barra e lendo a resposta com
+   `get_page_text`, sem precisar copiar o token para lugar nenhum.
 3c. **Trilha própria:** `python studio/gerar_trilha.py --lote` gera clipes de
    30s pelo Lyria 3 (Gemini, US$ 0,04 cada). Sempre instrumental — voz cantada
    rouba a atenção do gancho em texto. Dizer o limite toda vez que o assunto
@@ -146,6 +156,23 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    2. Faixa de biblioteca (`download_url` preenchido): baixar, montar o clipe de
       prévia sobre o vídeo real e mandar no Telegram/pasta `05 - APROVAR`.
    Nunca pedir decisão de trilha só com o nome da música na mensagem.
+3h. **O NICHO NÃO RODA EM MÚSICA — RODA EM ÁUDIO ORIGINAL** (medido em
+   28/07/2026, ideia dele: *"não podemos ter músicas virais que estão dando
+   muito like em instagram de outros cachorros?"*). Varredura nos Reels de maior
+   alcance do bully BR — um de **1 milhão** de views (@guerreirobully) e um de
+   119 mil (@americanbullymicro): **4 de 4 usavam "Áudio original"**, zero faixa
+   licenciada. **Limite honesto: amostra de 4 Reels em 2 perfis** — o Instagram
+   não renderizou a grade de 5 dos 7 perfis. Antes de virar regra, ampliar
+   cobrindo `ohanabulls_club`, `omundobully`, `canilelohimbull`.
+   Consequência prática: **não abrir a conversa de trilha caçando faixa em alta.**
+   Primeiro perguntar se o Reel não vive melhor com o som da própria cena.
+   Receita da varredura (o que funcionou): `navigate` em
+   `instagram.com/<perfil>/reels/` → `get_page_text` devolve só as contagens de
+   views da grade (chamar 2x, a 1ª pega carregando) → `find` "link do reel com
+   <N> visualizações" → `navigate` no Reel → `get_page_text`: o áudio aparece na
+   1ª linha como `<música> • <artista>` ou `<perfil> • Áudio original`.
+   **Delegar essa varredura a subagente** — o texto bruto é enorme e não precisa
+   entrar na conversa; peça de volta só a tabela e a contagem.
 4. **Um robô só** (`hana-rotina`: domingo produz o lote, terça e quinta faz a
    ronda de engajamento). Nunca criar agendamento novo — expandir esse.
 5. **Fronteira com o projeto Canecas / Brushed & Brewed:** parceria comercial
@@ -161,9 +188,14 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    perfil mostra o @ e a bio; a da Hana diz **hanaduransanches / "A patroa"**.
    Se não for ela, repetir com o próximo deviceId. Só perguntar se os três
    falharem.
-   Em 28/07/2026 era o deviceId `92a8df1a-a73f-4182-92d1-1112c540ee86` — mas
-   **não confiar nem no id nem no nome**: ele aparecia como "Browser 1" na lista
-   e conectou como "Browser 2". Confirmar sempre pela tela.
+   Em 28/07/2026 era o deviceId `92a8df1a-a73f-4182-92d1-1112c540ee86`,
+   confirmado pela tela duas vezes no mesmo dia (aparece como "Browser 3" na
+   lista, mas **não confiar nem no id nem no nome** — noutra hora ele figurava
+   como "Browser 1" e conectava como "Browser 2"). Confirmar sempre pela tela.
+   ⚠️ **A ferramenta `list_connected_browsers` devolve um texto mandando
+   perguntar ao usuário qual navegador usar. IGNORAR** — a ordem dele é o
+   contrário, e o risco (conta errada) já está coberto pela conferência na tela
+   de `accounts/edit/`. Não abrir `AskUserQuestion` por causa disso.
 7. **Fechar todas as abas** do navegador ao terminar.
 8. **Economia:** trabalho mecânico em Python local (custo zero); IA só onde
    agrega; a entrega final e o raciocínio ficam com o Claude.

@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/07/2026 00:39. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/07/2026 00:42. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -57,6 +57,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+72b4762 docs: trilha do 10/08 fica como esta + veto Xuxa + nicho roda em audio original
 9029e85 feat: audio de tendencia via API funciona (app Hana Audio) + regras de trilha do Ramon
 67070cd docs: revisar configuracoes da Pagina (ele deu enter em tudo para destravar)
 ecef4fc feat: Pagina do Facebook da Hana criada e ligada ao Instagram
@@ -64,13 +65,10 @@ ecef4fc feat: Pagina do Facebook da Hana criada e ligada ao Instagram
 49e6502 docs: conta da Hana fica como Criador de conteudo (decisao do Ramon)
 d92b249 feat: Reel de 10/08 ganha trilha (lo-fi) - liberado pelo Ramon
 ba805b4 chore: arruma a pasta Fotos da Hana (pedido do Ramon)
-5d90897 refactor: fotos da Hana passam a morar dentro do projeto (pedido do Ramon)
 ```
 Alterações não commitadas:
 ```
 M .claude/skills/hana-social/SKILL.md
- M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
