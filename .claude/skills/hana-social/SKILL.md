@@ -90,6 +90,29 @@ usar os MOVs da pasta de brutas, duas pegadinhas já pagas:
   com fonte grande em vez de uma linha só.
 - Sempre extrair alguns frames do resultado e **olhar** antes de dar por pronto.
 
+## 3b. Ronda de engajamento (comentar em perfis do nicho)
+
+Aprovada pelo Ramón em 27/07/2026, **3x por semana, ~10 comentários**. Não é
+robô: a API do Instagram não comenta em post de terceiro, e robô comentando pelo
+navegador toma bloqueio. É feito por mim, na conversa, com aprovação dele em
+bloco antes de publicar.
+
+Caminho barato (descoberto na primeira ronda — o resto é desperdício):
+1. `navigate` no perfil alvo → `find "primeiro link de publicação da grade"`.
+   **O `find` devolve a legenda junto com o link** — não precisa abrir o post
+   para saber do que ele fala. Chamar `find` duas vezes: a primeira quase sempre
+   pega a página ainda carregando.
+2. Fonte farta de alvos frescos: `instagram.com/omundobully/` (aba de marcados)
+   — perfis BR da raça postando hoje. Também vale quem comentou no post da Hana.
+3. Para comentar: `find` o campo "Adicione um comentário" → `scroll_to` →
+   **`screenshot` e clicar pela coordenada** (~917,347 no reel em 1600px).
+   Clicar pelo `ref` não dá foco e o texto se perde — sempre conferir se o botão
+   "Postar" apareceu; se não apareceu, o texto não entrou. Repetir clique+digitar.
+4. Confirmar cada comentário com `get_page_text` depois de postar.
+
+Custo real: a primeira ronda de 4 comentários saiu **cara** (descoberta do
+caminho). Medir de novo na próxima antes de prometer barato pra ele.
+
 ## 4. ÚLTIMO PASSO, OBRIGATÓRIO: deixar o estado pronto para a próxima conversa
 
 Antes de encerrar qualquer sessão em que algo mudou:

@@ -13,6 +13,16 @@ Mais recente em cima.
   de ferramenta).
 
 **Resolvido hoje:**
+- **Ronda de engajamento começou (27/07/2026).** Descoberto que a "ronda de
+  terça e quinta" descrita aqui **nunca existiu em código** — era só texto.
+  Agora é processo manual meu, aprovado por ele: **3x por semana, ~10
+  comentários**, sempre com aprovação em bloco antes de publicar. Primeira ronda:
+  4 comentários no ar como "a patroa" em @americanbully.insta.do.bruce,
+  @ohanabulls_club (canil de Blumenau/SC), @guerreirobully e @canilelohimbull.
+  Diagnóstico confirmado: nos comentários dos posts da Hana só aparecem amigos e
+  família — o nicho ainda não chegou. Por isso a ronda existe.
+- **Música nos Reels:** ele topa música embutida no arquivo (isso a automação
+  faz). Áudio de tendência do Instagram continua fora — não existe via API.
 - **Telegram no ar (27/07/2026, noite).** Bot `@Hanasocial_aproval_bot` criado
   por ele no BotFather; token e chat id gravados como secrets no GitHub
   (`TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`) — antes eles **nunca existiram** e

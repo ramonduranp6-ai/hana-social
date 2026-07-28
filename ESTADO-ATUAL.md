@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/07/2026 21:11. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/07/2026 21:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -53,6 +53,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+0bc340f feat: aprovacao por Telegram no ar (bot criado e testado ponta a ponta)
 157567d docs: skill aprende a falar curto e um assunto por vez
 c822544 docs: estado apos publicar pijama-oncinha antecipado
 0335b27 chore: atualiza estado da fila [skip ci]
@@ -60,7 +61,6 @@ f32c80d chore: antecipa o post pijama-oncinha para agora (pedido do Ramon)
 2ddbab8 feat: token renovando sozinho, trava de aprovacao religada e checagem de foto repetida
 cb45731 docs: skill aprende os canais que funcionam com o Ramon e a checagem de repeticao
 2ca48a3 feat: skill do projeto + estado que se regenera sozinho (retomar conversa sem perder o fio)
-b56fd01 fix: aviso do Telegram manda a foto/video e para de reenviar a cada 30 min
 ```
 Alterações não commitadas:
 ```
@@ -84,6 +84,16 @@ Mais recente em cima.
   de ferramenta).
 
 **Resolvido hoje:**
+- **Ronda de engajamento começou (27/07/2026).** Descoberto que a "ronda de
+  terça e quinta" descrita aqui **nunca existiu em código** — era só texto.
+  Agora é processo manual meu, aprovado por ele: **3x por semana, ~10
+  comentários**, sempre com aprovação em bloco antes de publicar. Primeira ronda:
+  4 comentários no ar como "a patroa" em @americanbully.insta.do.bruce,
+  @ohanabulls_club (canil de Blumenau/SC), @guerreirobully e @canilelohimbull.
+  Diagnóstico confirmado: nos comentários dos posts da Hana só aparecem amigos e
+  família — o nicho ainda não chegou. Por isso a ronda existe.
+- **Música nos Reels:** ele topa música embutida no arquivo (isso a automação
+  faz). Áudio de tendência do Instagram continua fora — não existe via API.
 - **Telegram no ar (27/07/2026, noite).** Bot `@Hanasocial_aproval_bot` criado
   por ele no BotFather; token e chat id gravados como secrets no GitHub
   (`TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`) — antes eles **nunca existiram** e
