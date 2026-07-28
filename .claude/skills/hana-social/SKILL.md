@@ -202,6 +202,18 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    conversa — e isso é a parte cara. Se o Ramón disser "o robô faz", corrigir na
    hora em vez de deixar passar. Nunca criar agendamento novo — expandir o
    `Hana Sentinela` ou o workflow `publish.yml`.
+4d. **MEDIR ANTES DE AUTOMATIZAR — pendência aberta da ronda de engajamento**
+   (28/07/2026). A ronda é o item mais caro que sobrou: **estimativa de 60 a 120
+   mil tokens por ronda**, 3x por semana — 200 a 350 mil por semana, o
+   equivalente a uma conversa longa inteira. Mas **ninguém sabe se ela funciona**:
+   a única ronda real (4 comentários, 27/07) não trouxe seguidor medido.
+   **Combinado com ele: fazer UMA ronda de 10 comentários e ler o placar depois.**
+   - Se os seguidores mexerem → montar o semi-robô (script gera os comentários
+     com Gemini, ele cola no celular em ~5 min; custo zero de token).
+   - Se não mexerem → a ronda sai de cena e economiza para sempre.
+   **Não automatizar a ronda antes de medir**, e não prometer que ela funciona.
+   Vale como método, não só para a ronda: agora que o placar existe, gasto novo
+   de esforço se justifica por número, não por intuição.
 4c. **O LOTE DE DOMINGO AGORA É AUTOMÁTICO — não refazer na conversa**
    (criado em 28/07/2026 a pedido dele: *"faz o 1"*, para tirar o trabalho
    semanal do plano Claude). `studio/lote_automatico.py` edita as brutas, separa

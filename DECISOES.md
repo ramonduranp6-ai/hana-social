@@ -79,6 +79,14 @@ abrir o `on_platform_audio_preview_link` no Chrome da Hana (a página do áudio 
 player). Está registrado na skill como regra 3g.
 
 **Aguardando o Ramón:**
+- **PENDÊNCIA (28/07/2026): a ronda de engajamento vale a pena?** É o item mais
+  caro que sobrou — estimativa de **60 a 120 mil tokens por ronda**, 3x/semana,
+  algo entre 200 e 350 mil por semana. E **não se sabe se funciona**: a única
+  ronda real (4 comentários, 27/07) não trouxe seguidor medido. Combinado: fazer
+  **uma ronda de 10 comentários** e ler o `content/placar.md` depois. Se os
+  seguidores mexerem, monta-se o semi-robô (Gemini escreve os comentários, ele
+  cola no celular, custo zero de token); se não mexerem, a ronda sai de cena.
+  **Ele ainda não marcou quando fazer essa ronda de medição.**
 - **Decidir se monta a biblioteca de 12 trilhas** (US$ 0,48 no crédito do
   Gemini) ou fica só com as 3 atuais.
 - **Decidir se publica o Reel de 10/08 como "Reel de teste"** (trial reel: só

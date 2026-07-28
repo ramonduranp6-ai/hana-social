@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/07/2026 01:18. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/07/2026 01:23. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -57,6 +57,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+0fc24e7 docs: lote automatico de domingo documentado na skill
 a786af6 feat: lote automatico de domingo - Gemini Flash ve a foto e escreve a legenda, custo zero de token
 8bf78f6 fix(docs): o robo hana-rotina nunca existiu - so a Hana Sentinela esta agendada
 6e56b63 feat: placar automatico - o projeto passou a medir alcance, salvos e seguidores ganhos por post
@@ -64,7 +65,6 @@ a82ecb7 docs: Pagina do Facebook fica vazia de proposito (decisao do Ramon)
 854b65e docs: nada do Instagram da Hana vai para o Facebook pessoal do Ramon (2 chaves desligadas)
 be16559 docs(skill): nicho roda em audio original, veto de artista, como fazer ele ouvir a faixa, estado da Pagina
 72b4762 docs: trilha do 10/08 fica como esta + veto Xuxa + nicho roda em audio original
-9029e85 feat: audio de tendencia via API funciona (app Hana Audio) + regras de trilha do Ramon
 ```
 Alterações não commitadas:
 ```
@@ -154,6 +154,14 @@ abrir o `on_platform_audio_preview_link` no Chrome da Hana (a página do áudio 
 player). Está registrado na skill como regra 3g.
 
 **Aguardando o Ramón:**
+- **PENDÊNCIA (28/07/2026): a ronda de engajamento vale a pena?** É o item mais
+  caro que sobrou — estimativa de **60 a 120 mil tokens por ronda**, 3x/semana,
+  algo entre 200 e 350 mil por semana. E **não se sabe se funciona**: a única
+  ronda real (4 comentários, 27/07) não trouxe seguidor medido. Combinado: fazer
+  **uma ronda de 10 comentários** e ler o `content/placar.md` depois. Se os
+  seguidores mexerem, monta-se o semi-robô (Gemini escreve os comentários, ele
+  cola no celular, custo zero de token); se não mexerem, a ronda sai de cena.
+  **Ele ainda não marcou quando fazer essa ronda de medição.**
 - **Decidir se monta a biblioteca de 12 trilhas** (US$ 0,48 no crédito do
   Gemini) ou fica só com as 3 atuais.
 - **Decidir se publica o Reel de 10/08 como "Reel de teste"** (trial reel: só
