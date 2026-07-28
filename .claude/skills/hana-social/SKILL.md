@@ -43,6 +43,13 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    mesma ordem (ele abre no celular). **Canal principal desde 27/07/2026: o
    Telegram** — bot `@Hanasocial_aproval_bot`, secrets já no GitHub, testado
    ponta a ponta (manda foto/vídeo com botões Aprovar/Recusar e o clique volta).
+2b-i. **SEMPRE escrever o caminho COMPLETO na mensagem** (ele pediu em
+   27/07/2026, depois de não achar uma pasta que descrevi só pelo nome):
+   `C:\Users\Ramón França\OneDrive\Fotos da Hana\03 - APROVAR (semana)`.
+   Nunca "a pasta de sempre", nunca só o nome da subpasta.
+2b-ii. **Não criar pasta nova.** Tudo numerado dentro de
+   `03 - APROVAR (semana)`, que ele já conhece. Subpasta nova ele não encontra —
+   já aconteceu com as prévias de trilha (08/09/10), que tive que achatar.
 2c. **Conferir repetição antes de propor.** Abrir o perfil no Chrome, rolar os
    38 posts e comparar cena por cena — inclusive entre os posts do mesmo lote.
    Duas fotos do mesmo passeio em dias diferentes contam como repetido.
