@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/07/2026 15:05. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/07/2026 21:11. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -22,11 +22,11 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-07-27T22:19:13Z schedule success
+2026-07-27T18:15:01Z schedule success
 2026-07-27T17:42:23Z workflow_dispatch success
-2026-07-27T12:39:28Z schedule success
-2026-07-26T23:45:55Z schedule success
 ```
-- Vigia local (Agendador do Windows): próxima execução segunda-feira, 27 de julho de 2026 18:10:00
+- Vigia local (Agendador do Windows): próxima execução quarta-feira, 29 de julho de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
@@ -49,10 +49,11 @@ mudança de status nem publicar.
 - Brutas a processar: 26 arquivos
 - Editadas prontas: 9
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34380
+- Fotos do iPhone sincronizadas (iCloud): 34381
 
 ## Últimas mudanças no projeto
 ```
+157567d docs: skill aprende a falar curto e um assunto por vez
 c822544 docs: estado apos publicar pijama-oncinha antecipado
 0335b27 chore: atualiza estado da fila [skip ci]
 f32c80d chore: antecipa o post pijama-oncinha para agora (pedido do Ramon)
@@ -60,11 +61,11 @@ f32c80d chore: antecipa o post pijama-oncinha para agora (pedido do Ramon)
 cb45731 docs: skill aprende os canais que funcionam com o Ramon e a checagem de repeticao
 2ca48a3 feat: skill do projeto + estado que se regenera sozinho (retomar conversa sem perder o fio)
 b56fd01 fix: aviso do Telegram manda a foto/video e para de reenviar a cada 30 min
-d6079df docs: checagem de metricas 26/07 - sem post novo publicado desde a baseline
 ```
 Alterações não commitadas:
 ```
-M ESTADO-ATUAL.md
+M .claude/skills/hana-social/SKILL.md
+ M DECISOES.md
 ```
 
 ## Decisões e contexto
@@ -77,16 +78,18 @@ Mais recente em cima.
 ## Onde paramos (27/07/2026 — tarde)
 
 **Aguardando o Ramón:**
-- **Criar o bot do Telegram** (@BotFather → `/newbot`) para ligar a aprovação
-  pelo celular. Descoberto hoje: os secrets `TELEGRAM_BOT_TOKEN` e
-  `TELEGRAM_CHAT_ID` **nunca existiram no GitHub** — os botões Aprovar/Recusar
-  nunca funcionaram de verdade. Enquanto isso, aprovação é na conversa.
 - Decidir se o Reel de 10/08 vai pela automação (trilha original) ou se ele
   publica pelo celular com áudio de tendência — áudio em alta rende mais
   alcance e é licenciado, mas **não existe via API** (limite da Meta, não falta
   de ferramenta).
 
 **Resolvido hoje:**
+- **Telegram no ar (27/07/2026, noite).** Bot `@Hanasocial_aproval_bot` criado
+  por ele no BotFather; token e chat id gravados como secrets no GitHub
+  (`TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`) — antes eles **nunca existiram** e
+  os botões nunca funcionaram. Testado ponta a ponta: mensagem com botões
+  chegou no celular dele e o clique voltou pra API. Agora é o canal principal de
+  aprovação; a pasta do OneDrive vira reserva.
 - **Token do Instagram**: gerado no painel da Meta (app "Hana Social",
   id 1776084913751376), gravado em `studio/.token`, renovado até 24/09/2026 e
   secret do GitHub atualizado pelo script. A renovação passou a rodar toda

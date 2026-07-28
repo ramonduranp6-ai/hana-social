@@ -40,8 +40,9 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    `raw.githubusercontent.com`, arquivo anexado na conversa, nem link de página
    publicada: os três já falharam. Gravar as mídias numeradas em
    `OneDrive\Fotos da Hana\03 - APROVAR (semana)` com um `00_LEGENDAS.txt` na
-   mesma ordem (ele abre no celular), e contar com o Telegram, que agora manda
-   foto e vídeo com botões Aprovar/Recusar.
+   mesma ordem (ele abre no celular). **Canal principal desde 27/07/2026: o
+   Telegram** — bot `@Hanasocial_aproval_bot`, secrets já no GitHub, testado
+   ponta a ponta (manda foto/vídeo com botões Aprovar/Recusar e o clique volta).
 2c. **Conferir repetição antes de propor.** Abrir o perfil no Chrome, rolar os
    38 posts e comparar cena por cena — inclusive entre os posts do mesmo lote.
    Duas fotos do mesmo passeio em dias diferentes contam como repetido.

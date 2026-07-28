@@ -7,16 +7,18 @@ Mais recente em cima.
 ## Onde paramos (27/07/2026 — tarde)
 
 **Aguardando o Ramón:**
-- **Criar o bot do Telegram** (@BotFather → `/newbot`) para ligar a aprovação
-  pelo celular. Descoberto hoje: os secrets `TELEGRAM_BOT_TOKEN` e
-  `TELEGRAM_CHAT_ID` **nunca existiram no GitHub** — os botões Aprovar/Recusar
-  nunca funcionaram de verdade. Enquanto isso, aprovação é na conversa.
 - Decidir se o Reel de 10/08 vai pela automação (trilha original) ou se ele
   publica pelo celular com áudio de tendência — áudio em alta rende mais
   alcance e é licenciado, mas **não existe via API** (limite da Meta, não falta
   de ferramenta).
 
 **Resolvido hoje:**
+- **Telegram no ar (27/07/2026, noite).** Bot `@Hanasocial_aproval_bot` criado
+  por ele no BotFather; token e chat id gravados como secrets no GitHub
+  (`TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`) — antes eles **nunca existiram** e
+  os botões nunca funcionaram. Testado ponta a ponta: mensagem com botões
+  chegou no celular dele e o clique voltou pra API. Agora é o canal principal de
+  aprovação; a pasta do OneDrive vira reserva.
 - **Token do Instagram**: gerado no painel da Meta (app "Hana Social",
   id 1776084913751376), gravado em `studio/.token`, renovado até 24/09/2026 e
   secret do GitHub atualizado pelo script. A renovação passou a rodar toda
