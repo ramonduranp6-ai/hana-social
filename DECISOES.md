@@ -13,6 +13,25 @@ Mais recente em cima.
   que se sabe que a conta é Criador, isso está liberado — o único custo são
   ~3 minutos dele por Reel, porque a API não anexa áudio de tendência.
 
+**Estrutura nova em 28/07/2026 — Página do Facebook criada e ligada:**
+- **Página `Hana Duran Sanches`** criada (id `1235806802950209`), categoria
+  "Criador(a) de conteúdo digital", bio puxada do Instagram. Portfólio
+  empresarial gerado junto: `616358434290372`.
+- **Instagram ligado à Página** — o Ramón fez o login (senha eu não digito,
+  nunca). Confirmado na tela: o Business Suite mostra os 329 seguidores do
+  Instagram e "hanaduransanches" ao lado da Página.
+- **A conta CONTINUA Criador de conteúdo** depois de ligar — conferido na tela.
+  O risco que eu tinha levantado (virar Business e perder o áudio em alta do
+  app) **não aconteceu**.
+- **O publicador não foi tocado.** `IG_ACCESS_TOKEN` segue o mesmo, fluxo
+  Instagram Login intacto, post de 29/07 às 18h sem risco.
+- **Próximo passo:** gerar um token pelo **Facebook Login** (app "Hana Social",
+  id 1776084913751376) e testar a API de áudio de verdade — buscar faixas em
+  alta e tentar anexar por `musicSoundInfo.musicSoundId`. Só então se sabe se o
+  áudio de tendência entra na automação. **Enquanto não testar, não prometer.**
+  Vale lembrar o que já está documentado: o catálogo da API pode diferir do que
+  aparece no app, e não dá para pré-visualizar o Reel com o áudio antes de subir.
+
 **Decidido em 28/07/2026:**
 - **A conta JÁ ERA Criador de conteúdo** — conferido na tela, não havia nada a
   trocar. Ele decidiu manter assim e deixar Business para quando houver base

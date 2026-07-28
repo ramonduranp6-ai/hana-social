@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/07/2026 22:28. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/07/2026 22:53. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -56,6 +56,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+45afd5b docs: a conta ja era Criador de conteudo + achar o Chrome da Hana sem perguntar
 49e6502 docs: conta da Hana fica como Criador de conteudo (decisao do Ramon)
 d92b249 feat: Reel de 10/08 ganha trilha (lo-fi) - liberado pelo Ramon
 ba805b4 chore: arruma a pasta Fotos da Hana (pedido do Ramon)
@@ -63,7 +64,6 @@ ba805b4 chore: arruma a pasta Fotos da Hana (pedido do Ramon)
 d78246b ï»¿docs: sempre passar o caminho completo e nao criar pasta nova (pedido do Ramon)
 7d7295d feat: trilha propria para os Reels (Lyria 3 via Gemini) + 3 opcoes para o Ramon ouvir
 e862273 docs: so sugerir conversa nova depois de salvar tudo (pedido do Ramon)
-8758c51 feat: ronda de engajamento comeca (4 comentarios no ar) + caminho barato na skill
 ```
 Alterações não commitadas:
 ```
@@ -86,6 +86,25 @@ Mais recente em cima.
 - **Decidir se quer publicar Reel pelo celular com áudio de tendência.** Agora
   que se sabe que a conta é Criador, isso está liberado — o único custo são
   ~3 minutos dele por Reel, porque a API não anexa áudio de tendência.
+
+**Estrutura nova em 28/07/2026 — Página do Facebook criada e ligada:**
+- **Página `Hana Duran Sanches`** criada (id `1235806802950209`), categoria
+  "Criador(a) de conteúdo digital", bio puxada do Instagram. Portfólio
+  empresarial gerado junto: `616358434290372`.
+- **Instagram ligado à Página** — o Ramón fez o login (senha eu não digito,
+  nunca). Confirmado na tela: o Business Suite mostra os 329 seguidores do
+  Instagram e "hanaduransanches" ao lado da Página.
+- **A conta CONTINUA Criador de conteúdo** depois de ligar — conferido na tela.
+  O risco que eu tinha levantado (virar Business e perder o áudio em alta do
+  app) **não aconteceu**.
+- **O publicador não foi tocado.** `IG_ACCESS_TOKEN` segue o mesmo, fluxo
+  Instagram Login intacto, post de 29/07 às 18h sem risco.
+- **Próximo passo:** gerar um token pelo **Facebook Login** (app "Hana Social",
+  id 1776084913751376) e testar a API de áudio de verdade — buscar faixas em
+  alta e tentar anexar por `musicSoundInfo.musicSoundId`. Só então se sabe se o
+  áudio de tendência entra na automação. **Enquanto não testar, não prometer.**
+  Vale lembrar o que já está documentado: o catálogo da API pode diferir do que
+  aparece no app, e não dá para pré-visualizar o Reel com o áudio antes de subir.
 
 **Decidido em 28/07/2026:**
 - **A conta JÁ ERA Criador de conteúdo** — conferido na tela, não havia nada a

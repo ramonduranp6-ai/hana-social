@@ -79,6 +79,12 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    Consequência prática: **o áudio de tendência já está liberado pra ele hoje** —
    o que falta não é permissão, é publicar pelo celular (a API não anexa áudio
    de tendência).
+3b-i. **A conta tem Página do Facebook desde 28/07/2026:** `Hana Duran Sanches`,
+   id `1235806802950209`, portfólio `616358434290372`. Existe para abrir o
+   caminho da Graph API clássica (áudio de tendência via API, story via API).
+   Ligar a Página **não** mudou o tipo da conta — continua Criador, conferido.
+   O publicador segue no fluxo **Instagram Login** com `IG_ACCESS_TOKEN`; os
+   dois caminhos convivem. Não trocar um pelo outro sem testar antes.
 3c. **Trilha própria:** `python studio/gerar_trilha.py --lote` gera clipes de
    30s pelo Lyria 3 (Gemini, US$ 0,04 cada). Sempre instrumental — voz cantada
    rouba a atenção do gancho em texto. Dizer o limite toda vez que o assunto
