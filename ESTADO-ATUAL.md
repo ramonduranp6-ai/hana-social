@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/07/2026 22:11. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/07/2026 22:14. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -56,6 +56,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+ba805b4 chore: arruma a pasta Fotos da Hana (pedido do Ramon)
 5d90897 refactor: fotos da Hana passam a morar dentro do projeto (pedido do Ramon)
 d78246b ï»¿docs: sempre passar o caminho completo e nao criar pasta nova (pedido do Ramon)
 7d7295d feat: trilha propria para os Reels (Lyria 3 via Gemini) + 3 opcoes para o Ramon ouvir
@@ -63,14 +64,10 @@ e862273 docs: so sugerir conversa nova depois de salvar tudo (pedido do Ramon)
 8758c51 feat: ronda de engajamento comeca (4 comentarios no ar) + caminho barato na skill
 0bc340f feat: aprovacao por Telegram no ar (bot criado e testado ponta a ponta)
 157567d docs: skill aprende a falar curto e um assunto por vez
-c822544 docs: estado apos publicar pijama-oncinha antecipado
 ```
 Alterações não commitadas:
 ```
-M .claude/skills/hana-social/SKILL.md
- M DECISOES.md
- M studio/estado.py
- M studio/para_aprovar.py
+M content/queue/2026-08-10_escolheu-o-canal/video.mp4
 ```
 
 ## Decisões e contexto
