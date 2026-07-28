@@ -115,6 +115,11 @@ caminho). Medir de novo na próxima antes de prometer barato pra ele.
 
 ## 4. ÚLTIMO PASSO, OBRIGATÓRIO: deixar o estado pronto para a próxima conversa
 
+**Nunca sugerir "abre conversa nova" sem antes salvar tudo.** Ele pediu isso em
+27/07/2026: o aviso de conversa longa só pode sair depois de rodar os 3 passos
+abaixo e confirmar `git status` limpo. Sugerir antes de salvar é pedir pra ele
+perder trabalho.
+
 Antes de encerrar qualquer sessão em que algo mudou:
 
 1. Atualize `DECISOES.md` — o que foi decidido, o que ficou pendente do Ramón,
