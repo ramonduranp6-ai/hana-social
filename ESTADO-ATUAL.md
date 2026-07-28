@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/07/2026 01:23. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/07/2026 09:08. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -22,9 +22,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-07-28T08:01:46Z schedule success
 2026-07-27T22:19:13Z schedule success
 2026-07-27T18:15:01Z schedule success
-2026-07-27T17:42:23Z workflow_dispatch success
 ```
 - Vigia local (Agendador do Windows): próxima execução quarta-feira, 29 de julho de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -57,6 +57,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+9c97c99 docs: ronda de engajamento vira pendencia - medir antes de automatizar
 0fc24e7 docs: lote automatico de domingo documentado na skill
 a786af6 feat: lote automatico de domingo - Gemini Flash ve a foto e escreve a legenda, custo zero de token
 8bf78f6 fix(docs): o robo hana-rotina nunca existiu - so a Hana Sentinela esta agendada
@@ -64,12 +65,11 @@ a786af6 feat: lote automatico de domingo - Gemini Flash ve a foto e escreve a le
 a82ecb7 docs: Pagina do Facebook fica vazia de proposito (decisao do Ramon)
 854b65e docs: nada do Instagram da Hana vai para o Facebook pessoal do Ramon (2 chaves desligadas)
 be16559 docs(skill): nicho roda em audio original, veto de artista, como fazer ele ouvir a faixa, estado da Pagina
-72b4762 docs: trilha do 10/08 fica como esta + veto Xuxa + nicho roda em audio original
 ```
 Alterações não commitadas:
 ```
-M .claude/skills/hana-social/SKILL.md
- M DECISOES.md
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -80,6 +80,25 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 Mais recente em cima.
 
 ## Onde paramos (28/07/2026 — fim do dia)
+
+**FEITO em 28/07/2026 — o campo "Nome" do perfil virou palavra-chave de busca.**
+Ele perguntou o que dava para configurar no Instagram para ganhar seguidor.
+Auditoria completa do perfil feita na tela (subagente, só leitura): conta
+**pública**, "Mostrar sugestões de contas em perfis" **ligada**, indexação em
+buscadores **ligada**, "Quem pode criar com seu conteúdo" = **Todos**, status da
+conta sem nenhuma restrição. Ou seja, **configuração não era o problema** — só
+uma alavanca estava sobrando: o campo **Nome**, que o Instagram indexa na busca,
+estava "Hana Duran Sanches" (ninguém procura por isso). Ele autorizou e o nome
+passou a ser **"Hana 🐾 Exotic Bully Micro"** — confirmado na tela do perfil.
+**Falha honesta desta sessão:** eu não consegui digitar — o classificador de
+segurança do Claude bloqueou `type` e `form_input` na tela da Meta. Achei a tela
+certa (Central de Contas → perfil → Nome, editável na web, limite de 2 trocas em
+14 dias) e **ele digitou**. Se precisar mexer de novo em campo de conta pela
+Central de Contas, já contar com isso: o caminho é eu abrir a tela e ele digitar.
+**Limite declarado:** isso é ganho pequeno, de descoberta por busca. O placar
+continua dizendo que o gargalo é alcance de conteúdo, não configuração.
+Achados que sobraram sem decisão (não propostos ainda): **zero destaques** no
+perfil e **link/site vazio**; o rótulo de categoria está **oculto** de propósito.
 
 **FECHADO: a trilha do Reel de 10/08 fica como está** (a lo-fi própria já
 aplicada). Palavras dele: *"por enquanto vamos manter como está, nos próximos eu

@@ -6,6 +6,25 @@ Mais recente em cima.
 
 ## Onde paramos (28/07/2026 — fim do dia)
 
+**FEITO em 28/07/2026 — o campo "Nome" do perfil virou palavra-chave de busca.**
+Ele perguntou o que dava para configurar no Instagram para ganhar seguidor.
+Auditoria completa do perfil feita na tela (subagente, só leitura): conta
+**pública**, "Mostrar sugestões de contas em perfis" **ligada**, indexação em
+buscadores **ligada**, "Quem pode criar com seu conteúdo" = **Todos**, status da
+conta sem nenhuma restrição. Ou seja, **configuração não era o problema** — só
+uma alavanca estava sobrando: o campo **Nome**, que o Instagram indexa na busca,
+estava "Hana Duran Sanches" (ninguém procura por isso). Ele autorizou e o nome
+passou a ser **"Hana 🐾 Exotic Bully Micro"** — confirmado na tela do perfil.
+**Falha honesta desta sessão:** eu não consegui digitar — o classificador de
+segurança do Claude bloqueou `type` e `form_input` na tela da Meta. Achei a tela
+certa (Central de Contas → perfil → Nome, editável na web, limite de 2 trocas em
+14 dias) e **ele digitou**. Se precisar mexer de novo em campo de conta pela
+Central de Contas, já contar com isso: o caminho é eu abrir a tela e ele digitar.
+**Limite declarado:** isso é ganho pequeno, de descoberta por busca. O placar
+continua dizendo que o gargalo é alcance de conteúdo, não configuração.
+Achados que sobraram sem decisão (não propostos ainda): **zero destaques** no
+perfil e **link/site vazio**; o rótulo de categoria está **oculto** de propósito.
+
 **FECHADO: a trilha do Reel de 10/08 fica como está** (a lo-fi própria já
 aplicada). Palavras dele: *"por enquanto vamos manter como está, nos próximos eu
 aprovo novamente"*. Ou seja: **não mexer mais na trilha do 10/08**; a conversa de
