@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/07/2026 21:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/07/2026 21:34. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -53,19 +53,14 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+e862273 docs: so sugerir conversa nova depois de salvar tudo (pedido do Ramon)
+8758c51 feat: ronda de engajamento comeca (4 comentarios no ar) + caminho barato na skill
 0bc340f feat: aprovacao por Telegram no ar (bot criado e testado ponta a ponta)
 157567d docs: skill aprende a falar curto e um assunto por vez
 c822544 docs: estado apos publicar pijama-oncinha antecipado
 0335b27 chore: atualiza estado da fila [skip ci]
 f32c80d chore: antecipa o post pijama-oncinha para agora (pedido do Ramon)
 2ddbab8 feat: token renovando sozinho, trava de aprovacao religada e checagem de foto repetida
-cb45731 docs: skill aprende os canais que funcionam com o Ramon e a checagem de repeticao
-2ca48a3 feat: skill do projeto + estado que se regenera sozinho (retomar conversa sem perder o fio)
-```
-Alterações não commitadas:
-```
-M .claude/skills/hana-social/SKILL.md
- M DECISOES.md
 ```
 
 ## Decisões e contexto
