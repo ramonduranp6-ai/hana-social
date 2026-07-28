@@ -3,8 +3,8 @@ name: hana-social
 description: Estado vivo e regras do projeto Hana Social (Instagram @hanaduransanches da cadela do Ramón). Use SEMPRE ao abrir conversa nova nesta pasta, e sempre que o assunto for a Hana, o Instagram dela, post, Reel, legenda, fila de publicação, seguidores, engajamento, métricas do perfil, edição de foto ou vídeo dela, ou a parceria com o projeto Canecas/Brushed & Brewed. Também ao perguntar "onde paramos", "o que falta", "como está o projeto".
 metadata:
   author: Ramón Duran
-  version: 1.1.0
-  atualizada_em: 2026-07-27
+  version: 1.2.0
+  atualizada_em: 2026-07-28
 ---
 
 # Hana Social — retomar de onde parou
@@ -12,6 +12,50 @@ metadata:
 Projeto: crescer o Instagram **@hanaduransanches** (Hana, Exotic Bully Micro
 tri lilac merle) até ter audiência e autoridade para vender produto no futuro.
 Repositório: `C:\Users\Ramón França\OneDrive\Desktop\Hana Social`.
+
+## 0. 🚨 REGRA ZERO — NÃO AFIRMAR SEM CONFERIR (cobrança dele, 28/07/2026)
+
+Palavras dele: *"sinto que não dá para acreditar em tudo o que você fala…
+suas respostas não podem ser superficiais, no achismo e alucinando"*. Ele está
+certo, e a prova é o histórico deste projeto — **cinco erros do mesmo tipo**:
+
+| O que eu afirmei | O que era verdade | Como teria sido pego |
+|---|---|---|
+| O robô `hana-rotina` produz o lote de domingo | **Nunca existiu** — só texto na doc | Abrir o Agendador do Windows |
+| Existe ronda de engajamento às terças e quintas | **Nunca existiu** em código | Procurar o código |
+| Ligar o compartilhamento automático alimenta a Página | A tela **só oferece o perfil pessoal** dele | Abrir a tela antes de propor |
+| O projeto não tinha trilha nenhuma | Havia `musica_hana.wav` de 25/07 | `ls` na pasta de editadas |
+| A Audio API é "indício de integradores" | É **documentação oficial da Meta** | Ler a doc |
+
+O padrão é sempre o mesmo: **eu repeti o que estava escrito, ou o que era
+plausível, em vez de olhar a fonte real.** Documentação (inclusive esta skill)
+descreve intenção; só a fonte real descreve o mundo.
+
+### O protocolo, que é obrigatório e não custa quase nada
+
+1. **Toda afirmação de fato precisa de fonte checada NESTA conversa** — comando
+   rodado, tela vista, arquivo lido agora. Não vale memória, não vale "a skill
+   diz", não vale "normalmente é assim".
+2. **Marcar o grau em toda afirmação de peso.** Ou *"conferido na tela agora"*,
+   ou *"está escrito na doc, NÃO conferi"*. Ele consegue decidir com informação
+   incerta — o que ele não consegue é adivinhar qual é qual.
+3. **Não existe fato sobre o mundo real vindo de arquivo do projeto.** Robô,
+   agendamento, chave ligada/desligada, configuração de conta, o que a API
+   aceita: conferir na **fonte** (Agendador, tela da Meta, resposta da API),
+   nunca no que a doc afirma. Se a doc divergir da fonte, **a doc está errada** —
+   corrigir a doc na hora.
+4. **Amostra pequena declara o tamanho.** "4 Reels em 2 perfis", não "o nicho
+   inteiro". Número medido vem de `content/placar.md`; **nunca estimar métrica**.
+5. **Antes de propor uma ação na interface, abrir a tela.** Foi o erro do
+   compartilhamento com a Página: eu descrevi um botão que não existia.
+6. **Não conferi = digo que não conferi.** É resposta legítima e barata.
+   Inventar é o único resultado inaceitável. Vale também para "não sei".
+7. **Quando errar, o erro entra no `DECISOES.md`** com o que teria pego o erro.
+   Sem isso o mesmo erro volta na conversa seguinte — foi o que aconteceu duas
+   vezes com robô inexistente.
+
+Régua final antes de mandar a mensagem: **"cada frase minha aqui, eu vi ou eu
+supus?"** As supostas ou saem, ou vão marcadas.
 
 ## 1. PRIMEIRO PASSO, SEMPRE: carregar o estado real
 
