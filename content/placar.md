@@ -1,24 +1,25 @@
 # Placar da Hana — o que cada post rendeu
 
 Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
-Última coleta: **2026-07-29** · fonte: API do Instagram.
+Última coleta: **2026-07-30** · fonte: API do Instagram.
 
 ## Seguidores
 
-**329** (+0 desde 2026-07-28)
+**328** (-1 desde 2026-07-29)
 
 ## Post a post (mais alcance em cima)
 
 | Post | Tipo | alcance | curtidas | comentários | salvos | compartilh. | seguidores ganhos |
 |---|---|---|---|---|---|---|---|
-| 2026-07-23_olhar-no-tapete | Foto | 50 | 12 | 6 | 0 | 0 | 0 |
-| 2026-07-22_bar-hana | Foto | 46 | 9 | 0 | 0 | 0 | 0 |
-| 2026-07-27_pijama-oncinha | Foto | 35 | 5 | 1 | 0 | 0 | 0 |
+| 2026-07-23_olhar-no-tapete | Foto | 52 | 13 | 6 | 0 | 0 | 0 |
+| 2026-07-22_bar-hana | Foto | 47 | 9 | 0 | 0 | 0 | 0 |
+| 2026-07-27_pijama-oncinha | Foto | 42 | 7 | 2 | 0 | 0 | 0 |
+| 2026-07-29_lilac-ao-sol | Foto | 21 | 7 | 1 | 0 | 0 | 0 |
 
 ## Reel x Foto (média de alcance)
 
 - **Reel**: ainda sem post publicado
-- **Foto**: 44 de alcance médio (3 post(s))
+- **Foto**: 40 de alcance médio (4 post(s))
 
 ## Seguidores ao longo do tempo
 
@@ -26,6 +27,7 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 |---|---|
 | 2026-07-28 | 329 |
 | 2026-07-29 | 329 |
+| 2026-07-30 | 328 |
 
 ## Limites desta coleta
 
