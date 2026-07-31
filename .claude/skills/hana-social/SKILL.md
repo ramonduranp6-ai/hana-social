@@ -301,6 +301,26 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    medidas) estão guardadas em `content/hipoteses-produto.md` só para não
    refazer o trabalho. **Guardado ≠ aprovado.** Se o assunto voltar, quem
    reabre é ele.
+3n. **COMO O TIME DECIDE — ordem dele, 31/07/2026.** Palavras dele: *"todos o
+   trabalho quando for apresentado para mim precisa ser revisado para não ter
+   erros… Coloque as ia para questionar o trabalho um do outro… O conselheiro
+   fable tem voz ativa acima da do presidente."*
+   - **O conselheiro pode vetar o presidente (Claude).** Vetado = não executa.
+     O veto dele nunca passa por cima do Ramón — em 31/07 o conselheiro vetou a
+     governança até a chave do Gemini ser trocada, o Ramón disse "não troca" e
+     **a palavra dele encerrou o veto**.
+   - **Quem constrói não aprova.** O auditor nunca é o autor, e de preferência
+     de outra família de modelo.
+   - **Revisão dupla só nesta faixa** (o resto passa com uma leitura, senão
+     vira burocracia mais cara que o erro): o que **chega ao Ramón** · o que
+     **sai em público** · o que **mexe em dinheiro** · **porta sem volta** ·
+     o que **toca segredo ou credencial**.
+   - **Aprovar é proibido no papel de auditor:** ou aponta o defeito, ou
+     escreve SEM OBJEÇÃO item a item. Uma rodada, não ping-pong.
+   - **Nenhum diretor novo.** As 11 cadeiras cobrem tudo; cargo sem trabalho é
+     custo. Se aparecer demanda sem dono, aí sim propor a contratação a ele.
+   **Isto já se pagou na estreia:** a revisão adversarial pegou 6 defeitos nos
+   robôs antes de subirem, 2 graves — um derrubaria a publicação dos posts.
 4. **Um robô só. E ele é MENOR do que esta skill dizia** — conferido no
    Agendador do Windows em 28/07/2026. **O `hana-rotina` NUNCA EXISTIU**: era
    texto na documentação, igual à "ronda de terça e quinta" já desmascarada em

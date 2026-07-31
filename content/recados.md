@@ -8,8 +8,4 @@ qualquer pessoa na internet — por isso os recados vêm cortados em poucas
 palavras. Não colar aqui senha, número de cartão, endereço nem outro dado
 sensível.
 
-- [ ] **31/07/2026 19:03 UTC** — Adicione para segunda uma resposta sobre qual o plano fazer para melhorar o conteúdo??
-- [ ] **31/07/2026 19:03 UTC** — Adicione para segunda uma resposta sobre qual o plano fazer para melhorar o conteúdo??
-- [ ] **31/07/2026 20:20 UTC** — Cadê as fotos e vídeos? Traga organizado com foto/vídeo e o texto embaixo
-- [ ] **31/07/2026 19:03 UTC** — Adicione para segunda uma resposta sobre qual o plano fazer para melhorar o conteúdo??
-- [ ] **31/07/2026 20:20 UTC** — Cadê as fotos e vídeos? Traga organizado com foto/vídeo e o texto embaixo
+- [x] 31/07 — os 3 recados anteriores foram respondidos na conversa de 31/07 (plano de conteudo aprovado pelo comite; pasta de aprovacao limpa e renumerada).

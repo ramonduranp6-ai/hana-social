@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 31/07/2026 20:30. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 31/07/2026 20:42. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -33,19 +33,11 @@ decisões, use `DECISOES.md`.
 Mídias numeradas em `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
 
 - 00_LEGENDAS.txt
-- 01_27-07.jpg
-- 02_29-07.jpg
-- 03_31-07.jpg
-- 04_03-08.jpg
-- 05_05-08.jpg
-- 06_07-08.jpg
-- 07_10-08_REEL.mp4
-- 07_10-08_REEL_capa.jpg
-- 08_MUSICA-1-fofo.mp4
-- 09_MUSICA-2-lofi.mp4
-- 10_MUSICA-3-comica.mp4
-- 11_PREVIA-MUSICA-good-dog.mp4
-- 12_TESTE-ANIMACAO-IA.mp4
+- 01_03-08.jpg
+- 02_05-08.jpg
+- 03_07-08.jpg
+- 04_10-08_REEL.mp4
+- 04_10-08_REEL_capa.jpg
 
 Ele responde pelos números. Enquanto não responder, **não commitar**
 mudança de status nem publicar.
@@ -56,29 +48,21 @@ mudança de status nem publicar.
 - Artes recebidas do outro projeto: 1
 - Fotos do iPhone sincronizadas (iCloud): 34418
 
-## 📌 RECADOS DELE NO TELEGRAM — responder nesta conversa
-- [ ] **31/07/2026 19:03 UTC** — Adicione para segunda uma resposta sobre qual o plano fazer para melhorar o conteúdo??
-- [ ] **31/07/2026 19:03 UTC** — Adicione para segunda uma resposta sobre qual o plano fazer para melhorar o conteúdo??
-- [ ] **31/07/2026 20:20 UTC** — Cadê as fotos e vídeos? Traga organizado com foto/vídeo e o texto embaixo
-- [ ] **31/07/2026 19:03 UTC** — Adicione para segunda uma resposta sobre qual o plano fazer para melhorar o conteúdo??
-- [ ] **31/07/2026 20:20 UTC** — Cadê as fotos e vídeos? Traga organizado com foto/vídeo e o texto embaixo
-
-Depois de responder, apague a linha de `content/recados.md`.
-
 ## Últimas mudanças no projeto
 ```
+dd17885 fix: pasta de aprovacao comecava no numero 4 e estava com lixo de 27/07
+47d41dc docs: registra os tres consertos e a medicao do cron
 7b2d476 fix: tira o Ramon do caminho - robo de domingo sem senha local, cron com rede de seguranca, Gemini com reserva
 d8a378b fix: recepcionista morria por falta de espaco para responder
 ec2a985 chore: atualiza estado da fila [skip ci]
 d9efd61 fix: o robo perdia o estado quando alguem empurrava junto
 2dfdc70 feat: recepcionista no Telegram + robos mudos passam a avisar
 c61cb6e decisao do Ramon: nao ha produto por enquanto - so crescer a Hana
-742c88f chore: atualiza estado da fila [skip ci]
-4acf774 decisao: virada editorial aprovada - foto parada sai, Reel de video entra
 ```
 Alterações não commitadas:
 ```
-M DECISOES.md
+M .claude/skills/hana-social/SKILL.md
+ M content/recados.md
 ```
 
 ## Decisões e contexto
