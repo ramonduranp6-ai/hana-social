@@ -48,6 +48,16 @@ jobs:
           GRAPH_BASE: ${{ vars.GRAPH_BASE || 'https://graph.instagram.com/v21.0' }}
         run: python publisher/metrics.py
 
+      # Pauta da reunião estratégica de segunda (pedido do Ramón em 31/07/2026).
+      # O script sai calado se não for segunda de manhã ou se já mandou a pauta
+      # desta semana. Nunca derruba o job — reporte não pode travar publicação.
+      - name: Pauta da reunião de segunda
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python publisher/reporte_semanal.py
+
       - name: Salvar estado da fila
         run: |
           git config user.name "hana-bot"

@@ -1,32 +1,32 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/07/2026 09:08. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 31/07/2026 13:45. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
 
 | Quando (UTC) | Post | Tipo | Status |
 |---|---|---|---|
-| 2026-07-29T21:00:00Z | 2026-07-29_lilac-ao-sol | image | approved |
 | 2026-07-31T21:00:00Z | 2026-07-31_roda-gigante | image | approved |
 | 2026-08-03T21:00:00Z | 2026-08-03_dia-de-praia | image | approved |
 | 2026-08-05T21:00:00Z | 2026-08-05_navio-importacao | image | approved |
 | 2026-08-07T21:00:00Z | 2026-08-07_banho-de-sol | image | approved |
 | 2026-08-10T21:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
 
-## Publicados: 3
+## Publicados: 4
 - 2026-07-22_bar-hana — IG `18118796690302997`
 - 2026-07-23_olhar-no-tapete — IG `18140672137562244`
 - 2026-07-27_pijama-oncinha — IG `18073337600408952`
+- 2026-07-29_lilac-ao-sol — IG `18112183567998703`
 
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-07-28T08:01:46Z schedule success
-2026-07-27T22:19:13Z schedule success
-2026-07-27T18:15:01Z schedule success
+2026-07-31T16:07:29Z schedule success
+2026-07-31T08:10:19Z schedule success
+2026-07-30T20:38:38Z schedule success
 ```
-- Vigia local (Agendador do Windows): próxima execução quarta-feira, 29 de julho de 2026 18:10:00
+- Vigia local (Agendador do Windows): próxima execução sexta-feira, 31 de julho de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
@@ -53,23 +53,22 @@ mudança de status nem publicar.
 - Brutas a processar: 26 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34381
+- Fotos do iPhone sincronizadas (iCloud): 34418
 
 ## Últimas mudanças no projeto
 ```
+d5711b8 chore: atualiza estado da fila [skip ci]
+36c8f3c chore: atualiza estado da fila [skip ci]
+6e9cd6b chore: atualiza estado da fila [skip ci]
+a39dee6 skill: REGRA ZERO - nao afirmar sem conferir (5 erros do mesmo tipo no historico)
+51bf2e3 config: campo Nome do perfil vira palavra-chave de busca (Exotic Bully Micro)
 9c97c99 docs: ronda de engajamento vira pendencia - medir antes de automatizar
 0fc24e7 docs: lote automatico de domingo documentado na skill
 a786af6 feat: lote automatico de domingo - Gemini Flash ve a foto e escreve a legenda, custo zero de token
-8bf78f6 fix(docs): o robo hana-rotina nunca existiu - so a Hana Sentinela esta agendada
-6e56b63 feat: placar automatico - o projeto passou a medir alcance, salvos e seguidores ganhos por post
-a82ecb7 docs: Pagina do Facebook fica vazia de proposito (decisao do Ramon)
-854b65e docs: nada do Instagram da Hana vai para o Facebook pessoal do Ramon (2 chaves desligadas)
-be16559 docs(skill): nicho roda em audio original, veto de artista, como fazer ele ouvir a faixa, estado da Pagina
 ```
 Alterações não commitadas:
 ```
-M DECISOES.md
- M ESTADO-ATUAL.md
+?? Hana-Fotos/
 ```
 
 ## Decisões e contexto

@@ -4,6 +4,33 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## Onde paramos (31/07/2026)
+
+**COBRANÇA EM ABERTO — a decisão da NUVEM é dele, em outro projeto.** Palavras
+dele, 31/07/2026: *"Sobre a nuvem ainda estou estudando, e não vai ser com você
+aqui, vou decidir isso em outro projeto, em breve você receberá a notícia... mas
+mantenha no seu radar para me cobrar isso."* Ou seja: **não propor arquitetura de
+nuvem para a Hana** — só perguntar, a cada sessão, se a decisão já saiu. O que
+está em jogo: hoje as rotinas locais dependem do notebook dele ligado.
+
+**REGRA NOVA — o operacional é ROBÔ, não é Claude** (ordem dele, 31/07/2026:
+*"não use a claude, crie robôs operacionais fora para claude para fazer isso,
+vamos economizar tokens"*). Toda tarefa repetitiva do projeto nasce como script
+que roda sozinho; o Claude só entra no que exige julgamento. Vale como régua
+para a estrutura de times que ele pediu no mesmo dia (operacional × estratégico).
+
+**FEITO em 31/07/2026 — conserto do robô local `Hana Sentinela`.** Ele tinha
+desligado o notebook e a tarefa não roda desde 27/07 (log `studio/sentinela.log`
+parado). Causa conferida no Agendador: `StartWhenAvailable=False` (horário
+perdido não é recuperado) e `DisallowStartIfOnBatteries=True` (não roda fora da
+tomada). Corrigido para `StartWhenAvailable=True` e rodar na bateria: agora,
+sempre que o PC ligar depois de um horário perdido, ele se recupera sozinho —
+custo zero de token. Rodado à mão uma vez (31/07 14:10): "tudo em dia", token do
+Instagram válido, nada vencido. **Nenhum post ficou parado** — quem publica é o
+`publish.yml` no GitHub, que roda a cada 30 min e não depende da máquina dele.
+**Ponto ainda frágil, não resolvido:** a renovação do token do Instagram só
+existe no robô local; se o notebook ficar semanas desligado, o token expira.
+
 ## Onde paramos (28/07/2026 — fim do dia)
 
 **FEITO em 28/07/2026 — o campo "Nome" do perfil virou palavra-chave de busca.**

@@ -236,6 +236,29 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    1ª linha como `<música> • <artista>` ou `<perfil> • Áudio original`.
    **Delegar essa varredura a subagente** — o texto bruto é enorme e não precisa
    entrar na conversa; peça de volta só a tabela e a contagem.
+3i. **NENHUMA MÍDIA VAI PARA ELE SEM AUDITOR** (ordem dele, 31/07/2026:
+   *"alguém tem que auditar isso... não é só gerar o vídeo... coloque alguém para
+   auditar isso antes de enviar pra mim vídeos e fotos"*). Contexto: mandei um
+   clipe do Veo em que a Hana parecia ter **quebrado o pescoço**. Eu tinha olhado
+   os frames e apontado cor e tarja preta — e deixei passar o defeito que
+   importava. Olhar sozinho não basta; quem produziu não audita.
+   **Como fazer:** antes de qualquer foto ou vídeo chegar nele, um subagente
+   auditor recebe os frames extraídos e responde a uma lista fechada —
+   (a) pescoço, patas e coluna estão em posição possível para um cachorro?
+   (b) a cor tri lilac merle se manteve do primeiro ao último frame?
+   (c) o rosto continua sendo o da Hana? (d) tem tarja preta, corte errado ou
+   proporção fora de 9:16? (e) o clipe é bonito ou é estranho — responder como
+   um leigo que rola o feed. **Aprovar é proibido: ou aponta o defeito, ou
+   escreve SEM OBJEÇÃO em cada item.** Um "não" reprova e a mídia não sai.
+3j. **VÍDEO DE IA: PELO APP, NÃO PELA API** (avaliação dele, 31/07/2026:
+   *"o ideal não é você fazer via api e sim como se fosse um usuário comum, o
+   Gemini entrega melhor"*, e *"temos um plano bom para ser usado na Gemini"*).
+   O teste de 31/07 foi feito pela API e saiu ruim e caro (~R$ 11 o clipe contra
+   ~R$ 1 pelo Flow, conforme o `APRENDIZADO-IA.md` do hub). **Não gastar mais
+   API de vídeo sem ele mandar.** O caminho é o plano que ele já paga.
+3k. **TRILHA DE VÍDEO ANIMADO: música de cachorro ou de bebê, em tom feliz**
+   (ordem dele, 31/07/2026). Vale junto com 3e-i (criança e cachorro, sem funk,
+   sem música triste) e com o veto permanente de Anitta e Xuxa (3f).
 4. **Um robô só. E ele é MENOR do que esta skill dizia** — conferido no
    Agendador do Windows em 28/07/2026. **O `hana-rotina` NUNCA EXISTIU**: era
    texto na documentação, igual à "ronda de terça e quinta" já desmascarada em
