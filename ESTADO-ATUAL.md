@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 31/07/2026 13:45. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 31/07/2026 16:28. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -22,9 +22,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-07-31T18:56:03Z workflow_dispatch success
 2026-07-31T16:07:29Z schedule success
 2026-07-31T08:10:19Z schedule success
-2026-07-30T20:38:38Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução sexta-feira, 31 de julho de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -45,6 +45,7 @@ Mídias numeradas em `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos
 - 09_MUSICA-2-lofi.mp4
 - 10_MUSICA-3-comica.mp4
 - 11_PREVIA-MUSICA-good-dog.mp4
+- 12_TESTE-ANIMACAO-IA.mp4
 
 Ele responde pelos números. Enquanto não responder, **não commitar**
 mudança de status nem publicar.
@@ -57,17 +58,18 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+42e1c14 feat: reel de video real + plano de conteudo na pauta de segunda
+58ed8de chore: atualiza estado da fila [skip ci]
+463cfa4 feat: botao para forcar a pauta da reuniao fora de segunda
+72f3266 feat: reporte semanal no Telegram + time operacional/estrategico
+a6ff19e chore: atualiza estado da fila [skip ci]
 d5711b8 chore: atualiza estado da fila [skip ci]
 36c8f3c chore: atualiza estado da fila [skip ci]
 6e9cd6b chore: atualiza estado da fila [skip ci]
-a39dee6 skill: REGRA ZERO - nao afirmar sem conferir (5 erros do mesmo tipo no historico)
-51bf2e3 config: campo Nome do perfil vira palavra-chave de busca (Exotic Bully Micro)
-9c97c99 docs: ronda de engajamento vira pendencia - medir antes de automatizar
-0fc24e7 docs: lote automatico de domingo documentado na skill
-a786af6 feat: lote automatico de domingo - Gemini Flash ve a foto e escreve a legenda, custo zero de token
 ```
 Alterações não commitadas:
 ```
+M DECISOES.md
 ?? Hana-Fotos/
 ```
 
@@ -77,6 +79,58 @@ Alterações não commitadas:
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
+
+## Onde paramos (31/07/2026)
+
+**TESTE DO TIME, 31/07/2026 — o auditor funciona e o acervo não presta.**
+Montei o primeiro Reel de vídeo real (a Hana assistindo um cachorro na TV,
+`IMG_2972.MOV`) e mandei ao auditor antes de mostrar ao Ramón, como manda a
+regra 3i. **Reprovado duas vezes, com medição** — não com opinião: (1ª) pescoço
+lendo como quebrado em 2 frames, pelo virando sépia no fim (R/B saltando de 1,5
+para 4,68), texto do gancho por cima da cabeça dela e dentro da faixa da
+interface do Reels; (2ª) cor corrigida e texto descido — confirmado —, mas o
+pescoço continua e **a TV sai de quadro no meio** (pixel vivo no terço superior
+caindo de 47,8% para 2,9%), porque a câmera se move.
+**Conclusão que vale mais que o Reel:** o problema é o BRUTO, não a montagem —
+a Hana está de costas o tempo todo e o rosto dela não aparece em nenhum frame.
+Sem cena nova, este material não vira Reel. Isso confirma, com evidência, a
+objeção que o conselheiro tinha levantado no desenho da linha editorial.
+**O que o auditor evitou:** eu teria mandado ao Ramón, pela segunda vez, um
+vídeo em que a cadela parece ter quebrado o pescoço.
+
+**FEITO: `studio/reel_de_video.py`** — o projeto só sabia montar slideshow de
+foto. Agora monta Reel de vídeo real (normaliza a rotação do iPhone, corta 9:16,
+grava o gancho em PNG sobreposto, mantém o som da cena). Padrão do gancho ficou
+em 16% do topo, medido pelo auditor: a 10% ele cai dentro da interface do Reels.
+
+**PENDENTE DELE — filmagem.** Sem isso a linha editorial morre em 3 semanas.
+Ele já se ofereceu para gravar ("posso fazer vídeos e tudo mais que precisar").
+
+
+**COBRANÇA EM ABERTO — a decisão da NUVEM é dele, em outro projeto.** Palavras
+dele, 31/07/2026: *"Sobre a nuvem ainda estou estudando, e não vai ser com você
+aqui, vou decidir isso em outro projeto, em breve você receberá a notícia... mas
+mantenha no seu radar para me cobrar isso."* Ou seja: **não propor arquitetura de
+nuvem para a Hana** — só perguntar, a cada sessão, se a decisão já saiu. O que
+está em jogo: hoje as rotinas locais dependem do notebook dele ligado.
+
+**REGRA NOVA — o operacional é ROBÔ, não é Claude** (ordem dele, 31/07/2026:
+*"não use a claude, crie robôs operacionais fora para claude para fazer isso,
+vamos economizar tokens"*). Toda tarefa repetitiva do projeto nasce como script
+que roda sozinho; o Claude só entra no que exige julgamento. Vale como régua
+para a estrutura de times que ele pediu no mesmo dia (operacional × estratégico).
+
+**FEITO em 31/07/2026 — conserto do robô local `Hana Sentinela`.** Ele tinha
+desligado o notebook e a tarefa não roda desde 27/07 (log `studio/sentinela.log`
+parado). Causa conferida no Agendador: `StartWhenAvailable=False` (horário
+perdido não é recuperado) e `DisallowStartIfOnBatteries=True` (não roda fora da
+tomada). Corrigido para `StartWhenAvailable=True` e rodar na bateria: agora,
+sempre que o PC ligar depois de um horário perdido, ele se recupera sozinho —
+custo zero de token. Rodado à mão uma vez (31/07 14:10): "tudo em dia", token do
+Instagram válido, nada vencido. **Nenhum post ficou parado** — quem publica é o
+`publish.yml` no GitHub, que roda a cada 30 min e não depende da máquina dele.
+**Ponto ainda frágil, não resolvido:** a renovação do token do Instagram só
+existe no robô local; se o notebook ficar semanas desligado, o token expira.
 
 ## Onde paramos (28/07/2026 — fim do dia)
 

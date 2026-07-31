@@ -6,6 +6,31 @@ Mais recente em cima.
 
 ## Onde paramos (31/07/2026)
 
+**TESTE DO TIME, 31/07/2026 — o auditor funciona e o acervo não presta.**
+Montei o primeiro Reel de vídeo real (a Hana assistindo um cachorro na TV,
+`IMG_2972.MOV`) e mandei ao auditor antes de mostrar ao Ramón, como manda a
+regra 3i. **Reprovado duas vezes, com medição** — não com opinião: (1ª) pescoço
+lendo como quebrado em 2 frames, pelo virando sépia no fim (R/B saltando de 1,5
+para 4,68), texto do gancho por cima da cabeça dela e dentro da faixa da
+interface do Reels; (2ª) cor corrigida e texto descido — confirmado —, mas o
+pescoço continua e **a TV sai de quadro no meio** (pixel vivo no terço superior
+caindo de 47,8% para 2,9%), porque a câmera se move.
+**Conclusão que vale mais que o Reel:** o problema é o BRUTO, não a montagem —
+a Hana está de costas o tempo todo e o rosto dela não aparece em nenhum frame.
+Sem cena nova, este material não vira Reel. Isso confirma, com evidência, a
+objeção que o conselheiro tinha levantado no desenho da linha editorial.
+**O que o auditor evitou:** eu teria mandado ao Ramón, pela segunda vez, um
+vídeo em que a cadela parece ter quebrado o pescoço.
+
+**FEITO: `studio/reel_de_video.py`** — o projeto só sabia montar slideshow de
+foto. Agora monta Reel de vídeo real (normaliza a rotação do iPhone, corta 9:16,
+grava o gancho em PNG sobreposto, mantém o som da cena). Padrão do gancho ficou
+em 16% do topo, medido pelo auditor: a 10% ele cai dentro da interface do Reels.
+
+**PENDENTE DELE — filmagem.** Sem isso a linha editorial morre em 3 semanas.
+Ele já se ofereceu para gravar ("posso fazer vídeos e tudo mais que precisar").
+
+
 **COBRANÇA EM ABERTO — a decisão da NUVEM é dele, em outro projeto.** Palavras
 dele, 31/07/2026: *"Sobre a nuvem ainda estou estudando, e não vai ser com você
 aqui, vou decidir isso em outro projeto, em breve você receberá a notícia... mas
