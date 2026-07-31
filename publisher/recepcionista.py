@@ -261,8 +261,13 @@ def gerar_resposta(pergunta, agora=None):
         "contents": [{"parts": [{"text": prompt}]}],
         # temperature baixa: aqui é resposta factual sobre o estado do
         # projeto, não legenda criativa (que no lote_automatico.py usa 0.9).
-        # maxOutputTokens em 2000 e SEM thinkingConfig — pegadinha já paga.
-        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 2000},
+        # maxOutputTokens em 8000 e SEM thinkingConfig — pegadinha já paga
+        # DUAS vezes. Estava em 2000 e a primeira rodada de produção
+        # (31/07/2026 23:24Z) morreu com "resposta veio vazia ou cortada no
+        # meio": o Flash gasta a maior parte do orçamento "pensando" e o texto
+        # visível nem começa. Como a resposta ao Ramón tem no máximo 5 linhas,
+        # o teto alto não encarece quase nada — só se paga o que sai.
+        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 8000},
     }
     r = requests.post(
         GEMINI_URL, params={"key": chave}, json=corpo,
