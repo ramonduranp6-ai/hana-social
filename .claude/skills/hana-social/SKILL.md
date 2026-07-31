@@ -266,6 +266,28 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
 3k. **TRILHA DE VÍDEO ANIMADO: música de cachorro ou de bebê, em tom feliz**
    (ordem dele, 31/07/2026). Vale junto com 3e-i (criança e cachorro, sem funk,
    sem música triste) e com o veto permanente de Anitta e Xuxa (3f).
+3l. **A LINHA EDITORIAL VIROU — aprovada por ele em 31/07/2026** (*"Aprova
+   todos"*), depois de reunião do comitê (diretor-redes + diretor-criativo +
+   conselheiro) em cima do placar medido. Vale a partir do **primeiro post
+   depois de 10/08/2026**:
+   - **Foto parada não vai mais ao ar.** Régua: sem movimento ou conflito no
+     quadro, não publica. Testada 4x — 0 salvo, 0 compartilhamento, 0 seguidor
+     nas quatro. Cai junto o **carrossel** (é foto com outro nome) e o
+     **Reel-slideshow** (foto parada disfarçada de vídeo).
+   - **Reel de vídeo real, com o ROSTO da Hana obrigatório no quadro.**
+   - **1 Reel por semana.** Sobe para 2 só na semana em que houver sessão de
+     filmagem. Não prometer 2/semana: ele trabalha em tempo integral.
+   - **O acervo manda no calendário, não o contrário.** Data fixa com acervo
+     vazio foi exatamente o que fabricou as 4 fotos paradas. Sem material,
+     não publica — e o robô já sabe disso (4c-i).
+   - **Pilares:** A PATROA MANDA · MICRO NO APÊ · INIMIGOS DA PATROA. O pilar
+     "a cor tri lilac merle" **caiu** (bonito, sem conflito). Em INIMIGOS, o
+     desfecho é **ela late e expulsa** ou **ignora e sai andando** — nunca foge,
+     porque cão com medo contradiz o posicionamento "ela manda".
+   ⚠️ **EXCEÇÃO EXPLÍCITA DELE, não apagar:** os posts já aprovados **ficam** —
+   03/08, 05/08, 07/08 e o Reel-slideshow de 10/08 vão ao ar como estão
+   (*"mantenha esses post já aprovados, a partir dos proximos voce executa da
+   maneira que sugeriu"*). **Não limpar a fila em nome da régua nova.**
 4. **Um robô só. E ele é MENOR do que esta skill dizia** — conferido no
    Agendador do Windows em 28/07/2026. **O `hana-rotina` NUNCA EXISTIU**: era
    texto na documentação, igual à "ronda de terça e quinta" já desmascarada em

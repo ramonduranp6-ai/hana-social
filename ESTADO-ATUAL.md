@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 31/07/2026 16:54. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 31/07/2026 17:43. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -22,9 +22,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-07-31T20:43:07Z schedule 
+2026-07-31T20:16:40Z workflow_dispatch success
 2026-07-31T18:56:03Z workflow_dispatch success
-2026-07-31T16:07:29Z schedule success
-2026-07-31T08:10:19Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução sexta-feira, 31 de julho de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -58,24 +58,22 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+d6531ea feat: canal Claude -> Telegram (recado por workflow_dispatch)
+f8ec5f1 feat: o robo do lote para de fabricar foto e passa a trabalhar com video
 c156a83 feat: robo de recados - o que o Ramon escreve no Telegram nao se perde mais
 0bb0a3d docs: teste do time - auditor reprovou o Reel duas vezes, com medicao
 42e1c14 feat: reel de video real + plano de conteudo na pauta de segunda
 58ed8de chore: atualiza estado da fila [skip ci]
 463cfa4 feat: botao para forcar a pauta da reuniao fora de segunda
 72f3266 feat: reporte semanal no Telegram + time operacional/estrategico
-a6ff19e chore: atualiza estado da fila [skip ci]
-d5711b8 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
 M .claude/skills/hana-social/SKILL.md
  M DECISOES.md
  M ESTADO-ATUAL.md
- M studio/estado.py
- M studio/lote_automatico.py
+ M content/pauta_extra.md
 ?? Hana-Fotos/
-?? content/.videos_usados
 ```
 
 ## Decisões e contexto
@@ -86,6 +84,64 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 Mais recente em cima.
 
 ## Onde paramos (31/07/2026)
+
+**APROVADO POR ELE, 31/07/2026 — a virada editorial. Palavras dele: *"Aprova
+todos. mas mantenha esses post já aprovados, a partir dos proximos voce executa
+da maneira que sugeriu"*.** Reuni o comitê (diretor-redes + diretor-criativo +
+conselheiro) em cima do placar medido e ele aprovou os 5 pontos em que os três
+concordaram:
+1. **Foto parada sai de cena** (testada 4x: 0 salvo, 0 compartilhamento, 0
+   seguidor nas quatro). Sai junto o **carrossel** (é foto com outro nome) e o
+   **Reel-slideshow** (foto parada disfarçada de vídeo).
+2. **Reel de vídeo real é o formato**, com o **rosto da Hana obrigatório** no
+   quadro.
+3. **1 Reel por semana, não 2** — sobe para 2 só na semana em que houver sessão
+   de filmagem. O plano de 2/semana não se sustenta com ele trabalhando em
+   tempo integral.
+4. **O acervo manda no calendário, não o contrário.** Data fixa com acervo
+   vazio foi o que fabricou as 4 fotos paradas.
+5. **O pilar "a cor tri lilac merle" cai** — bonito e sem conflito, morre na
+   régua nova.
+**A EXCEÇÃO QUE ELE DEU, e que não pode ser esquecida:** os posts **já
+aprovados ficam** — 03/08, 05/08, 07/08 (fotos) e o **Reel-slideshow de 10/08**
+vão ao ar como estão. A regra nova vale **a partir do primeiro post depois de
+10/08**. Nada foi cancelado da fila. Se uma conversa futura for "limpar" a fila
+em nome da régua nova, está errada: ele decidiu o contrário, com estas palavras.
+**Ajuste técnico que veio junto:** o pilar INIMIGOS DA PATROA fica, mas com
+desfecho novo — ela **late e expulsa** ou **ignora e sai andando**, nunca foge
+(cão com medo contradiz "ela manda"). Ganchos prontos para as cenas de 01/08:
+"Mandei. Já vai." · "Sai, o trono é meu." · "Ninguém acorda a patroa."
+
+**AINDA ESPERANDO DECISÃO DELE — as 3 divergências do comitê + 1 cobrança.**
+Estão escritas em `content/pauta_extra.md` e entram na pauta de segunda 03/08:
+(A) **qual é o gargalo** — redes diz CANAL (foto de feed não tem porta de
+entrada; 47 ÷ 329 = 14% é a base dele, não gente nova), criativo diz FALTA DE
+ARCO (nenhuma peça tem desfecho, identificação ou pedido de salvar);
+(B) **TikTok como laboratório de gancho** — mesmo master 9:16, custo marginal
+zero, lá conta nova é entregue a estranho por padrão;
+(C) **métrica que decide** — redes quer trocar "seguidores ganhos" por "% de
+alcance vindo de não-seguidor" (com 47 de alcance, 1 seguidor é ruído);
+conselheiro quer **parada dura em 30/09/2026: 500 seguidores ou 1.000 contas
+alcançadas**, senão para ou muda de rota;
+(D) **a cobrança dura:** o produto a ser vendido **não existe nem no papel**. O
+conselheiro exige uma hipótese de produto escrita, senão isto é hobby
+consumindo o fim de semana dele. **Não é decisão minha — é dele.**
+
+**FEITO, 31/07/2026 — canal Claude → Telegram** (`publisher/mandar_recado.py`).
+O bot só sabia falar sozinho (post para aprovar, pauta de segunda) e o token
+mora nos secrets do GitHub, então eu não tinha como mandar recado. Agora
+`publish.yml` aceita a entrada `recado`:
+`gh workflow run publish.yml -R ramonduranp6-ai/hana-social --json < arquivo.json`
+com `{"recado": "texto"}`. Testado ponta a ponta em 31/07 20:18Z — log do job:
+`[ok] recado entregue (1219 caracteres)`. **Custo zero.**
+Usado para pedir a ele as 3 cenas de 01/08.
+
+**RESPONDIDO, 31/07/2026 — não existe "recepcionista" no Telegram.** Ele
+perguntou se o bot responde as mensagens dele. Conferido em
+`publisher/telegram_approve.py`: o bot é API do Telegram lida pelo GitHub
+Actions a cada 30 min; quando ele escreve texto, o robô **anota** em
+`content/recados.md` e devolve uma frase fixa. **Não há resposta inteligente** —
+quem lê e responde sou eu, na conversa seguinte. Não prometer o contrário.
 
 **DÍVIDA QUITADA, 31/07/2026 — o robô do lote parou de fabricar foto.** Eu tinha
 decidido isso de manhã e não tinha implementado; ele mandou resolver (*"Pode
@@ -368,8 +424,9 @@ Era o gargalo de alcance do projeto e caiu. O que foi feito e testado na tela:
 
 **Feito e no ar:**
 - Bio nova publicada (escolha delegada a mim): "A patroa: aqui quem manda sou eu".
-- Robô único `hana-rotina`: domingo produz o lote, terça e quinta faz ronda de
-  engajamento. Nada é publicado sem o "aprovado" dele.
+- ~~Robô único `hana-rotina`~~ — **ERRADO, nunca existiu** (pego em 28/07 no
+  Agendador). Quem roda de verdade: `Hana Sentinela` na máquina dele e o
+  `publish.yml` no GitHub. Nada é publicado sem o "aprovado" dele.
 - Primeiro Reel montado com a fórmula campeã do nicho (gancho "descreva essa
   cena com UMA palavra") sobre o vídeo dela assistindo TV.
 
@@ -406,7 +463,10 @@ Era o gargalo de alcance do projeto e caiu. O que foi feito e testado na tela:
    sim, interferência não. Não opinar sobre marca, estratégia ou execução deles;
    não mexer na pasta deles. Ao fornecer fotos, **só a Hana sozinha** — nunca
    com o Ramón (a imagem dele é livre aqui, vedada no projeto comercial dele).
-6. **Um robô só.** Não criar agendamento novo; expandir o `hana-rotina`.
+6. **Um robô só.** Não criar agendamento novo. A única tarefa agendada na
+   máquina é **`Hana Sentinela`** (`studio\sentinela.bat`) — expandir ela ou o
+   workflow `publish.yml`. (O `hana-rotina` que esta lista citava **nunca
+   existiu**; corrigido em 31/07/2026.)
 7. **Verificar a conta ativa no Instagram** antes de qualquer ação no navegador
    — o Chrome do Ramón alterna entre 3 contas.
 8. **Fechar as abas** do navegador ao terminar qualquer trabalho.
