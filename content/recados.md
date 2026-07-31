@@ -11,3 +11,5 @@ sensível.
 - [ ] **31/07/2026 19:03 UTC** — Adicione para segunda uma resposta sobre qual o plano fazer para melhorar o conteúdo??
 - [ ] **31/07/2026 19:03 UTC** — Adicione para segunda uma resposta sobre qual o plano fazer para melhorar o conteúdo??
 - [ ] **31/07/2026 20:20 UTC** — Cadê as fotos e vídeos? Traga organizado com foto/vídeo e o texto embaixo
+- [ ] **31/07/2026 19:03 UTC** — Adicione para segunda uma resposta sobre qual o plano fazer para melhorar o conteúdo??
+- [ ] **31/07/2026 20:20 UTC** — Cadê as fotos e vídeos? Traga organizado com foto/vídeo e o texto embaixo
