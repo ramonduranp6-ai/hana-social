@@ -11,6 +11,10 @@ on:
         description: "Mandar a pauta da reunião agora, mesmo não sendo segunda"
         type: boolean
         default: false
+      recado:
+        description: "Recado do Claude pro Telegram do Ramón (deixe vazio pra não mandar nada)"
+        type: string
+        default: ""
 
 # Permite que o job faça commit de volta (status dos posts, arquivamento).
 permissions:
@@ -67,6 +71,18 @@ jobs:
           else
             python publisher/reporte_semanal.py
           fi
+
+      # Canal Claude -> Telegram: o token do bot só existe nos secrets, então
+      # o recado que eu escrevo na conversa sai por aqui. Sem entrada `recado`,
+      # o script sai calado. Nunca derruba o job.
+      - name: Recado do Claude
+        if: inputs.recado != ''
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          RECADO: ${{ inputs.recado }}
+        run: python publisher/mandar_recado.py
 
       - name: Salvar estado da fila
         run: |
