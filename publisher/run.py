@@ -45,8 +45,18 @@ def main():
     posts_by_id = {p["_id"]: p for p in posts}
 
     # 1. aprovações do Telegram
+    # Blindado desde 31/07/2026 (achado na revisão adversarial): ler o Telegram
+    # é rede, e rede falha. Sem este try, um timeout do getUpdates ou da
+    # recepcionista derrubava o run.py INTEIRO — e os posts do dia não subiam.
+    # Ler mensagem é acessório; publicar é a função do robô. Se a leitura
+    # falhar, a próxima rodada (30 min) tenta de novo, porque o offset só
+    # avança quando o ciclo termina.
     if require_approval and tg_token:
-        decisions = tg.sync_approvals(tg_token, posts_by_id, tg_chat)
+        try:
+            decisions = tg.sync_approvals(tg_token, posts_by_id, tg_chat)
+        except Exception as exc:  # noqa: BLE001
+            print(f"[aviso] nao consegui ler o Telegram agora ({exc}) — sigo publicando.")
+            decisions = {}
         for pid, status in decisions.items():
             if pid in posts_by_id:
                 q.save(posts_by_id[pid])

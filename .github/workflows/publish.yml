@@ -45,6 +45,10 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           MEDIA_BASE_URL: ${{ secrets.MEDIA_BASE_URL }}
           REQUIRE_APPROVAL: ${{ vars.REQUIRE_APPROVAL || '1' }}
+          # Recepcionista: responde no Telegram as mensagens de texto do Ramón
+          # usando o Gemini Flash. Sem esta chave o robô degrada para o
+          # comportamento antigo (só anota o recado) — não derruba o job.
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python publisher/run.py
 
       # Placar do projeto: uma coleta por dia (o script sai sozinho se já coletou).
@@ -83,6 +87,19 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           RECADO: ${{ inputs.recado }}
         run: python publisher/mandar_recado.py
+
+      # Avisa no Telegram quando o token do Instagram estiver a 7 dias ou menos
+      # de vencer. Mora AQUI, e não no vigia local, de propósito: o notebook do
+      # Ramón pode estar desligado justamente quando o aviso importa. Tem que
+      # rodar ANTES do passo que commita, senão o marcador de "já avisei hoje"
+      # nunca se salva e o aviso repete a cada 30 min.
+      - name: Avisar se o token do Instagram está para vencer
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          IG_TOKEN_EXPIRA_EM: ${{ vars.IG_TOKEN_EXPIRA_EM }}
+        run: python publisher/sentinel.py --token
 
       - name: Salvar estado da fila
         run: |

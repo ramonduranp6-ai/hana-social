@@ -89,6 +89,23 @@ def main():
         print("[FALHA] nao consegui atualizar o secret:", (r.stderr or "").strip()[:200])
         sys.exit(1)
 
+    # Furo 2 do conserto de 31/07/2026: o `publisher/sentinel.py` (que roda no
+    # GitHub, mesmo com o notebook desligado) precisa saber a data de venci-
+    # mento para avisar no Telegram quando faltarem <=7 dias. Uma VARIAVEL de
+    # repositorio (nao secret — data nao e segredo), atualizada aqui, e o
+    # unico jeito de ele saber sem depender desta maquina estar ligada na hora
+    # do aviso. Falha aqui NAO e fatal: o secret ja foi atualizado (o que
+    # importa pra publicacao continuar) — so o aviso de vencimento fica cego
+    # ate a proxima renovacao bem-sucedida.
+    r2 = subprocess.run(["gh", "variable", "set", "IG_TOKEN_EXPIRA_EM", "-R", REPO],
+                        input=expira.isoformat(), capture_output=True, text=True)
+    if r2.returncode == 0:
+        print(f"[ok] variavel IG_TOKEN_EXPIRA_EM atualizada para {expira.isoformat()}")
+    else:
+        print("[aviso] nao consegui atualizar IG_TOKEN_EXPIRA_EM (aviso de "
+              "vencimento fica cego ate a proxima renovacao):",
+              (r2.stderr or "").strip()[:200])
+
 
 if __name__ == "__main__":
     main()

@@ -1,5 +1,4 @@
 .env
-publisher/.telegram_offset
 __pycache__/
 *.pyc
 
@@ -13,5 +12,20 @@ studio/sentinela.log
 # token do Instagram — NUNCA vai para o repo publico
 studio/.token
 
+# credencial local do Telegram (so existe se o Ramon criar na mao) — NUNCA vai
+# para o repo publico. Furo 1 do conserto de 31/07/2026: o lote de domingo
+# roda na maquina dele, sem os secrets do GitHub.
+studio/.telegram
+
 # painel de aprovacao (gerado, pesado - refaz com painel_aprovacao.py)
 studio/aprovar.html
+
+# ATENCAO: publisher/.telegram_offset NAO pode ser ignorado. Ele estava aqui e
+# isso era um BUG GRAVE, achado na revisao de 31/07/2026: o workflow tenta
+# `git add publisher/.telegram_offset`, que num arquivo ignorado sai com erro e
+# nao commita nada. Todo runner comecava com offset=0, entao as mensagens das
+# ultimas 24h do Telegram voltavam a cada 30 minutos. A prova estava no proprio
+# content/recados.md: a mesma mensagem de 19:03 gravada duas vezes.
+# Com a recepcionista isso ficaria caro de verdade — cada reprocessamento chama
+# o Gemini e REENVIA a resposta (ate 48 vezes por dia, por mensagem).
+# O offset e um numero, nao e segredo. Ele PRECISA ser versionado.

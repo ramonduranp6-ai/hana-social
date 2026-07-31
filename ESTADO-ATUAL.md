@@ -1,23 +1,23 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 31/07/2026 18:12. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 31/07/2026 18:41. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
 
 | Quando (UTC) | Post | Tipo | Status |
 |---|---|---|---|
-| 2026-07-31T21:00:00Z | 2026-07-31_roda-gigante | image | approved |
 | 2026-08-03T21:00:00Z | 2026-08-03_dia-de-praia | image | approved |
 | 2026-08-05T21:00:00Z | 2026-08-05_navio-importacao | image | approved |
 | 2026-08-07T21:00:00Z | 2026-08-07_banho-de-sol | image | approved |
 | 2026-08-10T21:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
 
-## Publicados: 4
+## Publicados: 5
 - 2026-07-22_bar-hana — IG `18118796690302997`
 - 2026-07-23_olhar-no-tapete — IG `18140672137562244`
 - 2026-07-27_pijama-oncinha — IG `18073337600408952`
 - 2026-07-29_lilac-ao-sol — IG `18112183567998703`
+- 2026-07-31_roda-gigante — IG `17893985169571565`
 
 ## Automação
 Últimas execuções do publicador no GitHub:
@@ -58,26 +58,34 @@ mudança de status nem publicar.
 
 ## 📌 RECADOS DELE NO TELEGRAM — responder nesta conversa
 - [ ] **31/07/2026 19:03 UTC** — Adicione para segunda uma resposta sobre qual o plano fazer para melhorar o conteúdo??
+- [ ] **31/07/2026 19:03 UTC** — Adicione para segunda uma resposta sobre qual o plano fazer para melhorar o conteúdo??
+- [ ] **31/07/2026 20:20 UTC** — Cadê as fotos e vídeos? Traga organizado com foto/vídeo e o texto embaixo
 
 Depois de responder, apague a linha de `content/recados.md`.
 
 ## Últimas mudanças no projeto
 ```
+c61cb6e decisao do Ramon: nao ha produto por enquanto - so crescer a Hana
+742c88f chore: atualiza estado da fila [skip ci]
 4acf774 decisao: virada editorial aprovada - foto parada sai, Reel de video entra
 b412b82 chore: atualiza estado da fila [skip ci]
 d6531ea feat: canal Claude -> Telegram (recado por workflow_dispatch)
 f8ec5f1 feat: o robo do lote para de fabricar foto e passa a trabalhar com video
 c156a83 feat: robo de recados - o que o Ramon escreve no Telegram nao se perde mais
 0bb0a3d docs: teste do time - auditor reprovou o Reel duas vezes, com medicao
-42e1c14 feat: reel de video real + plano de conteudo na pauta de segunda
-58ed8de chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
-M .claude/skills/hana-social/SKILL.md
+M .github/workflows/publish.yml
+ M .gitignore
  M DECISOES.md
- M content/pauta_extra.md
-?? content/hipoteses-produto.md
+ M content/recados.md
+ M publisher/run.py
+ M publisher/sentinel.py
+ M publisher/telegram_approve.py
+ M studio/lote_automatico.py
+ M studio/renovar_token.py
+?? publisher/recepcionista.py
 ```
 
 ## Decisões e contexto
@@ -88,6 +96,44 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 Mais recente em cima.
 
 ## Onde paramos (31/07/2026)
+
+**🔴 ABERTO E URGENTE, 31/07/2026 — A GEMINI_API_KEY DELE VAZOU.** Um diretor
+errou um comando e a chave saiu em texto puro numa saída de terminal. **Ele
+precisa regenerar** em `aistudio.google.com/app/apikey` e me avisar — o secret
+`GEMINI_API_KEY` do repo tem que ser atualizado junto (foi gravado hoje, 21:19Z).
+Telegram e Instagram **não** vazaram. **O conselheiro VETOU** qualquer construção
+de governança nova enquanto a chave não for trocada, e o veto dele está acima do
+meu por ordem do Ramón (ver abaixo). Enquanto isso, só robô e correção de bug.
+
+**REGRA NOVA DE GOVERNANÇA, 31/07/2026** (ordem dele): *"todos o trabalho quando
+for apresentado para mim precisa ser revisado para não ter erros… Coloque as ia
+para questionar o trabalho um do outro… O conselheiro fable tem voz ativa acima
+da do presidente."*
+- **O conselheiro pode vetar o presidente (eu).** Vetado = não executo. O veto
+  dele nunca passa por cima do Ramón, só por cima de mim.
+- **Quem constrói não aprova.** O auditor nunca é o autor.
+- **Faixa da revisão dupla** (proposta do conselheiro, ainda sem o OK dele):
+  o que chega ao Ramón · o que sai em público · o que mexe em dinheiro · porta
+  sem volta · o que toca segredo ou credencial. O resto passa com uma leitura.
+  Motivo: revisão dupla em legenda que 47 pessoas leem é burocracia; em segredo
+  e conta, é o que faltou hoje.
+- **Nenhum diretor novo.** As 11 cadeiras cobrem tudo — cargo sem trabalho é
+  custo. Isso responde o "crie diretores": eles já existem.
+**Isto ainda não está escrito na skill** por causa do veto acima.
+
+**FUNCIONOU NA PRIMEIRA APLICAÇÃO — a revisão adversarial pegou 6 defeitos.**
+Dois graves, nos robôs que os diretores acabaram de construir:
+(1) `publisher/.telegram_offset` estava no `.gitignore`, então o `git add` do
+workflow falhava calado e **todo runner começava do zero** — as mensagens do
+Telegram voltavam a cada 30 min. A prova estava no `content/recados.md`: a mesma
+mensagem de 19:03 gravada duas vezes. Com a recepcionista isso viraria até 48
+chamadas ao Gemini por dia, por mensagem.
+(2) a recepcionista prometia no docstring que "nunca deixa exceção escapar" e
+**não era verdade** — três chamadas de rede ficavam fora do try, e um timeout do
+Telegram derrubaria o `run.py` inteiro, ou seja, **os posts do dia não subiriam**.
+Corrigidos os dois, mais o marcador `[ESCALAR]` frágil (o Flash põe negrito
+sozinho e o `startswith` cru falhava) e o `run.py`, que agora blinda a leitura do
+Telegram. **Se ninguém tivesse revisado, isso ia para produção.**
 
 **DECIDIDO POR ELE, 31/07/2026 — NÃO EXISTE PRODUTO, E ISSO É DE PROPÓSITO.**
 Palavras dele: *"por enquanto não tem produto, é apenas a hana crescendo por ser

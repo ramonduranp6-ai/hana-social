@@ -3,7 +3,10 @@ Aprovação por Telegram (o "só aceite" do Ramón).
 
 Fluxo:
   1. notify_pending(): manda cada post 'pending' pro Telegram com botões ✅ Aprovar / ❌ Recusar.
-  2. sync_approvals(): lê os cliques (getUpdates) e atualiza o status do post.
+  2. sync_approvals(): lê os cliques (getUpdates), atualiza o status do post e
+     repassa toda mensagem de TEXTO pra recepcionista.py (primeiro atendimento
+     pelo Gemini — ver aquele arquivo). Continua sendo o único lugar que lê
+     getUpdates; a recepcionista só responde ou escala.
 
 Como é um sistema por cron (sem servidor sempre ligado), a aprovação é
 eventualmente consistente: você toca o botão, e a próxima rodada do cron
@@ -80,30 +83,54 @@ def _write_offset(offset):
 RECADOS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                        "content", "recados.md")
 
+# O repositório é PÚBLICO (github.com/ramonduranp6-ai/hana-social) — qualquer
+# coisa gravada em content/recados.md fica visível pra qualquer pessoa na
+# internet. Por isso o recado é cortado bem curto: o mínimo pro Claude
+# entender do que se trata, não a mensagem inteira dele.
+LIMITE_RECADO = 220
 
-def _guardar_recado(texto, quando, token=None, chat_id=None):
+
+def _guardar_recado(texto, quando, token=None, chat_id=None, resposta_fixa=None):
     """
-    Guarda o que o Ramón escreve no Telegram.
+    Guarda o que o Ramón escreve no Telegram, quando ninguém consegue
+    responder na hora (ver recepcionista.py — desde 31/07/2026 este é o
+    CAMINHO DE RESERVA, não o principal).
 
-    O bot não conversa — ele manda e recebe clique de botão. Antes desta função,
-    mensagem de texto dele caía no vazio: o getUpdates lia, o offset avançava e
-    o recado sumia sem ninguém ver. Ele reclamou disso em 31/07/2026
-    ("Te mandei msg pelo Telegram e vc não responde?"), e mandou criar o robô.
-    Agora o recado vira linha em content/recados.md, que o Claude lê ao abrir a
-    conversa, e o bot confirma na hora para ele saber que chegou.
+    O bot não conversa sozinho — ele manda e recebe clique de botão. Antes de
+    existir a recepcionista, TODA mensagem de texto caía aqui sem resposta
+    nenhuma: o Ramón reclamou duas vezes ("Te mandei msg pelo Telegram e vc
+    não responde?") até mandar "Vou te mandar msg pelo telegram e voce
+    precisa receber por lá tb". Agora só cai aqui o que a recepcionista
+    escalou (ação, opinião de estratégia, ou fora do que ela sabe) ou o que
+    falhou tecnicamente (sem chave, Gemini fora do ar) — regra 8: publicar
+    posts importa mais que responder mensagem, então a recepcionista nunca
+    trava, só cai pra este caminho antigo.
+
+    `resposta_fixa` deixa o chamador escolher a frase de confirmação (a
+    recepcionista manda uma diferente da genérica, pra ficar claro que ela
+    TENTOU responder e não conseguiu, em vez de nunca ter tentado).
     """
     os.makedirs(os.path.dirname(RECADOS), exist_ok=True)
     novo = not os.path.isfile(RECADOS)
+    resumo = texto.replace("\n", " ").strip()
+    if len(resumo) > LIMITE_RECADO:
+        resumo = resumo[:LIMITE_RECADO].rstrip() + "…"
     with open(RECADOS, "a", encoding="utf-8") as f:
         if novo:
-            f.write("# Recados do Ramón pelo Telegram\n\n"
-                    "Escrito pelo robô, lido pelo Claude ao abrir a conversa.\n"
-                    "**Não editar à mão** — para marcar como resolvido, apague a linha.\n\n")
-        f.write("- [ ] **%s** — %s\n" % (quando, texto.replace("\n", " ").strip()))
+            f.write(
+                "# Recados do Ramón pelo Telegram\n\n"
+                "Escrito pelo robô, lido pelo Claude ao abrir a conversa.\n"
+                "**Não editar à mão** — para marcar como resolvido, apague a linha.\n\n"
+                "⚠️ **Este repositório é PÚBLICO.** O que for gravado aqui fica "
+                "visível para qualquer pessoa na internet — por isso os recados "
+                "vêm cortados em poucas palavras. Não colar aqui senha, número "
+                "de cartão, endereço nem outro dado sensível.\n\n"
+            )
+        f.write("- [ ] **%s** — %s\n" % (quando, resumo))
     if token and chat_id:
         _call(token, "sendMessage", chat_id=chat_id,
-              text="📌 Recado anotado. O Claude lê isso na próxima conversa "
-                   "— aqui eu só entendo os botões.")
+              text=resposta_fixa or "📌 Recado anotado. O Claude lê isso na próxima "
+                                     "conversa — aqui eu só entendo os botões.")
 
 
 def sync_approvals(token, posts_by_id, chat_id=None):
@@ -124,7 +151,14 @@ def sync_approvals(token, posts_by_id, chat_id=None):
         if msg and msg.get("text") and not msg["text"].startswith("/"):
             quando = datetime.fromtimestamp(
                 msg.get("date", 0), timezone.utc).strftime("%d/%m/%Y %H:%M UTC")
-            _guardar_recado(msg["text"], quando, token, chat_id)
+            # Import LOCAL, não lá em cima do arquivo: recepcionista.py importa
+            # _guardar_recado e _call DESTE módulo, então esse import só pode
+            # acontecer depois que telegram_approve já carregou por inteiro —
+            # senão vira ciclo. Continua sendo UM SÓ consumidor do getUpdates:
+            # a recepcionista não lê o Telegram, só responde ou escala o que
+            # já foi lido aqui.
+            import recepcionista
+            recepcionista.responder_mensagem(msg["text"], quando, token, chat_id)
 
         cq = upd.get("callback_query")
         if not cq:

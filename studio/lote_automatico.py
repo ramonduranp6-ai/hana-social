@@ -212,6 +212,59 @@ REGISTRO_VIDEOS = os.path.join(RAIZ, "content", ".videos_usados")
 AVISO = os.path.join(RAIZ, "content", "aviso_lote.md")
 EXT_VIDEO = (".mp4", ".mov", ".m4v")
 
+# Credencial local do Telegram (furo 1 do conserto de 31/07/2026): este script
+# roda na MÁQUINA do Ramón, dentro da tarefa "Hana Sentinela" — sem os secrets
+# do GitHub Actions, que só existem lá. Mesmo formato do studio/.token (fora
+# do git). Sem essa credencial, o robô continua calado — regra dele: nunca
+# inventar, nunca gravar chave no repositório.
+TELEGRAM_LOCAL = os.path.join(AQUI, ".telegram")
+
+
+def _credenciais_telegram():
+    """
+    Token/chat do bot da Hana pra avisar por aqui. Ordem de busca: variável de
+    ambiente primeiro (se um dia existir nesta máquina), depois o arquivo local
+    `studio/.telegram`. Sem os dois, devolve (None, None) e quem chama decide
+    degradar (regra: falha de aviso nunca derruba o robô).
+    """
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+    if token and chat_id:
+        return token, chat_id
+    if os.path.isfile(TELEGRAM_LOCAL):
+        dados = {}
+        with open(TELEGRAM_LOCAL, encoding="utf-8-sig") as f:
+            for linha in f:
+                if "=" in linha and not linha.strip().startswith("#"):
+                    k, v = linha.strip().split("=", 1)
+                    dados[k.strip()] = v.strip()
+        if dados.get("TELEGRAM_BOT_TOKEN") and dados.get("TELEGRAM_CHAT_ID"):
+            return dados["TELEGRAM_BOT_TOKEN"], dados["TELEGRAM_CHAT_ID"]
+    return None, None
+
+
+def _avisar_telegram(texto):
+    """
+    Manda o recado curto no Telegram do Ramón. NUNCA derruba o lote: sem
+    credencial ou com falha de rede, só avisa no log (stdout, que cai no
+    sentinela.log) e segue — `content/aviso_lote.md` já foi escrito antes
+    desta chamada de qualquer jeito, então o recado não se perde de vez.
+    """
+    token, chat_id = _credenciais_telegram()
+    if not (token and chat_id):
+        print("      [aviso] sem TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID nesta máquina "
+              "— ninguém foi avisado no Telegram. O recado ficou só em "
+              "content/aviso_lote.md, que o Claude só lê quando a conversa abre.")
+        return
+    try:
+        sys.path.insert(0, os.path.join(RAIZ, "publisher"))
+        from mandar_recado import mandar
+        mandar(token, chat_id, texto)
+        print("      [ok] avisei no Telegram.")
+    except Exception as exc:  # noqa: BLE001 — aviso nunca pode derrubar o lote
+        print(f"      [aviso] Telegram falhou ({str(exc)[:120]}) — recado "
+              f"ficou só em content/aviso_lote.md.")
+
 
 def videos_ineditos():
     """Vídeos brutos que ainda não viraram rascunho de Reel."""
@@ -293,6 +346,17 @@ def main():
             print("[ok] sem vídeo novo — nada foi criado. Recado escrito em content/aviso_lote.md")
             if not simular:
                 _escrever_aviso(recado)
+                _avisar_telegram(
+                    "🎬 Lote de domingo rodou: nenhum vídeo novo, não montei nada "
+                    "esta semana.\n"
+                    "Faltam 2 cenas: (1) a Hana obrigando você a alguma coisa, com "
+                    "o momento em que ela ganha; (2) a Hana contra o aspirador ou "
+                    "o secador.\n"
+                    "Celular na vertical, parado, uns 15 segundos, com o rosto "
+                    "dela em quadro.\n"
+                    "Salve os vídeos aqui: "
+                    r"C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\01 - brutas (suba aqui)"
+                )
             return
         print("[1/2] montando rascunho de Reel dos vídeos novos (%d encontrado(s))..." % len(videos))
         if simular:
@@ -308,6 +372,13 @@ def main():
             "**Ainda não entraram na fila** — falta escolher o trecho e o gancho, "
             "que é julgamento, e passar pelo auditor. Fazer na reunião de segunda."
             % len(feitos))
+        _avisar_telegram(
+            "🎬 Lote de domingo rodou.\n"
+            "Achei %d vídeo(s) novo(s) e já montei %d rascunho(s) de Reel em "
+            "\"06 - videos e trilhas/rascunhos\".\n"
+            "Falta só o corte final e o gancho — o Claude fecha isso na reunião "
+            "de segunda." % (len(videos), len(feitos))
+        )
         return
     # ------------------------------------------------------------------------
 
