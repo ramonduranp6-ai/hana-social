@@ -53,10 +53,17 @@ def main():
     linhas = ["LOTE PARA APROVAR — Hana", "",
               "Responda pro Claude com os números (ex.: 1,2,4 sim / 3 não).", ""]
 
-    for i, pid in enumerate(sorted(os.listdir(QUEUE)), 1):
+    # O contador anda SÓ quando o post entra de verdade. Antes ele era o índice
+    # do os.listdir, então entrada que não vira post (.gitkeep, pasta órfã)
+    # comia número e a pasta saía começando em "04" — o Ramón responde pelos
+    # números e não achava o 1, o 2 e o 3. Achado em 31/07/2026, quando ele
+    # perguntou "cadê as fotos e vídeos?".
+    i = 0
+    for pid in sorted(os.listdir(QUEUE)):
         pj = os.path.join(QUEUE, pid, "post.json")
         if not os.path.isfile(pj):
             continue
+        i += 1
         with open(pj, encoding="utf-8") as f:
             meta = json.load(f)
         quando = meta["scheduled_for"]
