@@ -14,6 +14,28 @@ Telegram e Instagram **não** vazaram. **O conselheiro VETOU** qualquer constru�
 de governança nova enquanto a chave não for trocada, e o veto dele está acima do
 meu por ordem do Ramón (ver abaixo). Enquanto isso, só robô e correção de bug.
 
+**CONSERTADO, 31/07/2026 — três coisas que dependiam dele deixaram de depender.**
+Ele mandou *"arrume meu amigo"* em vez de sair criando credencial. Estava certo.
+1. **O robô de domingo não precisa mais de senha na máquina dele.** Ia ser um
+   `studio/.telegram` com o token do bot — senha em dois lugares é senha para
+   vazar em dois lugares. Agora o robô local empurra `content/aviso_lote.md`
+   para o repositório e o novo `publisher/avisar_lote.py` entrega no Telegram
+   com o secret que já existe no GitHub. **Token continua num lugar só.**
+2. **O cron do GitHub pula rodadas — medido, não suposto.** Em 31/07 ficou
+   **2h44 sem nenhuma rodada agendada** (última às 20:43Z, nada até 23:27Z), e
+   o post das 21:00Z só foi ao ar porque houve disparo manual. O cron de repo
+   público é best-effort. Defesa: além do `*/30`, entrou uma salva de 6
+   tentativas coladas em 21:00Z de seg/qua/sex. O `run.py` é idempotente, então
+   repetir não duplica post. **Vigiar se volta a acontecer.**
+3. **A rodada das 20:43 tinha FALHADO** e ninguém tinha visto: o passo "Salvar
+   estado da fila" deu push simples enquanto eu empurrava da minha máquina e
+   foi rejeitado. Agora rebaseia e tenta 3 vezes — provado, "estado salvo
+   (tentativa 1)".
+Mais: a recepcionista ganhou **modelo reserva** (`gemini-flash-lite-latest`),
+porque o Flash devolveu "high demand" no primeiro teste, e o `maxOutputTokens`
+subiu de 2000 para 8000 — ela morria antes de escrever a primeira letra.
+Rodada de verificação 23:3xZ: **todos os passos verdes.**
+
 **REGRA NOVA DE GOVERNANÇA, 31/07/2026** (ordem dele): *"todos o trabalho quando
 for apresentado para mim precisa ser revisado para não ter erros… Coloque as ia
 para questionar o trabalho um do outro… O conselheiro fable tem voz ativa acima

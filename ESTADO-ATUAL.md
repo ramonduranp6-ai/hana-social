@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 31/07/2026 18:41. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 31/07/2026 20:30. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -22,9 +22,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-07-31T23:30:16Z workflow_dispatch success
+2026-07-31T23:24:12Z workflow_dispatch success
 2026-07-31T21:10:05Z workflow_dispatch success
-2026-07-31T20:43:07Z schedule failure
-2026-07-31T20:16:40Z workflow_dispatch success
 ```
 - Vigia local (Agendador do Windows): próxima execução domingo, 2 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -60,32 +60,25 @@ mudança de status nem publicar.
 - [ ] **31/07/2026 19:03 UTC** — Adicione para segunda uma resposta sobre qual o plano fazer para melhorar o conteúdo??
 - [ ] **31/07/2026 19:03 UTC** — Adicione para segunda uma resposta sobre qual o plano fazer para melhorar o conteúdo??
 - [ ] **31/07/2026 20:20 UTC** — Cadê as fotos e vídeos? Traga organizado com foto/vídeo e o texto embaixo
+- [ ] **31/07/2026 19:03 UTC** — Adicione para segunda uma resposta sobre qual o plano fazer para melhorar o conteúdo??
+- [ ] **31/07/2026 20:20 UTC** — Cadê as fotos e vídeos? Traga organizado com foto/vídeo e o texto embaixo
 
 Depois de responder, apague a linha de `content/recados.md`.
 
 ## Últimas mudanças no projeto
 ```
+7b2d476 fix: tira o Ramon do caminho - robo de domingo sem senha local, cron com rede de seguranca, Gemini com reserva
+d8a378b fix: recepcionista morria por falta de espaco para responder
+ec2a985 chore: atualiza estado da fila [skip ci]
+d9efd61 fix: o robo perdia o estado quando alguem empurrava junto
+2dfdc70 feat: recepcionista no Telegram + robos mudos passam a avisar
 c61cb6e decisao do Ramon: nao ha produto por enquanto - so crescer a Hana
 742c88f chore: atualiza estado da fila [skip ci]
 4acf774 decisao: virada editorial aprovada - foto parada sai, Reel de video entra
-b412b82 chore: atualiza estado da fila [skip ci]
-d6531ea feat: canal Claude -> Telegram (recado por workflow_dispatch)
-f8ec5f1 feat: o robo do lote para de fabricar foto e passa a trabalhar com video
-c156a83 feat: robo de recados - o que o Ramon escreve no Telegram nao se perde mais
-0bb0a3d docs: teste do time - auditor reprovou o Reel duas vezes, com medicao
 ```
 Alterações não commitadas:
 ```
-M .github/workflows/publish.yml
- M .gitignore
- M DECISOES.md
- M content/recados.md
- M publisher/run.py
- M publisher/sentinel.py
- M publisher/telegram_approve.py
- M studio/lote_automatico.py
- M studio/renovar_token.py
-?? publisher/recepcionista.py
+M DECISOES.md
 ```
 
 ## Decisões e contexto
@@ -104,6 +97,28 @@ precisa regenerar** em `aistudio.google.com/app/apikey` e me avisar — o secret
 Telegram e Instagram **não** vazaram. **O conselheiro VETOU** qualquer construção
 de governança nova enquanto a chave não for trocada, e o veto dele está acima do
 meu por ordem do Ramón (ver abaixo). Enquanto isso, só robô e correção de bug.
+
+**CONSERTADO, 31/07/2026 — três coisas que dependiam dele deixaram de depender.**
+Ele mandou *"arrume meu amigo"* em vez de sair criando credencial. Estava certo.
+1. **O robô de domingo não precisa mais de senha na máquina dele.** Ia ser um
+   `studio/.telegram` com o token do bot — senha em dois lugares é senha para
+   vazar em dois lugares. Agora o robô local empurra `content/aviso_lote.md`
+   para o repositório e o novo `publisher/avisar_lote.py` entrega no Telegram
+   com o secret que já existe no GitHub. **Token continua num lugar só.**
+2. **O cron do GitHub pula rodadas — medido, não suposto.** Em 31/07 ficou
+   **2h44 sem nenhuma rodada agendada** (última às 20:43Z, nada até 23:27Z), e
+   o post das 21:00Z só foi ao ar porque houve disparo manual. O cron de repo
+   público é best-effort. Defesa: além do `*/30`, entrou uma salva de 6
+   tentativas coladas em 21:00Z de seg/qua/sex. O `run.py` é idempotente, então
+   repetir não duplica post. **Vigiar se volta a acontecer.**
+3. **A rodada das 20:43 tinha FALHADO** e ninguém tinha visto: o passo "Salvar
+   estado da fila" deu push simples enquanto eu empurrava da minha máquina e
+   foi rejeitado. Agora rebaseia e tenta 3 vezes — provado, "estado salvo
+   (tentativa 1)".
+Mais: a recepcionista ganhou **modelo reserva** (`gemini-flash-lite-latest`),
+porque o Flash devolveu "high demand" no primeiro teste, e o `maxOutputTokens`
+subiu de 2000 para 8000 — ela morria antes de escrever a primeira letra.
+Rodada de verificação 23:3xZ: **todos os passos verdes.**
 
 **REGRA NOVA DE GOVERNANÇA, 31/07/2026** (ordem dele): *"todos o trabalho quando
 for apresentado para mim precisa ser revisado para não ter erros… Coloque as ia
