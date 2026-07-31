@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 31/07/2026 17:43. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 31/07/2026 18:12. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -22,11 +22,11 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-07-31T20:43:07Z schedule 
+2026-07-31T21:10:05Z workflow_dispatch success
+2026-07-31T20:43:07Z schedule failure
 2026-07-31T20:16:40Z workflow_dispatch success
-2026-07-31T18:56:03Z workflow_dispatch success
 ```
-- Vigia local (Agendador do Windows): próxima execução sexta-feira, 31 de julho de 2026 18:10:00
+- Vigia local (Agendador do Windows): próxima execução domingo, 2 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
@@ -56,24 +56,28 @@ mudança de status nem publicar.
 - Artes recebidas do outro projeto: 1
 - Fotos do iPhone sincronizadas (iCloud): 34418
 
+## 📌 RECADOS DELE NO TELEGRAM — responder nesta conversa
+- [ ] **31/07/2026 19:03 UTC** — Adicione para segunda uma resposta sobre qual o plano fazer para melhorar o conteúdo??
+
+Depois de responder, apague a linha de `content/recados.md`.
+
 ## Últimas mudanças no projeto
 ```
+4acf774 decisao: virada editorial aprovada - foto parada sai, Reel de video entra
+b412b82 chore: atualiza estado da fila [skip ci]
 d6531ea feat: canal Claude -> Telegram (recado por workflow_dispatch)
 f8ec5f1 feat: o robo do lote para de fabricar foto e passa a trabalhar com video
 c156a83 feat: robo de recados - o que o Ramon escreve no Telegram nao se perde mais
 0bb0a3d docs: teste do time - auditor reprovou o Reel duas vezes, com medicao
 42e1c14 feat: reel de video real + plano de conteudo na pauta de segunda
 58ed8de chore: atualiza estado da fila [skip ci]
-463cfa4 feat: botao para forcar a pauta da reuniao fora de segunda
-72f3266 feat: reporte semanal no Telegram + time operacional/estrategico
 ```
 Alterações não commitadas:
 ```
 M .claude/skills/hana-social/SKILL.md
  M DECISOES.md
- M ESTADO-ATUAL.md
  M content/pauta_extra.md
-?? Hana-Fotos/
+?? content/hipoteses-produto.md
 ```
 
 ## Decisões e contexto
@@ -84,6 +88,25 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 Mais recente em cima.
 
 ## Onde paramos (31/07/2026)
+
+**DECIDIDO POR ELE, 31/07/2026 — NÃO EXISTE PRODUTO, E ISSO É DE PROPÓSITO.**
+Palavras dele: *"por enquanto não tem produto, é apenas a hana crescendo por ser
+foda e bonitinha…. Acho que ainda não chegamos no ponto de anunciar esse tipo de
+produto, não temos pessoas suficientes e ainda não tivemos melhora nas nossas
+ações."* Isso **encerra** a cobrança do conselheiro (item D abaixo) e responde as
+3 hipóteses que o diretor-vendas montou (peitoral de bully / camiseta do dono /
+guia de medidas em PDF): **nenhuma foi escolhida, e não é para escolher agora.**
+- **Não propor produto, loja, preço, teste de oferta, link na bio nem parceria
+  comercial nova** enquanto ele não reabrir. O `diretor-vendas` continua fora do
+  organograma, e agora por decisão dele, não por falta de assunto.
+- **O objetivo hoje é um só: fazer a Hana crescer.** Conteúdo por conteúdo, sem
+  segunda intenção comercial.
+- As 3 hipóteses ficam guardadas em `content/hipoteses-produto.md` — se ele
+  reabrir, não se refaz o trabalho. **Guardado ≠ aprovado.**
+- Os dois motivos que ele deu são medíveis, e é assim que o assunto volta:
+  (1) "não temos pessoas suficientes" → seguidores; (2) "não tivemos melhora nas
+  nossas ações" → salvos, compartilhamentos e seguidores ganhos, hoje zerados.
+  **Falta ele definir o número que reabre a conversa** (proposto, sem resposta).
 
 **APROVADO POR ELE, 31/07/2026 — a virada editorial. Palavras dele: *"Aprova
 todos. mas mantenha esses post já aprovados, a partir dos proximos voce executa
@@ -483,7 +506,10 @@ Era o gargalo de alcance do projeto e caiu. O que foi feito e testado na tela:
 
 ## Norte estratégico
 
-Audiência → autoridade → produto. O produto ainda não existe; o pilar "roupa que
-não serve em bully" é o candidato natural. O gargalo real, medido em
+Audiência → autoridade → produto. **O produto não existe e isso é decisão dele,
+de 31/07/2026** — *"é apenas a hana crescendo por ser foda e bonitinha"*. Só a
+primeira etapa está em jogo hoje: AUDIÊNCIA. O pilar "roupa que não serve em
+bully" segue como candidato natural **quando** o assunto reabrir, e as hipóteses
+já trabalhadas estão em `content/hipoteses-produto.md`. O gargalo real, medido em
 `content/metricas.md`: a base atual é a rede pessoal do Ramón, não o nicho —
 crescer exige Reels, hashtag de nicho e presença nos perfis grandes da raça.

@@ -6,6 +6,25 @@ Mais recente em cima.
 
 ## Onde paramos (31/07/2026)
 
+**DECIDIDO POR ELE, 31/07/2026 — NÃO EXISTE PRODUTO, E ISSO É DE PROPÓSITO.**
+Palavras dele: *"por enquanto não tem produto, é apenas a hana crescendo por ser
+foda e bonitinha…. Acho que ainda não chegamos no ponto de anunciar esse tipo de
+produto, não temos pessoas suficientes e ainda não tivemos melhora nas nossas
+ações."* Isso **encerra** a cobrança do conselheiro (item D abaixo) e responde as
+3 hipóteses que o diretor-vendas montou (peitoral de bully / camiseta do dono /
+guia de medidas em PDF): **nenhuma foi escolhida, e não é para escolher agora.**
+- **Não propor produto, loja, preço, teste de oferta, link na bio nem parceria
+  comercial nova** enquanto ele não reabrir. O `diretor-vendas` continua fora do
+  organograma, e agora por decisão dele, não por falta de assunto.
+- **O objetivo hoje é um só: fazer a Hana crescer.** Conteúdo por conteúdo, sem
+  segunda intenção comercial.
+- As 3 hipóteses ficam guardadas em `content/hipoteses-produto.md` — se ele
+  reabrir, não se refaz o trabalho. **Guardado ≠ aprovado.**
+- Os dois motivos que ele deu são medíveis, e é assim que o assunto volta:
+  (1) "não temos pessoas suficientes" → seguidores; (2) "não tivemos melhora nas
+  nossas ações" → salvos, compartilhamentos e seguidores ganhos, hoje zerados.
+  **Falta ele definir o número que reabre a conversa** (proposto, sem resposta).
+
 **APROVADO POR ELE, 31/07/2026 — a virada editorial. Palavras dele: *"Aprova
 todos. mas mantenha esses post já aprovados, a partir dos proximos voce executa
 da maneira que sugeriu"*.** Reuni o comitê (diretor-redes + diretor-criativo +
@@ -404,7 +423,10 @@ Era o gargalo de alcance do projeto e caiu. O que foi feito e testado na tela:
 
 ## Norte estratégico
 
-Audiência → autoridade → produto. O produto ainda não existe; o pilar "roupa que
-não serve em bully" é o candidato natural. O gargalo real, medido em
+Audiência → autoridade → produto. **O produto não existe e isso é decisão dele,
+de 31/07/2026** — *"é apenas a hana crescendo por ser foda e bonitinha"*. Só a
+primeira etapa está em jogo hoje: AUDIÊNCIA. O pilar "roupa que não serve em
+bully" segue como candidato natural **quando** o assunto reabrir, e as hipóteses
+já trabalhadas estão em `content/hipoteses-produto.md`. O gargalo real, medido em
 `content/metricas.md`: a base atual é a rede pessoal do Ramón, não o nicho —
 crescer exige Reels, hashtag de nicho e presença nos perfis grandes da raça.

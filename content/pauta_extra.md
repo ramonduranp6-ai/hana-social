@@ -49,9 +49,14 @@ D) MÉTRICA QUE DECIDE
    - Conselheiro: PARADA DURA em 30/09/2026 — 500 seguidores ou 1.000 contas
      alcançadas. Sem isso, para ou muda de rota.
 
-E) A COBRANÇA DO CONSELHEIRO: o produto a ser vendido NÃO EXISTE e não está
-   definido. Ele exige uma hipótese de produto escrita, senão o projeto é hobby
-   consumindo o fim de semana do Ramón.
+E) ✅ RESOLVIDO EM 31/07/2026 — NÃO SOBE MAIS NA PAUTA.
+   O conselheiro cobrou uma hipótese de produto escrita. O Ramón decidiu o
+   contrário, e a decisão dele é a que vale: *"por enquanto não tem produto, é
+   apenas a hana crescendo por ser foda e bonitinha…. não temos pessoas
+   suficientes e ainda não tivemos melhora nas nossas ações."*
+   As 3 hipóteses do diretor-vendas ficam guardadas em
+   `content/hipoteses-produto.md`. **Guardado não é aprovado** — não propor
+   produto, preço, loja ou link na bio sem ele reabrir.
 
 ## Ajuste técnico que os três aceitaram
 

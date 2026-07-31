@@ -288,6 +288,19 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    03/08, 05/08, 07/08 e o Reel-slideshow de 10/08 vão ao ar como estão
    (*"mantenha esses post já aprovados, a partir dos proximos voce executa da
    maneira que sugeriu"*). **Não limpar a fila em nome da régua nova.**
+3m. **NÃO EXISTE PRODUTO, E É DE PROPÓSITO — decisão dele, 31/07/2026.**
+   Palavras dele: *"por enquanto não tem produto, é apenas a hana crescendo por
+   ser foda e bonitinha…. Acho que ainda não chegamos no ponto de anunciar esse
+   tipo de produto, não temos pessoas suficientes e ainda não tivemos melhora
+   nas nossas ações."*
+   **Não propor produto, preço, loja, teste de oferta, link na bio nem parceria
+   comercial nova.** O objetivo hoje é um só: fazer a Hana crescer — conteúdo
+   por conteúdo, sem segunda intenção comercial. O `diretor-vendas` fica fora,
+   agora por decisão dele.
+   As 3 hipóteses já trabalhadas (peitoral de bully / camiseta do dono / guia de
+   medidas) estão guardadas em `content/hipoteses-produto.md` só para não
+   refazer o trabalho. **Guardado ≠ aprovado.** Se o assunto voltar, quem
+   reabre é ele.
 4. **Um robô só. E ele é MENOR do que esta skill dizia** — conferido no
    Agendador do Windows em 28/07/2026. **O `hana-rotina` NUNCA EXISTIU**: era
    texto na documentação, igual à "ronda de terça e quinta" já desmascarada em
