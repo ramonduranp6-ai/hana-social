@@ -66,10 +66,10 @@ POSTADOS = os.path.join(RAIZ, "content", "posted")
 ESTADO_ATUAL = os.path.join(RAIZ, "ESTADO-ATUAL.md")
 DECISOES = os.path.join(RAIZ, "DECISOES.md")
 
-GEMINI_URL = (
-    "https://generativelanguage.googleapis.com/v1beta/models/"
-    "gemini-flash-latest:generateContent"
-)
+_BASE = "https://generativelanguage.googleapis.com/v1beta/models/"
+GEMINI_URL = _BASE + "gemini-flash-latest:generateContent"
+# Reserva, igual ao que o IA-Hub do Ramon ja usa quando o Flash está lotado.
+GEMINI_URL_RESERVA = _BASE + "gemini-flash-lite-latest:generateContent"
 
 MARCADOR_ESCALAR = "[ESCALAR]"
 
@@ -269,13 +269,30 @@ def gerar_resposta(pergunta, agora=None):
         # o teto alto não encarece quase nada — só se paga o que sai.
         "generationConfig": {"temperature": 0.2, "maxOutputTokens": 8000},
     }
-    r = requests.post(
-        GEMINI_URL, params={"key": chave}, json=corpo,
-        headers={"Content-Type": "application/json"}, timeout=60,
-    )
-    dados = r.json()
-    if "error" in dados:
-        raise RuntimeError(dados["error"].get("message", str(dados["error"]))[:200])
+    # Modelo principal e RESERVA. O Flash devolve "This model is currently
+    # experiencing high demand" com frequência — aconteceu no primeiro teste,
+    # em 31/07/2026 23:27Z. O IA-Hub do Ramón já resolve isso caindo para um
+    # modelo reserva, e aqui é a mesma ideia: melhor uma resposta do modelo
+    # menor do que nenhuma resposta. Se os dois falharem, quem chama transforma
+    # em recado — o Ramón nunca fica sem retorno.
+    ultimo_erro = None
+    for url in (GEMINI_URL, GEMINI_URL_RESERVA):
+        try:
+            r = requests.post(
+                url, params={"key": chave}, json=corpo,
+                headers={"Content-Type": "application/json"}, timeout=60,
+            )
+            dados = r.json()
+            if "error" in dados:
+                raise RuntimeError(dados["error"].get("message", str(dados["error"]))[:200])
+            break
+        except Exception as exc:  # noqa: BLE001 — tenta o reserva antes de desistir
+            ultimo_erro = exc
+            print(f"[recepcionista][aviso] {url.rsplit('/', 1)[-1].split(':')[0]} "
+                  f"falhou ({str(exc)[:100]})")
+    else:
+        raise RuntimeError(str(ultimo_erro)[:200])
+
     candidato = dados["candidates"][0]
     texto = "".join(
         p.get("text", "") for p in candidato.get("content", {}).get("parts", [])

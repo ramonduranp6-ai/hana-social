@@ -245,25 +245,69 @@ def _credenciais_telegram():
 
 def _avisar_telegram(texto):
     """
-    Manda o recado curto no Telegram do Ramón. NUNCA derruba o lote: sem
-    credencial ou com falha de rede, só avisa no log (stdout, que cai no
-    sentinela.log) e segue — `content/aviso_lote.md` já foi escrito antes
-    desta chamada de qualquer jeito, então o recado não se perde de vez.
+    Faz o recado de domingo chegar no Telegram do Ramón.
+
+    DUAS ROTAS, nesta ordem — mudança de 31/07/2026, quando o Ramón mandou
+    "arrume" em vez de ir criar credencial na mão:
+
+    1. Se esta máquina tiver credencial (`studio/.telegram` ou variável de
+       ambiente), manda direto. É o caminho rápido.
+    2. Se NÃO tiver — que é o caso normal, porque o token do bot mora nos
+       secrets do GitHub —, o recado é EMPURRADO para o repositório. O robô do
+       GitHub (`publisher/avisar_lote.py`, que roda a cada rodada do
+       publish.yml) vê o arquivo novo e manda ele no Telegram com o token que
+       só existe lá.
+
+    A rota 2 é a que faz este robô parar de depender de o Ramón guardar uma
+    senha na máquina. NUNCA derruba o lote: se as duas rotas falharem, o
+    recado continua escrito em `content/aviso_lote.md`, que o `estado.py`
+    mostra quando a conversa abre.
     """
     token, chat_id = _credenciais_telegram()
-    if not (token and chat_id):
-        print("      [aviso] sem TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID nesta máquina "
-              "— ninguém foi avisado no Telegram. O recado ficou só em "
-              "content/aviso_lote.md, que o Claude só lê quando a conversa abre.")
-        return
+    if token and chat_id:
+        try:
+            sys.path.insert(0, os.path.join(RAIZ, "publisher"))
+            from mandar_recado import mandar
+            mandar(token, chat_id, texto)
+            print("      [ok] avisei no Telegram (credencial local).")
+            return
+        except Exception as exc:  # noqa: BLE001 — aviso nunca pode derrubar o lote
+            print(f"      [aviso] Telegram local falhou ({str(exc)[:120]}) — "
+                  f"tentando pela rota do GitHub.")
+    _empurrar_para_o_github()
+
+
+def _empurrar_para_o_github():
+    """
+    Rota 2: commita e empurra `content/aviso_lote.md`. Quem entrega no Telegram
+    é o robô do GitHub, que tem o token nos secrets.
+
+    Só empurra ESTE arquivo (`git add` do caminho específico, não `-A`): o robô
+    de domingo não pode arrastar junto trabalho não salvo do Ramón ou meu.
+    """
+    import subprocess
+
+    def git(*args):
+        return subprocess.run(("git",) + args, cwd=RAIZ, capture_output=True,
+                              text=True, timeout=120)
+
     try:
-        sys.path.insert(0, os.path.join(RAIZ, "publisher"))
-        from mandar_recado import mandar
-        mandar(token, chat_id, texto)
-        print("      [ok] avisei no Telegram.")
+        if not git("add", "content/aviso_lote.md").returncode == 0:
+            raise RuntimeError("git add falhou")
+        if git("diff", "--cached", "--quiet").returncode == 0:
+            print("      [ok] recado igual ao que já está no GitHub — nada a empurrar.")
+            return
+        git("commit", "-m", "chore: recado do lote de domingo [skip ci]")
+        for _ in range(3):
+            if git("push").returncode == 0:
+                print("      [ok] recado empurrado — o robô do GitHub avisa no "
+                      "Telegram na próxima rodada (até 30 min).")
+                return
+            git("pull", "--rebase", "--autostash")
+        raise RuntimeError("push rejeitado 3 vezes")
     except Exception as exc:  # noqa: BLE001 — aviso nunca pode derrubar o lote
-        print(f"      [aviso] Telegram falhou ({str(exc)[:120]}) — recado "
-              f"ficou só em content/aviso_lote.md.")
+        print(f"      [aviso] não consegui empurrar o recado ({str(exc)[:120]}). "
+              f"Ele ficou em content/aviso_lote.md e o Claude lê ao abrir a conversa.")
 
 
 def videos_ineditos():

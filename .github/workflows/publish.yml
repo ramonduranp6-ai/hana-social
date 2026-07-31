@@ -4,7 +4,16 @@ name: Publicar posts da Hana
 # Também pode ser disparado na mão em Actions -> Run workflow.
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    # O cron do GitHub é BEST-EFFORT: em repositório público ele atrasa e às
+    # vezes PULA rodadas sob carga. Medido em 31/07/2026 — quase 3 horas sem
+    # nenhuma rodada agendada, e o post das 21:00Z só saiu porque houve um
+    # disparo manual. Duas defesas:
+    - cron: "*/30 * * * *"          # o batimento normal
+    # e uma salva de tentativas coladas no horário de publicação (21:00Z de
+    # segunda, quarta e sexta). Se uma for pulada, as outras cobrem. O run.py é
+    # idempotente: só publica o que está 'approved' e venceu, então repetir a
+    # tentativa não duplica post.
+    - cron: "0,7,14,21,28,35 21 * * 1,3,5"
   workflow_dispatch:
     inputs:
       forcar_reporte:
@@ -93,6 +102,16 @@ jobs:
       # Ramón pode estar desligado justamente quando o aviso importa. Tem que
       # rodar ANTES do passo que commita, senão o marcador de "já avisei hoje"
       # nunca se salva e o aviso repete a cada 30 min.
+      # O robô de domingo roda na máquina do Ramón, que não tem o token do bot.
+      # Ele empurra o recado em content/aviso_lote.md e QUEM ENTREGA é este
+      # passo, que tem os secrets. Assim o token existe num lugar só.
+      - name: Entregar o recado do robô de domingo
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python publisher/avisar_lote.py
+
       - name: Avisar se o token do Instagram está para vencer
         continue-on-error: true
         env:
