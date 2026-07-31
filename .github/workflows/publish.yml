@@ -5,7 +5,12 @@ name: Publicar posts da Hana
 on:
   schedule:
     - cron: "*/30 * * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      forcar_reporte:
+        description: "Mandar a pauta da reunião agora, mesmo não sendo segunda"
+        type: boolean
+        default: false
 
 # Permite que o job faça commit de volta (status dos posts, arquivamento).
 permissions:
@@ -56,7 +61,12 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python publisher/reporte_semanal.py
+        run: |
+          if [ "${{ inputs.forcar_reporte }}" = "true" ]; then
+            python publisher/reporte_semanal.py --forcar
+          else
+            python publisher/reporte_semanal.py
+          fi
 
       - name: Salvar estado da fila
         run: |
