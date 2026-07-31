@@ -126,6 +126,20 @@ def gerar():
     add(f"- Fotos do iPhone sincronizadas (iCloud): {contar(ICLOUD, ('.jpg','.jpeg','.heic','.png','.mov','.mp4'))}")
     add("")
 
+    # --- recados que ele mandou pelo Telegram ---
+    # O bot nao conversa: ele guarda o texto e quem responde e o Claude, aqui.
+    recados = os.path.join(RAIZ, "content", "recados.md")
+    if os.path.isfile(recados):
+        abertos = [l.rstrip() for l in open(recados, encoding="utf-8")
+                   if l.startswith("- [ ]")]
+        if abertos:
+            add("## 📌 RECADOS DELE NO TELEGRAM — responder nesta conversa")
+            for linha in abertos:
+                add(linha)
+            add("")
+            add("Depois de responder, apague a linha de `content/recados.md`.")
+            add("")
+
     # --- git ---
     add("## Últimas mudanças no projeto")
     add("```")

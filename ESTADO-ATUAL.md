@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 31/07/2026 16:28. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 31/07/2026 16:30. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -58,6 +58,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+0bb0a3d docs: teste do time - auditor reprovou o Reel duas vezes, com medicao
 42e1c14 feat: reel de video real + plano de conteudo na pauta de segunda
 58ed8de chore: atualiza estado da fila [skip ci]
 463cfa4 feat: botao para forcar a pauta da reuniao fora de segunda
@@ -65,11 +66,13 @@ mudança de status nem publicar.
 a6ff19e chore: atualiza estado da fila [skip ci]
 d5711b8 chore: atualiza estado da fila [skip ci]
 36c8f3c chore: atualiza estado da fila [skip ci]
-6e9cd6b chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
-M DECISOES.md
+M .claude/skills/hana-social/SKILL.md
+ M publisher/run.py
+ M publisher/telegram_approve.py
+ M studio/estado.py
 ?? Hana-Fotos/
 ```
 

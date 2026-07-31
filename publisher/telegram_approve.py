@@ -77,16 +77,55 @@ def _write_offset(offset):
         f.write(str(offset))
 
 
-def sync_approvals(token, posts_by_id):
+RECADOS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                       "content", "recados.md")
+
+
+def _guardar_recado(texto, quando, token=None, chat_id=None):
+    """
+    Guarda o que o Ramón escreve no Telegram.
+
+    O bot não conversa — ele manda e recebe clique de botão. Antes desta função,
+    mensagem de texto dele caía no vazio: o getUpdates lia, o offset avançava e
+    o recado sumia sem ninguém ver. Ele reclamou disso em 31/07/2026
+    ("Te mandei msg pelo Telegram e vc não responde?"), e mandou criar o robô.
+    Agora o recado vira linha em content/recados.md, que o Claude lê ao abrir a
+    conversa, e o bot confirma na hora para ele saber que chegou.
+    """
+    os.makedirs(os.path.dirname(RECADOS), exist_ok=True)
+    novo = not os.path.isfile(RECADOS)
+    with open(RECADOS, "a", encoding="utf-8") as f:
+        if novo:
+            f.write("# Recados do Ramón pelo Telegram\n\n"
+                    "Escrito pelo robô, lido pelo Claude ao abrir a conversa.\n"
+                    "**Não editar à mão** — para marcar como resolvido, apague a linha.\n\n")
+        f.write("- [ ] **%s** — %s\n" % (quando, texto.replace("\n", " ").strip()))
+    if token and chat_id:
+        _call(token, "sendMessage", chat_id=chat_id,
+              text="📌 Recado anotado. O Claude lê isso na próxima conversa "
+                   "— aqui eu só entendo os botões.")
+
+
+def sync_approvals(token, posts_by_id, chat_id=None):
     """
     Lê os cliques de botão e devolve um dict {post_id: 'approved'|'rejected'}.
     Atualiza os posts recebidos em posts_by_id in-place.
+    De quebra, guarda em content/recados.md o que o Ramón escrever por lá.
     """
+    from datetime import datetime, timezone
+
     decisions = {}
     offset = _read_offset()
     resp = _call(token, "getUpdates", offset=offset + 1, timeout=0)
     for upd in resp.get("result", []):
         offset = max(offset, upd["update_id"])
+
+        msg = upd.get("message") or upd.get("edited_message")
+        if msg and msg.get("text") and not msg["text"].startswith("/"):
+            quando = datetime.fromtimestamp(
+                msg.get("date", 0), timezone.utc).strftime("%d/%m/%Y %H:%M UTC")
+            _guardar_recado(msg["text"], quando, token, chat_id)
+
         cq = upd.get("callback_query")
         if not cq:
             continue

@@ -46,7 +46,7 @@ def main():
 
     # 1. aprovações do Telegram
     if require_approval and tg_token:
-        decisions = tg.sync_approvals(tg_token, posts_by_id)
+        decisions = tg.sync_approvals(tg_token, posts_by_id, tg_chat)
         for pid, status in decisions.items():
             if pid in posts_by_id:
                 q.save(posts_by_id[pid])

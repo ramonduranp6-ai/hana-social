@@ -68,6 +68,13 @@ automação, acervo de fotos, últimas mudanças e as decisões vigentes. É ger
 por código a partir das fontes reais, então **não envelhece**. Não pergunte ao
 Ramón onde pararam: rode o comando e descubra.
 
+**O estado agora abre com os RECADOS dele.** Desde 31/07/2026 o bot guarda o que
+o Ramón escreve no Telegram em `content/recados.md` (ele reclamou: *"Te mandei
+msg pelo Telegram e vc não responde?"* — o bot só entende botão, e o texto dele
+caía no vazio). Se aparecer a seção "📌 RECADOS DELE NO TELEGRAM", **responder
+nesta conversa, antes de qualquer outra coisa**, e depois apagar a linha do
+arquivo. Recado sem resposta é pior do que não ter o canal.
+
 Se precisar de mais profundidade, os arquivos são:
 `DECISOES.md` (decisões e pendências) · `brand-brief.md` (marca e tom) ·
 `content/metricas.md` (números medidos) · `content/benchmark-instagram.md`
