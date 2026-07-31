@@ -100,6 +100,17 @@ def montar(agora=None):
     delta = seg_hoje - seg_antes
 
     L = []
+    # O diagnóstico vem PRIMEIRO, antes da tabela: o Ramón lê no celular e para
+    # de ler cedo. Ele pediu isso em 31/07/2026 — a pauta listava número e não
+    # dizia se o projeto está melhorando ou piorando.
+    try:
+        import diagnostico
+        diag = diagnostico.montar(agora)
+        if diag:
+            L += [diag, "", "─" * 28, ""]
+    except Exception as exc:  # noqa: BLE001 — diagnóstico nunca derruba a pauta
+        print("[aviso] diagnostico falhou (%s) — pauta segue sem ele." % str(exc)[:120])
+
     L.append("📋 REUNIÃO ESTRATÉGICA — semana %s" % _semana(agora))
     L.append("Fonte: API do Instagram, coleta de %s." % hoje["data"])
     L.append("")
