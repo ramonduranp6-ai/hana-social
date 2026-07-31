@@ -106,13 +106,29 @@ jobs:
           git config user.name "hana-bot"
           git config user.email "hana-bot@users.noreply.github.com"
           git add content/
-          git add publisher/.telegram_offset 2>/dev/null || true
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: atualiza estado da fila [skip ci]"
-            git push
-          else
+          git add publisher/.telegram_offset || true
+          if git diff --cached --quiet; then
             echo "Nada mudou na fila."
+            exit 0
           fi
+          git commit -m "chore: atualiza estado da fila [skip ci]"
+          # Corrida de push: se alguem (eu, o Ramon, outro runner) empurrou no
+          # meio do ciclo, o push simples e REJEITADO e o robo perde o estado.
+          # Aconteceu de verdade em 31/07/2026 20:43 — o job ficou vermelho e a
+          # fila nao foi salva. Agora ele rebaseia e tenta de novo. Isso ficou
+          # critico quando o .telegram_offset passou a ser versionado: perder o
+          # push significa reprocessar as mensagens do Telegram na rodada
+          # seguinte, chamando o Gemini de novo pelas mesmas mensagens.
+          for tentativa in 1 2 3; do
+            if git push; then
+              echo "estado salvo (tentativa $tentativa)"
+              exit 0
+            fi
+            echo "push rejeitado — rebaseando e tentando de novo ($tentativa/3)"
+            git pull --rebase --autostash origin main || true
+          done
+          echo "::error::nao consegui salvar o estado da fila depois de 3 tentativas"
+          exit 1
 
       # Falha alto se algum post falhou ou ficou vencido sem publicar.
       # Job vermelho => GitHub avisa por e-mail. Custo zero.
