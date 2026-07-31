@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 31/07/2026 16:30. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 31/07/2026 16:54. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -58,6 +58,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+c156a83 feat: robo de recados - o que o Ramon escreve no Telegram nao se perde mais
 0bb0a3d docs: teste do time - auditor reprovou o Reel duas vezes, com medicao
 42e1c14 feat: reel de video real + plano de conteudo na pauta de segunda
 58ed8de chore: atualiza estado da fila [skip ci]
@@ -65,15 +66,16 @@ mudança de status nem publicar.
 72f3266 feat: reporte semanal no Telegram + time operacional/estrategico
 a6ff19e chore: atualiza estado da fila [skip ci]
 d5711b8 chore: atualiza estado da fila [skip ci]
-36c8f3c chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
 M .claude/skills/hana-social/SKILL.md
- M publisher/run.py
- M publisher/telegram_approve.py
+ M DECISOES.md
+ M ESTADO-ATUAL.md
  M studio/estado.py
+ M studio/lote_automatico.py
 ?? Hana-Fotos/
+?? content/.videos_usados
 ```
 
 ## Decisões e contexto
@@ -84,6 +86,21 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 Mais recente em cima.
 
 ## Onde paramos (31/07/2026)
+
+**DÍVIDA QUITADA, 31/07/2026 — o robô do lote parou de fabricar foto.** Eu tinha
+decidido isso de manhã e não tinha implementado; ele mandou resolver (*"Pode
+resolver e atualizar tudo"*). Agora, no domingo, `lote_automatico.py` procura
+**vídeo novo**: se achar, monta rascunho de Reel em `06 - videos e trilhas/
+rascunhos` (sem gancho, sem entrar na fila — trecho e gancho são julgamento);
+se não achar, **não inventa post** e escreve em `content/aviso_lote.md` o pedido
+das duas cenas que faltam. Os 12 vídeos velhos já entraram em
+`content/.videos_usados`, então o robô só volta a trabalhar quando ele filmar.
+Consequência: **domingo 02/08 não nasce lote nenhum** — e isso é o certo, porque
+a alternativa era mais três fotos do formato que mediu zero quatro vezes.
+
+**PENDÊNCIA ABERTA — o teste do bot de recados nunca foi feito.** Ele disse que
+ia mandar mensagem no Telegram e a conversa acabou antes; `content/recados.md`
+não existe ainda. Na próxima conversa, confirmar se o recado chega.
 
 **TESTE DO TIME, 31/07/2026 — o auditor funciona e o acervo não presta.**
 Montei o primeiro Reel de vídeo real (a Hana assistindo um cachorro na TV,

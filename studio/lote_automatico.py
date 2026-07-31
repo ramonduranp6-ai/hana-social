@@ -206,6 +206,61 @@ def id_do_post(caminho, quando):
     return f"{quando[:10]}_{base}"
 
 
+BRUTAS = os.path.join(RAIZ, "Fotos da Hana", "01 - brutas (suba aqui)")
+RASCUNHOS = os.path.join(RAIZ, "Fotos da Hana", "06 - videos e trilhas", "rascunhos")
+REGISTRO_VIDEOS = os.path.join(RAIZ, "content", ".videos_usados")
+AVISO = os.path.join(RAIZ, "content", "aviso_lote.md")
+EXT_VIDEO = (".mp4", ".mov", ".m4v")
+
+
+def videos_ineditos():
+    """Vídeos brutos que ainda não viraram rascunho de Reel."""
+    if not os.path.isdir(BRUTAS):
+        return []
+    usados = set()
+    if os.path.isfile(REGISTRO_VIDEOS):
+        usados = {l.strip() for l in open(REGISTRO_VIDEOS, encoding="utf-8") if l.strip()}
+    achados = [f for f in sorted(os.listdir(BRUTAS))
+               if f.lower().endswith(EXT_VIDEO) and f not in usados]
+    return [os.path.join(BRUTAS, f) for f in achados]
+
+
+def _marcar_video(caminho):
+    with open(REGISTRO_VIDEOS, "a", encoding="utf-8") as f:
+        f.write(os.path.basename(caminho) + "\n")
+
+
+def _escrever_aviso(texto):
+    """Recado do robô de domingo — o estado.py mostra ao abrir a conversa."""
+    os.makedirs(os.path.dirname(AVISO), exist_ok=True)
+    with open(AVISO, "w", encoding="utf-8") as f:
+        f.write("# Recado do robô do lote (domingo)\n\n%s\n" % texto)
+
+
+def montar_rascunhos(videos, limite=2):
+    """
+    Monta rascunho de Reel a partir dos vídeos novos — SEM gancho e SEM entrar
+    na fila. O gancho e o corte exigem julgamento (o auditor reprovou os meus
+    duas vezes em 31/07/2026), então o robô prepara e o Claude decide na
+    reunião de segunda. Robô não publica conteúdo que ninguém olhou.
+    """
+    sys.path.insert(0, AQUI)
+    from reel_de_video import montar
+
+    os.makedirs(RASCUNHOS, exist_ok=True)
+    feitos = []
+    for caminho in videos[:limite]:
+        nome = os.path.splitext(os.path.basename(caminho))[0]
+        saida = os.path.join(RASCUNHOS, "rascunho_%s.mp4" % nome)
+        try:
+            montar(caminho, saida, texto=None, inicio=0, duracao=10)
+            _marcar_video(caminho)
+            feitos.append(saida)
+        except SystemExit as exc:
+            print("      [FALHA] %s: %s" % (nome, exc))
+    return feitos
+
+
 def main():
     simular = "--simular" in sys.argv
     # O robô da máquina (tarefa "Hana Sentinela") chama este script todo dia que
@@ -214,6 +269,47 @@ def main():
     if "--so-domingo" in sys.argv and datetime.now().weekday() != 6:
         return
     limite = 3  # um lote de uma semana: seg, qua, sex
+
+    # --- 31/07/2026: o lote deixou de fabricar FOTO por padrão. -------------
+    # Medido em content/placar.md: 4 fotos publicadas, alcance médio 47, e
+    # ZERO salvos, ZERO compartilhamentos e ZERO seguidores ganhos nas quatro.
+    # Deixar o robô produzir mais foto era automatizar a produção de zeros.
+    # Agora ele trabalha com VÍDEO; sem vídeo novo, ele não inventa post —
+    # avisa que falta filmagem. Foto avulsa só com --fotos, na mão.
+    if "--fotos" not in sys.argv:
+        videos = videos_ineditos()
+        if not videos:
+            recado = (
+                "Nenhum vídeo novo em `01 - brutas (suba aqui)` — **não montei "
+                "lote esta semana**, de propósito.\n\n"
+                "Foto avulsa dela parada já foi testada 4 vezes e deu zero em "
+                "salvos, compartilhamentos e seguidores ganhos nas quatro. "
+                "Produzir mais foto seria fabricar mais zero.\n\n"
+                "O que destrava: as duas cenas que faltam — (1) a Hana obrigando "
+                "o Ramón a alguma coisa, com o momento em que ela ganha; "
+                "(2) a Hana contra o aspirador ou o secador. "
+                "Celular na vertical, parado, ~15 segundos, **com o rosto dela "
+                "em quadro**.")
+            print("[ok] sem vídeo novo — nada foi criado. Recado escrito em content/aviso_lote.md")
+            if not simular:
+                _escrever_aviso(recado)
+            return
+        print("[1/2] montando rascunho de Reel dos vídeos novos (%d encontrado(s))..." % len(videos))
+        if simular:
+            for v in videos[:2]:
+                print("      [simulação] viraria rascunho: %s" % os.path.basename(v))
+            print("[simulação] nada montado, nada gasto.")
+            return
+        feitos = montar_rascunhos(videos)
+        print("[2/2] %d rascunho(s) em '06 - videos e trilhas/rascunhos'." % len(feitos))
+        _escrever_aviso(
+            "%d rascunho(s) de Reel prontos em `Fotos da Hana/06 - videos e "
+            "trilhas/rascunhos`, montados dos vídeos novos.\n\n"
+            "**Ainda não entraram na fila** — falta escolher o trecho e o gancho, "
+            "que é julgamento, e passar pelo auditor. Fazer na reunião de segunda."
+            % len(feitos))
+        return
+    # ------------------------------------------------------------------------
 
     print("[1/4] editando as fotos de '01 - brutas'...")
     lote.editar()

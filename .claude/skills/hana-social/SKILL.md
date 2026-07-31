@@ -288,6 +288,21 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    **Não automatizar a ronda antes de medir**, e não prometer que ela funciona.
    Vale como método, não só para a ronda: agora que o placar existe, gasto novo
    de esforço se justifica por número, não por intuição.
+4c-i. **O LOTE DE DOMINGO NÃO FABRICA MAIS FOTO** (mudança de 31/07/2026, com
+   o OK dele: *"Pode resolver e atualizar tudo"*). Motivo medido, não opinião:
+   4 fotos publicadas, alcance médio 47, e **zero salvos, zero compartilhamentos
+   e zero seguidores ganhos nas quatro**. Deixar o robô produzir mais foto era
+   automatizar a produção de zeros. Como ficou:
+   - Domingo o robô procura **vídeo novo** em `01 - brutas (suba aqui)`.
+   - Achou: monta rascunho de Reel em `06 - videos e trilhas/rascunhos`, **sem
+     gancho e sem entrar na fila** — trecho e gancho são julgamento, e o auditor
+     reprovou os meus duas vezes. O Claude fecha na reunião de segunda.
+   - Não achou: **não inventa post**. Escreve o recado em `content/aviso_lote.md`
+     pedindo as duas cenas que faltam, e o `estado.py` mostra isso ao abrir.
+   - Os 12 vídeos antigos já estão marcados como vistos em `content/.videos_usados`
+     (o auditor reprovou o material: a Hana está de costas e o rosto nunca
+     aparece). O robô só volta a trabalhar com filmagem NOVA.
+   - `--fotos` ainda força o lote antigo de foto, na mão, se ele mandar.
 4c. **O LOTE DE DOMINGO AGORA É AUTOMÁTICO — não refazer na conversa**
    (criado em 28/07/2026 a pedido dele: *"faz o 1"*, para tirar o trabalho
    semanal do plano Claude). `studio/lote_automatico.py` edita as brutas, separa

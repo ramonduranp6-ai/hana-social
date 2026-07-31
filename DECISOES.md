@@ -6,6 +6,21 @@ Mais recente em cima.
 
 ## Onde paramos (31/07/2026)
 
+**DÍVIDA QUITADA, 31/07/2026 — o robô do lote parou de fabricar foto.** Eu tinha
+decidido isso de manhã e não tinha implementado; ele mandou resolver (*"Pode
+resolver e atualizar tudo"*). Agora, no domingo, `lote_automatico.py` procura
+**vídeo novo**: se achar, monta rascunho de Reel em `06 - videos e trilhas/
+rascunhos` (sem gancho, sem entrar na fila — trecho e gancho são julgamento);
+se não achar, **não inventa post** e escreve em `content/aviso_lote.md` o pedido
+das duas cenas que faltam. Os 12 vídeos velhos já entraram em
+`content/.videos_usados`, então o robô só volta a trabalhar quando ele filmar.
+Consequência: **domingo 02/08 não nasce lote nenhum** — e isso é o certo, porque
+a alternativa era mais três fotos do formato que mediu zero quatro vezes.
+
+**PENDÊNCIA ABERTA — o teste do bot de recados nunca foi feito.** Ele disse que
+ia mandar mensagem no Telegram e a conversa acabou antes; `content/recados.md`
+não existe ainda. Na próxima conversa, confirmar se o recado chega.
+
 **TESTE DO TIME, 31/07/2026 — o auditor funciona e o acervo não presta.**
 Montei o primeiro Reel de vídeo real (a Hana assistindo um cachorro na TV,
 `IMG_2972.MOV`) e mandei ao auditor antes de mostrar ao Ramón, como manda a

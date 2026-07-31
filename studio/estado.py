@@ -126,6 +126,16 @@ def gerar():
     add(f"- Fotos do iPhone sincronizadas (iCloud): {contar(ICLOUD, ('.jpg','.jpeg','.heic','.png','.mov','.mp4'))}")
     add("")
 
+    # --- recado do robô do lote (domingo) ---
+    aviso = os.path.join(RAIZ, "content", "aviso_lote.md")
+    if os.path.isfile(aviso):
+        with open(aviso, encoding="utf-8") as f:
+            texto_aviso = f.read().strip()
+        if texto_aviso:
+            add("## 🤖 O que o robô do lote fez no domingo")
+            add(texto_aviso)
+            add("")
+
     # --- recados que ele mandou pelo Telegram ---
     # O bot nao conversa: ele guarda o texto e quem responde e o Claude, aqui.
     recados = os.path.join(RAIZ, "content", "recados.md")
