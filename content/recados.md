@@ -10,3 +10,4 @@ sensível.
 
 - [x] 31/07 — os 3 recados anteriores foram respondidos na conversa de 31/07 (plano de conteudo aprovado pelo comite; pasta de aprovacao limpa e renumerada).
 - [x] 01/08 — os 2 recados da manhã foram respondidos no Telegram (garimpo religado; fila entregue com mídia e legenda).
+- [ ] **01/08/2026 23:36 UTC** — Post 1 ok 2 ok 3 ok 4 está com música de velório, precisa ter mais criatividade, melhorar isso.
