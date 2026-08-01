@@ -56,6 +56,16 @@ def main():
         print("[erro] faltam TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID")
         return 1
 
+    # Etiqueta: ele precisa saber a QUE mensagem está respondendo (cobrança de
+    # 01/08/2026). Ver publisher/etiqueta.py. Sem RECADO_ASSUNTO o texto sai
+    # cru, como antes — assim os avisos automáticos antigos não quebram.
+    assunto = os.environ.get("RECADO_ASSUNTO", "").strip()
+    if assunto:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from etiqueta import etiquetar
+        texto = etiquetar(assunto, texto,
+                          os.environ.get("RECADO_RESPONDA", "").strip() or None)
+
     mandar(token, chat_id, texto)
     print("[ok] recado entregue (%d caractere(s))" % len(texto))
     return 0

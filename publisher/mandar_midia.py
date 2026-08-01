@@ -48,6 +48,14 @@ def mandar(token, chat_id, caminho, texto=""):
     else:
         metodo, campo = "sendDocument", "document"
 
+    # Etiqueta obrigatória: ele precisa saber a QUE mensagem está respondendo
+    # (cobrança de 01/08/2026). Ver publisher/etiqueta.py.
+    assunto = os.environ.get("MIDIA_ASSUNTO", "").strip()
+    responda = os.environ.get("MIDIA_RESPONDA", "").strip() or None
+    if assunto:
+        from etiqueta import etiquetar
+        texto = etiquetar(assunto, texto, responda)
+
     with open(caminho, "rb") as f:
         r = requests.post(API.format(token=token, method=metodo),
                           data={"chat_id": chat_id, "caption": texto[:1024]},

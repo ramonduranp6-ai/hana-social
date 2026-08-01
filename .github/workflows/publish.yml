@@ -36,6 +36,14 @@ on:
         description: "Legenda que acompanha a mídia avulsa"
         type: string
         default: ""
+      assunto:
+        description: "ASSUNTO da mensagem (etiqueta) — ex.: PREVIA DE REEL, TRILHA 10/08"
+        type: string
+        default: ""
+      responda:
+        description: "O que ele deve responder — ex.: APROVA ou NAO APROVA (vazio = não espera resposta)"
+        type: string
+        default: ""
 
 # Permite que o job faça commit de volta (status dos posts, arquivamento).
 permissions:
@@ -107,6 +115,8 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           RECADO: ${{ inputs.recado }}
+          RECADO_ASSUNTO: ${{ inputs.assunto }}
+          RECADO_RESPONDA: ${{ inputs.responda }}
         run: python publisher/mandar_recado.py
 
       # "Me traga elas aqui, com vídeo/foto e descrição. Quero assistir pelo
@@ -133,6 +143,8 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           MIDIA: ${{ inputs.midia }}
           MIDIA_TEXTO: ${{ inputs.midia_texto }}
+          MIDIA_ASSUNTO: ${{ inputs.assunto }}
+          MIDIA_RESPONDA: ${{ inputs.responda }}
         run: python publisher/mandar_midia.py
 
       # Avisa no Telegram quando o token do Instagram estiver a 7 dias ou menos
