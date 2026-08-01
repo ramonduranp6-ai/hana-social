@@ -263,6 +263,19 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    O teste de 31/07 foi feito pela API e saiu ruim e caro (~R$ 11 o clipe contra
    ~R$ 1 pelo Flow, conforme o `APRENDIZADO-IA.md` do hub). **Não gastar mais
    API de vídeo sem ele mandar.** O caminho é o plano que ele já paga.
+3j-i. **FOTO E VÍDEO DE IA: PELO APP, NUNCA POR API — e sempre PREMIUM**
+   (ordem dele, 31/07/2026, ampliando a 3j que só falava de vídeo: *"gemini não
+   faça por api… quando voce faz via api fica ruim o resultado da foto e do
+   vídeo, é melhor fazer o caminho como se fosse um humano, além disso, sempre
+   peça que seja fotos e videos premiuns"*).
+   - Geração de imagem ou vídeo passa pelo **app que ele já paga** (Gemini/Flow),
+     operado como usuário, não por endpoint. Motivo medido: o teste por API saiu
+     pior e ~11x mais caro (~R$ 11 contra ~R$ 1 pelo Flow).
+   - **Sempre pedir a qualidade máxima**, nunca rascunho — o padrão da casa é
+     "o melhor modelo, foto e vídeo".
+   - **Conferido em 31/07/2026: nenhum script do projeto gera foto ou vídeo por
+     API.** O único que cria mídia é `gerar_trilha.py` (áudio, Lyria 3). Se
+     algum script novo precisar de imagem, ele NÃO nasce chamando endpoint.
 3k. **TRILHA DE VÍDEO ANIMADO: música de cachorro ou de bebê, em tom feliz**
    (ordem dele, 31/07/2026). Vale junto com 3e-i (criança e cachorro, sem funk,
    sem música triste) e com o veto permanente de Anitta e Xuxa (3f).
