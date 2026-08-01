@@ -34,11 +34,20 @@ PLACAR_PATH = os.path.join(ROOT, "content", "placar.md")
 
 # Métricas pedidas por tipo de mídia. A API rejeita o lote inteiro se uma delas
 # não existir para aquele tipo, então em caso de erro tentamos uma a uma.
+# CORRIGIDO em 31/07/2026 pelo conselho estratégico: REELS e VIDEO NÃO pediam
+# `profile_visits` nem `follows`. Ou seja, o funil que existia para foto não
+# existia para Reel — e o Reel de 10/08 é justamente o teste que decide se o
+# formato muda alguma coisa. Sem estes dois campos a comparação nasceria torta.
+# O conselheiro pôs prazo: tinha que estar pronto ANTES da coleta da foto de
+# 03/08, senão as três fotos já aprovadas não servem de base de comparação.
 METRICAS = {
-    "REELS": ["reach", "likes", "comments", "saved", "shares", "views"],
-    "VIDEO": ["reach", "likes", "comments", "saved", "shares", "views"],
+    "REELS": ["reach", "likes", "comments", "saved", "shares", "views",
+              "profile_visits", "follows"],
+    "VIDEO": ["reach", "likes", "comments", "saved", "shares", "views",
+              "profile_visits", "follows"],
     "IMAGE": ["reach", "likes", "comments", "saved", "shares", "profile_visits", "follows"],
-    "CAROUSEL_ALBUM": ["reach", "likes", "comments", "saved", "shares"],
+    "CAROUSEL_ALBUM": ["reach", "likes", "comments", "saved", "shares",
+                       "profile_visits", "follows"],
 }
 PADRAO = ["reach", "likes", "comments", "saved"]
 
@@ -136,6 +145,11 @@ def coletar(ig_user, token):
     seg, midias = seguidores(ig_user, token)
     registro = {
         "data": hoje(),
+        # A HORA da coleta passou a ser gravada em 31/07/2026, achado do
+        # conselho: a foto de 31/07 ficou fora do placar só porque a coleta
+        # rodou às 14:10 e o post subiu às 21:00. Sem a hora, comparar dois
+        # posts é comparar idades diferentes sem saber.
+        "hora_utc": datetime.now(timezone.utc).strftime("%H:%M"),
         "seguidores": seg,
         "midias_no_perfil": midias,
         "posts": {},
