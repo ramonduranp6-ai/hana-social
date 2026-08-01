@@ -28,6 +28,14 @@ on:
         description: "Mandar a fila inteira no Telegram (mídia + legenda) pro Ramón assistir no celular"
         type: boolean
         default: false
+      midia:
+        description: "Caminho no repo de uma mídia avulsa (prévia/teste) pra mandar no Telegram"
+        type: string
+        default: ""
+      midia_texto:
+        description: "Legenda que acompanha a mídia avulsa"
+        type: string
+        default: ""
 
 # Permite que o job faça commit de volta (status dos posts, arquivamento).
 permissions:
@@ -113,6 +121,19 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           MEDIA_BASE_URL: ${{ secrets.MEDIA_BASE_URL }}
         run: python publisher/mostrar_fila.py
+
+      # Prévia/teste avulso no Telegram. "Eu vi pelo telegram, muito melhor
+      # olhar por lá" (ele, 01/08/2026). Manda o arquivo por upload, não por
+      # URL. Sem a entrada `midia`, o passo nem roda.
+      - name: Mandar midia avulsa no Telegram
+        if: inputs.midia != ''
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          MIDIA: ${{ inputs.midia }}
+          MIDIA_TEXTO: ${{ inputs.midia_texto }}
+        run: python publisher/mandar_midia.py
 
       # Avisa no Telegram quando o token do Instagram estiver a 7 dias ou menos
       # de vencer. Mora AQUI, e não no vigia local, de propósito: o notebook do
