@@ -40,17 +40,32 @@ import telegram_approve as tg
 # sem perguntar COMO ele virou 'approved'. Agora exige um campo "auditoria" no
 # post.json com veredito == "SEM OBJECAO".
 #
-# CORTE POR DATA, OBRIGATÓRIO (ordem do Ramón, 31/07/2026: "mantenha esses
+# ISENÇÃO POR ID, OBRIGATÓRIA (ordem do Ramón, 31/07/2026: "mantenha esses
 # post já aprovados"). Os 4 posts que já estavam na fila QUANDO essa trava
-# nasceu (03/08, 05/08, 07/08 e o Reel de 10/08) foram aprovados por ele
-# DIRETO no post.json, sem passar pelo campo de auditoria — e ele pediu, com
-# essas palavras exatas, pra mantê-los como estão. Por isso, todo post
-# agendado ATÉ 2026-08-10 (inclusive) passa sem auditoria — só um aviso no
-# log, NUNCA um bloqueio. Só os posts agendados DEPOIS dessa data exigem o
-# campo. NÃO mudar esta data sem ordem nova dele — mudar pra trás quebraria a
-# fila que ele mandou manter; mudar pra frente destrava post que ele nunca
-# pediu pra destravar.
-CORTE_AUDITORIA = "2026-08-10"
+# nasceu foram aprovados por ele DIRETO no post.json, sem passar pelo campo
+# de auditoria — e ele pediu, com essas palavras exatas, pra mantê-los como
+# estão.
+#
+# CONSERTO de 01/08/2026 (auditoria geral, item 3): antes disso a isenção era
+# por DATA FIXA ("scheduled_for <= 2026-08-10"), o que o ChatGPT apontou como
+# "backdoor permanente" — a string de corte nunca expira sozinha, então
+# qualquer post.json novo com `scheduled_for` forjado para uma data no
+# passado (ex.: "2020-01-01") escaparia da auditoria PARA SEMPRE, mesmo anos
+# depois. Trocado por uma LISTA FECHADA dos 4 IDs reais que o Ramón mandou
+# manter — nenhum post novo, com nenhuma data, cai nela por acidente ou por
+# forja. Painel de 4 IAs (Gemini/DeepSeek/Grok, 01/08/2026) validou sem
+# objeção que blindagem criptográfica (GPG/branch protegida) é
+# over-engineering para este projeto: a aprovação do Ramón no Telegram
+# (REQUIRE_APPROVAL=1) já é o gate humano externo ao repo antes de qualquer
+# publicação real — o campo `auditoria.veredito` é checagem INTERNA entre
+# agentes de IA, não a última linha de defesa. NÃO adicionar ID aqui sem
+# ordem nova dele.
+POSTS_ISENTOS_DE_AUDITORIA = frozenset({
+    "2026-08-03_dia-de-praia",
+    "2026-08-05_navio-importacao",
+    "2026-08-07_banho-de-sol",
+    "2026-08-10_escolheu-o-canal",
+})
 
 
 def passou_auditoria(post):
@@ -58,7 +73,7 @@ def passou_auditoria(post):
     Devolve (pode_publicar: bool, aviso: str|None).
 
     Duas portas de entrada:
-    1. Post da fila antiga (scheduled_for <= CORTE_AUDITORIA) — passa sempre,
+    1. Post da lista de isentos (POSTS_ISENTOS_DE_AUDITORIA) — passa sempre,
        com aviso só de log (nunca Telegram, nunca bloqueio).
     2. Post novo — só passa com post.json trazendo
        `"auditoria": {"veredito": "SEM OBJECAO", ...}` exatamente. Qualquer
@@ -67,11 +82,11 @@ def passou_auditoria(post):
        só aviso — ver regra 1 do conserto).
     """
     data_agendada = (post.get("scheduled_for") or "")[:10]
-    if data_agendada and data_agendada <= CORTE_AUDITORIA:
+    if post.get("_id") in POSTS_ISENTOS_DE_AUDITORIA:
         return True, (
-            f"{post['_id']}: fila antiga (agendado {data_agendada}, corte "
-            f"{CORTE_AUDITORIA}) — publicado SEM auditoria, por ordem do Ramón "
-            f"em 31/07/2026 (\"mantenha esses post já aprovados\")."
+            f"{post['_id']}: post da fila antiga (agendado {data_agendada}) — "
+            f"publicado SEM auditoria, por ordem do Ramón em 31/07/2026 "
+            f"(\"mantenha esses post já aprovados\")."
         )
     auditoria = post.get("auditoria")
     if isinstance(auditoria, dict) and auditoria.get("veredito") == "SEM OBJECAO":

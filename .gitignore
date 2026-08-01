@@ -17,6 +17,18 @@ studio/.token
 # roda na maquina dele, sem os secrets do GitHub.
 studio/.telegram
 
+# estado do garimpo (studio/garimpo.py) — lista nomes de arquivo do rolo de
+# camera PESSOAL do Ramon (iCloudPhotos\Photos). Nunca vai para o repo
+# publico, mesmo sendo "so nomes" (privacidade e regra da casa, 01/08/2026).
+studio/.garimpo_estado.json
+# pesos do YOLOv8n baixados uma vez (~6 MB) — binario, nao e codigo do projeto.
+# O ultralytics tambem larga uma copia na RAIZ ao rodar, por isso as duas linhas.
+studio/.garimpo_modelo/
+yolov8n.pt
+
+# log do garimpo: cita nomes de arquivo do rolo de camera PESSOAL dele
+studio/garimpo_run*.log
+
 # painel de aprovacao (gerado, pesado - refaz com painel_aprovacao.py)
 studio/aprovar.html
 

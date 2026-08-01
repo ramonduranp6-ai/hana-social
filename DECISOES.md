@@ -4,7 +4,152 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## FECHADOS, 01/08/2026 — os 7 itens do sinal amarelo da auditoria geral
+
+Ordem dele: *"Sinal amarelo não é bom, precisa arrumar né… segunda quero o
+resultado do fluxo 100%."* Os 7:
+1. **Alarme de token cego** — `IG_TOKEN_EXPIRA_EM` não existia no GitHub porque
+   `renovar_token.py` nasceu depois da última execução do notebook. Rodado
+   manualmente (`python studio/renovar_token.py`), variável confirmada por
+   `gh variable list` (2026-09-24). Sincroniza sozinha a cada boot do notebook.
+2. **Fingerprint retroativo nos 4 posts aprovados** (03/08, 05/08, 07/08,
+   10/08) — gravado `notified_fingerprint` usando a MESMA função de
+   `telegram_approve._fingerprint()`, sem tocar caption/media/scheduled_for/status
+   (provado por diff campo a campo antes/depois de cada gravação).
+3. **Trava de auditoria** — o painel (Gemini/DeepSeek/Grok, sem objeção) e eu
+   concordamos: blindagem criptográfica (GPG/branch protegida) é
+   over-engineering para um projeto pessoal de 329 seguidores, porque a
+   aprovação do Ramón no Telegram já é o gate humano externo ao repo antes de
+   qualquer publicação real. Corrigido um bug real e independente: a isenção
+   por DATA FIXA (`<= 2026-08-10`) nunca expirava sozinha — um `scheduled_for`
+   forjado no passado escaparia da auditoria para sempre. Trocada por lista
+   fechada dos 4 IDs isentos (`POSTS_ISENTOS_DE_AUDITORIA` em `run.py`).
+4. **Fila até 10/08** — depende só dele filmar (fora do meu escopo). O alarme
+   de fila com menos de 2 posts futuros (`sentinel.py::checar_fila`) foi
+   testado com dado de mentira (fila vazia, 1 post, 2 posts) e dispara certo.
+5. **`HANDOFF.md`** — apagado (`git rm`), mentia conta Business e post na fila
+   já publicado; nada mais no projeto referenciava o arquivo.
+6. **Comentário da tarefa "Hana Sentinela"** — dizia "seg/qua/sex 18:40",
+   corrigido para "dom/seg/qua/sex 18:10" via `Set-ScheduledTask`. Gatilho
+   (`StartBoundary`/`DaysOfWeek`) e ação conferidos iguais antes/depois — só o
+   texto mudou.
+7. **3 pastas vazias em `content/queue/`** — conferidas vazias (`find
+   -mindepth 1`), não rastreadas no git, apagadas com `rmdir`.
+
+**Bônus fora da lista:** `publisher/sentinel.py` era o único arquivo do
+`publisher/` sem `sys.stdout.reconfigure()` — corrigido (achado testando o
+item 1, não crashava no GitHub Actions porque o runner já é UTF-8, mas
+quebraria em qualquer outro ambiente).
+
+**Também provados com dado de mentira** (nunca tinham cruzado com post real):
+`publisher/leitura_d1.py::montar()` (3 cenários: post de 24h aparece, post já
+lido não repete, sem métrica sai calado) e a trava de auditoria com um ataque
+explícito (forjar `scheduled_for` no passado — bloqueado).
+
+## Onde paramos (01/08/2026)
+
+**FEITO, 01/08/2026 — o "beco sem saída" do rolo de câmera (`iCloudPhotos\Photos`)
+deixou de ser beco sem saída.** O Ramón autorizou o garimpo ("Pode começar o
+garimpo"). Construído `studio/garimpo.py`: detector de objetos LOCAL (YOLOv8n,
+ultralytics, CPU, offline — **nenhuma foto sai da máquina**, só o modelo de
+~6 MB foi baixado do GitHub oficial) que reconhece `dog` e `person` e aprova só
+quem tem cachorro e NÃO tem gente no quadro — a mesma régua da fronteira com o
+Canecas. Testado com dado real do próprio projeto antes de rodar no acervo:
+achou a Hana com 87% de confiança numa foto já aprovada, e rejeitou
+corretamente uma foto com o Ramón (pasta `07 - nao compartilhar`) por "tem
+pessoa no quadro". Suite de teste isolado (scratchpad, nunca toca produção)
+confirmou aprovação, cópia, ranking, relatório e retomabilidade.
+**ACHADO QUE MUDA O PLANO — medido, não suposto:** a pasta é sincronizada pelo
+iCloud em modo "otimizar armazenamento" — a maioria dos arquivos é um
+placeholder que precisa ser BAIXADO DA NUVEM pra abrir. Amostra real de 10
+arquivos: média de **9,3 segundos por arquivo** (a maior parte é o
+download/decodificação; o detector em si fica em 0,3-2,7s). Para os 34.431
+arquivos inteiros isso dá **~89 horas seguidas** — inviável numa sessão só.
+Por isso o robô é **retomável de verdade** (grava progresso a cada 10
+arquivos em `studio/.garimpo_estado.json`, fora do git) e roda em pedaços com
+`--minutos N`. Uma rodada de 75 min foi deixada rodando ao fim desta sessão;
+o progresso e os achados ficam em
+`Fotos da Hana\01 - brutas (suba aqui)\garimpo\RELATORIO.md` (top 30 em
+`garimpo\melhores-30\`). **Para continuar:** `python studio/garimpo.py
+--minutos 60` (ou mais) quantas vezes quiser — nunca reprocessa o que já viu.
+**LIMITE HONESTO que precisa acompanhar qualquer achado deste robô:** o
+detector reconhece "é um cachorro", não "é A Hana" — não existe reconhecimento
+individual. Se o rolo tiver foto de cachorro de outra pessoa (amigo, canil,
+rua), ela passa no filtro do mesmo jeito; quem confirma que é ela é o Ramón,
+olhando o ranking. Vídeo é julgado por 5 frames amostrados (~primeiros 5s),
+não pelo clipe inteiro.
+
 ## Onde paramos (31/07/2026)
+
+## Onde paramos (01/08/2026 — leia isto primeiro)
+
+**O PROJETO SAIU DO AMARELO — os 7 itens da auditoria estão fechados e provados.**
+Ele cobrou: *"Sinal amarelo não é bom, precisa arrumar né… segunda quero o
+resultado do fluxo 100%."*
+1. **Alarme de token deixou de estar cego.** Ele ligou o notebook, rodei
+   `renovar_token.py` e a variável passou a existir: `IG_TOKEN_EXPIRA_EM =
+   2026-09-24` (`gh variable list`). **Token válido até 24/09.**
+2. **Os 4 posts da fila ganharam impressão digital** (`notified_fingerprint`) —
+   agora, se alguém mexer na legenda ou na mídia depois de ele aprovar, o post
+   volta para aprovação. Conferido no `git diff`: **só o campo novo entrou**,
+   legenda/mídia/horário/status intactos.
+3. **A isenção da trava de auditoria deixou de ser por DATA e virou lista dos 4
+   IDs.** A data fixa (`<= 2026-08-10`) nunca expirava — um post forjado com data
+   no passado escaparia da auditoria para sempre. Testado o ataque exato.
+   **Decisão registrada:** blindagem criptográfica (GPG, branch protegida) foi
+   avaliada e **descartada** — o gate humano de verdade é a aprovação dele no
+   Telegram (`REQUIRE_APPROVAL=1`), que acontece antes de qualquer publicação.
+   Painel de 3 IAs consultado; as 3 responderam SEM OBJEÇÃO à decisão.
+4. `HANDOFF.md` **apagado** — estava parado em 27/07 e mentia (dizia conta
+   "Business", que é **Criador**, e citava post publicado como se estivesse na fila).
+5. Comentário da tarefa `Hana Sentinela` corrigido (dom/seg/qua/sex 18:10);
+   gatilho e ação conferidos iguais antes e depois.
+6. Três pastas vazias em `content/queue/` apagadas.
+7. `leitura_d1.py` e a trava de auditoria foram provados com dado de mentira em
+   ambiente isolado — nunca em `content/` real.
+**O único item que continua aberto não é bug: a fila acaba em 10/08 e depende de
+ele filmar.** O alarme de fila vazia está confirmado funcionando.
+
+**NOVO ROBÔ, 01/08/2026 — `studio/garimpo.py` (autorizado por ele).**
+Varre o rolo de câmera do iPhone (`C:\Users\Ramón França\iCloudPhotos\Photos`,
+**34.431 arquivos**) atrás de foto e vídeo com cachorro **e sem pessoa** — o
+filtro da parceria por construção. Detector **YOLOv8n local, offline**: nenhuma
+imagem sai da máquina, porque a pasta é o rolo pessoal dele.
+**Medição que muda o plano:** a pasta é iCloud "sob demanda", então cada arquivo
+é baixado na hora — **9,3 segundos por arquivo**, ou seja, **~89 horas** para
+varrer tudo. Por isso o robô é **retomável**: grava progresso a cada 10 arquivos
+e nunca reprocessa. Rodar aos poucos: `python studio/garimpo.py --minutos 60`.
+Saída em `Fotos da Hana\01 - brutas (suba aqui)\garimpo\` (+ `melhores-30`).
+**Limite honesto e declarado:** o detector reconhece "é um cachorro", **não** "é
+a Hana" — não há reconhecimento individual. Cachorro de terceiro passa no filtro.
+Quem confirma é o Ramón, olhando o ranking.
+
+**AUDITORIA DE MÍDIA — O REEL DE 10/08 FOI REPROVADO, e não é pela trilha.**
+Ele pediu *"Coloque uma trilha"*; o Diretor de Criação produziu
+`Fotos da Hana\05 - APROVAR (semana)\05_PREVIA-TRILHA.mp4`.
+**A trilha passou em tudo:** é música de verdade (120 BPM, sol maior, alegre,
+instrumental), entrou a −12 dB, o som da cena ficou intacto (correlação 0,973,
+cena 11,8 dB acima da trilha) e não há estouro (−0,35 dBFS).
+**O que reprovou foi o CORTE-BASE, que já vinha do Reel original:** os **2,7s
+finais são 43% mais escuros** (brilho 88,9 → 51) e a Hana vira um vulto; há 2s de
+close de pelo ilegível no meio; e termina parado, sem desfecho. **Remixar não
+resolve — tem que recortar.**
+⚠️ **PENDENTE DELE:** recortar o Reel (ficaria ~11s, terminando no movimento) ou
+subir como está em 10/08, que ele já aprovou.
+**CORREÇÃO DE UM ERRO MEU:** eu acusei o produtor de mentir sobre "stream copy".
+Ele estava certo — o bitstream da prévia é **prefixo byte a byte** do original;
+só os 3 frames finais (cena parada) foram aparados pelo `-shortest` do
+`reel_de_video.py`. Eu afirmei sem medir direito.
+
+**🔴 BUG ACHADO — `studio/gerar_trilha.py` CARIMBA "ok" EM QUALQUER COISA.**
+A trilha `content/trilhas/02-lofi-sofa.mp3` **não é música**: correlação **+0,98**
+com o áudio do próprio vídeo da Hana, andamento 53,3 BPM (o da cena, não os 80 do
+prompt). O `extrair_audio()` aceita qualquer string grande que a API devolver,
+pega a primeira e grava como `.mp3` **sem conferir se é áudio, se é música ou se
+difere das outras faixas**. Não deu para concluir de onde veio a contaminação —
+o script só manda texto para a API e nunca abre o vídeo.
+**Não gerar trilha nova antes de consertar isso.** As faixas `01` e `03` foram
+medidas e são música de verdade.
 
 **DECIDIDO POR ELE, 01/08/2026 — A RONDA DE ENGAJAMENTO ESTÁ SUSPENSA.**
 Palavras dele: *"Pode suspender então a ronda."* Fecha a pendência aberta desde
@@ -525,10 +670,6 @@ Era o gargalo de alcance do projeto e caiu. O que foi feito e testado na tela:
 
 ## Becos sem saída (não repetir a tentativa)
 
-- **A pasta do iPhone (`iCloudPhotos\Photos`) é o rolo de câmera inteiro** —
-  ~34 mil arquivos sem organização, a maioria sem nenhuma relação com a Hana.
-  Não dá para garimpar por ali. As fotos boas vêm de `01 - brutas (suba aqui)`,
-  onde o Ramón coloca o que quer usar.
 - **Mostrar imagem dentro da conversa não funciona**: o widget inline bloqueia
   imagem de fora e embutir mídia em base64 estoura o limite da mensagem.
 

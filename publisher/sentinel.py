@@ -19,6 +19,14 @@ import datetime as dt
 import os
 import sys
 
+# Achado testando o item 1/4 da auditoria de 01/08/2026: este arquivo era o
+# único do publisher/ sem a proteção de console UTF-8 (regra da casa, ver
+# telegram_approve.py e run.py) — os prints com emoji (🙈, ⚠️) quebravam com
+# UnicodeEncodeError se algum dia rodasse fora do runner Ubuntu do GitHub
+# Actions (que já é UTF-8 por padrão). `reconfigure`, nunca `io.TextIOWrapper`.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import postqueue as q
