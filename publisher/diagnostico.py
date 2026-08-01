@@ -22,9 +22,14 @@ import os
 import sys
 from datetime import datetime, timedelta, timezone
 
-# O console do Windows quebra com emoji — pegadinha ja paga no lote_automatico.
-if hasattr(sys.stdout, "buffer"):
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+# O console do Windows quebra com emoji. Usar `reconfigure` e NAO
+# io.TextIOWrapper: o wrapper cria um objeto novo em cima do mesmo buffer, e
+# quando dois modulos fazem isso (aqui e no reporte_semanal, que importa este)
+# o segundo derruba o primeiro — "I/O operation on closed file". Aconteceu de
+# verdade em 31/07/2026, na primeira execucao. `reconfigure` altera o objeto
+# existente, entao pode ser chamado quantas vezes for.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(AQUI)

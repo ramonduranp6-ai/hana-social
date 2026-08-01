@@ -23,9 +23,11 @@ import os
 import sys
 from datetime import datetime, timedelta, timezone
 
-# O console do Windows quebra com emoji — pegadinha ja paga no lote_automatico.
-if hasattr(sys.stdout, "buffer"):
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+# O console do Windows quebra com emoji. `reconfigure` em vez de
+# io.TextIOWrapper: ver a nota no diagnostico.py — dois wrappers no mesmo
+# buffer fecham um ao outro.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(AQUI)
