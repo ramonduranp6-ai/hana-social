@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 31/07/2026 20:42. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 31/07/2026 21:29. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -22,9 +22,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-08-01T00:13:41Z schedule success
 2026-07-31T23:30:16Z workflow_dispatch success
 2026-07-31T23:24:12Z workflow_dispatch success
-2026-07-31T21:10:05Z workflow_dispatch success
 ```
 - Vigia local (Agendador do Windows): próxima execução domingo, 2 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -50,19 +50,18 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+059a727 fix: o placar nao media funil de Reel - achado do conselho estrategico
+7e62c2d regra: foto e video de IA pelo app, nunca por API, e sempre premium
+5a3b1ac chore: atualiza estado da fila [skip ci]
+7905f2a fix: dois modulos embrulhavam a saida e um fechava o outro
+b5b73a4 feat: robo de diagnostico semanal - mede evolucao, nao so o numero do dia
+bed00ef docs: governanca escrita (veto encerrado pelo Ramon) e recados respondidos
 dd17885 fix: pasta de aprovacao comecava no numero 4 e estava com lixo de 27/07
 47d41dc docs: registra os tres consertos e a medicao do cron
-7b2d476 fix: tira o Ramon do caminho - robo de domingo sem senha local, cron com rede de seguranca, Gemini com reserva
-d8a378b fix: recepcionista morria por falta de espaco para responder
-ec2a985 chore: atualiza estado da fila [skip ci]
-d9efd61 fix: o robo perdia o estado quando alguem empurrava junto
-2dfdc70 feat: recepcionista no Telegram + robos mudos passam a avisar
-c61cb6e decisao do Ramon: nao ha produto por enquanto - so crescer a Hana
 ```
 Alterações não commitadas:
 ```
-M .claude/skills/hana-social/SKILL.md
- M content/recados.md
+?? content/plano-semana.md
 ```
 
 ## Decisões e contexto
