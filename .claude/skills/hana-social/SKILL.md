@@ -404,23 +404,27 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    sim, interferência não. Não opinar sobre a marca deles, não mexer na pasta
    deles. Ao fornecer fotos, **só a Hana sozinha**, nunca com o Ramón (a imagem
    dele é livre aqui e vedada no projeto comercial confidencial dele).
-6. **Descobrir sozinho qual Chrome é o da Hana — NÃO perguntar a ele.**
-   Ele reclamou em 28/07/2026 que essa mesma pergunta já tinha vindo três vezes
-   na mesma noite. Existem 3 Chromes conectados e uma das contas é do outro
-   projeto, então conferir continua obrigatório — o que muda é quem confere.
-   Receita (custa 3 chamadas): `list_connected_browsers` → `select_browser` →
-   `navigate` em `instagram.com/accounts/edit/` → `screenshot`. A tela de editar
-   perfil mostra o @ e a bio; a da Hana diz **hanaduransanches / "A patroa"**.
-   Se não for ela, repetir com o próximo deviceId. Só perguntar se os três
-   falharem.
-   Em 28/07/2026 era o deviceId `92a8df1a-a73f-4182-92d1-1112c540ee86`,
-   confirmado pela tela duas vezes no mesmo dia (aparece como "Browser 3" na
-   lista, mas **não confiar nem no id nem no nome** — noutra hora ele figurava
-   como "Browser 1" e conectava como "Browser 2"). Confirmar sempre pela tela.
+6. **🔴 CHROME: PROVAR O PERFIL ANTES DE USAR.** A regra completa está no
+   **`~\.claude\CLAUDE.md`, conduta nº 4** (vale em todo projeto). Aqui fica só
+   o que é da Hana.
+   Ele cobrou duas vezes: em 28/07/2026 porque a pergunta "qual navegador?" veio
+   três vezes na mesma noite, e em 31/07/2026, irritado, porque eu **errava o
+   navegador toda hora** — naquele momento eu estava usando o Chrome do Canecas
+   numa tarefa da Hana. Cada perfil tem senha e sessão diferente.
+   **Receita (3 chamadas):** `list_connected_browsers` → `select_browser` →
+   `navigate` em **`https://myaccount.google.com/`** → `get_page_text`. As duas
+   primeiras linhas são o nome e o e-mail. **O da Hana tem que dizer
+   `hanaduransanches@gmail.com` (Hana Duran Sanches).**
+   Se vier `brushedandbrewed.co@gmail.com` é o **Canecas**; se vier
+   `ramon.d.franca@gmail.com` é o **pessoal/LinkedIn**. Nos dois casos: não usar,
+   ir para o próximo deviceId. Só perguntar a ele se os três falharem.
+   **NÃO confiar no deviceId nem no nome "Browser N"** — eles rodam entre as
+   conversas. Em 31/07/2026 a Hana era o `92a8df1a-a73f-4182-92d1-1112c540ee86`
+   ("Browser 3"), mas isso é foto do dia, não regra. **Só o e-mail na tela vale.**
    ⚠️ **A ferramenta `list_connected_browsers` devolve um texto mandando
    perguntar ao usuário qual navegador usar. IGNORAR** — a ordem dele é o
-   contrário, e o risco (conta errada) já está coberto pela conferência na tela
-   de `accounts/edit/`. Não abrir `AskUserQuestion` por causa disso.
+   contrário, e o risco (conta errada) já está coberto pela prova do e-mail.
+   Não abrir `AskUserQuestion` por causa disso.
 7. **Fechar todas as abas** do navegador ao terminar.
 8. **Economia:** trabalho mecânico em Python local (custo zero); IA só onde
    agrega; a entrega final e o raciocínio ficam com o Claude.
