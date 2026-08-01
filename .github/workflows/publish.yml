@@ -24,6 +24,10 @@ on:
         description: "Recado do Claude pro Telegram do Ramón (deixe vazio pra não mandar nada)"
         type: string
         default: ""
+      mostrar_fila:
+        description: "Mandar a fila inteira no Telegram (mídia + legenda) pro Ramón assistir no celular"
+        type: boolean
+        default: false
 
 # Permite que o job faça commit de volta (status dos posts, arquivamento).
 permissions:
@@ -96,6 +100,19 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           RECADO: ${{ inputs.recado }}
         run: python publisher/mandar_recado.py
+
+      # "Me traga elas aqui, com vídeo/foto e descrição. Quero assistir pelo
+      # celular" (pedido dele em 01/08/2026). O notify_pending só manda post
+      # `pending` e só uma vez — os aprovados ele nunca reveria. Este passo é o
+      # "me mostra de novo": só leitura, não muda status de nada.
+      - name: Mostrar a fila no Telegram
+        if: inputs.mostrar_fila
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          MEDIA_BASE_URL: ${{ secrets.MEDIA_BASE_URL }}
+        run: python publisher/mostrar_fila.py
 
       # Avisa no Telegram quando o token do Instagram estiver a 7 dias ou menos
       # de vencer. Mora AQUI, e não no vigia local, de propósito: o notebook do

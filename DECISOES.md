@@ -81,6 +81,32 @@ não pelo clipe inteiro.
 
 ## Onde paramos (31/07/2026)
 
+## 👉 COMEÇAR A PRÓXIMA CONVERSA POR AQUI (respostas dele, 01/08/2026)
+
+Ele fechou a conversa anterior com três respostas e pediu que a próxima já
+continue daqui. **Não perguntar de novo — executar.**
+
+1. **A CENA: ele não achou nada aproveitável nas fotos dele e vai FILMAR.**
+   Palavras dele: *"Como vc quer a cena, me traga aqui, não achou nada que possa
+   ser usado nas minhas fotos."* O roteiro completo está em
+   `content/pedido-de-cena.md` e foi entregue a ele no chat. **Ao abrir, perguntar
+   se ele já filmou** e, se sim, rodar o lote/Diretor de Criação em cima do
+   material novo. A regra que não pode faltar: **rosto da Hana de frente nos 2
+   primeiros segundos** — foi o defeito que reprovou os 12 vídeos do acervo e o
+   próprio Reel de 10/08.
+2. **REEL DE 10/08: ELE PEDIU A PRÉVIA DO RECORTE.** *"Me da uma prévia."*
+   Ou seja: **recortar**, não subir como está. Tirar os 2,7s finais (43% mais
+   escuros, ela vira vulto) e fechar no movimento — fica ~11s. A trilha
+   `03-comico-pizzicato` já está aprovada tecnicamente pela auditoria e deve ser
+   mantida. **A prévia PRECISA passar pelo auditor antes de chegar nele**
+   (regra 3i) e ele precisa **ouvir** para decidir (regra 3g).
+   ⚠️ Prazo real: o post sobe **10/08 às 21:00Z**. Se o recorte não estiver
+   aprovado até lá, sobe a versão atual, que já está aprovada por ele.
+3. **GARIMPO: autorizado a rodar.** *"Pode rodar."* Começou em 01/08 em segundo
+   plano (`studio/garimpo.py --minutos 55`). É retomável e leva ~89h no total —
+   rodar em pedaços, sem pressa: `python studio/garimpo.py --minutos 60`.
+   Resultado em `Fotos da Hana\01 - brutas (suba aqui)\garimpo\`.
+
 ## Onde paramos (01/08/2026 — leia isto primeiro)
 
 **O PROJETO SAIU DO AMARELO — os 7 itens da auditoria estão fechados e provados.**

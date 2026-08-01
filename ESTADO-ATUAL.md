@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 01/08/2026 09:25. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 01/08/2026 10:01. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -47,32 +47,28 @@ mudança de status nem publicar.
 - Brutas a processar: 26 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34426
+- Fotos do iPhone sincronizadas (iCloud): 34427
+
+## 📌 RECADOS DELE NO TELEGRAM — responder nesta conversa
+- [ ] **01/08/2026 10:12 UTC** — Bom dia,   Obrigado, pode rodar quem ficou parado por falta de token, já voltou ao normal
+- [ ] **01/08/2026 10:14 UTC** — Sobre a postagem, me traga elas aqui, com vídeo/foto e descrição. Quero assistir pelo celular
+
+Depois de responder, apague a linha de `content/recados.md`.
 
 ## Últimas mudanças no projeto
 ```
+bcbd448 chore: projeto sai do amarelo + robo de garimpo + auditoria da trilha
+2d942cc chore: atualiza estado da fila [skip ci]
 21248c8 decisao: ronda de engajamento suspensa (ordem dele) + previa de trilha retida na auditoria
 687f66a chore: atualiza estado da fila [skip ci]
 a5b30aa feat: pedido de cena escrito + registra decisoes do dia
 6ccec1e regra: provar o perfil do Chrome pelo e-mail antes de usar
 b3fcc4a feat: Diretor de Criacao (o Criador) - o cargo que faltava no fluxo
 f43ac56 feat: fecha os 6 buracos do fluxo achados pelo conselho estrategico
-3925199 feat: leitura do dia 1 empurrada no Telegram - ultima exigencia do conselheiro
-508099c plano: conselho estrategico de 31/07 - diagnostico, plano e veto parcial
 ```
 Alterações não commitadas:
 ```
-M .gitignore
- M DECISOES.md
- M ESTADO-ATUAL.md
-D  HANDOFF.md
- M content/queue/2026-08-03_dia-de-praia/post.json
- M content/queue/2026-08-05_navio-importacao/post.json
- M content/queue/2026-08-07_banho-de-sol/post.json
- M content/queue/2026-08-10_escolheu-o-canal/post.json
- M publisher/run.py
- M publisher/sentinel.py
-?? studio/garimpo.py
+M DECISOES.md
 ```
 
 ## Decisões e contexto
@@ -158,6 +154,32 @@ olhando o ranking. Vídeo é julgado por 5 frames amostrados (~primeiros 5s),
 não pelo clipe inteiro.
 
 ## Onde paramos (31/07/2026)
+
+## 👉 COMEÇAR A PRÓXIMA CONVERSA POR AQUI (respostas dele, 01/08/2026)
+
+Ele fechou a conversa anterior com três respostas e pediu que a próxima já
+continue daqui. **Não perguntar de novo — executar.**
+
+1. **A CENA: ele não achou nada aproveitável nas fotos dele e vai FILMAR.**
+   Palavras dele: *"Como vc quer a cena, me traga aqui, não achou nada que possa
+   ser usado nas minhas fotos."* O roteiro completo está em
+   `content/pedido-de-cena.md` e foi entregue a ele no chat. **Ao abrir, perguntar
+   se ele já filmou** e, se sim, rodar o lote/Diretor de Criação em cima do
+   material novo. A regra que não pode faltar: **rosto da Hana de frente nos 2
+   primeiros segundos** — foi o defeito que reprovou os 12 vídeos do acervo e o
+   próprio Reel de 10/08.
+2. **REEL DE 10/08: ELE PEDIU A PRÉVIA DO RECORTE.** *"Me da uma prévia."*
+   Ou seja: **recortar**, não subir como está. Tirar os 2,7s finais (43% mais
+   escuros, ela vira vulto) e fechar no movimento — fica ~11s. A trilha
+   `03-comico-pizzicato` já está aprovada tecnicamente pela auditoria e deve ser
+   mantida. **A prévia PRECISA passar pelo auditor antes de chegar nele**
+   (regra 3i) e ele precisa **ouvir** para decidir (regra 3g).
+   ⚠️ Prazo real: o post sobe **10/08 às 21:00Z**. Se o recorte não estiver
+   aprovado até lá, sobe a versão atual, que já está aprovada por ele.
+3. **GARIMPO: autorizado a rodar.** *"Pode rodar."* Começou em 01/08 em segundo
+   plano (`studio/garimpo.py --minutos 55`). É retomável e leva ~89h no total —
+   rodar em pedaços, sem pressa: `python studio/garimpo.py --minutos 60`.
+   Resultado em `Fotos da Hana\01 - brutas (suba aqui)\garimpo\`.
 
 ## Onde paramos (01/08/2026 — leia isto primeiro)
 
