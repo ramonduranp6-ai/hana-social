@@ -102,6 +102,14 @@ jobs:
       # Ramón pode estar desligado justamente quando o aviso importa. Tem que
       # rodar ANTES do passo que commita, senão o marcador de "já avisei hoje"
       # nunca se salva e o aviso repete a cada 30 min.
+      # Caderno de aprendizado: grava o diagnóstico da semana em disco DEPOIS
+      # de ele ter sido entregue. Sem isso, o veredito da reunião de segunda
+      # existia só no Telegram do Ramón — e a conversa nova não lê Telegram,
+      # então o comitê da semana seguinte remontava tudo do zero.
+      - name: Registrar diagnostico no caderno de aprendizado
+        continue-on-error: true
+        run: python publisher/diagnostico.py --registrar-se-enviado
+
       # Leitura do DIA 1 de cada post, empurrada no Telegram. Exigência do
       # conselheiro ao vetar parte do plano: a decisão sobre o Reel de 10/08
       # não pode depender de o Ramón lembrar de abrir conversa. Roda depois da

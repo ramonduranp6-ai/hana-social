@@ -38,6 +38,40 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(AQUI)
 METRICAS = os.path.join(RAIZ, "content", "metricas.json")
 JA_LIDOS = os.path.join(RAIZ, "content", ".leitura_d1_enviada")
+APRENDIZADO = os.path.join(RAIZ, "content", "aprendizado.md")
+
+# Cabeçalho do caderno de aprendizado (BURACO 2 do conserto de 31/07/2026).
+# Igual, caractere por caractere, ao de diagnostico.py — os dois escrevem no
+# mesmo arquivo e precisam reconhecer o cabeçalho um do outro pra não duplicar.
+CABECALHO_APRENDIZADO = (
+    "# Caderno de aprendizado — Hana\n\n"
+    "O que a automação já mandou pro Ramón, com data — pra próxima conversa "
+    "não remontar do zero. Gravado por `publisher/diagnostico.py` e "
+    "`publisher/leitura_d1.py`, sempre DEPOIS da entrega confirmada (nunca "
+    "durante `--simular`). Mais recente em cima.\n\n"
+)
+
+
+def _prepend_aprendizado(bloco):
+    """Insere `bloco` logo após o cabeçalho fixo, mais recente em cima."""
+    corpo_atual = ""
+    if os.path.isfile(APRENDIZADO):
+        conteudo = open(APRENDIZADO, encoding="utf-8").read()
+        corpo_atual = (conteudo[len(CABECALHO_APRENDIZADO):]
+                       if conteudo.startswith(CABECALHO_APRENDIZADO) else conteudo)
+    with open(APRENDIZADO, "w", encoding="utf-8") as f:
+        f.write(CABECALHO_APRENDIZADO + bloco + "\n---\n\n" + corpo_atual)
+
+
+def _registrar_aprendizado(texto, agora, ids):
+    """Grava a leitura do dia 1 no caderno — só chamada DEPOIS do Telegram confirmar."""
+    try:
+        bloco = "## %s — Leitura do dia 1 (%s)\n\n%s\n" % (
+            agora.strftime("%Y-%m-%d %H:%M UTC"), ", ".join(ids), texto)
+        _prepend_aprendizado(bloco)
+        print("[leitura_d1][aprendizado] registrado em content/aprendizado.md.")
+    except Exception as exc:  # noqa: BLE001 — nao pode derrubar uma entrega ja feita
+        print("[leitura_d1][aprendizado][FALHA] nao consegui gravar: %s" % str(exc)[:160])
 
 # Janela de tolerância: a coleta roda 1x/dia, então "1 dia de vida" na prática
 # cai em qualquer coisa entre ~20h e ~48h. Fora disso não é mais dia 1.
@@ -177,6 +211,12 @@ def main():
     except Exception as exc:  # noqa: BLE001 — nunca derruba o job
         print(f"[leitura_d1][aviso] Telegram recusou ({str(exc)[:150]}) — tento amanha.")
         return 0
+
+    # BURACO 2 do conserto de 31/07/2026: só grava em disco DEPOIS que o
+    # Telegram confirmou o envio (nunca antes — um --simular ou uma falha de
+    # entrega não pode sujar o caderno). Falha aqui nunca desfaz a entrega que
+    # já aconteceu.
+    _registrar_aprendizado(texto, datetime.now(timezone.utc), ids)
 
     # So marca DEPOIS de entregar: se marcasse antes e a entrega falhasse, a
     # leitura do dia 1 sumia e nao volta mais (a janela passa).

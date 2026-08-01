@@ -34,10 +34,43 @@ if hasattr(sys.stdout, "reconfigure"):
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(AQUI)
 METRICAS = os.path.join(RAIZ, "content", "metricas.json")
+APRENDIZADO = os.path.join(RAIZ, "content", "aprendizado.md")
+ESTADO_REPORTE = os.path.join(RAIZ, "content", ".reporte_semanal")
+MARCADOR_APRENDIZADO = os.path.join(RAIZ, "content", ".aprendizado_diagnostico_semana")
 
 # Os três sinais que decidem se o conteúdo presta. Curtida não entra: no placar
 # medido, curtida é de amigo e não mexe em alcance.
 SINAIS = ("saved", "shares", "follows")
+
+# BURACO (a) do conserto de 31/07/2026 (prioridade máxima do conselho): se o
+# passo "Coletar métricas" do workflow morrer (ele tem continue-on-error de
+# propósito, pra não derrubar a publicação), a última coleta para de andar.
+# Sem este limite, "hoje" e "7 dias atrás" viram o MESMO registro e o robô
+# imprime "estável"/"ZERO" pra sempre — a auditoria testou com data falsa e
+# ele mandou mudar a estratégia em cima de um número que nunca se moveu.
+LIMITE_HORAS_SENSOR = 36
+
+# Cabeçalho do caderno de aprendizado (BURACO 2). Igual, caractere por
+# caractere, ao de leitura_d1.py — os dois escrevem no mesmo arquivo e
+# precisam reconhecer o cabeçalho um do outro para não duplicá-lo.
+CABECALHO_APRENDIZADO = (
+    "# Caderno de aprendizado — Hana\n\n"
+    "O que a automação já mandou pro Ramón, com data — pra próxima conversa "
+    "não remontar do zero. Gravado por `publisher/diagnostico.py` e "
+    "`publisher/leitura_d1.py`, sempre DEPOIS da entrega confirmada (nunca "
+    "durante `--simular`). Mais recente em cima.\n\n"
+)
+
+
+def _prepend_aprendizado(bloco):
+    """Insere `bloco` logo após o cabeçalho fixo, mais recente em cima."""
+    corpo_atual = ""
+    if os.path.isfile(APRENDIZADO):
+        conteudo = open(APRENDIZADO, encoding="utf-8").read()
+        corpo_atual = (conteudo[len(CABECALHO_APRENDIZADO):]
+                       if conteudo.startswith(CABECALHO_APRENDIZADO) else conteudo)
+    with open(APRENDIZADO, "w", encoding="utf-8") as f:
+        f.write(CABECALHO_APRENDIZADO + bloco + "\n---\n\n" + corpo_atual)
 
 
 def _coletas():
@@ -50,6 +83,29 @@ def _coleta_em_ou_antes(coletas, limite):
     """A coleta mais recente que não passa de `limite` (string AAAA-MM-DD)."""
     anteriores = [c for c in coletas if c["data"] <= limite]
     return anteriores[-1] if anteriores else None
+
+
+def _idade_horas_coleta(coleta, agora):
+    """
+    Quantas horas se passaram desde que essa coleta foi feita. None se a data
+    vier num formato que não dá pra entender (nunca inventa idade).
+    Usa `hora_utc` quando existe (campo novo desde 31/07/2026); coleta antiga
+    sem essa hora é tratada como tendo sido feita à meia-noite UTC — o que só
+    torna a checagem MAIS cautelosa (idade um pouco maior do que a real),
+    nunca menos.
+    """
+    try:
+        quando = datetime.strptime(coleta["data"], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    except (ValueError, KeyError, TypeError):
+        return None
+    hora = coleta.get("hora_utc")
+    if hora:
+        try:
+            h, m = hora.split(":")
+            quando = quando.replace(hour=int(h), minute=int(m))
+        except (ValueError, AttributeError):
+            pass
+    return (agora - quando).total_seconds() / 3600
 
 
 def _soma(coleta, campo):
@@ -99,6 +155,38 @@ def montar(agora=None):
     hoje = coletas[-1]
     limite = (agora - timedelta(days=7)).strftime("%Y-%m-%d")
     antes = _coleta_em_ou_antes(coletas, limite)
+
+    # BURACO (a) — RECUSAR VEREDITO se o sensor parece morto. Duas provas,
+    # qualquer uma basta: (1) a última coleta é velha demais (o coletor parou
+    # de rodar, mesmo com histórico bonito guardado); (2) "hoje" e "7 dias
+    # atrás" caíram no MESMO registro (sem coleta nova há mais de uma semana,
+    # o `_coleta_em_ou_antes` de baixo acaba devolvendo a própria coleta de
+    # hoje como base de comparação — dá "estável"/"zero" sempre, mesmo que
+    # nada tenha sido medido). Nunca inventar tendência em cima de silêncio.
+    idade_sensor = _idade_horas_coleta(hoje, agora)
+    parado_demais = idade_sensor is not None and idade_sensor > LIMITE_HORAS_SENSOR
+    mesmo_registro = antes is not None and antes.get("data") == hoje.get("data")
+    if parado_demais or mesmo_registro:
+        motivos = []
+        if parado_demais:
+            motivos.append("a última coleta tem %.0fh de idade (limite: %dh)"
+                            % (idade_sensor, LIMITE_HORAS_SENSOR))
+        if mesmo_registro:
+            motivos.append("'hoje' e '7 dias atrás' caem no mesmo registro (%s)"
+                            % hoje.get("data"))
+        return "\n".join([
+            "📊 DIAGNÓSTICO DA SEMANA",
+            "🔴 SENSOR DE MÉTRICAS PARADO — SEM VEREDITO.",
+            "",
+            "Motivo: " + "; ".join(motivos) + ".",
+            "",
+            "Comparar 'hoje' com '7 dias atrás' desse jeito compara o número "
+            "com ele mesmo — sempre dá 'estável' ou 'zero', mesmo que nada "
+            "tenha sido medido de verdade. NÃO é a estratégia que travou, é o "
+            "sensor. Conserte a coleta (o passo \"Coletar métricas\" do "
+            "workflow, publisher/metrics.py) antes de confiar em qualquer "
+            "veredito daqui — inclusive o de mudar a abordagem de conteúdo.",
+        ])
 
     L = ["📊 DIAGNÓSTICO DA SEMANA", "Fonte: API do Instagram, coleta de %s." % hoje["data"]]
 
@@ -181,6 +269,80 @@ def _semanas_zeradas(coletas, agora):
     return max(semanas, 1)
 
 
-if __name__ == "__main__":
+def _semana(d):
+    ano, semana, _ = d.isocalendar()
+    return "%d-W%02d" % (ano, semana)
+
+
+def _pauta_ja_foi_enviada(semana):
+    """
+    reporte_semanal.py grava sua PRÓPRIA marca (`content/.reporte_semanal`)
+    só DEPOIS de mandar a pauta no Telegram — nunca antes, nunca em
+    `--simular`. Este arquivo só LÊ essa marca (não escreve, não importa o
+    módulo) para saber se pode confiar que a entrega aconteceu de verdade,
+    sem precisar mexer em reporte_semanal.py (fora do escopo deste conserto).
+    """
+    if not os.path.isfile(ESTADO_REPORTE):
+        return False
+    try:
+        return open(ESTADO_REPORTE, encoding="utf-8").read().strip() == semana
+    except OSError:
+        return False
+
+
+def _ja_registrado(semana):
+    if not os.path.isfile(MARCADOR_APRENDIZADO):
+        return False
+    return open(MARCADOR_APRENDIZADO, encoding="utf-8").read().strip() == semana
+
+
+def _marcar_registrado(semana):
+    with open(MARCADOR_APRENDIZADO, "w", encoding="utf-8") as f:
+        f.write(semana)
+
+
+def registrar_se_enviado(agora=None):
+    """
+    BURACO 2 do conserto de 31/07/2026: o veredito da reunião de segunda ia
+    pro Telegram e evaporava — a conversa da semana seguinte remontava tudo
+    do zero. Grava em content/aprendizado.md, mas só DEPOIS que
+    reporte_semanal.py já provou (pelo próprio marcador dele) que a pauta
+    desta semana foi enviada — nunca antes, senão um teste em `--simular`
+    também sujaria o caderno. Roda como passo separado no workflow, DEPOIS de
+    "Pauta da reunião de segunda". Nunca derruba o job.
+    """
+    agora = agora or datetime.now(timezone.utc)
+    semana = _semana(agora)
+    if not _pauta_ja_foi_enviada(semana):
+        print("[diagnostico][aprendizado] pauta desta semana ainda nao foi "
+              "confirmada como enviada - nao registro.")
+        return
+    if _ja_registrado(semana):
+        print("[diagnostico][aprendizado] semana %s ja registrada." % semana)
+        return
+    texto = montar(agora)
+    if not texto:
+        print("[diagnostico][aprendizado] sem diagnostico para registrar.")
+        return
+    try:
+        bloco = "## %s — Diagnóstico da semana %s\n\n%s\n" % (
+            agora.strftime("%Y-%m-%d"), semana, texto)
+        _prepend_aprendizado(bloco)
+        _marcar_registrado(semana)
+        print("[diagnostico][aprendizado] semana %s registrada em "
+              "content/aprendizado.md." % semana)
+    except Exception as exc:  # noqa: BLE001 — aviso nunca derruba o job
+        print("[diagnostico][aprendizado][FALHA] nao consegui gravar: %s"
+              % str(exc)[:160])
+
+
+def main():
+    if "--registrar-se-enviado" in sys.argv:
+        registrar_se_enviado()
+        return
     texto = montar()
     print(texto if texto else "[diagnostico] ainda nao ha metrica coletada.")
+
+
+if __name__ == "__main__":
+    main()

@@ -18,11 +18,69 @@ Config via variáveis de ambiente (GitHub Actions Secrets):
 import os
 import sys
 
+# O console do Windows quebra com emoji (mesmo bug batido em
+# publisher/diagnostico.py, 31/07/2026). Usar `reconfigure`, nunca
+# `io.TextIOWrapper` — o wrapper cria objeto novo em cima do mesmo buffer e,
+# como telegram_approve.py (importado abaixo) faz o mesmo reconfigure no
+# próprio stdout, chamar duas vezes é seguro (`reconfigure` só ajusta o
+# objeto existente; `TextIOWrapper` derrubaria o primeiro com "I/O operation
+# on closed file").
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import ig_api
 import postqueue as q
 import telegram_approve as tg
+
+# PORTA 2 — trava do auditor (conserto de 31/07/2026, ver skill hana-social
+# regra 3i: "nenhuma mídia vai ao Ramón sem auditor"). Antes deste conserto,
+# esse era só um processo ESCRITO — run.py publicava QUALQUER post 'approved'
+# sem perguntar COMO ele virou 'approved'. Agora exige um campo "auditoria" no
+# post.json com veredito == "SEM OBJECAO".
+#
+# CORTE POR DATA, OBRIGATÓRIO (ordem do Ramón, 31/07/2026: "mantenha esses
+# post já aprovados"). Os 4 posts que já estavam na fila QUANDO essa trava
+# nasceu (03/08, 05/08, 07/08 e o Reel de 10/08) foram aprovados por ele
+# DIRETO no post.json, sem passar pelo campo de auditoria — e ele pediu, com
+# essas palavras exatas, pra mantê-los como estão. Por isso, todo post
+# agendado ATÉ 2026-08-10 (inclusive) passa sem auditoria — só um aviso no
+# log, NUNCA um bloqueio. Só os posts agendados DEPOIS dessa data exigem o
+# campo. NÃO mudar esta data sem ordem nova dele — mudar pra trás quebraria a
+# fila que ele mandou manter; mudar pra frente destrava post que ele nunca
+# pediu pra destravar.
+CORTE_AUDITORIA = "2026-08-10"
+
+
+def passou_auditoria(post):
+    """
+    Devolve (pode_publicar: bool, aviso: str|None).
+
+    Duas portas de entrada:
+    1. Post da fila antiga (scheduled_for <= CORTE_AUDITORIA) — passa sempre,
+       com aviso só de log (nunca Telegram, nunca bloqueio).
+    2. Post novo — só passa com post.json trazendo
+       `"auditoria": {"veredito": "SEM OBJECAO", ...}` exatamente. Qualquer
+       outro veredito (ou campo ausente) BLOQUEIA de propósito: esta é a
+       ÚNICA trava do projeto que deve impedir a publicação (as demais são
+       só aviso — ver regra 1 do conserto).
+    """
+    data_agendada = (post.get("scheduled_for") or "")[:10]
+    if data_agendada and data_agendada <= CORTE_AUDITORIA:
+        return True, (
+            f"{post['_id']}: fila antiga (agendado {data_agendada}, corte "
+            f"{CORTE_AUDITORIA}) — publicado SEM auditoria, por ordem do Ramón "
+            f"em 31/07/2026 (\"mantenha esses post já aprovados\")."
+        )
+    auditoria = post.get("auditoria")
+    if isinstance(auditoria, dict) and auditoria.get("veredito") == "SEM OBJECAO":
+        return True, None
+    return False, (
+        f"{post['_id']} (agendado {data_agendada}) não tem auditoria válida — "
+        f"post.json precisa do campo auditoria.veredito == \"SEM OBJECAO\". "
+        f"Publicação TRAVADA até auditar."
+    )
 
 
 def env(name, default=None, required=False):
@@ -43,6 +101,29 @@ def main():
 
     posts = q.load_all()
     posts_by_id = {p["_id"]: p for p in posts}
+
+    # 0. PORTA 3 — revalida se a legenda/mídia que está no post.json ainda é a
+    # mesma que foi mostrada da última vez no Telegram (impressão digital).
+    # Se mudou, o post volta pra 'pending' (nunca fica 'approved' publicando
+    # coisa que ele não viu) e será reenviado no passo 2. Blindado como o
+    # resto do arquivo: erro aqui é acessório, nunca pode travar a publicação.
+    if require_approval:
+        try:
+            mudaram = tg.revalidar_conteudo(posts)
+            for pid in mudaram:
+                q.save(posts_by_id[pid])
+                print(f"[conteudo mudou] {pid} voltou pra 'pending' - sera reenviado pro Telegram")
+                if tg_token and tg_chat:
+                    try:
+                        tg.notify(
+                            tg_token, tg_chat,
+                            f"♻️ {pid} mudou desde a última vez que te mostrei "
+                            "— vou te mandar de novo pra você conferir.",
+                        )
+                    except Exception as exc:  # noqa: BLE001
+                        print(f"[aviso] nao consegui avisar no Telegram sobre a mudanca ({exc})")
+        except Exception as exc:  # noqa: BLE001
+            print(f"[aviso] revalidar_conteudo falhou ({exc}) — sigo sem revalidar desta vez.")
 
     # 1. aprovações do Telegram
     # Blindado desde 31/07/2026 (achado na revisão adversarial): ler o Telegram
@@ -76,6 +157,24 @@ def main():
             continue
         if not q.is_due(post):
             continue
+
+        # PORTA 2 — esta é a ÚNICA trava do arquivo que DEVE impedir a
+        # publicação (todo o resto é try/except pra NUNCA travar). Sem
+        # auditoria válida (ou fora do corte da fila antiga), o post não sai
+        # — e o aviso é BARULHENTO de propósito: silêncio aqui esconderia
+        # que um post ficou preso.
+        pode_publicar, aviso_auditoria = passou_auditoria(post)
+        if not pode_publicar:
+            print(f"[TRAVADO] {aviso_auditoria}")
+            if tg_token and tg_chat:
+                try:
+                    tg.notify(tg_token, tg_chat, f"🚫 Publicação travada: {aviso_auditoria}")
+                except Exception as exc:  # noqa: BLE001
+                    print(f"[aviso] nao consegui avisar no Telegram sobre a trava ({exc})")
+            continue
+        if aviso_auditoria:  # fila antiga: passou, mas registra por que passou sem auditar
+            print(f"[aviso] {aviso_auditoria}")
+
         url = q.media_url(post, media_base)
         # Trilha do catálogo do Instagram (Audio API). Só existe no fluxo
         # Facebook Login — se o post pede áudio e as variáveis do app "Hana

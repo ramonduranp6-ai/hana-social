@@ -13,9 +13,20 @@ eventualmente consistente: você toca o botão, e a próxima rodada do cron
 registra a decisão. O atraso é de minutos, não importa pro agendamento.
 """
 
+import hashlib
 import json
 import os
+import sys
 import requests
+
+# O console do Windows quebra com emoji nos prints de log (mesmo bug batido em
+# publisher/diagnostico.py, 31/07/2026): usar `reconfigure`, nunca
+# `io.TextIOWrapper` — o wrapper cria objeto novo em cima do mesmo buffer e,
+# quando dois módulos fazem isso (aqui e em run.py, que importa este arquivo),
+# o segundo derruba o primeiro ("I/O operation on closed file"). `reconfigure`
+# só altera o objeto existente, então pode ser chamado várias vezes sem risco.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 API = "https://api.telegram.org/bot{token}/{method}"
 STATE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".telegram_offset")
@@ -24,6 +35,50 @@ STATE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".telegram
 def _call(token, method, **params):
     r = requests.post(API.format(token=token, method=method), data=params, timeout=60)
     return r.json()
+
+
+def _chat_permitido(chat_id_evento, chat_id_configurado):
+    """
+    PORTA 1 (auditoria de 31/07/2026): confere se quem mandou a mensagem ou
+    clicou no botão é o dono do bot.
+
+    Bot de Telegram é achável pelo nome — sem esta conferência, QUALQUER
+    estranho que ache @Hanasocial_aproval_bot conseguia: (a) fazer a
+    recepcionista responder e queimar a cota do Gemini, e pior, (b) gravar
+    texto em content/recados.md — arquivo de um repositório PÚBLICO que o
+    Claude lê no início de toda conversa como se fosse ordem do Ramón. Isso é
+    injeção de instrução por um canal que ninguém olhava.
+
+    Pegadinha: a API do Telegram manda `chat.id` como NÚMERO; a variável de
+    ambiente TELEGRAM_CHAT_ID chega como STRING. Comparar sempre como texto,
+    nunca com `==` cru entre tipos diferentes.
+
+    Sem TELEGRAM_CHAT_ID configurado não dá pra saber quem é o dono — bloqueia
+    tudo (falha segura), em vez de aceitar geral.
+    """
+    if not chat_id_configurado or chat_id_evento is None:
+        return False
+    return str(chat_id_evento) == str(chat_id_configurado)
+
+
+def _fingerprint(post):
+    """
+    "Impressão digital" do que foi mostrado a ele no Telegram: hash da
+    legenda + nome/tamanho do arquivo de mídia (PORTA 3, 31/07/2026).
+
+    Sem isso, se a legenda ou a mídia mudassem DEPOIS do envio, o robô não
+    tinha como saber — `notified` já estava True (ou o post já virava
+    'approved'), e ele acabava aprovando/publicando uma versão que nunca viu.
+    Se o arquivo de mídia sumir ou for renomeado, o tamanho vira -1 — conta
+    como "mudou" de propósito, nunca como "igual por acidente".
+    """
+    media_path = os.path.join(post.get("_dir", ""), post.get("media_file", ""))
+    try:
+        tamanho = os.path.getsize(media_path)
+    except OSError:
+        tamanho = -1
+    base = f"{post.get('caption', '')}|{post.get('media_file', '')}|{tamanho}"
+    return hashlib.sha256(base.encode("utf-8")).hexdigest()
 
 
 def notify_pending(token, chat_id, posts, media_base_url):
@@ -40,9 +95,18 @@ def notify_pending(token, chat_id, posts, media_base_url):
     for post in posts:
         if post.get("status") != "pending" or post.get("notified"):
             continue
+        # PORTA 3: revalidar_conteudo() marca isso quando a legenda/mídia
+        # mudou depois do último envio — avisa NA PRÓPRIA mensagem, pra ele
+        # não confundir com "de novo a mesma coisa" e aprovar no automático.
+        aviso_mudanca = ""
+        if post.pop("conteudo_mudou", False):
+            aviso_mudanca = (
+                "⚠️ Isso MUDOU desde a última vez que te mostrei — "
+                "confira de novo antes de aprovar.\n\n"
+            )
         caption = (
             f"🐾 Novo post da Hana pra aprovar\n\n"
-            f"{post['caption']}\n\n"
+            f"{aviso_mudanca}{post['caption']}\n\n"
             f"🕒 Agendado: {post['scheduled_for']}\n"
             f"🆔 {post['_id']}"
         )
@@ -67,6 +131,48 @@ def notify_pending(token, chat_id, posts, media_base_url):
         # sem prefixo "_": postqueue.save() descarta chaves com "_", e sem
         # persistir isso o cron reenviava o mesmo post a cada 30 minutos.
         post["notified"] = True
+        # Guarda a impressão digital do que foi mostrado AGORA (legenda +
+        # mídia) — é o que revalidar_conteudo() compara depois pra saber se
+        # o post mudou por baixo do tapete após o envio (PORTA 3).
+        post["notified_fingerprint"] = _fingerprint(post)
+
+
+def revalidar_conteudo(posts):
+    """
+    PORTA 3 (31/07/2026): confere se o que está no post.json ainda bate com
+    a impressão digital do que foi mostrado da ÚLTIMA vez que o robô mandou
+    pro Telegram. Cobre os dois jeitos de furar:
+
+    (a) a legenda/mídia mudou enquanto o post ainda estava 'pending' e já
+        tinha sido notificado — antes disso o robô nunca reenviava (pulava
+        por causa do `notified`), e o Ramón aprovava o texto velho sem saber
+        que existia versão nova;
+    (b) a legenda/mídia mudou DEPOIS de aprovado — o post ia direto pro ar
+        em run.py com conteúdo que ele nunca viu, porque `run.py` só olha o
+        `status`, não o conteúdo por trás dele.
+
+    Nos dois casos: volta o post pra 'pending', apaga o `notified` (pra
+    notify_pending() reenviar) e marca `conteudo_mudou` (pra a legenda do
+    Telegram avisar). Devolve a lista de ids que mudaram, só pra log/aviso —
+    quem grava em disco é o chamador (run.py já chama q.save() nesse padrão).
+
+    Só mexe em post que JÁ tem impressão digital gravada (já foi notificado
+    alguma vez) — post que nunca passou pelo Telegram não tem o que comparar,
+    e post 'rejected'/'failed'/'posted' fica fora de propósito (não está no
+    caminho de publicação, não faz sentido "readmitir" ele sozinho).
+    """
+    mudaram = []
+    for post in posts:
+        anterior = post.get("notified_fingerprint")
+        if not anterior or post.get("status") not in ("pending", "approved"):
+            continue
+        if _fingerprint(post) == anterior:
+            continue
+        post["status"] = "pending"
+        post["notified"] = False
+        post["conteudo_mudou"] = True
+        mudaram.append(post["_id"])
+    return mudaram
 
 
 def _read_offset():
@@ -138,6 +244,13 @@ def sync_approvals(token, posts_by_id, chat_id=None):
     Lê os cliques de botão e devolve um dict {post_id: 'approved'|'rejected'}.
     Atualiza os posts recebidos em posts_by_id in-place.
     De quebra, guarda em content/recados.md o que o Ramón escrever por lá.
+
+    PORTA 1 (auditoria de 31/07/2026): antes deste conserto, TODA mensagem e
+    TODO clique que chegasse ao bot eram processados, não importa de quem
+    viesse — o bot é achável pelo nome no Telegram. Agora, mensagem e clique
+    de um chat diferente do TELEGRAM_CHAT_ID configurado são DESCARTADOS EM
+    SILÊNCIO (só uma linha no log técnico) — nunca respondidos, porque
+    responder já confirmaria pro estranho que o bot existe e está vivo.
     """
     from datetime import datetime, timezone
 
@@ -145,23 +258,38 @@ def sync_approvals(token, posts_by_id, chat_id=None):
     offset = _read_offset()
     resp = _call(token, "getUpdates", offset=offset + 1, timeout=0)
     for upd in resp.get("result", []):
+        # O offset avança SEMPRE, mesmo pra update descartado por chat errado
+        # — senão o mesmo update de um estranho reaparece em getUpdates pra
+        # sempre (offset+1 só pula o que já foi reconhecido).
         offset = max(offset, upd["update_id"])
 
         msg = upd.get("message") or upd.get("edited_message")
-        if msg and msg.get("text") and not msg["text"].startswith("/"):
-            quando = datetime.fromtimestamp(
-                msg.get("date", 0), timezone.utc).strftime("%d/%m/%Y %H:%M UTC")
-            # Import LOCAL, não lá em cima do arquivo: recepcionista.py importa
-            # _guardar_recado e _call DESTE módulo, então esse import só pode
-            # acontecer depois que telegram_approve já carregou por inteiro —
-            # senão vira ciclo. Continua sendo UM SÓ consumidor do getUpdates:
-            # a recepcionista não lê o Telegram, só responde ou escala o que
-            # já foi lido aqui.
-            import recepcionista
-            recepcionista.responder_mensagem(msg["text"], quando, token, chat_id)
+        if msg:
+            msg_chat_id = msg.get("chat", {}).get("id")
+            if not _chat_permitido(msg_chat_id, chat_id):
+                print(f"[seguranca] descartei mensagem de chat desconhecido ({msg_chat_id})")
+            elif msg.get("text") and not msg["text"].startswith("/"):
+                quando = datetime.fromtimestamp(
+                    msg.get("date", 0), timezone.utc).strftime("%d/%m/%Y %H:%M UTC")
+                # Import LOCAL, não lá em cima do arquivo: recepcionista.py importa
+                # _guardar_recado e _call DESTE módulo, então esse import só pode
+                # acontecer depois que telegram_approve já carregou por inteiro —
+                # senão vira ciclo. Continua sendo UM SÓ consumidor do getUpdates:
+                # a recepcionista não lê o Telegram, só responde ou escala o que
+                # já foi lido aqui.
+                import recepcionista
+                recepcionista.responder_mensagem(msg["text"], quando, token, chat_id)
 
         cq = upd.get("callback_query")
         if not cq:
+            continue
+        # Mesmo critério aplicado ao clique de botão (por garantia — ver
+        # PORTA 1 do conserto). O chat do clique é o da MENSAGEM onde o botão
+        # está (cq["message"]["chat"]["id"]), não o cq["from"]["id"] (esse é
+        # o usuário, não o chat).
+        cq_chat_id = (cq.get("message") or {}).get("chat", {}).get("id")
+        if not _chat_permitido(cq_chat_id, chat_id):
+            print(f"[seguranca] descartei clique de chat desconhecido ({cq_chat_id})")
             continue
         action, _, post_id = cq["data"].partition(":")
         status = "approved" if action == "approve" else "rejected"

@@ -26,13 +26,21 @@ import postqueue as q
 TOLERANCIA_MIN = 45
 DIAS_AVISO_TOKEN = 7
 
+# BURACO (c) do conserto de 31/07/2026: com menos de 2 posts futuros na fila,
+# o projeto está a um post de ficar mudo (a fila do Ramón acabava em 10/08 e
+# em 12/08 não sairia post nenhum — e os vigias diziam "tudo em dia" porque
+# fila vazia não é "problema", é só "nada pra fazer"). Isso muda aqui.
+MIN_POSTS_FUTUROS = 2
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MARCADOR_TOKEN = os.path.join(ROOT, "content", ".aviso_token_vence")
+MARCADOR_TOKEN_CEGO = os.path.join(ROOT, "content", ".aviso_token_cego")
 
 
 def checar_fila():
     agora = dt.datetime.now(dt.timezone.utc)
     problemas = []
+    futuros = 0
     for p in q.load_all():
         status = p.get("status")
         if status == "failed":
@@ -42,12 +50,22 @@ def checar_fila():
             atraso_min = (agora - t).total_seconds() / 60
             if atraso_min > TOLERANCIA_MIN:
                 problemas.append(f"{p['_id']}: vencido ha {int(atraso_min)} min sem publicar")
+            else:
+                futuros += 1
+    # BURACO (c): fila com menos de 2 posts futuros é ALARME, nao "tudo em
+    # dia" — sem isso o robo so percebe o buraco no dia em que ja faltou post.
+    if futuros < MIN_POSTS_FUTUROS:
+        problemas.append(
+            f"fila com so {futuros} post(s) futuro(s) (minimo saudavel: "
+            f"{MIN_POSTS_FUTUROS}) — sem reforco a fila acaba e nenhum aviso "
+            f"normal pega isso antes de faltar post"
+        )
     if problemas:
         print("[SENTINELA] PROBLEMAS ENCONTRADOS:")
         for x in problemas:
             print(" -", x)
         sys.exit(1)
-    print("[SENTINELA] fila saudavel")
+    print(f"[SENTINELA] fila saudavel ({futuros} post(s) futuro(s))")
 
 
 def _hoje():
@@ -63,23 +81,80 @@ def _marcar_avisado():
         f.write(_hoje())
 
 
+def _ja_avisou_cego_hoje():
+    return (os.path.isfile(MARCADOR_TOKEN_CEGO)
+            and open(MARCADOR_TOKEN_CEGO, encoding="utf-8").read().strip() == _hoje())
+
+
+def _marcar_avisado_cego():
+    with open(MARCADOR_TOKEN_CEGO, "w", encoding="utf-8") as f:
+        f.write(_hoje())
+
+
+def _avisar_sensor_cego():
+    """
+    BURACO (b) do conserto de 31/07/2026: antes, "a variável não existe"
+    terminava em "nada a checar" e o robô saía calado — o pior tipo de
+    silêncio, porque parece que está tudo bem. Um token recém-criado passa
+    ATÉ ~40 DIAS sem essa variável (só era escrita depois de uma renovação de
+    verdade, que só acontece com <=20 dias de sobra).
+
+    Conserto tem duas pernas: `studio/renovar_token.py` agora sincroniza a
+    variável em TODA execução (não só quando renova de verdade) — então
+    basta o notebook ligar uma vez para resolver. Só que enquanto isso não
+    acontecer nenhuma vez, este robô (que roda no GitHub, sem depender do
+    notebook) tem que GRITAR que está cego, nunca fingir que checou. Não
+    tentamos adivinhar a validade chamando a API do Instagram por aqui: o
+    único endpoint provado neste projeto (`graph.instagram.com/
+    refresh_access_token`) TROCA o token na hora — chamar isso só para
+    "espiar" arriscaria invalidar o token que está publicando de verdade
+    (regra 1: nada pode derrubar a publicação). Melhor gritar que não sabe.
+    """
+    if _ja_avisou_cego_hoje():
+        print("[SENTINELA][token] cego (sem IG_TOKEN_EXPIRA_EM) — ja avisei hoje, nao repete.")
+        return
+    texto = (
+        "🙈 Não sei quando o token do Instagram vence — o sensor está cego.\n"
+        "A variável IG_TOKEN_EXPIRA_EM ainda não existe no repositório "
+        "(normal logo depois de um token novo).\n"
+        "Ligue o notebook: a tarefa \"Hana Sentinela\" sincroniza sozinha na "
+        "próxima vez que rodar.\n"
+        "Se já estiver ligado e não sincronizou, rode na mão: "
+        "python studio/renovar_token.py"
+    )
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+    if not (token and chat_id):
+        print(f"[SENTINELA][token][CEGO] sem TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID "
+              f"para avisar. Mensagem que mandaria:\n{texto}")
+        return
+    try:
+        from mandar_recado import mandar
+        mandar(token, chat_id, texto)
+        _marcar_avisado_cego()
+        print("[SENTINELA][token][CEGO] aviso de sensor cego mandado.")
+    except Exception as exc:  # noqa: BLE001 — aviso nunca pode derrubar o job
+        print(f"[SENTINELA][token][FALHA] nao consegui avisar que estou cego: {str(exc)[:160]}")
+
+
 def checar_validade_token():
     """
     Avisa no Telegram se o token do Instagram vence em <= 7 dias.
 
     A data de vencimento vem da variável de repositório IG_TOKEN_EXPIRA_EM,
-    que `studio/renovar_token.py` atualiza toda vez que renova o token na
-    máquina do Ramón. Se o notebook ficar desligado, a variável trava na
-    última data conhecida — e é exatamente essa data parada que dispara o
-    aviso, sem precisar de nada rodando na máquina dele.
+    que `studio/renovar_token.py` atualiza toda vez que roda na máquina do
+    Ramón (renovando ou não — ver esse arquivo). Se o notebook ficar
+    desligado, a variável trava na última data conhecida — e é exatamente
+    essa data parada que dispara o aviso, sem precisar de nada rodando na
+    máquina dele.
 
-    Nunca derruba o job: qualquer falha (variável ainda não existe, Telegram
-    fora do ar) só imprime aviso no log e segue.
+    Nunca derruba o job: qualquer falha (Telegram fora do ar) só imprime
+    aviso no log e segue. Variável ausente NÃO é "nada a checar" — é alarme
+    de sensor cego (`_avisar_sensor_cego`), nunca silêncio.
     """
     expira_str = os.environ.get("IG_TOKEN_EXPIRA_EM")
     if not expira_str:
-        print("[SENTINELA][token] IG_TOKEN_EXPIRA_EM ainda não existe "
-              "(token nunca foi renovado com o script novo) — nada a checar.")
+        _avisar_sensor_cego()
         return
     try:
         expira = dt.date.fromisoformat(expira_str)

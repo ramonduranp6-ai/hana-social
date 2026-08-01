@@ -1,5 +1,5 @@
 """
-Entrega no Telegram o recado que o robô de domingo deixou no repositório.
+Entrega no Telegram o recado que o robô do lote semanal deixou no repositório.
 
 Por que existe: `studio/lote_automatico.py` roda na MÁQUINA do Ramón, onde não
 existem os secrets do GitHub — ou seja, ele não tem o token do bot. A saída
@@ -22,13 +22,18 @@ Uso:
 """
 
 import hashlib
-import io
 import os
 import sys
 
 # O console do Windows quebra com emoji — pegadinha ja paga no lote_automatico.
-if hasattr(sys.stdout, "buffer"):
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+# NUNCA io.TextIOWrapper aqui: já causou "I/O operation on closed file" (regra
+# da casa). reconfigure() é seguro porque não troca o objeto stdout, só a
+# codificação dele.
+for _fluxo in (sys.stdout, sys.stderr):
+    try:
+        _fluxo.reconfigure(encoding="utf-8", errors="replace")
+    except AttributeError:
+        pass
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(AQUI)
@@ -76,7 +81,7 @@ def main():
     try:
         sys.path.insert(0, AQUI)
         from mandar_recado import mandar
-        mandar(token, chat_id, "🎬 Recado do robô de domingo:\n\n" + texto)
+        mandar(token, chat_id, "🎬 Recado do robô do lote semanal:\n\n" + texto)
     except Exception as exc:  # noqa: BLE001
         print(f"[avisar_lote][aviso] Telegram recusou ({str(exc)[:150]}) — tento na proxima rodada.")
         return 0

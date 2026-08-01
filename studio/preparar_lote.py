@@ -10,9 +10,12 @@ Uso (a partir da raiz do repo):
       salva contact_sheet.jpg lá (grade numerada para escolher no celular).
 
 2. Criar um post na fila a partir de uma foto editada:
-       python studio/preparar_lote.py post <arquivo.jpg> <id-do-post> <2026-08-05T21:00> "legenda..."
+       python studio/preparar_lote.py post <arquivo.jpg> <id-do-post> <2026-08-05T21:00> "legenda..." [pilar]
    -> cria content/queue/<id-do-post>/{image.jpg,post.json} (status pending).
       Lembrete: 21:00 UTC = 18:00 em Itajaí.
+      [pilar] é opcional — "A PATROA MANDA", "MICRO NO APE" ou "INIMIGOS DA
+      PATROA" (ver publisher/postqueue.py). Sem pilar, o post fica "sem pilar",
+      igual aos publicados antes da virada editorial de 31/07/2026.
 
 O que continua com o Claude: curadoria, legendas, criativos IA e a revisão final.
 """
@@ -93,7 +96,7 @@ def editar():
         print(f"contact_sheet.jpg com {len(thumbs)} fotos")
 
 
-def post(arquivo, post_id, quando, legenda):
+def post(arquivo, post_id, quando, legenda, pilar=None):
     pasta = os.path.join(QUEUE, post_id)
     os.makedirs(pasta, exist_ok=True)
     Image.open(arquivo).save(os.path.join(pasta, "image.jpg"), quality=90, optimize=True)
@@ -103,16 +106,23 @@ def post(arquivo, post_id, quando, legenda):
         "caption": legenda,
         "scheduled_for": quando + (":00Z" if len(quando) == 16 else ""),
         "status": "pending",
+        "pilar": pilar,
     }
-    with open(os.path.join(pasta, "post.json"), "w", encoding="utf-8") as f:
-        json.dump(meta, f, ensure_ascii=False, indent=2)
+    # A escrita do post.json passa pelo postqueue (porta única da fila, ver
+    # publisher/postqueue.py) — é ele quem valida o campo `pilar`. Import
+    # local (não no topo do arquivo): assim editar() continua funcionando
+    # sozinho mesmo se algo quebrar em postqueue.py — a edição de foto não
+    # depende disso, só a criação de post depende.
+    sys.path.insert(0, os.path.join(ROOT, "publisher"))
+    from postqueue import criar_post
+    criar_post(post_id, meta)
     print(f"post criado: content/queue/{post_id} ({meta['scheduled_for']})")
 
 
 if __name__ == "__main__":
     if len(sys.argv) >= 2 and sys.argv[1] == "editar":
         editar()
-    elif len(sys.argv) == 6 and sys.argv[1] == "post":
-        post(*sys.argv[2:6])
+    elif len(sys.argv) in (6, 7) and sys.argv[1] == "post":
+        post(*sys.argv[2:7])  # pilar (5º arg) é opcional
     else:
         print(__doc__)

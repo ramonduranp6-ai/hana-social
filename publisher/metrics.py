@@ -163,6 +163,11 @@ def coletar(ig_user, token):
             "instagram_id": mid,
             "tipo": tipo,
             "publicado_em": post.get("scheduled_for"),
+            # BURACO 3 do conserto de 31/07/2026: outro agente grava `pilar`
+            # no post.json de cada peça nova. Os 5 posts publicados antes
+            # desse campo existir não têm — fica None, e o placar mostra
+            # "sem pilar" em vez de chutar pra trás.
+            "pilar": post.get("pilar"),
             "metricas": valores,
         }
         if faltando:
@@ -231,6 +236,26 @@ def montar_placar(serie):
                 linhas.append(f"- **{nome}**: {media:.0f} de alcance médio ({len(grupo)} post(s))")
             else:
                 linhas.append(f"- **{nome}**: ainda sem post publicado")
+        linhas.append("")
+
+        # BURACO 3 do conserto de 31/07/2026: alcance médio por pilar. Post
+        # sem o campo `pilar` (os 5 já publicados antes desse campo existir)
+        # cai em "sem pilar" — não é chute pra trás, é o que aconteceu de
+        # verdade com esses posts.
+        grupos = {}
+        for p in posts.values():
+            chave = p.get("pilar") or "sem pilar"
+            grupos.setdefault(chave, []).append(p)
+        linhas += ["## Alcance médio por pilar", ""]
+        # "sem pilar" sempre por último; entre os com pilar, mais alcance primeiro.
+        ordem = sorted(
+            grupos.items(),
+            key=lambda kv: (kv[0] == "sem pilar",
+                            -sum(_num(p["metricas"].get("reach")) for p in kv[1]) / len(kv[1])),
+        )
+        for pilar, grupo in ordem:
+            media = sum(_num(p["metricas"].get("reach")) for p in grupo) / len(grupo)
+            linhas.append(f"- **{pilar}**: {media:.0f} de alcance médio ({len(grupo)} post(s))")
         linhas.append("")
 
     if len(coletas) > 1:

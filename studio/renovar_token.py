@@ -54,6 +54,28 @@ def gravar(token, expira):
         f.write(f"EXPIRA_EM={expira.isoformat()}\n")
 
 
+def sincronizar_variavel_vencimento(expira_iso):
+    """
+    Furo (b) do conserto de 31/07/2026 (2a perna): antes, a variável de
+    repositório IG_TOKEN_EXPIRA_EM só era escrita depois de uma RENOVAÇÃO de
+    verdade — que só acontece com <=20 dias de sobra. Um token recém-criado
+    (60 dias) ficava até ~40 dias com a variável inexistente, e o
+    `publisher/sentinel.py --token` (que só lê essa variável) passava esse
+    tempo todo sem checar nada. Agora sincroniza em TODA execução deste
+    script, mesmo quando não há nada pra renovar — a primeira vez que o
+    notebook rodar depois de um token novo já resolve o buraco. Nunca fatal:
+    quem chamou já fez a parte que importa (ler/renovar o token de verdade).
+    """
+    r = subprocess.run(["gh", "variable", "set", "IG_TOKEN_EXPIRA_EM", "-R", REPO],
+                       input=expira_iso, capture_output=True, text=True)
+    if r.returncode == 0:
+        print(f"[ok] variavel IG_TOKEN_EXPIRA_EM sincronizada ({expira_iso})")
+    else:
+        print("[aviso] nao consegui sincronizar IG_TOKEN_EXPIRA_EM (o "
+              "sentinela fica cego ate a proxima tentativa):",
+              (r.stderr or "").strip()[:200])
+
+
 def renovar(token):
     """Troca o token por um novo de 60 dias. Nao exige app secret."""
     url = ("https://graph.instagram.com/refresh_access_token"
@@ -74,6 +96,8 @@ def main():
         faltam = (dt.date.fromisoformat(dados["EXPIRA_EM"]) - dt.date.today()).days
         if faltam > DIAS_ANTES:
             print(f"[ok] token valido por mais {faltam} dias — nada a fazer.")
+            # Furo (b): sincroniza mesmo sem renovar (ver funcao acima).
+            sincronizar_variavel_vencimento(dados["EXPIRA_EM"])
             return
 
     novo, segundos = renovar(token)
@@ -89,22 +113,14 @@ def main():
         print("[FALHA] nao consegui atualizar o secret:", (r.stderr or "").strip()[:200])
         sys.exit(1)
 
-    # Furo 2 do conserto de 31/07/2026: o `publisher/sentinel.py` (que roda no
-    # GitHub, mesmo com o notebook desligado) precisa saber a data de venci-
-    # mento para avisar no Telegram quando faltarem <=7 dias. Uma VARIAVEL de
-    # repositorio (nao secret — data nao e segredo), atualizada aqui, e o
-    # unico jeito de ele saber sem depender desta maquina estar ligada na hora
-    # do aviso. Falha aqui NAO e fatal: o secret ja foi atualizado (o que
-    # importa pra publicacao continuar) — so o aviso de vencimento fica cego
-    # ate a proxima renovacao bem-sucedida.
-    r2 = subprocess.run(["gh", "variable", "set", "IG_TOKEN_EXPIRA_EM", "-R", REPO],
-                        input=expira.isoformat(), capture_output=True, text=True)
-    if r2.returncode == 0:
-        print(f"[ok] variavel IG_TOKEN_EXPIRA_EM atualizada para {expira.isoformat()}")
-    else:
-        print("[aviso] nao consegui atualizar IG_TOKEN_EXPIRA_EM (aviso de "
-              "vencimento fica cego ate a proxima renovacao):",
-              (r2.stderr or "").strip()[:200])
+    # Furo (b) do conserto de 31/07/2026: o `publisher/sentinel.py` (que roda
+    # no GitHub, mesmo com o notebook desligado) precisa saber a data de
+    # vencimento para avisar no Telegram quando faltarem <=7 dias. Uma
+    # VARIAVEL de repositorio (nao secret — data nao e segredo), atualizada
+    # aqui, e o unico jeito de ele saber sem depender desta maquina estar
+    # ligada na hora do aviso. Falha aqui NAO e fatal: o secret ja foi
+    # atualizado (o que importa pra publicacao continuar).
+    sincronizar_variavel_vencimento(expira.isoformat())
 
 
 if __name__ == "__main__":
