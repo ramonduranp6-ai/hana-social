@@ -102,6 +102,17 @@ jobs:
       # Ramón pode estar desligado justamente quando o aviso importa. Tem que
       # rodar ANTES do passo que commita, senão o marcador de "já avisei hoje"
       # nunca se salva e o aviso repete a cada 30 min.
+      # Leitura do DIA 1 de cada post, empurrada no Telegram. Exigência do
+      # conselheiro ao vetar parte do plano: a decisão sobre o Reel de 10/08
+      # não pode depender de o Ramón lembrar de abrir conversa. Roda depois da
+      # coleta, de propósito — precisa dos números do dia.
+      - name: Leitura do dia 1
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python publisher/leitura_d1.py
+
       # O robô de domingo roda na máquina do Ramón, que não tem o token do bot.
       # Ele empurra o recado em content/aviso_lote.md e QUEM ENTREGA é este
       # passo, que tem os secrets. Assim o token existe num lugar só.
