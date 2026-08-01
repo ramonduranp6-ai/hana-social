@@ -4,6 +4,43 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## 🛑 GARIMPO PARADO — ESPERANDO DECISÃO DELE (01/08/2026, 13h)
+
+**O garimpo bateu num muro que não é de software: 99,8% do rolo está SÓ NA
+NUVEM, e o rolo inteiro tem 112,4 GB — mas só há 94,7 GB livres no disco C.**
+Ou seja, varrer o resto **não cabe na máquina** e encheria o disco antes de
+terminar. Parei os processos por isso, sem esperar ele pedir.
+
+Como foi medido (tudo conferido nesta conversa, nada suposto):
+- Rodadas 1 e 2 voaram — 867 e 798 arquivos em 55 min cada. Eram os arquivos
+  que já estavam baixados no disco.
+- **Rodada 3 despencou para 92 arquivos em 55 min**, com 71 erros
+  (`[Errno 22] Invalid argument` e timeout do ffmpeg). Não era bug: cada
+  leitura estava disparando um download do iCloud.
+- Amostra de **400 arquivos** entre os 32.676 que faltam: **399 são
+  placeholder de nuvem** (atributos `RECALL_ON_DATA_ACCESS` + `OFFLINE` +
+  `SPARSE_FILE`), 1 estava no disco.
+- No ritmo medido nos arquivos de nuvem (1,7 arquivo/min), o que falta levaria
+  **~320 horas (13 dias) ligado** — não as 35 h que eu tinha estimado com o
+  ritmo dos arquivos locais. **A estimativa de 35 h que dei hoje de manhã
+  estava errada**, porque extrapolei do trecho fácil.
+
+**Placar do que já rendeu:** 1.757 arquivos varridos, **25 aprovados**
+(18 fotos + **7 vídeos**), em `Fotos da Hana\01 - brutas (suba aqui)\garimpo\melhores-30\`.
+Ninguém olhou ainda — o detector só sabe "é um cachorro", não "é a Hana".
+
+**As saídas (quem escolhe é ele):**
+1. **Parar por aqui** e trabalhar com os 25 já garimpados + o que ele filmar.
+   Custo zero. É o que eu recomendo: a linha editorial nova pede **vídeo com o
+   rosto dela**, e disso o acervo velho é pobre por natureza.
+2. **Deixar rodando dias**, aceitando internet ocupada — e ainda assim
+   **esbarra no disco**: 112,4 GB não cabem em 94,7 GB livres.
+3. **Ele mesmo baixar tudo do iCloud** antes (liberar espaço + "manter
+   originais neste PC"). Só ele pode fazer, e resolve de vez.
+
+Retomar é um comando só, quando ele mandar:
+`python studio/garimpo.py --minutos 55` (o estado é salvo, nada se perde).
+
 ## FECHADOS, 01/08/2026 — os 7 itens do sinal amarelo da auditoria geral
 
 Ordem dele: *"Sinal amarelo não é bom, precisa arrumar né… segunda quero o
