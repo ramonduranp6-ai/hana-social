@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 31/07/2026 23:50. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 01/08/2026 07:09. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -22,9 +22,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-08-01T08:56:17Z schedule success
 2026-08-01T00:13:41Z schedule success
 2026-07-31T23:30:16Z workflow_dispatch success
-2026-07-31T23:24:12Z workflow_dispatch success
 ```
 - Vigia local (Agendador do Windows): próxima execução domingo, 2 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -38,6 +38,7 @@ Mídias numeradas em `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos
 - 03_07-08.jpg
 - 04_10-08_REEL.mp4
 - 04_10-08_REEL_capa.jpg
+- 05_PREVIA-TRILHA.mp4
 
 Ele responde pelos números. Enquanto não responder, **não commitar**
 mudança de status nem publicar.
@@ -50,6 +51,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+a5b30aa feat: pedido de cena escrito + registra decisoes do dia
 6ccec1e regra: provar o perfil do Chrome pelo e-mail antes de usar
 b3fcc4a feat: Diretor de Criacao (o Criador) - o cargo que faltava no fluxo
 f43ac56 feat: fecha os 6 buracos do fluxo achados pelo conselho estrategico
@@ -57,12 +59,10 @@ f43ac56 feat: fecha os 6 buracos do fluxo achados pelo conselho estrategico
 508099c plano: conselho estrategico de 31/07 - diagnostico, plano e veto parcial
 059a727 fix: o placar nao media funil de Reel - achado do conselho estrategico
 7e62c2d regra: foto e video de IA pelo app, nunca por API, e sempre premium
-5a3b1ac chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
 M DECISOES.md
-?? content/pedido-de-cena.md
 ```
 
 ## Decisões e contexto
@@ -73,6 +73,31 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 Mais recente em cima.
 
 ## Onde paramos (31/07/2026)
+
+**DECIDIDO POR ELE, 01/08/2026 — A RONDA DE ENGAJAMENTO ESTÁ SUSPENSA.**
+Palavras dele: *"Pode suspender então a ronda."* Fecha a pendência aberta desde
+28/07. Motivo medido: a única ronda real (4 comentários, 27/07) **não trouxe
+seguidor**, e ela custava 60 a 120 mil tokens por rodada, 3x por semana.
+**Revisita em 13/08**, depois da leitura do Reel de 10/08 — não antes, e não por
+intuição. Não propor ronda nesse meio-tempo.
+
+**EM ANDAMENTO, 01/08/2026 — trilha do Reel de 10/08 (ele pediu: "Coloque uma
+trilha").** O Diretor de Criação produziu `Fotos da Hana\05 - APROVAR (semana)\
+05_PREVIA-TRILHA.mp4` — trilha `03-comico-pizzicato` misturada a -12 dB por
+baixo do som da cena. Escolha justificada por assistir o vídeo: ela passa **10
+dos 14 segundos parada**, e a faixa densa (194 ataques/min) segura o miolo.
+**A PRÉVIA NÃO FOI MOSTRADA A ELE**: a auditoria obrigatória (regra 3i) foi
+cortada por limite de sessão e ficou **incompleta**. O que ela alcançou a apontar
+antes de morrer: o produtor afirmou "stream copy, imagem não reprocessada" e
+**isso é falso** — conferido por mim, o vídeo foi re-encodado (417 frames contra
+420, bitrate 6116→6138, duração 14,00s→13,98s). Resolução e proporção seguem
+certas (1080x1920, 9:16), então o defeito é a **afirmação falsa**, não a imagem.
+**Falta auditar:** anatomia, cor tri lilac merle, e o item mais importante — se a
+faixa usada é música mesmo. Motivo: o Criador descobriu que
+`content/trilhas/02-lofi-sofa.mp3` **não é música**, tem correlação +0,98 com o
+áudio do próprio vídeo (ou o `gerar_trilha.py` gravou o som da cena com nome de
+trilha, ou o arquivo foi trocado). **Conferir o `gerar_trilha.py` antes de gerar
+qualquer trilha nova.**
 
 **FECHADO, 31/07/2026 — a chave do Gemini NÃO será trocada.** Decisão dele:
 *"não troca... para de encher o saco com isso"*, depois de eu conferir e provar

@@ -6,6 +6,31 @@ Mais recente em cima.
 
 ## Onde paramos (31/07/2026)
 
+**DECIDIDO POR ELE, 01/08/2026 — A RONDA DE ENGAJAMENTO ESTÁ SUSPENSA.**
+Palavras dele: *"Pode suspender então a ronda."* Fecha a pendência aberta desde
+28/07. Motivo medido: a única ronda real (4 comentários, 27/07) **não trouxe
+seguidor**, e ela custava 60 a 120 mil tokens por rodada, 3x por semana.
+**Revisita em 13/08**, depois da leitura do Reel de 10/08 — não antes, e não por
+intuição. Não propor ronda nesse meio-tempo.
+
+**EM ANDAMENTO, 01/08/2026 — trilha do Reel de 10/08 (ele pediu: "Coloque uma
+trilha").** O Diretor de Criação produziu `Fotos da Hana\05 - APROVAR (semana)\
+05_PREVIA-TRILHA.mp4` — trilha `03-comico-pizzicato` misturada a -12 dB por
+baixo do som da cena. Escolha justificada por assistir o vídeo: ela passa **10
+dos 14 segundos parada**, e a faixa densa (194 ataques/min) segura o miolo.
+**A PRÉVIA NÃO FOI MOSTRADA A ELE**: a auditoria obrigatória (regra 3i) foi
+cortada por limite de sessão e ficou **incompleta**. O que ela alcançou a apontar
+antes de morrer: o produtor afirmou "stream copy, imagem não reprocessada" e
+**isso é falso** — conferido por mim, o vídeo foi re-encodado (417 frames contra
+420, bitrate 6116→6138, duração 14,00s→13,98s). Resolução e proporção seguem
+certas (1080x1920, 9:16), então o defeito é a **afirmação falsa**, não a imagem.
+**Falta auditar:** anatomia, cor tri lilac merle, e o item mais importante — se a
+faixa usada é música mesmo. Motivo: o Criador descobriu que
+`content/trilhas/02-lofi-sofa.mp3` **não é música**, tem correlação +0,98 com o
+áudio do próprio vídeo (ou o `gerar_trilha.py` gravou o som da cena com nome de
+trilha, ou o arquivo foi trocado). **Conferir o `gerar_trilha.py` antes de gerar
+qualquer trilha nova.**
+
 **FECHADO, 31/07/2026 — a chave do Gemini NÃO será trocada.** Decisão dele:
 *"não troca... para de encher o saco com isso"*, depois de eu conferir e provar
 que a chave **não está no repositório público nem no histórico do git** — ela só
