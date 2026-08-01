@@ -168,6 +168,19 @@ def montar(agora=None):
             L.append("6) PARA VOCÊ DECIDIR")
             L.append(extra)
 
+    # CONDIÇÃO DO CONSELHEIRO para o Diretor de Criação existir (31/07/2026):
+    # "o Criador depende de alguém lembrar na segunda — e isso já quebrou aqui".
+    # A pauta passa a cobrar o pacote da semana. Sem esta linha, o cargo é vetado.
+    pacote = os.path.join(RAIZ, "content", "pacote-da-semana.md")
+    L.append("")
+    L.append("7) CHAMAR O DIRETOR DE CRIAÇÃO")
+    if os.path.isfile(pacote):
+        L.append("   Pacote da semana existe em content/pacote-da-semana.md — "
+                 "conferir se é desta semana antes de usar.")
+    else:
+        L.append("   ⚠️ Pacote da semana PENDENTE. Sem ele, gancho e legenda "
+                 "voltam a ser improviso na conversa.")
+
     L.append("")
     L.append("Régua: o que não mexer em salvos, compartilhamentos ou seguidores "
              "ganhos sai de cena. Respondo na segunda com a proposta de corte.")
