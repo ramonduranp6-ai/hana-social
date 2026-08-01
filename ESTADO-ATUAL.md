@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 31/07/2026 21:29. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 31/07/2026 23:50. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -46,22 +46,23 @@ mudança de status nem publicar.
 - Brutas a processar: 26 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34418
+- Fotos do iPhone sincronizadas (iCloud): 34420
 
 ## Últimas mudanças no projeto
 ```
+6ccec1e regra: provar o perfil do Chrome pelo e-mail antes de usar
+b3fcc4a feat: Diretor de Criacao (o Criador) - o cargo que faltava no fluxo
+f43ac56 feat: fecha os 6 buracos do fluxo achados pelo conselho estrategico
+3925199 feat: leitura do dia 1 empurrada no Telegram - ultima exigencia do conselheiro
+508099c plano: conselho estrategico de 31/07 - diagnostico, plano e veto parcial
 059a727 fix: o placar nao media funil de Reel - achado do conselho estrategico
 7e62c2d regra: foto e video de IA pelo app, nunca por API, e sempre premium
 5a3b1ac chore: atualiza estado da fila [skip ci]
-7905f2a fix: dois modulos embrulhavam a saida e um fechava o outro
-b5b73a4 feat: robo de diagnostico semanal - mede evolucao, nao so o numero do dia
-bed00ef docs: governanca escrita (veto encerrado pelo Ramon) e recados respondidos
-dd17885 fix: pasta de aprovacao comecava no numero 4 e estava com lixo de 27/07
-47d41dc docs: registra os tres consertos e a medicao do cron
 ```
 Alterações não commitadas:
 ```
-?? content/plano-semana.md
+M DECISOES.md
+?? content/pedido-de-cena.md
 ```
 
 ## Decisões e contexto
@@ -73,7 +74,33 @@ Mais recente em cima.
 
 ## Onde paramos (31/07/2026)
 
-**🔴 ABERTO E URGENTE, 31/07/2026 — A GEMINI_API_KEY DELE VAZOU.** Um diretor
+**FECHADO, 31/07/2026 — a chave do Gemini NÃO será trocada.** Decisão dele:
+*"não troca... para de encher o saco com isso"*, depois de eu conferir e provar
+que a chave **não está no repositório público nem no histórico do git** — ela só
+apareceu na saída de terminal desta conversa. Risco baixo, e a palavra dele
+**encerra o veto do conselheiro** (ele está acima do conselheiro, que está acima
+de mim). **Não reabrir o assunto.**
+
+**REGRA DO MOTOR, aprovada por ele em 31/07/2026.** Eu **não consigo** trocar o
+motor da conversa — só ele, com `/model`. O que eu faço é **rotear o trabalho**:
+conselheiro em Fable, volume em Gemini/DeepSeek, código no diretor de automação,
+enquanto a conversa fica onde ele deixou. Combinado: conversa no **Opus** por
+padrão, eu roteio sozinho, e **só peço a troca quando o raciocínio final for a
+entrega**. Ele avisou: *"Fable gasta muito"* — então Fable é para decisão de
+dinheiro e leitura de resultado, não para escrever arquivo.
+
+**FEITO, 31/07/2026 — o CRIADOR existe.** `~\.claude\agents\diretor-criacao.md`.
+Dono único do trecho, do gancho, da legenda e da trilha, trabalhando **a partir
+do plano do comitê**, nunca de improviso. Entrega pacote fechado em
+`content/pacote-da-semana.md` — condição do conselheiro: sem gravar arquivo, ele
+veta o cargo. A pauta de segunda passou a **cobrar o pacote** (item 7), porque o
+cargo não pode depender de alguém lembrar. Ele não aprova nada: o pacote passa
+pelo auditor antes de chegar ao Ramón.
+E `content/pedido-de-cena.md` foi escrito — o robô já lê o arquivo de verdade,
+não a reserva (conferido). A regra nova que faltava e é a mais importante:
+**rosto da Hana de frente nos 2 primeiros segundos**.
+
+**(RESOLVIDO — ver acima) A GEMINI_API_KEY apareceu em texto puro numa saída de terminal.** Um diretor
 errou um comando e a chave saiu em texto puro numa saída de terminal. **Ele
 precisa regenerar** em `aistudio.google.com/app/apikey` e me avisar — o secret
 `GEMINI_API_KEY` do repo tem que ser atualizado junto (foi gravado hoje, 21:19Z).

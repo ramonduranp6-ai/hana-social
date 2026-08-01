@@ -6,7 +6,33 @@ Mais recente em cima.
 
 ## Onde paramos (31/07/2026)
 
-**🔴 ABERTO E URGENTE, 31/07/2026 — A GEMINI_API_KEY DELE VAZOU.** Um diretor
+**FECHADO, 31/07/2026 — a chave do Gemini NÃO será trocada.** Decisão dele:
+*"não troca... para de encher o saco com isso"*, depois de eu conferir e provar
+que a chave **não está no repositório público nem no histórico do git** — ela só
+apareceu na saída de terminal desta conversa. Risco baixo, e a palavra dele
+**encerra o veto do conselheiro** (ele está acima do conselheiro, que está acima
+de mim). **Não reabrir o assunto.**
+
+**REGRA DO MOTOR, aprovada por ele em 31/07/2026.** Eu **não consigo** trocar o
+motor da conversa — só ele, com `/model`. O que eu faço é **rotear o trabalho**:
+conselheiro em Fable, volume em Gemini/DeepSeek, código no diretor de automação,
+enquanto a conversa fica onde ele deixou. Combinado: conversa no **Opus** por
+padrão, eu roteio sozinho, e **só peço a troca quando o raciocínio final for a
+entrega**. Ele avisou: *"Fable gasta muito"* — então Fable é para decisão de
+dinheiro e leitura de resultado, não para escrever arquivo.
+
+**FEITO, 31/07/2026 — o CRIADOR existe.** `~\.claude\agents\diretor-criacao.md`.
+Dono único do trecho, do gancho, da legenda e da trilha, trabalhando **a partir
+do plano do comitê**, nunca de improviso. Entrega pacote fechado em
+`content/pacote-da-semana.md` — condição do conselheiro: sem gravar arquivo, ele
+veta o cargo. A pauta de segunda passou a **cobrar o pacote** (item 7), porque o
+cargo não pode depender de alguém lembrar. Ele não aprova nada: o pacote passa
+pelo auditor antes de chegar ao Ramón.
+E `content/pedido-de-cena.md` foi escrito — o robô já lê o arquivo de verdade,
+não a reserva (conferido). A regra nova que faltava e é a mais importante:
+**rosto da Hana de frente nos 2 primeiros segundos**.
+
+**(RESOLVIDO — ver acima) A GEMINI_API_KEY apareceu em texto puro numa saída de terminal.** Um diretor
 errou um comando e a chave saiu em texto puro numa saída de terminal. **Ele
 precisa regenerar** em `aistudio.google.com/app/apikey` e me avisar — o secret
 `GEMINI_API_KEY` do repo tem que ser atualizado junto (foi gravado hoje, 21:19Z).
