@@ -28,6 +28,38 @@ e o robô executa na rodada seguinte. São 6: `ajuda` · `estado` · `ver fila` 
 ⚠️ **Limite honesto, e ele foi avisado:** o robô acorda a cada 30 min. Não é
 chat ao vivo — o comando entra na próxima rodada.
 
+## 💸 O QUE CUSTA TOKEN NESTE PROJETO — medido em 02/08/2026
+
+Ele perguntou se o que construímos está gastando muito. Resposta medida, com
+os números que os próprios subagentes reportaram nesta conversa:
+
+| Quem | Para quê | Tokens |
+|---|---|---|
+| Auditor de mídia | Prévia do Reel de 10/08 | 149.337 |
+| Auditor de mídia | Slideshow, 1ª versão | 142.870 |
+| Diretor de Criação | Montar o slideshow | 138.384 |
+| Diretor de Criação | Escolher a trilha de 10/08 | 131.875 |
+| Auditor de mídia | Slideshow, corte novo | 96.504 |
+| Auditor de código | `mostrar_fila.py` | 95.356 |
+| **Total** | | **754.326** |
+
+**Auditoria de mídia = 388.711, ou 52% de tudo** — é o item mais caro do
+projeto, porque cada auditor extrai frames e olha imagem por imagem.
+**Custo zero de token:** publicador, placar, garimpo, comandos do Telegram,
+lote de domingo, sentinela. A recepcionista roda em Gemini (centavos).
+Nada disso fica ligado gastando: subagente só existe enquanto é chamado.
+
+**Regra prática que sai daí:** cada Reel novo custa de **250 a 390 mil** entre
+criação e auditoria, por causa da regra 3i (nenhuma mídia chega nele sem
+auditor). Isso é o preço de não mandar vídeo com defeito — não é desperdício.
+
+⏳ **PROPOSTA ESPERANDO O OK DELE (não é decisão):** separar a auditoria em
+duas. A parte MECÂNICA — proporção 9:16, brilho, frame congelado, pico de
+áudio, texto vazando — é medição e roda num motor barato. A parte de
+JULGAMENTO — "isso ficou bom ou ficou estranho?" — continua no motor caro.
+Cortaria a maior fatia sem perder a trava de segurança. **Ele não respondeu
+ainda; não executar sozinho.**
+
 ## Onde paramos (02/08/2026, fim do dia)
 
 **Fila com 5 posts aprovados, até 12/08.** 03/08, 05/08 e 07/08 são foto

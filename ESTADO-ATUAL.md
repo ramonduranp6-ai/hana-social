@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 02/08/2026 18:30. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 02/08/2026 18:42. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -105,6 +105,7 @@ Diretor de Criação fecha o trecho, o gancho e a legenda na reunião de segunda
 
 ## Últimas mudanças no projeto
 ```
+8bb46b9 estado do dia 02/08: fila ate 12/08, Telegram conversando, garimpo na rodada 4
 e8c50c8 Telegram responde de verdade: escalar deixa de ser beco sem saida
 711ed09 chore: recado do lote semanal [skip ci]
 a38473f recado fechado + .mcp.json do conector kairogen-hana
@@ -112,7 +113,6 @@ a38473f recado fechado + .mcp.json do conector kairogen-hana
 b70cb0a feat: comandos pelo Telegram + reuniao estrategica passa para domingo 21h
 b6b33c7 correcao: o disco NAO era problema - garimpo religado
 8b9ea65 decisao: nao apagar foto do rolo do iCloud para liberar espaco (recusado)
-dee604c aprovados: Reel de 10/08 refeito e slideshow entra para 12/08
 ```
 Alterações não commitadas:
 ```
@@ -149,6 +149,38 @@ e o robô executa na rodada seguinte. São 6: `ajuda` · `estado` · `ver fila` 
 
 ⚠️ **Limite honesto, e ele foi avisado:** o robô acorda a cada 30 min. Não é
 chat ao vivo — o comando entra na próxima rodada.
+
+## 💸 O QUE CUSTA TOKEN NESTE PROJETO — medido em 02/08/2026
+
+Ele perguntou se o que construímos está gastando muito. Resposta medida, com
+os números que os próprios subagentes reportaram nesta conversa:
+
+| Quem | Para quê | Tokens |
+|---|---|---|
+| Auditor de mídia | Prévia do Reel de 10/08 | 149.337 |
+| Auditor de mídia | Slideshow, 1ª versão | 142.870 |
+| Diretor de Criação | Montar o slideshow | 138.384 |
+| Diretor de Criação | Escolher a trilha de 10/08 | 131.875 |
+| Auditor de mídia | Slideshow, corte novo | 96.504 |
+| Auditor de código | `mostrar_fila.py` | 95.356 |
+| **Total** | | **754.326** |
+
+**Auditoria de mídia = 388.711, ou 52% de tudo** — é o item mais caro do
+projeto, porque cada auditor extrai frames e olha imagem por imagem.
+**Custo zero de token:** publicador, placar, garimpo, comandos do Telegram,
+lote de domingo, sentinela. A recepcionista roda em Gemini (centavos).
+Nada disso fica ligado gastando: subagente só existe enquanto é chamado.
+
+**Regra prática que sai daí:** cada Reel novo custa de **250 a 390 mil** entre
+criação e auditoria, por causa da regra 3i (nenhuma mídia chega nele sem
+auditor). Isso é o preço de não mandar vídeo com defeito — não é desperdício.
+
+⏳ **PROPOSTA ESPERANDO O OK DELE (não é decisão):** separar a auditoria em
+duas. A parte MECÂNICA — proporção 9:16, brilho, frame congelado, pico de
+áudio, texto vazando — é medição e roda num motor barato. A parte de
+JULGAMENTO — "isso ficou bom ou ficou estranho?" — continua no motor caro.
+Cortaria a maior fatia sem perder a trava de segurança. **Ele não respondeu
+ainda; não executar sozinho.**
 
 ## Onde paramos (02/08/2026, fim do dia)
 
