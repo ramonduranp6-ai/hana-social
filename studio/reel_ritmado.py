@@ -42,7 +42,7 @@ FPS = 30
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(AQUI)
 FOTOS = os.path.join(RAIZ, "Fotos da Hana", "02 - selecionadas")
-TRILHA = os.path.join(RAIZ, "content", "trilhas", "03-comico-pizzicato.mp3")
+TRILHA = os.path.join(RAIZ, "content", "trilhas", "01-fofo-ukulele.mp3")
 
 # ---------------------------------------------------------------------------
 # ROTEIRO — pacote fechado do Diretor de Criação, 01/08/2026.
@@ -174,9 +174,15 @@ def montar(saida, roteiro=ROTEIRO, trilha=TRILHA):
     if tem_audio:
         entradas += ["-i", trilha]
 
+    # As 3 faixas de content/trilhas decodificam com pico ACIMA de 0 dBFS
+    # (1,40 a 1,48 medidos em 01/08/2026) — sem normalizar, o áudio distorce no
+    # celular. loudnorm deixa em -14 LUFS com teto de -1 dBFS.
+    if tem_audio:
+        cadeia += f";[{len(roteiro)}:a]loudnorm=I=-14:TP=-1.0:LRA=11[aout]"
+
     cmd = [ffmpeg, "-y", *entradas, "-filter_complex", cadeia, "-map", "[vout]"]
     if tem_audio:
-        cmd += ["-map", f"{len(roteiro)}:a", "-c:a", "aac", "-b:a", "192k", "-shortest"]
+        cmd += ["-map", "[aout]", "-c:a", "aac", "-b:a", "192k", "-shortest"]
     cmd += ["-r", str(FPS), "-c:v", "libx264", "-pix_fmt", "yuv420p",
             "-profile:v", "high", "-crf", "18", saida]
 

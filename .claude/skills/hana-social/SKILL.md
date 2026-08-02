@@ -428,11 +428,22 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
 7. **Fechar todas as abas** do navegador ao terminar.
 8. **Economia:** trabalho mecânico em Python local (custo zero); IA só onde
    agrega; a entrega final e o raciocínio ficam com o Claude.
-9. **RESPOSTA CURTA — ele pediu em 27/07/2026.** Textão ele não consegue
-   acompanhar e acaba não lendo. Régua: **máximo ~5 linhas por resposta**, uma
-   coisa por vez, sem lista longa nem tabela na conversa. Se ele pedir "um a
-   um", é literal: tratar um assunto, esperar a resposta dele, só então o
-   próximo. Detalhe e histórico vão para arquivo, não para a mensagem.
+9. **RESPOSTA CURTA — 🚨 ELE JÁ COBROU TRÊS VEZES (27/07, 31/07 e 01/08/2026).**
+   Na terceira: *"amigo, seja resumido pelo amor de deus… Já pedi para salvar
+   isso na skill… voce escreve uma biblia sempre."* Ou seja: eu li esta regra,
+   concordei com ela e continuei escrevendo textão. Não é falta de instrução, é
+   falta de cumprimento — e cada reincidência queima a confiança dele.
+   **O LIMITE É DURO: no máximo 5 LINHAS por resposta.** Não são "5 parágrafos
+   curtos", não são 5 blocos com negrito. Cinco linhas.
+   Proibido na conversa, sem exceção: tabela, lista com mais de 3 itens,
+   citação do que o auditor/diretor disse, e o relato de COMO eu cheguei ao
+   resultado. Ele quer o resultado e o que ele precisa decidir. O resto é
+   vaidade de processo — vai para `DECISOES.md` ou para a mensagem de commit,
+   onde ele só olha se quiser.
+   Régua antes de mandar: **"isto cabe em 5 linhas? o que sobra é decisão dele
+   ou é eu me explicando?"** Se for eu me explicando, corta.
+   Quando o trabalho for grande, o resumo é: o que ficou pronto, o que ele
+   precisa responder, e nada mais.
 
 ## 3. Ferramentas do projeto (usar, não reinventar)
 
