@@ -4,6 +4,27 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## ✅ EU ESTAVA ERRADO: O DISCO NÃO É PROBLEMA — o garimpo voltou (02/08/2026)
+
+**Correção de uma afirmação minha.** Eu disse a ele que o garimpo "não cabe na
+máquina", porque o rolo pesa 112,4 GB e sobravam 94 GB. **Estava errado**: os
+112,4 GB são o tamanho LÓGICO dos placeholders; o iCloud não guarda no disco o
+que o robô abre.
+
+Medido: varrer 20 arquivos com o disco em 94,027 GB livres terminou com
+**94,173 GB livres** — sobrou MAIS espaço do que antes (parte por eu ter
+apagado 104,6 MB de cópias, o resto porque o iCloud solta o que baixou).
+Consumo líquido de disco por arquivo varrido: **praticamente zero**.
+
+**O único custo real é TEMPO** (o download de cada foto), e ele varia muito
+conforme o trecho: de 1,7 a 5 arquivos/min. Os ~32,6 mil que faltam dão algo
+entre **110 e 320 horas** de PC ligado — em pedaços, sem pressa.
+
+**Rotina combinada com ele:** rodar `python studio/garimpo.py --minutos 55`,
+eu olhar os aprovados um a um e **apagar as cópias que não são a Hana** da
+pasta `garimpo\` (só cópias do projeto — nunca o rolo, ver a decisão abaixo).
+Na 1ª limpeza: 17 cópias apagadas, 104,6 MB, sobrando as 8 que são ela.
+
 ## 🚫 NÃO APAGAR FOTO DO ROLO PARA "LIBERAR ESPAÇO" — recusado em 02/08/2026
 
 Ele propôs: *"acho que vc poderia ir deletando as fotos que não são a hana para
