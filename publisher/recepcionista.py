@@ -65,6 +65,10 @@ FILA = os.path.join(RAIZ, "content", "queue")
 POSTADOS = os.path.join(RAIZ, "content", "posted")
 ESTADO_ATUAL = os.path.join(RAIZ, "ESTADO-ATUAL.md")
 DECISOES = os.path.join(RAIZ, "DECISOES.md")
+# As regras da marca e da linha editorial. Entraram no contexto em 02/08/2026:
+# sem elas, pergunta como "por que não postamos foto?" caía em [ESCALAR] e ele
+# ficava sem resposta, embora a resposta ESTIVESSE decidida por ele mesmo.
+REGRAS = os.path.join(RAIZ, ".claude", "skills", "hana-social", "SKILL.md")
 
 _BASE = "https://generativelanguage.googleapis.com/v1beta/models/"
 GEMINI_URL = _BASE + "gemini-flash-latest:generateContent"
@@ -76,8 +80,8 @@ MARCADOR_ESCALAR = "[ESCALAR]"
 # Mensagem que ele vê no Telegram quando o Gemini escala (ou quando tudo
 # falha e o robô cai no comportamento antigo de só anotar).
 MSG_ESCALADO = (
-    "🐾 Essa eu não sei responder só com o que tenho aqui — anotei e o "
-    "Claude vê isso na próxima conversa."
+    "— essa parte quem decide é o Claude, não eu. Já anotei e ele vê "
+    "na próxima conversa."
 )
 
 
@@ -102,15 +106,29 @@ nada antes dele) sempre que pelo menos uma destas for verdade:
    deduza, estime ou chute — principalmente número (seguidores, alcance,
    curtidas, salvos, compartilhamentos). Se não está no placar, você não sabe.
 
-Quando NENHUMA das três se aplica, responda DIRETO — sem o marcador — só com
-o que está literalmente no CONTEXTO (ex.: quantos seguidores tem agora, o que
-está na fila, quando sai o próximo post, o que já foi publicado).
+⚠️ O MARCADOR NÃO É DESCULPA PARA NÃO RESPONDER (mudança pedida por ele em
+02/08/2026: *"gostaria só que melhorasse a nossa comunicação via telegram, que
+me respondesse igual me responde aqui"*). Depois do marcador, DEPOIS DE PULAR
+UMA LINHA, você AINDA escreve a melhor resposta que o CONTEXTO permitir:
+- O que já está DECIDIDO sobre aquilo (o CONTEXTO traz as regras e as decisões
+  dele — se a resposta está lá, ela não é opinião sua, é fato: pode dizer).
+- Os números que existirem no placar e o que está na fila.
+- E aí sim, na última linha, o que exatamente depende do Claude.
+Mandar só o marcador e nada mais é o comportamento ERRADO — era isso que ele
+chamava de "não me responde". Escalar é sobre QUEM DECIDE, não sobre ficar
+calado.
 
-FORMATO DA RESPOSTA (quando não escalar):
-- Máximo 5 linhas.
-- Português simples, direto, sem tecniquês.
-- Nunca prometa fazer algo — se a pergunta pedir ação, é [ESCALAR], não
-  "vou fazer" nem "já fiz".
+Quando NENHUMA das três se aplica, responda DIRETO — sem o marcador.
+
+FORMATO DA RESPOSTA (sempre, escalando ou não):
+- Máximo 5 linhas. Português simples, direto, sem tecniquês.
+- Um assunto por vez. Nada de tabela nem lista longa — ele lê no celular.
+- Se a resposta veio de uma regra ou decisão do CONTEXTO, diga em quais
+  palavras ela foi decidida ("você decidiu que…"), não invente motivo novo.
+- Se você não tem o dado, diga "não sei" com todas as letras. Chutar número é
+  o único erro que ele não perdoa.
+- Nunca prometa fazer algo — nem "vou fazer" nem "já fiz". Você não executa.
+- Termine com a pergunta que ele precisa responder, quando houver uma.
 """
 
 
@@ -182,6 +200,27 @@ def _publicados_compacto(limite=10):
     return "\n".join(linhas) if linhas else "(nada publicado ainda)"
 
 
+def _regras_compactas(limite_chars=7000):
+    """
+    Só a seção de regras da skill (a que começa em "## 2." e vai até a "## 3.").
+
+    Por que só um pedaço: a skill inteira passa de 40 mil caracteres e é cheia
+    de receita técnica (comando de ffmpeg, pegadinha de API) que não ajuda em
+    nada a responder o Ramón no Telegram — inflaria o contexto e o custo à toa.
+    O que importa aqui é o bloco "Regras que não se reabrem sem ordem dele".
+    """
+    if not os.path.isfile(REGRAS):
+        return "(a skill não está nesta máquina — respondendo sem as regras)"
+    with open(REGRAS, encoding="utf-8", errors="replace") as f:
+        texto = f.read()
+    inicio = texto.find("## 2. Regras que não se reabrem")
+    if inicio < 0:
+        return "(não achei a seção de regras na skill)"
+    fim = texto.find("\n## 3.", inicio)
+    trecho = texto[inicio:fim if fim > 0 else inicio + limite_chars]
+    return _cortar(trecho, limite_chars)
+
+
 def montar_contexto(agora=None):
     """
     Monta o CONTEXTO real que vai pro Gemini — lendo os arquivos AGORA,
@@ -204,6 +243,9 @@ def montar_contexto(agora=None):
 
 === DECISOES.md (decisões vigentes do Ramón, só o topo/mais recente) ===
 {_ler(DECISOES, limite_linhas=120, limite_chars=6000)}
+
+=== REGRAS DO PROJETO (as que o próprio Ramón deu — se a resposta está aqui, ela É fato, não é opinião sua) ===
+{_regras_compactas()}
 """
 
 
@@ -370,7 +412,16 @@ def _responder(texto, quando, token, chat_id):
 
     if escalar:
         print(f"[recepcionista] escalou pro Claude: {texto[:60]!r}")
-        _guardar_recado(texto, quando, token, chat_id, resposta_fixa=MSG_ESCALADO)
+        # Mudança de 02/08/2026: escalar não pode mais ser um beco sem saída.
+        # Antes, TUDO que o Gemini tinha escrito era jogado fora e ele recebia
+        # só a frase fixa — era isso que o Ramón sentia como "o bot não me
+        # responde". Agora o que o robô conseguiu apurar vai junto, e a frase
+        # fixa vira o rodapé que diz o que ainda depende do Claude. O recado
+        # continua sendo gravado igual: a garantia de que nada se perde não
+        # mudou.
+        util = (resposta or "").strip()
+        resposta_final = f"{util}\n\n{MSG_ESCALADO}" if util else MSG_ESCALADO
+        _guardar_recado(texto, quando, token, chat_id, resposta_fixa=resposta_final)
         return
 
     print(f"[recepcionista] respondeu direto: {resposta[:80]!r}")
