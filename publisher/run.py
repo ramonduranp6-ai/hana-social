@@ -166,6 +166,21 @@ def main():
             q.save(p)
 
     # 3. publica os aprovados que já venceram
+    #
+    # FREIO DE MÃO: ele pode mandar "pausar" no Telegram (publisher/comandos.py)
+    # e nada sai até mandar "voltar". Fica aqui, junto da publicação, e não lá
+    # em cima: assim a coleta de métricas, a recepção de mensagens e o próprio
+    # comando "voltar" continuam funcionando com o freio puxado — senão ele
+    # pausaria e não teria como despausar pelo celular.
+    try:
+        import comandos
+        if comandos.esta_pausado():
+            print("[PAUSADO] ele mandou pausar no Telegram — nao publico nada. "
+                  "Mande 'voltar' para religar.")
+            return
+    except Exception as exc:  # noqa: BLE001 — freio quebrado não pode travar tudo
+        print(f"[aviso] nao consegui ler o freio ({str(exc)[:120]}) — sigo publicando")
+
     ready_status = "approved" if require_approval else "pending"
     for post in posts:
         if post.get("status") != ready_status:

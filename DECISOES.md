@@ -4,6 +4,30 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## 🆕 COMANDOS PELO TELEGRAM + REUNIÃO NO DOMINGO (02/08/2026)
+
+Duas ordens dele: *"Transfira a reunião estratégia de segunda para domingo às
+9 da noite"* e *"Gostaria de poder te dar comandos dos Telegram."*
+
+**Reunião:** era segunda 8h de Itajaí, agora é **domingo 21h**. A conta passou a
+ser feita no fuso dele, não em UTC — domingo 21h em Itajaí é segunda 00h UTC, e
+escrever "segunda, hora 0" seria a armadilha que faz a reunião cair no dia
+errado. Testado nos 5 casos de borda (20h59 não dispara, 21h00 dispara).
+
+**Comandos (`publisher/comandos.py`):** ele digita a palavra sozinha no Telegram
+e o robô executa na rodada seguinte. São 6: `ajuda` · `estado` · `ver fila` ·
+`placar` · `pausar` · `voltar`.
+- Entram ANTES da recepcionista, senão "pausar" viraria papo do Gemini.
+- Só casam com a **frase inteira** (até 4 palavras): "pausar" é comando, mas
+  "acho que a gente devia pausar os posts de foto" é conversa. Testado.
+- **Nenhum comando publica.** Quem publica continua sendo o botão Aprovar.
+- `pausar` grava `content/.pausado` e o `run.py` para antes do laço de
+  publicação — mas DEPOIS da recepção de mensagens, de propósito: senão ele
+  pausaria e não teria como mandar `voltar` pelo celular.
+
+⚠️ **Limite honesto, e ele foi avisado:** o robô acorda a cada 30 min. Não é
+chat ao vivo — o comando entra na próxima rodada.
+
 ## ✅ EU ESTAVA ERRADO: O DISCO NÃO É PROBLEMA — o garimpo voltou (02/08/2026)
 
 **Correção de uma afirmação minha.** Eu disse a ele que o garimpo "não cabe na

@@ -340,6 +340,27 @@ def _responder(texto, quando, token, chat_id):
     from telegram_approve import _guardar_recado  # import local: ver nota no telegram_approve.py
     from mandar_recado import mandar
 
+    # COMANDO vem antes de tudo (pedido dele em 02/08/2026: "gostaria de poder
+    # te dar comandos dos Telegram"). Sem isto, "pausar" viraria papo do Gemini
+    # em vez de travar a publicação. Se não for comando, segue o fluxo antigo.
+    try:
+        import comandos
+        eh_comando, resposta_cmd = comandos.interpretar(texto)
+    except Exception as exc:  # noqa: BLE001 — comando nunca derruba a recepção
+        print(f"[comandos][aviso] falhou ({str(exc)[:120]}) — segue pro Gemini")
+        eh_comando, resposta_cmd = False, None
+
+    if eh_comando:
+        print(f"[comandos] executei: {texto[:40]!r}")
+        if token and chat_id:
+            try:
+                mandar(token, chat_id, resposta_cmd)
+                return
+            except Exception as exc:  # noqa: BLE001
+                print(f"[comandos][aviso] Telegram recusou ({str(exc)[:120]}) — vira recado")
+        _guardar_recado(texto, quando, token, chat_id)
+        return
+
     try:
         escalar, resposta = gerar_resposta(texto)
     except Exception as exc:  # noqa: BLE001 — qualquer falha aqui cai pro recado simples

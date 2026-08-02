@@ -36,9 +36,15 @@ FILA = os.path.join(RAIZ, "content", "queue")
 PAUTA_EXTRA = os.path.join(RAIZ, "content", "pauta_extra.md")
 ESTADO = os.path.join(RAIZ, "content", ".reporte_semanal")
 
-# Segunda-feira, a partir das 11h UTC (8h em Itajai).
-DIA_DA_REUNIAO = 0
-HORA_MINIMA_UTC = 11
+# DOMINGO às 21h de Itajaí — ordem dele em 02/08/2026 ("transfira a reunião
+# estratégica de segunda para domingo às 9 da noite"). Antes era segunda 8h.
+#
+# A conta é feita no fuso DELE, não em UTC, de propósito: domingo 21h em Itajaí
+# é segunda 00h em UTC, e escrever isso como "segunda, hora 0" é o tipo de
+# armadilha que faz a reunião cair no dia errado no horário de verão.
+FUSO_ITAJAI = timezone(timedelta(hours=-3))
+DIA_DA_REUNIAO = 6          # 0=segunda ... 6=domingo
+HORA_MINIMA_LOCAL = 21
 
 
 def _semana(dt):
@@ -194,7 +200,8 @@ def main():
     semana = _semana(agora)
 
     if not (simular or forcar):
-        if agora.weekday() != DIA_DA_REUNIAO or agora.hour < HORA_MINIMA_UTC:
+        local = agora.astimezone(FUSO_ITAJAI)
+        if local.weekday() != DIA_DA_REUNIAO or local.hour < HORA_MINIMA_LOCAL:
             return
         if _ja_mandou(semana):
             return
