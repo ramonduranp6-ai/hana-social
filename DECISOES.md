@@ -4,6 +4,26 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## 🚫 NÃO APAGAR FOTO DO ROLO PARA "LIBERAR ESPAÇO" — recusado em 02/08/2026
+
+Ele propôs: *"acho que vc poderia ir deletando as fotos que não são a hana para
+ir liberando espaço e baixando as demais."* **Recusei, e a recusa não se
+reabre** nem com autorização dele. Dois motivos, os dois medidos:
+
+1. **Não libera espaço nenhum.** O C: inteiro tem **143,4 GB usados**, e só o
+   rolo "pesa" 112,4 GB no Explorer. Se as fotos estivessem mesmo no disco,
+   o usado seria muito maior. Elas são **placeholder de nuvem** — ocupam ~0.
+   Apagar 32 mil atalhos libera ~0 GB.
+2. **Apagaria os originais dele em todos os aparelhos.** `~\iCloudPhotos\Photos`
+   é pasta SINCRONIZADA. Apagar ali apaga no iPhone e na conta.
+   E o detector do garimpo só responde "tem cachorro / tem pessoa" — ele **não
+   sabe** distinguir a Hana de outro cachorro nem reconhecer foto de família.
+   Seria apagar acervo pessoal insubstituível com base num classificador que
+   já errou na nossa amostra (dos 25 aprovados, 17 não eram a Hana).
+
+Se o assunto voltar: a saída legítima é ele **liberar espaço de outras coisas**
+(precisa de ~40 GB) ou **desistir do acervo antigo** — nunca apagar o rolo.
+
 ## 🛑 GARIMPO PARADO — ESPERANDO DECISÃO DELE (01/08/2026, 13h)
 
 **O garimpo bateu num muro que não é de software: 99,8% do rolo está SÓ NA
