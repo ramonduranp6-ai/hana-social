@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 01/08/2026 21:41. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 02/08/2026 18:30. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -23,11 +23,11 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-02T00:33:48Z workflow_dispatch success
-2026-08-02T00:19:51Z workflow_dispatch success
-2026-08-02T00:03:21Z workflow_dispatch success
+2026-08-02T20:14:52Z schedule success
+2026-08-02T15:43:41Z schedule success
+2026-08-02T11:45:10Z schedule success
 ```
-- Vigia local (Agendador do Windows): próxima execução domingo, 2 de agosto de 2026 18:10:00
+- Vigia local (Agendador do Windows): próxima execução segunda-feira, 3 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
@@ -48,25 +48,75 @@ mudança de status nem publicar.
 - Brutas a processar: 26 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34430
+- Fotos do iPhone sincronizadas (iCloud): 34436
+
+## 🤖 O que o robô do lote fez no domingo
+# Recado do robô do lote (semanal)
+
+**Não montei lote esta semana** — nenhum vídeo novo em `01 - brutas (suba aqui)`, de propósito (foto parada já deu zero em salvos, compartilhamentos e seguidores ganhos, 4 vezes seguidas — regra fixa desde 31/07/2026).
+
+🎬 CENAS PRA FILMAR — Hana
+
+POR QUE ESTA SEMANA: o acervo inteiro está reprovado. Nos 12 vídeos brutos a
+Hana aparece de costas e o rosto dela não surge em nenhum frame — e a auditoria
+achou o mesmo defeito no Reel de 10/08, que são 14 segundos com ela de costas.
+Sem cena nova, não nasce Reel.
+
+AS 4 REGRAS (valem para todas as cenas):
+1. Celular EM PÉ (vertical) e no CHÃO, na altura dos olhos dela.
+2. O ROSTO DELA DE FRENTE NOS 2 PRIMEIROS SEGUNDOS. Esta é a regra que faltava
+   e é a que mais importa: o primeiro frame é o que segura quem está rolando.
+   Se precisar, chame o nome dela ou use petisco fora de quadro para o olhar vir.
+3. Som do ambiente, sem música tocando. O nicho roda em áudio original.
+4. 15 a 30 segundos cada, de dia, perto da janela. Câmera PARADA — se a câmera
+   se mexe, o assunto sai de quadro no meio (foi o que estragou o teste anterior).
+
+CENA 1 — "A PATROA MANDOU"   (pilar: A PATROA MANDA)
+Ela te encara ou late pedindo alguma coisa, e você levanta e obedece na hora.
+Comece com ela já olhando para a câmera. O que faz a cena funcionar é o
+DESFECHO visível: ela pede, você cumpre, e dá para ver que cumpriu.
+
+CENA 2 — "O SOFÁ É MEU"   (pilar: A PATROA MANDA)
+Você tenta sentar no seu lugar e ela já está esparramada lá. Você desiste e
+senta no chão. Filme ela sem sair do lugar — a graça é a cara de quem não vai
+ceder. Se ela levantar e sair, a cena morre; espere outra hora.
+
+CENA 3 — "INIMIGO DA PATROA"   (pilar: INIMIGOS DA PATROA)
+Ela contra o aspirador, o secador ou a chuva. ATENÇÃO ao desfecho, que é regra:
+ela LATE E EXPULSA, ou IGNORA E SAI ANDANDO. **Nunca foge.** Cachorro com medo
+contradiz o posicionamento — o perfil é "ela manda", não "ela se assusta".
+Este pilar não tem UM único vídeo no acervo. É o que mais falta.
+
+BÔNUS, se sobrar tempo — "ACORDANDO A PATROA"   (pilar: MICRO NO APÊ)
+Ela dormindo, você chama baixinho, ela levanta a cabeça devagar com cara de
+sono. Bem perto do rosto. É a mais fácil de conseguir e serve de reserva.
+
+ONDE SALVAR:
+C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\01 - brutas (suba aqui)
+Dá para jogar direto pelo OneDrive do celular.
+
+Filme cada cena DUAS VEZES. Sai mais barato repetir na hora do que descobrir na
+segunda-feira que o rosto não apareceu e perder a semana.
+
+Assim que os arquivos aparecerem lá, o robô volta a trabalhar sozinho e o
+Diretor de Criação fecha o trecho, o gancho e a legenda na reunião de segunda.
+
+⏳ **1ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
 
 ## Últimas mudanças no projeto
 ```
-677747d chore: atualiza estado da fila [skip ci]
-93233fd chore: atualiza estado da fila [skip ci]
-047ddf3 trilha diferente para cada video + regra das 5 linhas com dentes
-78763b5 chore: atualiza estado da fila [skip ci]
-257489e trilha do Reel de 10/08: sai o lo-fi de velorio, entra o pizzicato comico
-c0c59d2 regra: toda mensagem do bot leva ETIQUETA e diz o que responder
-a43377f chore: atualiza estado da fila [skip ci]
-969abb6 feat: canal de midia avulsa no Telegram + Reel-slideshow de teste
+e8c50c8 Telegram responde de verdade: escalar deixa de ser beco sem saida
+711ed09 chore: recado do lote semanal [skip ci]
+a38473f recado fechado + .mcp.json do conector kairogen-hana
+2207716 chore: atualiza estado da fila [skip ci]
+b70cb0a feat: comandos pelo Telegram + reuniao estrategica passa para domingo 21h
+b6b33c7 correcao: o disco NAO era problema - garimpo religado
+8b9ea65 decisao: nao apagar foto do rolo do iCloud para liberar espaco (recusado)
+dee604c aprovados: Reel de 10/08 refeito e slideshow entra para 12/08
 ```
 Alterações não commitadas:
 ```
-M content/queue/2026-08-10_escolheu-o-canal/post.json
- M content/queue/2026-08-10_escolheu-o-canal/video.mp4
- M content/recados.md
-?? content/queue/2026-08-12_a-patroa-mimada/
+M DECISOES.md
 ```
 
 ## Decisões e contexto
@@ -75,6 +125,92 @@ M content/queue/2026-08-10_escolheu-o-canal/post.json
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
+
+## 🆕 COMANDOS PELO TELEGRAM + REUNIÃO NO DOMINGO (02/08/2026)
+
+Duas ordens dele: *"Transfira a reunião estratégia de segunda para domingo às
+9 da noite"* e *"Gostaria de poder te dar comandos dos Telegram."*
+
+**Reunião:** era segunda 8h de Itajaí, agora é **domingo 21h**. A conta passou a
+ser feita no fuso dele, não em UTC — domingo 21h em Itajaí é segunda 00h UTC, e
+escrever "segunda, hora 0" seria a armadilha que faz a reunião cair no dia
+errado. Testado nos 5 casos de borda (20h59 não dispara, 21h00 dispara).
+
+**Comandos (`publisher/comandos.py`):** ele digita a palavra sozinha no Telegram
+e o robô executa na rodada seguinte. São 6: `ajuda` · `estado` · `ver fila` ·
+`placar` · `pausar` · `voltar`.
+- Entram ANTES da recepcionista, senão "pausar" viraria papo do Gemini.
+- Só casam com a **frase inteira** (até 4 palavras): "pausar" é comando, mas
+  "acho que a gente devia pausar os posts de foto" é conversa. Testado.
+- **Nenhum comando publica.** Quem publica continua sendo o botão Aprovar.
+- `pausar` grava `content/.pausado` e o `run.py` para antes do laço de
+  publicação — mas DEPOIS da recepção de mensagens, de propósito: senão ele
+  pausaria e não teria como mandar `voltar` pelo celular.
+
+⚠️ **Limite honesto, e ele foi avisado:** o robô acorda a cada 30 min. Não é
+chat ao vivo — o comando entra na próxima rodada.
+
+## Onde paramos (02/08/2026, fim do dia)
+
+**Fila com 5 posts aprovados, até 12/08.** 03/08, 05/08 e 07/08 são foto
+(aprovadas antes da regra nova, exceção declarada por ele); 10/08 é o Reel
+recortado em 9,8s com o pizzicato; 12/08 é o Reel-slideshow "a patroa mimada"
+com ukulele — **o teste medido**. Ler o placar no dia 1 e no dia 3 do 12/08:
+é ele que decide se slideshow volta ao cardápio ou sai de vez.
+
+**Telegram virou canal de verdade.** Comandos (`ajuda`, `estado`, `ver fila`,
+`placar`, `pausar`, `voltar`) e a recepcionista agora responde em vez de só
+anotar — escalar deixou de descartar o que ela já sabia. Reunião estratégica
+passou para **domingo 21h** no fuso de Itajaí.
+
+**Garimpo parado por ora, na rodada 4** (~3.800 de 34.442 varridos, 36 fotos
+dela em `02 - selecionadas`). Retomar é `python studio/garimpo.py --minutos 55`
++ eu triar os aprovados e apagar as cópias que não são ela.
+
+**O que só depende dele:** filmar. Depois de 12/08 a fila acaba, e a regra
+pede Reel de vídeo real com o rosto dela — o acervo antigo não tem isso
+(conferido vídeo a vídeo, inclusive o único 1080x1920, que não serve).
+
+## ✅ EU ESTAVA ERRADO: O DISCO NÃO É PROBLEMA — o garimpo voltou (02/08/2026)
+
+**Correção de uma afirmação minha.** Eu disse a ele que o garimpo "não cabe na
+máquina", porque o rolo pesa 112,4 GB e sobravam 94 GB. **Estava errado**: os
+112,4 GB são o tamanho LÓGICO dos placeholders; o iCloud não guarda no disco o
+que o robô abre.
+
+Medido: varrer 20 arquivos com o disco em 94,027 GB livres terminou com
+**94,173 GB livres** — sobrou MAIS espaço do que antes (parte por eu ter
+apagado 104,6 MB de cópias, o resto porque o iCloud solta o que baixou).
+Consumo líquido de disco por arquivo varrido: **praticamente zero**.
+
+**O único custo real é TEMPO** (o download de cada foto), e ele varia muito
+conforme o trecho: de 1,7 a 5 arquivos/min. Os ~32,6 mil que faltam dão algo
+entre **110 e 320 horas** de PC ligado — em pedaços, sem pressa.
+
+**Rotina combinada com ele:** rodar `python studio/garimpo.py --minutos 55`,
+eu olhar os aprovados um a um e **apagar as cópias que não são a Hana** da
+pasta `garimpo\` (só cópias do projeto — nunca o rolo, ver a decisão abaixo).
+Na 1ª limpeza: 17 cópias apagadas, 104,6 MB, sobrando as 8 que são ela.
+
+## 🚫 NÃO APAGAR FOTO DO ROLO PARA "LIBERAR ESPAÇO" — recusado em 02/08/2026
+
+Ele propôs: *"acho que vc poderia ir deletando as fotos que não são a hana para
+ir liberando espaço e baixando as demais."* **Recusei, e a recusa não se
+reabre** nem com autorização dele. Dois motivos, os dois medidos:
+
+1. **Não libera espaço nenhum.** O C: inteiro tem **143,4 GB usados**, e só o
+   rolo "pesa" 112,4 GB no Explorer. Se as fotos estivessem mesmo no disco,
+   o usado seria muito maior. Elas são **placeholder de nuvem** — ocupam ~0.
+   Apagar 32 mil atalhos libera ~0 GB.
+2. **Apagaria os originais dele em todos os aparelhos.** `~\iCloudPhotos\Photos`
+   é pasta SINCRONIZADA. Apagar ali apaga no iPhone e na conta.
+   E o detector do garimpo só responde "tem cachorro / tem pessoa" — ele **não
+   sabe** distinguir a Hana de outro cachorro nem reconhecer foto de família.
+   Seria apagar acervo pessoal insubstituível com base num classificador que
+   já errou na nossa amostra (dos 25 aprovados, 17 não eram a Hana).
+
+Se o assunto voltar: a saída legítima é ele **liberar espaço de outras coisas**
+(precisa de ~40 GB) ou **desistir do acervo antigo** — nunca apagar o rolo.
 
 ## 🛑 GARIMPO PARADO — ESPERANDO DECISÃO DELE (01/08/2026, 13h)
 

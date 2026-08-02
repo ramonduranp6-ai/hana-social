@@ -28,6 +28,27 @@ e o robô executa na rodada seguinte. São 6: `ajuda` · `estado` · `ver fila` 
 ⚠️ **Limite honesto, e ele foi avisado:** o robô acorda a cada 30 min. Não é
 chat ao vivo — o comando entra na próxima rodada.
 
+## Onde paramos (02/08/2026, fim do dia)
+
+**Fila com 5 posts aprovados, até 12/08.** 03/08, 05/08 e 07/08 são foto
+(aprovadas antes da regra nova, exceção declarada por ele); 10/08 é o Reel
+recortado em 9,8s com o pizzicato; 12/08 é o Reel-slideshow "a patroa mimada"
+com ukulele — **o teste medido**. Ler o placar no dia 1 e no dia 3 do 12/08:
+é ele que decide se slideshow volta ao cardápio ou sai de vez.
+
+**Telegram virou canal de verdade.** Comandos (`ajuda`, `estado`, `ver fila`,
+`placar`, `pausar`, `voltar`) e a recepcionista agora responde em vez de só
+anotar — escalar deixou de descartar o que ela já sabia. Reunião estratégica
+passou para **domingo 21h** no fuso de Itajaí.
+
+**Garimpo parado por ora, na rodada 4** (~3.800 de 34.442 varridos, 36 fotos
+dela em `02 - selecionadas`). Retomar é `python studio/garimpo.py --minutos 55`
++ eu triar os aprovados e apagar as cópias que não são ela.
+
+**O que só depende dele:** filmar. Depois de 12/08 a fila acaba, e a regra
+pede Reel de vídeo real com o rosto dela — o acervo antigo não tem isso
+(conferido vídeo a vídeo, inclusive o único 1080x1920, que não serve).
+
 ## ✅ EU ESTAVA ERRADO: O DISCO NÃO É PROBLEMA — o garimpo voltou (02/08/2026)
 
 **Correção de uma afirmação minha.** Eu disse a ele que o garimpo "não cabe na
