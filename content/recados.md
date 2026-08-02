@@ -13,4 +13,4 @@ sensível.
 - [x] 01/08 — musica de velorio do post 4: causa achada (faixa lo-fi embutida) e previa nova mandada no Telegram com trilha comica + recorte.
 - [x] 02/08 — musica repetida nos dois videos: o slideshow passou para o ukulele, o Reel de 10/08 ficou com o pizzicato.
 - [x] 02/08 — 'Aprovo': os dois videos entraram na fila (10/08 com o corte e a trilha nova; slideshow agendado para 12/08).
-- [ ] **02/08/2026 12:26 UTC** — Bom dia amigo,   Mude a reunião estratégica de segunda para domingo à noite. Será melhor e terei mais tempo para analisar o que vcs trouxerem!
+- [x] 02/08 — reuniao estrategica movida para DOMINGO 21h (fuso de Itajai), testada nos casos de borda.
