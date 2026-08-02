@@ -11,5 +11,5 @@ sensível.
 - [x] 31/07 — os 3 recados anteriores foram respondidos na conversa de 31/07 (plano de conteudo aprovado pelo comite; pasta de aprovacao limpa e renumerada).
 - [x] 01/08 — os 2 recados da manhã foram respondidos no Telegram (garimpo religado; fila entregue com mídia e legenda).
 - [x] 01/08 — musica de velorio do post 4: causa achada (faixa lo-fi embutida) e previa nova mandada no Telegram com trilha comica + recorte.
-- [ ] **02/08/2026 00:15 UTC** — Que top, gostei dos dois, mas a música deles eh igual. Da pra trocar uma delas?
-- [ ] **02/08/2026 00:22 UTC** — Aprovo
+- [x] 02/08 — musica repetida nos dois videos: o slideshow passou para o ukulele, o Reel de 10/08 ficou com o pizzicato.
+- [x] 02/08 — 'Aprovo': os dois videos entraram na fila (10/08 com o corte e a trilha nova; slideshow agendado para 12/08).

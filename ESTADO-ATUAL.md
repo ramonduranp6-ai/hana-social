@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 01/08/2026 13:03. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 01/08/2026 21:41. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -11,6 +11,7 @@ decisões, use `DECISOES.md`.
 | 2026-08-05T21:00:00Z | 2026-08-05_navio-importacao | image | approved |
 | 2026-08-07T21:00:00Z | 2026-08-07_banho-de-sol | image | approved |
 | 2026-08-10T21:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
+| 2026-08-12T21:00:00Z | 2026-08-12_a-patroa-mimada | reel | approved |
 
 ## Publicados: 5
 - 2026-07-22_bar-hana — IG `18118796690302997`
@@ -22,9 +23,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-01T15:45:40Z schedule success
-2026-08-01T13:10:41Z workflow_dispatch success
-2026-08-01T13:07:54Z workflow_dispatch success
+2026-08-02T00:33:48Z workflow_dispatch success
+2026-08-02T00:19:51Z workflow_dispatch success
+2026-08-02T00:03:21Z workflow_dispatch success
 ```
 - Vigia local (Agendador do Windows): próxima execução domingo, 2 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -47,23 +48,25 @@ mudança de status nem publicar.
 - Brutas a processar: 26 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34428
+- Fotos do iPhone sincronizadas (iCloud): 34430
 
 ## Últimas mudanças no projeto
 ```
-ce6dc8f feat: 'me mostra a fila no celular' - entrega os posts com midia e legenda no Telegram
-bcbd448 chore: projeto sai do amarelo + robo de garimpo + auditoria da trilha
-2d942cc chore: atualiza estado da fila [skip ci]
-21248c8 decisao: ronda de engajamento suspensa (ordem dele) + previa de trilha retida na auditoria
-687f66a chore: atualiza estado da fila [skip ci]
-a5b30aa feat: pedido de cena escrito + registra decisoes do dia
-6ccec1e regra: provar o perfil do Chrome pelo e-mail antes de usar
-b3fcc4a feat: Diretor de Criacao (o Criador) - o cargo que faltava no fluxo
+677747d chore: atualiza estado da fila [skip ci]
+93233fd chore: atualiza estado da fila [skip ci]
+047ddf3 trilha diferente para cada video + regra das 5 linhas com dentes
+78763b5 chore: atualiza estado da fila [skip ci]
+257489e trilha do Reel de 10/08: sai o lo-fi de velorio, entra o pizzicato comico
+c0c59d2 regra: toda mensagem do bot leva ETIQUETA e diz o que responder
+a43377f chore: atualiza estado da fila [skip ci]
+969abb6 feat: canal de midia avulsa no Telegram + Reel-slideshow de teste
 ```
 Alterações não commitadas:
 ```
-M DECISOES.md
+M content/queue/2026-08-10_escolheu-o-canal/post.json
+ M content/queue/2026-08-10_escolheu-o-canal/video.mp4
  M content/recados.md
+?? content/queue/2026-08-12_a-patroa-mimada/
 ```
 
 ## Decisões e contexto
