@@ -12,3 +12,4 @@ sensível.
 - [x] 01/08 — os 2 recados da manhã foram respondidos no Telegram (garimpo religado; fila entregue com mídia e legenda).
 - [x] 01/08 — musica de velorio do post 4: causa achada (faixa lo-fi embutida) e previa nova mandada no Telegram com trilha comica + recorte.
 - [ ] **02/08/2026 00:15 UTC** — Que top, gostei dos dois, mas a música deles eh igual. Da pra trocar uma delas?
+- [ ] **02/08/2026 00:22 UTC** — Aprovo
