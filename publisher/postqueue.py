@@ -21,6 +21,7 @@ de 31/07/2026 achou que só o caminho de FOTO gravava post.json pelo código (o
 Reel de 10/08 foi escrito à mão), então a validação não podia morar só lá.
 """
 
+import hashlib
 import json
 import os
 import shutil
@@ -116,9 +117,29 @@ def criar_post(post_id, meta):
 
 
 def media_url(post, base_url):
-    """URL pública da mídia (a Graph API baixa daqui)."""
+    """URL pública da mídia (a Graph API e o Telegram baixam daqui).
+
+    🔴 O `?v=` no fim NÃO é enfeite — é o conserto de um erro que chegou ao
+    Ramón em 02/08/2026. Um Reel foi refeito do zero e regravado NO MESMO
+    caminho `video.mp4`. O arquivo novo subiu certo para o GitHub (conferido:
+    mesmo tamanho em byte que o local), mas o Telegram **guarda a mídia pela
+    URL** e reenviou o vídeo ANTIGO do cache. Ele viu duas vezes a mesma peça e
+    respondeu "Vc me mandou o mesmo vídeo! Qual a sua dificuldade?".
+
+    A assinatura do conteúdo entra na URL, então mídia diferente é sempre URL
+    diferente e nenhum cache no meio do caminho consegue servir a versão velha.
+    Se o arquivo local não existir (o publicador roda no GitHub Actions, onde
+    ele existe), a URL sai sem assinatura em vez de quebrar.
+    """
     rel = f"content/queue/{post['_id']}/{post['media_file']}"
-    return base_url.rstrip("/") + "/" + rel
+    url = base_url.rstrip("/") + "/" + rel
+    local = os.path.join(QUEUE_DIR, post["_id"], post["media_file"])
+    try:
+        with open(local, "rb") as f:
+            assinatura = hashlib.sha1(f.read()).hexdigest()[:10]
+    except OSError:
+        return url
+    return f"{url}?v={assinatura}"
 
 
 def is_due(post, now=None):

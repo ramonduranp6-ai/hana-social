@@ -1,12 +1,12 @@
 {
   "type": "reel",
-  "media_file": "video.mp4",
+  "media_file": "video-v6.mp4",
   "caption": "Fiz a avaliação anual do meu humano.\nMe vestiu de rosa: passou. Virou meu colchão: passou.\nAí me deu CENOURA. Cenoura.\nReprovado — e olha que ele tinha começado bem.\nQual seria a nota do seu humano aí?\n\n#exoticbullymicro #trililacmerle #bullyfilhote #bullybrasil",
   "scheduled_for": "2026-08-12T21:00:00Z",
   "status": "pending",
   "pilar": "A PATROA MANDA",
   "audio_titulo": "áudio original da cena (o nicho roda em áudio original — 4 de 4 Reels medidos em 31/07)",
   "nota": "VERSAO 6. A v1 (plano unico de 15s com uma frase parada) foi reprovada pelo Ramon: 'coisa de amador, vc so colocou um texto'. Refeita em reuniao de 3 diretores com debate cruzado. Agora sao 7 cortes em 11,8s, com punch-in, zoom-out, texto entrando no tempo certo e audio original da cena. A auditoria reprovou as versoes 2, 3, 4 e 5 antes de liberar esta.",
-  "notified": true,
-  "notified_fingerprint": "66447237794d3c3fa70b0dc0396b6e899d30ec1d842f93f6e265749786ca4c4c"
+  "notified": false,
+  "conteudo_mudou": true
 }
