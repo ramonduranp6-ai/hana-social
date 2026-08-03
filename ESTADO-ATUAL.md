@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 03/08/2026 08:17. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 03/08/2026 08:49. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -51,7 +51,7 @@ mudança de status nem publicar.
 - Brutas a processar: 29 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34451
+- Fotos do iPhone sincronizadas (iCloud): 34452
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -108,6 +108,7 @@ Diretor de Criação fecha o trecho, o gancho e a legenda na reunião de segunda
 
 ## Últimas mudanças no projeto
 ```
+0f555eb Reel de 12/08 aprovado por ele; licoes gravadas na skill
 e7d4298 chore: atualiza estado da fila [skip ci]
 1de9481 chore: atualiza estado da fila [skip ci]
 f9f2af1 o Reel vira HISTORIA e ganha trilha propria
@@ -115,12 +116,10 @@ f9f2af1 o Reel vira HISTORIA e ganha trilha propria
 8225430 conserta o erro que fez ele ver o mesmo video duas vezes
 27c4d4d chore: atualiza estado da fila [skip ci]
 1e77df8 reel de 12/08 refeito: 7 cortes, 6 versoes, 5 reprovacoes de auditoria
-f3a4b0b reel de 12/08 entregue no Telegram (anexo na conversa nao serve, ele esta no celular)
 ```
 Alterações não commitadas:
 ```
 M .claude/skills/hana-social/SKILL.md
- M DECISOES.md
  M estrategia/decisoes-2026-08-02.json
 ```
 

@@ -543,7 +543,19 @@ usar os MOVs da pasta de brutas, duas pegadinhas já pagas:
   com fonte grande em vez de uma linha só.
 - Sempre extrair alguns frames do resultado e **olhar** antes de dar por pronto.
 
-## 3b. Ronda de engajamento (comentar em perfis do nicho)
+## 3b. Ronda de engajamento — ☠️ MORTA em 03/08/2026, NÃO REABRIR
+
+O conselheiro pediu a morte **sem nem fazer o teste de 10 comentários** que
+estava combinado: 10 comentários rendem de 0 a 2 seguidores, indistinguível de
+ruído, ao custo de 60 a 120 mil tokens — *"teste que não pode responder não é
+teste"*. Como a ronda tinha sido combinada com o Ramón em 27-28/07, só ele podia
+encerrar, e encerrou: **"Se o conselho que matar, pode matar."**
+Economia: 200 a 350 mil tokens por semana. **Não propor de novo**; se o assunto
+voltar, quem reabre é ele. O texto abaixo fica só como registro do que foi.
+
+<details><summary>como era (histórico, não executar)</summary>
+
+Aprovada pelo Ramón em 27/07/2026, **3x por semana, ~10 comentários**. Não é
 
 Aprovada pelo Ramón em 27/07/2026, **3x por semana, ~10 comentários**. Não é
 robô: a API do Instagram não comenta em post de terceiro, e robô comentando pelo
@@ -565,6 +577,8 @@ Caminho barato (descoberto na primeira ronda — o resto é desperdício):
 
 Custo real: a primeira ronda de 4 comentários saiu **cara** (descoberta do
 caminho). Medir de novo na próxima antes de prometer barato pra ele.
+
+</details>
 
 ## 4. ÚLTIMO PASSO, OBRIGATÓRIO: deixar o estado pronto para a próxima conversa
 

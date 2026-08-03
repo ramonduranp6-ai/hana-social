@@ -60,7 +60,7 @@
   ],
   "vetos_do_conselheiro": [
     "Nao mexer nos 3 posts de foto ja aprovados (hashtag, legenda ou corte) - formato ja condenado e post ja aprovado por ele.",
-    "Ronda de engajamento: o conselheiro pediu morte SEM o teste de 10 comentarios (10 comentarios rendem de 0 a 2 seguidores, indistinguivel de ruido, por 60-120 mil tokens). Como foi combinada COM o Ramon, so ele encerra. PENDENTE DE UMA LINHA DELE.",
+    "RONDA DE ENGAJAMENTO: MORTA. O conselheiro pediu a morte sem nem o teste de 10 comentarios (10 comentarios rendem de 0 a 2 seguidores, indistinguivel de ruido, por 60-120 mil tokens: 'teste que nao pode responder nao e teste'). Como a ronda tinha sido combinada COM o Ramon em 28/07, so ele podia encerrar - e encerrou em 03/08/2026: 'Se o conselho que matar, pode matar.' NAO REABRIR sem ordem dele. Economia: 200 a 350 mil tokens por semana.",
     "Laudo de auditoria nao vale como fato se for checavel por codigo em 2 comandos - checar antes de citar."
   ],
   "erro_registrado": "A auditoria de 31/07 disse que 'o rosto nao aparece em NENHUM frame' dos 12 videos. Conferido em 02/08 com ffprobe + grade de frames: nunca existiram 12 videos (9 eram Live Photo de ~2s), e no IMG_1725.MOV (praia) ha ~4 segundos de rosto em perfil. O laudo errado fez 3 diretores mudarem de voto.",
