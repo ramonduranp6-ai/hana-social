@@ -497,6 +497,19 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
 7. **Fechar todas as abas** do navegador ao terminar.
 8. **Economia:** trabalho mecânico em Python local (custo zero); IA só onde
    agrega; a entrega final e o raciocínio ficam com o Claude.
+8b. **🚨 ELE APROVA. O CLAUDE DECIDE. PERGUNTA OPERACIONAL É PROIBIDA**
+   (ordem dele, 03/08/2026: *"Cara. Vc decide. Eu só aprovo. Pare de fazer
+   pergunta operacional"*). Eu tinha achado uma legenda repetida na fila e
+   perguntei se ele queria que eu reescrevesse — em vez de reescrever e mostrar.
+   **O que NÃO se pergunta** (decidir e apresentar pronto): legenda, gancho,
+   corte, trilha, enquadramento, ordem da fila, qual foto, qual trecho, nome de
+   arquivo, se conserta um defeito que eu mesmo achei, qual ferramenta usar.
+   **O que AINDA se pergunta**, porque é dele e não meu: publicar ou não
+   (o Aprovar/Recusar continua), gasto de dinheiro, mudar regra que ele deu,
+   porta sem volta, e conflito entre uma ordem nova e uma regra antiga dele
+   (conduta 6 do `~\.claude\CLAUDE.md`).
+   Régua antes de mandar a mensagem: **"isto é decisão dele, ou é eu pedindo
+   permissão para trabalhar?"** Se for a segunda, faz e mostra o resultado.
 9. **RESPOSTA CURTA — 🚨 ELE JÁ COBROU TRÊS VEZES (27/07, 31/07 e 01/08/2026).**
    Na terceira: *"amigo, seja resumido pelo amor de deus… Já pedi para salvar
    isso na skill… voce escreve uma biblia sempre."* Ou seja: eu li esta regra,

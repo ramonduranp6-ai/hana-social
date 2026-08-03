@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 03/08/2026 08:49. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 03/08/2026 08:58. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -12,7 +12,7 @@ decisões, use `DECISOES.md`.
 | 2026-08-07T21:00:00Z | 2026-08-07_banho-de-sol | image | approved |
 | 2026-08-10T21:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
 | 2026-08-12T21:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
-| 2026-08-14T21:00:00Z | 2026-08-14_a-patroa-mimada | reel | approved |
+| 2026-08-14T21:00:00Z | 2026-08-14_a-patroa-mimada | reel | pending |
 
 ## Publicados: 5
 - 2026-07-22_bar-hana — IG `18118796690302997`
@@ -108,6 +108,7 @@ Diretor de Criação fecha o trecho, o gancho e a legenda na reunião de segunda
 
 ## Últimas mudanças no projeto
 ```
+0ef7217 ronda de engajamento MORTA por ordem dele
 0f555eb Reel de 12/08 aprovado por ele; licoes gravadas na skill
 e7d4298 chore: atualiza estado da fila [skip ci]
 1de9481 chore: atualiza estado da fila [skip ci]
@@ -115,12 +116,11 @@ f9f2af1 o Reel vira HISTORIA e ganha trilha propria
 30cf945 chore: atualiza estado da fila [skip ci]
 8225430 conserta o erro que fez ele ver o mesmo video duas vezes
 27c4d4d chore: atualiza estado da fila [skip ci]
-1e77df8 reel de 12/08 refeito: 7 cortes, 6 versoes, 5 reprovacoes de auditoria
 ```
 Alterações não commitadas:
 ```
 M .claude/skills/hana-social/SKILL.md
- M estrategia/decisoes-2026-08-02.json
+ M content/queue/2026-08-14_a-patroa-mimada/post.json
 ```
 
 ## Decisões e contexto
