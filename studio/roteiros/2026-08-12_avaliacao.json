@@ -1,0 +1,49 @@
+{
+  "titulo": "O TESTE DO MEU HUMANO",
+  "piada": "A patroa testa o dono item por item. Ele passa em quase tudo — até dar cenoura para um cachorro. Reprovado, decretado da cama com a vista da cidade atrás. E o último frame é o mesmo do primeiro, então o Reel reinicia sem costura.",
+  "origem": "Síntese da reunião de 02/08/2026 (Criação + Redes + Criativo, com debate cruzado). VERSÃO 5. A auditoria reprovou as v2, v3 e v4 SEMPRE pelo mesmo motivo: o corte da bolinha deixava a cachorra pequena no quadro. Tentei trocar o trecho e ampliar 2x; não resolveu, porque a fonte é um plano aberto e ampliar plano aberto só perde nitidez. Na v5 esse clipe SAIU da peça e as duas batidas do meio passaram a ser closes de verdade: ela dormindo em cima da perna dele, e a cara de decepção com a cenoura. Lição: quando o defeito é do material, troca-se o material — não se insiste no ajuste.",
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_filhote_cenoura.mp4",
+      "de": 0.0, "ate": 2.0, "movimento": "seco",
+      "_nota": "Abertura: rosto na tela inteira, a mão entra com a cenoura. É daqui que sai o loop."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/135b6565-9f29-4e4c-b83d-9a434936b424.mp4",
+      "de": 3.2, "ate": 5.0, "movimento": "punch", "forca": 0.14,
+      "_nota": "Filhote de suéter ROSA encarando de baixo para cima. O texto fala do suéter — a imagem e a frase têm que dizer a mesma coisa."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/24023CD7-9018-4D40-8792-200F4F0AD9B1.mp4",
+      "de": 1.8, "ate": 3.6, "movimento": "seco",
+      "_nota": "Ela dormindo com a cara em cima da perna dele. A perna aparece e é a piada: ele É o colchão. Trecho aberto na v6 — em 3,0-4,8 a auditoria reprovou por estar fechado e borrado demais, a cor dela nem se lia. Aqui dá para ver o cachorro inteiro, a cara dormindo e a perna."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_filhote_cenoura.mp4",
+      "de": 13.6, "ate": 15.4, "movimento": "seco", "aproximar": 1.15,
+      "_nota": "A VIRADA. Aqui ela está com a cara virada e a expressão murcha, ainda com a cenoura no quadro — é o rosto de quem esperava carne. Entrou na v5."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/IMG_1725.MOV",
+      "de": 4.0, "ate": 5.4, "movimento": "zoomout", "forca": 0.14,
+      "_nota": "Praia. SEM TEXTO: o respiro antes do veredito, e o único plano do acervo com sol e espaço aberto no meio de uma peça toda de interior."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/11984692-701d-419b-ac51-88434fa3c902.mp4",
+      "de": 0.2, "ate": 2.4, "movimento": "punch", "forca": 0.10,
+      "_nota": "O DESFECHO. Ela adulta na cama à noite, luzes da cidade na janela, encarando a câmera com cara de quem não quer ser incomodada. Melhor plano de 'patroa' do acervo."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_filhote_cenoura.mp4",
+      "de": 0.0, "ate": 0.8, "movimento": "seco",
+      "_nota": "MESMOS frames da abertura: a emenda do loop é exata, não 'quase'."
+    }
+  ],
+  "textos": [
+    {"de": 0.3, "ate": 1.9, "texto": "O TESTE DO MEU HUMANO", "posicao": "baixo", "px": 72},
+    {"de": 2.2, "ate": 3.7, "texto": "ME VESTIU DE ROSA: PASSOU", "posicao": "alto", "px": 70},
+    {"de": 4.0, "ate": 5.5, "texto": "VIROU MEU COLCHÃO: PASSOU", "posicao": "alto", "px": 70},
+    {"de": 5.8, "ate": 7.3, "texto": "ME DEU CENOURA: ERROU", "posicao": "alto", "px": 74},
+    {"de": 9.2, "ate": 10.9, "texto": "REPROVADO", "posicao": "meio", "px": 140}
+  ]
+}

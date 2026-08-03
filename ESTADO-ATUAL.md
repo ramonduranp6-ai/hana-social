@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 02/08/2026 21:53. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 02/08/2026 23:11. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -24,9 +24,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-08-03T00:57:27Z workflow_dispatch success
 2026-08-02T23:44:26Z schedule success
 2026-08-02T20:14:52Z schedule success
-2026-08-02T15:43:41Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução segunda-feira, 3 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -41,8 +41,8 @@ Mídias numeradas em `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos
 - 04_10-08_REEL.mp4
 - 04_10-08_REEL_capa.jpg
 - 05_PREVIA-TRILHA.mp4
-- 06_12-08_REEL-CENOURA.mp4
-- 06_12-08_REEL-CENOURA_capa.jpg
+- 06_12-08_REEL-v2.mp4
+- 06_12-08_REEL-v2_capa.jpg
 
 Ele responde pelos números. Enquanto não responder, **não commitar**
 mudança de status nem publicar.
@@ -51,7 +51,7 @@ mudança de status nem publicar.
 - Brutas a processar: 29 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34448
+- Fotos do iPhone sincronizadas (iCloud): 34450
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -108,24 +108,21 @@ Diretor de Criação fecha o trecho, o gancho e a legenda na reunião de segunda
 
 ## Últimas mudanças no projeto
 ```
+f3a4b0b reel de 12/08 entregue no Telegram (anexo na conversa nao serve, ele esta no celular)
+f035634 chore: atualiza estado da fila [skip ci]
+eae3e31 o acervo nunca esteve zerado: Reel de 12/08 com video real dele
 5e78e3c reuniao com debate de verdade + a revisao semana a semana que ele pediu
 2144030 chore: atualiza estado da fila [skip ci]
 b0ad353 fecha o dia: custo de token medido e proposta de baratear a auditoria
 8bb46b9 estado do dia 02/08: fila ate 12/08, Telegram conversando, garimpo na rodada 4
 e8c50c8 Telegram responde de verdade: escalar deixa de ser beco sem saida
-711ed09 chore: recado do lote semanal [skip ci]
-a38473f recado fechado + .mcp.json do conector kairogen-hana
-2207716 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
-M DECISOES.md
- D content/queue/2026-08-12_a-patroa-mimada/post.json
- D content/queue/2026-08-12_a-patroa-mimada/video.mp4
- M estrategia/decisoes-2026-08-02.json
- M publisher/veredito.py
-?? content/queue/2026-08-12_cenoura-filhote/
-?? content/queue/2026-08-14_a-patroa-mimada/
+M content/queue/2026-08-12_cenoura-filhote/post.json
+ M content/queue/2026-08-12_cenoura-filhote/video.mp4
+?? studio/montar_reel.py
+?? studio/roteiros/
 ```
 
 ## Decisões e contexto
