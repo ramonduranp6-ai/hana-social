@@ -26,6 +26,7 @@ certo, e a prova é o histórico deste projeto — **cinco erros do mesmo tipo**
 | Ligar o compartilhamento automático alimenta a Página | A tela **só oferece o perfil pessoal** dele | Abrir a tela antes de propor |
 | O projeto não tinha trilha nenhuma | Havia `musica_hana.wav` de 25/07 | `ls` na pasta de editadas |
 | A Audio API é "indício de integradores" | É **documentação oficial da Meta** | Ler a doc |
+| "O acervo são 12 vídeos e o rosto não aparece em nenhum frame" | 9 eram **Live Photo de 2s**; e o vídeo da praia tem **~4s de rosto** | `ffprobe` + extrair frames (2 comandos) |
 
 O padrão é sempre o mesmo: **eu repeti o que estava escrito, ou o que era
 plausível, em vez de olhar a fonte real.** Documentação (inclusive esta skill)
@@ -334,6 +335,29 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
      custo. Se aparecer demanda sem dono, aí sim propor a contratação a ele.
    **Isto já se pagou na estreia:** a revisão adversarial pegou 6 defeitos nos
    robôs antes de subirem, 2 graves — um derrubaria a publicação dos posts.
+3o. **COMO A REUNIÃO SEMANAL FUNCIONA — formato fixado em 02/08/2026** (ordem
+   dele: *"refaça a reunião com todas as ias, eles devem participar e precisa que
+   vcs debatam a ideia de cada um deles"* e *"na próxima reunião, revisar como foi
+   o andamento da estratégia dessa semana que passou"*).
+   **Três rodadas, sempre nesta ordem:**
+   1. Cada diretor propõe **sem ver a proposta dos outros** (redes, criativo,
+      atualidades, processos, visual — subagentes baratos, teto de 12 linhas).
+   2. **O debate.** Cada um recebe as outras quatro propostas e é OBRIGADO a
+      atacar, com as contradições apontadas na cara ("você disse zero minuto, o
+      custo medido é 60-120 mil tokens: defenda ou retire"). Cada um responde:
+      ataque a cada proposta · o que RETIRA da própria · voto nas 3 da semana.
+      Provado na estreia: **4 dos 5 retiraram ou rebaixaram a própria proposta.**
+      Rodada única de opinião não muda voto; debate muda.
+   3. **O conselheiro veta** (Fable). Palavra acima da do presidente.
+   **A revisão da semana anterior abre a reunião** — é o que ele mais quer:
+   `estrategia/decisoes-<data>.json` guarda cada decisão com 4 campos obrigatórios
+   (o que se espera que mexa · qual número · pré-condição checável por código ·
+   **regra de morte escrita ANTES do resultado**). `publisher/veredito.py` julga
+   por código (token zero) e o `reporte_semanal.py` imprime no TOPO da pauta.
+   Três vereditos: MEXEU · NÃO MEXEU · **NÃO TESTADO** — pré-condição que não
+   aconteceu nunca vira "falhou", vira "não testado" com contador de semanas.
+   **Ao FIM de toda reunião, gravar o JSON da semana.** Sem ele a revisão seguinte
+   não existe e a reunião volta a recomeçar do zero.
 4. **Um robô só. E ele é MENOR do que esta skill dizia** — conferido no
    Agendador do Windows em 28/07/2026. **O `hana-rotina` NUNCA EXISTIU**: era
    texto na documentação, igual à "ronda de terça e quinta" já desmascarada em
@@ -367,9 +391,15 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
      reprovou os meus duas vezes. O Claude fecha na reunião de segunda.
    - Não achou: **não inventa post**. Escreve o recado em `content/aviso_lote.md`
      pedindo as duas cenas que faltam, e o `estado.py` mostra isso ao abrir.
-   - Os 12 vídeos antigos já estão marcados como vistos em `content/.videos_usados`
-     (o auditor reprovou o material: a Hana está de costas e o rosto nunca
-     aparece). O robô só volta a trabalhar com filmagem NOVA.
+   - Os 12 arquivos antigos estão marcados como vistos em `content/.videos_usados`.
+     ⚠️ **O laudo que os reprovou estava PARCIALMENTE ERRADO — corrigido em
+     02/08/2026 com ffprobe + grade de frames.** Nunca existiram 12 vídeos: nove
+     são clipes companheiros de Live Photo do iPhone (1,5 a 3s, cada um com um
+     .HEIC de mesmo nome ao lado). O acervo real sempre foi de **3 vídeos**, e
+     em **IMG_1725.MOV (praia, 18,6s) HÁ ~4 segundos de rosto** — o laudo dizia
+     "nenhum frame". Nos outros dois (TV, navio) o laudo acertou.
+     O robô só volta a trabalhar com filmagem NOVA, mas o vídeo da praia é
+     material aproveitável e está reservado como plano B.
    - `--fotos` ainda força o lote antigo de foto, na mão, se ele mandar.
 4c. **O LOTE DE DOMINGO AGORA É AUTOMÁTICO — não refazer na conversa**
    (criado em 28/07/2026 a pedido dele: *"faz o 1"*, para tirar o trabalho

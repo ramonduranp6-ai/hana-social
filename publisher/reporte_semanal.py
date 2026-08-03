@@ -31,6 +31,11 @@ if hasattr(sys.stdout, "reconfigure"):
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(AQUI)
+
+# `import diagnostico` / `import veredito` só funcionam se esta pasta estiver no
+# caminho — e ela nem sempre está, porque o run.py importa este módulo de fora.
+if AQUI not in sys.path:
+    sys.path.insert(0, AQUI)
 METRICAS = os.path.join(RAIZ, "content", "metricas.json")
 FILA = os.path.join(RAIZ, "content", "queue")
 PAUTA_EXTRA = os.path.join(RAIZ, "content", "pauta_extra.md")
@@ -91,8 +96,13 @@ def _linha_post(pid, dados):
         m.get("saved", "?"), m.get("shares", "?"), m.get("follows", "?"))
 
 
-def montar(agora=None):
-    """Devolve o texto da pauta. So numero medido — nada estimado."""
+def montar(agora=None, gravar_veredito=False):
+    """Devolve o texto da pauta. So numero medido — nada estimado.
+
+    `gravar_veredito` so vem True no envio de verdade: em --simular o contador
+    de "semana sem execucao" nao pode subir, senao conferir a pauta na conversa
+    envelheceria o placar sozinho.
+    """
     agora = agora or datetime.now(timezone.utc)
     coletas = _coletas()
     if not coletas:
@@ -108,6 +118,28 @@ def montar(agora=None):
     delta = seg_hoje - seg_antes
 
     L = []
+    # O VEREDITO vem antes de tudo — inclusive do diagnóstico. Ordem pedida pelo
+    # Ramón em 02/08/2026: a reunião abre revisando se a decisão da semana
+    # passada funcionou, e só depois olha os números da semana. Ele lê no celular
+    # e para de ler cedo, então o que decide a reunião fica na primeira tela.
+    try:
+        import veredito as _veredito
+        bloco = _veredito.montar(gravar=gravar_veredito, agora=agora)
+        if bloco:
+            L += [bloco, "", "─" * 28, ""]
+    except Exception as exc:  # noqa: BLE001 — veredito nunca derruba a pauta
+        # A auditoria de 02/08/2026 apontou: se o veredito quebrasse, o bloco
+        # simplesmente sumia da pauta e o Ramón não tinha como saber que a
+        # revisão da semana não rodou — ele leria uma pauta que parece completa.
+        # Falha silenciosa em cima de decisão é pior do que falha barulhenta.
+        print("[aviso] veredito falhou (%s) — pauta segue sem ele." % str(exc)[:120])
+        # Sem o trecho cru da exceção: ele é leigo, e código de erro na tela dele
+        # é ruído sem ação. O detalhe técnico fica no log do GitHub Actions.
+        L += ["⚠️ A revisão da semana passada NÃO RODOU (deu erro no robô). "
+              "Os números abaixo estão certos, mas hoje ninguém conferiu se a "
+              "decisão da semana passada funcionou — me avise para eu olhar.",
+              "", "─" * 28, ""]
+
     # O diagnóstico vem PRIMEIRO, antes da tabela: o Ramón lê no celular e para
     # de ler cedo. Ele pediu isso em 31/07/2026 — a pauta listava número e não
     # dizia se o projeto está melhorando ou piorando.
@@ -206,7 +238,8 @@ def main():
         if _ja_mandou(semana):
             return
 
-    texto = montar(agora)
+    # So o envio de verdade grava o contador de "semana sem execucao".
+    texto = montar(agora, gravar_veredito=not simular)
     if simular:
         print(texto)
         return

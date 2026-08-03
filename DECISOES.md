@@ -4,6 +4,66 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## 🆕 REUNIÃO REFEITA COM DEBATE + A REVISÃO SEMANAL (02/08/2026)
+
+Ordem dele: *"refaça a reunião com todas as ias, eles devem participar e precisa
+que vcs debatam a ideia de cada um deles"* e *"na próxima reunião, revisar como
+foi o andamento da estratégia dessa semana que passou. Assim conseguimos decidir,
+e ir melhorando semana a semana."*
+
+**Como foi feita** (formato novo, virou o padrão): rodada 1, cinco diretores
+propõem sem ver a proposta dos outros (redes, criativo, atualidades, processos,
+visual). Rodada 2, cada um recebe as outras quatro e é obrigado a atacar — com as
+contradições apontadas na cara. Rodada 3, o conselheiro veta. Resultado: quatro
+dos cinco retiraram ou rebaixaram a própria proposta. Debate de verdade muda voto;
+rodada única de opinião não muda.
+
+**O QUE O CONSELHEIRO VETOU**
+1. Mexer nos 3 posts de foto já aprovados (hashtag, legenda ou corte). Formato
+   já condenado e post já aprovado por ele — mudar exigiria novo OK.
+2. A ronda de engajamento, **sem nem fazer o teste de 10 comentários**: 10
+   comentários rendem de 0 a 2 seguidores, indistinguível de ruído, por 60 a 120
+   mil tokens. "Teste que não pode responder não é teste." ⚠️ Como a ronda foi
+   combinada COM o Ramón em 28/07, só ele encerra — **pendente de uma linha dele.**
+3. Laudo de auditoria como argumento, quando o laudo é checável por código.
+
+**O QUE FICOU APROVADO PARA A SEMANA (03 a 09/08)**
+1. UM pedido a ele: a cena A PATROA MANDOU, prazo quinta 07/08, com roteiro e
+   enquadramento já prontos no mesmo recado — uma tarefa, não três decisões.
+2. Plano B engavetado: Reel com os ~4s de rosto achados no vídeo da praia. Só vai
+   ao ar se a cena não chegar até quinta.
+3. Radar de concorrente antes de fechar o Reel de 12/08.
+Frase do conselheiro que resume: *"nada nesta mesa move 330 para 400. A mesa
+inteira serve para uma coisa — o Reel de 12/08 existir com rosto."*
+
+**🔴 ERRO DESCOBERTO NA REUNIÃO — a auditoria de 31/07 estava errada.**
+O laudo dizia "o rosto não aparece em NENHUM frame dos 12 vídeos". Conferido em
+02/08 com ffprobe e grade de frames (dois comandos):
+- **Nunca existiram 12 vídeos.** Nove dos doze são clipes companheiros de Live
+  Photo do iPhone, de 1,5 a 3 segundos, cada um com um .HEIC de mesmo nome ao
+  lado. O acervo real sempre foi de **3 vídeos**.
+- **IMG_1725.MOV (praia, 18,6s) TEM ROSTO** — cerca de 4 segundos, dela deitada
+  na areia com a cabeça virada, focinho e língua à mostra. Os outros dois
+  (TV e navio) o laudo acertou: de costas do começo ao fim.
+O que teria pego: extrair os frames antes de escrever o laudo. O laudo errado
+fez três diretores mudarem de voto na reunião. **Regra nova: laudo que dá para
+conferir com dois comandos não é fato até ser conferido.**
+
+**O MECANISMO DE REVISÃO SEMANAL (o pedido principal dele) — construído hoje**
+- `estrategia/decisoes-<data>.json`: o Claude grava as decisões ao fim de cada
+  reunião. Cada uma nasce com quatro campos obrigatórios — o que se espera que
+  mexa, qual número, a **pré-condição checável por código** e a **regra de morte,
+  escrita ANTES de saber o resultado** (regra de morte escrita depois é desculpa).
+- `publisher/veredito.py`: lê o arquivo, confere no mundo real e devolve um
+  veredito por decisão. Custo de token: zero — quem julga é código.
+- `publisher/reporte_semanal.py`: passou a imprimir esse bloco **no topo** da
+  pauta do domingo, antes até do diagnóstico, porque ele lê no celular e para de
+  ler cedo.
+- Três vereditos: **MEXEU · NÃO MEXEU · NÃO TESTADO**. O terceiro é o que faz o
+  mecanismo sobreviver a semana em que nada foi feito: pré-condição que não
+  aconteceu **nunca vira "falhou"** — vira "não testado", o contador de semanas
+  sem execução sobe e a decisão continua na pauta.
+
 ## 🆕 COMANDOS PELO TELEGRAM + REUNIÃO NO DOMINGO (02/08/2026)
 
 Duas ordens dele: *"Transfira a reunião estratégia de segunda para domingo às
