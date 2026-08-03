@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 03/08/2026 08:58. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 03/08/2026 12:35. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -8,11 +8,11 @@ decisões, use `DECISOES.md`.
 | Quando (UTC) | Post | Tipo | Status |
 |---|---|---|---|
 | 2026-08-03T21:00:00Z | 2026-08-03_dia-de-praia | image | approved |
-| 2026-08-05T21:00:00Z | 2026-08-05_navio-importacao | image | approved |
-| 2026-08-07T21:00:00Z | 2026-08-07_banho-de-sol | image | approved |
-| 2026-08-10T21:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
-| 2026-08-12T21:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
-| 2026-08-14T21:00:00Z | 2026-08-14_a-patroa-mimada | reel | pending |
+| 2026-08-05T11:00:00Z | 2026-08-05_navio-importacao | image | approved |
+| 2026-08-07T11:00:00Z | 2026-08-07_banho-de-sol | image | approved |
+| 2026-08-10T11:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
+| 2026-08-12T11:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
+| 2026-08-14T11:00:00Z | 2026-08-14_a-patroa-mimada | reel | pending |
 
 ## Publicados: 5
 - 2026-07-22_bar-hana — IG `18118796690302997`
@@ -24,9 +24,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-08-03T12:39:15Z schedule success
+2026-08-03T11:58:50Z workflow_dispatch success
 2026-08-03T11:15:51Z workflow_dispatch success
-2026-08-03T11:11:09Z workflow_dispatch success
-2026-08-03T10:48:15Z workflow_dispatch success
 ```
 - Vigia local (Agendador do Windows): próxima execução segunda-feira, 3 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -51,7 +51,7 @@ mudança de status nem publicar.
 - Brutas a processar: 29 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34452
+- Fotos do iPhone sincronizadas (iCloud): 34455
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -108,19 +108,26 @@ Diretor de Criação fecha o trecho, o gancho e a legenda na reunião de segunda
 
 ## Últimas mudanças no projeto
 ```
+979214e chore: atualiza estado da fila [skip ci]
+ac7d4de eu decido, ele aprova: legenda do 14/08 reescrita sem perguntar
 0ef7217 ronda de engajamento MORTA por ordem dele
 0f555eb Reel de 12/08 aprovado por ele; licoes gravadas na skill
 e7d4298 chore: atualiza estado da fila [skip ci]
 1de9481 chore: atualiza estado da fila [skip ci]
 f9f2af1 o Reel vira HISTORIA e ganha trilha propria
 30cf945 chore: atualiza estado da fila [skip ci]
-8225430 conserta o erro que fez ele ver o mesmo video duas vezes
-27c4d4d chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
 M .claude/skills/hana-social/SKILL.md
+ M .github/workflows/publish.yml
+ M content/queue/2026-08-05_navio-importacao/post.json
+ M content/queue/2026-08-07_banho-de-sol/post.json
+ M content/queue/2026-08-10_escolheu-o-canal/post.json
+ M content/queue/2026-08-12_cenoura-filhote/post.json
  M content/queue/2026-08-14_a-patroa-mimada/post.json
+ M studio/lote_automatico.py
+ M studio/preparar_lote.py
 ```
 
 ## Decisões e contexto

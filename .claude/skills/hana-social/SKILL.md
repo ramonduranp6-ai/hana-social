@@ -121,7 +121,9 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    38 posts e comparar cena por cena — inclusive entre os posts do mesmo lote.
    Duas fotos do mesmo passeio em dias diferentes contam como repetido.
 3. **Preservar a cor tri lilac merle**; legenda em PT-BR terminando com
-   pergunta; máx. 4 hashtags; posts seg/qua/sex às 21:00Z (18h de Itajaí).
+   pergunta; máx. 4 hashtags; posts seg/qua/sex às **11:00Z — 8h da manhã de
+   Itajaí** (era 18h até 03/08/2026, quando ele mandou trocar). A hora se conta
+   sempre a partir do fuso dele, nunca direto em UTC.
 3b. **A conta JÁ É "Criador de conteúdo"** — conferido na tela em 28/07/2026
    (`instagram.com/accounts/professional_account_tools/` só oferece "trocar para
    conta comercial" e "trocar para conta pessoal", ou seja, Criador é o estado

@@ -9,11 +9,12 @@ on:
     # nenhuma rodada agendada, e o post das 21:00Z só saiu porque houve um
     # disparo manual. Duas defesas:
     - cron: "*/30 * * * *"          # o batimento normal
-    # e uma salva de tentativas coladas no horário de publicação (21:00Z de
-    # segunda, quarta e sexta). Se uma for pulada, as outras cobrem. O run.py é
-    # idempotente: só publica o que está 'approved' e venceu, então repetir a
-    # tentativa não duplica post.
-    - cron: "0,7,14,21,28,35 21 * * 1,3,5"
+    # e uma salva de tentativas coladas no horário de publicação (11:00Z de
+    # segunda, quarta e sexta = 8h da manhã em Itajaí; era 21:00Z até
+    # 03/08/2026, quando ele mandou trocar para as 8h). Se uma for pulada, as
+    # outras cobrem. O run.py é idempotente: só publica o que está 'approved' e
+    # venceu, então repetir a tentativa não duplica post.
+    - cron: "0,7,14,21,28,35 11 * * 1,3,5"
   workflow_dispatch:
     inputs:
       forcar_reporte:

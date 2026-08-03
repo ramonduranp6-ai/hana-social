@@ -76,9 +76,13 @@ GEMINI_URL = (
     "gemini-flash-latest:generateContent"
 )
 
-# Dias de publicação: segunda, quarta e sexta às 21:00Z (18h em Itajaí).
+# Dias de publicação: segunda, quarta e sexta às 11:00Z — que é **8h da manhã em
+# Itajaí**. Era 21:00Z (18h) até 03/08/2026, quando ele mandou trocar: *"troque
+# os posts para às 8 da manhã"*. A conta é sempre a partir do fuso dele (UTC-3),
+# nunca o contrário: escrever a hora em UTC de cabeça é o tipo de erro que faz o
+# post cair no dia errado.
 DIAS = (0, 2, 4)
-HORA_UTC = 21
+HORA_UTC = 11
 
 BRIEFING = """Você escreve legendas para o Instagram @hanaduransanches, perfil da
 cachorra Hana — uma Exotic Bully Micro tri lilac merle, de Itajaí/SC.

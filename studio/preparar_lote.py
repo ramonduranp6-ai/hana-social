@@ -10,9 +10,9 @@ Uso (a partir da raiz do repo):
       salva contact_sheet.jpg lá (grade numerada para escolher no celular).
 
 2. Criar um post na fila a partir de uma foto editada:
-       python studio/preparar_lote.py post <arquivo.jpg> <id-do-post> <2026-08-05T21:00> "legenda..." [pilar]
+       python studio/preparar_lote.py post <arquivo.jpg> <id-do-post> <2026-08-05T11:00> "legenda..." [pilar]
    -> cria content/queue/<id-do-post>/{image.jpg,post.json} (status pending).
-      Lembrete: 21:00 UTC = 18:00 em Itajaí.
+      Lembrete: 11:00 UTC = 8:00 da manha em Itajai (mudou em 03/08/2026, ordem dele).
       [pilar] é opcional — "A PATROA MANDA", "MICRO NO APE" ou "INIMIGOS DA
       PATROA" (ver publisher/postqueue.py). Sem pilar, o post fica "sem pilar",
       igual aos publicados antes da virada editorial de 31/07/2026.
