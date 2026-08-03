@@ -1,0 +1,55 @@
+{
+  "titulo": "ELA CABIA NA MINHA MÃO",
+  "historia": "Ela começou cabendo na mão dele e termina dona da cama, da bola e do colo — a casa mudou de dono sem ninguém avisar.",
+  "origem": "Ordem dele em 03/08/2026: *'Não gostei! Cadê a música, não era pra ser algo divertido? Cadê a criatividade, não tem um storytelling.'* As versões anteriores eram uma LISTA de itens com veredito no fim, sem trilha. Esta é uma história com começo, virada e desfecho, com trilha própria por baixo. Roteiro do Diretor de Criação, enquadramentos ajustados pelos que já passaram na auditoria.",
+  "trilha": "content/trilhas/04-crescendo-filhote.mp3",
+  "inicio_trilha": 11.06,
+  "abafar_ate": 2.6,
+  "volume_trilha": 0.9,
+  "volume_trilha_abafada": 0.3,
+  "_nota_trilha": "Trilha própria gerada pelo Lyria 3 (US$ 0,04): ukulele e glockenspiel tenros que crescem para banda com palmas e assobio. MEDIDO com astats, não suposto: ela fica em -16 a -21 dB até 17s e sobe para -13 a -9 dB entre 17s e 26s. Começando em 11,06s, o crescimento cai exatamente em 5,94s da peça — o primeiro frame do corte da VIRADA (ela adulta com a bola). Nos primeiros 2,6s a trilha fica baixa para a mastigada da cenoura aparecer: é o gancho sonoro.",
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_filhote_cenoura.mp4",
+      "de": 3.6, "ate": 6.2, "movimento": "punch", "forca": 0.12,
+      "_nota": "COMEÇO. Rosto dela ocupando a tela, mastigando a cenoura na mão dele. Ele já é só uma mão que serve. Único corte com o som da cena."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/135b6565-9f29-4e4c-b83d-9a434936b424.mp4",
+      "de": 3.4, "ate": 5.2, "movimento": "seco", "mudo": true,
+      "_nota": "Firma o tamanho dela: pequena, vestida por ele, olhando de baixo para cima."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_filhote_bolinha.mov",
+      "de": 20.6, "ate": 22.6, "movimento": "acelerado", "fator": 1.3,
+      "aproximar": 2.0, "foco_y": 0.30, "mudo": true,
+      "_nota": "O 'antes' da rima visual: filhote correndo atrás da bolinha ROSA — a bola manda nela. Enquadramento fechado, o único trecho do clipe em que ela chega perto da câmera (os abertos foram reprovados 3x pela auditoria)."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/24d0f141-2231-48d0-a65d-b76db9d730e6.mp4",
+      "de": 4.3, "ate": 6.0, "movimento": "seco",
+      "aproximar": 2.5, "foco_y": 0.25, "clarear": 1.15, "mudo": true,
+      "_nota": "A VIRADA, e é aqui que a música cresce. Mesma brincadeira, outro corpo: ADULTA atravessando a sala com a bola VERMELHA na boca. Agora ela manda na bola. ⚠️ Este clipe é filmado CONTRA a janela e ela saía como um vulto preto — a auditoria reprovou porque não dava para ver que era a mesma cadela. `clarear` levanta a sombra com gamma (não com brightness, que estouraria a janela) e o `aproximar 2.5` põe ela no quadro. Custa nitidez e vale: é o clímax da história."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/IMG_1725.MOV",
+      "de": 4.0, "ate": 6.0, "movimento": "zoomout", "forca": 0.14, "mudo": true,
+      "_nota": "O mundo dela abriu. Praia, colar de conchas, focinho no sol."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/11984692-701d-419b-ac51-88434fa3c902.mp4",
+      "de": 0.2, "ate": 2.6, "movimento": "punch", "forca": 0.10, "mudo": true,
+      "_nota": "O olhar de quem já é dona do lugar: na cama, de noite, luzes da cidade na janela."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/24023CD7-9018-4D40-8792-200F4F0AD9B1.mp4",
+      "de": 1.8, "ate": 3.8, "movimento": "zoomout", "forca": 0.20, "mudo": true,
+      "_nota": "DESFECHO sem carimbo: ela dormindo com a cara em cima da perna dele. Ele virou o móvel. A piada só fecha porque veio tudo antes."
+    }
+  ],
+  "textos": [
+    {"de": 0.4, "ate": 2.5, "texto": "ELA CABIA NA MINHA MÃO", "posicao": "baixo", "px": 72},
+    {"de": 6.1, "ate": 8.0, "texto": "HOJE A CASA É DELA", "posicao": "alto", "px": 78},
+    {"de": 12.4, "ate": 13.9, "texto": "E EU VIREI O COLCHÃO", "posicao": "baixo", "px": 74}
+  ]
+}

@@ -137,6 +137,16 @@ def _filtro_video(corte):
     else:
         partes.append("scale=%d:%d" % (W, H))
 
+    # EXPOSIÇÃO. Entrou em 03/08/2026: o clipe dela adulta com a bola é filmado
+    # contra a janela, e ela saía como um vulto preto — a auditoria reprovou por
+    # "não dá para confirmar que é a mesma cadela". Recortar não conserta luz.
+    # `clarear` levanta as sombras com gamma (não com brightness, que lava a
+    # imagem inteira e estoura a janela ao fundo).
+    clarear = float(corte.get("clarear", 0.0))
+    if clarear > 0.001:
+        partes.append("eq=gamma=%.3f:saturation=%.3f:contrast=%.3f"
+                      % (1.0 + clarear, 1.0 + clarear * 0.35, 1.0 + clarear * 0.12))
+
     partes += ["setsar=1", "fps=%d" % FPS, "format=yuv420p"]
     return ",".join(partes), dur_saida
 
@@ -243,9 +253,39 @@ def montar(roteiro, saida):
                 "-pix_fmt", "yuv420p", "-r", str(FPS),
                 "-c:a", "aac", "-b:a", "160k", emendado])
 
+        # TRILHA. Entrou em 03/08/2026 a pedido dele: *"Cadê a música, não era pra
+        # ser algo divertido?"*. A música NÃO apaga o som da cena — as duas
+        # convivem: `abafar_ate` deixa a trilha baixa enquanto o áudio da cena
+        # importa (a mastigada da cenoura é o gancho sonoro da abertura) e sobe
+        # depois. `inicio` corta a trilha mais para a frente, e é assim que a
+        # virada dela cai no corte certo em vez de cair em qualquer lugar.
+        trilha = roteiro.get("trilha")
+        if trilha:
+            com_musica = os.path.join(tmp, "com_musica.mp4")
+            vol_alto = float(roteiro.get("volume_trilha", 0.85))
+            vol_baixo = float(roteiro.get("volume_trilha_abafada", 0.30))
+            abafar_ate = float(roteiro.get("abafar_ate", 0.0))
+            ini = float(roteiro.get("inicio_trilha", 0.0))
+            if abafar_ate > 0:
+                vol = "volume='if(lt(t,%.2f),%.3f,%.3f)':eval=frame" % (
+                    abafar_ate, vol_baixo, vol_alto)
+            else:
+                vol = "volume=%.3f" % vol_alto
+            filtro_a = (
+                "[1:a]atrim=start=%.3f,asetpts=PTS-STARTPTS,%s,"
+                "afade=t=out:st=%.2f:d=0.6[m];"
+                "[0:a][m]amix=inputs=2:duration=first:dropout_transition=0,"
+                "alimiter=limit=0.95[a]" % (ini, vol, max(t - 0.6, 0.1)))
+            _rodar([ff(), "-y", "-i", emendado, "-stream_loop", "-1", "-i", trilha,
+                    "-filter_complex", filtro_a, "-map", "0:v", "-map", "[a]",
+                    "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
+                    "-t", "%.3f" % t, com_musica])
+            emendado = com_musica
+
         if not textos:
             shutil.copy2(emendado, saida)
-            print("[ok] %s — %.1fs, %d cortes, sem texto" % (saida, t, len(cortes)))
+            print("[ok] %s — %.1fs, %d cortes, sem texto%s"
+                  % (saida, t, len(cortes), ", com trilha" if trilha else ""))
             return t
 
         entradas = [emendado]
@@ -270,8 +310,9 @@ def montar(roteiro, saida):
                  "-pix_fmt", "yuv420p", "-r", str(FPS),
                  "-c:a", "aac", "-b:a", "160k", saida]
         _rodar(args)
-        print("[ok] %s — %.1fs, %d cortes, %d entradas de texto"
-              % (saida, t, len(cortes), len(textos)))
+        print("[ok] %s — %.1fs, %d cortes, %d entradas de texto%s"
+              % (saida, t, len(cortes), len(textos),
+                 ", com trilha" if roteiro.get("trilha") else ""))
         for ini, fim, arq in marcas:
             print("     %5.1fs a %5.1fs  %s" % (ini, fim, os.path.basename(arq)))
         return t

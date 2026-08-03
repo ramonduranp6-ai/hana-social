@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 02/08/2026 23:11. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 03/08/2026 08:10. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -24,9 +24,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-08-03T10:48:15Z workflow_dispatch success
+2026-08-03T02:11:15Z workflow_dispatch success
 2026-08-03T00:57:27Z workflow_dispatch success
-2026-08-02T23:44:26Z schedule success
-2026-08-02T20:14:52Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução segunda-feira, 3 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -41,8 +41,8 @@ Mídias numeradas em `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos
 - 04_10-08_REEL.mp4
 - 04_10-08_REEL_capa.jpg
 - 05_PREVIA-TRILHA.mp4
-- 06_12-08_REEL-v2.mp4
-- 06_12-08_REEL-v2_capa.jpg
+- 06_12-08_REEL-HISTORIA.mp4
+- 06_12-08_REEL-HISTORIA_capa.jpg
 
 Ele responde pelos números. Enquanto não responder, **não commitar**
 mudança de status nem publicar.
@@ -51,7 +51,7 @@ mudança de status nem publicar.
 - Brutas a processar: 29 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34450
+- Fotos do iPhone sincronizadas (iCloud): 34451
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -108,21 +108,24 @@ Diretor de Criação fecha o trecho, o gancho e a legenda na reunião de segunda
 
 ## Últimas mudanças no projeto
 ```
+30cf945 chore: atualiza estado da fila [skip ci]
+8225430 conserta o erro que fez ele ver o mesmo video duas vezes
+27c4d4d chore: atualiza estado da fila [skip ci]
+1e77df8 reel de 12/08 refeito: 7 cortes, 6 versoes, 5 reprovacoes de auditoria
 f3a4b0b reel de 12/08 entregue no Telegram (anexo na conversa nao serve, ele esta no celular)
 f035634 chore: atualiza estado da fila [skip ci]
 eae3e31 o acervo nunca esteve zerado: Reel de 12/08 com video real dele
 5e78e3c reuniao com debate de verdade + a revisao semana a semana que ele pediu
-2144030 chore: atualiza estado da fila [skip ci]
-b0ad353 fecha o dia: custo de token medido e proposta de baratear a auditoria
-8bb46b9 estado do dia 02/08: fila ate 12/08, Telegram conversando, garimpo na rodada 4
-e8c50c8 Telegram responde de verdade: escalar deixa de ser beco sem saida
 ```
 Alterações não commitadas:
 ```
 M content/queue/2026-08-12_cenoura-filhote/post.json
- M content/queue/2026-08-12_cenoura-filhote/video.mp4
-?? studio/montar_reel.py
-?? studio/roteiros/
+ D content/queue/2026-08-12_cenoura-filhote/video-v6.mp4
+ M studio/gerar_trilha.py
+ M studio/montar_reel.py
+?? content/queue/2026-08-12_cenoura-filhote/video-v7.mp4
+?? content/trilhas/04-crescendo-filhote.mp3
+?? studio/roteiros/2026-08-12_cabia-na-minha-mao.json
 ```
 
 ## Decisões e contexto

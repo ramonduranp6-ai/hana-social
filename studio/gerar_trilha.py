@@ -22,8 +22,18 @@ import sys
 import urllib.error
 import urllib.request
 
-CHAVES = os.path.join(os.path.expanduser("~"), "OneDrive", "Desktop",
-                      "Claude code APIs", "Documents", "IA-Hub", "chaves-api.txt")
+# O caminho antigo ("Claude code APIs") não existe mais nesta máquina e o script
+# morria com FileNotFoundError (02/08/2026). Agora procura nos lugares reais, em
+# ordem, e diz onde procurou se não achar nenhum.
+CANDIDATOS_CHAVES = [
+    os.path.join(os.path.expanduser("~"), "OneDrive", "Desktop",
+                 "Crescimento IA", "Documents", "IA-Hub", "chaves-api.txt"),
+    os.path.join(os.path.expanduser("~"), "OneDrive", "IA-Hub", "chaves-api.txt"),
+    os.path.join(os.path.expanduser("~"), "OneDrive", "Desktop",
+                 "Claude code APIs", "Documents", "IA-Hub", "chaves-api.txt"),
+]
+CHAVES = next((c for c in CANDIDATOS_CHAVES if os.path.isfile(c)),
+              CANDIDATOS_CHAVES[0])
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SAIDA = os.path.join(RAIZ, "content", "trilhas")
 ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/interactions"
