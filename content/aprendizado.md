@@ -2,6 +2,17 @@
 
 O que a automação já mandou pro Ramón, com data — pra próxima conversa não remontar do zero. Gravado por `publisher/diagnostico.py` e `publisher/leitura_d1.py`, sempre DEPOIS da entrega confirmada (nunca durante `--simular`). Mais recente em cima.
 
+## 2026-08-03 — Diagnóstico da semana 2026-W32
+
+📊 DIAGNÓSTICO DA SEMANA
+Fonte: API do Instagram, coleta de 2026-08-03.
+
+⚠️ Ainda não dá para comparar semana com semana: o histórico tem só 7 dia(s) de medição. O primeiro diagnóstico de verdade sai quando fechar 7 dias.
+
+Foto de hoje: 330 seguidores, alcance médio 49.
+
+---
+
 ## 2026-08-01 20:13 UTC — Leitura do dia 1 (2026-07-31_roda-gigante)
 
 📈 LEITURA DO DIA 1 — 2026-07-31_roda-gigante (Foto, 23h no ar)
