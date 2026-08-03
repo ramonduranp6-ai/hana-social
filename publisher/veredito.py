@@ -201,10 +201,15 @@ def _checar(decisao):
             return "MEXEU", "pronto e guardado"
         return "NAO TESTADO", "ainda não existe"
 
+    if tipo == "cancelado":
+        # Decisão derrubada antes de virar resultado. Fica visível de propósito —
+        # decisão que some da pauta é decisão que ninguém cobra depois.
+        return "CANCELADO", "derrubada antes de ser testada"
+
     return "NAO TESTADO", "pré-condição de tipo desconhecido (%s)" % tipo
 
 
-ICONE = {"MEXEU": "✅", "NAO MEXEU": "❌", "NAO TESTADO": "⏸️"}
+ICONE = {"MEXEU": "✅", "NAO MEXEU": "❌", "NAO TESTADO": "⏸️", "CANCELADO": "🚫"}
 
 
 def _semana_iso(dt):
@@ -251,6 +256,9 @@ def montar(gravar=False, agora=None):
             L.append("%s %s: NÃO TESTADO (%s)%s" % (
                 ICONE[veredito], d.get("titulo", d.get("id", "?")), porque, extra))
             L.append("   Continua na pauta. Regra combinada: %s" % d.get("regra_de_morte", "—"))
+        elif veredito == "CANCELADO":
+            L.append("%s %s: CANCELADO (%s)" % (
+                ICONE[veredito], d.get("titulo", d.get("id", "?")), d.get("nota", porque)))
         elif veredito == "NAO MEXEU":
             L.append("%s %s: NÃO MEXEU (%s)" % (
                 ICONE[veredito], d.get("titulo", d.get("id", "?")), porque))

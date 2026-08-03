@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 02/08/2026 21:35. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 02/08/2026 21:53. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -11,7 +11,8 @@ decisões, use `DECISOES.md`.
 | 2026-08-05T21:00:00Z | 2026-08-05_navio-importacao | image | approved |
 | 2026-08-07T21:00:00Z | 2026-08-07_banho-de-sol | image | approved |
 | 2026-08-10T21:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
-| 2026-08-12T21:00:00Z | 2026-08-12_a-patroa-mimada | reel | approved |
+| 2026-08-12T21:00:00Z | 2026-08-12_cenoura-filhote | reel | pending |
+| 2026-08-14T21:00:00Z | 2026-08-14_a-patroa-mimada | reel | approved |
 
 ## Publicados: 5
 - 2026-07-22_bar-hana — IG `18118796690302997`
@@ -40,12 +41,14 @@ Mídias numeradas em `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos
 - 04_10-08_REEL.mp4
 - 04_10-08_REEL_capa.jpg
 - 05_PREVIA-TRILHA.mp4
+- 06_12-08_REEL-CENOURA.mp4
+- 06_12-08_REEL-CENOURA_capa.jpg
 
 Ele responde pelos números. Enquanto não responder, **não commitar**
 mudança de status nem publicar.
 
 ## Acervo de fotos
-- Brutas a processar: 26 arquivos
+- Brutas a processar: 29 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
 - Fotos do iPhone sincronizadas (iCloud): 34448
@@ -105,24 +108,24 @@ Diretor de Criação fecha o trecho, o gancho e a legenda na reunião de segunda
 
 ## Últimas mudanças no projeto
 ```
+5e78e3c reuniao com debate de verdade + a revisao semana a semana que ele pediu
+2144030 chore: atualiza estado da fila [skip ci]
 b0ad353 fecha o dia: custo de token medido e proposta de baratear a auditoria
 8bb46b9 estado do dia 02/08: fila ate 12/08, Telegram conversando, garimpo na rodada 4
 e8c50c8 Telegram responde de verdade: escalar deixa de ser beco sem saida
 711ed09 chore: recado do lote semanal [skip ci]
 a38473f recado fechado + .mcp.json do conector kairogen-hana
 2207716 chore: atualiza estado da fila [skip ci]
-b70cb0a feat: comandos pelo Telegram + reuniao estrategica passa para domingo 21h
-b6b33c7 correcao: o disco NAO era problema - garimpo religado
 ```
 Alterações não commitadas:
 ```
-M .claude/skills/hana-social/SKILL.md
- M DECISOES.md
- M ESTADO-ATUAL.md
- M content/pedido-de-cena.md
- M publisher/reporte_semanal.py
-?? estrategia/
-?? publisher/veredito.py
+M DECISOES.md
+ D content/queue/2026-08-12_a-patroa-mimada/post.json
+ D content/queue/2026-08-12_a-patroa-mimada/video.mp4
+ M estrategia/decisoes-2026-08-02.json
+ M publisher/veredito.py
+?? content/queue/2026-08-12_cenoura-filhote/
+?? content/queue/2026-08-14_a-patroa-mimada/
 ```
 
 ## Decisões e contexto
@@ -131,6 +134,44 @@ M .claude/skills/hana-social/SKILL.md
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
+
+## 🔴 O ACERVO NUNCA ESTEVE ZERADO — e ele viu antes de mim (02/08/2026)
+
+Palavras dele: *"Segue vídeos da hana… Até acho estranho vc não ter visto."*
+Ele está certo. **Conduzi a reunião inteira sobre a premissa "o acervo de vídeo
+está ZERADO", e era falso.** O garimpo já tinha aprovado 16 vídeos e 7 estavam
+em disco em `Fotos da Hana\01 - brutas (suba aqui)\garimpo`. Eu repeti o aviso
+do robô do lote sem abrir a pasta. **O que teria pego: um `ls`.** É o mesmo erro
+da Regra Zero pela sexta vez, e desta vez contaminou a decisão de cinco diretores.
+
+**Os 3 vídeos que ele mandou** (salvos em `01 - brutas (suba aqui)`):
+- `hana_filhote_cenoura.mp4` — 22s, **já vertical 9:16**, ela filhote com o rosto
+  ocupando a tela inteira comendo cenoura da mão dele. **O melhor material que o
+  projeto já teve.** Virou o Reel de 12/08.
+- `hana_filhote_bolinha.mov` — 24s, mas **deitado (16:9)**, precisa corte.
+- `hana_creche_cachorros.mp4` — 19s, outros cachorros roubam o quadro.
+
+**A varredura dos 7 do garimpo** (subagente olhou frame a frame):
+| | o que é | nota |
+|---|---|---|
+| V03 | filhote de suéter rosa encarando a câmera | **8 — o melhor** |
+| V07 | ela andando com bolinha vermelha na boca | 7 |
+| V01 | deitada na cama, olhando a câmera, parada | 5 |
+| V04 | brincando com outros dois cães | 5 |
+| V06 | dormindo no colo, olhos fechados | 4 |
+| V02 | **outro cachorro**, e some do quadro | 1 |
+| V05 | **meme de pintinho fazendo ioga** | 0 |
+⚠️ **Limite do garimpo confirmado na prática:** ele reconhece "isto é um cachorro",
+não "isto é a Hana" — e nem isso: aprovou um meme de pintinho. **Toda saída do
+garimpo precisa de olho humano antes de virar post.**
+
+**O Reel de 12/08** (`content/queue/2026-08-12_cenoura-filhote`, `pending`):
+15s do vídeo da cenoura, gancho "EU SÓ SEGURO A CENOURA", **áudio original da
+cena** (sem música — o nicho roda em áudio original). Auditado: a 1ª versão foi
+**reprovada** por faltar o acento em "SÓ" e o texto ficar na faixa da interface
+do Instagram; corrigido e reauditado.
+**O slideshow de 12/08 não foi apagado** — era teste medido autorizado por ele em
+01/08. Foi **remarcado para 14/08** e continua esperando o OK dele.
 
 ## 🆕 REUNIÃO REFEITA COM DEBATE + A REVISÃO SEMANAL (02/08/2026)
 

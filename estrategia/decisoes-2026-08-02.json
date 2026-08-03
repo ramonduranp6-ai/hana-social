@@ -14,7 +14,7 @@
   "decisoes": [
     {
       "id": "cena-patroa-manda",
-      "titulo": "UMA cena filmada: A PATROA MANDOU, ate quinta 07/08",
+      "titulo": "Material de video novo entrar no projeto ate 09/08",
       "dono": "Ramon",
       "esperado": "chegar pelo menos 1 video novo em '01 - brutas (suba aqui)'",
       "metrica": "material bruto novo (pre-requisito de todo Reel)",
@@ -25,7 +25,8 @@
       },
       "regra_de_morte": "Se a cena nao chegar em DUAS quintas seguidas, a reuniao seguinte discute SO 'por que ele nao filma'. Pauta de conteudo fica proibida ate isso ser resolvido.",
       "contador_nao_testado": 0,
-      "ultima_semana_contada": "2026-W32"
+      "ultima_semana_contada": "2026-W32",
+      "nota": "RESOLVIDO no mesmo dia, por caminho diferente do previsto: ele mandou 3 videos do acervo dele em 02/08 (cenoura, bolinha, creche) em vez de filmar cena nova. A hipotese 'pedir UMA cena destrava' NAO foi testada."
     },
     {
       "id": "reel-12-08-com-rosto",
@@ -35,25 +36,26 @@
       "metrica": "alcance, salvos, compartilhamentos e seguidores ganhos DESSE post",
       "precondicao": {
         "tipo": "post_publicado",
-        "post_id": "2026-08-12_a-patroa-mimada"
+        "post_id": "2026-08-12_cenoura-filhote"
       },
       "regra_de_morte": "Se o Reel for ao ar e der 0 compartilhamento E 0 seguidor ganho, esta confirmado que o gargalo nao e formato. A reuniao seguinte para de discutir formato e vai para distribuicao (onde a conta aparece para quem nao conhece o Ramon).",
       "contador_nao_testado": 0,
-      "ultima_semana_contada": "2026-W32"
+      "ultima_semana_contada": "2026-W32",
+      "nota": "O post de 12/08 mudou: era o Reel-slideshow 'a-patroa-mimada', virou o Reel de video real da cenoura. O slideshow NAO foi cancelado - foi remarcado para 14/08 e continua sendo teste medido."
     },
     {
       "id": "plano-b-praia",
-      "titulo": "Plano B engavetado: Reel com os ~4s de rosto do video da praia",
+      "titulo": "[CANCELADO] Plano B com os 4s de rosto do video da praia",
       "dono": "Claude",
       "esperado": "existir pronto, NAO ir ao ar se a cena nova chegar",
       "metrica": "nenhuma esta semana - e seguro, nao aposta",
       "precondicao": {
-        "tipo": "arquivo_existe",
-        "caminho": "Fotos da Hana/06 - videos e trilhas/rascunhos/plano-b-praia.mp4"
+        "tipo": "cancelado"
       },
       "regra_de_morte": "Se o plano B for ao ar e der 0 compartilhamento e 0 seguidor, fica confirmado que acervo velho nao distribui: proibido usar sobra de acervo como post principal daqui em diante.",
       "contador_nao_testado": 0,
-      "ultima_semana_contada": "2026-W32"
+      "ultima_semana_contada": "2026-W32",
+      "nota": "Cancelado em 02/08/2026, algumas horas depois de decidido: ele mandou o video da cenoura, que e material melhor (22s, ja vertical, rosto de frente ocupando a tela). Raspar o tacho deixou de ser necessario."
     }
   ],
   "vetos_do_conselheiro": [
@@ -61,5 +63,6 @@
     "Ronda de engajamento: o conselheiro pediu morte SEM o teste de 10 comentarios (10 comentarios rendem de 0 a 2 seguidores, indistinguivel de ruido, por 60-120 mil tokens). Como foi combinada COM o Ramon, so ele encerra. PENDENTE DE UMA LINHA DELE.",
     "Laudo de auditoria nao vale como fato se for checavel por codigo em 2 comandos - checar antes de citar."
   ],
-  "erro_registrado": "A auditoria de 31/07 disse que 'o rosto nao aparece em NENHUM frame' dos 12 videos. Conferido em 02/08 com ffprobe + grade de frames: nunca existiram 12 videos (9 eram Live Photo de ~2s), e no IMG_1725.MOV (praia) ha ~4 segundos de rosto em perfil. O laudo errado fez 3 diretores mudarem de voto."
+  "erro_registrado": "A auditoria de 31/07 disse que 'o rosto nao aparece em NENHUM frame' dos 12 videos. Conferido em 02/08 com ffprobe + grade de frames: nunca existiram 12 videos (9 eram Live Photo de ~2s), e no IMG_1725.MOV (praia) ha ~4 segundos de rosto em perfil. O laudo errado fez 3 diretores mudarem de voto.",
+  "erro_registrado_2": "ERRO MAIOR, descoberto quando ele mandou os videos: a reuniao inteira foi conduzida sobre a premissa 'o acervo de video esta ZERADO'. Era FALSO. O garimpo ja tinha aprovado 16 videos e 7 estavam em disco em 'Fotos da Hana/01 - brutas (suba aqui)/garimpo'. Eu repeti o aviso do robo do lote sem abrir a pasta. Palavras dele: 'ate acho estranho vc nao ter visto'. O que teria pego: um 'ls' na pasta antes de escrever o briefing."
 }
