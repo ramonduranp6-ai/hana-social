@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 03/08/2026 08:10. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 03/08/2026 08:17. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -11,7 +11,7 @@ decisões, use `DECISOES.md`.
 | 2026-08-05T21:00:00Z | 2026-08-05_navio-importacao | image | approved |
 | 2026-08-07T21:00:00Z | 2026-08-07_banho-de-sol | image | approved |
 | 2026-08-10T21:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
-| 2026-08-12T21:00:00Z | 2026-08-12_cenoura-filhote | reel | pending |
+| 2026-08-12T21:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
 | 2026-08-14T21:00:00Z | 2026-08-14_a-patroa-mimada | reel | approved |
 
 ## Publicados: 5
@@ -24,9 +24,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-08-03T11:15:51Z workflow_dispatch success
+2026-08-03T11:11:09Z workflow_dispatch success
 2026-08-03T10:48:15Z workflow_dispatch success
-2026-08-03T02:11:15Z workflow_dispatch success
-2026-08-03T00:57:27Z workflow_dispatch success
 ```
 - Vigia local (Agendador do Windows): próxima execução segunda-feira, 3 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -108,24 +108,20 @@ Diretor de Criação fecha o trecho, o gancho e a legenda na reunião de segunda
 
 ## Últimas mudanças no projeto
 ```
+e7d4298 chore: atualiza estado da fila [skip ci]
+1de9481 chore: atualiza estado da fila [skip ci]
+f9f2af1 o Reel vira HISTORIA e ganha trilha propria
 30cf945 chore: atualiza estado da fila [skip ci]
 8225430 conserta o erro que fez ele ver o mesmo video duas vezes
 27c4d4d chore: atualiza estado da fila [skip ci]
 1e77df8 reel de 12/08 refeito: 7 cortes, 6 versoes, 5 reprovacoes de auditoria
 f3a4b0b reel de 12/08 entregue no Telegram (anexo na conversa nao serve, ele esta no celular)
-f035634 chore: atualiza estado da fila [skip ci]
-eae3e31 o acervo nunca esteve zerado: Reel de 12/08 com video real dele
-5e78e3c reuniao com debate de verdade + a revisao semana a semana que ele pediu
 ```
 Alterações não commitadas:
 ```
-M content/queue/2026-08-12_cenoura-filhote/post.json
- D content/queue/2026-08-12_cenoura-filhote/video-v6.mp4
- M studio/gerar_trilha.py
- M studio/montar_reel.py
-?? content/queue/2026-08-12_cenoura-filhote/video-v7.mp4
-?? content/trilhas/04-crescendo-filhote.mp3
-?? studio/roteiros/2026-08-12_cabia-na-minha-mao.json
+M .claude/skills/hana-social/SKILL.md
+ M DECISOES.md
+ M estrategia/decisoes-2026-08-02.json
 ```
 
 ## Decisões e contexto
@@ -134,6 +130,46 @@ M content/queue/2026-08-12_cenoura-filhote/post.json
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
+
+## 🎬 O REEL DE 12/08 — SETE VERSÕES ATÉ ELE APROVAR (02-03/08/2026)
+
+**Aprovado por ele no Telegram em 03/08/2026** (`approved`, confirmado no
+post.json). Reação antes disso: *"Melhorou"*.
+
+**As três broncas dele, na ordem, porque cada uma corrigiu coisa diferente:**
+1. *"Tá horrível o conjunto do vídeo, coisa de amador, vc só colocou um texto,
+   tem um puta time e entrega um resultado desse? Vcs basicamente me proporiam o
+   vídeo que mandei… sejam criativos de vdd, ou mande todo mundo embora e faço eu
+   mesmo."* → faltava MONTAGEM. Virou 7 cortes com movimento.
+2. *"Vc me mandou o mesmo vídeo! Qual a sua dificuldade?"* → não era o vídeo,
+   era o CANAL: regravei por cima do mesmo `video.mp4` e o Telegram, que guarda
+   mídia pela URL, reenviou o antigo.
+3. *"Cadê a música, não era pra ser algo divertido? Cadê a criatividade, não tem
+   um storytelling."* → faltava TRILHA e ARCO. Virou uma história com música.
+
+**A peça aprovada** (`studio/roteiros/2026-08-12_cabia-na-minha-mao.json`):
+14s, 7 cortes. Ela cabia na mão dele → filhote de suéter → filhote correndo atrás
+da bolinha **rosa** → **a virada:** adulta com a bola **vermelha** → praia → a
+cama com as luzes da cidade → dormindo em cima da perna dele. Só 3 frases na
+tela. Trilha própria (Lyria 3, US$ 0,04) que cresce **no corte da virada** —
+encaixe achado com `astats`, não de ouvido.
+
+**As lições, que já estão na skill (3n-i, 3n-ii, 3n-iii):**
+- Reel é história com trilha; lista com texto carimbado ele reprova.
+- **Quando o defeito é do material, troca-se o material.** A auditoria reprovou o
+  mesmo corte 3x pelo mesmo motivo e eu insisti duas vezes em ajustar o
+  enquadramento. Luz se corrige (`clarear` por gamma salvou o corte da virada);
+  enquadramento de origem, não.
+- Mídia refeita precisa de URL nova. Consertado no código
+  (`postqueue.media_url()` assina com sha1), mas trocar o nome do arquivo também.
+- Custo: 5 reprovações da auditoria antes do OK. Cada uma pegou defeito real que
+  teria chegado nele.
+
+**Ferramenta nova: `studio/montar_reel.py`** — o projeto não sabia cortar vídeo.
+Corte seco, punch-in, zoom-out, acelerado, `aproximar`, `clarear`, texto com
+entrada/saída e trilha com abafamento. Roteiro em JSON, não no código.
+⚠️ Bug pago: `zoompan` ESTICA o clipe (1,8s viraram 36s, a peça saiu com 83s em
+vez de 11,6). Zoom é feito com `crop` animado.
 
 ## 🔴 O ACERVO NUNCA ESTEVE ZERADO — e ele viu antes de mim (02/08/2026)
 

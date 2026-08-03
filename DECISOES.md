@@ -4,6 +4,46 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## 🎬 O REEL DE 12/08 — SETE VERSÕES ATÉ ELE APROVAR (02-03/08/2026)
+
+**Aprovado por ele no Telegram em 03/08/2026** (`approved`, confirmado no
+post.json). Reação antes disso: *"Melhorou"*.
+
+**As três broncas dele, na ordem, porque cada uma corrigiu coisa diferente:**
+1. *"Tá horrível o conjunto do vídeo, coisa de amador, vc só colocou um texto,
+   tem um puta time e entrega um resultado desse? Vcs basicamente me proporiam o
+   vídeo que mandei… sejam criativos de vdd, ou mande todo mundo embora e faço eu
+   mesmo."* → faltava MONTAGEM. Virou 7 cortes com movimento.
+2. *"Vc me mandou o mesmo vídeo! Qual a sua dificuldade?"* → não era o vídeo,
+   era o CANAL: regravei por cima do mesmo `video.mp4` e o Telegram, que guarda
+   mídia pela URL, reenviou o antigo.
+3. *"Cadê a música, não era pra ser algo divertido? Cadê a criatividade, não tem
+   um storytelling."* → faltava TRILHA e ARCO. Virou uma história com música.
+
+**A peça aprovada** (`studio/roteiros/2026-08-12_cabia-na-minha-mao.json`):
+14s, 7 cortes. Ela cabia na mão dele → filhote de suéter → filhote correndo atrás
+da bolinha **rosa** → **a virada:** adulta com a bola **vermelha** → praia → a
+cama com as luzes da cidade → dormindo em cima da perna dele. Só 3 frases na
+tela. Trilha própria (Lyria 3, US$ 0,04) que cresce **no corte da virada** —
+encaixe achado com `astats`, não de ouvido.
+
+**As lições, que já estão na skill (3n-i, 3n-ii, 3n-iii):**
+- Reel é história com trilha; lista com texto carimbado ele reprova.
+- **Quando o defeito é do material, troca-se o material.** A auditoria reprovou o
+  mesmo corte 3x pelo mesmo motivo e eu insisti duas vezes em ajustar o
+  enquadramento. Luz se corrige (`clarear` por gamma salvou o corte da virada);
+  enquadramento de origem, não.
+- Mídia refeita precisa de URL nova. Consertado no código
+  (`postqueue.media_url()` assina com sha1), mas trocar o nome do arquivo também.
+- Custo: 5 reprovações da auditoria antes do OK. Cada uma pegou defeito real que
+  teria chegado nele.
+
+**Ferramenta nova: `studio/montar_reel.py`** — o projeto não sabia cortar vídeo.
+Corte seco, punch-in, zoom-out, acelerado, `aproximar`, `clarear`, texto com
+entrada/saída e trilha com abafamento. Roteiro em JSON, não no código.
+⚠️ Bug pago: `zoompan` ESTICA o clipe (1,8s viraram 36s, a peça saiu com 83s em
+vez de 11,6). Zoom é feito com `crop` animado.
+
 ## 🔴 O ACERVO NUNCA ESTEVE ZERADO — e ele viu antes de mim (02/08/2026)
 
 Palavras dele: *"Segue vídeos da hana… Até acho estranho vc não ter visto."*

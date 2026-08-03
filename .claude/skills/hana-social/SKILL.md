@@ -335,6 +335,45 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
      custo. Se aparecer demanda sem dono, aí sim propor a contratação a ele.
    **Isto já se pagou na estreia:** a revisão adversarial pegou 6 defeitos nos
    robôs antes de subirem, 2 graves — um derrubaria a publicação dos posts.
+3n-i. **REEL É HISTÓRIA COM TRILHA — não clipe com frase carimbada** (ordem dele,
+   02-03/08/2026, depois de reprovar SETE versões). As duas broncas, na íntegra,
+   porque a segunda corrigiu a primeira pela metade:
+   *"Tá horrível o conjunto do vídeo, coisa de amador, vc só colocou um texto,
+   tem um puta time e entrega um resultado desse? Vcs basicamente me proporiam o
+   vídeo que mandei… sejam criativos de vdd, ou mande todo mundo embora e faço
+   eu mesmo."* · *"Não gostei! Cadê a música, não era pra ser algo divertido?
+   Cadê a criatividade, não tem um storytelling."*
+   **A régua, que não se negocia mais:**
+   - **Mínimo 5 cortes.** Plano único é "renomear arquivo", não montagem.
+   - **TRILHA sempre.** A medição de que o nicho roda em áudio original (3h)
+     continua verdadeira e **não vale como desculpa para entregar sem música** —
+     ele mandou o contrário. Trilha própria pelo `gerar_trilha.py`; o som da
+     cena entra por cima nos segundos em que ele é o gancho (`abafar_ate`).
+   - **HISTÓRIA, não lista.** Uma coisa muda do começo ao fim. Checklist
+     ("passou · passou · errou · REPROVADO") ele reprovou explicitamente.
+   - **Pouco texto** — 3 frases. Se a peça só se entende lendo, ela não é visual.
+   - **Encaixar a música por MEDIÇÃO**, não de ouvido: `astats` por segundo acha
+     onde a faixa cresce, e o `inicio_trilha` faz esse crescimento cair no corte
+     da virada. Foi assim que funcionou.
+   Ferramenta: **`studio/montar_reel.py`** (roteiro em JSON, em
+   `studio/roteiros/`) — corte seco, punch-in, zoom-out, acelerado, `aproximar`
+   (recorte fixo), `clarear` (gamma, para contraluz), texto com entrada e saída
+   marcadas, e trilha. **Não voltar ao `reel_de_video.py` para peça de verdade:**
+   ele só carimba uma frase num clipe, que é exatamente o que foi reprovado.
+3n-ii. **QUANDO O DEFEITO É DO MATERIAL, TROCA-SE O MATERIAL** (lição cara de
+   02/08/2026). A auditoria reprovou o mesmo corte **três vezes seguidas** — a
+   cachorra pequena no quadro — e eu tentei consertar duas vezes mudando trecho e
+   ampliando o recorte. Ampliar plano aberto continua plano aberto, e ainda perde
+   nitidez. Só a quarta tentativa acertou: **tirar o clipe da peça.**
+   Régua: reprovou duas vezes pelo mesmo motivo? O problema não é o ajuste.
+   (Exceção que confirma: contraluz **é** consertável — `clarear` por gamma
+   salvou o corte da virada. Luz se corrige; enquadramento de origem, não.)
+3n-iii. **MÍDIA REFEITA PRECISA DE URL NOVA.** Regravei um Reel novo por cima do
+   mesmo `video.mp4` e o Telegram, que guarda a mídia pela URL, reenviou o
+   ANTIGO. Ele viu duas vezes a mesma peça e escreveu *"Vc me mandou o mesmo
+   vídeo! Qual a sua dificuldade?"*. Já está consertado no código —
+   `postqueue.media_url()` assina a URL com o sha1 do arquivo — mas **ao trocar a
+   mídia de um post, trocar também o nome do arquivo** (`video-v7.mp4`).
 3o. **COMO A REUNIÃO SEMANAL FUNCIONA — formato fixado em 02/08/2026** (ordem
    dele: *"refaça a reunião com todas as ias, eles devem participar e precisa que
    vcs debatam a ideia de cada um deles"* e *"na próxima reunião, revisar como foi
