@@ -2,6 +2,18 @@
 
 O que a automação já mandou pro Ramón, com data — pra próxima conversa não remontar do zero. Gravado por `publisher/diagnostico.py` e `publisher/leitura_d1.py`, sempre DEPOIS da entrega confirmada (nunca durante `--simular`). Mais recente em cima.
 
+## 2026-08-04 17:11 UTC — Leitura do dia 1 (2026-08-03_dia-de-praia)
+
+📈 LEITURA DO DIA 1 — 2026-08-03_dia-de-praia (Foto, 20h no ar)
+Alcance 25 · visitas ao perfil 0 · seguidores ganhos 0
+Curtidas 6 · comentários 0 · salvos 0 · compartilh. 0
+Comparando só com fotos da mesma idade (3 medido(s)): média 39.
+Este está -36% em relação a essa média.
+
+Régua: alcance depois do dia 1 não gerou visita nova em nenhum post medido — por isso só este número decide.
+
+---
+
 ## 2026-08-03 — Diagnóstico da semana 2026-W32
 
 📊 DIAGNÓSTICO DA SEMANA
