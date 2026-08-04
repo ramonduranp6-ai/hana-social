@@ -174,6 +174,25 @@ def _filtro_audio(corte):
     return ",".join(partes)
 
 
+FOTO_EXT = (".jpg", ".jpeg", ".png", ".webp")
+
+
+def _e_foto(caminho):
+    """Foto entra como corte igual a vídeo.
+
+    Faltava, e a falta custou caro: em 04/08/2026 ele cobrou —
+    *"Para fazer reel vc não usa apenas vídeo, vc tb pode fazer com fotos, e vc
+    tem portfólio de fotos bem grande"*. O projeto tem 62 fotos utilizáveis e
+    eu vinha montando tudo com os mesmos cinco clipes de vídeo.
+
+    Numa foto, `de`/`ate` deixam de ser trecho do arquivo e passam a ser
+    simplesmente quanto tempo ela fica na tela. Foto SEMPRE com movimento
+    (punch ou zoomout): foto parada em Reel é o que ele chama de amador, e o
+    movimento é o que transforma retrato em plano de cinema.
+    """
+    return caminho.lower().endswith(FOTO_EXT)
+
+
 def _tem_audio(caminho):
     r = subprocess.run([ff(), "-i", caminho], capture_output=True, text=True,
                        errors="replace")
@@ -228,6 +247,23 @@ def montar(roteiro, saida):
         for i, c in enumerate(cortes):
             vf, dur = _filtro_video(c)
             destino = os.path.join(tmp, "seg%02d.mp4" % i)
+            if _e_foto(c["arquivo"]):
+                # Foto vira clipe de `dur` segundos, com silêncio do mesmo
+                # tamanho para o concat não perder o sincronismo do áudio.
+                args = [ff(), "-y", "-loop", "1", "-t", "%.3f" % dur,
+                        "-i", c["arquivo"],
+                        "-f", "lavfi", "-t", "%.3f" % dur,
+                        "-i", "anullsrc=r=44100:cl=stereo",
+                        "-vf", vf, "-map", "0:v:0", "-map", "1:a:0"]
+                args += ["-c:v", "libx264", "-preset", "medium", "-crf", "19",
+                         "-pix_fmt", "yuv420p", "-r", str(FPS),
+                         "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-ac", "2",
+                         destino]
+                _rodar(args)
+                pedacos.append(destino)
+                marcas.append((t, t + dur, c.get("arquivo")))
+                t += dur
+                continue
             args = [ff(), "-y", "-ss", str(c["de"]), "-to", str(c["ate"]),
                     "-i", c["arquivo"], "-vf", vf]
             if _tem_audio(c["arquivo"]):
