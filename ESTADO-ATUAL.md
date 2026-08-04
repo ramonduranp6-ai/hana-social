@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 04/08/2026 00:01. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 04/08/2026 06:08. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-08-04T08:09:50Z schedule success
+2026-08-04T03:01:24Z workflow_dispatch success
 2026-08-04T02:12:41Z workflow_dispatch success
-2026-08-04T02:11:36Z workflow_dispatch success
-2026-08-03T22:43:04Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução quarta-feira, 5 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -70,6 +70,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+276c827 3 Reels novos, construidos em cima do garimpo do nicho
 13faa9d playbook de Reels: 10 profissionais, algoritmo medido e o video que ele mandou
 cd40a2c chore: atualiza estado da fila [skip ci]
 06357fc o botao do Telegram passa a responder na propria mensagem
@@ -77,17 +78,10 @@ cd40a2c chore: atualiza estado da fila [skip ci]
 a5144d7 chore: recado do lote semanal [skip ci]
 358fc4c chore: atualiza estado da fila [skip ci]
 64225cd posts passam para as 8h da manha (era 18h)
-979214e chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
-M studio/montar_reel.py
-?? content/queue/2026-08-17_o-chefe/
-?? content/queue/2026-08-19_quem-dorme-na-cama/
-?? content/queue/2026-08-21_confissao/
-?? studio/roteiros/2026-08_A_chefe.json
-?? studio/roteiros/2026-08_B_cama.json
-?? studio/roteiros/2026-08_C_confissao.json
+M .claude/skills/hana-social/SKILL.md
 ```
 
 ## Decisões e contexto

@@ -291,8 +291,15 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
      nas quatro. Cai junto o **carrossel** (é foto com outro nome) e o
      **Reel-slideshow** (foto parada disfarçada de vídeo).
    - **Reel de vídeo real, com o ROSTO da Hana obrigatório no quadro.**
-   - **1 Reel por semana.** Sobe para 2 só na semana em que houver sessão de
-     filmagem. Não prometer 2/semana: ele trabalha em tempo integral.
+   - **3 REELS POR SEMANA — seg/qua/sex** (ordem dele, 04/08/2026: *"Beleza.
+     Vamos manter 3 semana"*). Era 1 por semana, e essa regra existia porque o
+     acervo estava vazio; deixou de valer quando o garimpo do rolo de câmera e
+     os vídeos que ele mandou encheram a prateleira.
+     ⚠️ **Consequência que precisa ser vigiada:** 3 por semana consome ~12
+     clipes por mês. O acervo aproveitável hoje é da ordem de uma dezena de
+     trechos bons. **Ao cair abaixo de 3 semanas de fila, avisar ele e pedir
+     cena nova** — antes de acabar, não depois. Sem material, continua valendo
+     a regra de baixo: não se inventa post.
    - **O acervo manda no calendário, não o contrário.** Data fixa com acervo
      vazio foi exatamente o que fabricou as 4 fotos paradas. Sem material,
      não publica — e o robô já sabe disso (4c-i).
@@ -333,8 +340,19 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
      o que **toca segredo ou credencial**.
    - **Aprovar é proibido no papel de auditor:** ou aponta o defeito, ou
      escreve SEM OBJEÇÃO item a item. Uma rodada, não ping-pong.
-   - **Nenhum diretor novo.** As 11 cadeiras cobrem tudo; cargo sem trabalho é
-     custo. Se aparecer demanda sem dono, aí sim propor a contratação a ele.
+   - **Nenhum diretor novo por iniciativa minha.** Cargo sem trabalho é custo.
+     Se aparecer demanda sem dono, propor a contratação a ele — quem contrata
+     é ele.
+     🆕 **`diretor-reels` — contratado por ELE em 03/08/2026** (*"precisamos de
+     um diretor de reel virais, cargo bem específico para melhorar nossa
+     postagem e alcance"*). **Usar SEMPRE que a tarefa for criar, roteirizar ou
+     julgar um Reel**: ele estuda o que está viralizando na semana nos EUA e na
+     Europa, decide música e storytelling, escreve o roteiro batida a batida e
+     **reprova peça fraca ANTES de publicar**.
+     **A fronteira, para os dois não brigarem:** o `diretor-reels` é dono do
+     CONCEITO CRIATIVO do vídeo (ideia, gancho, roteiro, trilha, corte); o
+     `diretor-redes` continua dono da PLATAFORMA (horário, hashtag, formato,
+     métrica, o que o algoritmo premia). Peça de Reel passa pelos dois.
    **Isto já se pagou na estreia:** a revisão adversarial pegou 6 defeitos nos
    robôs antes de subirem, 2 graves — um derrubaria a publicação dos posts.
 3n-i. **REEL É HISTÓRIA COM TRILHA — não clipe com frase carimbada** (ordem dele,
