@@ -1,0 +1,76 @@
+{
+  "titulo": "CONFISSÃO (legenda amarela)",
+  "aposta": "YELLOW FONT THEORY, medida em julho/2026: texto AMARELO virou codigo de confissao no Instagram, e o publico le a cor antes da frase. Peca desenhada para o ENVIO por DM ('isso e voce'), que pesa 3 a 5x mais que curtida.",
+  "origem": "Estrutura copiada do garimpo de 03/08/2026 — 10 Reels em 4 perfis bully BR. Os 3 mais vistos da amostra (1,3mi / 877mil / 588mil views) sao TODOS: filhote sozinho em CLOSE olhando para a camera, plano parado, com uma frase curta e emotiva. 8 dos 10 sao plano unico. Playbook completo em content/playbook-reels.md.",
+  "trilha": "content/trilhas/01-fofo-ukulele.mp3",
+  "abafar_ate": 0.0,
+  "volume_trilha": 0.8,
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/24023CD7-9018-4D40-8792-200F4F0AD9B1.mp4",
+      "de": 1.8,
+      "ate": 4.2,
+      "movimento": "zoomout",
+      "forca": 0.2,
+      "mudo": true,
+      "_nota": "Abre no colo: a confissao ja se ve antes de ler."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/11984692-701d-419b-ac51-88434fa3c902.mp4",
+      "de": 0.2,
+      "ate": 2.4,
+      "movimento": "punch",
+      "forca": 0.1,
+      "mudo": true
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_filhote_cenoura.mp4",
+      "de": 3.6,
+      "ate": 5.6,
+      "movimento": "punch",
+      "forca": 0.1
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/IMG_1725.MOV",
+      "de": 4.0,
+      "ate": 5.4,
+      "movimento": "zoomout",
+      "forca": 0.14,
+      "mudo": true
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/24023CD7-9018-4D40-8792-200F4F0AD9B1.mp4",
+      "de": 1.8,
+      "ate": 2.6,
+      "movimento": "seco",
+      "mudo": true,
+      "_nota": "Loop."
+    }
+  ],
+  "textos": [
+    {
+      "de": 0.3,
+      "ate": 2.3,
+      "texto": "confesso: eu durmo na beirada",
+      "posicao": "baixo",
+      "px": 70,
+      "amarelo": true
+    },
+    {
+      "de": 2.6,
+      "ate": 4.5,
+      "texto": "e ela nem finge que se importa",
+      "posicao": "alto",
+      "px": 70,
+      "amarelo": true
+    },
+    {
+      "de": 6.4,
+      "ate": 8.4,
+      "texto": "e eu faria tudo de novo",
+      "posicao": "baixo",
+      "px": 74,
+      "amarelo": true
+    }
+  ]
+}

@@ -1,34 +1,36 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 03/08/2026 12:35. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 04/08/2026 00:01. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
 
 | Quando (UTC) | Post | Tipo | Status |
 |---|---|---|---|
-| 2026-08-03T21:00:00Z | 2026-08-03_dia-de-praia | image | approved |
 | 2026-08-05T11:00:00Z | 2026-08-05_navio-importacao | image | approved |
 | 2026-08-07T11:00:00Z | 2026-08-07_banho-de-sol | image | approved |
 | 2026-08-10T11:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
 | 2026-08-12T11:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
 | 2026-08-14T11:00:00Z | 2026-08-14_a-patroa-mimada | reel | pending |
+| 2026-08-17T11:00:00Z | 2026-08-17_o-chefe | reel | pending |
+| 2026-08-19T11:00:00Z | 2026-08-19_quem-dorme-na-cama | reel | pending |
+| 2026-08-21T11:00:00Z | 2026-08-21_confissao | reel | pending |
 
-## Publicados: 5
-- 2026-07-22_bar-hana — IG `18118796690302997`
+## Publicados: 6
 - 2026-07-23_olhar-no-tapete — IG `18140672137562244`
 - 2026-07-27_pijama-oncinha — IG `18073337600408952`
 - 2026-07-29_lilac-ao-sol — IG `18112183567998703`
 - 2026-07-31_roda-gigante — IG `17893985169571565`
+- 2026-08-03_dia-de-praia — IG `17963565245962414`
 
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-03T12:39:15Z schedule success
-2026-08-03T11:58:50Z workflow_dispatch success
-2026-08-03T11:15:51Z workflow_dispatch success
+2026-08-04T02:12:41Z workflow_dispatch success
+2026-08-04T02:11:36Z workflow_dispatch success
+2026-08-03T22:43:04Z schedule success
 ```
-- Vigia local (Agendador do Windows): próxima execução segunda-feira, 3 de agosto de 2026 18:10:00
+- Vigia local (Agendador do Windows): próxima execução quarta-feira, 5 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
@@ -43,6 +45,12 @@ Mídias numeradas em `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos
 - 05_PREVIA-TRILHA.mp4
 - 06_12-08_REEL-HISTORIA.mp4
 - 06_12-08_REEL-HISTORIA_capa.jpg
+- 07_A_chefe.mp4
+- 07_A_chefe_capa.jpg
+- 08_B_cama.mp4
+- 08_B_cama_capa.jpg
+- 09_C_confissao.mp4
+- 09_C_confissao_capa.jpg
 
 Ele responde pelos números. Enquanto não responder, **não commitar**
 mudança de status nem publicar.
@@ -56,78 +64,30 @@ mudança de status nem publicar.
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
 
-**Não montei lote esta semana** — nenhum vídeo novo em `01 - brutas (suba aqui)`, de propósito (foto parada já deu zero em salvos, compartilhamentos e seguidores ganhos, 4 vezes seguidas — regra fixa desde 31/07/2026).
+2 rascunho(s) de Reel prontos em `Fotos da Hana/06 - videos e trilhas/rascunhos`, montados dos vídeos novos. Contador de semanas sem filmagem voltou a zero.
 
-🎬 CENAS PRA FILMAR — Hana
-
-POR QUE ESTA SEMANA: o acervo inteiro está reprovado. Nos 12 vídeos brutos a
-Hana aparece de costas e o rosto dela não surge em nenhum frame — e a auditoria
-achou o mesmo defeito no Reel de 10/08, que são 14 segundos com ela de costas.
-Sem cena nova, não nasce Reel.
-
-AS 4 REGRAS (valem para todas as cenas):
-1. Celular EM PÉ (vertical) e no CHÃO, na altura dos olhos dela.
-2. O ROSTO DELA DE FRENTE NOS 2 PRIMEIROS SEGUNDOS. Esta é a regra que faltava
-   e é a que mais importa: o primeiro frame é o que segura quem está rolando.
-   Se precisar, chame o nome dela ou use petisco fora de quadro para o olhar vir.
-3. Som do ambiente, sem música tocando. O nicho roda em áudio original.
-4. 15 a 30 segundos cada, de dia, perto da janela. Câmera PARADA — se a câmera
-   se mexe, o assunto sai de quadro no meio (foi o que estragou o teste anterior).
-
-CENA 1 — "A PATROA MANDOU"   (pilar: A PATROA MANDA)
-Ela te encara ou late pedindo alguma coisa, e você levanta e obedece na hora.
-Comece com ela já olhando para a câmera. O que faz a cena funcionar é o
-DESFECHO visível: ela pede, você cumpre, e dá para ver que cumpriu.
-
-CENA 2 — "O SOFÁ É MEU"   (pilar: A PATROA MANDA)
-Você tenta sentar no seu lugar e ela já está esparramada lá. Você desiste e
-senta no chão. Filme ela sem sair do lugar — a graça é a cara de quem não vai
-ceder. Se ela levantar e sair, a cena morre; espere outra hora.
-
-CENA 3 — "INIMIGO DA PATROA"   (pilar: INIMIGOS DA PATROA)
-Ela contra o aspirador, o secador ou a chuva. ATENÇÃO ao desfecho, que é regra:
-ela LATE E EXPULSA, ou IGNORA E SAI ANDANDO. **Nunca foge.** Cachorro com medo
-contradiz o posicionamento — o perfil é "ela manda", não "ela se assusta".
-Este pilar não tem UM único vídeo no acervo. É o que mais falta.
-
-BÔNUS, se sobrar tempo — "ACORDANDO A PATROA"   (pilar: MICRO NO APÊ)
-Ela dormindo, você chama baixinho, ela levanta a cabeça devagar com cara de
-sono. Bem perto do rosto. É a mais fácil de conseguir e serve de reserva.
-
-ONDE SALVAR:
-C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\01 - brutas (suba aqui)
-Dá para jogar direto pelo OneDrive do celular.
-
-Filme cada cena DUAS VEZES. Sai mais barato repetir na hora do que descobrir na
-segunda-feira que o rosto não apareceu e perder a semana.
-
-Assim que os arquivos aparecerem lá, o robô volta a trabalhar sozinho e o
-Diretor de Criação fecha o trecho, o gancho e a legenda na reunião de segunda.
-
-⏳ **1ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
+**Ainda não entraram na fila** — falta escolher o trecho e o gancho, que é julgamento, e passar pelo auditor. Fazer na reunião de segunda.
 
 ## Últimas mudanças no projeto
 ```
+13faa9d playbook de Reels: 10 profissionais, algoritmo medido e o video que ele mandou
+cd40a2c chore: atualiza estado da fila [skip ci]
+06357fc o botao do Telegram passa a responder na propria mensagem
+0ec90b6 chore: atualiza estado da fila [skip ci]
+a5144d7 chore: recado do lote semanal [skip ci]
+358fc4c chore: atualiza estado da fila [skip ci]
+64225cd posts passam para as 8h da manha (era 18h)
 979214e chore: atualiza estado da fila [skip ci]
-ac7d4de eu decido, ele aprova: legenda do 14/08 reescrita sem perguntar
-0ef7217 ronda de engajamento MORTA por ordem dele
-0f555eb Reel de 12/08 aprovado por ele; licoes gravadas na skill
-e7d4298 chore: atualiza estado da fila [skip ci]
-1de9481 chore: atualiza estado da fila [skip ci]
-f9f2af1 o Reel vira HISTORIA e ganha trilha propria
-30cf945 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
-M .claude/skills/hana-social/SKILL.md
- M .github/workflows/publish.yml
- M content/queue/2026-08-05_navio-importacao/post.json
- M content/queue/2026-08-07_banho-de-sol/post.json
- M content/queue/2026-08-10_escolheu-o-canal/post.json
- M content/queue/2026-08-12_cenoura-filhote/post.json
- M content/queue/2026-08-14_a-patroa-mimada/post.json
- M studio/lote_automatico.py
- M studio/preparar_lote.py
+M studio/montar_reel.py
+?? content/queue/2026-08-17_o-chefe/
+?? content/queue/2026-08-19_quem-dorme-na-cama/
+?? content/queue/2026-08-21_confissao/
+?? studio/roteiros/2026-08_A_chefe.json
+?? studio/roteiros/2026-08_B_cama.json
+?? studio/roteiros/2026-08_C_confissao.json
 ```
 
 ## Decisões e contexto

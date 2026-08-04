@@ -1,0 +1,62 @@
+{
+  "titulo": "VOCÊ NÃO ADOTA UM BULLY. VOCÊ CONTRATA UM CHEFE.",
+  "aposta": "COPIA A FORMULA CAMPEA DO NICHO: close no rosto + frase de consequencia. Poucos cortes (4), quase plano parado, como os 3 mais vistos da amostra.",
+  "origem": "Estrutura copiada do garimpo de 03/08/2026 — 10 Reels em 4 perfis bully BR. Os 3 mais vistos da amostra (1,3mi / 877mil / 588mil views) sao TODOS: filhote sozinho em CLOSE olhando para a camera, plano parado, com uma frase curta e emotiva. 8 dos 10 sao plano unico. Playbook completo em content/playbook-reels.md.",
+  "trilha": "content/trilhas/01-fofo-ukulele.mp3",
+  "abafar_ate": 3.3,
+  "volume_trilha": 0.85,
+  "volume_trilha_abafada": 0.3,
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_filhote_cenoura.mp4",
+      "de": 3.6,
+      "ate": 7.0,
+      "movimento": "punch",
+      "forca": 0.1,
+      "_nota": "Close do rosto dela comendo da mao dele. Som da cena."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/135b6565-9f29-4e4c-b83d-9a434936b424.mp4",
+      "de": 3.2,
+      "ate": 5.2,
+      "movimento": "seco",
+      "mudo": true,
+      "_nota": "Filhote de sueter rosa encarando de baixo para cima. | v2: a auditoria reprovou por 'cadela pequena isolada, muito chao vazio' — o plano e de cima e mostra ceramica demais. `aproximar 1.45` resolve.",
+      "aproximar": 1.45,
+      "foco_y": 0.32
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/11984692-701d-419b-ac51-88434fa3c902.mp4",
+      "de": 0.2,
+      "ate": 2.4,
+      "movimento": "punch",
+      "forca": 0.1,
+      "mudo": true,
+      "_nota": "O PAYOFF: adulta na cama, luzes da cidade, encarando a camera. E o chefe."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_filhote_cenoura.mp4",
+      "de": 3.6,
+      "ate": 4.4,
+      "movimento": "seco",
+      "mudo": true,
+      "_nota": "Loop exato: mesmos frames da abertura."
+    }
+  ],
+  "textos": [
+    {
+      "de": 0.3,
+      "ate": 3.3,
+      "texto": "VOCÊ NÃO ADOTA UM BULLY MICRO",
+      "posicao": "baixo",
+      "px": 68
+    },
+    {
+      "de": 3.6,
+      "ate": 7.4,
+      "texto": "VOCÊ CONTRATA UM CHEFE",
+      "posicao": "alto",
+      "px": 78
+    }
+  ]
+}

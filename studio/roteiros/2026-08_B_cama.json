@@ -1,0 +1,70 @@
+{
+  "titulo": "ADIVINHA QUEM DORME NA CAMA",
+  "aposta": "PERGUNTA ABERTA no primeiro segundo, respondida so no ultimo. E a estrutura que os 10 profissionais chamam de open loop. | v2: a auditoria reprovou porque o texto 'DORME NA CAMA' vazava para um corte de PRAIA, que nao tem cama nenhuma, e o miolo fugia do tema. Agora a peca inteira acontece dentro de casa e o texto fecha antes da troca de corte.",
+  "origem": "Estrutura copiada do garimpo de 03/08/2026 — 10 Reels em 4 perfis bully BR. Os 3 mais vistos da amostra (1,3mi / 877mil / 588mil views) sao TODOS: filhote sozinho em CLOSE olhando para a camera, plano parado, com uma frase curta e emotiva. 8 dos 10 sao plano unico. Playbook completo em content/playbook-reels.md.",
+  "trilha": "content/trilhas/03-comico-pizzicato.mp3",
+  "abafar_ate": 0.0,
+  "volume_trilha": 0.85,
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/11984692-701d-419b-ac51-88434fa3c902.mp4",
+      "de": 0.2,
+      "ate": 2.2,
+      "movimento": "punch",
+      "forca": 0.1,
+      "mudo": true,
+      "_nota": "Abre com ela na cama encarando: a pergunta ja esta na imagem."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_filhote_cenoura.mp4",
+      "de": 3.6,
+      "ate": 5.4,
+      "movimento": "punch",
+      "forca": 0.1,
+      "_nota": "v2: entrou no lugar da praia. Tudo dentro de casa, no tema."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/135b6565-9f29-4e4c-b83d-9a434936b424.mp4",
+      "de": 3.2,
+      "ate": 5.0,
+      "movimento": "seco",
+      "aproximar": 1.45,
+      "foco_y": 0.32,
+      "mudo": true,
+      "_nota": "v2: entrou no lugar da bolinha, e ja aproximado."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/24023CD7-9018-4D40-8792-200F4F0AD9B1.mp4",
+      "de": 1.8,
+      "ate": 4.2,
+      "movimento": "zoomout",
+      "forca": 0.2,
+      "mudo": true,
+      "_nota": "A RESPOSTA: ela dormindo em cima da perna dele."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/11984692-701d-419b-ac51-88434fa3c902.mp4",
+      "de": 0.2,
+      "ate": 1.2,
+      "movimento": "seco",
+      "mudo": true,
+      "_nota": "Loop: volta ao frame da pergunta."
+    }
+  ],
+  "textos": [
+    {
+      "de": 0.3,
+      "ate": 2.0,
+      "texto": "ADIVINHA QUEM DORME NA CAMA",
+      "posicao": "alto",
+      "px": 68
+    },
+    {
+      "de": 6.0,
+      "ate": 7.9,
+      "texto": "E QUEM VIROU O COLCHÃO",
+      "posicao": "baixo",
+      "px": 74
+    }
+  ]
+}

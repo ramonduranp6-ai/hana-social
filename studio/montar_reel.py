@@ -180,8 +180,14 @@ def _tem_audio(caminho):
     return "Audio:" in r.stderr
 
 
-def _cartela(texto, destino, posicao="baixo", px=72):
-    """Desenha a frase num PNG transparente, com tarja atrás para ler sem som."""
+def _cartela(texto, destino, posicao="baixo", px=72, cor=(255, 255, 255, 255)):
+    """Desenha a frase num PNG transparente, com tarja atrás para ler sem som.
+
+    `cor` existe por causa da "Yellow Font Theory", medida em julho/2026: texto
+    AMARELO virou código de confissão / momento vulnerável no Instagram, e o
+    público lê a cor antes de ler a frase. Usar só quando a peça for confissão —
+    amarelo em tudo perde o significado.
+    """
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     try:
@@ -208,7 +214,7 @@ def _cartela(texto, destino, posicao="baixo", px=72):
     for ln in linhas:
         caixa = d.textbbox((0, 0), ln, font=fonte)
         x = (W - (caixa[2] - caixa[0])) // 2 - caixa[0]
-        d.text((x, y - caixa[1]), ln, font=fonte, fill=(255, 255, 255, 255))
+        d.text((x, y - caixa[1]), ln, font=fonte, fill=cor)
         y += passo
     img.save(destino)
 
@@ -292,8 +298,9 @@ def montar(roteiro, saida):
         filtro, atual = [], "0:v"
         for i, tx in enumerate(textos):
             png = os.path.join(tmp, "txt%02d.png" % i)
+            cor = (255, 214, 0, 255) if tx.get("amarelo") else (255, 255, 255, 255)
             _cartela(tx["texto"], png, tx.get("posicao", "baixo"),
-                     int(tx.get("px", 72)))
+                     int(tx.get("px", 72)), cor)
             entradas.append(png)
             prox = "v%d" % i
             filtro.append(
