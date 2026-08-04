@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 04/08/2026 07:29. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 04/08/2026 08:21. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -12,9 +12,9 @@ decisões, use `DECISOES.md`.
 | 2026-08-10T11:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
 | 2026-08-12T11:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
 | 2026-08-14T11:00:00Z | 2026-08-14_a-patroa-mimada | reel | pending |
-| 2026-08-17T11:00:00Z | 2026-08-17_vida-dupla | reel | pending |
-| 2026-08-19T11:00:00Z | 2026-08-19_cinco-quilos | reel | pending |
-| 2026-08-21T11:00:00Z | 2026-08-21_diva-da-meia-noite | reel | pending |
+| 2026-08-17T11:00:00Z | 2026-08-17_golden-hour | reel | pending |
+| 2026-08-19T11:00:00Z | 2026-08-19_a-noite-dela | reel | pending |
+| 2026-08-21T11:00:00Z | 2026-08-21_dona-da-casa | reel | pending |
 
 ## Publicados: 6
 - 2026-07-23_olhar-no-tapete — IG `18140672137562244`
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-08-04T10:29:45Z workflow_dispatch success
 2026-08-04T08:09:50Z schedule success
 2026-08-04T03:01:24Z workflow_dispatch success
-2026-08-04T02:12:41Z workflow_dispatch success
 ```
 - Vigia local (Agendador do Windows): próxima execução quarta-feira, 5 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -45,18 +45,18 @@ Mídias numeradas em `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos
 - 05_PREVIA-TRILHA.mp4
 - 06_12-08_REEL-HISTORIA.mp4
 - 06_12-08_REEL-HISTORIA_capa.jpg
-- 07_D_vida_dupla.mp4
-- 07_D_vida_dupla_capa.jpg
-- 08_E_cinco_quilos.mp4
-- 08_E_cinco_quilos_capa.jpg
-- 09_F_diva.mp4
-- 09_F_diva_capa.jpg
+- 07_G1_golden.mp4
+- 07_G1_golden_capa.jpg
+- 08_G2_noite.mp4
+- 08_G2_noite_capa.jpg
+- 09_G3_casa.mp4
+- 09_G3_casa_capa.jpg
 
 Ele responde pelos números. Enquanto não responder, **não commitar**
 mudança de status nem publicar.
 
 ## Acervo de fotos
-- Brutas a processar: 29 arquivos
+- Brutas a processar: 38 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
 - Fotos do iPhone sincronizadas (iCloud): 34455
@@ -70,29 +70,34 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+58b487a regra 9: quarta cobranca de resposta curta - agora com o custo explicito
+4e5048b trinco contra foto repetida, 9 HEIC convertidas e o garimpo religado de verdade
+3343638 chore: atualiza estado da fila [skip ci]
+ac4be29 3 Reels refeitos pelos diretores, com FOTO no lugar central
 8f42f3c montador passa a aceitar FOTO como corte, com movimento
 9a5ebaa 3 Reels por semana e o diretor-reels entram nas regras
 2b9793a chore: atualiza estado da fila [skip ci]
 276c827 3 Reels novos, construidos em cima do garimpo do nicho
-13faa9d playbook de Reels: 10 profissionais, algoritmo medido e o video que ele mandou
-cd40a2c chore: atualiza estado da fila [skip ci]
-06357fc o botao do Telegram passa a responder na propria mensagem
-0ec90b6 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
-D  content/queue/2026-08-17_o-chefe/post.json
-D  content/queue/2026-08-17_o-chefe/video-a_chefe.mp4
-D  content/queue/2026-08-19_quem-dorme-na-cama/post.json
-D  content/queue/2026-08-19_quem-dorme-na-cama/video-b_cama.mp4
-D  content/queue/2026-08-21_confissao/post.json
-D  content/queue/2026-08-21_confissao/video-c_confissao.mp4
-?? content/queue/2026-08-17_vida-dupla/
-?? content/queue/2026-08-19_cinco-quilos/
-?? content/queue/2026-08-21_diva-da-meia-noite/
-?? studio/roteiros/2026-08_D_vida_dupla.json
-?? studio/roteiros/2026-08_E_cinco_quilos.json
-?? studio/roteiros/2026-08_F_diva.json
+M content/fotos-usadas.json
+ D content/queue/2026-08-17_vida-dupla/post.json
+ D content/queue/2026-08-17_vida-dupla/video-d-vida-dupla.mp4
+ D content/queue/2026-08-19_cinco-quilos/post.json
+ D content/queue/2026-08-19_cinco-quilos/video-e-cinco-quilos.mp4
+ D content/queue/2026-08-21_diva-da-meia-noite/post.json
+ D content/queue/2026-08-21_diva-da-meia-noite/video-f-diva.mp4
+ M studio/montar_reel.py
+?? content/fotos-livres.json
+?? content/queue/2026-08-17_golden-hour/
+?? content/queue/2026-08-19_a-noite-dela/
+?? content/queue/2026-08-21_dona-da-casa/
+?? content/trilhas/05-cinema-golden.mp3
+?? content/trilhas/06-cinema-noite.mp3
+?? studio/roteiros/2026-08_G1_golden.json
+?? studio/roteiros/2026-08_G2_noite.json
+?? studio/roteiros/2026-08_G3_casa.json
 ```
 
 ## Decisões e contexto

@@ -1,0 +1,63 @@
+{
+  "titulo": "GOLDEN HOUR",
+  "ideia": "A hora do dia que e so dela: sobe o morro, ganha a vista, dorme na volta.",
+  "origem": "Roteiro do diretor-reels, 04/08/2026, depois de ele reprovar 3 pecas por foto repetida e pedir 'reels cinematograficos'. TODAS as fotos sao ineditas - conferido por impressao digital de imagem contra tudo que ja foi ao ar. Modo 'cinema': contraste em S, leve dessaturacao e vinheta; movimento lento; cortes longos; duas frases so.",
+  "trilha": "content/trilhas/05-cinema-golden.mp3",
+  "volume_trilha": 0.85,
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/IMG_0799.jpg",
+      "de": 0,
+      "ate": 2.6,
+      "movimento": "punch",
+      "forca": 0.08,
+      "cinema": 0.45,
+      "clarear": 0.35,
+      "_nota": "v2: o tratamento de cinema em forca cheia CRUAVA esta foto (ela e contraluz com o sol baixo) e a cor lilac merle sumia - a auditoria disse que nao dava para confirmar que era a Hana. Cinema baixado para 0,45 e sombra levantada."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/16077834-f60a-46f0-827e-eeec8a7a2f5e.jpg",
+      "de": 0,
+      "ate": 2.4,
+      "movimento": "zoomout",
+      "forca": 0.1,
+      "cinema": 1.0
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/a2756578-f785-44bf-abb0-8375e4e465b3.jpg",
+      "de": 0,
+      "ate": 2.8,
+      "movimento": "zoomout",
+      "forca": 0.09,
+      "cinema": 0.85,
+      "_nota": "v2: entrou no lugar de duas fotos. Saiu a do carro, que tem MARCA D'AGUA 'J' visivel no vidro (a auditoria pegou). E saiu a da pedra, que na tela virava mais mato igual ao corte anterior. Aqui ela esta de corpo inteiro, de frente, no sol, com o navio ao longe: e a VISTA que a peca prometia."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/IMG_0799.jpg",
+      "de": 0,
+      "ate": 1.2,
+      "movimento": "punch",
+      "forca": 0.06,
+      "cinema": 0.45,
+      "clarear": 0.35,
+      "_nota": "Loop."
+    }
+  ],
+  "textos": [
+    {
+      "de": 0.8,
+      "ate": 3.4,
+      "texto": "Ela espera o dia inteiro por essa hora",
+      "posicao": "baixo",
+      "px": 62
+    },
+    {
+      "de": 5.6,
+      "ate": 8.4,
+      "texto": "E acha que a vista é propriedade dela",
+      "posicao": "baixo",
+      "px": 62
+    }
+  ],
+  "legenda": "Ela sobe o morro inteiro sem reclamar e senta lá em cima como se a vista fosse dela.\nNinguém teve coragem de dizer que não é.\nSeu cachorro também tem a hora favorita dele?\n\n#cachorro #fimdetarde #vidadecachorro #bullyamericano"
+}

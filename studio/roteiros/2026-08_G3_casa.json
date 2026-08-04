@@ -1,0 +1,66 @@
+{
+  "titulo": "A DONA DA CASA",
+  "ideia": "Ela manda em todos os comodos, e o expediente dela e dormir.",
+  "origem": "Roteiro do diretor-reels, 04/08/2026, depois de ele reprovar 3 pecas por foto repetida e pedir 'reels cinematograficos'. TODAS as fotos sao ineditas - conferido por impressao digital de imagem contra tudo que ja foi ao ar. Modo 'cinema': contraste em S, leve dessaturacao e vinheta; movimento lento; cortes longos; duas frases so.",
+  "trilha": "content/trilhas/02-lofi-sofa.mp3",
+  "volume_trilha": 0.85,
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/2344ac51-8b1f-49b1-9a80-6433779738d5.jpg",
+      "de": 0,
+      "ate": 2.6,
+      "movimento": "punch",
+      "forca": 0.07,
+      "cinema": 1.0
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/1bbb719b-fe94-4dca-b8c3-ff5e9e3b2580.jpg",
+      "de": 0,
+      "ate": 2.4,
+      "movimento": "punch",
+      "forca": 0.08,
+      "cinema": 1.0
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/0440D040-DD38-40D4-965A-C0D0B1DF00F6.jpg",
+      "de": 0,
+      "ate": 2.6,
+      "movimento": "zoomout",
+      "forca": 0.09,
+      "cinema": 1.0
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/06bae585-c1d3-4b7c-bcdb-ebd79a657435.jpg",
+      "de": 0,
+      "ate": 2.6,
+      "movimento": "punch",
+      "forca": 0.06,
+      "cinema": 1.0
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/2344ac51-8b1f-49b1-9a80-6433779738d5.jpg",
+      "de": 0,
+      "ate": 1.2,
+      "movimento": "punch",
+      "forca": 0.05,
+      "cinema": 1.0
+    }
+  ],
+  "textos": [
+    {
+      "de": 0.8,
+      "ate": 3.4,
+      "texto": "Ela manda em todos os cômodos",
+      "posicao": "baixo",
+      "px": 66
+    },
+    {
+      "de": 8.4,
+      "ate": 11.0,
+      "texto": "E o expediente dela é dormir",
+      "posicao": "baixo",
+      "px": 68
+    }
+  ],
+  "legenda": "Escolhe a poltrona, escolhe o quadrado de sol, escolhe o sofá inteiro pra dormir.\nA casa é nossa só no papel.\nQual bicho manda na sua casa?\n\n#cachorro #donadacasa #patroamimada #vidadecachorro"
+}

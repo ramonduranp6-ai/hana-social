@@ -1,0 +1,66 @@
+{
+  "titulo": "A NOITE DELA",
+  "ideia": "Levamos a cidade inteira pra ela ver — ela viu por vinte minutos.",
+  "origem": "Roteiro do diretor-reels, 04/08/2026, depois de ele reprovar 3 pecas por foto repetida e pedir 'reels cinematograficos'. TODAS as fotos sao ineditas - conferido por impressao digital de imagem contra tudo que ja foi ao ar. Modo 'cinema': contraste em S, leve dessaturacao e vinheta; movimento lento; cortes longos; duas frases so.",
+  "trilha": "content/trilhas/06-cinema-noite.mp3",
+  "volume_trilha": 0.85,
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/IMG_0664.jpg",
+      "de": 0,
+      "ate": 2.6,
+      "movimento": "punch",
+      "forca": 0.07,
+      "cinema": 1.0
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/IMG_0656.jpg",
+      "de": 0,
+      "ate": 2.6,
+      "movimento": "zoomout",
+      "forca": 0.09,
+      "cinema": 1.0
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/16B8E8B5-5B60-43F5-A5C0-0DFAF4A5218E.jpg",
+      "de": 0,
+      "ate": 2.6,
+      "movimento": "punch",
+      "forca": 0.08,
+      "cinema": 1.0
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/120B8AC0-ECBD-4F20-9770-2C825313FD34.jpg",
+      "de": 0,
+      "ate": 2.8,
+      "movimento": "zoomout",
+      "forca": 0.08,
+      "cinema": 1.0
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/IMG_0664.jpg",
+      "de": 0,
+      "ate": 1.2,
+      "movimento": "punch",
+      "forca": 0.06,
+      "cinema": 1.0
+    }
+  ],
+  "textos": [
+    {
+      "de": 1.0,
+      "ate": 3.6,
+      "texto": "A cidade inteira só pra ela",
+      "posicao": "baixo",
+      "px": 68
+    },
+    {
+      "de": 8.4,
+      "ate": 11.4,
+      "texto": "Durou vinte minutos",
+      "posicao": "baixo",
+      "px": 72
+    }
+  ],
+  "legenda": "A gente atravessou a cidade pra ela ver a roda-gigante acesa.\nEla olhou, aprovou e dormiu no colo antes de chegar no carro.\nQuem aí tem um passeador que desiste na metade?\n\n#cachorro #passeionoturno #patroamimada #bullyamericano"
+}

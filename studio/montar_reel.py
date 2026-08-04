@@ -147,6 +147,19 @@ def _filtro_video(corte):
         partes.append("eq=gamma=%.3f:saturation=%.3f:contrast=%.3f"
                       % (1.0 + clarear, 1.0 + clarear * 0.35, 1.0 + clarear * 0.12))
 
+    # CINEMA. Pedido dele em 04/08/2026: "quero reels cinematograficos".
+    # Nao e filtro de rede social: e o tratamento que faz material de celular
+    # parecer filmado — contraste em S (preto mais fechado), leve dessaturacao
+    # com realce de pele/pelo, e vinheta discreta puxando o olho para o centro.
+    # Vem DEPOIS do movimento para o grade valer na imagem final.
+    if corte.get("cinema"):
+        f = float(corte.get("cinema")) if not isinstance(corte["cinema"], bool) else 1.0
+        partes.append("curves=master='0/0 0.25/%.3f 0.5/0.5 0.75/%.3f 1/1'"
+                      % (0.25 - 0.05 * f, 0.75 + 0.04 * f))
+        partes.append("eq=saturation=%.3f:contrast=%.3f:gamma=%.3f"
+                      % (1 - 0.12 * f, 1 + 0.10 * f, 1 - 0.03 * f))
+        partes.append("vignette=angle=PI/%.2f" % (5.5 - 0.8 * f))
+
     partes += ["setsar=1", "fps=%d" % FPS, "format=yuv420p"]
     return ",".join(partes), dur_saida
 
@@ -282,6 +295,43 @@ def _conferir_repetida(roteiro):
     repetidas = [os.path.basename(c["arquivo"]) for c in roteiro.get("cortes", [])
                  if _e_foto(c.get("arquivo", ""))
                  and os.path.basename(c["arquivo"]) in usadas]
+
+    # Comparar por NOME nao basta, e isso deixou passar o erro que ele viu:
+    # as fotos sao EDITADAS antes de virar post, entao o arquivo publicado tem
+    # outro nome e outro hash — e a mesma imagem voltava como se fosse nova.
+    # Agora a comparacao e por IMPRESSAO DIGITAL DA IMAGEM (dhash), a mesma que
+    # o checar_repetida.py ja usava contra o perfil.
+    try:
+        from PIL import Image as _Im
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from checar_repetida import dhash as _dh
+        import glob as _g
+        raiz = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        ja = []
+        for base in ("content/posted", "content/queue"):
+            for d in _g.glob(os.path.join(raiz, base, "*", "")):
+                for f in os.listdir(d):
+                    if f.lower().endswith((".jpg", ".jpeg", ".png")):
+                        try:
+                            ja.append((os.path.basename(d.rstrip("/\\")),
+                                       _dh(_Im.open(os.path.join(d, f)))))
+                        except Exception:
+                            pass
+        for c in roteiro.get("cortes", []):
+            if not _e_foto(c.get("arquivo", "")):
+                continue
+            try:
+                h = _dh(_Im.open(c["arquivo"]))
+            except Exception:
+                continue
+            for onde, hs in ja:
+                if bin(h ^ hs).count("1") <= 6:
+                    repetidas.append("%s (mesma imagem do post %s)"
+                                     % (os.path.basename(c["arquivo"]), onde))
+                    break
+    except Exception as exc:  # noqa: BLE001 — a checagem por nome ja rodou acima
+        print("[aviso] nao consegui conferir por imagem (%s)" % str(exc)[:80])
+
     if repetidas:
         raise SystemExit(
             "[recusado] estas fotos JA foram usadas: %s\n"
