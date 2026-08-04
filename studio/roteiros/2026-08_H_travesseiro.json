@@ -1,0 +1,77 @@
+{
+  "titulo": "TRAVESSEIRO BARATO",
+  "piada": "O dono acha que e amor incondicional. Ela so achou o movel mais quente da casa.",
+  "origem": "Roteiro escrito pelo GROK (IA-Hub), 04/08/2026, depois de ele dizer 'vc nao tem criatividade, mesmo dando estrutura'. Ele estava certo: minhas frases DESCREVIAM a imagem ('ela manda em todos os comodos'). A frase do Grok diz o que a imagem NAO diz — a mentira que o dono conta pra si mesmo. Execucao e timing comico sao meus.",
+  "trilha": "content/trilhas/02-lofi-sofa.mp3",
+  "volume_trilha": 0.75,
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/24023CD7-9018-4D40-8792-200F4F0AD9B1.mp4",
+      "de": 1.8,
+      "ate": 4.0,
+      "movimento": "zoomout",
+      "forca": 0.1,
+      "cinema": 0.5,
+      "mudo": true,
+      "_nota": "SETUP: ela dormindo com a cara na perna dele."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/11984692-701d-419b-ac51-88434fa3c902.mp4",
+      "de": 0.2,
+      "ate": 2.2,
+      "movimento": "punch",
+      "forca": 0.08,
+      "cinema": 0.5,
+      "mudo": true,
+      "_nota": "A ILUSAO: ela encarando a camera, com cara de quem ama. O dono acredita. | v3: a auditoria pegou que ela ficava so na base do quadro e a janela dominava a metade de cima — quase metade da peca com buraco visual. Fechado em 1,7x; agora o rosto dela ocupa a tela.",
+      "aproximar": 1.7,
+      "foco_y": 0.72
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/11984692-701d-419b-ac51-88434fa3c902.mp4",
+      "de": 2.6,
+      "ate": 3.9,
+      "movimento": "punch",
+      "forca": 0.06,
+      "cinema": 0.5,
+      "mudo": true,
+      "_nota": "A PAUSA, 1,3s SEM TEXTO: o respiro antes do soco. v2 — na primeira montagem a pausa era uma foto do sofa em luz de dia, no meio de duas cenas de quarto a noite: quebrava o clima e ainda era a mesma cena do post de 27/07. Agora a pausa fica na propria cama, com ela parada encarando — o silencio pesa em vez de atrapalhar. | v3: a auditoria pegou que ela ficava so na base do quadro e a janela dominava a metade de cima — quase metade da peca com buraco visual. Fechado em 1,7x; agora o rosto dela ocupa a tela.",
+      "aproximar": 1.7,
+      "foco_y": 0.72
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/24023CD7-9018-4D40-8792-200F4F0AD9B1.mp4",
+      "de": 2.2,
+      "ate": 4.4,
+      "movimento": "punch",
+      "forca": 0.12,
+      "cinema": 0.5,
+      "mudo": true,
+      "_nota": "O SOCO, em cima da mesma imagem da abertura: o que parecia amor era mobilia."
+    }
+  ],
+  "textos": [
+    {
+      "de": 0.4,
+      "ate": 2.1,
+      "texto": "Ela não desgruda de mim",
+      "posicao": "baixo",
+      "px": 70
+    },
+    {
+      "de": 2.5,
+      "ate": 4.0,
+      "texto": "É amor puro, gente",
+      "posicao": "baixo",
+      "px": 74
+    },
+    {
+      "de": 5.8,
+      "ate": 7.6,
+      "texto": "É que eu sou o travesseiro que não cobra aluguel",
+      "posicao": "baixo",
+      "px": 58
+    }
+  ],
+  "legenda": "Eu achei que era carinho.\nEla achou que era mobiliário.\nManda pra aquele amigo que virou sofá de cachorro.\n\n#cachorro #patroamimada #vidadecachorro #bullyamericano"
+}
