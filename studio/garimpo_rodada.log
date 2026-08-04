@@ -104,3 +104,274 @@ Traceback (most recent call last):
     os.replace(tmp, ESTADO_ARQ)
     ~~~~~~~~~~^^^^^^^^^^^^^^^^^
 PermissionError: [WinError 32] O arquivo já está sendo usado por outro processo: 'C:\\Users\\Ramón França\\OneDrive\\Desktop\\Hana Social\\studio\\.garimpo_estado.json.tmp' -> 'C:\\Users\\Ramón França\\OneDrive\\Desktop\\Hana Social\\studio\\.garimpo_estado.json'
+[info] 34461 arquivo(s) na pasta, 29798 ainda não varrido(s).
+[info] rodando com 3 thread(s). para em 50.0 min.
+      [APROVADO] score=0.556 (imagem)
+[progresso] 10/29798 nesta sessão (4673 no total) — estado salvo.
+[progresso] 20/29798 nesta sessão (4683 no total) — estado salvo.
+[progresso] 30/29798 nesta sessão (4693 no total) — estado salvo.
+[progresso] 40/29798 nesta sessão (4703 no total) — estado salvo.
+[progresso] 50/29798 nesta sessão (4713 no total) — estado salvo.
+[progresso] 60/29798 nesta sessão (4723 no total) — estado salvo.
+[progresso] 70/29798 nesta sessão (4733 no total) — estado salvo.
+[progresso] 80/29798 nesta sessão (4743 no total) — estado salvo.
+[progresso] 90/29798 nesta sessão (4753 no total) — estado salvo.
+[progresso] 100/29798 nesta sessão (4763 no total) — estado salvo.
+      [APROVADO] score=0.603 (imagem)
+[progresso] 110/29798 nesta sessão (4773 no total) — estado salvo.
+[progresso] 120/29798 nesta sessão (4783 no total) — estado salvo.
+[progresso] 130/29798 nesta sessão (4793 no total) — estado salvo.
+[progresso] 140/29798 nesta sessão (4803 no total) — estado salvo.
+      [APROVADO] score=0.402 (imagem)
+[progresso] 150/29798 nesta sessão (4813 no total) — estado salvo.
+[progresso] 160/29798 nesta sessão (4823 no total) — estado salvo.
+[progresso] 170/29798 nesta sessão (4833 no total) — estado salvo.
+[progresso] 180/29798 nesta sessão (4843 no total) — estado salvo.
+      [APROVADO] score=0.728 (imagem)
+[progresso] 190/29798 nesta sessão (4853 no total) — estado salvo.
+[progresso] 200/29798 nesta sessão (4863 no total) — estado salvo.
+[progresso] 210/29798 nesta sessão (4873 no total) — estado salvo.
+[progresso] 220/29798 nesta sessão (4883 no total) — estado salvo.
+[progresso] 230/29798 nesta sessão (4893 no total) — estado salvo.
+[progresso] 240/29798 nesta sessão (4903 no total) — estado salvo.
+[progresso] 250/29798 nesta sessão (4913 no total) — estado salvo.
+[progresso] 260/29798 nesta sessão (4923 no total) — estado salvo.
+[progresso] 270/29798 nesta sessão (4933 no total) — estado salvo.
+[progresso] 280/29798 nesta sessão (4943 no total) — estado salvo.
+[progresso] 290/29798 nesta sessão (4953 no total) — estado salvo.
+[progresso] 300/29798 nesta sessão (4963 no total) — estado salvo.
+[progresso] 310/29798 nesta sessão (4973 no total) — estado salvo.
+[progresso] 320/29798 nesta sessão (4983 no total) — estado salvo.
+      [APROVADO] score=0.560 (imagem)
+[progresso] 330/29798 nesta sessão (4993 no total) — estado salvo.
+[progresso] 340/29798 nesta sessão (5003 no total) — estado salvo.
+[progresso] 350/29798 nesta sessão (5013 no total) — estado salvo.
+[progresso] 360/29798 nesta sessão (5023 no total) — estado salvo.
+[progresso] 370/29798 nesta sessão (5033 no total) — estado salvo.
+[progresso] 380/29798 nesta sessão (5043 no total) — estado salvo.
+[progresso] 390/29798 nesta sessão (5053 no total) — estado salvo.
+[progresso] 400/29798 nesta sessão (5063 no total) — estado salvo.
+[progresso] 410/29798 nesta sessão (5073 no total) — estado salvo.
+[progresso] 420/29798 nesta sessão (5083 no total) — estado salvo.
+[progresso] 430/29798 nesta sessão (5093 no total) — estado salvo.
+[progresso] 440/29798 nesta sessão (5103 no total) — estado salvo.
+[progresso] 450/29798 nesta sessão (5113 no total) — estado salvo.
+[progresso] 460/29798 nesta sessão (5123 no total) — estado salvo.
+[progresso] 470/29798 nesta sessão (5133 no total) — estado salvo.
+[progresso] 480/29798 nesta sessão (5143 no total) — estado salvo.
+[progresso] 490/29798 nesta sessão (5153 no total) — estado salvo.
+[progresso] 500/29798 nesta sessão (5163 no total) — estado salvo.
+[progresso] 510/29798 nesta sessão (5173 no total) — estado salvo.
+      [APROVADO] score=0.830 (imagem)
+[progresso] 520/29798 nesta sessão (5183 no total) — estado salvo.
+[progresso] 530/29798 nesta sessão (5193 no total) — estado salvo.
+[progresso] 540/29798 nesta sessão (5203 no total) — estado salvo.
+      [APROVADO] score=0.742 (imagem)
+[progresso] 550/29798 nesta sessão (5213 no total) — estado salvo.
+[progresso] 560/29798 nesta sessão (5223 no total) — estado salvo.
+[progresso] 570/29798 nesta sessão (5233 no total) — estado salvo.
+[progresso] 580/29798 nesta sessão (5243 no total) — estado salvo.
+[progresso] 590/29798 nesta sessão (5253 no total) — estado salvo.
+[progresso] 600/29798 nesta sessão (5263 no total) — estado salvo.
+[progresso] 610/29798 nesta sessão (5273 no total) — estado salvo.
+[progresso] 620/29798 nesta sessão (5283 no total) — estado salvo.
+      [APROVADO] score=0.752 (imagem)
+[progresso] 630/29798 nesta sessão (5293 no total) — estado salvo.
+[progresso] 640/29798 nesta sessão (5303 no total) — estado salvo.
+      [APROVADO] score=0.490 (imagem)
+[progresso] 650/29798 nesta sessão (5313 no total) — estado salvo.
+[progresso] 660/29798 nesta sessão (5323 no total) — estado salvo.
+[progresso] 670/29798 nesta sessão (5333 no total) — estado salvo.
+      [APROVADO] score=0.643 (imagem)
+[progresso] 680/29798 nesta sessão (5343 no total) — estado salvo.
+[progresso] 690/29798 nesta sessão (5353 no total) — estado salvo.
+[progresso] 700/29798 nesta sessão (5363 no total) — estado salvo.
+      [APROVADO] score=0.501 (imagem)
+[progresso] 710/29798 nesta sessão (5373 no total) — estado salvo.
+[progresso] 720/29798 nesta sessão (5383 no total) — estado salvo.
+[progresso] 730/29798 nesta sessão (5393 no total) — estado salvo.
+[progresso] 740/29798 nesta sessão (5403 no total) — estado salvo.
+      [APROVADO] score=0.498 (imagem)
+[progresso] 750/29798 nesta sessão (5413 no total) — estado salvo.
+[progresso] 760/29798 nesta sessão (5423 no total) — estado salvo.
+[progresso] 770/29798 nesta sessão (5433 no total) — estado salvo.
+      [APROVADO] score=0.508 (video)
+[progresso] 780/29798 nesta sessão (5443 no total) — estado salvo.
+[progresso] 790/29798 nesta sessão (5453 no total) — estado salvo.
+[progresso] 800/29798 nesta sessão (5463 no total) — estado salvo.
+      [APROVADO] score=0.541 (imagem)
+[progresso] 810/29798 nesta sessão (5473 no total) — estado salvo.
+[progresso] 820/29798 nesta sessão (5483 no total) — estado salvo.
+[progresso] 830/29798 nesta sessão (5493 no total) — estado salvo.
+[progresso] 840/29798 nesta sessão (5503 no total) — estado salvo.
+[progresso] 850/29798 nesta sessão (5513 no total) — estado salvo.
+[progresso] 860/29798 nesta sessão (5523 no total) — estado salvo.
+[progresso] 870/29798 nesta sessão (5533 no total) — estado salvo.
+[progresso] 880/29798 nesta sessão (5543 no total) — estado salvo.
+[progresso] 890/29798 nesta sessão (5553 no total) — estado salvo.
+[progresso] 900/29798 nesta sessão (5563 no total) — estado salvo.
+[progresso] 910/29798 nesta sessão (5573 no total) — estado salvo.
+      [APROVADO] score=0.534 (imagem)
+[progresso] 920/29798 nesta sessão (5583 no total) — estado salvo.
+[progresso] 930/29798 nesta sessão (5593 no total) — estado salvo.
+[progresso] 940/29798 nesta sessão (5603 no total) — estado salvo.
+[progresso] 950/29798 nesta sessão (5613 no total) — estado salvo.
+[progresso] 960/29798 nesta sessão (5623 no total) — estado salvo.
+[progresso] 970/29798 nesta sessão (5633 no total) — estado salvo.
+[progresso] 980/29798 nesta sessão (5643 no total) — estado salvo.
+[progresso] 990/29798 nesta sessão (5653 no total) — estado salvo.
+[progresso] 1000/29798 nesta sessão (5663 no total) — estado salvo.
+[progresso] 1010/29798 nesta sessão (5673 no total) — estado salvo.
+[progresso] 1020/29798 nesta sessão (5683 no total) — estado salvo.
+[progresso] 1030/29798 nesta sessão (5693 no total) — estado salvo.
+[progresso] 1040/29798 nesta sessão (5703 no total) — estado salvo.
+[progresso] 1050/29798 nesta sessão (5713 no total) — estado salvo.
+[progresso] 1060/29798 nesta sessão (5723 no total) — estado salvo.
+      [APROVADO] score=0.366 (imagem)
+      [APROVADO] score=0.402 (video)
+[progresso] 1070/29798 nesta sessão (5733 no total) — estado salvo.
+[progresso] 1080/29798 nesta sessão (5743 no total) — estado salvo.
+[progresso] 1090/29798 nesta sessão (5753 no total) — estado salvo.
+[progresso] 1100/29798 nesta sessão (5763 no total) — estado salvo.
+[progresso] 1110/29798 nesta sessão (5773 no total) — estado salvo.
+
+[ok] orçamento de 50.0 min esgotado — rode de novo pra continuar.
+[resumo] 90 aprovado(s) no total (71 foto, 19 vídeo) de 34462 na pasta. Relatório em C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\01 - brutas (suba aqui)\garimpo\RELATORIO.md
+[info] 34462 arquivo(s) na pasta, 28688 ainda não varrido(s).
+[info] rodando com 3 thread(s). para em 50.0 min.
+[progresso] 10/28688 nesta sessão (5784 no total) — estado salvo.
+[progresso] 20/28688 nesta sessão (5794 no total) — estado salvo.
+      [APROVADO] score=0.360 (imagem)
+[progresso] 30/28688 nesta sessão (5804 no total) — estado salvo.
+[progresso] 40/28688 nesta sessão (5814 no total) — estado salvo.
+[progresso] 50/28688 nesta sessão (5824 no total) — estado salvo.
+[progresso] 60/28688 nesta sessão (5834 no total) — estado salvo.
+[progresso] 70/28688 nesta sessão (5844 no total) — estado salvo.
+[progresso] 80/28688 nesta sessão (5854 no total) — estado salvo.
+      [APROVADO] score=0.644 (imagem)
+[progresso] 90/28688 nesta sessão (5864 no total) — estado salvo.
+[progresso] 100/28688 nesta sessão (5874 no total) — estado salvo.
+[progresso] 110/28688 nesta sessão (5884 no total) — estado salvo.
+[progresso] 120/28688 nesta sessão (5894 no total) — estado salvo.
+[progresso] 130/28688 nesta sessão (5904 no total) — estado salvo.
+[progresso] 140/28688 nesta sessão (5914 no total) — estado salvo.
+[progresso] 150/28688 nesta sessão (5924 no total) — estado salvo.
+[progresso] 160/28688 nesta sessão (5934 no total) — estado salvo.
+[progresso] 170/28688 nesta sessão (5944 no total) — estado salvo.
+[progresso] 180/28688 nesta sessão (5954 no total) — estado salvo.
+      [APROVADO] score=0.703 (imagem)
+[progresso] 190/28688 nesta sessão (5964 no total) — estado salvo.
+[progresso] 200/28688 nesta sessão (5974 no total) — estado salvo.
+[progresso] 210/28688 nesta sessão (5984 no total) — estado salvo.
+      [APROVADO] score=0.566 (video)
+[progresso] 220/28688 nesta sessão (5994 no total) — estado salvo.
+[progresso] 230/28688 nesta sessão (6004 no total) — estado salvo.
+[progresso] 240/28688 nesta sessão (6014 no total) — estado salvo.
+[progresso] 250/28688 nesta sessão (6024 no total) — estado salvo.
+[progresso] 260/28688 nesta sessão (6034 no total) — estado salvo.
+[progresso] 270/28688 nesta sessão (6044 no total) — estado salvo.
+[progresso] 280/28688 nesta sessão (6054 no total) — estado salvo.
+[progresso] 290/28688 nesta sessão (6064 no total) — estado salvo.
+[progresso] 300/28688 nesta sessão (6074 no total) — estado salvo.
+      [APROVADO] score=0.571 (video)
+[progresso] 310/28688 nesta sessão (6084 no total) — estado salvo.
+[progresso] 320/28688 nesta sessão (6094 no total) — estado salvo.
+[progresso] 330/28688 nesta sessão (6104 no total) — estado salvo.
+[progresso] 340/28688 nesta sessão (6114 no total) — estado salvo.
+[progresso] 350/28688 nesta sessão (6124 no total) — estado salvo.
+      [APROVADO] score=0.526 (imagem)
+[progresso] 360/28688 nesta sessão (6134 no total) — estado salvo.
+[progresso] 370/28688 nesta sessão (6144 no total) — estado salvo.
+[progresso] 380/28688 nesta sessão (6154 no total) — estado salvo.
+[progresso] 390/28688 nesta sessão (6164 no total) — estado salvo.
+[progresso] 400/28688 nesta sessão (6174 no total) — estado salvo.
+[progresso] 410/28688 nesta sessão (6184 no total) — estado salvo.
+[progresso] 420/28688 nesta sessão (6194 no total) — estado salvo.
+[progresso] 430/28688 nesta sessão (6204 no total) — estado salvo.
+[progresso] 440/28688 nesta sessão (6214 no total) — estado salvo.
+      [APROVADO] score=0.520 (imagem)
+[progresso] 450/28688 nesta sessão (6224 no total) — estado salvo.
+[progresso] 460/28688 nesta sessão (6234 no total) — estado salvo.
+      [APROVADO] score=0.361 (imagem)
+[progresso] 470/28688 nesta sessão (6244 no total) — estado salvo.
+[progresso] 480/28688 nesta sessão (6254 no total) — estado salvo.
+[progresso] 490/28688 nesta sessão (6264 no total) — estado salvo.
+[progresso] 500/28688 nesta sessão (6274 no total) — estado salvo.
+[progresso] 510/28688 nesta sessão (6284 no total) — estado salvo.
+[progresso] 520/28688 nesta sessão (6294 no total) — estado salvo.
+[progresso] 530/28688 nesta sessão (6304 no total) — estado salvo.
+      [APROVADO] score=0.659 (video)
+[progresso] 540/28688 nesta sessão (6314 no total) — estado salvo.
+[progresso] 550/28688 nesta sessão (6324 no total) — estado salvo.
+[progresso] 560/28688 nesta sessão (6334 no total) — estado salvo.
+      [APROVADO] score=0.571 (imagem)
+[progresso] 570/28688 nesta sessão (6344 no total) — estado salvo.
+[progresso] 580/28688 nesta sessão (6354 no total) — estado salvo.
+[progresso] 590/28688 nesta sessão (6364 no total) — estado salvo.
+[progresso] 600/28688 nesta sessão (6374 no total) — estado salvo.
+[progresso] 610/28688 nesta sessão (6384 no total) — estado salvo.
+[progresso] 620/28688 nesta sessão (6394 no total) — estado salvo.
+[progresso] 630/28688 nesta sessão (6404 no total) — estado salvo.
+[progresso] 640/28688 nesta sessão (6414 no total) — estado salvo.
+      [APROVADO] score=0.438 (video)
+[progresso] 650/28688 nesta sessão (6424 no total) — estado salvo.
+[progresso] 660/28688 nesta sessão (6434 no total) — estado salvo.
+[progresso] 670/28688 nesta sessão (6444 no total) — estado salvo.
+[progresso] 680/28688 nesta sessão (6454 no total) — estado salvo.
+[progresso] 690/28688 nesta sessão (6464 no total) — estado salvo.
+[progresso] 700/28688 nesta sessão (6474 no total) — estado salvo.
+[progresso] 710/28688 nesta sessão (6484 no total) — estado salvo.
+[progresso] 720/28688 nesta sessão (6494 no total) — estado salvo.
+[progresso] 730/28688 nesta sessão (6504 no total) — estado salvo.
+[progresso] 740/28688 nesta sessão (6514 no total) — estado salvo.
+[progresso] 750/28688 nesta sessão (6524 no total) — estado salvo.
+[progresso] 760/28688 nesta sessão (6534 no total) — estado salvo.
+[progresso] 770/28688 nesta sessão (6544 no total) — estado salvo.
+[progresso] 780/28688 nesta sessão (6554 no total) — estado salvo.
+[progresso] 790/28688 nesta sessão (6564 no total) — estado salvo.
+[progresso] 800/28688 nesta sessão (6574 no total) — estado salvo.
+[progresso] 810/28688 nesta sessão (6584 no total) — estado salvo.
+[progresso] 820/28688 nesta sessão (6594 no total) — estado salvo.
+[progresso] 830/28688 nesta sessão (6604 no total) — estado salvo.
+[progresso] 840/28688 nesta sessão (6614 no total) — estado salvo.
+      [APROVADO] score=0.645 (imagem)
+      [APROVADO] score=0.645 (imagem)
+[progresso] 850/28688 nesta sessão (6624 no total) — estado salvo.
+[progresso] 860/28688 nesta sessão (6634 no total) — estado salvo.
+[progresso] 870/28688 nesta sessão (6644 no total) — estado salvo.
+[progresso] 880/28688 nesta sessão (6654 no total) — estado salvo.
+[progresso] 890/28688 nesta sessão (6664 no total) — estado salvo.
+      [APROVADO] score=0.333 (imagem)
+[progresso] 900/28688 nesta sessão (6674 no total) — estado salvo.
+[progresso] 910/28688 nesta sessão (6684 no total) — estado salvo.
+[progresso] 920/28688 nesta sessão (6694 no total) — estado salvo.
+[progresso] 930/28688 nesta sessão (6704 no total) — estado salvo.
+[progresso] 940/28688 nesta sessão (6714 no total) — estado salvo.
+[progresso] 950/28688 nesta sessão (6724 no total) — estado salvo.
+[progresso] 960/28688 nesta sessão (6734 no total) — estado salvo.
+      [APROVADO] score=0.476 (imagem)
+[progresso] 970/28688 nesta sessão (6744 no total) — estado salvo.
+[progresso] 980/28688 nesta sessão (6754 no total) — estado salvo.
+      [APROVADO] score=0.721 (imagem)
+[progresso] 990/28688 nesta sessão (6764 no total) — estado salvo.
+[progresso] 1000/28688 nesta sessão (6774 no total) — estado salvo.
+[progresso] 1010/28688 nesta sessão (6784 no total) — estado salvo.
+[progresso] 1020/28688 nesta sessão (6794 no total) — estado salvo.
+[progresso] 1030/28688 nesta sessão (6804 no total) — estado salvo.
+[progresso] 1040/28688 nesta sessão (6814 no total) — estado salvo.
+[progresso] 1050/28688 nesta sessão (6824 no total) — estado salvo.
+[progresso] 1060/28688 nesta sessão (6834 no total) — estado salvo.
+[progresso] 1070/28688 nesta sessão (6844 no total) — estado salvo.
+[progresso] 1080/28688 nesta sessão (6854 no total) — estado salvo.
+[progresso] 1090/28688 nesta sessão (6864 no total) — estado salvo.
+[progresso] 1100/28688 nesta sessão (6874 no total) — estado salvo.
+[progresso] 1110/28688 nesta sessão (6884 no total) — estado salvo.
+[progresso] 1120/28688 nesta sessão (6894 no total) — estado salvo.
+[progresso] 1130/28688 nesta sessão (6904 no total) — estado salvo.
+[progresso] 1140/28688 nesta sessão (6914 no total) — estado salvo.
+[progresso] 1150/28688 nesta sessão (6924 no total) — estado salvo.
+[progresso] 1160/28688 nesta sessão (6934 no total) — estado salvo.
+[progresso] 1170/28688 nesta sessão (6944 no total) — estado salvo.
+
+[ok] orçamento de 50.0 min esgotado — rode de novo pra continuar.
+[resumo] 106 aprovado(s) no total (83 foto, 23 vídeo) de 34462 na pasta. Relatório em C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\01 - brutas (suba aqui)\garimpo\RELATORIO.md
