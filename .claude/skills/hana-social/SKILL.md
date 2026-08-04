@@ -530,7 +530,12 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    (conduta 6 do `~\.claude\CLAUDE.md`).
    Régua antes de mandar a mensagem: **"isto é decisão dele, ou é eu pedindo
    permissão para trabalhar?"** Se for a segunda, faz e mostra o resultado.
-9. **RESPOSTA CURTA — 🚨 ELE JÁ COBROU TRÊS VEZES (27/07, 31/07 e 01/08/2026).**
+9. **RESPOSTA CURTA — 🚨 ELE JÁ COBROU QUATRO VEZES (27/07, 31/07, 01/08 e
+   04/08/2026).** Na quarta: *"Resuma, vc fala demais. Para com isso está
+   gastando meus tokens por bobeira."* Ou seja: texto longo não é só chato,
+   **custa dinheiro dele**. TETO REAL: **3 a 5 linhas**. Sem tabela, sem lista
+   longa, sem contar como cheguei ao resultado, sem repetir o que ele acabou
+   de ler. Entrega + o que ele precisa decidir. O resto vai para arquivo.
    Na terceira: *"amigo, seja resumido pelo amor de deus… Já pedi para salvar
    isso na skill… voce escreve uma biblia sempre."* Ou seja: eu li esta regra,
    concordei com ela e continuei escrevendo textão. Não é falta de instrução, é
