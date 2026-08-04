@@ -296,9 +296,30 @@ def sync_approvals(token, posts_by_id, chat_id=None):
         decisions[post_id] = status
         if post_id in posts_by_id:
             posts_by_id[post_id]["status"] = status
+        # O "Aprovado ✅" abaixo é um aviso de bandeja e QUASE SEMPRE CHEGA
+        # TARDE DEMAIS: este robô não fica ligado, ele acorda de 30 em 30
+        # minutos. Enquanto isso o Telegram deixa o botão PISCANDO esperando
+        # resposta, e depois desiste sem dizer nada. Ele perguntou em
+        # 03/08/2026: *"Apertei no aprovar lá no Telegram, o botão fica
+        # piscando, eh isso mesmo?"* — sem saber se a aprovação valeu.
         _call(token, "answerCallbackQuery",
               callback_query_id=cq["id"],
               text=("Aprovado ✅" if status == "approved" else "Recusado ❌"))
+        # Por isso o que vale é EDITAR A PRÓPRIA MENSAGEM: tira os botões e
+        # carimba o resultado no post. Isso fica na tela para sempre, não
+        # depende de o clique ser recente, e responde sozinho a pergunta
+        # "será que registrou?".
+        msg = cq.get("message") or {}
+        if msg.get("message_id"):
+            carimbo = ("✅ APROVADO — está na fila para ir ao ar no horário marcado."
+                       if status == "approved"
+                       else "❌ RECUSADO — não vai ao ar. Me diga o que ajustar.")
+            legenda = msg.get("caption") or msg.get("text") or ""
+            metodo = "editMessageCaption" if msg.get("caption") else "editMessageText"
+            campo = "caption" if msg.get("caption") else "text"
+            _call(token, metodo, chat_id=cq_chat_id,
+                  message_id=msg["message_id"],
+                  **{campo: f"{carimbo}\n\n{legenda}"[:1024]})
     _write_offset(offset)
     return decisions
 
