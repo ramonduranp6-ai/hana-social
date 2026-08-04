@@ -1,0 +1,79 @@
+{
+  "titulo": "5 QUILOS",
+  "aposta": "Gancho por NUMERO em vez de frase emotiva, e pilar MICRO NO APE (tamanho x atitude), que nunca foi ao ar. Ideia do diretor-reels.",
+  "origem": "Sintese do presidente sobre os roteiros do diretor-reels (estreia) e do diretor-criacao, 04/08/2026, depois de ele reprovar as 3 pecas anteriores: 'cade o diretor de criacao? Para fazer reel vc nao usa apenas video, vc tb pode fazer com fotos'. CORTADO dos roteiros deles: a selfie em que o Ramon e o assunto (fere a regra 1), a foto em que um cachorro branco grande domina o quadro, a foto dela de costas na trilha, e todos os textos em ingles (o perfil e BR).",
+  "trilha": "content/trilhas/04-crescendo-filhote.mp3",
+  "inicio_trilha": 15.5,
+  "volume_trilha": 0.9,
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/135b6565-9f29-4e4c-b83d-9a434936b424.mp4",
+      "de": 3.2,
+      "ate": 5.2,
+      "movimento": "punch",
+      "forca": 0.14,
+      "aproximar": 1.45,
+      "foco_y": 0.32,
+      "mudo": true
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_filhote_bolinha.mov",
+      "de": 20.6,
+      "ate": 22.3,
+      "movimento": "seco",
+      "aproximar": 2.0,
+      "foco_y": 0.3,
+      "mudo": true
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/IMG_1725.MOV",
+      "de": 4.0,
+      "ate": 6.0,
+      "movimento": "zoomout",
+      "forca": 0.14,
+      "mudo": true
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/11984692-701d-419b-ac51-88434fa3c902.mp4",
+      "de": 0.2,
+      "ate": 2.2,
+      "movimento": "punch",
+      "forca": 0.1,
+      "mudo": true,
+      "_nota": "O desfecho: dona da cama e da vista."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/135b6565-9f29-4e4c-b83d-9a434936b424.mp4",
+      "de": 3.2,
+      "ate": 4.6,
+      "movimento": "seco",
+      "aproximar": 1.45,
+      "foco_y": 0.32,
+      "mudo": true,
+      "_nota": "Loop."
+    }
+  ],
+  "textos": [
+    {
+      "de": 0.3,
+      "ate": 1.9,
+      "texto": "5 QUILOS",
+      "posicao": "alto",
+      "px": 96
+    },
+    {
+      "de": 2.2,
+      "ate": 3.6,
+      "texto": "ZERO MEDO",
+      "posicao": "alto",
+      "px": 96
+    },
+    {
+      "de": 5.9,
+      "ate": 7.6,
+      "texto": "100% PATROA",
+      "posicao": "alto",
+      "px": 88
+    }
+  ]
+}

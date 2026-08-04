@@ -1,0 +1,84 @@
+{
+  "titulo": "A DIVA DA MEIA-NOITE",
+  "aposta": "Formato campeao do garimpo (close + frase curta) montado como ROTINA em horarios, com a foto do trono fechando. Mistura video e foto.",
+  "origem": "Sintese do presidente sobre os roteiros do diretor-reels (estreia) e do diretor-criacao, 04/08/2026, depois de ele reprovar as 3 pecas anteriores: 'cade o diretor de criacao? Para fazer reel vc nao usa apenas video, vc tb pode fazer com fotos'. CORTADO dos roteiros deles: a selfie em que o Ramon e o assunto (fere a regra 1), a foto em que um cachorro branco grande domina o quadro, a foto dela de costas na trilha, e todos os textos em ingles (o perfil e BR).",
+  "trilha": "content/trilhas/03-comico-pizzicato.mp3",
+  "volume_trilha": 0.9,
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/11984692-701d-419b-ac51-88434fa3c902.mp4",
+      "de": 0.2,
+      "ate": 2.6,
+      "movimento": "seco",
+      "mudo": true,
+      "_nota": "21h: na cama, luzes da cidade, encarando."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/24d0f141-2231-48d0-a65d-b76db9d730e6.mp4",
+      "de": 4.3,
+      "ate": 6.0,
+      "movimento": "punch",
+      "forca": 0.08,
+      "clarear": 1.15,
+      "aproximar": 2.5,
+      "foco_y": 0.25,
+      "mudo": true,
+      "_nota": "6h: destruir a bola. Contraluz corrigida."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/IMG_1725.MOV",
+      "de": 4.0,
+      "ate": 6.0,
+      "movimento": "zoomout",
+      "forca": 0.14,
+      "mudo": true,
+      "_nota": "v2: entrou no lugar do corte da cenoura, onde a MAO do dono dominava o quadro e ele virava coautor da cena. Aqui ela esta deitada na areia com a lingua de fora - diz 'exausta' sozinha, sem gente no quadro."
+    },
+    {
+      "arquivo": "Fotos da Hana/02 - selecionadas/02_844aaacd-57a1-474b-b026-8a529e047788.jpg",
+      "de": 0,
+      "ate": 2.0,
+      "movimento": "punch",
+      "forca": 0.12,
+      "_nota": "O trono: close dela encarando no tapete colorido."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/11984692-701d-419b-ac51-88434fa3c902.mp4",
+      "de": 0.2,
+      "ate": 1.2,
+      "movimento": "seco",
+      "mudo": true,
+      "_nota": "Loop."
+    }
+  ],
+  "textos": [
+    {
+      "de": 0.3,
+      "ate": 2.3,
+      "texto": "21H — NÃO ME DIRIJA A PALAVRA",
+      "posicao": "alto",
+      "px": 66
+    },
+    {
+      "de": 2.7,
+      "ate": 4.0,
+      "texto": "6H — DESTRUIR A BOLA",
+      "posicao": "alto",
+      "px": 74
+    },
+    {
+      "de": 4.4,
+      "ate": 5.9,
+      "texto": "10H — EXAUSTA",
+      "posicao": "alto",
+      "px": 82
+    },
+    {
+      "de": 6.2,
+      "ate": 8.0,
+      "texto": "TODO DIA A MESMA COISA",
+      "posicao": "baixo",
+      "px": 72
+    }
+  ]
+}

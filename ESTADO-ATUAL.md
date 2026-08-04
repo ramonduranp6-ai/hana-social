@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 04/08/2026 06:08. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 04/08/2026 07:29. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -12,9 +12,9 @@ decisões, use `DECISOES.md`.
 | 2026-08-10T11:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
 | 2026-08-12T11:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
 | 2026-08-14T11:00:00Z | 2026-08-14_a-patroa-mimada | reel | pending |
-| 2026-08-17T11:00:00Z | 2026-08-17_o-chefe | reel | pending |
-| 2026-08-19T11:00:00Z | 2026-08-19_quem-dorme-na-cama | reel | pending |
-| 2026-08-21T11:00:00Z | 2026-08-21_confissao | reel | pending |
+| 2026-08-17T11:00:00Z | 2026-08-17_vida-dupla | reel | pending |
+| 2026-08-19T11:00:00Z | 2026-08-19_cinco-quilos | reel | pending |
+| 2026-08-21T11:00:00Z | 2026-08-21_diva-da-meia-noite | reel | pending |
 
 ## Publicados: 6
 - 2026-07-23_olhar-no-tapete — IG `18140672137562244`
@@ -45,12 +45,12 @@ Mídias numeradas em `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos
 - 05_PREVIA-TRILHA.mp4
 - 06_12-08_REEL-HISTORIA.mp4
 - 06_12-08_REEL-HISTORIA_capa.jpg
-- 07_A_chefe.mp4
-- 07_A_chefe_capa.jpg
-- 08_B_cama.mp4
-- 08_B_cama_capa.jpg
-- 09_C_confissao.mp4
-- 09_C_confissao_capa.jpg
+- 07_D_vida_dupla.mp4
+- 07_D_vida_dupla_capa.jpg
+- 08_E_cinco_quilos.mp4
+- 08_E_cinco_quilos_capa.jpg
+- 09_F_diva.mp4
+- 09_F_diva_capa.jpg
 
 Ele responde pelos números. Enquanto não responder, **não commitar**
 mudança de status nem publicar.
@@ -70,18 +70,29 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+8f42f3c montador passa a aceitar FOTO como corte, com movimento
+9a5ebaa 3 Reels por semana e o diretor-reels entram nas regras
+2b9793a chore: atualiza estado da fila [skip ci]
 276c827 3 Reels novos, construidos em cima do garimpo do nicho
 13faa9d playbook de Reels: 10 profissionais, algoritmo medido e o video que ele mandou
 cd40a2c chore: atualiza estado da fila [skip ci]
 06357fc o botao do Telegram passa a responder na propria mensagem
 0ec90b6 chore: atualiza estado da fila [skip ci]
-a5144d7 chore: recado do lote semanal [skip ci]
-358fc4c chore: atualiza estado da fila [skip ci]
-64225cd posts passam para as 8h da manha (era 18h)
 ```
 Alterações não commitadas:
 ```
-M .claude/skills/hana-social/SKILL.md
+D  content/queue/2026-08-17_o-chefe/post.json
+D  content/queue/2026-08-17_o-chefe/video-a_chefe.mp4
+D  content/queue/2026-08-19_quem-dorme-na-cama/post.json
+D  content/queue/2026-08-19_quem-dorme-na-cama/video-b_cama.mp4
+D  content/queue/2026-08-21_confissao/post.json
+D  content/queue/2026-08-21_confissao/video-c_confissao.mp4
+?? content/queue/2026-08-17_vida-dupla/
+?? content/queue/2026-08-19_cinco-quilos/
+?? content/queue/2026-08-21_diva-da-meia-noite/
+?? studio/roteiros/2026-08_D_vida_dupla.json
+?? studio/roteiros/2026-08_E_cinco_quilos.json
+?? studio/roteiros/2026-08_F_diva.json
 ```
 
 ## Decisões e contexto

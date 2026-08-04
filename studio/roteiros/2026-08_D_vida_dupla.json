@@ -1,0 +1,73 @@
+{
+  "titulo": "A VIDA DUPLA DELA",
+  "aposta": "100% FOTO com movimento — territorio que nunca usamos, e era a cobranca dele. Estrutura de contraste (de dia x de noite), que no nicho pet e o formato 'antes/depois' que mais engaja.",
+  "origem": "Sintese do presidente sobre os roteiros do diretor-reels (estreia) e do diretor-criacao, 04/08/2026, depois de ele reprovar as 3 pecas anteriores: 'cade o diretor de criacao? Para fazer reel vc nao usa apenas video, vc tb pode fazer com fotos'. CORTADO dos roteiros deles: a selfie em que o Ramon e o assunto (fere a regra 1), a foto em que um cachorro branco grande domina o quadro, a foto dela de costas na trilha, e todos os textos em ingles (o perfil e BR).",
+  "trilha": "content/trilhas/01-fofo-ukulele.mp3",
+  "volume_trilha": 0.9,
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/02 - selecionadas/07_IMG_0707.jpg",
+      "de": 0,
+      "ate": 2.6,
+      "movimento": "punch",
+      "forca": 0.14,
+      "_nota": "Pijama de oncinha, esparramada de pernas para o ar no sofa. Abre pela graca."
+    },
+    {
+      "arquivo": "Fotos da Hana/02 - selecionadas/garimpo_09_0440D040-DD38-40D4-965A-C0D0B1DF00F6.jpg",
+      "de": 0,
+      "ate": 2.0,
+      "movimento": "zoomout",
+      "forca": 0.14,
+      "_nota": "v2: entrou no lugar da foto do tapete colorido, que estava repetida com a peca F. Close dela olhando para cima, dentro de casa."
+    },
+    {
+      "arquivo": "Fotos da Hana/02 - selecionadas/04_IMG_0571.jpg",
+      "de": 0,
+      "ate": 2.2,
+      "movimento": "punch",
+      "forca": 0.14,
+      "_nota": "A VIRADA: capa vermelha, olhando pela janela. Comeca a noite."
+    },
+    {
+      "arquivo": "Fotos da Hana/02 - selecionadas/06_IMG_0664.jpg",
+      "de": 0,
+      "ate": 2.4,
+      "movimento": "zoomout",
+      "forca": 0.1,
+      "_nota": "Roda-gigante iluminada atras, boca aberta. O desfecho: ela sai. | v2: menos zoom e recorte deslocado, ela estava sendo decepada embaixo.",
+      "foco_y": 0.4
+    },
+    {
+      "arquivo": "Fotos da Hana/02 - selecionadas/07_IMG_0707.jpg",
+      "de": 0,
+      "ate": 1.0,
+      "movimento": "punch",
+      "forca": 0.06,
+      "_nota": "Loop: volta ao sofa."
+    }
+  ],
+  "textos": [
+    {
+      "de": 0.3,
+      "ate": 2.4,
+      "texto": "9 DA MANHÃ",
+      "posicao": "alto",
+      "px": 84
+    },
+    {
+      "de": 4.8,
+      "ate": 6.7,
+      "texto": "9 DA NOITE",
+      "posicao": "alto",
+      "px": 84
+    },
+    {
+      "de": 7.0,
+      "ate": 9.0,
+      "texto": "ELA TEM PLANOS",
+      "posicao": "meio",
+      "px": 76
+    }
+  ]
+}
