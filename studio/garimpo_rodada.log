@@ -86,3 +86,21 @@
 
 [ok] orçamento de 55.0 min esgotado — rode de novo pra continuar.
 [resumo] 62 aprovado(s) no total (46 foto, 16 vídeo) de 34442 na pasta. Relatório em C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\01 - brutas (suba aqui)\garimpo\RELATORIO.md
+[info] 34461 arquivo(s) na pasta, 30664 ainda não varrido(s).
+[info] rodando com 4 thread(s). para em 50.0 min.
+[progresso] 10/30664 nesta sessão (3807 no total) — estado salvo.
+[progresso] 20/30664 nesta sessão (3817 no total) — estado salvo.
+[progresso] 30/30664 nesta sessão (3827 no total) — estado salvo.
+      [APROVADO] score=0.609 (imagem)
+[progresso] 40/30664 nesta sessão (3837 no total) — estado salvo.
+Traceback (most recent call last):
+  File "C:\Users\Ramón França\OneDrive\Desktop\Hana Social\studio\garimpo.py", line 639, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\Ramón França\OneDrive\Desktop\Hana Social\studio\garimpo.py", line 608, in main
+    salvar_estado_atomico(estado)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Ramón França\OneDrive\Desktop\Hana Social\studio\garimpo.py", line 188, in salvar_estado_atomico
+    os.replace(tmp, ESTADO_ARQ)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 32] O arquivo já está sendo usado por outro processo: 'C:\\Users\\Ramón França\\OneDrive\\Desktop\\Hana Social\\studio\\.garimpo_estado.json.tmp' -> 'C:\\Users\\Ramón França\\OneDrive\\Desktop\\Hana Social\\studio\\.garimpo_estado.json'

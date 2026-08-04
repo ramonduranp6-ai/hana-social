@@ -238,7 +238,60 @@ def _cartela(texto, destino, posicao="baixo", px=72, cor=(255, 255, 255, 255)):
     img.save(destino)
 
 
+REGISTRO_FOTOS = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    "content", "fotos-usadas.json")
+
+
+def _fotos_usadas():
+    """Fotos que já foram ao ar ou já estão na fila, por nome de arquivo."""
+    try:
+        with open(REGISTRO_FOTOS, encoding="utf-8") as f:
+            return {k: v for k, v in json.load(f).items()}
+    except (OSError, ValueError):
+        return {}
+
+
+def registrar_fotos(roteiro, onde):
+    """Marca as fotos deste roteiro como usadas. Chamar ao criar o post."""
+    usadas = _fotos_usadas()
+    for c in roteiro.get("cortes", []):
+        if _e_foto(c.get("arquivo", "")):
+            usadas.setdefault(os.path.basename(c["arquivo"]), []).append(onde)
+    os.makedirs(os.path.dirname(REGISTRO_FOTOS), exist_ok=True)
+    with open(REGISTRO_FOTOS, "w", encoding="utf-8") as f:
+        json.dump(usadas, f, ensure_ascii=False, indent=1, sort_keys=True)
+    return usadas
+
+
+def _conferir_repetida(roteiro):
+    """RECUSA montar se uma foto já usada voltar sem autorização.
+
+    Cobrança dele em 04/08/2026: *"Vc está usando as mesma fotos sempre.
+    Quantas fotos da hana vc tem?"* — e ele tinha razão: eram 70 fotos
+    distintas no acervo e eu tinha usado 5. Regra escrita não bastou (o
+    projeto já tinha a regra de não repetir e eu repeti mesmo assim), então
+    agora quem recusa é o código.
+
+    Para reusar de propósito, o roteiro declara `"permitir_repetir": true` —
+    fica explícito no arquivo, e não acontece por distração.
+    """
+    if roteiro.get("permitir_repetir"):
+        return
+    usadas = _fotos_usadas()
+    repetidas = [os.path.basename(c["arquivo"]) for c in roteiro.get("cortes", [])
+                 if _e_foto(c.get("arquivo", ""))
+                 and os.path.basename(c["arquivo"]) in usadas]
+    if repetidas:
+        raise SystemExit(
+            "[recusado] estas fotos JA foram usadas: %s\n"
+            "           O acervo tem dezenas de fotos — escolha outra.\n"
+            "           Se for reuso de proposito, ponha \"permitir_repetir\": true"
+            " no roteiro." % ", ".join(sorted(set(repetidas))))
+
+
 def montar(roteiro, saida):
+    _conferir_repetida(roteiro)
     cortes = roteiro["cortes"]
     textos = roteiro.get("textos", [])
     tmp = tempfile.mkdtemp(prefix="reel_")
