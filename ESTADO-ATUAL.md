@@ -1,13 +1,12 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 04/08/2026 08:21. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 06/08/2026 22:26. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
 
 | Quando (UTC) | Post | Tipo | Status |
 |---|---|---|---|
-| 2026-08-05T11:00:00Z | 2026-08-05_navio-importacao | image | approved |
 | 2026-08-07T11:00:00Z | 2026-08-07_banho-de-sol | image | approved |
 | 2026-08-10T11:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
 | 2026-08-12T11:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
@@ -15,22 +14,23 @@ decisões, use `DECISOES.md`.
 | 2026-08-17T11:00:00Z | 2026-08-17_golden-hour | reel | pending |
 | 2026-08-19T11:00:00Z | 2026-08-19_a-noite-dela | reel | pending |
 | 2026-08-21T11:00:00Z | 2026-08-21_dona-da-casa | reel | pending |
+| 2026-08-24T11:00:00Z | 2026-08-24_travesseiro | reel | pending |
 
-## Publicados: 6
-- 2026-07-23_olhar-no-tapete — IG `18140672137562244`
+## Publicados: 7
 - 2026-07-27_pijama-oncinha — IG `18073337600408952`
 - 2026-07-29_lilac-ao-sol — IG `18112183567998703`
 - 2026-07-31_roda-gigante — IG `17893985169571565`
 - 2026-08-03_dia-de-praia — IG `17963565245962414`
+- 2026-08-05_navio-importacao — IG `17869247748585560`
 
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-04T10:29:45Z workflow_dispatch success
-2026-08-04T08:09:50Z schedule success
-2026-08-04T03:01:24Z workflow_dispatch success
+2026-08-06T16:18:12Z schedule failure
+2026-08-06T08:05:52Z schedule success
+2026-08-05T22:33:16Z schedule success
 ```
-- Vigia local (Agendador do Windows): próxima execução quarta-feira, 5 de agosto de 2026 18:10:00
+- Vigia local (Agendador do Windows): próxima execução sexta-feira, 7 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
@@ -51,6 +51,8 @@ Mídias numeradas em `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos
 - 08_G2_noite_capa.jpg
 - 09_G3_casa.mp4
 - 09_G3_casa_capa.jpg
+- 10_TRAVESSEIRO.mp4
+- 10_TRAVESSEIRO_capa.jpg
 
 Ele responde pelos números. Enquanto não responder, **não commitar**
 mudança de status nem publicar.
@@ -59,7 +61,7 @@ mudança de status nem publicar.
 - Brutas a processar: 38 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34455
+- Fotos do iPhone sincronizadas (iCloud): 34463
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -68,36 +70,25 @@ mudança de status nem publicar.
 
 **Ainda não entraram na fila** — falta escolher o trecho e o gancho, que é julgamento, e passar pelo auditor. Fazer na reunião de segunda.
 
+## 📌 RECADOS DELE NO TELEGRAM — responder nesta conversa
+- [ ] **04/08/2026 16:52 UTC** — Não aprovado nenhuma
+
+Depois de responder, apague a linha de `content/recados.md`.
+
 ## Últimas mudanças no projeto
 ```
+96fe9ad chore: atualiza estado da fila [skip ci]
+813e4c9 chore: atualiza estado da fila [skip ci]
+4841096 chore: atualiza estado da fila [skip ci]
+6494648 a piada passa a ser escrita por outra IA; eu executo
+8d3d7b9 garimpo entra no vigia diario: para de depender de mim religar
+66fe866 chore: atualiza estado da fila [skip ci]
+9a77c07 3 Reels CINEMATOGRAFICOS, 100% foto inedita
 58b487a regra 9: quarta cobranca de resposta curta - agora com o custo explicito
-4e5048b trinco contra foto repetida, 9 HEIC convertidas e o garimpo religado de verdade
-3343638 chore: atualiza estado da fila [skip ci]
-ac4be29 3 Reels refeitos pelos diretores, com FOTO no lugar central
-8f42f3c montador passa a aceitar FOTO como corte, com movimento
-9a5ebaa 3 Reels por semana e o diretor-reels entram nas regras
-2b9793a chore: atualiza estado da fila [skip ci]
-276c827 3 Reels novos, construidos em cima do garimpo do nicho
 ```
 Alterações não commitadas:
 ```
-M content/fotos-usadas.json
- D content/queue/2026-08-17_vida-dupla/post.json
- D content/queue/2026-08-17_vida-dupla/video-d-vida-dupla.mp4
- D content/queue/2026-08-19_cinco-quilos/post.json
- D content/queue/2026-08-19_cinco-quilos/video-e-cinco-quilos.mp4
- D content/queue/2026-08-21_diva-da-meia-noite/post.json
- D content/queue/2026-08-21_diva-da-meia-noite/video-f-diva.mp4
- M studio/montar_reel.py
-?? content/fotos-livres.json
-?? content/queue/2026-08-17_golden-hour/
-?? content/queue/2026-08-19_a-noite-dela/
-?? content/queue/2026-08-21_dona-da-casa/
-?? content/trilhas/05-cinema-golden.mp3
-?? content/trilhas/06-cinema-noite.mp3
-?? studio/roteiros/2026-08_G1_golden.json
-?? studio/roteiros/2026-08_G2_noite.json
-?? studio/roteiros/2026-08_G3_casa.json
+M studio/garimpo_rodada.log
 ```
 
 ## Decisões e contexto
