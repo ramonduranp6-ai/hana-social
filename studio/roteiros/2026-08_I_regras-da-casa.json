@@ -1,0 +1,51 @@
+{
+  "titulo": "AS REGRAS DA CASA",
+  "historia": "As regras da casa existem — e ela quebra uma por uma, na cara dura. No julgamento, faz carinha de pena. Veredito: dorme tranquila, assinado a patroa. Arco: a autoridade da casa troca de dono do primeiro ao último corte.",
+  "origem": "Refeito depois que ele recusou o lote inteiro de 14-24/08 em 06/08/2026 ('Muito fraco os vídeos... Pegar referência dos principais virais do mês'). Conceito 'A placa da casa' do diretor-reels (estrategia/estudo-virais-2026-08.md), mecânicas 1 (gancho de quebra de expectativa), 2 (setup→virada), 4 (desfecho que puxa comentário) e 6 (final em loop: abre com ela encarando, fecha com ela dormindo — replay natural). Clipes conferidos frame a frame no grid antes da escolha; o clipe 3e9f6791 NÃO é ela no balcão (catálogo errou) — é ela no chão da cozinha pedindo, virou a cena do julgamento.",
+  "trilha": "content/trilhas/07-marcha-travessa-edit2.mp3",
+  "inicio_trilha": 0,
+  "abafar_ate": 0,
+  "volume_trilha": 0.9,
+  "_nota_trilha": "07-marcha-travessa-edit2: emenda da 07-marcha-travessa (Lyria 3, US$ 0,04). Histórico de 2 reprovações da auditoria: (v2) buraco de silêncio -52 dB no meio da peça → emenda pulando o fade morto de 16,5-17,05s; (v3) miolo 11-13 dB abaixo do resto e degrau 0,1s ANTES do corte → edit2: [10,9-16,375s] + crossfade 0,15s exatamente no corte de 5,40s + [17,1-24,9s] com o trecho sorrateiro nivelado (+10,9 dB até 0,3s antes da fanfarra, com rampa de volta). A fanfarra continua entrando ~9,1s, chamando o corte de 9,4s (auditor: 'soa como chamada proposital'). Todos os cortes mudos: nenhum tem som de cena que valha gancho.",
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/46570DDF-0C2E-41FC-9D8D-3B9B761522F4.mp4",
+      "de": 16.2, "ate": 18.0, "movimento": "punch", "forca": 0.10, "mudo": true,
+      "_nota": "GANCHO: close dela encarando a câmera de dentro dos cobertores, cara de quem é dona do cartório. Janela 16-18s conferida no grid (frames 16-18 = rosto frontal no cobertor branco)."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/472AF149-E7D1-4FF2-8C06-925E7EEC1948.mp4",
+      "de": 1.0, "ate": 2.8, "movimento": "seco", "mudo": true,
+      "_nota": "CRIME 1: no sofá, mordendo a argola vermelha, close ótimo à noite. Grid: tiles 1-3 são o close."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/11984692-701d-419b-ac51-88434fa3c902.mp4",
+      "de": 0.5, "ate": 2.3, "movimento": "punch", "forca": 0.10, "mudo": true,
+      "_nota": "CRIME 2: instalada na cama à noite, luzes do porto na janela, olhos brilhando pra câmera. Grid: 0-5s todos bons, uso o começo."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/354B11F6-D16A-4AB6-A63C-6F7D5D50E56E.mp4",
+      "de": 10.0, "ate": 12.0, "movimento": "punch", "forca": 0.10, "mudo": true,
+      "_nota": "CRIME 3: sentada DENTRO do carro, rosto frontal enorme, língua de fora, sorrindo de orgulho do crime. Entrou no lugar do clipe do chinelo (2C9A1AAC), que a auditoria reprovou: lá só aparecia a traseira dela por 1,9s — defeito de material, troca-se o material (lição 3n-ii). Janela 10-12s conferida no grid: rosto grande, sem o olho vermelho do flash que estraga os segundos 4-7."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/3e9f6791-ca2c-4302-8521-0757faeec8fe.mp4",
+      "de": 0.8, "ate": 2.8, "movimento": "punch", "forca": 0.12,
+      "aproximar": 1.8, "foco_y": 0.30, "mudo": true,
+      "_nota": "O JULGAMENTO: sentada no chão da cozinha, olhando pra cima com carinha de pena — a acusada diante do juiz. Trilha no trecho sorrateiro. ⚠️ Ela está no CHÃO, não no balcão — conferido no frame grande; o catálogo do garimpo errou aqui."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/4696D9A5-9812-4ADF-81B4-BA33FE9EC7ED.mp4",
+      "de": 0.1, "ate": 2.5, "movimento": "zoomout", "forca": 0.18, "mudo": true,
+      "_nota": "VEREDITO + fanfarra: ela dormindo profundamente no cobertor felpudo do sofá — absolvida, caso arquivado, a casa é dela. Fecha o loop com o close da abertura."
+    }
+  ],
+  "textos": [
+    {"de": 0.3, "ate": 1.7, "texto": "AS REGRAS DA CASA", "posicao": "baixo", "px": 76},
+    {"de": 1.9, "ate": 3.5, "texto": "1. PROIBIDO SOFÁ", "posicao": "alto", "px": 72},
+    {"de": 3.7, "ate": 5.3, "texto": "2. PROIBIDO CAMA", "posicao": "baixo", "px": 72},
+    {"de": 5.5, "ate": 7.1, "texto": "3. PROIBIDO CARRO", "posicao": "alto", "px": 72},
+    {"de": 7.4, "ate": 9.0, "texto": "O JULGAMENTO", "posicao": "baixo", "px": 72},
+    {"de": 9.6, "ate": 11.4, "texto": "ASSINADO: A PATROA", "posicao": "baixo", "px": 74}
+  ]
+}
