@@ -4,6 +4,35 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## 🔴 06-07/08/2026 — ELE RECUSOU O LOTE INTEIRO DE 5 REELS; REFEITO COM ESTUDO DE VIRAIS
+
+Recado dele no Telegram (04/08, respondido 06/08): "Não aprovado nenhuma". Depois, na conversa:
+*"Muito fraco os vídeos, quem é o diretor de criação que não consegue fazer um vídeo viral?...
+Pegar referência dos principais virais do mês, aprender a editar imagens, fazer cortes, crie
+vídeos no Gemini que são divertidos e geram interação e caem no algoritmo."*
+
+**O que foi feito:**
+- Os 5 posts (14 a 24/08) marcados `rejected`; mídias deles removidas da pasta 05 - APROVAR.
+- `diretor-reels` produziu `estrategia/estudo-virais-2026-08.md` (6 mecânicas + 3 conceitos;
+  atenção: as mecânicas são de fonte secundária/WebSearch, nenhum Reel real foi medido).
+- Catálogo frame a frame dos 25 clipes do garimpo: `estrategia/catalogo-garimpo.md`.
+  ⚠️ 4 arquivos não eram conteúdo da Hana (peru, meme de pintinho, border collie, tour vazio)
+  — movidos para `06 - videos e trilhas/referencias (nao publicar)`.
+  ⚠️ O catálogo ERROU no clipe 3e9f6791 ("em cima do balcão"): ela está no CHÃO da cozinha.
+  Pego conferindo o frame grande antes de usar (regra zero).
+- **Reel novo "AS REGRAS DA CASA" (conceito 1 do estudo, 100% acervo real)** montado,
+  auditado (2 reprovações → aprovado na v4; pico de áudio -1,1 dBTP na v5) e **enviado no
+  Telegram com botões em 07/08 — ESPERANDO O APROVAR DELE** para o slot de 14/08 11:00Z.
+  Roteiro: `studio/roteiros/2026-08_I_regras-da-casa.json`; trilha nova `07-marcha-travessa`
+  (+ edit2 emendada por medição).
+- Conceitos 2 e 3 do estudo são HÍBRIDOS (cena real + trecho gerado no app Gemini, regra
+  3j-i: pelo app, premium, nunca API). Prompts prontos no estudo. **Ainda não produzidos** —
+  próxima peça se ele aprovar a linha.
+
+**Pendências dele:** aprovar/recusar o Reel de 14/08 no Telegram. Slots de 17/08 em diante
+estão VAZIOS (fila útil: 07/08 foto aprovada, 10/08 e 12/08 reels aprovados, 14/08 pendente).
+
+
 ## 🎬 O REEL DE 12/08 — SETE VERSÕES ATÉ ELE APROVAR (02-03/08/2026)
 
 **Aprovado por ele no Telegram em 03/08/2026** (`approved`, confirmado no

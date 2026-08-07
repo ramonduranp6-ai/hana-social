@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 06/08/2026 22:26. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 07/08/2026 00:21. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -10,11 +10,12 @@ decisões, use `DECISOES.md`.
 | 2026-08-07T11:00:00Z | 2026-08-07_banho-de-sol | image | approved |
 | 2026-08-10T11:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
 | 2026-08-12T11:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
-| 2026-08-14T11:00:00Z | 2026-08-14_a-patroa-mimada | reel | pending |
-| 2026-08-17T11:00:00Z | 2026-08-17_golden-hour | reel | pending |
-| 2026-08-19T11:00:00Z | 2026-08-19_a-noite-dela | reel | pending |
-| 2026-08-21T11:00:00Z | 2026-08-21_dona-da-casa | reel | pending |
-| 2026-08-24T11:00:00Z | 2026-08-24_travesseiro | reel | pending |
+| 2026-08-14T11:00:00Z | 2026-08-14_a-patroa-mimada | reel | rejected |
+| 2026-08-14T11:00:00Z | 2026-08-14_regras-da-casa | reel | pending |
+| 2026-08-17T11:00:00Z | 2026-08-17_golden-hour | reel | rejected |
+| 2026-08-19T11:00:00Z | 2026-08-19_a-noite-dela | reel | rejected |
+| 2026-08-21T11:00:00Z | 2026-08-21_dona-da-casa | reel | rejected |
+| 2026-08-24T11:00:00Z | 2026-08-24_travesseiro | reel | rejected |
 
 ## Publicados: 7
 - 2026-07-27_pijama-oncinha — IG `18073337600408952`
@@ -26,9 +27,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-06T16:18:12Z schedule failure
-2026-08-06T08:05:52Z schedule success
-2026-08-05T22:33:16Z schedule success
+2026-08-07T03:19:52Z workflow_dispatch success
+2026-08-07T01:51:26Z workflow_dispatch success
+2026-08-07T01:43:48Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução sexta-feira, 7 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -37,22 +38,7 @@ decisões, use `DECISOES.md`.
 Mídias numeradas em `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
 
 - 00_LEGENDAS.txt
-- 01_03-08.jpg
-- 02_05-08.jpg
-- 03_07-08.jpg
-- 04_10-08_REEL.mp4
-- 04_10-08_REEL_capa.jpg
-- 05_PREVIA-TRILHA.mp4
-- 06_12-08_REEL-HISTORIA.mp4
-- 06_12-08_REEL-HISTORIA_capa.jpg
-- 07_G1_golden.mp4
-- 07_G1_golden_capa.jpg
-- 08_G2_noite.mp4
-- 08_G2_noite_capa.jpg
-- 09_G3_casa.mp4
-- 09_G3_casa_capa.jpg
-- 10_TRAVESSEIRO.mp4
-- 10_TRAVESSEIRO_capa.jpg
+- 01_14-08_REEL-REGRAS.mp4
 
 Ele responde pelos números. Enquanto não responder, **não commitar**
 mudança de status nem publicar.
@@ -61,7 +47,7 @@ mudança de status nem publicar.
 - Brutas a processar: 38 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34463
+- Fotos do iPhone sincronizadas (iCloud): 34464
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -70,25 +56,20 @@ mudança de status nem publicar.
 
 **Ainda não entraram na fila** — falta escolher o trecho e o gancho, que é julgamento, e passar pelo auditor. Fazer na reunião de segunda.
 
-## 📌 RECADOS DELE NO TELEGRAM — responder nesta conversa
-- [ ] **04/08/2026 16:52 UTC** — Não aprovado nenhuma
-
-Depois de responder, apague a linha de `content/recados.md`.
-
 ## Últimas mudanças no projeto
 ```
-96fe9ad chore: atualiza estado da fila [skip ci]
-813e4c9 chore: atualiza estado da fila [skip ci]
-4841096 chore: atualiza estado da fila [skip ci]
-6494648 a piada passa a ser escrita por outra IA; eu executo
-8d3d7b9 garimpo entra no vigia diario: para de depender de mim religar
-66fe866 chore: atualiza estado da fila [skip ci]
-9a77c07 3 Reels CINEMATOGRAFICOS, 100% foto inedita
-58b487a regra 9: quarta cobranca de resposta curta - agora com o custo explicito
+a22ee85 chore: atualiza estado da fila [skip ci]
+2c53341 reel novo 'as regras da casa' p/ 14/08: conceito do estudo de virais, auditado (2 reprovacoes, aprovado na v4)
+d30bbe1 os 5 reels de 14-24/08 recusados por ele ('muito fraco'); refazer com estudo de virais
+1a7fc09 chore: atualiza estado da fila [skip ci]
+d1b941e reenvia os 5 reels pendentes pro Telegram (pedido dele 06/08)
+79b1571 chore: atualiza estado da fila [skip ci]
+df29d96 chore: logs gerados (garimpo e estado) [skip ci]
+cbc40c5 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
-M studio/garimpo_rodada.log
+M DECISOES.md
 ```
 
 ## Decisões e contexto
@@ -97,6 +78,35 @@ M studio/garimpo_rodada.log
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
+
+## 🔴 06-07/08/2026 — ELE RECUSOU O LOTE INTEIRO DE 5 REELS; REFEITO COM ESTUDO DE VIRAIS
+
+Recado dele no Telegram (04/08, respondido 06/08): "Não aprovado nenhuma". Depois, na conversa:
+*"Muito fraco os vídeos, quem é o diretor de criação que não consegue fazer um vídeo viral?...
+Pegar referência dos principais virais do mês, aprender a editar imagens, fazer cortes, crie
+vídeos no Gemini que são divertidos e geram interação e caem no algoritmo."*
+
+**O que foi feito:**
+- Os 5 posts (14 a 24/08) marcados `rejected`; mídias deles removidas da pasta 05 - APROVAR.
+- `diretor-reels` produziu `estrategia/estudo-virais-2026-08.md` (6 mecânicas + 3 conceitos;
+  atenção: as mecânicas são de fonte secundária/WebSearch, nenhum Reel real foi medido).
+- Catálogo frame a frame dos 25 clipes do garimpo: `estrategia/catalogo-garimpo.md`.
+  ⚠️ 4 arquivos não eram conteúdo da Hana (peru, meme de pintinho, border collie, tour vazio)
+  — movidos para `06 - videos e trilhas/referencias (nao publicar)`.
+  ⚠️ O catálogo ERROU no clipe 3e9f6791 ("em cima do balcão"): ela está no CHÃO da cozinha.
+  Pego conferindo o frame grande antes de usar (regra zero).
+- **Reel novo "AS REGRAS DA CASA" (conceito 1 do estudo, 100% acervo real)** montado,
+  auditado (2 reprovações → aprovado na v4; pico de áudio -1,1 dBTP na v5) e **enviado no
+  Telegram com botões em 07/08 — ESPERANDO O APROVAR DELE** para o slot de 14/08 11:00Z.
+  Roteiro: `studio/roteiros/2026-08_I_regras-da-casa.json`; trilha nova `07-marcha-travessa`
+  (+ edit2 emendada por medição).
+- Conceitos 2 e 3 do estudo são HÍBRIDOS (cena real + trecho gerado no app Gemini, regra
+  3j-i: pelo app, premium, nunca API). Prompts prontos no estudo. **Ainda não produzidos** —
+  próxima peça se ele aprovar a linha.
+
+**Pendências dele:** aprovar/recusar o Reel de 14/08 no Telegram. Slots de 17/08 em diante
+estão VAZIOS (fila útil: 07/08 foto aprovada, 10/08 e 12/08 reels aprovados, 14/08 pendente).
+
 
 ## 🎬 O REEL DE 12/08 — SETE VERSÕES ATÉ ELE APROVAR (02-03/08/2026)
 
