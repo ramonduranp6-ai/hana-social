@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 07/08/2026 00:21. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 07/08/2026 07:20. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -11,7 +11,7 @@ decisões, use `DECISOES.md`.
 | 2026-08-10T11:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
 | 2026-08-12T11:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
 | 2026-08-14T11:00:00Z | 2026-08-14_a-patroa-mimada | reel | rejected |
-| 2026-08-14T11:00:00Z | 2026-08-14_regras-da-casa | reel | pending |
+| 2026-08-14T11:00:00Z | 2026-08-14_regras-da-casa | reel | approved |
 | 2026-08-17T11:00:00Z | 2026-08-17_golden-hour | reel | rejected |
 | 2026-08-19T11:00:00Z | 2026-08-19_a-noite-dela | reel | rejected |
 | 2026-08-21T11:00:00Z | 2026-08-21_dona-da-casa | reel | rejected |
@@ -27,9 +27,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-08-07T09:44:20Z schedule success
+2026-08-07T06:12:24Z schedule success
 2026-08-07T03:19:52Z workflow_dispatch success
-2026-08-07T01:51:26Z workflow_dispatch success
-2026-08-07T01:43:48Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução sexta-feira, 7 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -58,18 +58,14 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+0ad521f ele aprovou o reel de 14/08 na conversa (07/08)
+a413db0 arrumacao pos-recusa: pasta de aprovacao limpa, intrusos fora do garimpo, DECISOES atualizado
 a22ee85 chore: atualiza estado da fila [skip ci]
 2c53341 reel novo 'as regras da casa' p/ 14/08: conceito do estudo de virais, auditado (2 reprovacoes, aprovado na v4)
 d30bbe1 os 5 reels de 14-24/08 recusados por ele ('muito fraco'); refazer com estudo de virais
 1a7fc09 chore: atualiza estado da fila [skip ci]
 d1b941e reenvia os 5 reels pendentes pro Telegram (pedido dele 06/08)
 79b1571 chore: atualiza estado da fila [skip ci]
-df29d96 chore: logs gerados (garimpo e estado) [skip ci]
-cbc40c5 chore: atualiza estado da fila [skip ci]
-```
-Alterações não commitadas:
-```
-M DECISOES.md
 ```
 
 ## Decisões e contexto
