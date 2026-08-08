@@ -2,6 +2,18 @@
 
 O que a automação já mandou pro Ramón, com data — pra próxima conversa não remontar do zero. Gravado por `publisher/diagnostico.py` e `publisher/leitura_d1.py`, sempre DEPOIS da entrega confirmada (nunca durante `--simular`). Mais recente em cima.
 
+## 2026-08-08 08:22 UTC — Leitura do dia 1 (2026-08-07_banho-de-sol)
+
+📈 LEITURA DO DIA 1 — 2026-08-07_banho-de-sol (Foto, 21h no ar)
+Alcance 34 · visitas ao perfil 1 · seguidores ganhos 0
+Curtidas 11 · comentários 1 · salvos 0 · compartilh. 0
+Comparando só com fotos da mesma idade (5 medido(s)): média 37.
+Este está -9% em relação a essa média.
+
+Régua: alcance depois do dia 1 não gerou visita nova em nenhum post medido — por isso só este número decide.
+
+---
+
 ## 2026-08-06 08:06 UTC — Leitura do dia 1 (2026-08-05_navio-importacao)
 
 📈 LEITURA DO DIA 1 — 2026-08-05_navio-importacao (Foto, 21h no ar)
