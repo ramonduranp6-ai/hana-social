@@ -472,3 +472,99 @@ PermissionError: [WinError 32] O arquivo já está sendo usado por outro process
 
 [ok] orçamento de 40.0 min esgotado — rode de novo pra continuar.
 [resumo] 119 aprovado(s) no total (91 foto, 28 vídeo) de 34468 na pasta. Relatório em C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\01 - brutas (suba aqui)\garimpo\RELATORIO.md
+[info] 34479 arquivo(s) na pasta, 26736 ainda não varrido(s).
+[info] rodando com 3 thread(s). para em 40.0 min.
+[progresso] 10/26736 nesta sessão (7753 no total) — estado salvo.
+[progresso] 20/26736 nesta sessão (7763 no total) — estado salvo.
+[progresso] 30/26736 nesta sessão (7773 no total) — estado salvo.
+      [APROVADO] score=0.529 (imagem)
+[progresso] 40/26736 nesta sessão (7783 no total) — estado salvo.
+[progresso] 50/26736 nesta sessão (7793 no total) — estado salvo.
+[progresso] 60/26736 nesta sessão (7803 no total) — estado salvo.
+[progresso] 70/26736 nesta sessão (7813 no total) — estado salvo.
+[progresso] 80/26736 nesta sessão (7823 no total) — estado salvo.
+[progresso] 90/26736 nesta sessão (7833 no total) — estado salvo.
+[progresso] 100/26736 nesta sessão (7843 no total) — estado salvo.
+[progresso] 110/26736 nesta sessão (7853 no total) — estado salvo.
+[progresso] 120/26736 nesta sessão (7863 no total) — estado salvo.
+[progresso] 130/26736 nesta sessão (7873 no total) — estado salvo.
+      [APROVADO] score=0.669 (video)
+[progresso] 140/26736 nesta sessão (7883 no total) — estado salvo.
+[progresso] 150/26736 nesta sessão (7893 no total) — estado salvo.
+[progresso] 160/26736 nesta sessão (7903 no total) — estado salvo.
+[progresso] 170/26736 nesta sessão (7913 no total) — estado salvo.
+[progresso] 180/26736 nesta sessão (7923 no total) — estado salvo.
+[progresso] 190/26736 nesta sessão (7933 no total) — estado salvo.
+[progresso] 200/26736 nesta sessão (7943 no total) — estado salvo.
+[progresso] 210/26736 nesta sessão (7953 no total) — estado salvo.
+[progresso] 220/26736 nesta sessão (7963 no total) — estado salvo.
+[progresso] 230/26736 nesta sessão (7973 no total) — estado salvo.
+[progresso] 240/26736 nesta sessão (7983 no total) — estado salvo.
+[progresso] 250/26736 nesta sessão (7993 no total) — estado salvo.
+[progresso] 260/26736 nesta sessão (8003 no total) — estado salvo.
+[progresso] 270/26736 nesta sessão (8013 no total) — estado salvo.
+      [APROVADO] score=0.402 (imagem)
+[progresso] 280/26736 nesta sessão (8023 no total) — estado salvo.
+[progresso] 290/26736 nesta sessão (8033 no total) — estado salvo.
+[progresso] 300/26736 nesta sessão (8043 no total) — estado salvo.
+[progresso] 310/26736 nesta sessão (8053 no total) — estado salvo.
+WARNING NMS time limit 2.050s exceeded
+[progresso] 320/26736 nesta sessão (8063 no total) — estado salvo.
+[progresso] 330/26736 nesta sessão (8073 no total) — estado salvo.
+[progresso] 340/26736 nesta sessão (8083 no total) — estado salvo.
+      [APROVADO] score=0.693 (video)
+[progresso] 350/26736 nesta sessão (8093 no total) — estado salvo.
+[progresso] 360/26736 nesta sessão (8103 no total) — estado salvo.
+[progresso] 370/26736 nesta sessão (8113 no total) — estado salvo.
+[progresso] 380/26736 nesta sessão (8123 no total) — estado salvo.
+[progresso] 390/26736 nesta sessão (8133 no total) — estado salvo.
+[progresso] 400/26736 nesta sessão (8143 no total) — estado salvo.
+[progresso] 410/26736 nesta sessão (8153 no total) — estado salvo.
+      [APROVADO] score=0.616 (imagem)
+[progresso] 420/26736 nesta sessão (8163 no total) — estado salvo.
+[progresso] 430/26736 nesta sessão (8173 no total) — estado salvo.
+[progresso] 440/26736 nesta sessão (8183 no total) — estado salvo.
+[progresso] 450/26736 nesta sessão (8193 no total) — estado salvo.
+[progresso] 460/26736 nesta sessão (8203 no total) — estado salvo.
+[progresso] 470/26736 nesta sessão (8213 no total) — estado salvo.
+[progresso] 480/26736 nesta sessão (8223 no total) — estado salvo.
+[progresso] 490/26736 nesta sessão (8233 no total) — estado salvo.
+[progresso] 500/26736 nesta sessão (8243 no total) — estado salvo.
+      [APROVADO] score=0.652 (imagem)
+      [APROVADO] score=0.377 (video)
+[progresso] 510/26736 nesta sessão (8253 no total) — estado salvo.
+[progresso] 520/26736 nesta sessão (8263 no total) — estado salvo.
+[progresso] 530/26736 nesta sessão (8273 no total) — estado salvo.
+[progresso] 540/26736 nesta sessão (8283 no total) — estado salvo.
+[progresso] 550/26736 nesta sessão (8293 no total) — estado salvo.
+[progresso] 560/26736 nesta sessão (8303 no total) — estado salvo.
+[progresso] 570/26736 nesta sessão (8313 no total) — estado salvo.
+[progresso] 580/26736 nesta sessão (8323 no total) — estado salvo.
+[progresso] 590/26736 nesta sessão (8333 no total) — estado salvo.
+[progresso] 600/26736 nesta sessão (8343 no total) — estado salvo.
+      [APROVADO] score=0.507 (imagem)
+      [APROVADO] score=0.507 (imagem)
+[progresso] 610/26736 nesta sessão (8353 no total) — estado salvo.
+[progresso] 620/26736 nesta sessão (8363 no total) — estado salvo.
+[progresso] 630/26736 nesta sessão (8373 no total) — estado salvo.
+[progresso] 640/26736 nesta sessão (8383 no total) — estado salvo.
+[progresso] 650/26736 nesta sessão (8393 no total) — estado salvo.
+      [APROVADO] score=0.390 (imagem)
+[progresso] 660/26736 nesta sessão (8403 no total) — estado salvo.
+[progresso] 670/26736 nesta sessão (8413 no total) — estado salvo.
+[progresso] 680/26736 nesta sessão (8423 no total) — estado salvo.
+[progresso] 690/26736 nesta sessão (8433 no total) — estado salvo.
+[progresso] 700/26736 nesta sessão (8443 no total) — estado salvo.
+[progresso] 710/26736 nesta sessão (8453 no total) — estado salvo.
+[progresso] 720/26736 nesta sessão (8463 no total) — estado salvo.
+[progresso] 730/26736 nesta sessão (8473 no total) — estado salvo.
+[progresso] 740/26736 nesta sessão (8483 no total) — estado salvo.
+[progresso] 750/26736 nesta sessão (8493 no total) — estado salvo.
+[progresso] 760/26736 nesta sessão (8503 no total) — estado salvo.
+[progresso] 770/26736 nesta sessão (8513 no total) — estado salvo.
+[progresso] 780/26736 nesta sessão (8523 no total) — estado salvo.
+[progresso] 790/26736 nesta sessão (8533 no total) — estado salvo.
+[progresso] 800/26736 nesta sessão (8543 no total) — estado salvo.
+
+[ok] orçamento de 40.0 min esgotado — rode de novo pra continuar.
+[resumo] 129 aprovado(s) no total (98 foto, 31 vídeo) de 34479 na pasta. Relatório em C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\01 - brutas (suba aqui)\garimpo\RELATORIO.md
