@@ -4,6 +4,24 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## 📊 09/08/2026 (2ª sessão) — GARIMPO DE COLLAB E BENCHMARK POR DADO (APIFY)
+
+Tarefa deixada pronta em `PROXIMA-CONVERSA.md` (apagado ao terminar). Resultado
+completo em `estrategia/garimpo-apify-2026-08-09.md`. Custo: ~US$ 0,19.
+
+- **Os 5 collabs escolhidos à mão bateram com o dado** (seguidores conferidos
+  por API). Mas 2 reservas (@ravenna_bully_, @dom_exotic_bully) estão **parados
+  há 63 dias** — saem da lista ativa.
+- **3 alvos novos achados por hashtag** (não no olho): @troy.abully,
+  @zaya.lifestylee, @caioguedesmbc. Lista final por engajamento:
+  @troy.abully → @zaya.lifestylee → @dudinhabully (já contatado) →
+  @pituco_bully → @momoamora1.
+- **Corrige a regra 3h da skill:** a amostra de 4 Reels que dizia "nicho roda
+  100% em áudio original" virou **80 Reels medidos = 49% original / 51%
+  música** — quase empate. A régua que decide a trilha continua sendo a 3e-ii
+  (combinar com a cena), não mais "o nicho manda".
+- Nenhuma ação além de leitura (sem seguir/curtir/DM por robô).
+
 ## 🧰 09/08/2026 — APIFY ENTROU; REUNIÃO DAS 4 IAs DEU 3 DECISÕES
 
 **Reunião** (formato fixo: proposta às cegas → debate com ataque/retirada/voto →

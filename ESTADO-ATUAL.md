@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 09/08/2026 16:49. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 09/08/2026 17:07. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -57,6 +57,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+561ce2e passa o bastao: PROXIMA-CONVERSA.md com o garimpo pelo Apify, regra do Apify na skill, DECISOES com a reuniao de 09/08
 e04632b pos-reuniao: OK dele registrado (toca sem custo), SEO ja existia no perfil (conferido na tela), garimpo de collab com 5 alvos e DM pronta mandada no Telegram
 7e2dbb8 reuniao 09/08 com as 4 IAs do hub: 3 decisoes (gancho sonoro+CTA, SEO de descoberta, collab micro), consertos do conselheiro na ata
 6e199d7 chore: atualiza estado da fila [skip ci]
@@ -64,13 +65,14 @@ e04632b pos-reuniao: OK dele registrado (toca sem custo), SEO ja existia no perf
 3bdda5c chore: atualiza estado da fila [skip ci]
 2087e5d chore: atualiza estado da fila [skip ci]
 61c5ea5 chore: atualiza estado [skip ci]
-0ad521f ele aprovou o reel de 14/08 na conversa (07/08)
 ```
 Alterações não commitadas:
 ```
 M .claude/skills/hana-social/SKILL.md
  M DECISOES.md
-?? PROXIMA-CONVERSA.md
+ M ESTADO-ATUAL.md
+ D PROXIMA-CONVERSA.md
+?? estrategia/garimpo-apify-2026-08-09.md
 ```
 
 ## Decisões e contexto
@@ -79,6 +81,24 @@ M .claude/skills/hana-social/SKILL.md
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
+
+## 📊 09/08/2026 (2ª sessão) — GARIMPO DE COLLAB E BENCHMARK POR DADO (APIFY)
+
+Tarefa deixada pronta em `PROXIMA-CONVERSA.md` (apagado ao terminar). Resultado
+completo em `estrategia/garimpo-apify-2026-08-09.md`. Custo: ~US$ 0,19.
+
+- **Os 5 collabs escolhidos à mão bateram com o dado** (seguidores conferidos
+  por API). Mas 2 reservas (@ravenna_bully_, @dom_exotic_bully) estão **parados
+  há 63 dias** — saem da lista ativa.
+- **3 alvos novos achados por hashtag** (não no olho): @troy.abully,
+  @zaya.lifestylee, @caioguedesmbc. Lista final por engajamento:
+  @troy.abully → @zaya.lifestylee → @dudinhabully (já contatado) →
+  @pituco_bully → @momoamora1.
+- **Corrige a regra 3h da skill:** a amostra de 4 Reels que dizia "nicho roda
+  100% em áudio original" virou **80 Reels medidos = 49% original / 51%
+  música** — quase empate. A régua que decide a trilha continua sendo a 3e-ii
+  (combinar com a cena), não mais "o nicho manda".
+- Nenhuma ação além de leitura (sem seguir/curtir/DM por robô).
 
 ## 🧰 09/08/2026 — APIFY ENTROU; REUNIÃO DAS 4 IAs DEU 3 DECISÕES
 

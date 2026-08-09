@@ -247,16 +247,22 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    2. Faixa de biblioteca (`download_url` preenchido): baixar, montar o clipe de
       prévia sobre o vídeo real e mandar no Telegram/pasta `05 - APROVAR`.
    Nunca pedir decisão de trilha só com o nome da música na mensagem.
-3h. **O NICHO NÃO RODA EM MÚSICA — RODA EM ÁUDIO ORIGINAL** (medido em
-   28/07/2026, ideia dele: *"não podemos ter músicas virais que estão dando
-   muito like em instagram de outros cachorros?"*). Varredura nos Reels de maior
-   alcance do bully BR — um de **1 milhão** de views (@guerreirobully) e um de
-   119 mil (@americanbullymicro): **4 de 4 usavam "Áudio original"**, zero faixa
-   licenciada. **Limite honesto: amostra de 4 Reels em 2 perfis** — o Instagram
-   não renderizou a grade de 5 dos 7 perfis. Antes de virar regra, ampliar
-   cobrindo `ohanabulls_club`, `omundobully`, `canilelohimbull`.
-   Consequência prática: **não abrir a conversa de trilha caçando faixa em alta.**
-   Primeiro perguntar se o Reel não vive melhor com o som da própria cena.
+3h. **⚠️ CORRIGIDO EM 09/08/2026 — deixou de ser "o nicho roda em áudio
+   original".** Nasceu de 4 Reels em 2 perfis (28/07); ampliada pelo Apify para
+   **80 Reels de ~60 contas** (hashtags `exoticbullybrasil`, `americanbullybrasil`,
+   `microbully`): **49% áudio original, 51% música — quase empate**. Dado
+   completo em `estrategia/garimpo-apify-2026-08-09.md`.
+   **Consequência prática atualizada:** não existe mais "regra do nicho" para
+   decidir a trilha. Quem decide é a 3e-ii (a faixa combina com a cena?) —
+   continua errado caçar faixa em alta, mas por causa da 3e-ii, não desta regra.
+   <details><summary>versão antiga (histórico, não usar mais)</summary>
+   Medido em 28/07/2026, ideia dele: *"não podemos ter músicas virais que estão
+   dando muito like em instagram de outros cachorros?"*. Varredura nos Reels de
+   maior alcance do bully BR — um de **1 milhão** de views (@guerreirobully) e
+   um de 119 mil (@americanbullymicro): **4 de 4 usavam "Áudio original"**, zero
+   faixa licenciada. Limite honesto declarado na hora: amostra de 4 Reels em 2
+   perfis — pequena demais, e o dado maior de 09/08 confirmou isso.
+   </details>
    Receita da varredura (o que funcionou): `navigate` em
    `instagram.com/<perfil>/reels/` → `get_page_text` devolve só as contagens de
    views da grade (chamar 2x, a 1ª pega carregando) → `find` "link do reel com
