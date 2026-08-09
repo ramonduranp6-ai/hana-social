@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 09/08/2026 14:55. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 09/08/2026 16:49. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-09T17:55:26Z workflow_dispatch 
+2026-08-09T19:20:56Z schedule success
+2026-08-09T17:55:26Z workflow_dispatch success
 2026-08-09T17:18:08Z schedule success
-2026-08-09T15:58:09Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução domingo, 9 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -57,6 +57,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+e04632b pos-reuniao: OK dele registrado (toca sem custo), SEO ja existia no perfil (conferido na tela), garimpo de collab com 5 alvos e DM pronta mandada no Telegram
 7e2dbb8 reuniao 09/08 com as 4 IAs do hub: 3 decisoes (gancho sonoro+CTA, SEO de descoberta, collab micro), consertos do conselheiro na ata
 6e199d7 chore: atualiza estado da fila [skip ci]
 49cce43 chore: atualiza estado da fila [skip ci]
@@ -64,11 +65,12 @@ mudança de status nem publicar.
 2087e5d chore: atualiza estado da fila [skip ci]
 61c5ea5 chore: atualiza estado [skip ci]
 0ad521f ele aprovou o reel de 14/08 na conversa (07/08)
-a413db0 arrumacao pos-recusa: pasta de aprovacao limpa, intrusos fora do garimpo, DECISOES atualizado
 ```
 Alterações não commitadas:
 ```
-M estrategia/decisoes-2026-08-09.json
+M .claude/skills/hana-social/SKILL.md
+ M DECISOES.md
+?? PROXIMA-CONVERSA.md
 ```
 
 ## Decisões e contexto
@@ -77,6 +79,36 @@ M estrategia/decisoes-2026-08-09.json
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
+
+## 🧰 09/08/2026 — APIFY ENTROU; REUNIÃO DAS 4 IAs DEU 3 DECISÕES
+
+**Reunião** (formato fixo: proposta às cegas → debate com ataque/retirada/voto →
+conselheiro): ata em `estrategia/decisoes-2026-08-09.json`, revisão automática 16/08.
+Mortas no debate: "embaixador orgânico" e "remix de virais". As 3 vivas: gancho
+sonoro + pedido de compartilhamento nos Reels · SEO de descoberta · 1 collab/semana.
+**Ele autorizou tocar as três** ("Se não houver custo, vc pode tocar!!!"), mantendo
+o portão: *"antes de postar vc me mostra pra eu aprovar"*.
+
+**Correções que a conferência na tela impôs às decisões da reunião:**
+- O **SEO do perfil JÁ EXISTIA** — nome "Hana 🐾 Exotic Bully Micro" e bio com
+  "Tri Lilac Merle", "a patroa" e "Itajaí SC". As 4 IAs propuseram algo já feito.
+  Nada foi alterado. Restou da decisão só geotag + hashtags nos posts.
+- O conselheiro consertou 3 pontos antes de liberar: regra de morte com **OU** (o
+  **E** tornava o formato imortal), contagem por **Reel publicado** e não por semana
+  de calendário, e custo honesto da collab (**15-30 min**, não os "5 min" propostos).
+
+**APIFY** — conferido pela API em 09/08 (regra zero): MCP HTTP `mcp.apify.com`,
+plano **grátis US$ 5/mês**, US$ 0,07 usados, token válido, sem autorização pendente.
+Eu disse a ele duas vezes que "não estava instalado" — **estava**, no `.claude.json`
+global; a lista desta conversa não o mostrava porque MCP instalado no meio de uma
+conversa só carrega na seguinte. **O que teria pego o erro:** procurar no
+`.claude.json` antes de afirmar, em vez de confiar na lista de ferramentas da sessão.
+Tarefa preparada em **`PROXIMA-CONVERSA.md`** (apagar quando terminar).
+
+**Incidente de conta:** durante o garimpo de collab, a aba do Chrome caiu e a
+varredura terminou logada no Instagram **pessoal do Ramón**, não no da Hana. Só
+leitura de perfis públicos, nenhuma ação (sem seguir/curtir/comentar). Avisado a ele.
+
 
 ## 🔴 06-07/08/2026 — ELE RECUSOU O LOTE INTEIRO DE 5 REELS; REFEITO COM ESTUDO DE VIRAIS
 

@@ -58,6 +58,24 @@ descreve intenção; só a fonte real descreve o mundo.
 Régua final antes de mandar a mensagem: **"cada frase minha aqui, eu vi ou eu
 supus?"** As supostas ou saem, ou vão marcadas.
 
+## 0b. 🚀 SE EXISTIR `PROXIMA-CONVERSA.md` NA RAIZ, LER PRIMEIRO
+
+Arquivo de passagem de bastão: a tarefa que a conversa anterior deixou pronta para
+começar. Ler ANTES do estado, fazer o que ele manda, e **apagar quando terminar**.
+
+**Ferramenta nova — Apify (desde 09/08/2026).** MCP HTTP `mcp.apify.com`, token no
+`.claude.json` global, plano **grátis US$ 5/mês** (conferido pela API em 09/08:
+conta `unbroken_affinity`, token válido, sem autorização pendente). As ferramentas
+são **adiadas**: carregar com `ToolSearch` query `apify` antes de chamar.
+Serve para **ler dado público em massa** — perfil e Reel de terceiros — e conserta
+dois furos conhecidos: (a) a escolha de perfil para collab era feita no olho;
+(b) o `estrategia/estudo-virais-2026-08.md` veio de busca na internet, com **zero
+Reel medido**, e o próprio estudo declarou isso.
+⚠️ **Só leitura.** Não seguir, curtir, comentar nem mandar DM por robô — a ronda de
+engajamento está morta (3b) e DM quem manda é o Ramón, do celular.
+⚠️ MCP instalado no meio de uma conversa **não carrega nela** — só na seguinte.
+Se `ToolSearch` não achar, dizer isso a ele em vez de improvisar pela API.
+
 ## 1. PRIMEIRO PASSO, SEMPRE: carregar o estado real
 
 ```bash

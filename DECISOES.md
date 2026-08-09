@@ -4,6 +4,36 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## 🧰 09/08/2026 — APIFY ENTROU; REUNIÃO DAS 4 IAs DEU 3 DECISÕES
+
+**Reunião** (formato fixo: proposta às cegas → debate com ataque/retirada/voto →
+conselheiro): ata em `estrategia/decisoes-2026-08-09.json`, revisão automática 16/08.
+Mortas no debate: "embaixador orgânico" e "remix de virais". As 3 vivas: gancho
+sonoro + pedido de compartilhamento nos Reels · SEO de descoberta · 1 collab/semana.
+**Ele autorizou tocar as três** ("Se não houver custo, vc pode tocar!!!"), mantendo
+o portão: *"antes de postar vc me mostra pra eu aprovar"*.
+
+**Correções que a conferência na tela impôs às decisões da reunião:**
+- O **SEO do perfil JÁ EXISTIA** — nome "Hana 🐾 Exotic Bully Micro" e bio com
+  "Tri Lilac Merle", "a patroa" e "Itajaí SC". As 4 IAs propuseram algo já feito.
+  Nada foi alterado. Restou da decisão só geotag + hashtags nos posts.
+- O conselheiro consertou 3 pontos antes de liberar: regra de morte com **OU** (o
+  **E** tornava o formato imortal), contagem por **Reel publicado** e não por semana
+  de calendário, e custo honesto da collab (**15-30 min**, não os "5 min" propostos).
+
+**APIFY** — conferido pela API em 09/08 (regra zero): MCP HTTP `mcp.apify.com`,
+plano **grátis US$ 5/mês**, US$ 0,07 usados, token válido, sem autorização pendente.
+Eu disse a ele duas vezes que "não estava instalado" — **estava**, no `.claude.json`
+global; a lista desta conversa não o mostrava porque MCP instalado no meio de uma
+conversa só carrega na seguinte. **O que teria pego o erro:** procurar no
+`.claude.json` antes de afirmar, em vez de confiar na lista de ferramentas da sessão.
+Tarefa preparada em **`PROXIMA-CONVERSA.md`** (apagar quando terminar).
+
+**Incidente de conta:** durante o garimpo de collab, a aba do Chrome caiu e a
+varredura terminou logada no Instagram **pessoal do Ramón**, não no da Hana. Só
+leitura de perfis públicos, nenhuma ação (sem seguir/curtir/comentar). Avisado a ele.
+
+
 ## 🔴 06-07/08/2026 — ELE RECUSOU O LOTE INTEIRO DE 5 REELS; REFEITO COM ESTUDO DE VIRAIS
 
 Recado dele no Telegram (04/08, respondido 06/08): "Não aprovado nenhuma". Depois, na conversa:
