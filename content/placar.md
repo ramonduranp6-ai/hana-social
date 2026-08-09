@@ -1,11 +1,11 @@
 # Placar da Hana — o que cada post rendeu
 
 Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
-Última coleta: **2026-08-08** · fonte: API do Instagram.
+Última coleta: **2026-08-09** · fonte: API do Instagram.
 
 ## Seguidores
 
-**331** (+0 desde 2026-08-07)
+**331** (+0 desde 2026-08-08)
 
 ## Post a post (mais alcance em cima)
 
@@ -18,22 +18,21 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 | 2026-07-29_lilac-ao-sol | Foto | 49 | 11 | 1 | 0 | 0 | 0 |
 | 2026-08-05_navio-importacao | Foto | 41 | 8 | 1 | 0 | 0 | 0 |
 | 2026-08-03_dia-de-praia | Foto | 39 | 9 | 0 | 0 | 0 | 0 |
-| 2026-08-07_banho-de-sol | Foto | 34 | 11 | 1 | 0 | 0 | 0 |
+| 2026-08-07_banho-de-sol | Foto | 38 | 11 | 1 | 0 | 0 | 0 |
 
 ## Reel x Foto (média de alcance)
 
 - **Reel**: ainda sem post publicado
-- **Foto**: 46 de alcance médio (8 post(s))
+- **Foto**: 47 de alcance médio (8 post(s))
 
 ## Alcance médio por pilar
 
-- **sem pilar**: 46 de alcance médio (8 post(s))
+- **sem pilar**: 47 de alcance médio (8 post(s))
 
 ## Seguidores ao longo do tempo
 
 | Data | Seguidores |
 |---|---|
-| 2026-07-28 | 329 |
 | 2026-07-29 | 329 |
 | 2026-07-30 | 328 |
 | 2026-07-31 | 329 |
@@ -45,6 +44,7 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 | 2026-08-06 | 331 |
 | 2026-08-07 | 331 |
 | 2026-08-08 | 331 |
+| 2026-08-09 | 331 |
 
 ## Limites desta coleta
 
