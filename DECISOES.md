@@ -4,6 +4,18 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## ✅ 09/08/2026 (3ª sessão) — 14/08 aprovado, DMs mandadas, vídeo novo: NOVA IRMÃ
+
+Ele respondeu os 3 pedidos: (1) **14/08 "regras da casa" aprovado** (já estava
+`approved` no post.json — conferido, nada a mudar). (2) DM de collab prontas e
+entregues no Telegram pra ele mandar do celular: **@troy.abully** e
+**@zaya.lifestylee** (não fiz a @dudinhabully de novo, já tinha ido em 09/08).
+(3) **Vídeo novo salvo:** `hana_noticia_nova_irma.mov` (6,4 MB) em
+`01 - brutas (suba aqui)` — ele descreveu como "a Hana descobrindo, dando a
+notícia da nova irmã dela". **Pauta nova para a reunião de domingo:** parece
+que vem cachorra nova na família — se confirmar, decidir se vira pilar de
+conteúdo próprio ou fica dentro de MICRO NO APÊ. Ainda não editado.
+
 ## 📊 09/08/2026 (2ª sessão) — GARIMPO DE COLLAB E BENCHMARK POR DADO (APIFY)
 
 Tarefa deixada pronta em `PROXIMA-CONVERSA.md` (apagado ao terminar). Resultado

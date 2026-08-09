@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 09/08/2026 17:07. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 09/08/2026 18:21. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,11 +26,11 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-09T19:20:56Z schedule success
-2026-08-09T17:55:26Z workflow_dispatch success
-2026-08-09T17:18:08Z schedule success
+2026-08-09T21:21:19Z workflow_dispatch 
+2026-08-09T21:21:13Z workflow_dispatch success
+2026-08-09T21:04:45Z schedule success
 ```
-- Vigia local (Agendador do Windows): próxima execução domingo, 9 de agosto de 2026 18:10:00
+- Vigia local (Agendador do Windows): próxima execução segunda-feira, 10 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
@@ -43,7 +43,7 @@ Ele responde pelos números. Enquanto não responder, **não commitar**
 mudança de status nem publicar.
 
 ## Acervo de fotos
-- Brutas a processar: 38 arquivos
+- Brutas a processar: 39 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
 - Fotos do iPhone sincronizadas (iCloud): 34483
@@ -55,24 +55,25 @@ mudança de status nem publicar.
 
 **Ainda não entraram na fila** — falta escolher o trecho e o gancho, que é julgamento, e passar pelo auditor. Fazer na reunião de segunda.
 
+## 📌 RECADOS DELE NO TELEGRAM — responder nesta conversa
+- [ ] **09/08/2026 20:10 UTC** — Pode seguir
+
+Depois de responder, apague a linha de `content/recados.md`.
+
 ## Últimas mudanças no projeto
 ```
+3302f66 chore: atualiza estado da fila [skip ci]
+753d58b garimpo de collab e benchmark de Reels por dado (Apify)
 561ce2e passa o bastao: PROXIMA-CONVERSA.md com o garimpo pelo Apify, regra do Apify na skill, DECISOES com a reuniao de 09/08
 e04632b pos-reuniao: OK dele registrado (toca sem custo), SEO ja existia no perfil (conferido na tela), garimpo de collab com 5 alvos e DM pronta mandada no Telegram
 7e2dbb8 reuniao 09/08 com as 4 IAs do hub: 3 decisoes (gancho sonoro+CTA, SEO de descoberta, collab micro), consertos do conselheiro na ata
 6e199d7 chore: atualiza estado da fila [skip ci]
 49cce43 chore: atualiza estado da fila [skip ci]
 3bdda5c chore: atualiza estado da fila [skip ci]
-2087e5d chore: atualiza estado da fila [skip ci]
-61c5ea5 chore: atualiza estado [skip ci]
 ```
 Alterações não commitadas:
 ```
-M .claude/skills/hana-social/SKILL.md
- M DECISOES.md
- M ESTADO-ATUAL.md
- D PROXIMA-CONVERSA.md
-?? estrategia/garimpo-apify-2026-08-09.md
+M DECISOES.md
 ```
 
 ## Decisões e contexto
@@ -81,6 +82,18 @@ M .claude/skills/hana-social/SKILL.md
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
+
+## ✅ 09/08/2026 (3ª sessão) — 14/08 aprovado, DMs mandadas, vídeo novo: NOVA IRMÃ
+
+Ele respondeu os 3 pedidos: (1) **14/08 "regras da casa" aprovado** (já estava
+`approved` no post.json — conferido, nada a mudar). (2) DM de collab prontas e
+entregues no Telegram pra ele mandar do celular: **@troy.abully** e
+**@zaya.lifestylee** (não fiz a @dudinhabully de novo, já tinha ido em 09/08).
+(3) **Vídeo novo salvo:** `hana_noticia_nova_irma.mov` (6,4 MB) em
+`01 - brutas (suba aqui)` — ele descreveu como "a Hana descobrindo, dando a
+notícia da nova irmã dela". **Pauta nova para a reunião de domingo:** parece
+que vem cachorra nova na família — se confirmar, decidir se vira pilar de
+conteúdo próprio ou fica dentro de MICRO NO APÊ. Ainda não editado.
 
 ## 📊 09/08/2026 (2ª sessão) — GARIMPO DE COLLAB E BENCHMARK POR DADO (APIFY)
 
