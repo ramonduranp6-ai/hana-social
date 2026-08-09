@@ -1,13 +1,12 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 07/08/2026 07:20. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 09/08/2026 14:55. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
 
 | Quando (UTC) | Post | Tipo | Status |
 |---|---|---|---|
-| 2026-08-07T11:00:00Z | 2026-08-07_banho-de-sol | image | approved |
 | 2026-08-10T11:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
 | 2026-08-12T11:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
 | 2026-08-14T11:00:00Z | 2026-08-14_a-patroa-mimada | reel | rejected |
@@ -17,21 +16,21 @@ decisões, use `DECISOES.md`.
 | 2026-08-21T11:00:00Z | 2026-08-21_dona-da-casa | reel | rejected |
 | 2026-08-24T11:00:00Z | 2026-08-24_travesseiro | reel | rejected |
 
-## Publicados: 7
-- 2026-07-27_pijama-oncinha — IG `18073337600408952`
+## Publicados: 8
 - 2026-07-29_lilac-ao-sol — IG `18112183567998703`
 - 2026-07-31_roda-gigante — IG `17893985169571565`
 - 2026-08-03_dia-de-praia — IG `17963565245962414`
 - 2026-08-05_navio-importacao — IG `17869247748585560`
+- 2026-08-07_banho-de-sol — IG `17871079455631167`
 
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-07T09:44:20Z schedule success
-2026-08-07T06:12:24Z schedule success
-2026-08-07T03:19:52Z workflow_dispatch success
+2026-08-09T17:55:26Z workflow_dispatch 
+2026-08-09T17:18:08Z schedule success
+2026-08-09T15:58:09Z schedule success
 ```
-- Vigia local (Agendador do Windows): próxima execução sexta-feira, 7 de agosto de 2026 18:10:00
+- Vigia local (Agendador do Windows): próxima execução domingo, 9 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
@@ -47,7 +46,7 @@ mudança de status nem publicar.
 - Brutas a processar: 38 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34464
+- Fotos do iPhone sincronizadas (iCloud): 34483
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -58,14 +57,18 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+7e2dbb8 reuniao 09/08 com as 4 IAs do hub: 3 decisoes (gancho sonoro+CTA, SEO de descoberta, collab micro), consertos do conselheiro na ata
+6e199d7 chore: atualiza estado da fila [skip ci]
+49cce43 chore: atualiza estado da fila [skip ci]
+3bdda5c chore: atualiza estado da fila [skip ci]
+2087e5d chore: atualiza estado da fila [skip ci]
+61c5ea5 chore: atualiza estado [skip ci]
 0ad521f ele aprovou o reel de 14/08 na conversa (07/08)
 a413db0 arrumacao pos-recusa: pasta de aprovacao limpa, intrusos fora do garimpo, DECISOES atualizado
-a22ee85 chore: atualiza estado da fila [skip ci]
-2c53341 reel novo 'as regras da casa' p/ 14/08: conceito do estudo de virais, auditado (2 reprovacoes, aprovado na v4)
-d30bbe1 os 5 reels de 14-24/08 recusados por ele ('muito fraco'); refazer com estudo de virais
-1a7fc09 chore: atualiza estado da fila [skip ci]
-d1b941e reenvia os 5 reels pendentes pro Telegram (pedido dele 06/08)
-79b1571 chore: atualiza estado da fila [skip ci]
+```
+Alterações não commitadas:
+```
+M estrategia/decisoes-2026-08-09.json
 ```
 
 ## Decisões e contexto
