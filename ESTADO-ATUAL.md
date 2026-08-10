@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 09/08/2026 18:21. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 10/08/2026 11:39. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-09T21:21:19Z workflow_dispatch 
-2026-08-09T21:21:13Z workflow_dispatch success
-2026-08-09T21:04:45Z schedule success
+2026-08-10T14:35:04Z schedule success
+2026-08-10T10:03:15Z schedule success
+2026-08-10T05:08:18Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução segunda-feira, 10 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -62,6 +62,7 @@ Depois de responder, apague a linha de `content/recados.md`.
 
 ## Últimas mudanças no projeto
 ```
+3a80dbb 14/08 aprovado, DMs de collab entregues no Telegram, video novo (nova irma)
 3302f66 chore: atualiza estado da fila [skip ci]
 753d58b garimpo de collab e benchmark de Reels por dado (Apify)
 561ce2e passa o bastao: PROXIMA-CONVERSA.md com o garimpo pelo Apify, regra do Apify na skill, DECISOES com a reuniao de 09/08
@@ -69,11 +70,15 @@ e04632b pos-reuniao: OK dele registrado (toca sem custo), SEO ja existia no perf
 7e2dbb8 reuniao 09/08 com as 4 IAs do hub: 3 decisoes (gancho sonoro+CTA, SEO de descoberta, collab micro), consertos do conselheiro na ata
 6e199d7 chore: atualiza estado da fila [skip ci]
 49cce43 chore: atualiza estado da fila [skip ci]
-3bdda5c chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
 M DECISOES.md
+ M ESTADO-ATUAL.md
+ M studio/garimpo_rodada.log
+?? studio/roteiros/2026-08_J_ela-achou-que-era-dela-B.json
+?? studio/roteiros/2026-08_J_ela-achou-que-era-dela-FINAL.json
+?? studio/roteiros/2026-08_J_ela-achou-que-era-dela.json
 ```
 
 ## Decisões e contexto
@@ -83,6 +88,33 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## 🎬 10/08/2026 — REEL DO CHÁ REVELAÇÃO: 3 rodadas até ficar seguro, mostrado a ele antes de enviar
+
+O vídeo "nova irmã" (ver entrada abaixo) é chá revelação de gravidez, não cachorra
+nova — corrigido depois de extrair frame. Regra aplicada: **não é notícia da Hana
+pra dar** (sem palavra/som que confirme gravidez) e **a estrela continua sendo a
+Hana**, nunca o casal.
+
+Processo (diretor-reels roteiriza, auditor independente audita — nunca quem
+constrói aprova, regra 3n):
+1. Roteiro A: tinha corte com a fumaça rosa da revelação — **vazamento real**,
+   auditoria reprovou.
+2. Corrigi um zoom pra tirar o rosto do parceiro dela de um corte — não resolveu,
+   o rosto reconhecível estava no corte SEGUINTE (que eu não tinha tocado).
+3. Diretor-reels trocou o desfecho inteiro (regra 3n-ii: corte reprovado 2x pelo
+   mesmo motivo, troca-se o material, não o parâmetro) — e achou um TERCEIRO
+   rosto (o dela) escondido num corte que os dois auditores tinham deixado passar.
+4. Versão final: 7,2s, 4 cortes, reauditada quadro a quadro (36 frames) —
+   **SEM OBJEÇÃO** em rosto de terceiro e em vazamento de notícia. Ressalva de
+   qualidade (não de segurança): ela fica pequena em ~60% dos frames de
+   caminhada — mandado a ele mesmo assim, avisado do porém, esperando o aval.
+Arquivo: `Fotos da Hana/06 - videos e trilhas/rascunhos/2026-08-J_balloes-dela-FINAL.mp4`.
+Roteiro: `studio/roteiros/2026-08_J_ela-achou-que-era-dela-FINAL.json`.
+**Custo R$ 0,00** — trilha já existia (Lyria). Como a trilha é nossa, pode
+publicar pelo robô normal, não precisa subir na mão.
+**Lição que fica:** revisão dupla pegou 3 vazamentos de privacidade que a
+produção sozinha não veria — vale o custo de token nesta faixa (3n).
+
 ## ✅ 09/08/2026 (3ª sessão) — 14/08 aprovado, DMs mandadas, vídeo novo: NOVA IRMÃ
 
 Ele respondeu os 3 pedidos: (1) **14/08 "regras da casa" aprovado** (já estava
@@ -91,9 +123,19 @@ entregues no Telegram pra ele mandar do celular: **@troy.abully** e
 **@zaya.lifestylee** (não fiz a @dudinhabully de novo, já tinha ido em 09/08).
 (3) **Vídeo novo salvo:** `hana_noticia_nova_irma.mov` (6,4 MB) em
 `01 - brutas (suba aqui)` — ele descreveu como "a Hana descobrindo, dando a
-notícia da nova irmã dela". **Pauta nova para a reunião de domingo:** parece
-que vem cachorra nova na família — se confirmar, decidir se vira pilar de
-conteúdo próprio ou fica dentro de MICRO NO APÊ. Ainda não editado.
+notícia da nova irmã dela". **CORRIGIDO em 10/08 depois de extrair frame: não
+é cachorra nova — é chá revelação (fumaça rosa, ursinho, casal), a "nova irmã"
+é um BEBÊ HUMANO.** Eu tinha suposto "nova cachorra" sem olhar o vídeo — errado,
+corrigido antes de virar decisão (regra zero).
+
+**Instrução dele em 10/08:** "esse lote que abriu aqui na nossa conversa já
+foi postado, cuidado com isso, para não repetir" — leitura: o chá revelação em
+si já foi postado em outro canal (pessoal), não é pra repetir esse anúncio na
+Hana. "Vídeo novo pode montar, me traga antes de enviar" — autoriza um corte
+NOVO, focado na Hana (não repetição do anúncio), mostrado a ele antes de ir
+pro Telegram. Decisão editorial minha, a confirmar com ele: manter a estrela
+sendo a Hana (regra 1), sem texto que anuncie a gravidez — isso não é notícia
+da Hana pra dar.
 
 ## 📊 09/08/2026 (2ª sessão) — GARIMPO DE COLLAB E BENCHMARK POR DADO (APIFY)
 

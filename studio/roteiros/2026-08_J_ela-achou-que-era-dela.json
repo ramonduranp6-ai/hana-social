@@ -1,0 +1,61 @@
+{
+  "titulo": "SHE THOUGHT THE BALLOONS WERE HERS",
+  "historia": "Ela chegou num piquenique cheio de balões rosa amarrados nela e concluiu que a festa era sua. Alguma coisa explodiu atrás dela, todo mundo virou para o outro lado — e ela foi embora levando os balões. Arco: dona da festa -> ignorada -> ladra dos balões.",
+  "origem": "Bruto único: hana_noticia_nova_irma.mov (30,03s, 1024x576 com displaymatrix -90 => o ffmpeg já entrega 576x1024 vertical). Janelas escolhidas frame a frame (extração a 0,5s de 4s a 21,5s) e cada recorte SIMULADO com a mesma conta do montar_reel (crop centrado + aproximar + foco_y) antes de entrar no roteiro. TRAVA EDITORIAL: nada de anunciar ou confirmar a notícia da família — nenhum texto, nenhuma legenda, nenhum som. O que o Reel conta é só o dia da Hana.",
+
+  "trilha": "content/trilhas/01-fofo-ukulele.mp3",
+  "inicio_trilha": 5.58,
+  "abafar_ate": 0,
+  "volume_trilha": 0.95,
+  "_nota_trilha": "01-fofo-ukulele (Lyria 3, já existe — custo R$ 0). MEDIDO, não de ouvido: RMS a cada 0,1s. A faixa tem um BURACO proposital de 0,8s em 8,1-8,9s (-28 a -49 dB) e a banda volta em 9,05s (-20 -> -15, e segue -13/-16 até 15,9s). Começando em 5,58s: o silêncio cai em 2,52-3,32s do Reel (respiro antes da explosão) e a virada da música bate em 3,4667s = o primeiro frame do corte 3, a explosão. O trecho usado vai de 5,58 a 15,78 da faixa — não chega no corte morto de 26,5s nem repete o loop. NÃO reusei a 04-crescendo-filhote porque ela já está no Reel de 12/08 (cabia-na-minha-mão).",
+
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
+      "de": 6.05, "ate": 6.95, "movimento": "punch", "forca": 0.10,
+      "aproximar": 1.5, "foco_y": 1.0, "mudo": true,
+      "_nota": "GANCHO (0-0,90s). Ela grande no quadro, desfilando com o buquê de balões rosa preso no peitoral, guia arrastando na grama. Janela curta de propósito: em 5,85s ela encosta na borda esquerda e em 6,95s a câmera já abriu. O foco_y 1.0 joga fora o terço de cima e sobra só perna de gente — nenhum rosto."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
+      "de": 1.70, "ate": 4.90, "movimento": "acelerado", "fator": 1.25,
+      "aproximar": 1.8, "foco_y": 0.72, "mudo": true,
+      "_nota": "SETUP (0,90-3,47s). A travessia do gramado: cachorra pequena, campo enorme, ela puxando os balões como se fosse o troféu dela. Acelerado 1,25 para virar desfile e não caminhada. ⚠️ aproximar preso em 1.8: o montar_reel centra o recorte na horizontal e ela anda à ESQUERDA do centro (x~0,30-0,47) — testei 2.1 e 2.3 e ela era decepada na borda."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
+      "de": 7.40, "ate": 9.50, "movimento": "zoomout", "forca": 0.14,
+      "aproximar": 1.25, "foco_y": 0.45, "mudo": true,
+      "_nota": "A VIRADA (3,47-5,57s), e é aqui que a música volta. O céu estoura de cor atrás dela. ⚠️ É o ÚNICO corte do Reel em que ela não é o centro — declarado de propósito: a piada é justamente o mundo virando para o outro lado. Fica em 2,1s e o casal aparece pequeno e DE COSTAS, sem rosto. aproximar 1.25 corta a borda direita onde uma convidada filma com o celular."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
+      "de": 9.70, "ate": 11.45, "movimento": "punch", "forca": 0.08,
+      "aproximar": 1.9, "foco_y": 0.95, "mudo": true,
+      "_nota": "A IGNORADA (5,57-7,33s). Poeira rosa ainda no ar, todo mundo debruçado, e ela no meio do cobertor com os balões e o ursinho gigante do lado. O foco_y 0.95 desce o recorte: as pessoas entram do tronco para baixo, ninguém vira close."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
+      "de": 16.20, "ate": 17.80, "movimento": "seco",
+      "aproximar": 2.4, "foco_y": 1.0, "mudo": true,
+      "_nota": "A DECISÃO (7,33-8,93s). Ela deitada em cima do buquê e depois de pé no cobertor, balões grudados no lombo, boca aberta. CORRIGIDO 10/08: aproximar subiu de 1.8 para 2.4 — em 1.8 o rosto do parceiro dela aparecia reconhecível (óculos, barba, sorriso) em 16,20/16,90/17,75s, a tarja de texto não cobria (fica em y 462-690, o rosto em y~132-412). Em 2.4 o topo do recorte só tem camiseta/braço/mão/relógio — e a Hana fica maior e sozinha no quadro, o corte melhora."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
+      "de": 17.85, "ate": 19.10, "movimento": "zoomout", "forca": 0.16,
+      "aproximar": 1.35, "foco_y": 1.0, "mudo": true,
+      "_nota": "DESFECHO (8,93-10,20s). Ela desce do cobertor e sai andando LEVANDO o buquê inteiro, guia arrastando. Corta em 19,10s: em 19,5s ela já saiu do quadro e começa o trecho que é só do casal — esse trecho não entra no Reel de jeito nenhum. Fecha o loop com o corte 1 (mesma pose, mesmos balões)."
+    }
+  ],
+
+  "textos": [
+    {"de": 0.25, "ate": 3.20, "texto": "SHE THOUGHT THE BALLOONS WERE HERS", "posicao": "alto", "px": 68},
+    {"de": 3.60, "ate": 5.45, "texto": "THEN SOMETHING EXPLODED BEHIND HER", "posicao": "baixo", "px": 66},
+    {"de": 7.55, "ate": 10.10, "texto": "SHE TOOK THE BALLOONS ANYWAY", "posicao": "alto", "px": 72}
+  ],
+
+  "_nota_textos": "3 frases, nenhuma nomeia cor, gênero, bebê, família ou notícia. 'Something exploded behind her' foi escolhido no lugar de qualquer frase com 'pink' de propósito. Posições conferidas contra o recorte de cada corte: 'alto' (0,30) cai em grama/lago nos cortes 1, 5 e 6 e ainda cobre os rostos do casal no fim; 'baixo' (0,66) cai na margem do lago no corte da fumaça, sem tapar a nuvem.",
+  "_nota_som": "TODOS os cortes com mudo: true — sem exceção e sem gancho sonoro. O áudio bruto é de uma comemoração ao vivo e pode ter gente GRITANDO a notícia em português. Som de cena aqui é vazamento, não é gancho.",
+  "_duracao_prevista": "10,20s (0,90 + 2,5667 + 2,10 + 1,7667 + 1,60 + 1,2667), já contando o arredondamento de quadro do montar_reel a 30 fps.",
+  "_custo": "R$ 0,00 — nenhum corte gerado, nenhuma imagem, trilha já existente. Como a trilha é nossa (Lyria), este Reel pode ser publicado pelo robô; não precisa subir na mão pelo app."
+}
