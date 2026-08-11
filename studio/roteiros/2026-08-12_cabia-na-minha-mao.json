@@ -1,7 +1,7 @@
 {
   "titulo": "ELA CABIA NA MINHA MÃO",
   "historia": "Ela começou cabendo na mão dele e termina dona da cama, da bola e do colo — a casa mudou de dono sem ninguém avisar.",
-  "origem": "Ordem dele em 03/08/2026: *'Não gostei! Cadê a música, não era pra ser algo divertido? Cadê a criatividade, não tem um storytelling.'* As versões anteriores eram uma LISTA de itens com veredito no fim, sem trilha. Esta é uma história com começo, virada e desfecho, com trilha própria por baixo. Roteiro do Diretor de Criação, enquadramentos ajustados pelos que já passaram na auditoria.",
+  "origem": "Ordem dele em 03/08/2026: *'Não gostei! Cadê a música, não era pra ser algo divertido? Cadê a criatividade, não tem um storytelling.'* As versões anteriores eram uma LISTA de itens com veredito no fim, sem trilha. Esta é uma história com começo, virada e desfecho, com trilha própria por baixo. Roteiro do Diretor de Criação, enquadramentos ajustados pelos que já passaram na auditoria. CORRIGIDO 11/08/2026: o corte da praia (IMG_1725.MOV) foi removido — é o MESMO passeio do post 'dia-de-praia' já publicado em 03/08 (mesmo colar de conchas, mesma praia, confirmado comparando frame a frame). Regra 2c (nunca repetir passeio). Texto 3 retimado de 12.4-13.9 para 10.4-11.9 pra caber no total 2s mais curto.",
   "trilha": "content/trilhas/04-crescendo-filhote.mp3",
   "inicio_trilha": 11.06,
   "abafar_ate": 2.6,
@@ -32,14 +32,9 @@
       "_nota": "A VIRADA, e é aqui que a música cresce. Mesma brincadeira, outro corpo: ADULTA atravessando a sala com a bola VERMELHA na boca. Agora ela manda na bola. ⚠️ Este clipe é filmado CONTRA a janela e ela saía como um vulto preto — a auditoria reprovou porque não dava para ver que era a mesma cadela. `clarear` levanta a sombra com gamma (não com brightness, que estouraria a janela) e o `aproximar 2.5` põe ela no quadro. Custa nitidez e vale: é o clímax da história."
     },
     {
-      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/IMG_1725.MOV",
-      "de": 4.0, "ate": 6.0, "movimento": "zoomout", "forca": 0.14, "mudo": true,
-      "_nota": "O mundo dela abriu. Praia, colar de conchas, focinho no sol."
-    },
-    {
       "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/11984692-701d-419b-ac51-88434fa3c902.mp4",
-      "de": 0.2, "ate": 2.6, "movimento": "punch", "forca": 0.10, "mudo": true,
-      "_nota": "O olhar de quem já é dona do lugar: na cama, de noite, luzes da cidade na janela."
+      "de": 6.0, "ate": 8.4, "movimento": "punch", "forca": 0.10, "mudo": true,
+      "_nota": "O olhar de quem já é dona do lugar: na cama, de noite, luzes da cidade na janela. CORRIGIDO 11/08: era 0.2-2.6 do mesmo clipe usado no Reel de 14/08 (0.5-2.3, 'CRIME 2') — quase o mesmo segundo, repetiria entre os dois posts em 48h. Trocado para 6.0-8.4 (mesmo clipe, 14,14s total, sobra de sobra): ela reposiciona a cabeça, olhar direto pra câmera, sem sobreposição com o outro Reel."
     },
     {
       "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/24023CD7-9018-4D40-8792-200F4F0AD9B1.mp4",
@@ -50,6 +45,6 @@
   "textos": [
     {"de": 0.4, "ate": 2.5, "texto": "ELA CABIA NA MINHA MÃO", "posicao": "baixo", "px": 72},
     {"de": 6.1, "ate": 8.0, "texto": "HOJE A CASA É DELA", "posicao": "alto", "px": 78},
-    {"de": 12.4, "ate": 13.9, "texto": "E EU VIREI O COLCHÃO", "posicao": "baixo", "px": 74}
+    {"de": 10.4, "ate": 11.9, "texto": "E EU VIREI O COLCHÃO", "posicao": "baixo", "px": 74}
   ]
 }

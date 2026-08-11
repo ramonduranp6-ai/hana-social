@@ -1,13 +1,12 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 10/08/2026 11:39. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 11/08/2026 08:41. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
 
 | Quando (UTC) | Post | Tipo | Status |
 |---|---|---|---|
-| 2026-08-10T11:00:00Z | 2026-08-10_escolheu-o-canal | reel | approved |
 | 2026-08-12T11:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
 | 2026-08-14T11:00:00Z | 2026-08-14_a-patroa-mimada | reel | rejected |
 | 2026-08-14T11:00:00Z | 2026-08-14_regras-da-casa | reel | approved |
@@ -16,21 +15,21 @@ decisões, use `DECISOES.md`.
 | 2026-08-21T11:00:00Z | 2026-08-21_dona-da-casa | reel | rejected |
 | 2026-08-24T11:00:00Z | 2026-08-24_travesseiro | reel | rejected |
 
-## Publicados: 8
-- 2026-07-29_lilac-ao-sol — IG `18112183567998703`
+## Publicados: 9
 - 2026-07-31_roda-gigante — IG `17893985169571565`
 - 2026-08-03_dia-de-praia — IG `17963565245962414`
 - 2026-08-05_navio-importacao — IG `17869247748585560`
 - 2026-08-07_banho-de-sol — IG `17871079455631167`
+- 2026-08-10_escolheu-o-canal — IG `17932612077361476`
 
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-10T14:35:04Z schedule success
-2026-08-10T10:03:15Z schedule success
-2026-08-10T05:08:18Z schedule success
+2026-08-11T11:32:06Z schedule success
+2026-08-11T08:31:31Z schedule success
+2026-08-11T04:52:23Z schedule success
 ```
-- Vigia local (Agendador do Windows): próxima execução segunda-feira, 10 de agosto de 2026 18:10:00
+- Vigia local (Agendador do Windows): próxima execução quarta-feira, 12 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
@@ -46,7 +45,7 @@ mudança de status nem publicar.
 - Brutas a processar: 39 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34483
+- Fotos do iPhone sincronizadas (iCloud): 34493
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -57,28 +56,29 @@ mudança de status nem publicar.
 
 ## 📌 RECADOS DELE NO TELEGRAM — responder nesta conversa
 - [ ] **09/08/2026 20:10 UTC** — Pode seguir
+- [ ] **09/08/2026 21:26 UTC** — Aprovado, pode mandar
 
 Depois de responder, apague a linha de `content/recados.md`.
 
 ## Últimas mudanças no projeto
 ```
+4321adb chore: sincroniza estado local do robo [skip ci]
+7e1dfde chore: atualiza estado da fila [skip ci]
+47dd9db chore: atualiza estado da fila [skip ci]
+27f8bce Reel do cha revelacao: 3 rodadas de auditoria ate ficar seguro
+2d4c430 chore: atualiza estado da fila [skip ci]
+7cd186f chore: atualiza estado da fila [skip ci]
+2b3b09a chore: atualiza estado da fila [skip ci]
 3a80dbb 14/08 aprovado, DMs de collab entregues no Telegram, video novo (nova irma)
-3302f66 chore: atualiza estado da fila [skip ci]
-753d58b garimpo de collab e benchmark de Reels por dado (Apify)
-561ce2e passa o bastao: PROXIMA-CONVERSA.md com o garimpo pelo Apify, regra do Apify na skill, DECISOES com a reuniao de 09/08
-e04632b pos-reuniao: OK dele registrado (toca sem custo), SEO ja existia no perfil (conferido na tela), garimpo de collab com 5 alvos e DM pronta mandada no Telegram
-7e2dbb8 reuniao 09/08 com as 4 IAs do hub: 3 decisoes (gancho sonoro+CTA, SEO de descoberta, collab micro), consertos do conselheiro na ata
-6e199d7 chore: atualiza estado da fila [skip ci]
-49cce43 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
 M DECISOES.md
  M ESTADO-ATUAL.md
- M studio/garimpo_rodada.log
-?? studio/roteiros/2026-08_J_ela-achou-que-era-dela-B.json
-?? studio/roteiros/2026-08_J_ela-achou-que-era-dela-FINAL.json
-?? studio/roteiros/2026-08_J_ela-achou-que-era-dela.json
+ M content/queue/2026-08-12_cenoura-filhote/post.json
+ D content/queue/2026-08-12_cenoura-filhote/video-v7.mp4
+ M studio/roteiros/2026-08-12_cabia-na-minha-mao.json
+?? content/queue/2026-08-12_cenoura-filhote/video-v8.mp4
 ```
 
 ## Decisões e contexto
@@ -87,6 +87,31 @@ M DECISOES.md
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
+
+## 🔁 11/08/2026 — ELE TINHA RAZÃO: REPETIÇÃO REAL ACHADA NOS 2 POSTS APROVADOS
+
+Ele pediu: *"Veja se esses posts que está me sugerindo já não tem fotos iguais no
+Instagram da hana."* Abri o perfil de verdade (regra 2c) e achei DUAS repetições:
+
+1. **O Reel de 12/08 (v7, já aprovado) tinha um corte de praia (`IMG_1725.MOV`)
+   do MESMO passeio do post "dia-de-praia" publicado em 03/08** — confirmado
+   comparando frame a frame: mesmo colar de conchas branco, mesma praia, mesma
+   bandeira. Removido o corte.
+2. **O mesmo Reel de 12/08 também repetia com o Reel de 14/08**: os dois usavam
+   quase o mesmo segundo (0,2-2,6 vs 0,5-2,3) do clipe da cama à noite
+   (`11984692...mp4`). Troquei o corte do de 12/08 para 6,0-8,4s do mesmo
+   clipe — mesma cena, sem sobreposição.
+
+**Virou VERSÃO 8** (`content/queue/2026-08-12_cenoura-filhote/video-v8.mp4`),
+6 cortes em 12s, reauditada (sem objeção). Como o `media_file` mudou depois de
+"approved"+"notified", **a trava de fingerprint do próprio robô** (regra 3n-iii,
+`telegram_approve.revalidar_conteudo()`) vai devolver o post pra 'pending'
+sozinha no próximo ciclo e reenviar pra ele aprovar de novo — não precisei
+mexer no status manualmente.
+**Lição:** ele suspeitou por conta própria, sem eu ter avisado — a checagem de
+repetição da regra 2c precisa rodar SEMPRE antes de aprovar, não só quando ele
+perguntar. Os outros posts da fila (17/08 em diante) estão `rejected`, não
+publicam, não precisam da mesma checagem agora.
 
 ## 🎬 10/08/2026 — REEL DO CHÁ REVELAÇÃO: 3 rodadas até ficar seguro, mostrado a ele antes de enviar
 

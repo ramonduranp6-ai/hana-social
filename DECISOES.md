@@ -4,6 +4,31 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## 🔁 11/08/2026 — ELE TINHA RAZÃO: REPETIÇÃO REAL ACHADA NOS 2 POSTS APROVADOS
+
+Ele pediu: *"Veja se esses posts que está me sugerindo já não tem fotos iguais no
+Instagram da hana."* Abri o perfil de verdade (regra 2c) e achei DUAS repetições:
+
+1. **O Reel de 12/08 (v7, já aprovado) tinha um corte de praia (`IMG_1725.MOV`)
+   do MESMO passeio do post "dia-de-praia" publicado em 03/08** — confirmado
+   comparando frame a frame: mesmo colar de conchas branco, mesma praia, mesma
+   bandeira. Removido o corte.
+2. **O mesmo Reel de 12/08 também repetia com o Reel de 14/08**: os dois usavam
+   quase o mesmo segundo (0,2-2,6 vs 0,5-2,3) do clipe da cama à noite
+   (`11984692...mp4`). Troquei o corte do de 12/08 para 6,0-8,4s do mesmo
+   clipe — mesma cena, sem sobreposição.
+
+**Virou VERSÃO 8** (`content/queue/2026-08-12_cenoura-filhote/video-v8.mp4`),
+6 cortes em 12s, reauditada (sem objeção). Como o `media_file` mudou depois de
+"approved"+"notified", **a trava de fingerprint do próprio robô** (regra 3n-iii,
+`telegram_approve.revalidar_conteudo()`) vai devolver o post pra 'pending'
+sozinha no próximo ciclo e reenviar pra ele aprovar de novo — não precisei
+mexer no status manualmente.
+**Lição:** ele suspeitou por conta própria, sem eu ter avisado — a checagem de
+repetição da regra 2c precisa rodar SEMPRE antes de aprovar, não só quando ele
+perguntar. Os outros posts da fila (17/08 em diante) estão `rejected`, não
+publicam, não precisam da mesma checagem agora.
+
 ## 🎬 10/08/2026 — REEL DO CHÁ REVELAÇÃO: 3 rodadas até ficar seguro, mostrado a ele antes de enviar
 
 O vídeo "nova irmã" (ver entrada abaixo) é chá revelação de gravidez, não cachorra
