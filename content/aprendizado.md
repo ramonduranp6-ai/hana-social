@@ -2,6 +2,17 @@
 
 O que a automação já mandou pro Ramón, com data — pra próxima conversa não remontar do zero. Gravado por `publisher/diagnostico.py` e `publisher/leitura_d1.py`, sempre DEPOIS da entrega confirmada (nunca durante `--simular`). Mais recente em cima.
 
+## 2026-08-11 08:31 UTC — Leitura do dia 1 (2026-08-10_escolheu-o-canal)
+
+📈 LEITURA DO DIA 1 — 2026-08-10_escolheu-o-canal (REEL, 22h no ar)
+Alcance 164 · visitas ao perfil ? · seguidores ganhos ?
+Curtidas 8 · comentários 0 · salvos 0 · compartilh. 0
+⚠️ Ainda não há outro Reel medido com 1 dia de vida — sem base de comparação honesta.
+
+Régua: alcance depois do dia 1 não gerou visita nova em nenhum post medido — por isso só este número decide.
+
+---
+
 ## 2026-08-08 08:22 UTC — Leitura do dia 1 (2026-08-07_banho-de-sol)
 
 📈 LEITURA DO DIA 1 — 2026-08-07_banho-de-sol (Foto, 21h no ar)
