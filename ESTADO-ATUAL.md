@@ -1,13 +1,13 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 11/08/2026 08:41. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 12/08/2026 06:57. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
 
 | Quando (UTC) | Post | Tipo | Status |
 |---|---|---|---|
-| 2026-08-12T11:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
+| 2026-08-12T11:00:00Z | 2026-08-12_cenoura-filhote | reel | pending |
 | 2026-08-14T11:00:00Z | 2026-08-14_a-patroa-mimada | reel | rejected |
 | 2026-08-14T11:00:00Z | 2026-08-14_regras-da-casa | reel | approved |
 | 2026-08-17T11:00:00Z | 2026-08-17_golden-hour | reel | rejected |
@@ -25,9 +25,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-11T11:32:06Z schedule success
-2026-08-11T08:31:31Z schedule success
-2026-08-11T04:52:23Z schedule success
+2026-08-12T09:43:22Z schedule success
+2026-08-12T05:18:52Z schedule success
+2026-08-11T23:24:54Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução quarta-feira, 12 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -45,7 +45,7 @@ mudança de status nem publicar.
 - Brutas a processar: 39 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34493
+- Fotos do iPhone sincronizadas (iCloud): 34505
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -62,23 +62,19 @@ Depois de responder, apague a linha de `content/recados.md`.
 
 ## Últimas mudanças no projeto
 ```
+9460bd5 chore: atualiza estado da fila [skip ci]
+bebd617 chore: atualiza estado da fila [skip ci]
+4ee3b49 Corrige repeticao real no Reel de 12/08 (praia e cama ja usadas)
 4321adb chore: sincroniza estado local do robo [skip ci]
 7e1dfde chore: atualiza estado da fila [skip ci]
 47dd9db chore: atualiza estado da fila [skip ci]
 27f8bce Reel do cha revelacao: 3 rodadas de auditoria ate ficar seguro
 2d4c430 chore: atualiza estado da fila [skip ci]
-7cd186f chore: atualiza estado da fila [skip ci]
-2b3b09a chore: atualiza estado da fila [skip ci]
-3a80dbb 14/08 aprovado, DMs de collab entregues no Telegram, video novo (nova irma)
 ```
 Alterações não commitadas:
 ```
-M DECISOES.md
- M ESTADO-ATUAL.md
- M content/queue/2026-08-12_cenoura-filhote/post.json
- D content/queue/2026-08-12_cenoura-filhote/video-v7.mp4
- M studio/roteiros/2026-08-12_cabia-na-minha-mao.json
-?? content/queue/2026-08-12_cenoura-filhote/video-v8.mp4
+M .claude/skills/hana-social/SKILL.md
+ M DECISOES.md
 ```
 
 ## Decisões e contexto
@@ -87,6 +83,22 @@ M DECISOES.md
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
+
+## 🏁 BASTÃO (atualizado em 11/08 09:10)
+· **Onde paramos:** achei e corrigi 2 repetições reais no Reel de 12/08 (v8) e
+  entreguei o Reel do chá revelação (balões) pra revisão dele na conversa.
+· **Esperando ele:**
+  1. Decidir sobre o Reel dos balões — aprovar como está ou pedir refino (ela
+     fica pequena nos trechos de caminhada, apontado na entrega).
+  2. Mandar as 2 DMs de collab do celular (@troy.abully, @zaya.lifestylee) —
+     texto já entregue no Telegram.
+  3. O Reel de 12/08 (v8) volta pro Telegram sozinho pra ele reaprovar — a
+     trava de fingerprint cuida disso, não precisa cobrar.
+  4. Confirmar se quero montar o PILOTO de curtir/comentar (10 likes + 3
+     comentários/dia, termos do conselheiro) — ele já autorizou o "sim", falta
+     o "pode montar".
+· **Próximo passo:** se ele confirmar o piloto de engajamento, construir com
+  os limites do conselheiro. Domingo tem lote automático + reunião semanal.
 
 ## 🔁 11/08/2026 — ELE TINHA RAZÃO: REPETIÇÃO REAL ACHADA NOS 2 POSTS APROVADOS
 

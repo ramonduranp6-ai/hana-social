@@ -135,9 +135,21 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    com o projeto Canecas (leitura e escrita deles). Renomear quebra o parceiro.
    A `07` existe para cumprir o filtro da parceria por construção — foto com o
    Ramón fica fora da pasta que eles leem, não só na regra escrita.
-2c. **Conferir repetição antes de propor.** Abrir o perfil no Chrome, rolar os
-   38 posts e comparar cena por cena — inclusive entre os posts do mesmo lote.
-   Duas fotos do mesmo passeio em dias diferentes contam como repetido.
+2c. **Conferir repetição antes de propor — SEMPRE, mesmo sem ele pedir.**
+   Abrir o perfil no Chrome, rolar os 38 posts e comparar cena por cena —
+   inclusive entre os posts do mesmo lote. **⚠️ CORRIGIDO 11/08/2026:** o
+   critério é a FOTO/enquadramento, não o passeio — ele mesmo corrigiu isso em
+   27/07/2026 (memória `nunca-repetir-passeio`): "proibido é a mesma foto ir ao
+   ar duas vezes; permitido é vários posts do mesmo passeio, com fotos
+   diferentes." Endurecer a regra por conta própria custa conteúdo bom. **O que
+   conta como repetido:** mesmo enquadramento/momento (mesma pose, mesmo corte
+   de câmera), mesmo com arquivo diferente. **O que NÃO conta:** ângulo,
+   distância ou instante diferentes do mesmo passeio.
+   11/08/2026: ele pediu a checagem e eu achei 2 repetições reais num Reel já
+   aprovado (praia do post de 03/08 revisitada num corte de Reel; e um corte de
+   cama quase idêntico entre dois Reels da mesma semana) — eu não tinha
+   checado sozinho antes de aprovar. **Lição que fica: rodar esta checagem
+   antes de qualquer post ir pra aprovação, não só quando ele perguntar.**
 3. **Preservar a cor tri lilac merle**; legenda em PT-BR terminando com
    pergunta; máx. 4 hashtags; posts seg/qua/sex às **11:00Z — 8h da manhã de
    Itajaí** (era 18h até 03/08/2026, quando ele mandou trocar). A hora se conta

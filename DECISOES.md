@@ -4,6 +4,22 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## 🏁 BASTÃO (atualizado em 11/08 09:10)
+· **Onde paramos:** achei e corrigi 2 repetições reais no Reel de 12/08 (v8) e
+  entreguei o Reel do chá revelação (balões) pra revisão dele na conversa.
+· **Esperando ele:**
+  1. Decidir sobre o Reel dos balões — aprovar como está ou pedir refino (ela
+     fica pequena nos trechos de caminhada, apontado na entrega).
+  2. Mandar as 2 DMs de collab do celular (@troy.abully, @zaya.lifestylee) —
+     texto já entregue no Telegram.
+  3. O Reel de 12/08 (v8) volta pro Telegram sozinho pra ele reaprovar — a
+     trava de fingerprint cuida disso, não precisa cobrar.
+  4. Confirmar se quero montar o PILOTO de curtir/comentar (10 likes + 3
+     comentários/dia, termos do conselheiro) — ele já autorizou o "sim", falta
+     o "pode montar".
+· **Próximo passo:** se ele confirmar o piloto de engajamento, construir com
+  os limites do conselheiro. Domingo tem lote automático + reunião semanal.
+
 ## 🔁 11/08/2026 — ELE TINHA RAZÃO: REPETIÇÃO REAL ACHADA NOS 2 POSTS APROVADOS
 
 Ele pediu: *"Veja se esses posts que está me sugerindo já não tem fotos iguais no
