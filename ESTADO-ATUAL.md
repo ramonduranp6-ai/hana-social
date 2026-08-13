@@ -1,13 +1,13 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 13/08/2026 20:37. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 13/08/2026 20:38. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
 
 | Quando (UTC) | Post | Tipo | Status |
 |---|---|---|---|
-| 2026-08-17T11:00:00Z | 2026-08-12_cenoura-filhote | reel | pending |
+| 2026-08-17T11:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
 | 2026-08-14T11:00:00Z | 2026-08-14_a-patroa-mimada | reel | rejected |
 | 2026-08-14T11:00:00Z | 2026-08-14_regras-da-casa | reel | approved |
 | 2026-08-17T11:00:00Z | 2026-08-17_golden-hour | reel | rejected |
@@ -54,23 +54,25 @@ mudança de status nem publicar.
 
 **Ainda não entraram na fila** — falta escolher o trecho e o gancho, que é julgamento, e passar pelo auditor. Fazer na reunião de segunda.
 
+## 📌 RECADOS DELE NO TELEGRAM — responder nesta conversa
+- [ ] **13/08/2026 17:01 UTC** — Aprovado
+
+Depois de responder, apague a linha de `content/recados.md`.
+
 ## Últimas mudanças no projeto
 ```
+6e97c39 Remarca Reel da cenoura de 12/08 para 17/08 (perdeu o slot esperando reaprovacao; para os erros por e-mail)
+0a575a0 chore: atualiza estado da fila [skip ci]
+18b3acb chore: atualiza estado da fila [skip ci]
 577d60c Checkpoint: corrige regra 2c (foto repete, passeio nao) e deixa bastao
 9460bd5 chore: atualiza estado da fila [skip ci]
 bebd617 chore: atualiza estado da fila [skip ci]
 4ee3b49 Corrige repeticao real no Reel de 12/08 (praia e cama ja usadas)
 4321adb chore: sincroniza estado local do robo [skip ci]
-7e1dfde chore: atualiza estado da fila [skip ci]
-47dd9db chore: atualiza estado da fila [skip ci]
-27f8bce Reel do cha revelacao: 3 rodadas de auditoria ate ficar seguro
 ```
 Alterações não commitadas:
 ```
-M ESTADO-ATUAL.md
- M content/queue/2026-08-12_cenoura-filhote/post.json
- M content/recados.md
- M studio/garimpo_rodada.log
+M content/queue/2026-08-12_cenoura-filhote/post.json
 ```
 
 ## Decisões e contexto
