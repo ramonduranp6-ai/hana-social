@@ -1,13 +1,13 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 12/08/2026 06:57. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 13/08/2026 20:37. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
 
 | Quando (UTC) | Post | Tipo | Status |
 |---|---|---|---|
-| 2026-08-12T11:00:00Z | 2026-08-12_cenoura-filhote | reel | pending |
+| 2026-08-17T11:00:00Z | 2026-08-12_cenoura-filhote | reel | pending |
 | 2026-08-14T11:00:00Z | 2026-08-14_a-patroa-mimada | reel | rejected |
 | 2026-08-14T11:00:00Z | 2026-08-14_regras-da-casa | reel | approved |
 | 2026-08-17T11:00:00Z | 2026-08-17_golden-hour | reel | rejected |
@@ -25,11 +25,11 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-12T09:43:22Z schedule success
-2026-08-12T05:18:52Z schedule success
-2026-08-11T23:24:54Z schedule success
+2026-08-13T22:23:24Z schedule failure
+2026-08-13T19:47:22Z schedule failure
+2026-08-13T16:11:27Z schedule failure
 ```
-- Vigia local (Agendador do Windows): próxima execução quarta-feira, 12 de agosto de 2026 18:10:00
+- Vigia local (Agendador do Windows): próxima execução sexta-feira, 14 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
@@ -45,7 +45,7 @@ mudança de status nem publicar.
 - Brutas a processar: 39 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34505
+- Fotos do iPhone sincronizadas (iCloud): 34520
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -54,14 +54,9 @@ mudança de status nem publicar.
 
 **Ainda não entraram na fila** — falta escolher o trecho e o gancho, que é julgamento, e passar pelo auditor. Fazer na reunião de segunda.
 
-## 📌 RECADOS DELE NO TELEGRAM — responder nesta conversa
-- [ ] **09/08/2026 20:10 UTC** — Pode seguir
-- [ ] **09/08/2026 21:26 UTC** — Aprovado, pode mandar
-
-Depois de responder, apague a linha de `content/recados.md`.
-
 ## Últimas mudanças no projeto
 ```
+577d60c Checkpoint: corrige regra 2c (foto repete, passeio nao) e deixa bastao
 9460bd5 chore: atualiza estado da fila [skip ci]
 bebd617 chore: atualiza estado da fila [skip ci]
 4ee3b49 Corrige repeticao real no Reel de 12/08 (praia e cama ja usadas)
@@ -69,12 +64,13 @@ bebd617 chore: atualiza estado da fila [skip ci]
 7e1dfde chore: atualiza estado da fila [skip ci]
 47dd9db chore: atualiza estado da fila [skip ci]
 27f8bce Reel do cha revelacao: 3 rodadas de auditoria ate ficar seguro
-2d4c430 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
-M .claude/skills/hana-social/SKILL.md
- M DECISOES.md
+M ESTADO-ATUAL.md
+ M content/queue/2026-08-12_cenoura-filhote/post.json
+ M content/recados.md
+ M studio/garimpo_rodada.log
 ```
 
 ## Decisões e contexto
