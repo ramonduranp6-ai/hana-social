@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 13/08/2026 22:18. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 13/08/2026 22:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -46,7 +46,7 @@ mudança de status nem publicar.
 - Brutas a processar: 39 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34520
+- Fotos do iPhone sincronizadas (iCloud): 34521
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -57,23 +57,19 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+350d565 Registra Higgsfield assinado (conector carrega na proxima conversa)
+6e0caab Registra estado do Kairogen (free liberado, conta pessoal, 0 credito)
+a623355 Remasteriza som dos reels de 14/08 e 17/08 para -14 LUFS (pedido dele); voltam pra reaprovacao via fingerprint
 2886480 Manual profissional de reels (numeros medidos) + skill v2 + som dos baloes em -14 LUFS
 0115001 Estudo dos virais agora com imagem assistida: plano unico, zero texto, zero efeito; skill atualizada
 2c13fe0 Agenda Reel dos baloes para 19/08 (pendente de aprovacao no Telegram); limpa 3 pastas vazias
 c7edbe2 10 virais medidos (Apify) + skills reel-viral e foto-viral
 10198a1 Recado de 13/08 resolvido (aprovacao do reel da cenoura)
-d8e1c87 Reel da cenoura v8 aprovado por ele no Telegram (texto); ja remarcado para 17/08
-6e97c39 Remarca Reel da cenoura de 12/08 para 17/08 (perdeu o slot esperando reaprovacao; para os erros por e-mail)
-0a575a0 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
-M content/queue/2026-08-12_cenoura-filhote/post.json
- D content/queue/2026-08-12_cenoura-filhote/video-v8.mp4
- M content/queue/2026-08-14_regras-da-casa/post.json
- D content/queue/2026-08-14_regras-da-casa/video-v5.mp4
-?? content/queue/2026-08-12_cenoura-filhote/video-v9-som14.mp4
-?? content/queue/2026-08-14_regras-da-casa/regras-v5-som14.mp4
+M DECISOES.md
+?? PROXIMA-CONVERSA.md
 ```
 
 ## Decisões e contexto
@@ -83,15 +79,41 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
-## 🏁 BASTÃO (atualizado em 13/08 noite)
-· **Onde paramos:** e-mails de erro resolvidos (Reel da cenoura remarcado
-  17/08 e aprovado por ele); 10 virais medidos e skills reel-viral +
-  foto-viral criadas a pedido dele.
+## 🏁 BASTÃO (atualizado em 13/08 noite, PC de casa)
+· **Onde paramos:** e-mails de erro resolvidos; virais ASSISTIDOS e medidos;
+  manual profissional + skills reel-viral/foto-viral criados; som dos 3 Reels
+  da fila remasterizado para -14 LUFS (padrão novo).
 · **Esperando ele:**
-  1. Reel dos balões — aprovar ou pedir refino.
+  1. Reaprovar no Telegram os 3 Reels (14/08 regras, 17/08 cenoura, 19/08
+     balões) — a trava reenvia sozinha, é só clicar.
   2. 2 DMs de collab do celular (@troy.abully, @zaya.lifestylee).
   3. Piloto de curtir/comentar — falta o "pode montar".
-· **Próximo passo:** próxima peça de Reel já nasce pela skill reel-viral.
+  4. Decidir o conflito: regra dos 5 cortes × plano único (dado dos virais).
+  5. Se quiser Kairogen da Hana: autorizar "kairogen-hana" no claude.ai.
+· **Próximo passo (PROXIMA-CONVERSA.md):** testar o conector HIGGSFIELD
+  (assinado por ele 13/08, conta pessoal, autorizado a usar) num efeito de
+  Reel e comparar com Gemini/Flow. Toda peça nova segue o
+  manual-profissional-reels.md.
+
+## 🎬 13/08/2026 — HIGGSFIELD ASSINADO (conta pessoal dele); conector ainda não carrega
+
+Ele: "Assinei o higgsfield na minha conta pessoal, pode usar esse conector."
+Autorização de USO dada por ele. Conferido via ToolSearch nesta conversa:
+**nenhuma ferramenta higgsfield disponível ainda** — conector adicionado no
+meio de uma conversa só carrega na SEGUINTE (mesmo caso do Apify em 09/08).
+Primeiro uso planejado: efeitos/vídeo de qualidade profissional para os Reels
+(entra na escada junto com Gemini/Flow; comparar qualidade antes de adotar).
+
+## 🧰 13/08/2026 — KAIROGEN: ele liberou o GRÁTIS; conta conectada é a PESSOAL com 0 crédito
+
+Ele: "Pode usar o grátis!" — sem assinatura, só o plano free. Conferido pela
+API na hora (regra zero): o conector ativo é a conta PESSOAL dele
+(ramon.d.franca@gmail.com), plano free, **0 crédito disponível** (os "10/dia"
+do site não constam na API). Existe um segundo conector "kairogen-hana" que
+exige autorização dele no claude.ai e nunca foi autenticado.
+Combinado implícito: usar só crédito grátis; upscale Topaz de teste fica
+pendente até ter crédito. Preço conferido no site: free 10/dia · R$ 49 a
+R$ 1.199/mês. Decisão de assinar é dele, e só depois de teste medido.
 
 ## 🎯 13/08/2026 — 10 VIRAIS MEDIDOS + SKILLS reel-viral E foto-viral (pedido dele)
 

@@ -4,15 +4,21 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
-## 🏁 BASTÃO (atualizado em 13/08 noite)
-· **Onde paramos:** e-mails de erro resolvidos (Reel da cenoura remarcado
-  17/08 e aprovado por ele); 10 virais medidos e skills reel-viral +
-  foto-viral criadas a pedido dele.
+## 🏁 BASTÃO (atualizado em 13/08 noite, PC de casa)
+· **Onde paramos:** e-mails de erro resolvidos; virais ASSISTIDOS e medidos;
+  manual profissional + skills reel-viral/foto-viral criados; som dos 3 Reels
+  da fila remasterizado para -14 LUFS (padrão novo).
 · **Esperando ele:**
-  1. Reel dos balões — aprovar ou pedir refino.
+  1. Reaprovar no Telegram os 3 Reels (14/08 regras, 17/08 cenoura, 19/08
+     balões) — a trava reenvia sozinha, é só clicar.
   2. 2 DMs de collab do celular (@troy.abully, @zaya.lifestylee).
   3. Piloto de curtir/comentar — falta o "pode montar".
-· **Próximo passo:** próxima peça de Reel já nasce pela skill reel-viral.
+  4. Decidir o conflito: regra dos 5 cortes × plano único (dado dos virais).
+  5. Se quiser Kairogen da Hana: autorizar "kairogen-hana" no claude.ai.
+· **Próximo passo (PROXIMA-CONVERSA.md):** testar o conector HIGGSFIELD
+  (assinado por ele 13/08, conta pessoal, autorizado a usar) num efeito de
+  Reel e comparar com Gemini/Flow. Toda peça nova segue o
+  manual-profissional-reels.md.
 
 ## 🎬 13/08/2026 — HIGGSFIELD ASSINADO (conta pessoal dele); conector ainda não carrega
 
