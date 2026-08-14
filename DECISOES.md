@@ -14,6 +14,17 @@ Mais recente em cima.
   3. Piloto de curtir/comentar — falta o "pode montar".
 · **Próximo passo:** próxima peça de Reel já nasce pela skill reel-viral.
 
+## 🧰 13/08/2026 — KAIROGEN: ele liberou o GRÁTIS; conta conectada é a PESSOAL com 0 crédito
+
+Ele: "Pode usar o grátis!" — sem assinatura, só o plano free. Conferido pela
+API na hora (regra zero): o conector ativo é a conta PESSOAL dele
+(ramon.d.franca@gmail.com), plano free, **0 crédito disponível** (os "10/dia"
+do site não constam na API). Existe um segundo conector "kairogen-hana" que
+exige autorização dele no claude.ai e nunca foi autenticado.
+Combinado implícito: usar só crédito grátis; upscale Topaz de teste fica
+pendente até ter crédito. Preço conferido no site: free 10/dia · R$ 49 a
+R$ 1.199/mês. Decisão de assinar é dele, e só depois de teste medido.
+
 ## 🎯 13/08/2026 — 10 VIRAIS MEDIDOS + SKILLS reel-viral E foto-viral (pedido dele)
 
 Ele pediu: "Encontre 10 reel virais do nosso nicho... crie uma skill de reel
