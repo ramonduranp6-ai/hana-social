@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 13/08/2026 21:39. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 13/08/2026 21:55. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -12,6 +12,7 @@ decisões, use `DECISOES.md`.
 | 2026-08-14T11:00:00Z | 2026-08-14_regras-da-casa | reel | approved |
 | 2026-08-17T11:00:00Z | 2026-08-17_golden-hour | reel | rejected |
 | 2026-08-19T11:00:00Z | 2026-08-19_a-noite-dela | reel | rejected |
+| 2026-08-19T11:00:00Z | 2026-08-19_baloes-dela | reel | pending |
 | 2026-08-21T11:00:00Z | 2026-08-21_dona-da-casa | reel | rejected |
 | 2026-08-24T11:00:00Z | 2026-08-24_travesseiro | reel | rejected |
 
@@ -56,6 +57,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+c7edbe2 10 virais medidos (Apify) + skills reel-viral e foto-viral
 10198a1 Recado de 13/08 resolvido (aprovacao do reel da cenoura)
 d8e1c87 Reel da cenoura v8 aprovado por ele no Telegram (texto); ja remarcado para 17/08
 6e97c39 Remarca Reel da cenoura de 12/08 para 17/08 (perdeu o slot esperando reaprovacao; para os erros por e-mail)
@@ -63,14 +65,10 @@ d8e1c87 Reel da cenoura v8 aprovado por ele no Telegram (texto); ja remarcado pa
 18b3acb chore: atualiza estado da fila [skip ci]
 577d60c Checkpoint: corrige regra 2c (foto repete, passeio nao) e deixa bastao
 9460bd5 chore: atualiza estado da fila [skip ci]
-bebd617 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
-M DECISOES.md
-?? .claude/skills/foto-viral/
-?? .claude/skills/reel-viral/
-?? estrategia/virais-medidos-2026-08-13.md
+?? content/queue/2026-08-19_baloes-dela/
 ```
 
 ## Decisões e contexto
