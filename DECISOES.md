@@ -14,6 +14,15 @@ Mais recente em cima.
   3. Piloto de curtir/comentar — falta o "pode montar".
 · **Próximo passo:** próxima peça de Reel já nasce pela skill reel-viral.
 
+## 🎬 13/08/2026 — HIGGSFIELD ASSINADO (conta pessoal dele); conector ainda não carrega
+
+Ele: "Assinei o higgsfield na minha conta pessoal, pode usar esse conector."
+Autorização de USO dada por ele. Conferido via ToolSearch nesta conversa:
+**nenhuma ferramenta higgsfield disponível ainda** — conector adicionado no
+meio de uma conversa só carrega na SEGUINTE (mesmo caso do Apify em 09/08).
+Primeiro uso planejado: efeitos/vídeo de qualidade profissional para os Reels
+(entra na escada junto com Gemini/Flow; comparar qualidade antes de adotar).
+
 ## 🧰 13/08/2026 — KAIROGEN: ele liberou o GRÁTIS; conta conectada é a PESSOAL com 0 crédito
 
 Ele: "Pode usar o grátis!" — sem assinatura, só o plano free. Conferido pela
