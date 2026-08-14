@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 13/08/2026 21:55. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 13/08/2026 22:10. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -57,6 +57,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+2c13fe0 Agenda Reel dos baloes para 19/08 (pendente de aprovacao no Telegram); limpa 3 pastas vazias
 c7edbe2 10 virais medidos (Apify) + skills reel-viral e foto-viral
 10198a1 Recado de 13/08 resolvido (aprovacao do reel da cenoura)
 d8e1c87 Reel da cenoura v8 aprovado por ele no Telegram (texto); ja remarcado para 17/08
@@ -64,11 +65,11 @@ d8e1c87 Reel da cenoura v8 aprovado por ele no Telegram (texto); ja remarcado pa
 0a575a0 chore: atualiza estado da fila [skip ci]
 18b3acb chore: atualiza estado da fila [skip ci]
 577d60c Checkpoint: corrige regra 2c (foto repete, passeio nao) e deixa bastao
-9460bd5 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
-?? content/queue/2026-08-19_baloes-dela/
+M .claude/skills/reel-viral/SKILL.md
+ M estrategia/virais-medidos-2026-08-13.md
 ```
 
 ## Decisões e contexto

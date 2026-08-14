@@ -11,6 +11,20 @@ milhões de views, números da API — reler quando for atualizar esta skill).
 mínimo 5 cortes/trilha/história, 3e música combina com a cena, 3f vetos,
 2c repetição): ela diz O QUE fazer; a hana-social diz o que é PROIBIDO.
 
+## ⚡ O que os 7 maiores mostraram QUANDO ASSISTIDOS (13/08, ffmpeg + frames)
+
+- **Plano único vence:** 5 de 7 virais não têm UM corte. A graça está na CENA
+  encenada (props, câmera no tripé posicionada antes, esperar o momento) —
+  não na edição. ⚠️ Conflita com a regra 3n-i (mín. 5 cortes); enquanto ele
+  não decidir, a 3n-i vale para montagem de acervo e o plano único vale para
+  CENA NOVA encenada forte.
+- **ZERO texto na tela nos 7.** O gancho é visual: a situação se entende em
+  1 segundo sem ler. Texto só quando a cena sozinha não conta a história.
+- **Efeitos: nenhum.** Sem transição, filtro ou zoom artificial. Luz natural
+  boa (golden hour) vale mais que qualquer efeito.
+- **Câmera:** tripé fixo (prank, estátua) ou mão acompanhando (POV). Fecha no
+  ROSTO no desfecho (o de 4,8M termina em close do focinho sorrindo).
+
 ## O padrão dos virais (medido, não opinião)
 
 1. **UMA piada só.** Nenhum viral tem duas ideias. Se o roteiro precisa de

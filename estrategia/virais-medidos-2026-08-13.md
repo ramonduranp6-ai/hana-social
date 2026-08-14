@@ -46,3 +46,35 @@ Confirma o placar da própria Hana (4 fotos → 0 seguidor) e a regra 3l.
 O que as melhores fotos têm: carrossel (Sidecar domina), 1ª foto com o cachorro
 encarando a câmera, legenda de personagem ("Today, I'm a cool girl too").
 **Uso legítimo hoje: capa de Reel e carrossel de apoio — não post de foto solta.**
+
+
+## ADENDO 13/08 (noite) — assisti os 7 maiores; montagem, texto e efeito MEDIDOS
+
+Ele cobrou ("vc não estudou a imagem, música, efeitos?") e tinha razão: o estudo
+acima era só metadado. Baixei os 7 maiores (30M, 6,3M, 4,8M, 1,2M, 1,0M, 945k,
+670k) e medi com ffmpeg + olhando frame a frame:
+
+| viral | cortes reais | texto na tela | efeito visual | câmera |
+|---|---|---|---|---|
+| 30M | 0 (plano único) | NENHUM | nenhum | mão, seguindo o cão |
+| 6,3M | 0 | nenhum visto | nenhum | — |
+| 4,8M | 2 (reenquadres) | NENHUM | zoom de reenquadre só | mão, fecha no rosto no fim |
+| 1,2M | 3 | nenhum | nenhum | — |
+| 1,0M prank | 0 (TRIPÉ fixo) | NENHUM | confete no estouro | parada o tempo todo |
+| 945k estátua | 0 | NENHUM | nenhum | orbita devagar, golden hour |
+| 670k malandro | 5 (todos nos últimos 2s) | NENHUM | nenhum | mão, estilo flagrante |
+
+**O que isso muda (e contradiz o que eu acreditava):**
+1. **Viral de cachorro é PLANO ÚNICO com cena forte** — 5 de 7 não têm UM corte.
+   A graça está na CENA (encenação/flagrante), não na edição. O prank de 1,0M é
+   uma câmera parada num tripé e ponto.
+2. **ZERO texto na tela nos 7.** Nenhum gancho escrito. O gancho é VISUAL: a
+   situação se entende em 1 segundo sem ler nada (cão imóvel na mesa; chihuahua
+   com balão do lado do grandão dormindo).
+3. **Efeitos: nada.** Sem transição, sem filtro, sem zoom artificial. Luz
+   natural boa (golden hour no de 945k) vale mais que efeito.
+4. **A produção está na ENCENAÇÃO, não na pós:** props (balão, mesa de banho),
+   cenário limpo, câmera posicionada ANTES, e esperar o momento.
+⚠️ Conflito declarado com a regra 3n-i (mínimo 5 cortes, ordem dele de
+02-03/08): a regra nasceu de material fraco que precisava de montagem para ter
+graça. O dado diz que cena forte dispensa corte. **Quem resolve a regra é ele.**
