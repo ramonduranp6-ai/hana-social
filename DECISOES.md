@@ -4,21 +4,32 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
-## 🏁 BASTÃO (atualizado em 11/08 09:10)
-· **Onde paramos:** achei e corrigi 2 repetições reais no Reel de 12/08 (v8) e
-  entreguei o Reel do chá revelação (balões) pra revisão dele na conversa.
+## 🏁 BASTÃO (atualizado em 13/08 noite)
+· **Onde paramos:** e-mails de erro resolvidos (Reel da cenoura remarcado
+  17/08 e aprovado por ele); 10 virais medidos e skills reel-viral +
+  foto-viral criadas a pedido dele.
 · **Esperando ele:**
-  1. Decidir sobre o Reel dos balões — aprovar como está ou pedir refino (ela
-     fica pequena nos trechos de caminhada, apontado na entrega).
-  2. Mandar as 2 DMs de collab do celular (@troy.abully, @zaya.lifestylee) —
-     texto já entregue no Telegram.
-  3. O Reel de 12/08 (v8) volta pro Telegram sozinho pra ele reaprovar — a
-     trava de fingerprint cuida disso, não precisa cobrar.
-  4. Confirmar se quero montar o PILOTO de curtir/comentar (10 likes + 3
-     comentários/dia, termos do conselheiro) — ele já autorizou o "sim", falta
-     o "pode montar".
-· **Próximo passo:** se ele confirmar o piloto de engajamento, construir com
-  os limites do conselheiro. Domingo tem lote automático + reunião semanal.
+  1. Reel dos balões — aprovar ou pedir refino.
+  2. 2 DMs de collab do celular (@troy.abully, @zaya.lifestylee).
+  3. Piloto de curtir/comentar — falta o "pode montar".
+· **Próximo passo:** próxima peça de Reel já nasce pela skill reel-viral.
+
+## 🎯 13/08/2026 — 10 VIRAIS MEDIDOS + SKILLS reel-viral E foto-viral (pedido dele)
+
+Ele pediu: "Encontre 10 reel virais do nosso nicho... crie uma skill de reel
+virais... faça isso tb para fotos." Feito por dado (Apify, ~US$ 0,15, 24 Reels
++ 113 fotos com números reais da API):
+- **Relatório:** `estrategia/virais-medidos-2026-08-13.md` — top 10 de 670 mil
+  a 30 milhões de views. Padrão: UMA piada, cachorro-personagem com atitude,
+  6-18s, conflito dono×cão em que o cão vence, áudio original (7/10), legenda
+  que pede marcação (share é a métrica).
+- **Skills novas:** `.claude/skills/reel-viral/` (prompt de produção +
+  checklist de reprovação) e `.claude/skills/foto-viral/` (capa/carrossel;
+  respeita a regra 3l — foto solta continua fora do ar).
+- **Achado das fotos:** maior foto do nicho = 435 curtidas vs 30M do maior
+  Reel. Foto não viraliza no nicho; confirma o placar da Hana e a regra 3l.
+- O 3º maior viral (4,8M) é um pet reclamando da dona — o posicionamento
+  "patroa mimada" É o formato que viraliza. Manter.
 
 ## 🔁 11/08/2026 — ELE TINHA RAZÃO: REPETIÇÃO REAL ACHADA NOS 2 POSTS APROVADOS
 
