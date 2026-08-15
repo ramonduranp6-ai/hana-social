@@ -46,6 +46,7 @@ Formato do roteiro (ver exemplo em `studio/roteiros/`):
 
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -185,6 +186,30 @@ def _filtro_audio(corte):
     partes.append("dynaudnorm=f=250:g=15")
     partes.append("aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=stereo")
     return ",".join(partes)
+
+
+def _masterizar_audio(origem, destino):
+    """Masteriza o áudio pro padrão -14 LUFS / -1 dBTP em DUAS passadas.
+
+    Achado pela auditoria em 14/08/2026: `loudnorm` numa passada só (o jeito
+    que o `reel_ritmado.py` já fazia) erra o alvo em peças curtas (~6s) — o
+    portão do EBU R128 não estabiliza. Testado e comprovado: alimentar a 2ª
+    passada com os números que a 1ª mediu (`measured_*`) acerta o alvo exato.
+    Vídeo nunca é tocado (`-c:v copy` nas duas passadas).
+    """
+    r = subprocess.run(
+        [ff(), "-i", origem, "-af",
+         "loudnorm=I=-14:TP=-1:LRA=11:print_format=json", "-f", "null", "-"],
+        capture_output=True, text=True, errors="replace")
+    m = re.search(r"\{[^{}]*\"input_i\"[^{}]*\}", r.stderr)
+    if not m:
+        raise RuntimeError("loudnorm nao devolveu medicao: %s" % r.stderr[-800:])
+    med = json.loads(m.group(0))
+    filtro = ("loudnorm=I=-14:TP=-1:LRA=11:"
+              "measured_I=%s:measured_TP=%s:measured_LRA=%s:measured_thresh=%s"
+              % (med["input_i"], med["input_tp"], med["input_lra"], med["input_thresh"]))
+    _rodar([ff(), "-y", "-i", origem, "-af", filtro,
+            "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", destino])
 
 
 FOTO_EXT = (".jpg", ".jpeg", ".png", ".webp")
@@ -426,6 +451,16 @@ def montar(roteiro, saida):
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
                     "-t", "%.3f" % t, com_musica])
             emendado = com_musica
+
+        # MASTERIZAÇÃO DE SOM. Achado pela auditoria em 14/08/2026: este script
+        # nivelava volume ENTRE cortes (`dynaudnorm`) mas nunca masterizava o
+        # volume FINAL — toda peça saía fora do padrão -14 LUFS/-1 dBTP do
+        # manual profissional (o `reel_ritmado.py` já tinha um passo simples,
+        # mas de 1 passada só, que a mesma auditoria mediu impreciso em peças
+        # curtas). `_masterizar_audio` faz em 2 passadas, testado e comprovado.
+        masterizado = os.path.join(tmp, "masterizado.mp4")
+        _masterizar_audio(emendado, masterizado)
+        emendado = masterizado
 
         if not textos:
             shutil.copy2(emendado, saida)

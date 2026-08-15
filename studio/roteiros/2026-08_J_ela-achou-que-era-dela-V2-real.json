@@ -1,0 +1,38 @@
+{
+  "titulo": "HER PARTY (V2 REAL — mesma auditoria de rosto/fumaça da FINAL, agora MONTADA de verdade, e sem cartelas de texto)",
+  "_origem_desta_versao": "A FINAL.json tinha a auditoria de rosto/fumaca inteira feita e nunca foi rodada no montar_reel.py -- o arquivo que foi pra fila era so o corte cru (mesmos cortes de tempo, SEM aproximar/foco_y/movimento aplicados). O Ramao viu a Hana pequena e longe, sem edicao nenhuma, e tinha razao. Esta versao roda os MESMOS 4 cortes, com os MESMOS aproximar/foco_y/movimento ja auditados quadro a quadro na FINAL.json (ver aquele arquivo para a prova de ausencia de rosto de terceiro e de fumaca de cha revelacao). Unica mudanca de conteudo: ZERO cartelas de texto na tela (eram 4), porque o manual-profissional-reels.md (medido em 7 virais reais do nicho em 13/08, depois desta FINAL.json ter sido escrita em 10/08) mede texto=ZERO em 7 de 7 virais. A legenda (1a pessoa da patroa) ja completa a mesma piada das 4 cartelas.",
+  "origem": "Bruto unico: hana_noticia_nova_irma.mov. TRAVA EDITORIAL mantida: nada de anunciar ou confirmar a noticia da familia — nenhum texto, nenhuma legenda no video, nenhum som de cena, nenhuma nuvem rosa.",
+
+  "trilha": "content/trilhas/01-fofo-ukulele.mp3",
+  "inicio_trilha": 5.72,
+  "abafar_ate": 0,
+  "volume_trilha": 0.95,
+
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
+      "de": 6.05, "ate": 6.95, "movimento": "punch", "forca": 0.06,
+      "aproximar": 1.5, "foco_y": 1.0, "mudo": true
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
+      "de": 0.40, "ate": 3.40, "movimento": "acelerado", "fator": 1.25,
+      "aproximar": 2.0, "foco_y": 0.90, "mudo": true
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
+      "de": 13.60, "ate": 15.50, "movimento": "seco",
+      "aproximar": 2.4, "foco_y": 1.0, "mudo": true
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
+      "de": 3.40, "ate": 5.00, "movimento": "acelerado", "fator": 0.80,
+      "aproximar": 2.2, "foco_y": 0.92, "mudo": true
+    }
+  ],
+
+  "textos": [],
+
+  "_nota_textos": "Zero cartelas de proposito (ver _origem_desta_versao). Se o Ramao preferir o arco de 4 frases de volta, a FINAL.json tem elas prontas e testadas.",
+  "_custo": "R$ 0,00 — mesma trilha ja paga (Lyria 3), nenhuma ferramenta nova."
+}

@@ -4,21 +4,167 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
-## 🏁 BASTÃO (atualizado em 13/08 noite, PC de casa)
-· **Onde paramos:** e-mails de erro resolvidos; virais ASSISTIDOS e medidos;
-  manual profissional + skills reel-viral/foto-viral criados; som dos 3 Reels
-  da fila remasterizado para -14 LUFS (padrão novo).
-· **Esperando ele:**
-  1. Reaprovar no Telegram os 3 Reels (14/08 regras, 17/08 cenoura, 19/08
+## 🎬 14/08/2026 (manhã) — REFEITO O REEL DOS BALÕES: achado o bug real, corrigido o que dá, e um teto de qualidade que não dá
+
+Ele: *"toda vez que peço para vc alterar vc apenas trocar a descrição... não vejo
+edição de imagens, não vejo vc colocar músicas legais... muito ruim."* Ordem:
+*"Faça e audite. Veja se está no padrão de vídeo viral para o nosso nicho."*
+
+**O bug real, achado antes de mexer em qualquer coisa:** existia um roteiro
+(`studio/roteiros/2026-08_J_ela-achou-que-era-dela-FINAL.json`) com edição
+cuidadosa auditada quadro a quadro em 10/08 (corte, zoom, crop, tudo verificado
+contra rosto de terceiro) — mas o vídeo que foi pra fila **nunca tinha rodado
+esse roteiro pelo `montar_reel.py`**. Era o corte cru, com só o áudio tratado.
+Por isso parecia amador: era mesmo, o trabalho de edição nunca foi construído,
+só planejado no papel.
+
+**O que fiz:** rodei o roteiro de verdade (`V2-real.json`, mesmos cortes/crops
+já auditados, zero cartelas de texto — o manual mede texto=zero em 7/7 virais
+reais, contra as 4 cartelas que existiam). Gerei `baloes-dela-v4-editado.mp4`.
+
+**Auditoria independente (diretor-reels, `estrategia/auditoria-baloes-v4-2026-08-14.md`),
+reconferindo rosto de terceiro por 3 métodos próprios, não aceitando o que eu
+tinha medido:**
+- **Privacidade: PASSA.** Nenhum rosto de terceiro, nenhuma fumaça de chá
+  revelação, zero texto — conferido nos 216 quadros.
+- **Achei um erro meu no áudio**, que o auditor pegou: eu tinha lido os campos
+  de ESTIMATIVA do `loudnorm` como se fossem a medida real. O valor real era
+  −12,03 LUFS/pico −0,17 dBTP (fora do alvo). **Corrigi de verdade** com ganho
+  medido + conferência por duas ferramentas independentes: agora −14,6/−15,2
+  LUFS, pico −1,5 dBTP — dentro do padrão.
+- **Achado que ninguém tinha medido: o material bruto é 1024x576 deitado.**
+  Depois do crop 9:16 + zoom só sobram 135 a 216 pixels reais de largura (os
+  virais medidos têm 720). A nitidez caiu 85% (149,5 → 23,1) por causa do zoom.
+  **Mais zoom PIORA — não existe zoom a mais pra dar.** É limite do material
+  filmado (celular, deitado, ela longe), não falta de trabalho.
+- **1º segundo sem rosto dela** (abre de costas) — reprova o checklist, sem
+  conserto possível nesta peça.
+- **Veredito: NÃO está no padrão viral medido.** Passa privacidade e luz;
+  reprova em áudio (já corrigido), gancho sem rosto e detalhe real da imagem.
+
+**Decisão que só é dele:** (A) subir mesmo assim como peça de acervo, sabendo
+do teto de qualidade medido; ou (B) engavetar e usar o esforço numa cena
+filmada de propósito pelo manual (câmera fixa, luz única, rosto no 1º segundo —
+é de lá que sai viral, 5 dos 7 medidos são plano único). Aviso à parte, também
+dele decidir: mesmo sem fumaça/texto, balão rosa + piquenique + ursinho + casal
+pode ler como chá revelação pro público americano — é sigilo de família.
+
+**Lição de processo:** o `post.json` chegou a ter escrito "diretor-reels
+auditou este V4" ANTES da auditoria existir — o auditor pegou isso também.
+Corrigido. Mesma classe de erro que ele já cobrou antes: afirmar antes de
+verificar.
+
+## 🎬 14/08/2026 (tarde) — REEL DA CHEGADA DA ELOEN: 2 travas levantadas por ele, peça nova, auditada e corrigida
+
+Ele: *"Quero que vc faça um reels decente para a publicação da chegada da Eloen,
+irmã da hana"*. Eloen é a bebê humana do chá revelação (mesmo material do Reel
+dos balões auditado hoje de manhã). Ele levantou explicitamente as duas travas
+que valiam desde 09/08: **(1) pode anunciar a gravidez** e **(2) rosto de
+família pode aparecer** ("podemos aparecer sim").
+
+**O que foi feito:** montado `content/queue/2026-08-K_chegada-eloen/chegada-eloen-v3.mp4`
+(5,98s) a partir do mesmo bruto, agora com 4 cortes reais do evento: ela
+chegando com os balões, a explosão de fumaça (antes proibida), a reação da
+família com ela no meio, e o fecho com ela em pé junto dos dois — sempre
+terminando nela, nunca só no casal (regra 1 do projeto).
+
+**2 rodadas de auditoria independente (diretor-reels), 1 achado grave de
+processo no meio:**
+- 1ª rodada (v2): reprovado em 3 pontos — rosto da Hana ausente no 1º segundo
+  e no fecho, zoom artificial proibido no gancho, som fora do padrão (pico
+  estourava o teto). Todos corrigidos: troquei os cortes por janelas onde o
+  rosto dela aparece (reconferido com grab isolado antes de trocar), tirei o
+  zoom artificial, e **corrigi o `studio/montar_reel.py` para sempre
+  masterizar o áudio em 2 passadas** — ele nunca tinha esse passo, então TODA
+  peça já montada por ele nasceu fora do padrão de som do manual. Vale pra
+  peças futuras, não só esta.
+- Achado de processo: uma varredura rápida por "-ss + -to" deu frames com
+  timestamp ERRADO (confirmado contra grab isolado) — foi por isso que a
+  primeira versão (v1) tinha o gancho e o fecho no lugar errado. Lição:
+  para escolher corte, usar sempre grab isolado (`-ss` sozinho), nunca a
+  varredura por intervalo.
+- Medido na peça final: brilho variação 21,13 (teto 30) · som −15,0 LUFS pico
+  −1,0 dBTP (medido em loop de 24x pra tirar viés de clipe curto, método que a
+  auditoria validou) · 1080x1920 30fps · zero texto · som real da cena (sem
+  risco de direito autoral, pode publicar pelo robô).
+- Achado sem conserto: o bruto é só 576x1024 de detalhe real — a imagem final
+  é ampliada, por isso fica mais macia que 1080p nativo. Não é defeito da
+  montagem, é o material que existe.
+
+**Decisão dele, não tomada sozinha:** sem data de publicação (anúncio de bebê
+combina com a família, não é calendário de conteúdo) e sem decidir se estica
+a duração (6s vs 9-12s, sugestão do auditor). Esperando ele ver e aprovar.
+
+## 🏁 BASTÃO (atualizado em 14/08 madrugada, PC de casa)
+· **Onde paramos:** Higgsfield testado de verdade (não só assinado) — 1 vídeo
+  real gerado a partir de foto real da Hana, medido com ffprobe/signalstats,
+  estudo completo do diretor-reels em `estrategia/estudo-higgsfield-2026-08-14.md`.
+· **Esperando ele — decidir a PROPOSTA do diretor-reels (nada foi adotado
+  sozinho):**
+  1. Adotar de graça as 4 técnicas de MÉTODO do Higgsfield (preflight de custo,
+     motor declarado por encomenda, gerar em lote e escolher a melhor,
+     encomenda versionada) — custo zero, não depende da assinatura.
+  2. Regra nova de captura: foto que vai virar vídeo sai já em 1080x1920.
+  3. Higgsfield vira motor de EXCEÇÃO (trecho curto de 2-3s dentro de peça de
+     acervo), nunca ferramenta de rotina; os 62 presets prontos ficam
+     PROIBIDOS (feitos pra selfie humana, contradizem "zero efeito" do manual).
+  4. Não gastar os 51 créditos do `reframe` — 6,8x mais caro que regerar do
+     zero (7,5) a partir de uma foto já 9:16.
+  5. Se ele quiser comparação de verdade com Gemini/Flow: falta o OK pra gastar
+     mais ~7,5 créditos testando a MESMA cena nos dois.
+  6. Reaprovar no Telegram os 3 Reels (14/08 regras, 17/08 cenoura, 19/08
      balões) — a trava reenvia sozinha, é só clicar.
-  2. 2 DMs de collab do celular (@troy.abully, @zaya.lifestylee).
-  3. Piloto de curtir/comentar — falta o "pode montar".
-  4. Decidir o conflito: regra dos 5 cortes × plano único (dado dos virais).
-  5. Se quiser Kairogen da Hana: autorizar "kairogen-hana" no claude.ai.
-· **Próximo passo (PROXIMA-CONVERSA.md):** testar o conector HIGGSFIELD
-  (assinado por ele 13/08, conta pessoal, autorizado a usar) num efeito de
-  Reel e comparar com Gemini/Flow. Toda peça nova segue o
-  manual-profissional-reels.md.
+  7. 2 DMs de collab do celular (@troy.abully, @zaya.lifestylee).
+  8. Piloto de curtir/comentar — falta o "pode montar".
+  9. Decidir o conflito: regra dos 5 cortes × plano único (dado dos virais).
+  10. Se quiser Kairogen da Hana: autorizar "kairogen-hana" no claude.ai.
+· **Próximo passo:** esperar a decisão dele sobre a proposta acima. Toda peça
+  nova continua seguindo o manual-profissional-reels.md.
+
+## 🎬 14/08/2026 — TESTE REAL DO HIGGSFIELD: motor bom, catálogo de efeitos reprovado
+
+Ordem dele: *"testei o higgsfield... traga o resultado para aprovar... peça
+para o diretor de reels aprender todas as técnicas... no futuro quero que vcs
+criem vídeos e fotos como o higgsfield, mesmo padrão."*
+
+**O que foi feito:** subi a foto real `post_oncinha.jpg` (Hana de barriga pra
+cima, roupinha de oncinha) como referência e gerei 1 vídeo com `kling3_0`
+(motor cru, sem preset), 5s, 9:16 pedido, custo real 7,5 créditos (saldo caiu
+110→102,5, conferido). Resultado em
+`Fotos da Hana/06 - videos e trilhas/testes-higgsfield/2026-08-14_teste-higgsfield-kling3.mp4`
+— **não está na pasta de aprovar**, porque não é candidato a publicar (ver
+motivo abaixo). diretor-reels auditou com o mesmo `signalstats`/`ffprobe` do
+manual e escreveu o estudo completo.
+
+**Achados medidos, não opinião:**
+- Identidade da Hana mantida (cor, rugas, roupinha) até ~3s; depois disso o
+  detalhe derrete — patas perdem os dedos, estampa embaralha, rugas somem —
+  bem na hora do desfecho, que é onde o manual exige mais qualidade.
+- Luz do clipe gerado: variação de brilho **4,27**, melhor que os 7 virais reais
+  (10-25) e muito melhor que nossas 3 peças da fila (80-196). Prova que plano
+  único sintético resolve o maior defeito medido do projeto.
+- Proporção pedida (9:16) foi IGNORADA — o modelo copia a proporção da foto de
+  entrada. A foto usada era 4:5 e não tem conserto bom pra 9:16 (cortar decepa
+  as patas dela); consertar na ferramenta (`reframe`) custaria 51 créditos.
+- Vídeo sai mudo — sem uso em peça onde o som da cena é o protagonista (7 dos
+  10 virais).
+- Catálogo de 62 presets prontos do Higgsfield: **reprovados em bloco** — são
+  efeito de selfie humana (Sticker Peel, Action Figure, Kung Fu Hit...), e a
+  régua do manual (medida nos virais reais) diz efeito/transição/filtro = zero.
+
+**Proposta do diretor-reels (não é decisão, esperando ele):** ver BASTÃO acima,
+itens 1-5. Nada foi publicado nem adotado como padrão oficial sozinho.
+
+**🔴 CORREÇÃO (mesma sessão): o prompt do teste inventou um rabo que a Hana não
+tem.** Ele viu o vídeo e cortou na hora: *"Não gostei! Hana não tem rabo."* Eu
+escrevi no prompt "tail gives one lazy wag" sem checar antes — não é traço
+sutil de raça, é um erro de anatomia que ele pegou na hora, eu não. **Não é só
+"o detalhe derrete" (§5 do estudo) — é fabricação de uma parte do corpo que não
+existe**, o tipo de erro que um seguidor identifica na hora e vira vergonha
+pública, não só defeito técnico. Reforça ainda mais o veredito do §8: este
+motor não pode encenar nada que não seja checado parte por parte contra o
+animal real antes do prompt, não só depois no resultado. Fato registrado em
+memória para nunca mais entrar num prompt de geração da Hana.
 
 ## 🎬 13/08/2026 — HIGGSFIELD ASSINADO (conta pessoal dele); conector ainda não carrega
 

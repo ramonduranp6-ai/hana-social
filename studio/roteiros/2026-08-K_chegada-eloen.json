@@ -1,0 +1,38 @@
+{
+  "titulo": "A CHEGADA DA ELOEN (anuncio autorizado por ele em 14/08/2026)",
+  "historia": "Hana leva os baloes ate a familia sem saber que a festa e dela tambem: a fumaca estoura, a mae leva as maos ao rosto, o pai sorri, todo mundo comemora com a Hana no meio. Fecha nela trazendo os baloes de novo, de frente pra camera -- comeca e termina nela.",
+  "origem": "Bruto: Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov (30,03s, 1024x576 deitado -> 576x1024 vertical apos autorotate). Autorizado por ele em 14/08: 'pode aparecer sim' (rosto de familia) e liberado usar a fumaca/revelacao -- as duas travas que proibiam esse material antes.",
+  "_nota_producao": "Zoom BEM mais leve que a peca anterior (aproximar 1.15-1.3 contra 1.5-2.4 antes), porque agora nao preciso empurrar rosto pra fora do quadro -- a auditoria anterior mediu que zoom forte derrete a nitidez (85% de perda). Sem horizontal reposicionavel neste arquivo (o crop de aproximar sempre centra em x; so foco_y move verticalmente) -- por isso escolhi janelas de tempo onde o assunto ja fica perto do centro. SOM REAL DA CENA, sem mudo -- antes era proibido por risco de vazar a noticia falada; agora a noticia pode ser dada.",
+
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
+      "de": 5.55, "ate": 6.45, "movimento": "seco",
+      "aproximar": 1.3, "foco_y": 1.0,
+      "_nota": "GANCHO, corrigido apos auditoria de 14/08. A janela original (6.05-6.95) cai quase toda depois dela ja ter virado de costas -- reprova de rosto ausente no 1o segundo. Nesta janela ela chega perto dos avos, boca aberta, de lado/quase de frente, crescendo no quadro -- conferido com grab isolado antes de trocar. Tirei o 'punch' (zoom artificial, proibido pelo manual) -- ela ja cresce no quadro por conta propria."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
+      "de": 7.30, "ate": 9.00, "movimento": "seco",
+      "aproximar": 1.0,
+      "_nota": "A REVELACAO. Explosao de fumaca rosa, plano aberto -- sem crop pra nao perder a escala do momento. Antes proibido (vazamento de noticia); agora e o clímax."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
+      "de": 10.60, "ate": 13.00, "movimento": "seco",
+      "aproximar": 1.3, "foco_y": 0.78,
+      "_nota": "REACAO. A mae com as maos no rosto, o pai por perto, a Hana no colo/no meio dos dois. Familia comemorando junto com ela."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
+      "de": 16.60, "ate": 17.50, "movimento": "seco",
+      "aproximar": 1.2, "foco_y": 0.75,
+      "_nota": "FECHO, corrigido apos auditoria de 14/08. Janela anterior (17.80-18.90) mostrava ela de cabeca baixa, de cima/de tras. Nesta janela ela esta EM PE no cobertor, cabeca erguida, de frente, bem maior no quadro, entre os dois -- termina nela (regra 1). Confirmado que de 19.4s em diante no bruto ela some e so sobra o casal; esta janela fica bem antes disso."
+    }
+  ],
+
+  "textos": [],
+  "_nota_textos": "Zero cartelas -- manual mede texto=zero em 7/7 virais reais. A legenda (1a pessoa da Hana) e que anuncia.",
+  "_nota_som": "SEM mudo em nenhum corte -- som real da cena (vozes, reacao, o estouro da fumaca). E o oposto da peca anterior de proposito: la o som era risco, aqui e a prova de autenticidade.",
+  "_custo": "R$ 0,00 -- material ja existente, nenhuma ferramenta paga."
+}
