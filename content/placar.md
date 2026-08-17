@@ -1,40 +1,39 @@
 # Placar da Hana — o que cada post rendeu
 
 Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
-Última coleta: **2026-08-16** · fonte: API do Instagram.
+Última coleta: **2026-08-17** · fonte: API do Instagram.
 
 ## Seguidores
 
-**331** (+0 desde 2026-08-15)
+**331** (+0 desde 2026-08-16)
 
 ## Post a post (mais alcance em cima)
 
 | Post | Tipo | alcance | curtidas | comentários | salvos | compartilh. | views | seguidores ganhos |
 |---|---|---|---|---|---|---|---|---|
-| 2026-08-10_escolheu-o-canal | Reel | 181 | 10 | 0 | 0 | 0 | 266 | — |
-| 2026-07-23_olhar-no-tapete | Foto | 58 | 14 | 6 | 0 | 0 | — | 0 |
-| 2026-07-31_roda-gigante | Foto | 58 | 11 | 0 | 0 | 0 | — | 0 |
-| 2026-07-22_bar-hana | Foto | 52 | 10 | 0 | 0 | 0 | — | 0 |
+| 2026-08-10_escolheu-o-canal | Reel | 182 | 10 | 0 | 0 | 0 | 268 | — |
+| 2026-07-23_olhar-no-tapete | Foto | 59 | 14 | 6 | 0 | 0 | — | 0 |
+| 2026-07-31_roda-gigante | Foto | 59 | 11 | 0 | 0 | 0 | — | 0 |
+| 2026-07-22_bar-hana | Foto | 53 | 10 | 0 | 0 | 0 | — | 0 |
 | 2026-07-29_lilac-ao-sol | Foto | 51 | 12 | 1 | 0 | 0 | — | 0 |
 | 2026-07-27_pijama-oncinha | Foto | 50 | 9 | 2 | 0 | 0 | — | 0 |
-| 2026-08-05_navio-importacao | Foto | 46 | 9 | 1 | 0 | 0 | — | 0 |
-| 2026-08-03_dia-de-praia | Foto | 45 | 10 | 0 | 0 | 0 | — | 0 |
-| 2026-08-07_banho-de-sol | Foto | 45 | 12 | 1 | 0 | 0 | — | 0 |
+| 2026-08-05_navio-importacao | Foto | 48 | 9 | 1 | 0 | 0 | — | 0 |
+| 2026-08-03_dia-de-praia | Foto | 46 | 10 | 0 | 0 | 0 | — | 0 |
+| 2026-08-07_banho-de-sol | Foto | 46 | 12 | 1 | 0 | 0 | — | 0 |
 
 ## Reel x Foto (média de alcance)
 
-- **Reel**: 181 de alcance médio (1 post(s))
-- **Foto**: 51 de alcance médio (8 post(s))
+- **Reel**: 182 de alcance médio (1 post(s))
+- **Foto**: 52 de alcance médio (8 post(s))
 
 ## Alcance médio por pilar
 
-- **sem pilar**: 65 de alcance médio (9 post(s))
+- **sem pilar**: 66 de alcance médio (9 post(s))
 
 ## Seguidores ao longo do tempo
 
 | Data | Seguidores |
 |---|---|
-| 2026-08-05 | 330 |
 | 2026-08-06 | 331 |
 | 2026-08-07 | 331 |
 | 2026-08-08 | 331 |
@@ -46,6 +45,7 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 | 2026-08-14 | 331 |
 | 2026-08-15 | 331 |
 | 2026-08-16 | 331 |
+| 2026-08-17 | 331 |
 
 ## Limites desta coleta
 

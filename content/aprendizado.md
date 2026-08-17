@@ -2,6 +2,30 @@
 
 O que a automação já mandou pro Ramón, com data — pra próxima conversa não remontar do zero. Gravado por `publisher/diagnostico.py` e `publisher/leitura_d1.py`, sempre DEPOIS da entrega confirmada (nunca durante `--simular`). Mais recente em cima.
 
+## 2026-08-17 — Diagnóstico da semana 2026-W34
+
+📊 DIAGNÓSTICO DA SEMANA
+Fonte: API do Instagram, coleta de 2026-08-17.
+
+1) SEGUIDORES: 331 (+0 em 7 dias) → estável
+2) ALCANCE MÉDIO: 66 ↑ +39%
+3) OS TRÊS SINAIS (semana vs. semana anterior)
+   Salvos: 0 (era 0) 0
+   Compartilh.: 0 (era 0) 0
+   Seguidores ganhos: 0 (era 0) 0
+4) REEL x FOTO (alcance médio)
+   Reel: 182
+   Foto: 52
+
+5) VEREDITO
+   ⚠️ Salvos, compartilhamentos e seguidores ganhos seguem em ZERO há 3 semana(s). Quem vê não reage — isso é conteúdo, não entrega.
+   🔴 Três semanas de zero é o corte combinado: a abordagem de conteúdo muda, não a frequência.
+   Reel está entregando 3.5x o alcance da foto.
+
+O comitê lê isto na conversa de segunda e traz o plano.
+
+---
+
 ## 2026-08-11 08:31 UTC — Leitura do dia 1 (2026-08-10_escolheu-o-canal)
 
 📈 LEITURA DO DIA 1 — 2026-08-10_escolheu-o-canal (REEL, 22h no ar)
