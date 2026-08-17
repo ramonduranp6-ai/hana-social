@@ -143,8 +143,18 @@ def media_url(post, base_url):
 
 
 def is_due(post, now=None):
+    """
+    Post sem `scheduled_for` NUNCA esta na hora (17/08/2026). E' peca pronta e
+    aprovada esperando o Ramon marcar o dia — caso do Reel da chegada da Eloen,
+    que ele aprovou mas cuja data e' decisao da familia, nao do calendario de
+    conteudo. Sem esta guarda o publicador quebrava com AttributeError, que foi
+    exatamente o bug que derrubou o sentinela por 3 dias.
+    """
     now = now or datetime.now(timezone.utc)
-    when = datetime.fromisoformat(post["scheduled_for"].replace("Z", "+00:00"))
+    quando = post.get("scheduled_for")
+    if not quando:
+        return False
+    when = datetime.fromisoformat(quando.replace("Z", "+00:00"))
     return when <= now
 
 

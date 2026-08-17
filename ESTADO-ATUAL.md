@@ -1,21 +1,21 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 17/08/2026 16:29. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 17/08/2026 16:41. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
 
 | Quando (UTC) | Post | Tipo | Status |
 |---|---|---|---|
-| 2026-08-17T11:00:00Z | 2026-08-12_cenoura-filhote | reel | pending |
+| 2026-08-21T11:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
 | 2026-08-14T11:00:00Z | 2026-08-14_a-patroa-mimada | reel | rejected |
-| 2026-08-14T11:00:00Z | 2026-08-14_regras-da-casa | reel | pending |
+| 2026-08-19T11:00:00Z | 2026-08-14_regras-da-casa | reel | approved |
 | 2026-08-17T11:00:00Z | 2026-08-17_golden-hour | reel | rejected |
 | 2026-08-19T11:00:00Z | 2026-08-19_a-noite-dela | reel | rejected |
-| 2026-08-19T11:00:00Z | 2026-08-19_baloes-dela | reel | pending |
+| 2026-08-19T11:00:00Z | 2026-08-19_baloes-dela | reel | rejected |
 | 2026-08-21T11:00:00Z | 2026-08-21_dona-da-casa | reel | rejected |
 | 2026-08-24T11:00:00Z | 2026-08-24_travesseiro | reel | rejected |
-| None | 2026-08-K_chegada-eloen | reel | pending |
+| None | 2026-08-K_chegada-eloen | reel | approved |
 
 ## Publicados: 9
 - 2026-07-31_roda-gigante — IG `17893985169571565`
@@ -47,7 +47,7 @@ mudança de status nem publicar.
 - Brutas a processar: 39 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 28436
+- Fotos do iPhone sincronizadas (iCloud): 30499
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -58,6 +58,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+d79991c Auditoria da maquina nova: ambiente aprovado, achados registrados
 8c553bb Conserta o Sentinela que derrubava o publicador desde 14/08
 246e6f5 chore: atualiza estado da fila [skip ci]
 eaa52fe Reel chegada da Eloen: versoes v4-v6 de 12s, roteiro e fila atualizados, log do garimpo
@@ -65,12 +66,15 @@ f59c8aa chore: atualiza estado da fila [skip ci]
 2c91db7 chore: atualiza estado da fila [skip ci]
 b0e3b11 chore: atualiza estado da fila [skip ci]
 ffdc1e8 Reel dos baloes refeito com edicao real + auditoria; novo roteiro chegada da Eloen; ajustes de LUFS e log do garimpo
-d842580 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
 M DECISOES.md
- M ESTADO-ATUAL.md
+ M content/queue/2026-08-12_cenoura-filhote/post.json
+ M content/queue/2026-08-14_regras-da-casa/post.json
+ M content/queue/2026-08-19_baloes-dela/post.json
+ M content/queue/2026-08-K_chegada-eloen/post.json
+ M publisher/postqueue.py
 ?? .claude/settings.local.json
 ```
 
@@ -80,6 +84,37 @@ M DECISOES.md
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
+
+## ✅ 17/08/2026 — ELE APROVOU 3 REELS NA CONVERSA; BALÕES RECUSADO
+
+Ele viu os 4 Reels na conversa (mandados por arquivo, não pelo Telegram) e
+respondeu: *"Aprovado 1 2 4 / 3 não aprovado"*.
+
+- **AS REGRAS DA CASA** → aprovado, remarcado para **19/08 11:00Z** (qua).
+- **CENOURA FILHOTE** → aprovado, remarcado para **21/08 11:00Z** (sex).
+- **CHEGADA DA ELOEN** → aprovado, **de propósito sem data**: o dia do anúncio
+  é decisão da família dele, não do calendário de conteúdo (mantém a decisão
+  de 14/08). Só publica quando ele disser o dia.
+- **BALÕES DELA** → `rejected`. Era a peça que a auditoria já tinha marcado com
+  teto de qualidade (bruto deitado 1024x576, 1º segundo sem o rosto dela).
+  Ele confirmou o veredito. **Não retrabalhar esta peça** — regra 3n-ii: o
+  defeito é do material de origem, não do ajuste.
+
+**As duas datas eu decidi** (regra 8b — data de fila é operacional, não é
+decisão dele): os slots de 14/08 e 17/08 já tinham vencido, então as duas peças
+foram para os próximos slots livres seg/qua/sex, na ordem cronológica original.
+
+**🔴 Segundo bug da mesma família, achado ANTES de aprovar a Eloen:**
+`postqueue.is_due()` fazia `post["scheduled_for"].replace(...)` sem guarda.
+Marcar a Eloen como `approved` sem data teria quebrado o **publicador** — não
+só o vigia. Consertado: post sem data devolve `False` (nunca está na hora),
+então peça aprovada sem dia espera em vez de derrubar o robô.
+**Lição:** o mesmo padrão (`scheduled_for` tratado como sempre existente)
+estava em dois arquivos. Ao consertar um bug de campo que pode ser nulo,
+procurar TODOS os usos do campo antes de dar por fechado — foi o que evitou o
+segundo apagão.
+Conferido depois de aplicar: os 3 aprovados passam pela trava de fingerprint
+sem voltar pra `pending`, e a Eloen dá `is_due=False`.
 
 ## 🖥️ 17/08/2026 — AUDITORIA DA MÁQUINA NOVA: ambiente aprovado, 1 bug real achado e consertado
 

@@ -4,6 +4,37 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## ✅ 17/08/2026 — ELE APROVOU 3 REELS NA CONVERSA; BALÕES RECUSADO
+
+Ele viu os 4 Reels na conversa (mandados por arquivo, não pelo Telegram) e
+respondeu: *"Aprovado 1 2 4 / 3 não aprovado"*.
+
+- **AS REGRAS DA CASA** → aprovado, remarcado para **19/08 11:00Z** (qua).
+- **CENOURA FILHOTE** → aprovado, remarcado para **21/08 11:00Z** (sex).
+- **CHEGADA DA ELOEN** → aprovado, **de propósito sem data**: o dia do anúncio
+  é decisão da família dele, não do calendário de conteúdo (mantém a decisão
+  de 14/08). Só publica quando ele disser o dia.
+- **BALÕES DELA** → `rejected`. Era a peça que a auditoria já tinha marcado com
+  teto de qualidade (bruto deitado 1024x576, 1º segundo sem o rosto dela).
+  Ele confirmou o veredito. **Não retrabalhar esta peça** — regra 3n-ii: o
+  defeito é do material de origem, não do ajuste.
+
+**As duas datas eu decidi** (regra 8b — data de fila é operacional, não é
+decisão dele): os slots de 14/08 e 17/08 já tinham vencido, então as duas peças
+foram para os próximos slots livres seg/qua/sex, na ordem cronológica original.
+
+**🔴 Segundo bug da mesma família, achado ANTES de aprovar a Eloen:**
+`postqueue.is_due()` fazia `post["scheduled_for"].replace(...)` sem guarda.
+Marcar a Eloen como `approved` sem data teria quebrado o **publicador** — não
+só o vigia. Consertado: post sem data devolve `False` (nunca está na hora),
+então peça aprovada sem dia espera em vez de derrubar o robô.
+**Lição:** o mesmo padrão (`scheduled_for` tratado como sempre existente)
+estava em dois arquivos. Ao consertar um bug de campo que pode ser nulo,
+procurar TODOS os usos do campo antes de dar por fechado — foi o que evitou o
+segundo apagão.
+Conferido depois de aplicar: os 3 aprovados passam pela trava de fingerprint
+sem voltar pra `pending`, e a Eloen dá `is_due=False`.
+
 ## 🖥️ 17/08/2026 — AUDITORIA DA MÁQUINA NOVA: ambiente aprovado, 1 bug real achado e consertado
 
 Ordem dele: *"Começamos em um computador novo... Audite todo esse projeto, veja

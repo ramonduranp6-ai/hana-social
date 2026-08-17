@@ -2,11 +2,13 @@
   "type": "reel",
   "media_file": "video-v9-som14.mp4",
   "caption": "Ela chegou pequena o bastante pra caber na palma da minha mão.\nHoje eu peço licença pra dormir na minha própria cama.\nNão lembro de ter assinado essa mudança de contrato.\nQuando foi que essa troca aconteceu aí na sua casa?\n\n#exoticbullymicro #trililacmerle #bullybrasil #patroamimada",
-  "scheduled_for": "2026-08-17T11:00:00Z",
-  "status": "pending",
+  "scheduled_for": "2026-08-21T11:00:00Z",
+  "status": "approved",
   "pilar": "A PATROA MANDA",
   "audio_titulo": "trilha propria (Lyria 3): ukulele e glockenspiel que crescem para banda com palmas; o crescimento cai no corte da virada. O som da cena (a mastigada da cenoura) aparece nos 2,6s de abertura.",
   "nota": "VERSAO 8, 11/08/2026. A v7 (ja aprovada por ele) tinha um corte de praia (IMG_1725.MOV) que era o MESMO passeio do post 'dia-de-praia' publicado em 03/08 -- confirmado comparando frame a frame (mesmo colar de conchas). Removido, e o corte da cama a noite tambem foi trocado (era quase o mesmo segundo usado no Reel de 14/08) para nao repetir entre os dois posts. 6 cortes em 12s agora. Reauditada: sem objecao em anatomia/cor/rosto/tecnico. Historico da v7: primeira com HISTORIA e MUSICA depois de ele reprovar a v6 ('Cade a musica... Cade a criatividade'). REMARCADO 13/08: perdeu o slot de 12/08 esperando a reaprovacao da v8; movido para 17/08 11:00Z (slot livre, o rejected de 17/08 nao publica). APROVADO 13/08 17:01 UTC por texto no Telegram (recado \"Aprovado\" — unico item com botoes pendentes era este). REMASTER 13/08 a pedido dele ('Sim!!!'): som para -14.06 LUFS pico -1.28 dBTP (era -18.55). Video intacto. Trava de fingerprint devolve pra aprovacao dele.",
   "notified": true,
-  "notified_fingerprint": "20ecca3796ee700ec7eed51e66a852d88f56c512b7f206d82ca18c85f62226ad"
+  "notified_fingerprint": "20ecca3796ee700ec7eed51e66a852d88f56c512b7f206d82ca18c85f62226ad",
+  "approved_at": "2026-08-17T19:40:51.883331Z",
+  "approved_by": "ramon (na conversa, 17/08/2026)"
 }
