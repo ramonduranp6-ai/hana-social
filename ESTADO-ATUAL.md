@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 17/08/2026 13:12. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 17/08/2026 16:29. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -27,9 +27,11 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-(não consegui consultar — checar 'gh auth status')
+2026-08-17T19:06:53Z schedule failure
+2026-08-17T18:26:36Z schedule failure
+2026-08-17T17:52:49Z schedule failure
 ```
-- Vigia local (Agendador do Windows): próxima execução não encontrada
+- Vigia local (Agendador do Windows): próxima execução segunda-feira, 17 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
@@ -45,7 +47,7 @@ mudança de status nem publicar.
 - Brutas a processar: 39 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 0
+- Fotos do iPhone sincronizadas (iCloud): 28436
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -56,18 +58,19 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+8c553bb Conserta o Sentinela que derrubava o publicador desde 14/08
+246e6f5 chore: atualiza estado da fila [skip ci]
 eaa52fe Reel chegada da Eloen: versoes v4-v6 de 12s, roteiro e fila atualizados, log do garimpo
 f59c8aa chore: atualiza estado da fila [skip ci]
 2c91db7 chore: atualiza estado da fila [skip ci]
 b0e3b11 chore: atualiza estado da fila [skip ci]
 ffdc1e8 Reel dos baloes refeito com edicao real + auditoria; novo roteiro chegada da Eloen; ajustes de LUFS e log do garimpo
 d842580 chore: atualiza estado da fila [skip ci]
-8638b9e Bastao + PROXIMA-CONVERSA: testar Higgsfield, reaprovacoes pendentes, padrao -14 LUFS
-350d565 Registra Higgsfield assinado (conector carrega na proxima conversa)
 ```
 Alterações não commitadas:
 ```
-D PROXIMA-CONVERSA.md
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ?? .claude/settings.local.json
 ```
 
@@ -77,6 +80,48 @@ D PROXIMA-CONVERSA.md
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
+
+## 🖥️ 17/08/2026 — AUDITORIA DA MÁQUINA NOVA: ambiente aprovado, 1 bug real achado e consertado
+
+Ordem dele: *"Começamos em um computador novo... Audite todo esse projeto, veja
+se já estamos prontos para continuar."* Tudo abaixo foi conferido por comando
+nesta sessão, nada veio de memória nem de arquivo do projeto (regra zero).
+
+**O ambiente está pronto — conferido, não suposto:**
+- Python 3.13.15 + PIL, requests, imageio_ffmpeg, numpy, dotenv (todos importam).
+  ⚠️ O Python foi instalado hoje 12:34 e o PATH do usuário já está correto; só a
+  sessão do Claude tinha herdado o PATH velho. Não é problema da máquina.
+- ffmpeg 9.0, ImageMagick, Node, jq, Ollama, gh e git no PATH.
+- `gh` logado como `ramonduranp6-ai`. Os 6 secrets do repo existem;
+  `IG_TOKEN_EXPIRA_EM = 2026-09-24` (37 dias de folga).
+- Tarefa **`Hana Sentinela`** recriada nesta máquina: dom/seg/qua/sex às 18:10 de
+  Itajaí, apontando para o `sentinela.bat` no caminho novo. Ainda não rodou
+  porque o horário de hoje não chegou — não é falha.
+- `estado.py` e `lote_automatico.py --simular` rodaram limpos.
+- Git: puxada 1 novidade do outro aparelho e subido o conserto abaixo.
+  ⚠️ **Pegadinha desta máquina:** o git quebrava com `unable to append to
+  .git/logs/HEAD` (conflito do OneDrive com escrita atômica). Resolvido com
+  `git config windows.appendAtomically false` neste repo. Se aparecer em outro
+  projeto dentro do OneDrive, é a mesma receita.
+
+**🔴 O bug que a auditoria achou (estava quebrado desde 14/08):** o publicador
+do GitHub falhava em TODAS as execuções — 6 seguidas conferidas. Causa: o Reel
+da chegada da Eloen ficou de propósito **sem data** (decisão dele em 14/08), e o
+`publisher/sentinel.py` assumia que todo post `pending` tinha `scheduled_for`.
+Quebrava com `AttributeError` na primeira linha do laço.
+**O que isso custou:** o passo é o ÚLTIMO do workflow, então publicar, coletar
+métricas e salvar estado continuaram funcionando — mas **o vigia ficou mudo por
+3 dias**, justamente o robô que existe para avisar que a fila travou. Consertado
+(post sem data agora vira aviso próprio) e rodado local: volta a listar os 4
+problemas reais.
+⚠️ **O workflow vai continuar VERMELHO enquanto a fila estiver travada** — o
+sentinela sai com erro de propósito quando acha problema, é o alarme funcionando.
+Ele fica verde quando os Reels forem aprovados.
+
+**O que a auditoria mostrou que só depende dele:** os 4 Reels da fila foram
+enviados no Telegram (`notified: True`) e **nenhum foi aprovado** — 14/08 e 17/08
+já passaram da hora. Último post no ar: 10/08. E o robô do lote registrou a
+**1ª semana sem filmagem nova**.
 
 ## 🎬 14/08/2026 (manhã) — REFEITO O REEL DOS BALÕES: achado o bug real, corrigido o que dá, e um teto de qualidade que não dá
 

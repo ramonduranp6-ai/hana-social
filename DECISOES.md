@@ -4,6 +4,48 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## 🖥️ 17/08/2026 — AUDITORIA DA MÁQUINA NOVA: ambiente aprovado, 1 bug real achado e consertado
+
+Ordem dele: *"Começamos em um computador novo... Audite todo esse projeto, veja
+se já estamos prontos para continuar."* Tudo abaixo foi conferido por comando
+nesta sessão, nada veio de memória nem de arquivo do projeto (regra zero).
+
+**O ambiente está pronto — conferido, não suposto:**
+- Python 3.13.15 + PIL, requests, imageio_ffmpeg, numpy, dotenv (todos importam).
+  ⚠️ O Python foi instalado hoje 12:34 e o PATH do usuário já está correto; só a
+  sessão do Claude tinha herdado o PATH velho. Não é problema da máquina.
+- ffmpeg 9.0, ImageMagick, Node, jq, Ollama, gh e git no PATH.
+- `gh` logado como `ramonduranp6-ai`. Os 6 secrets do repo existem;
+  `IG_TOKEN_EXPIRA_EM = 2026-09-24` (37 dias de folga).
+- Tarefa **`Hana Sentinela`** recriada nesta máquina: dom/seg/qua/sex às 18:10 de
+  Itajaí, apontando para o `sentinela.bat` no caminho novo. Ainda não rodou
+  porque o horário de hoje não chegou — não é falha.
+- `estado.py` e `lote_automatico.py --simular` rodaram limpos.
+- Git: puxada 1 novidade do outro aparelho e subido o conserto abaixo.
+  ⚠️ **Pegadinha desta máquina:** o git quebrava com `unable to append to
+  .git/logs/HEAD` (conflito do OneDrive com escrita atômica). Resolvido com
+  `git config windows.appendAtomically false` neste repo. Se aparecer em outro
+  projeto dentro do OneDrive, é a mesma receita.
+
+**🔴 O bug que a auditoria achou (estava quebrado desde 14/08):** o publicador
+do GitHub falhava em TODAS as execuções — 6 seguidas conferidas. Causa: o Reel
+da chegada da Eloen ficou de propósito **sem data** (decisão dele em 14/08), e o
+`publisher/sentinel.py` assumia que todo post `pending` tinha `scheduled_for`.
+Quebrava com `AttributeError` na primeira linha do laço.
+**O que isso custou:** o passo é o ÚLTIMO do workflow, então publicar, coletar
+métricas e salvar estado continuaram funcionando — mas **o vigia ficou mudo por
+3 dias**, justamente o robô que existe para avisar que a fila travou. Consertado
+(post sem data agora vira aviso próprio) e rodado local: volta a listar os 4
+problemas reais.
+⚠️ **O workflow vai continuar VERMELHO enquanto a fila estiver travada** — o
+sentinela sai com erro de propósito quando acha problema, é o alarme funcionando.
+Ele fica verde quando os Reels forem aprovados.
+
+**O que a auditoria mostrou que só depende dele:** os 4 Reels da fila foram
+enviados no Telegram (`notified: True`) e **nenhum foi aprovado** — 14/08 e 17/08
+já passaram da hora. Último post no ar: 10/08. E o robô do lote registrou a
+**1ª semana sem filmagem nova**.
+
 ## 🎬 14/08/2026 (manhã) — REFEITO O REEL DOS BALÕES: achado o bug real, corrigido o que dá, e um teto de qualidade que não dá
 
 Ele: *"toda vez que peço para vc alterar vc apenas trocar a descrição... não vejo
