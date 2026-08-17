@@ -54,6 +54,13 @@ def checar_fila():
         if status == "failed":
             problemas.append(f"{p['_id']}: FALHOU ({p.get('error', 'sem detalhe')})")
         elif status in ("pending", "approved"):
+            # Post sem data marcada nao e' atraso: e' peca pronta esperando o
+            # Ramon decidir QUANDO vai ao ar (ex.: o Reel da chegada da Eloen,
+            # 14/08/2026). Sem esta guarda o sentinela quebrava com AttributeError
+            # e derrubava o workflow inteiro depois de tudo ja ter dado certo.
+            if not p.get("scheduled_for"):
+                problemas.append(f"{p['_id']}: pronto, mas SEM DATA — esperando ele marcar")
+                continue
             t = dt.datetime.fromisoformat(p["scheduled_for"].replace("Z", "+00:00"))
             atraso_min = (agora - t).total_seconds() / 60
             if atraso_min > TOLERANCIA_MIN:
