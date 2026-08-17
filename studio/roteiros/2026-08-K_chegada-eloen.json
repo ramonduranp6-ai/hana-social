@@ -4,35 +4,41 @@
   "origem": "Bruto: Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov (30,03s, 1024x576 deitado -> 576x1024 vertical apos autorotate). Autorizado por ele em 14/08: 'pode aparecer sim' (rosto de familia) e liberado usar a fumaca/revelacao -- as duas travas que proibiam esse material antes.",
   "_nota_producao": "Zoom BEM mais leve que a peca anterior (aproximar 1.15-1.3 contra 1.5-2.4 antes), porque agora nao preciso empurrar rosto pra fora do quadro -- a auditoria anterior mediu que zoom forte derrete a nitidez (85% de perda). Sem horizontal reposicionavel neste arquivo (o crop de aproximar sempre centra em x; so foco_y move verticalmente) -- por isso escolhi janelas de tempo onde o assunto ja fica perto do centro. SOM REAL DA CENA, sem mudo -- antes era proibido por risco de vazar a noticia falada; agora a noticia pode ser dada.",
 
+  "trilha": "content/trilhas/05-cinema-golden.mp3",
+  "inicio_trilha": 0.0,
+  "abafar_ate": 0,
+  "volume_trilha": 1.15,
+  "_nota_trilha": "Pedido dele em 14/08: 'Não vi a música!'. Adicionada por baixo do som real da cena (que continua tocando, nao mudo) -- volume 0.40, deliberadamente baixo pra nao brigar com a reacao real da familia, que e o que da autenticidade. 05-cinema-golden (Lyria, ja existente, custo R$ 0) por ser mais emocional/cinematografico que o ukulele comico usado nas pecas de piada.",
+
   "cortes": [
     {
       "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
-      "de": 5.55, "ate": 6.45, "movimento": "seco",
+      "de": 5.45, "ate": 6.95, "movimento": "seco",
       "aproximar": 1.3, "foco_y": 1.0,
-      "_nota": "GANCHO, corrigido apos auditoria de 14/08. A janela original (6.05-6.95) cai quase toda depois dela ja ter virado de costas -- reprova de rosto ausente no 1o segundo. Nesta janela ela chega perto dos avos, boca aberta, de lado/quase de frente, crescendo no quadro -- conferido com grab isolado antes de trocar. Tirei o 'punch' (zoom artificial, proibido pelo manual) -- ela ja cresce no quadro por conta propria."
+      "_nota": "GANCHO. Rosto dela visivel no 1o quadro, chegando com os baloes junto dos avos. Esticado (era 5.55-6.45) pra dar mais tempo de chegada, dentro do pedido de 12s."
     },
     {
       "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
-      "de": 7.30, "ate": 9.00, "movimento": "seco",
+      "de": 7.20, "ate": 10.50, "movimento": "seco",
       "aproximar": 1.0,
-      "_nota": "A REVELACAO. Explosao de fumaca rosa, plano aberto -- sem crop pra nao perder a escala do momento. Antes proibido (vazamento de noticia); agora e o clímax."
+      "_nota": "A REVELACAO, esticada (era 7.30-9.00) pra fumaca respirar mais, como o auditor sugeriu. Cobre a explosao inteira e o comeco da reacao da familia recebendo a fumaca em cima. Plano aberto, sem crop."
     },
     {
       "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
-      "de": 10.60, "ate": 13.00, "movimento": "seco",
+      "de": 10.50, "ate": 15.50, "movimento": "seco",
       "aproximar": 1.3, "foco_y": 0.78,
-      "_nota": "REACAO. A mae com as maos no rosto, o pai por perto, a Hana no colo/no meio dos dois. Familia comemorando junto com ela."
+      "_nota": "REACAO, esticada (era 10.60-13.00) pra mostrar mais da familia comemorando com a Hana no meio -- maos no rosto, abraco, ela sendo acariciada pelos dois. Contiguo ao corte anterior (comeca exatamente onde o outro termina), sem repetir quadro."
     },
     {
       "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_noticia_nova_irma.mov",
-      "de": 16.60, "ate": 17.50, "movimento": "seco",
+      "de": 16.60, "ate": 18.50, "movimento": "seco",
       "aproximar": 1.2, "foco_y": 0.75,
-      "_nota": "FECHO, corrigido apos auditoria de 14/08. Janela anterior (17.80-18.90) mostrava ela de cabeca baixa, de cima/de tras. Nesta janela ela esta EM PE no cobertor, cabeca erguida, de frente, bem maior no quadro, entre os dois -- termina nela (regra 1). Confirmado que de 19.4s em diante no bruto ela some e so sobra o casal; esta janela fica bem antes disso."
+      "_nota": "FECHO, esticado (era 16.60-17.50) -- ela em pe, cabeca erguida, de frente, o pai rindo com ela no fim. Termina nela (regra 1). Ainda bem antes de 19.4s, onde ela some do bruto e so sobra o casal -- conferido de novo com grab isolado nos trechos novos (9.5/10.0/10.5/13.5/14.5/15.5/17.8/18.2/18.5) antes de esticar."
     }
   ],
 
   "textos": [],
   "_nota_textos": "Zero cartelas -- manual mede texto=zero em 7/7 virais reais. A legenda (1a pessoa da Hana) e que anuncia.",
-  "_nota_som": "SEM mudo em nenhum corte -- som real da cena (vozes, reacao, o estouro da fumaca). E o oposto da peca anterior de proposito: la o som era risco, aqui e a prova de autenticidade.",
-  "_custo": "R$ 0,00 -- material ja existente, nenhuma ferramenta paga."
+  "_nota_som": "SEM mudo em nenhum corte -- som real da cena (vozes, reacao, o estouro da fumaca) + trilha por baixo (ver _nota_trilha). E o oposto da peca anterior de proposito: la o som era risco, aqui e a prova de autenticidade.",
+  "_custo": "R$ 0,00 -- material e trilha ja existentes, nenhuma ferramenta paga."
 }
