@@ -148,6 +148,32 @@ def _post(post_id):
     return None
 
 
+def _posts_no_ar():
+    """Todo post que já foi publicado, com o `_id` preenchido.
+
+    Varre as DUAS pastas pela mesma razão do `_post()` acima: o publicador move
+    a pasta para `content/posted` quando o post vai ao ar, então olhar só a fila
+    faria a contagem de Reels publicados dar sempre zero.
+    """
+    achados = []
+    for base in (FILA, PUBLICADOS):
+        if not os.path.isdir(base):
+            continue
+        for pid in sorted(os.listdir(base)):
+            meta = os.path.join(base, pid, "post.json")
+            if not os.path.isfile(meta):
+                continue
+            try:
+                with open(meta, encoding="utf-8") as f:
+                    p = json.load(f)
+            except (ValueError, OSError):
+                continue
+            if p.get("status") in STATUS_NO_AR:
+                p["_id"] = pid
+                achados.append(p)
+    return achados
+
+
 def _metricas_do_post(post_id):
     coletas = _coletas()
     if not coletas:
@@ -205,6 +231,45 @@ def _checar(decisao):
         # Decisão derrubada antes de virar resultado. Fica visível de propósito —
         # decisão que some da pauta é decisão que ninguém cobra depois.
         return "CANCELADO", "derrubada antes de ser testada"
+
+    if tipo == "reels_publicados_minimo":
+        # BURACO PEGO EM 17/08/2026: a reunião de 09/08 escreveu as decisões com
+        # este tipo, mas ele nunca existiu aqui. Resultado: as 2 decisões que
+        # sustentam a estratégia de crescimento caíam no "tipo desconhecido" e
+        # ficavam NÃO TESTADO para sempre — o mecanismo de revisão semanal, que
+        # foi construído justamente para responder "funcionou?", estava mudo.
+        minimo = int(pre.get("quantidade") or 0)
+        desde = pre.get("desde", "1970-01-01")
+        reels = [p for p in _posts_no_ar()
+                 if p.get("type") == "reel" and (p.get("scheduled_for") or "")[:10] >= desde]
+        if len(reels) < minimo:
+            return "NAO TESTADO", (
+                "%d de %d Reels publicados desde %s — falta publicar para poder julgar"
+                % (len(reels), minimo, desde))
+        medidos = [(p["_id"], _metricas_do_post(p["_id"])) for p in reels]
+        medidos = [(pid, m) for pid, m in medidos if m and m.get("reach")]
+        if not medidos:
+            return "NAO TESTADO", "%d Reels no ar, mas a coleta ainda não trouxe os números" % len(reels)
+        alcance = sum(m["reach"] for _, m in medidos) / len(medidos)
+        shares = sum((m.get("shares") or 0) for _, m in medidos)
+        follows = sum((m.get("follows") or 0) for _, m in medidos)
+        saved = sum((m.get("saved") or 0) for _, m in medidos)
+        resumo = ("%d Reels medidos · alcance médio %d · %d salvos · %d compart. · %d seguidores"
+                  % (len(medidos), alcance, saved, shares, follows))
+        if shares or follows or saved:
+            return "MEXEU", resumo
+        return "NAO MEXEU", resumo
+
+    if tipo == "ok_do_ramon":
+        # Só ele destrava. Enquanto não destravar, a pendência aparece escrita
+        # na pauta em vez de virar "falhou" — decisão parada por falta de
+        # resposta dele não é decisão testada e reprovada.
+        if not decisao.get("ok_em"):
+            pendente = "; ".join(pre.get("pendente") or []) or "sem detalhe"
+            return "NAO TESTADO", "esperando a palavra dele sobre: %s" % pendente
+        return "NAO TESTADO", (
+            "ele liberou em %s — falta a execução gerar número para julgar"
+            % decisao["ok_em"])
 
     return "NAO TESTADO", "pré-condição de tipo desconhecido (%s)" % tipo
 

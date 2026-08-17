@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 17/08/2026 16:41. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 17/08/2026 18:01. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -27,9 +27,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-17T19:06:53Z schedule failure
-2026-08-17T18:26:36Z schedule failure
-2026-08-17T17:52:49Z schedule failure
+2026-08-17T20:51:02Z schedule failure
+2026-08-17T20:17:19Z schedule failure
+2026-08-17T19:49:06Z schedule failure
 ```
 - Vigia local (Agendador do Windows): próxima execução segunda-feira, 17 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -47,7 +47,7 @@ mudança de status nem publicar.
 - Brutas a processar: 39 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 30499
+- Fotos do iPhone sincronizadas (iCloud): 34546
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -58,6 +58,7 @@ mudança de status nem publicar.
 
 ## Últimas mudanças no projeto
 ```
+8463359 Aprovacao dele: 3 Reels liberados, baloes recusado, +1 bug consertado
 d79991c Auditoria da maquina nova: ambiente aprovado, achados registrados
 8c553bb Conserta o Sentinela que derrubava o publicador desde 14/08
 246e6f5 chore: atualiza estado da fila [skip ci]
@@ -65,16 +66,11 @@ eaa52fe Reel chegada da Eloen: versoes v4-v6 de 12s, roteiro e fila atualizados,
 f59c8aa chore: atualiza estado da fila [skip ci]
 2c91db7 chore: atualiza estado da fila [skip ci]
 b0e3b11 chore: atualiza estado da fila [skip ci]
-ffdc1e8 Reel dos baloes refeito com edicao real + auditoria; novo roteiro chegada da Eloen; ajustes de LUFS e log do garimpo
 ```
 Alterações não commitadas:
 ```
-M DECISOES.md
- M content/queue/2026-08-12_cenoura-filhote/post.json
- M content/queue/2026-08-14_regras-da-casa/post.json
- M content/queue/2026-08-19_baloes-dela/post.json
- M content/queue/2026-08-K_chegada-eloen/post.json
- M publisher/postqueue.py
+M estrategia/decisoes-2026-08-09.json
+ M publisher/veredito.py
 ?? .claude/settings.local.json
 ```
 

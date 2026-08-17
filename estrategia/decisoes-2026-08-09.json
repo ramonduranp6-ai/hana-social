@@ -1,66 +1,66 @@
 {
- "semana": "2026-W33",
- "data_reuniao": "2026-08-09",
- "revisar_em": "2026-08-16",
- "formato": "rodada cega (4 IAs do hub via ask-ai) -> debate com ataque/retirada/voto -> conselheiro (sem veto, com consertos). Mortas no debate: embaixador organico, remix de virais.",
- "baseline": {
-  "seguidores": 331,
-  "alcance_medio": 47,
-  "salvos_total": 0,
-  "shares_total": 0,
-  "follows_total": 0,
-  "posts_medidos": 8,
-  "reels_publicados": 0
- },
- "decisoes": [
-  {
-   "id": "gancho-sonoro-cta",
-   "titulo": "Gancho sonoro nos 2 primeiros segundos + CTA de compartilhamento variado em todo Reel",
-   "dono": "Claude (producao) / Ramon (aprovacao da peca)",
-   "esperado": "os Reels comecarem a ser compartilhados e a puxar seguidor de fora da rede pessoal",
-   "metrica": "compartilhamentos por Reel e seguidores ganhos por Reel (fonte propria: insights do post)",
-   "precondicao": {
-    "tipo": "reels_publicados_minimo",
-    "quantidade": 3,
-    "desde": "2026-08-10"
-   },
-   "regra_de_morte": "Depois de 9 REELS PUBLICADOS (nao 3 semanas de calendario): alcance medio <150 OU 0 compartilhamento total -> o formato sai do banco de reus e a pauta vira SO distribuicao. (Conserto do conselheiro: era E, virou OU; conta por Reel publicado.)",
-   "contador_nao_testado": 0,
-   "ultima_semana_contada": "2026-W33"
+  "semana": "2026-W33",
+  "data_reuniao": "2026-08-09",
+  "revisar_em": "2026-08-16",
+  "formato": "rodada cega (4 IAs do hub via ask-ai) -> debate com ataque/retirada/voto -> conselheiro (sem veto, com consertos). Mortas no debate: embaixador organico, remix de virais.",
+  "baseline": {
+    "seguidores": 331,
+    "alcance_medio": 47,
+    "salvos_total": 0,
+    "shares_total": 0,
+    "follows_total": 0,
+    "posts_medidos": 8,
+    "reels_publicados": 0
   },
-  {
-   "id": "seo-descoberta",
-   "titulo": "SEO de descoberta: nome do perfil, bio, geotag e hashtags de comportamento",
-   "dono": "Claude (producao)",
-   "esperado": "a conta passar a aparecer para quem nao conhece o Ramon (Pesquisa/Explorar)",
-   "metrica": "alcance de nao-seguidores + visitas por Pesquisa/Explorar (fonte propria, nunca o total de seguidores)",
-   "precondicao": {
-    "tipo": "reels_publicados_minimo",
-    "quantidade": 3,
-    "desde": "2026-08-10"
-   },
-   "regra_de_morte": "3 semanas apos aplicar: 0 alcance por Pesquisa/Explorar/hashtag -> desfaz e enterra. ALERTA do conselheiro registrado: termos de raca atraem comprador de filhote (audiencia errada) e geotag expoe a cidade da familia — por isso a palavra e dele.",
-   "contador_nao_testado": 0,
-   "ultima_semana_contada": "2026-W33",
-   "nota": "CONFERIDO NA TELA em 09/08 (regra zero): o perfil JA TINHA o SEO — nome 'Hana [pata] Exotic Bully Micro' e bio com 'Exotic Bully Micro - Tri Lilac Merle', 'A patroa: aqui quem manda sou eu' e 'Itajai SC - episodios novos seg/qua/sex'. Nada foi alterado no perfil. O que RESTA da decisao: geotag Itajai + hashtags de comportamento (max 4) nos POSTS a partir dos proximos lotes."
-  },
-  {
-   "id": "collab-micro",
-   "titulo": "1 collab/semana com perfil bully micro 500-2k (co-autoria de Reel)",
-   "dono": "Claude (garimpo + DM pronta) / Ramon (so envia a DM do celular)",
-   "esperado": "primeiro canal de distribuicao fora da rede pessoal",
-   "metrica": "seguidores ganhos por collab aceita (meta >=3) e taxa de resposta das DMs",
-   "precondicao": {
-    "tipo": "ok_do_ramon",
-    "pendente": [
-     "aceitar o custo honesto: 15-30 min POR collab aceita (nao os '5 min' da proposta original — conserto do conselheiro)"
-    ]
-   },
-   "regra_de_morte": "3 collabs aceitas rendendo <3 seguidores cada, OU 3 semanas de DM sem nenhuma resposta, OU custo real >30 min/collab -> morre. Se o Reel de 12/08 der 0 share e 0 seguidor, esta acao SOBE de experimento para aposta principal (ja fica escrito hoje).",
-   "contador_nao_testado": 0,
-   "ultima_semana_contada": "2026-W33",
-   "nota": "Garimpo feito em 09/08 (varredura por subagente, so leitura): alvos @dudinhabully (562, RJ, humor identico), @ravenna_bully_ (2602), @pituco_bully (980), @fionaabully_ (1370, Macae/RJ), @rolly_bully (1461); reservas @dom_exotic_bully, @momoamora1. Incidente registrado: a aba caiu no meio e a varredura terminou logada no Instagram PESSOAL do Ramon (so leitura de perfis publicos, nenhuma acao); avisado a ele na conversa."
-  }
- ],
- "ok_do_ramon": "09/08/2026, na conversa: 'Se não houver custo, vc pode tocar!!!' — vale para as 3 decisões (custo zero em dinheiro). Portão de aprovação de post continua: nada publica sem o Aprovar dele no Telegram."
+  "decisoes": [
+    {
+      "id": "gancho-sonoro-cta",
+      "titulo": "Gancho sonoro nos 2 primeiros segundos + CTA de compartilhamento variado em todo Reel",
+      "dono": "Claude (producao) / Ramon (aprovacao da peca)",
+      "esperado": "os Reels comecarem a ser compartilhados e a puxar seguidor de fora da rede pessoal",
+      "metrica": "compartilhamentos por Reel e seguidores ganhos por Reel (fonte propria: insights do post)",
+      "precondicao": {
+        "tipo": "reels_publicados_minimo",
+        "quantidade": 3,
+        "desde": "2026-08-10"
+      },
+      "regra_de_morte": "Depois de 9 REELS PUBLICADOS (nao 3 semanas de calendario): alcance medio <150 OU 0 compartilhamento total -> o formato sai do banco de reus e a pauta vira SO distribuicao. (Conserto do conselheiro: era E, virou OU; conta por Reel publicado.)",
+      "contador_nao_testado": 1,
+      "ultima_semana_contada": "2026-W34"
+    },
+    {
+      "id": "seo-descoberta",
+      "titulo": "SEO de descoberta: nome do perfil, bio, geotag e hashtags de comportamento",
+      "dono": "Claude (producao)",
+      "esperado": "a conta passar a aparecer para quem nao conhece o Ramon (Pesquisa/Explorar)",
+      "metrica": "alcance de nao-seguidores + visitas por Pesquisa/Explorar (fonte propria, nunca o total de seguidores)",
+      "precondicao": {
+        "tipo": "reels_publicados_minimo",
+        "quantidade": 3,
+        "desde": "2026-08-10"
+      },
+      "regra_de_morte": "3 semanas apos aplicar: 0 alcance por Pesquisa/Explorar/hashtag -> desfaz e enterra. ALERTA do conselheiro registrado: termos de raca atraem comprador de filhote (audiencia errada) e geotag expoe a cidade da familia — por isso a palavra e dele.",
+      "contador_nao_testado": 1,
+      "ultima_semana_contada": "2026-W34",
+      "nota": "CONFERIDO NA TELA em 09/08 (regra zero): o perfil JA TINHA o SEO — nome 'Hana [pata] Exotic Bully Micro' e bio com 'Exotic Bully Micro - Tri Lilac Merle', 'A patroa: aqui quem manda sou eu' e 'Itajai SC - episodios novos seg/qua/sex'. Nada foi alterado no perfil. O que RESTA da decisao: geotag Itajai + hashtags de comportamento (max 4) nos POSTS a partir dos proximos lotes."
+    },
+    {
+      "id": "collab-micro",
+      "titulo": "1 collab/semana com perfil bully micro 500-2k (co-autoria de Reel)",
+      "dono": "Claude (garimpo + DM pronta) / Ramon (so envia a DM do celular)",
+      "esperado": "primeiro canal de distribuicao fora da rede pessoal",
+      "metrica": "seguidores ganhos por collab aceita (meta >=3) e taxa de resposta das DMs",
+      "precondicao": {
+        "tipo": "ok_do_ramon",
+        "pendente": [
+          "aceitar o custo honesto: 15-30 min POR collab aceita (nao os '5 min' da proposta original — conserto do conselheiro)"
+        ]
+      },
+      "regra_de_morte": "3 collabs aceitas rendendo <3 seguidores cada, OU 3 semanas de DM sem nenhuma resposta, OU custo real >30 min/collab -> morre. Se o Reel de 12/08 der 0 share e 0 seguidor, esta acao SOBE de experimento para aposta principal (ja fica escrito hoje).",
+      "contador_nao_testado": 1,
+      "ultima_semana_contada": "2026-W34",
+      "nota": "Garimpo feito em 09/08 (varredura por subagente, so leitura): alvos @dudinhabully (562, RJ, humor identico), @ravenna_bully_ (2602), @pituco_bully (980), @fionaabully_ (1370, Macae/RJ), @rolly_bully (1461); reservas @dom_exotic_bully, @momoamora1. Incidente registrado: a aba caiu no meio e a varredura terminou logada no Instagram PESSOAL do Ramon (so leitura de perfis publicos, nenhuma acao); avisado a ele na conversa."
+    }
+  ],
+  "ok_do_ramon": "09/08/2026, na conversa: 'Se não houver custo, vc pode tocar!!!' — vale para as 3 decisões (custo zero em dinheiro). Portão de aprovação de post continua: nada publica sem o Aprovar dele no Telegram."
 }
