@@ -81,7 +81,10 @@ def _achar_chaves():
     for c in candidatos:
         if c and os.path.isfile(c):
             return c
-    return candidatos[1]  # caminho preferido, para a mensagem de erro apontar onde deveria estar
+    tentados = "\n  - ".join(c for c in candidatos if c)
+    raise RuntimeError(
+        f"chaves-api.txt não encontrado. Tentei:\n  - {tentados}"
+    )
 
 
 CHAVES = _achar_chaves()
