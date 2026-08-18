@@ -4,6 +4,22 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## 📣 18/08/2026 — REUNIÃO DE EMERGÊNCIA: 7 IAs opinaram sobre o engajamento travado
+
+Ele: *"não estou vendo estratégia... fale com todas as ias, quero a opinião sem
+falta de todas."* Ata completa em `estrategia/reuniao-2026-08-18-engajamento.md`.
+
+Resumo: 4 diretores + ChatGPT + DeepSeek + Grok deram opinião às cegas (Gemini
+sem crédito, Kimi instável). Conselheiro vetou o pacote por empilhar 7 mudanças
+de uma vez e mandou checar a premissa do diretor-redes antes de apostar nela.
+**Checagem real (Graph API):** 72% do alcance dos últimos 9 dias já vem de
+conta NÃO-seguidora — a tese de "só a base vê" caiu. O problema é conversão
+(zero salvo, zero compartilhamento em 9/9 posts), não distribuição.
+**Decisão:** próximo Reel muda o sujeito (a Hana "denuncia" o dono, não só faz
+graça), roteiro só passa se alguém salvaria/marcaria de verdade, fecho de
+legenda com marcação nomeada. Regra de morte: 3 Reels no formato novo com 0
+salvo E 0 compartilhamento nos 3 → volta a discutir distribuição/TikTok.
+
 ## 🖥️ 18/08/2026 — SEGUNDA AUDITORIA DA MÁQUINA NOVA: achado e consertado o bug que ia furar o domingo
 
 Ordem dele: *"audite de ponta a ponta e veja se precisa arrumar algo para esse
