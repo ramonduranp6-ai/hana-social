@@ -4,6 +4,36 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## 🖥️ 18/08/2026 — SEGUNDA AUDITORIA DA MÁQUINA NOVA: achado e consertado o bug que ia furar o domingo
+
+Ordem dele: *"audite de ponta a ponta e veja se precisa arrumar algo para esse
+computador conseguir rodar"*. Tudo abaixo é conferido por comando nesta sessão
+(regra zero) — a auditoria de 17/08 (ambiente geral) já tinha passado; esta foi
+mais funda, script por script.
+
+**🔴 Bug real, achado e já consertado:** `studio/lote_automatico.py` procurava a
+chave do Gemini em `~\OneDrive\Desktop\Claude code APIs\...` — pasta que **nunca
+existiu nesta máquina**. No próximo domingo o robô ia quebrar tentando gerar a
+legenda, exatamente o mesmo tipo de bug que `gerar_trilha.py` já tinha levado em
+02/08/2026. Corrigido com a mesma lista de lugares que `gerar_trilha.py` e
+`recepcionista.py` já usam (prioridade: `OneDrive\IA-Hub\` pessoal primeiro).
+**De quebra:** o `.garimpo_estado.json.tmp` (escrita atômica do garimpo) tinha o
+mesmo furo de privacidade do arquivo real — nomes do rolo de câmera pessoal sem
+entrar no `.gitignore`. Fechado junto.
+
+**Conferido e OK, sem mexer:** os 43 itens do `ambiente.json` do hub · token do
+Instagram (válido até 24/09) · variáveis TELEGRAM/IG_ACCESS_TOKEN definidas no
+usuário local · os 3 perfis do Chrome (pessoal, Hana, Canecas) sincronizados
+nesta máquina · Ollama rodando com 2 modelos · `git config windows.appendAtomically`
+persistiu do conserto de 17/08. O "erro" do publicador no GitHub Actions
+continua sendo o alarme de propósito (Reel da Eloen aprovado sem data), não bug.
+
+**Falso alarme que quase virei achado:** os textos de `motivos_reprovacao` no
+estado do garimpo pareciam corrompidos ("reconhec�vel") ao imprimir no terminal
+— conferi os bytes crus do arquivo e do `.py` fonte: os dois estão em UTF-8
+correto. Era só o display do meu terminal, não o dado real. Registrado para não
+repetir a checagem incompleta da próxima vez.
+
 ## ✅ 17/08/2026 — ELE APROVOU 3 REELS NA CONVERSA; BALÕES RECUSADO
 
 Ele viu os 4 Reels na conversa (mandados por arquivo, não pelo Telegram) e
