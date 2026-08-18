@@ -66,10 +66,25 @@ RAIZ = os.path.dirname(AQUI)
 SELECIONADAS = os.path.join(RAIZ, "Fotos da Hana", "02 - selecionadas")
 FILA = os.path.join(RAIZ, "content", "queue")
 PUBLICADOS = os.path.join(RAIZ, "content", "posted")
-CHAVES = os.path.join(
-    os.path.expanduser("~"),
-    "OneDrive", "Desktop", "Claude code APIs", "Documents", "IA-Hub", "chaves-api.txt",
-)
+def _achar_chaves():
+    """Mesma ordem de preferência do ask-ai.py: pessoal antes do corporativo.
+    Caminho antigo (Claude code APIs) nunca existiu na máquina nova — achado na
+    auditoria de 17-18/08/2026; PC novo não achava a chave e o lote de domingo
+    ia falhar sem avisar antes."""
+    casa = os.path.expanduser("~")
+    candidatos = [
+        os.environ.get("IA_HUB_CHAVES", ""),
+        os.path.join(casa, "OneDrive", "IA-Hub", "chaves-api.txt"),
+        os.path.join(casa, "OneDrive", "Desktop", "Claude Code", "IA-Hub", "chaves-api.txt"),
+        os.path.join(casa, "OneDrive", "Desktop", "Crescimento IA", "Documents", "IA-Hub", "chaves-api.txt"),
+    ]
+    for c in candidatos:
+        if c and os.path.isfile(c):
+            return c
+    return candidatos[1]  # caminho preferido, para a mensagem de erro apontar onde deveria estar
+
+
+CHAVES = _achar_chaves()
 
 GEMINI_URL = (
     "https://generativelanguage.googleapis.com/v1beta/models/"

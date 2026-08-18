@@ -1138,3 +1138,23 @@ WARNING NMS time limit 2.050s exceeded
 
 [ok] orçamento de 40.0 min esgotado — rode de novo pra continuar.
 [resumo] 187 aprovado(s) no total (146 foto, 41 vídeo) de 34550 na pasta. Relatório em C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\01 - brutas (suba aqui)\garimpo\RELATORIO.md
+[info] 34552 arquivo(s) na pasta, 21124 ainda não varrido(s).
+Creating new Ultralytics Settings v0.0.6 file  
+View Ultralytics Settings with 'yolo settings' or at 'C:\Users\ramon\AppData\Roaming\Ultralytics\settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+[info] rodando com 3 thread(s). para em 40.0 min.
+[progresso] 10/21124 nesta sessão (13438 no total) — estado salvo.
+[progresso] 20/21124 nesta sessão (13448 no total) — estado salvo.
+[progresso] 30/21124 nesta sessão (13458 no total) — estado salvo.
+[progresso] 40/21124 nesta sessão (13468 no total) — estado salvo.
+Traceback (most recent call last):
+  File "C:\Users\ramon\OneDrive\Desktop\Hana Social\studio\garimpo.py", line 639, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\ramon\OneDrive\Desktop\Hana Social\studio\garimpo.py", line 608, in main
+    salvar_estado_atomico(estado)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\ramon\OneDrive\Desktop\Hana Social\studio\garimpo.py", line 188, in salvar_estado_atomico
+    os.replace(tmp, ESTADO_ARQ)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Acesso negado: 'C:\\Users\\ramon\\OneDrive\\Desktop\\Hana Social\\studio\\.garimpo_estado.json.tmp' -> 'C:\\Users\\ramon\\OneDrive\\Desktop\\Hana Social\\studio\\.garimpo_estado.json'

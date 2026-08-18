@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 17/08/2026 18:01. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 17/08/2026 21:47. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -27,11 +27,11 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-17T20:51:02Z schedule failure
-2026-08-17T20:17:19Z schedule failure
-2026-08-17T19:49:06Z schedule failure
+2026-08-18T00:45:41Z schedule failure
+2026-08-17T23:44:05Z schedule failure
+2026-08-17T23:15:08Z schedule failure
 ```
-- Vigia local (Agendador do Windows): próxima execução segunda-feira, 17 de agosto de 2026 18:10:00
+- Vigia local (Agendador do Windows): próxima execução quarta-feira, 19 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
@@ -52,26 +52,72 @@ mudança de status nem publicar.
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
 
-2 rascunho(s) de Reel prontos em `Fotos da Hana/06 - videos e trilhas/rascunhos`, montados dos vídeos novos. Contador de semanas sem filmagem voltou a zero.
+**Não montei lote esta semana** — nenhum vídeo novo em `01 - brutas (suba aqui)`, de propósito (foto parada já deu zero em salvos, compartilhamentos e seguidores ganhos, 4 vezes seguidas — regra fixa desde 31/07/2026).
 
-**Ainda não entraram na fila** — falta escolher o trecho e o gancho, que é julgamento, e passar pelo auditor. Fazer na reunião de segunda.
+🎬 UMA CENA. ATÉ QUINTA (07/08).
+
+Antes vinham três cenas de uma vez. A reunião de 02/08 decidiu que isso é pedido
+demais para quem trabalha o dia todo — e é justamente a hipótese que está sendo
+testada esta semana. Então é UMA só.
+
+═══════════════════════════════════════
+
+"A PATROA MANDOU"
+
+O QUE É: ela te encara ou late pedindo alguma coisa — e você levanta e obedece
+na hora, com a câmera vendo você obedecer.
+
+COMO FILMAR (4 regras, e a 2 é a que mais importa):
+1. Celular EM PÉ (vertical), apoiado NO CHÃO, na altura dos olhos dela.
+   Câmera PARADA — se a câmera se mexe, o assunto sai de quadro no meio.
+2. O ROSTO DELA DE FRENTE NOS 2 PRIMEIROS SEGUNDOS. É o frame que segura quem
+   está rolando o feed. Chame o nome dela, ou ponha um petisco atrás da câmera
+   para o olhar vir.
+3. Som do ambiente, sem música tocando. O nicho roda em áudio original.
+4. 15 a 30 segundos, de dia, perto da janela.
+
+O QUE FAZ A CENA FUNCIONAR: o DESFECHO VISÍVEL. Ela pede, você cumpre, e dá
+para ver que cumpriu. Sem o desfecho é só um cachorro latindo.
+
+FILME DUAS VEZES. Sai mais barato repetir na hora do que descobrir na quinta que
+o rosto não apareceu e perder a semana.
+
+═══════════════════════════════════════
+
+ONDE SALVAR (caminho completo — dá para jogar pelo OneDrive do celular):
+C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\01 - brutas (suba aqui)
+
+SE NÃO DER ATÉ QUINTA: existe um plano B guardado — um Reel curto com os ~4
+segundos de rosto que foram achados no vídeo antigo da praia. Ele só vai ao ar
+se a cena não chegar. Não é substituto, é para a semana não furar.
+
+─────────────────────────────────────────────────────────────────────
+NOTA DE CORREÇÃO (02/08/2026). A versão anterior deste pedido dizia que "nos 12
+vídeos brutos o rosto não surge em nenhum frame". Isso estava ERRADO e foi
+conferido com ffprobe e extração de frames: nunca existiram 12 vídeos — nove
+eram clipes de Live Photo de ~2 segundos — e no vídeo da praia (IMG_1725.MOV)
+existem cerca de 4 segundos de rosto. Nos outros dois (TV e navio) o laudo
+estava certo: ela está de costas do começo ao fim.
+
+⏳ **1ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
 
 ## Últimas mudanças no projeto
 ```
+27aa4bd chore: recado do lote semanal [skip ci]
+a073650 Destrava o veredito: 2 tipos de pre-condicao nunca existiram no codigo
 8463359 Aprovacao dele: 3 Reels liberados, baloes recusado, +1 bug consertado
 d79991c Auditoria da maquina nova: ambiente aprovado, achados registrados
 8c553bb Conserta o Sentinela que derrubava o publicador desde 14/08
 246e6f5 chore: atualiza estado da fila [skip ci]
 eaa52fe Reel chegada da Eloen: versoes v4-v6 de 12s, roteiro e fila atualizados, log do garimpo
 f59c8aa chore: atualiza estado da fila [skip ci]
-2c91db7 chore: atualiza estado da fila [skip ci]
-b0e3b11 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
-M estrategia/decisoes-2026-08-09.json
- M publisher/veredito.py
-?? .claude/settings.local.json
+M content/.lote_semana_executada
+ M content/.semanas_sem_cena
+ M studio/garimpo_rodada.log
+?? studio/.garimpo_estado.json.tmp
 ```
 
 ## Decisões e contexto
