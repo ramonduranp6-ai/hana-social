@@ -151,8 +151,9 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    checado sozinho antes de aprovar. **Lição que fica: rodar esta checagem
    antes de qualquer post ir pra aprovação, não só quando ele perguntar.**
 3. **Preservar a cor tri lilac merle**; legenda em PT-BR terminando com
-   pergunta; máx. 4 hashtags; posts seg/qua/sex às **11:00Z — 8h da manhã de
-   Itajaí** (era 18h até 03/08/2026, quando ele mandou trocar). A hora se conta
+   pergunta; máx. 4 hashtags; posts seg/qua/sex às **14:00Z — 11h da manhã de
+   Itajaí** (era 18h até 03/08/2026, depois 8h até 19/08/2026 — mudou pro pico
+   real de seguidores online medido na API, com OK dele). A hora se conta
    sempre a partir do fuso dele, nunca direto em UTC.
 3b. **A conta JÁ É "Criador de conteúdo"** — conferido na tela em 28/07/2026
    (`instagram.com/accounts/professional_account_tools/` só oferece "trocar para

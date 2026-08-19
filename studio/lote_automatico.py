@@ -100,7 +100,10 @@ GEMINI_URL = (
 # nunca o contrário: escrever a hora em UTC de cabeça é o tipo de erro que faz o
 # post cair no dia errado.
 DIAS = (0, 2, 4)
-HORA_UTC = 11
+# Mudou de 11 (8h Itajaí) pra 14 (11h Itajaí) em 19/08/2026: o online_followers
+# real da conta (Graph API) mostrou pico de seguidores online as 13h-17h UTC
+# (10h-14h Itajai), nao as 8h. Pesquisa + 4 IAs do IA-Hub + OK dele.
+HORA_UTC = 14
 
 BRIEFING = """Você escreve legendas para o Instagram @hanaduransanches, perfil da
 cachorra Hana — uma Exotic Bully Micro tri lilac merle, de Itajaí/SC.
