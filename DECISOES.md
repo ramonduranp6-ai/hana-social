@@ -4,6 +4,15 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 Mais recente em cima.
 
+## 🎓 19/08/2026 — PESQUISA DE CRESCIMENTO (~20 fontes) + 4 IAs reagiram
+
+Ele: *"Estude como aumentar seguidores, assista 20 vídeos, traga pras IAs hub
+e aprenda."* Ata completa: `estrategia/crescimento-instagram-2026-08-19.md`.
+Legenda longa descartada (unanimidade das 4 IAs). Achado real na API: pico dos
+NOSSOS seguidores é 10h-14h Itajaí, não 8h (horário atual) — proposto mudar,
+esperando OK dele. Highlights por pilar: só ele faz (app). Collab e CTA
+seguem como já estava.
+
 ## 📣 18/08/2026 — REUNIÃO DE EMERGÊNCIA: 7 IAs opinaram sobre o engajamento travado
 
 Ele: *"não estou vendo estratégia... fale com todas as ias, quero a opinião sem
