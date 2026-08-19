@@ -48,6 +48,7 @@ MARCADOR_TOKEN_CEGO = os.path.join(ROOT, "content", ".aviso_token_cego")
 def checar_fila():
     agora = dt.datetime.now(dt.timezone.utc)
     problemas = []
+    avisos = []
     futuros = 0
     for p in q.load_all():
         status = p.get("status")
@@ -56,10 +57,13 @@ def checar_fila():
         elif status in ("pending", "approved"):
             # Post sem data marcada nao e' atraso: e' peca pronta esperando o
             # Ramon decidir QUANDO vai ao ar (ex.: o Reel da chegada da Eloen,
-            # 14/08/2026). Sem esta guarda o sentinela quebrava com AttributeError
-            # e derrubava o workflow inteiro depois de tudo ja ter dado certo.
+            # 14/08/2026). NAO e' falha tecnica — vira aviso, nao problema, senao
+            # o GitHub manda e-mail de "workflow falhou" a cada 30 min por dias
+            # seguidos por causa de uma decisao de familia sem prazo (achado
+            # 19/08/2026: e-mail de falha reincidente, ele perguntou "deu problema
+            # em algo?" e o motivo era so isso).
             if not p.get("scheduled_for"):
-                problemas.append(f"{p['_id']}: pronto, mas SEM DATA — esperando ele marcar")
+                avisos.append(f"{p['_id']}: pronto, mas SEM DATA — esperando ele marcar")
                 continue
             t = dt.datetime.fromisoformat(p["scheduled_for"].replace("Z", "+00:00"))
             atraso_min = (agora - t).total_seconds() / 60
@@ -75,6 +79,10 @@ def checar_fila():
             f"{MIN_POSTS_FUTUROS}) — sem reforco a fila acaba e nenhum aviso "
             f"normal pega isso antes de faltar post"
         )
+    if avisos:
+        print("[SENTINELA] AVISOS (nao derrubam o job, nao mandam e-mail):")
+        for x in avisos:
+            print(" -", x)
     if problemas:
         print("[SENTINELA] PROBLEMAS ENCONTRADOS:")
         for x in problemas:
