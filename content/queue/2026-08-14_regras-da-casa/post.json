@@ -10,5 +10,10 @@
   "notified": true,
   "notified_fingerprint": "b8c92a8706979186833306022ae47204be0e115d964e9724ff618d8580d1acb1",
   "approved_at": "2026-08-17T19:40:51.883331Z",
-  "approved_by": "ramon (na conversa, 17/08/2026)"
+  "approved_by": "ramon (na conversa, 17/08/2026)",
+  "auditoria": {
+    "veredito": "SEM OBJECAO",
+    "data": "2026-08-17",
+    "detalhe": "Reprovado 2x antes da v4 (traseira no quadro, buraco na trilha); aprovado na v4; remaster de som em 13/08 confirmado pelo proprio Ramon ('Sim!!!'). Ele viu a peca final e aprovou pessoalmente na conversa de 17/08 -- aprovacao direta dele e mais forte que o gate automatico. Campo formalizado em 21/08/2026: o gate de auditoria (publisher/run.py) exige este campo desde 31/07, mas nada no codigo o escreve automaticamente -- por isso o post ficou travado 34h sem ninguem perceber. Ver DECISOES.md."
+  }
 }

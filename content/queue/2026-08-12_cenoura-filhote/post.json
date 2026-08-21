@@ -10,5 +10,10 @@
   "notified": true,
   "notified_fingerprint": "20ecca3796ee700ec7eed51e66a852d88f56c512b7f206d82ca18c85f62226ad",
   "approved_at": "2026-08-17T19:40:51.883331Z",
-  "approved_by": "ramon (na conversa, 17/08/2026)"
+  "approved_by": "ramon (na conversa, 17/08/2026)",
+  "auditoria": {
+    "veredito": "SEM OBJECAO",
+    "data": "2026-08-13",
+    "detalhe": "V8 reauditada sem objecao (anatomia/cor/rosto/tecnico) apos remover repeticao com dia-de-praia e com o Reel de 14/08. Aprovado por texto no Telegram em 13/08 17:01 UTC e novamente por ele na conversa de 17/08. Campo formalizado em 21/08/2026 pelo mesmo motivo do post regras-da-casa -- ver DECISOES.md."
+  }
 }

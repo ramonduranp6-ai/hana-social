@@ -10,5 +10,10 @@
   "notified": true,
   "notified_fingerprint": "de43fa46558eb8421bc9d38ef26ecfe9a92472e0eed1b3456f7c4c4750ba3362",
   "approved_at": "2026-08-17T19:40:51.883331Z",
-  "approved_by": "ramon (na conversa, 17/08/2026)"
+  "approved_by": "ramon (na conversa, 17/08/2026)",
+  "auditoria": {
+    "veredito": "SEM OBJECAO",
+    "data": "2026-08-14",
+    "detalhe": "3 rodadas de auditoria independente do diretor-reels (estrategia/auditoria-chegada-eloen-2026-08-14.md) -- rosto de terceiro, vazamento de noticia, tecnico (luz/som) -- sem objecao na v6 final. Ele proprio viu e aprovou na conversa de 17/08. Campo formalizado em 21/08/2026 pelo mesmo motivo do post regras-da-casa -- ver DECISOES.md. Continua SEM DATA (decisao dele, nao afeta esta trava)."
+  }
 }

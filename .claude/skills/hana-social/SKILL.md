@@ -297,6 +297,14 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    proporção fora de 9:16? (e) o clipe é bonito ou é estranho — responder como
    um leigo que rola o feed. **Aprovar é proibido: ou aponta o defeito, ou
    escreve SEM OBJEÇÃO em cada item.** Um "não" reprova e a mídia não sai.
+   ⚠️ **O veredito precisa virar campo no post.json, ou a peça trava
+   sozinha.** Achado em 21/08/2026: `publisher/run.py` bloqueia publicação sem
+   `"auditoria": {"veredito": "SEM OBJECAO"}` no post.json desde 31/07 — mas
+   NADA no código escreve esse campo automaticamente. 3 posts aprovados por
+   ele na conversa em 17/08 ficaram sem o campo, e o "regras da casa" passou
+   **34h travado**, falhando a cada 30 min no GitHub, até eu notar. **Sempre
+   que aprovar um post (Telegram ou conversa), escrever o campo `auditoria`
+   no post.json na hora** — não deixar para depois.
 3j. **VÍDEO DE IA: PELO APP, NÃO PELA API** (avaliação dele, 31/07/2026:
    *"o ideal não é você fazer via api e sim como se fosse um usuário comum, o
    Gemini entrega melhor"*, e *"temos um plano bom para ser usado na Gemini"*).

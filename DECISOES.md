@@ -2,6 +2,22 @@
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+## 🔴 21/08/2026 — BUG REAL: "regras da casa" ficou 34h travado, achado ao checar "como estamos"
+
+Causa: `publisher/run.py` exige `post.json["auditoria"]["veredito"]=="SEM OBJECAO"`
+desde 31/07, mas nenhum código escreve esse campo — só é populado manualmente.
+Os 3 posts aprovados por ele na conversa em 17/08 (regras-da-casa, cenoura-filhote,
+chegada-eloen) nunca tiveram esse campo escrito. O "regras da casa", ao vencer
+em 19/08, ficou TRAVADO — sentinela falhando a cada 30 min desde então, sem eu
+notar (o e-mail de falha real virou igual ao ruído do bug já consertado de
+19/08, e eu não tinha voltado a checar o log).
+
+**Conserto:** escrevi o campo `auditoria` nos 3 posts.json com o veredito REAL
+já documentado nas notas de cada um (histórico de auditoria + aprovação
+pessoal dele em 17/08 — não inventei nenhum veredito novo). Testado:
+`passou_auditoria()` libera os 3 agora. Nota nova na skill (3i) pra isso não
+se repetir: todo post aprovado precisa do campo escrito NA HORA.
+
 Mais recente em cima.
 
 ## 🎓 19/08/2026 — PESQUISA DE CRESCIMENTO (~20 fontes) + 4 IAs reagiram
