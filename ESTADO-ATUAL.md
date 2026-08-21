@@ -1,15 +1,15 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 17/08/2026 21:47. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 21/08/2026 09:14. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
 
 | Quando (UTC) | Post | Tipo | Status |
 |---|---|---|---|
-| 2026-08-21T11:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
+| 2026-08-22T14:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
 | 2026-08-14T11:00:00Z | 2026-08-14_a-patroa-mimada | reel | rejected |
-| 2026-08-19T11:00:00Z | 2026-08-14_regras-da-casa | reel | approved |
+| 2026-08-21T14:00:00Z | 2026-08-14_regras-da-casa | reel | approved |
 | 2026-08-17T11:00:00Z | 2026-08-17_golden-hour | reel | rejected |
 | 2026-08-19T11:00:00Z | 2026-08-19_a-noite-dela | reel | rejected |
 | 2026-08-19T11:00:00Z | 2026-08-19_baloes-dela | reel | rejected |
@@ -27,27 +27,19 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-18T00:45:41Z schedule failure
-2026-08-17T23:44:05Z schedule failure
-2026-08-17T23:15:08Z schedule failure
+(não consegui consultar — checar 'gh auth status')
 ```
-- Vigia local (Agendador do Windows): próxima execução quarta-feira, 19 de agosto de 2026 18:10:00
+- Vigia local (Agendador do Windows): próxima execução sexta-feira, 21 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
-Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
-
-- 00_LEGENDAS.txt
-- 01_14-08_REEL-REGRAS.mp4
-
-Ele responde pelos números. Enquanto não responder, **não commitar**
-mudança de status nem publicar.
+Nada esperando aprovação (pasta vazia ou inexistente).
 
 ## Acervo de fotos
 - Brutas a processar: 39 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34546
+- Fotos do iPhone sincronizadas (iCloud): 34559
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -103,21 +95,21 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
-27aa4bd chore: recado do lote semanal [skip ci]
-a073650 Destrava o veredito: 2 tipos de pre-condicao nunca existiram no codigo
-8463359 Aprovacao dele: 3 Reels liberados, baloes recusado, +1 bug consertado
-d79991c Auditoria da maquina nova: ambiente aprovado, achados registrados
-8c553bb Conserta o Sentinela que derrubava o publicador desde 14/08
-246e6f5 chore: atualiza estado da fila [skip ci]
-eaa52fe Reel chegada da Eloen: versoes v4-v6 de 12s, roteiro e fila atualizados, log do garimpo
-f59c8aa chore: atualiza estado da fila [skip ci]
+0e6b5f9 @ Retomada: remarca os 2 Reels aprovados para 11h de Itajai (21 e 22/08)
+0f3fb3f Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
+1c1f1a5 Destrava o veredito: 2 tipos de pre-condicao nunca existiram no codigo
+1b2a0f4 chore: atualiza estado da fila [skip ci]
+5e2ffb5 chore: atualiza estado da fila [skip ci]
+dfd4b5a Muda o horario fixo de post: 8h -> 11h de Itajai (pico real medido na API)
+26869db Pesquisa de crescimento (20 fontes + 4 IAs) + pico real de horario descoberto
+d4162e3 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
 ```
 Alterações não commitadas:
 ```
-M content/.lote_semana_executada
- M content/.semanas_sem_cena
+M ESTADO-ATUAL.md
  M studio/garimpo_rodada.log
-?? studio/.garimpo_estado.json.tmp
+?? content/legendas-pov-2026-08-21.md
+?? studio/roteiros/2026-08_POV1_a-patroa-mandou.md
 ```
 
 ## Decisões e contexto
@@ -125,7 +117,110 @@ M content/.lote_semana_executada
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+## 🔴 21/08/2026 — BUG REAL: "regras da casa" ficou 34h travado, achado ao checar "como estamos"
+
+Causa: `publisher/run.py` exige `post.json["auditoria"]["veredito"]=="SEM OBJECAO"`
+desde 31/07, mas nenhum código escreve esse campo — só é populado manualmente.
+Os 3 posts aprovados por ele na conversa em 17/08 (regras-da-casa, cenoura-filhote,
+chegada-eloen) nunca tiveram esse campo escrito. O "regras da casa", ao vencer
+em 19/08, ficou TRAVADO — sentinela falhando a cada 30 min desde então, sem eu
+notar (o e-mail de falha real virou igual ao ruído do bug já consertado de
+19/08, e eu não tinha voltado a checar o log).
+
+**Conserto:** escrevi o campo `auditoria` nos 3 posts.json com o veredito REAL
+já documentado nas notas de cada um (histórico de auditoria + aprovação
+pessoal dele em 17/08 — não inventei nenhum veredito novo). Testado:
+`passou_auditoria()` libera os 3 agora. Nota nova na skill (3i) pra isso não
+se repetir: todo post aprovado precisa do campo escrito NA HORA.
+
 Mais recente em cima.
+
+## 📅 21/08/2026 — CALENDÁRIO DE RETOMADA (decisão do diretor-redes, alçada dele)
+
+11 dias sem publicar (último post 10/08). Datas remarcadas — só `scheduled_for`,
+nada de status, nada publicado na mão:
+
+| Peça | Itajaí | UTC |
+|---|---|---|
+| regras-da-casa | 21/08 11:00 | `2026-08-21T14:00:00Z` |
+| cenoura-filhote | 22/08 11:00 | `2026-08-22T14:00:00Z` |
+| chegada-eloen | SEM DATA — decisão da família, não se mexe | — |
+
+`regras-da-casa` vai primeiro: perdeu o slot de 19/08 pelo bug da auditoria e o
+conceito nasceu do estudo de virais (lista quebrada + veredito + pergunta de
+identificação). Um por dia, nunca dois no mesmo slot — datas iguais publicariam
+juntos na mesma rodada. Não publiquei agora (23h de Itajaí, horário morto):
+esperar 12h pelo pico medido vale mais que 12h a menos de silêncio.
+
+**Métrica-alvo em 48h** (baseline: 9/9 posts com 0 salvo e 0 share; melhor Reel
+= 182 de alcance). `regras-da-casa` → **COMPARTILHAMENTO ≥ 3** (CTA é pergunta de
+identificação; e `sends per reach` é o sinal nº1 do Mosseri). `cenoura-filhote`
+→ **SALVAMENTO ≥ 3** (arco de nostalgia é isca de salvar, não de mandar). Os dois
+→ alcance ≥ 250. Curtida não conta.
+**Linha de corte:** se alcance ficar ≥182 e share/salvo derem 0 de novo, é o 10º
+zero seguido — o problema é o CONCEITO, não o horário nem a fila, e o pilar
+"A PATROA MANDA" precisa morrer em vez de ser reagendado.
+
+**Segundo conserto na mesma checagem:** a salva de reforço do cron
+(`.github/workflows/publish.yml`) ainda disparava 11:00Z seg/qua/sex — o reforço
+das 8h antigas. Desde 19/08 o horário é 11h de Itajaí = 14:00Z, e a linha não foi
+movida junto: o reforço protegia um horário que não existe mais, e sábado não
+tinha reforço nenhum. Movida para `14 * * *` (14:00Z, todo dia).
+
+## 🎓 19/08/2026 — PESQUISA DE CRESCIMENTO (~20 fontes) + 4 IAs reagiram
+
+Ele: *"Estude como aumentar seguidores, assista 20 vídeos, traga pras IAs hub
+e aprenda."* Ata completa: `estrategia/crescimento-instagram-2026-08-19.md`.
+Legenda longa descartada (unanimidade das 4 IAs). Achado real na API: pico dos
+NOSSOS seguidores é 10h-14h Itajaí, não 8h (horário atual) — proposto mudar,
+esperando OK dele. Highlights por pilar: só ele faz (app). Collab e CTA
+seguem como já estava.
+
+## 📣 18/08/2026 — REUNIÃO DE EMERGÊNCIA: 7 IAs opinaram sobre o engajamento travado
+
+Ele: *"não estou vendo estratégia... fale com todas as ias, quero a opinião sem
+falta de todas."* Ata completa em `estrategia/reuniao-2026-08-18-engajamento.md`.
+
+Resumo: 4 diretores + ChatGPT + DeepSeek + Grok deram opinião às cegas (Gemini
+sem crédito, Kimi instável). Conselheiro vetou o pacote por empilhar 7 mudanças
+de uma vez e mandou checar a premissa do diretor-redes antes de apostar nela.
+**Checagem real (Graph API):** 72% do alcance dos últimos 9 dias já vem de
+conta NÃO-seguidora — a tese de "só a base vê" caiu. O problema é conversão
+(zero salvo, zero compartilhamento em 9/9 posts), não distribuição.
+**Decisão:** próximo Reel muda o sujeito (a Hana "denuncia" o dono, não só faz
+graça), roteiro só passa se alguém salvaria/marcaria de verdade, fecho de
+legenda com marcação nomeada. Regra de morte: 3 Reels no formato novo com 0
+salvo E 0 compartilhamento nos 3 → volta a discutir distribuição/TikTok.
+
+## 🖥️ 18/08/2026 — SEGUNDA AUDITORIA DA MÁQUINA NOVA: achado e consertado o bug que ia furar o domingo
+
+Ordem dele: *"audite de ponta a ponta e veja se precisa arrumar algo para esse
+computador conseguir rodar"*. Tudo abaixo é conferido por comando nesta sessão
+(regra zero) — a auditoria de 17/08 (ambiente geral) já tinha passado; esta foi
+mais funda, script por script.
+
+**🔴 Bug real, achado e já consertado:** `studio/lote_automatico.py` procurava a
+chave do Gemini em `~\OneDrive\Desktop\Claude code APIs\...` — pasta que **nunca
+existiu nesta máquina**. No próximo domingo o robô ia quebrar tentando gerar a
+legenda, exatamente o mesmo tipo de bug que `gerar_trilha.py` já tinha levado em
+02/08/2026. Corrigido com a mesma lista de lugares que `gerar_trilha.py` e
+`recepcionista.py` já usam (prioridade: `OneDrive\IA-Hub\` pessoal primeiro).
+**De quebra:** o `.garimpo_estado.json.tmp` (escrita atômica do garimpo) tinha o
+mesmo furo de privacidade do arquivo real — nomes do rolo de câmera pessoal sem
+entrar no `.gitignore`. Fechado junto.
+
+**Conferido e OK, sem mexer:** os 43 itens do `ambiente.json` do hub · token do
+Instagram (válido até 24/09) · variáveis TELEGRAM/IG_ACCESS_TOKEN definidas no
+usuário local · os 3 perfis do Chrome (pessoal, Hana, Canecas) sincronizados
+nesta máquina · Ollama rodando com 2 modelos · `git config windows.appendAtomically`
+persistiu do conserto de 17/08. O "erro" do publicador no GitHub Actions
+continua sendo o alarme de propósito (Reel da Eloen aprovado sem data), não bug.
+
+**Falso alarme que quase virei achado:** os textos de `motivos_reprovacao` no
+estado do garimpo pareciam corrompidos ("reconhec�vel") ao imprimir no terminal
+— conferi os bytes crus do arquivo e do `.py` fonte: os dois estão em UTF-8
+correto. Era só o display do meu terminal, não o dado real. Registrado para não
+repetir a checagem incompleta da próxima vez.
 
 ## ✅ 17/08/2026 — ELE APROVOU 3 REELS NA CONVERSA; BALÕES RECUSADO
 

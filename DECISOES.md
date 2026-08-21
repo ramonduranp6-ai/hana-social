@@ -2,6 +2,19 @@
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+## 🧾 21/08/2026 12:20Z — CICLO DO VP DE MARKETING (automático, nada publicado)
+
+Veredito: **NÃO TESTADO — e isso conta como não entrega do time.** 331 seguidores, +0 em 12
+dias, 9/9 posts com 0 salvo e 0 compartilhamento; nada foi ao ar desde 10/08. O VP achou um
+furo ainda consertável: as legendas novas com CTA de salvar (`content/legendas-pov-2026-08-21.md`)
+**não foram coladas em post.json nenhum** — `regras-da-casa` (hoje 14:00Z) e `cenoura-filhote`
+(amanhã) sairiam com o CTA-pergunta declarado morto em 18/08, contaminando o teste de 48h.
+Trocar a legenda **precisa do sim dele** (ele aprovou a versão velha em 17/08), então nada foi
+alterado. Diretores: redes ENTREGOU, reels e criativo entregaram peça mas deixaram o arquivo
+fora do repositório, **atualidades falhou pela 2ª rodada seguida** — recomendação do VP é tirá-lo
+do projeto se não entregar até 22/08 12:00Z (decisão do Ramón). Fila fica vazia a partir de
+23/08. Ordens numeradas, donos e prazos: `estrategia/vp-marketing-2026-08-21.md`.
+
 ## 🔴 21/08/2026 — BUG REAL: "regras da casa" ficou 34h travado, achado ao checar "como estamos"
 
 Causa: `publisher/run.py` exige `post.json["auditoria"]["veredito"]=="SEM OBJECAO"`
