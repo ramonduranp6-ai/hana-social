@@ -3,7 +3,7 @@
   "media_file": "regras-v5-som14.mp4",
   "caption": "As regras daqui de casa estão todas em vigor.\nCumpridas? Nenhuma. A assinatura no final explica.\nQuem assina as regras aí na sua casa: você ou o pet?\n\n#exoticbullymicro #trililacmerle #bullybrasil #patroamimada",
   "scheduled_for": "2026-08-21T14:00:00Z",
-  "status": "approved",
+  "status": "failed",
   "pilar": "A PATROA MANDA",
   "audio_titulo": "trilha propria (Lyria 3): marcha travessa de pizzicato que explode em fanfarra; a fanfarra cai no frame em que ela aparece dormindo (o veredito).",
   "nota": "Substitui o lote de 5 reels que ele recusou em 06/08 ('Muito fraco... Pegar referência dos principais virais do mês'). Conceito do diretor-reels a partir do estudo de virais (estrategia/estudo-virais-2026-08.md): lista de regras quebrada uma a uma, julgamento com carinha de pena, veredito dormindo — 'ASSINADO: A PATROA'. 6 cortes em 11,8s, rosto em todos os planos, final em loop. Auditoria: reprovada 2x (traseira no quadro, buraco na trilha), aprovada na v4; pico de áudio baixado a -1,1 dBTP na v5. REMASTER 13/08 a pedido dele ('Sim!!!'): som para -13.79 LUFS pico -0.71 dBTP (era -16.18). Video intacto. Trava de fingerprint devolve pra aprovacao dele.",
@@ -15,5 +15,6 @@
     "veredito": "SEM OBJECAO",
     "data": "2026-08-17",
     "detalhe": "Reprovado 2x antes da v4 (traseira no quadro, buraco na trilha); aprovado na v4; remaster de som em 13/08 confirmado pelo proprio Ramon ('Sim!!!'). Ele viu a peca final e aprovou pessoalmente na conversa de 17/08 -- aprovacao direta dele e mais forte que o gate automatico. Campo formalizado em 21/08/2026: o gate de auditoria (publisher/run.py) exige este campo desde 31/07, mas nada no codigo o escreve automaticamente -- por isso o post ficou travado 34h sem ninguem perceber. Ver DECISOES.md."
-  }
+  },
+  "error": "Falha ao processar mídia (container 17931045540382795)"
 }
