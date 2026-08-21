@@ -20,6 +20,38 @@ se repetir: todo post aprovado precisa do campo escrito NA HORA.
 
 Mais recente em cima.
 
+## 📅 21/08/2026 — CALENDÁRIO DE RETOMADA (decisão do diretor-redes, alçada dele)
+
+11 dias sem publicar (último post 10/08). Datas remarcadas — só `scheduled_for`,
+nada de status, nada publicado na mão:
+
+| Peça | Itajaí | UTC |
+|---|---|---|
+| regras-da-casa | 21/08 11:00 | `2026-08-21T14:00:00Z` |
+| cenoura-filhote | 22/08 11:00 | `2026-08-22T14:00:00Z` |
+| chegada-eloen | SEM DATA — decisão da família, não se mexe | — |
+
+`regras-da-casa` vai primeiro: perdeu o slot de 19/08 pelo bug da auditoria e o
+conceito nasceu do estudo de virais (lista quebrada + veredito + pergunta de
+identificação). Um por dia, nunca dois no mesmo slot — datas iguais publicariam
+juntos na mesma rodada. Não publiquei agora (23h de Itajaí, horário morto):
+esperar 12h pelo pico medido vale mais que 12h a menos de silêncio.
+
+**Métrica-alvo em 48h** (baseline: 9/9 posts com 0 salvo e 0 share; melhor Reel
+= 182 de alcance). `regras-da-casa` → **COMPARTILHAMENTO ≥ 3** (CTA é pergunta de
+identificação; e `sends per reach` é o sinal nº1 do Mosseri). `cenoura-filhote`
+→ **SALVAMENTO ≥ 3** (arco de nostalgia é isca de salvar, não de mandar). Os dois
+→ alcance ≥ 250. Curtida não conta.
+**Linha de corte:** se alcance ficar ≥182 e share/salvo derem 0 de novo, é o 10º
+zero seguido — o problema é o CONCEITO, não o horário nem a fila, e o pilar
+"A PATROA MANDA" precisa morrer em vez de ser reagendado.
+
+**Segundo conserto na mesma checagem:** a salva de reforço do cron
+(`.github/workflows/publish.yml`) ainda disparava 11:00Z seg/qua/sex — o reforço
+das 8h antigas. Desde 19/08 o horário é 11h de Itajaí = 14:00Z, e a linha não foi
+movida junto: o reforço protegia um horário que não existe mais, e sábado não
+tinha reforço nenhum. Movida para `14 * * *` (14:00Z, todo dia).
+
 ## 🎓 19/08/2026 — PESQUISA DE CRESCIMENTO (~20 fontes) + 4 IAs reagiram
 
 Ele: *"Estude como aumentar seguidores, assista 20 vídeos, traga pras IAs hub

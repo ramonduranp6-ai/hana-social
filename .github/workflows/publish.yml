@@ -9,12 +9,18 @@ on:
     # nenhuma rodada agendada, e o post das 21:00Z só saiu porque houve um
     # disparo manual. Duas defesas:
     - cron: "*/30 * * * *"          # o batimento normal
-    # e uma salva de tentativas coladas no horário de publicação (11:00Z de
-    # segunda, quarta e sexta = 8h da manhã em Itajaí; era 21:00Z até
-    # 03/08/2026, quando ele mandou trocar para as 8h). Se uma for pulada, as
-    # outras cobrem. O run.py é idempotente: só publica o que está 'approved' e
-    # venceu, então repetir a tentativa não duplica post.
-    - cron: "0,7,14,21,28,35 11 * * 1,3,5"
+    # e uma salva de tentativas coladas no horário de publicação. Se uma for
+    # pulada, as outras cobrem. O run.py é idempotente: só publica o que está
+    # 'approved' e venceu, então repetir a tentativa não duplica post.
+    #
+    # 21/08/2026 — a salva estava em 11:00Z, seg/qua/sex: era o reforço das 8h
+    # de Itajaí. Em 19/08 o horário de publicação virou 11h de Itajaí = 14:00Z
+    # (pico real medido na API) e ESTA LINHA NÃO FOI MOVIDA JUNTO — o reforço
+    # passou a cair 3h antes da hora de publicar, ou seja, protegia um horário
+    # que não existe mais. Movida para 14:00Z e para TODO DIA: a fila não roda
+    # mais só seg/qua/sex, e o cron do GitHub é best-effort (medido nesta noite:
+    # buracos de 30 a 56 min entre rodadas do batimento de 30 min).
+    - cron: "0,7,14,21,28,35 14 * * *"
   workflow_dispatch:
     inputs:
       forcar_reporte:
