@@ -74,3 +74,23 @@ do pilar único) e `chegada-eloen` sem data. O buraco recomeça em 23/08.
 2. Filmar a cena do POV #1 (3-5 tomadas, ~10 min, celular + tripé). Roteiro pronto.
 3. Criar os 3 Highlights no perfil (2 min, só pelo app) — pendente desde 19/08.
 4. Data do `chegada-eloen` (decisão de família) e recarga do Gemini (sem crédito desde 18/08).
+
+## Recado ao Ramón — NÃO ENVIADO (sem credencial neste ambiente)
+
+`python publisher/mandar_recado.py` respondeu `[erro] faltam TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID`
+— esta rodada automática não tem as variáveis do Telegram (só existe `.env.example` no repo).
+Ciclo não travou por isso. Texto que deveria ter ido, para reenvio manual:
+
+> **VP de Marketing — 21/08**
+>
+> 331 seguidores, zero a mais em 12 dias, e nenhum dos 9 posts teve um único salvo ou
+> compartilhamento. Hoje às 11h sai o primeiro post em 11 dias.
+> Achei um erro que dá pra consertar antes disso: o time escreveu uma legenda nova (com
+> "salva essa", que é o que faz o post render) e esqueceu de colocar no post. Do jeito que
+> está, ele sai com o texto velho. Preciso de um "pode trocar" seu até 10h30 — sem isso o
+> teste de 48h vira desperdício.
+> Depois de amanhã a fila fica vazia de novo; já cobrei peça nova pra amanhã de manhã.
+> Duas coisas continuam só com você: os 10 minutos de filmagem da Hana (roteiro pronto) e
+> os 3 Destaques no perfil (2 min no celular).
+> O diretor de Atualidades falhou 2 rodadas seguidas sem motivo técnico — se não entregar
+> até amanhã, minha recomendação é tirá-lo do projeto.
