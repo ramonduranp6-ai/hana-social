@@ -36,11 +36,21 @@ lugares e, não achando nenhum, **dispara o próprio workflow** (que tem os
 secrets) em vez de desistir. Testado ponta a ponta: run `32542427926`,
 **SUCCESS**, recado entregue.
 
-⚠️ **Sobre a rotina do VP a cada 2 dias:** ela roda em ponte com o PC dele. O
-erro *"Não é possível conectar ao seu computador"* na tela dele é isso — PC
-suspenso/desligado na hora do disparo, não bug do robô. Se ele quiser que rode
-independente da máquina, tem que virar rotina de nuvem (perde o acesso aos
-diretores locais e ao IA-Hub).
+🔴 **CORREÇÃO NA MESMA NOITE — eu afirmei sem conferir (Regra Zero, de novo).**
+Eu escrevi aqui que o *"Não é possível conectar ao seu computador"* era o PC
+suspenso na hora do disparo. **Estava errado**, e ele desmentiu na hora ("o PC
+fica ligado o dia todo, reiniciei às 7 da noite"). Fui ao log real da rotina
+(`RemoteTrigger get_run_log`, sessão `cse_018j3WsjddAREyaqQErsjAwo`):
+**a rodada de 21/08 12:14Z terminou com `result: success`, 18 turnos, 356s** —
+leu o estado, invocou o VP, escreveu `estrategia/vp-marketing-2026-08-21.md`,
+commitou e deu push. **A rotina funcionou.**
+O que a tela dele mostra é a SESSÃO (que continua `active`/`idle`) tendo
+perdido a ponte quando ele reiniciou o PC às 19h — banner de reconexão de uma
+sessão viva, não falha da rodada.
+**O único passo que falhou de verdade naquela rodada foi o Telegram** — e é
+exatamente o que foi consertado nesta noite (fallback pelo GitHub Actions).
+**O que teria pego o erro:** abrir o log da rotina antes de opinar, em vez de
+deduzir pela imagem. Custou 2 comandos.
 ## 🧾 21/08/2026 12:20Z — CICLO DO VP DE MARKETING (automático, nada publicado)
 
 Veredito: **NÃO TESTADO — e isso conta como não entrega do time.** 331 seguidores, +0 em 12
