@@ -2,6 +2,45 @@
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔓 21/08/2026 (noite) — 3 BUGS OPERACIONAIS CONSERTADOS; REPO VOLTOU A SER PÚBLICO
+
+Bronca dele: *"estou recebendo emails de erro... isso não é problema de
+aprovação minha é problema operacional... você precisa trabalhar melhor meu VP"*.
+Ele tinha razão: eu tinha tratado a falha como se dependesse da decisão dele.
+
+**1. CAUSA RAIZ do e-mail em loop (a que importava):** o repositório estava
+**PRIVADO**. O Instagram baixa a mídia por `raw.githubusercontent.com` — com o
+repo privado essa URL devolve **404**, e TODO post falhava. Não era defeito da
+mídia (ffprobe conferiu: 1080x1920 30fps, h264+aac, 11,8s, íntegro).
+**Ele autorizou tornar público** (perguntei porque expõe também o material da
+Eloen/chá revelação, que era sigilo de família). Conferido depois de trocar:
+`HTTP 200, 10.038.432 bytes`, idêntico ao arquivo local. Varredura de segredo
+nos arquivos rastreados **e no histórico inteiro do git** antes de publicar:
+nada encontrado.
+Post `regras-da-casa` destravado (`failed` → `approved`) e remarcado 21/08 →
+**24/08 14:00Z** (o slot de 21/08 já tinha passado; 24/08 é segunda, dia normal
+da grade).
+
+**2. E-mail em loop (o sintoma):** post com `status=failed` fazia o sentinela
+derrubar o job a cada 30 min PARA SEMPRE, repetindo a MESMA falha já
+diagnosticada. Agora só a 1ª vez é alarme; da 2ª em diante vira aviso no log
+(`content/.falhas_avisadas.json`). Mesmo padrão do conserto do post-sem-data
+de 19/08.
+
+**3. "Telegram não saiu" do ciclo do VP:** conferido — as credenciais do
+Telegram **nunca existiram nesta máquina** (nem variável de ambiente, nem
+registro do Windows, nem `studio/.telegram`), só como secret do repositório.
+Por isso o resumo do VP morria no log. `mandar_recado.py` agora procura em 4
+lugares e, não achando nenhum, **dispara o próprio workflow** (que tem os
+secrets) em vez de desistir. Testado ponta a ponta: run `32542427926`,
+**SUCCESS**, recado entregue.
+
+⚠️ **Sobre a rotina do VP a cada 2 dias:** ela roda em ponte com o PC dele. O
+erro *"Não é possível conectar ao seu computador"* na tela dele é isso — PC
+suspenso/desligado na hora do disparo, não bug do robô. Se ele quiser que rode
+independente da máquina, tem que virar rotina de nuvem (perde o acesso aos
+diretores locais e ao IA-Hub).
 ## 🧾 21/08/2026 12:20Z — CICLO DO VP DE MARKETING (automático, nada publicado)
 
 Veredito: **NÃO TESTADO — e isso conta como não entrega do time.** 331 seguidores, +0 em 12
