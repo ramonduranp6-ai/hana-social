@@ -16,6 +16,7 @@ hoje" nunca fica salvo (o runner do GitHub é descartado ao fim do job).
 """
 
 import datetime as dt
+import json
 import os
 import sys
 
@@ -43,6 +44,23 @@ MIN_POSTS_FUTUROS = 2
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MARCADOR_TOKEN = os.path.join(ROOT, "content", ".aviso_token_vence")
 MARCADOR_TOKEN_CEGO = os.path.join(ROOT, "content", ".aviso_token_cego")
+MARCADOR_FALHAS_AVISADAS = os.path.join(ROOT, "content", ".falhas_avisadas.json")
+
+
+def _falhas_ja_avisadas():
+    if not os.path.isfile(MARCADOR_FALHAS_AVISADAS):
+        return set()
+    try:
+        with open(MARCADOR_FALHAS_AVISADAS, encoding="utf-8") as f:
+            return set(json.load(f))
+    except Exception:  # noqa: BLE001 — marcador corrompido nao pode travar o sentinela
+        return set()
+
+
+def _marcar_falha_avisada(post_id, vistas):
+    vistas.add(post_id)
+    with open(MARCADOR_FALHAS_AVISADAS, "w", encoding="utf-8") as f:
+        json.dump(sorted(vistas), f)
 
 
 def checar_fila():
@@ -50,10 +68,21 @@ def checar_fila():
     problemas = []
     avisos = []
     futuros = 0
+    falhas_vistas = _falhas_ja_avisadas()
     for p in q.load_all():
         status = p.get("status")
         if status == "failed":
-            problemas.append(f"{p['_id']}: FALHOU ({p.get('error', 'sem detalhe')})")
+            msg = f"{p['_id']}: FALHOU ({p.get('error', 'sem detalhe')})"
+            # ACHADO 21/08/2026: sem isso, um post que falha uma vez manda
+            # e-mail de "workflow falhou" a cada 30 min PARA SEMPRE, mesmo
+            # sendo a MESMA falha ja diagnosticada (a de hoje: raw.githubusercontent
+            # 404 porque o repo virou privado). 1a vez que vemos = alarme de
+            # verdade (problema, email). Da 2a em diante = so aviso no log.
+            if p["_id"] in falhas_vistas:
+                avisos.append(msg)
+            else:
+                problemas.append(msg)
+                _marcar_falha_avisada(p["_id"], falhas_vistas)
         elif status in ("pending", "approved"):
             # Post sem data marcada nao e' atraso: e' peca pronta esperando o
             # Ramon decidir QUANDO vai ao ar (ex.: o Reel da chegada da Eloen,
