@@ -22,6 +22,51 @@ API = "https://api.telegram.org/bot{token}/sendMessage"
 LIMITE = 4096  # limite duro do Telegram por mensagem
 
 
+def _credencial(nome):
+    """Acha a credencial em 3 lugares, nesta ordem.
+
+    ACHADO 21/08/2026: o ciclo automatico do VP (rotina agendada na maquina do
+    Ramon) nao conseguiu mandar recado nenhum — reportou "so existe
+    .env.example". Motivo: este script lia SO `os.environ`, e um processo
+    disparado por agendador/ponte nem sempre herda as variaveis de USUARIO do
+    Windows (elas existem, mas so entram em shell aberto depois delas). O
+    recado morria no log e o Ramon nunca era avisado.
+
+    1. `os.environ` — GitHub Actions e shell normal (caminho de sempre).
+    2. `studio/.telegram` — arquivo local fora do git (mesmo padrao que o
+       `studio/lote_automatico.py` ja usava).
+    3. Registro do Windows (variavel de USUARIO) — pega o caso do agendador,
+       sem precisar de arquivo nenhum. Leitura pura, nunca escreve.
+    """
+    valor = os.environ.get(nome)
+    if valor:
+        return valor
+
+    raiz = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    arquivo = os.path.join(raiz, "studio", ".telegram")
+    if os.path.isfile(arquivo):
+        for linha in open(arquivo, encoding="utf-8", errors="ignore"):
+            if linha.strip().startswith(f"{nome}="):
+                return linha.split("=", 1)[1].strip()
+
+    if sys.platform == "win32":
+        import winreg
+        locais = (
+            (winreg.HKEY_CURRENT_USER, r"Environment"),
+            (winreg.HKEY_LOCAL_MACHINE,
+             r"SYSTEM\CurrentControlSet\Control\Session Manager\Environment"),
+        )
+        for raiz_reg, caminho in locais:
+            try:
+                with winreg.OpenKey(raiz_reg, caminho) as k:
+                    valor = winreg.QueryValueEx(k, nome)[0]
+                    if valor:
+                        return valor
+            except Exception:  # noqa: BLE001 — sem a variavel, tenta o proximo
+                continue
+    return None
+
+
 def _pedacos(texto, tamanho=LIMITE):
     """Quebra o recado em mensagens, sem cortar linha no meio."""
     partes, atual = [], ""
@@ -44,17 +89,48 @@ def mandar(token, chat_id, texto):
     return True
 
 
+def _mandar_pelo_github(texto):
+    """Ultimo recurso: dispara o workflow, que tem os secrets do Telegram.
+
+    E' o caminho que o docstring deste arquivo ja documentava para uso pela
+    conversa; virou fallback automatico em 21/08/2026 para o recado nunca
+    morrer calado num processo sem credencial (agendador, ponte, rotina).
+    """
+    import shutil
+    import subprocess
+    if not shutil.which("gh"):
+        print("[erro] sem credencial local do Telegram e sem o 'gh' instalado "
+              "— nao tenho por onde mandar o recado")
+        return 1
+    r = subprocess.run(
+        ["gh", "workflow", "run", "publish.yml",
+         "-R", "ramonduranp6-ai/hana-social", "-f", f"recado={texto}"],
+        capture_output=True, text=True,
+    )
+    if r.returncode != 0:
+        print(f"[erro] nao consegui disparar o workflow: {r.stderr.strip()[:200]}")
+        return 1
+    print("[ok] sem credencial local — recado despachado pelo GitHub Actions "
+          "(chega no Telegram na proxima rodada)")
+    return 0
+
+
 def main():
     texto = " ".join(sys.argv[1:]).strip() or os.environ.get("RECADO", "").strip()
     if not texto:
         print("[aviso] sem recado pra mandar — saindo calado")
         return 0
 
-    token = os.environ.get("TELEGRAM_BOT_TOKEN")
-    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+    token = _credencial("TELEGRAM_BOT_TOKEN")
+    chat_id = _credencial("TELEGRAM_CHAT_ID")
     if not token or not chat_id:
-        print("[erro] faltam TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID")
-        return 1
+        # Sem credencial local, o recado NAO morre no log: sai pelo GitHub
+        # Actions, que tem os secrets. Conferido em 21/08/2026: as credenciais
+        # do Telegram nunca existiram nesta maquina (nem em variavel de
+        # ambiente, nem no registro, nem em studio/.telegram) — so como secret
+        # do repositorio. Era por isso que o ciclo automatico do VP dizia
+        # "Telegram nao saiu" e o Ramon nunca recebia o resumo.
+        return _mandar_pelo_github(texto)
 
     # Etiqueta: ele precisa saber a QUE mensagem está respondendo (cobrança de
     # 01/08/2026). Ver publisher/etiqueta.py. Sem RECADO_ASSUNTO o texto sai
