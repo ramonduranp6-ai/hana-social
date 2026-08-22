@@ -284,31 +284,28 @@ processo no meio:**
 combina com a família, não é calendário de conteúdo) e sem decidir se estica
 a duração (6s vs 9-12s, sugestão do auditor). Esperando ele ver e aprovar.
 
-## 🏁 BASTÃO (atualizado em 14/08 madrugada, PC de casa)
-· **Onde paramos:** Higgsfield testado de verdade (não só assinado) — 1 vídeo
-  real gerado a partir de foto real da Hana, medido com ffprobe/signalstats,
-  estudo completo do diretor-reels em `estrategia/estudo-higgsfield-2026-08-14.md`.
-· **Esperando ele — decidir a PROPOSTA do diretor-reels (nada foi adotado
-  sozinho):**
-  1. Adotar de graça as 4 técnicas de MÉTODO do Higgsfield (preflight de custo,
-     motor declarado por encomenda, gerar em lote e escolher a melhor,
-     encomenda versionada) — custo zero, não depende da assinatura.
-  2. Regra nova de captura: foto que vai virar vídeo sai já em 1080x1920.
-  3. Higgsfield vira motor de EXCEÇÃO (trecho curto de 2-3s dentro de peça de
-     acervo), nunca ferramenta de rotina; os 62 presets prontos ficam
-     PROIBIDOS (feitos pra selfie humana, contradizem "zero efeito" do manual).
-  4. Não gastar os 51 créditos do `reframe` — 6,8x mais caro que regerar do
-     zero (7,5) a partir de uma foto já 9:16.
-  5. Se ele quiser comparação de verdade com Gemini/Flow: falta o OK pra gastar
-     mais ~7,5 créditos testando a MESMA cena nos dois.
-  6. Reaprovar no Telegram os 3 Reels (14/08 regras, 17/08 cenoura, 19/08
-     balões) — a trava reenvia sozinha, é só clicar.
-  7. 2 DMs de collab do celular (@troy.abully, @zaya.lifestylee).
-  8. Piloto de curtir/comentar — falta o "pode montar".
-  9. Decidir o conflito: regra dos 5 cortes × plano único (dado dos virais).
-  10. Se quiser Kairogen da Hana: autorizar "kairogen-hana" no claude.ai.
-· **Próximo passo:** esperar a decisão dele sobre a proposta acima. Toda peça
-  nova continua seguindo o manual-profissional-reels.md.
+## 🏁 BASTÃO (atualizado em 21/08 23:26 Itajaí)
+· **Onde paramos:** VP de Marketing e Performance contratado (ordem dele,
+  21/08) — `~/.claude/agents/vp-marketing.md`, revisão a cada 2 dias já
+  agendada (rotina no PC dele, 9h Itajaí). Achou e o time consertou um bug
+  real: a fila ficou 34h travada (post.json sem campo de auditoria que nada
+  no código escrevia) — os 3 posts aprovados em 17/08 já estão destravados.
+  Formato POV+CTA nomeado (18/08) e horário novo 11h/14:00Z (19/08) **ainda
+  não têm nenhuma peça publicada** — 0 salvo/0 compartilhamento continua
+  valendo pros 9 posts antigos, nada novo foi medido ainda.
+· **Esperando ele:**
+  1. **Filmar "a patroa mandou"** (10 min, celular, roteiro pronto em
+     `studio/roteiros/2026-08_POV1_a-patroa-mandou.md`) — é o único gargalo
+     real hoje, aberto desde 07/08.
+  2. Responder se troca a legenda velha dos 2 posts que publicam 21/08 e
+     22/08 pelas novas com CTA de salvar (`content/legendas-pov-2026-08-21.md`)
+     — perguntado, resposta pendente.
+  3. Decidir o futuro do diretor-atualidades: 2ª falha seguida (sem fonte
+     verificável), o VP recomendou última régua (até 22/08 12:00Z) ou
+     aposentar o cargo neste projeto.
+· **Próximo passo:** assim que a filmagem chegar, diretor-reels já monta na
+  hora (roteiro pronto). Sem filmagem, a fila fica vazia depois de 22/08 (só
+  sobra o pilar antigo, todo rejeitado, e a Eloen sem data).
 
 ## 🎬 14/08/2026 — TESTE REAL DO HIGGSFIELD: motor bom, catálogo de efeitos reprovado
 
