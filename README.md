@@ -11,7 +11,8 @@ o Claude edita, escreve as legendas e coloca os posts prontos na fila
 
 **Impressora (este repositório, sozinho):** um cron no GitHub Actions roda a
 cada 30 min, avisa o Ramón no Telegram, e quando ele aprova, publica no horário
-agendado via Instagram Graph API. Não usa IA, custo zero.
+agendado via Instagram Graph API. Não usa IA. Uma rotina diária separada coleta
+métricas, checa a cobertura da fila e envia alertas, sem pesar no publicador.
 
 ## Fluxo de um post
 
@@ -30,11 +31,14 @@ publisher/
   postqueue.py        # leitura/escrita da fila
   telegram_approve.py # notificação e aprovação por Telegram
   run.py              # orquestrador (roda no cron)
+  prontidao.py         # confere peça completa antes de ir ao Telegram
+  cobertura_fila.py    # avisa se faltarem posts aprovados e agendados
 content/
   queue/              # posts a publicar
   posted/             # arquivo dos já publicados
 .github/workflows/
   publish.yml         # agendador (cron a cada 30 min)
+  maintenance.yml     # métricas e alertas uma vez ao dia
 ```
 
 ## Formato do `post.json`

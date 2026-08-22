@@ -176,6 +176,45 @@ def _fila_compacta():
     return "\n".join(linhas) if linhas else "(fila vazia agora)"
 
 
+def resposta_local(pergunta, agora=None):
+    """Respostas factuais e repetitivas sem chamar Gemini.
+
+    A lista é propositalmente pequena: se a intenção não for inequívoca, volta
+    ao caminho anterior (Gemini/escalonamento), em vez de chutar uma resposta.
+    """
+    texto = re.sub(r"\s+", " ", pergunta.lower()).strip()
+    if not texto:
+        return None
+    if any(palavra in texto for palavra in ("publi", "aprova", "recusa", "apaga", "muda", "agenda", "estratég", "melhor")):
+        return None
+    if texto in {"ajuda", "help", "oi", "olá", "ola"}:
+        return "Posso informar fila, próximo post e placar. Para pedir mudança ou decisão, eu anoto para a conversa."
+    if any(palavra in texto for palavra in ("fila", "próximo post", "proximo post")):
+        agora = agora or datetime.now(timezone.utc)
+        candidatos = []
+        for nome in sorted(os.listdir(FILA)) if os.path.isdir(FILA) else []:
+            caminho = os.path.join(FILA, nome, "post.json")
+            try:
+                with open(caminho, encoding="utf-8") as arquivo:
+                    post = json.load(arquivo)
+                agendado = post.get("scheduled_for") or ""
+                quando = datetime.fromisoformat(agendado.replace("Z", "+00:00"))
+            except (OSError, ValueError, json.JSONDecodeError):
+                continue
+            if post.get("status") == "approved" and quando >= agora:
+                candidatos.append((quando, nome))
+        if not candidatos:
+            return "Não há post aprovado e agendado na fila agora."
+        quando, nome = min(candidatos)
+        return "Próximo post aprovado: %s, agendado para %s UTC." % (nome, quando.strftime("%d/%m às %H:%M"))
+    if any(palavra in texto for palavra in ("placar", "métrica", "metrica", "seguidores")):
+        placar = _ler(PLACAR, limite_linhas=16, limite_chars=1200)
+        linhas = [linha.strip() for linha in placar.splitlines() if linha.strip()]
+        dados = [linha for linha in linhas if "**" in linha or "Reel" in linha][:3]
+        return "\n".join(dados) if dados else "O placar ainda não tem uma leitura resumida disponível."
+    return None
+
+
 def _publicados_compacto(limite=10):
     """Últimos publicados, mais compacto ainda — só o suficiente pra
     responder "o que já saiu"."""
@@ -400,6 +439,18 @@ def _responder(texto, quando, token, chat_id):
                 return
             except Exception as exc:  # noqa: BLE001
                 print(f"[comandos][aviso] Telegram recusou ({str(exc)[:120]}) — vira recado")
+        _guardar_recado(texto, quando, token, chat_id)
+        return
+
+    resposta = resposta_local(texto)
+    if resposta:
+        print(f"[recepcionista] respondeu localmente: {resposta[:80]!r}")
+        if token and chat_id:
+            try:
+                mandar(token, chat_id, resposta)
+                return
+            except Exception as exc:  # noqa: BLE001
+                print(f"[recepcionista][aviso] Telegram recusou resposta local ({str(exc)[:150]})")
         _guardar_recado(texto, quando, token, chat_id)
         return
 

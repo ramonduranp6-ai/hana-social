@@ -68,9 +68,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements-publisher.txt
 
       - name: Instalar dependências
-        run: pip install -r requirements.txt
+        run: pip install -r requirements-publisher.txt
 
       - name: Rodar publicador
         env:
@@ -86,31 +88,6 @@ jobs:
           # comportamento antigo (só anota o recado) — não derruba o job.
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python publisher/run.py
-
-      # Placar do projeto: uma coleta por dia (o script sai sozinho se já coletou).
-      # Nunca derruba o job — falha de métrica não pode impedir publicação.
-      - name: Coletar métricas
-        continue-on-error: true
-        env:
-          IG_USER_ID: ${{ secrets.IG_USER_ID }}
-          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          GRAPH_BASE: ${{ vars.GRAPH_BASE || 'https://graph.instagram.com/v21.0' }}
-        run: python publisher/metrics.py
-
-      # Pauta da reunião estratégica de segunda (pedido do Ramón em 31/07/2026).
-      # O script sai calado se não for segunda de manhã ou se já mandou a pauta
-      # desta semana. Nunca derruba o job — reporte não pode travar publicação.
-      - name: Pauta da reunião de segunda
-        continue-on-error: true
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          if [ "${{ inputs.forcar_reporte }}" = "true" ]; then
-            python publisher/reporte_semanal.py --forcar
-          else
-            python publisher/reporte_semanal.py
-          fi
 
       # Canal Claude -> Telegram: o token do bot só existe nos secrets, então
       # o recado que eu escrevo na conversa sai por aqui. Sem entrada `recado`,
@@ -153,48 +130,6 @@ jobs:
           MIDIA_ASSUNTO: ${{ inputs.assunto }}
           MIDIA_RESPONDA: ${{ inputs.responda }}
         run: python publisher/mandar_midia.py
-
-      # Avisa no Telegram quando o token do Instagram estiver a 7 dias ou menos
-      # de vencer. Mora AQUI, e não no vigia local, de propósito: o notebook do
-      # Ramón pode estar desligado justamente quando o aviso importa. Tem que
-      # rodar ANTES do passo que commita, senão o marcador de "já avisei hoje"
-      # nunca se salva e o aviso repete a cada 30 min.
-      # Caderno de aprendizado: grava o diagnóstico da semana em disco DEPOIS
-      # de ele ter sido entregue. Sem isso, o veredito da reunião de segunda
-      # existia só no Telegram do Ramón — e a conversa nova não lê Telegram,
-      # então o comitê da semana seguinte remontava tudo do zero.
-      - name: Registrar diagnostico no caderno de aprendizado
-        continue-on-error: true
-        run: python publisher/diagnostico.py --registrar-se-enviado
-
-      # Leitura do DIA 1 de cada post, empurrada no Telegram. Exigência do
-      # conselheiro ao vetar parte do plano: a decisão sobre o Reel de 10/08
-      # não pode depender de o Ramón lembrar de abrir conversa. Roda depois da
-      # coleta, de propósito — precisa dos números do dia.
-      - name: Leitura do dia 1
-        continue-on-error: true
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python publisher/leitura_d1.py
-
-      # O robô de domingo roda na máquina do Ramón, que não tem o token do bot.
-      # Ele empurra o recado em content/aviso_lote.md e QUEM ENTREGA é este
-      # passo, que tem os secrets. Assim o token existe num lugar só.
-      - name: Entregar o recado do robô de domingo
-        continue-on-error: true
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python publisher/avisar_lote.py
-
-      - name: Avisar se o token do Instagram está para vencer
-        continue-on-error: true
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          IG_TOKEN_EXPIRA_EM: ${{ vars.IG_TOKEN_EXPIRA_EM }}
-        run: python publisher/sentinel.py --token
 
       - name: Salvar estado da fila
         run: |

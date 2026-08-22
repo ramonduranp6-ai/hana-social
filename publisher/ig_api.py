@@ -97,7 +97,8 @@ def publish_container(ig_user_id, creation_id, token):
     return data["id"]
 
 
-def publish(ig_user_id, token, media_type, media_url, caption, audio_configuration=None):
+def publish(ig_user_id, token, media_type, media_url, caption, audio_configuration=None,
+            on_container_created=None):
     """
     Fluxo completo de publicação.
     media_type: "image" ou "reel".
@@ -112,6 +113,10 @@ def publish(ig_user_id, token, media_type, media_url, caption, audio_configurati
         )
     else:
         raise IGError(f"Tipo de mídia não suportado: {media_type}")
+    # Persiste o id antes de publicar. Se a API cair depois daqui, o próximo
+    # ciclo retoma ESTE container em vez de criar outro e correr risco de duplicar.
+    if on_container_created:
+        on_container_created(creation_id)
     # Foto também processa de forma assíncrona ("Media ID is not available"
     # se publicar cedo demais), então espera o container em ambos os casos.
     wait_until_ready(creation_id, token)

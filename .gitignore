@@ -8,6 +8,7 @@ __pycache__/
 
 # log do vigia local
 studio/sentinela.log
+studio/garimpo_rodada.log
 
 # token do Instagram — NUNCA vai para o repo publico
 studio/.token

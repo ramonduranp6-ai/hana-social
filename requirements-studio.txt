@@ -1,0 +1,5 @@
+requests>=2.31,<3
+Pillow>=10,<12
+imageio-ffmpeg>=0.5,<1
+ultralytics>=8,<9
+pillow-heif>=0.18,<1

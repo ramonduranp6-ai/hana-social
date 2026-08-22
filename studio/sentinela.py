@@ -20,7 +20,9 @@ def sh(*args):
 
 def main():
     print(f"--- sentinela local {dt.datetime.now().isoformat(timespec='seconds')} ---")
-    sh("git", "pull", "--ff-only")
+    pull = sh("git", "pull", "--ff-only")
+    if pull.returncode:
+        raise RuntimeError("git pull falhou: " + (pull.stderr.strip() or pull.stdout.strip()))
 
     qdir = os.path.join(REPO, "content", "queue")
     agora = dt.datetime.now(dt.timezone.utc)
@@ -34,7 +36,10 @@ def main():
                 p = json.load(f)
             if p.get("status") not in ("pending", "approved"):
                 continue
-            t = dt.datetime.fromisoformat(p["scheduled_for"].replace("Z", "+00:00"))
+            agendado = p.get("scheduled_for")
+            if not agendado:
+                continue
+            t = dt.datetime.fromisoformat(agendado.replace("Z", "+00:00"))
             # tolerancia curta: o cron do GitHub e estrangulado (roda a cada ~4h
             # em vez dos 30 min pedidos), entao quem garante a hora e este vigia.
             if (agora - t).total_seconds() > 5 * 60:
@@ -44,6 +49,8 @@ def main():
         print("atrasados:", ", ".join(atrasados), "-> disparando workflow")
         r = sh("gh", "workflow", "run", "publish.yml", "-R", "ramonduranp6-ai/hana-social")
         print(r.stdout.strip() or r.stderr.strip())
+        if r.returncode:
+            raise RuntimeError("não consegui disparar o workflow")
     else:
         print("tudo em dia")
 

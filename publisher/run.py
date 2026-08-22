@@ -33,6 +33,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ig_api
 import postqueue as q
 import telegram_approve as tg
+import prontidao
 
 # PORTA 2 — trava do auditor (conserto de 31/07/2026, ver skill hana-social
 # regra 3i: "nenhuma mídia vai ao Ramón sem auditor"). Antes deste conserto,
@@ -161,6 +162,7 @@ def main():
     # 2. notifica pendentes
     if require_approval and tg_token and tg_chat:
         pending = [p for p in posts if p.get("status") == "pending"]
+        pending = prontidao.pendentes_prontos(pending)
         tg.notify_pending(tg_token, tg_chat, pending, media_base)
         for p in pending:
             q.save(p)
@@ -183,7 +185,8 @@ def main():
 
     ready_status = "approved" if require_approval else "pending"
     for post in posts:
-        if post.get("status") != ready_status:
+        retomando = post.get("status") == "publishing"
+        if post.get("status") != ready_status and not retomando:
             continue
         if not q.is_due(post):
             continue
@@ -230,18 +233,41 @@ def main():
                 audio_cfg = None
         try:
             print(f"[publicando] {post['_id']} ({post['type']}) -> {url}")
-            post_id = ig_api.publish(
-                user_for_post, token_for_post, post["type"], url,
-                post["caption"], audio_cfg,
-            )
+            if retomando:
+                creation_id = post.get("creation_id")
+                if not creation_id:
+                    raise RuntimeError("post está como publishing, mas sem creation_id para retomar")
+                ig_api.wait_until_ready(creation_id, token_for_post)
+                post_id = ig_api.publish_container(user_for_post, creation_id, token_for_post)
+            else:
+                def salvar_container(creation_id):
+                    post["status"] = "publishing"
+                    post["creation_id"] = creation_id
+                    q.save(post)
+                    print(f"[container salvo] {post['_id']} -> {creation_id}")
+
+                post_id = ig_api.publish(
+                    user_for_post, token_for_post, post["type"], url,
+                    post["caption"], audio_cfg, salvar_container,
+                )
             post["status"] = "posted"
             post["instagram_id"] = post_id
+            post.pop("creation_id", None)
             q.save(post)
             q.archive(post)
             if tg_token and tg_chat:
                 tg.notify(tg_token, tg_chat, f"✅ Publicado: {post['_id']} (IG {post_id})")
             print(f"[ok] publicado {post['_id']} como {post_id}")
         except Exception as exc:  # noqa: BLE001
+            # Depois de obter um container, nunca criamos outro por impulso.
+            # O ciclo seguinte retoma o mesmo id e só então decide se publicou.
+            if post.get("status") == "publishing" and post.get("creation_id"):
+                q.save(post)
+                aviso = f"⚠️ {post['_id']} ficou em retomada ({exc}); vou tentar o mesmo container no próximo ciclo."
+                if tg_token and tg_chat:
+                    tg.notify(tg_token, tg_chat, aviso)
+                print(f"[retomar] {aviso}")
+                continue
             post["status"] = "failed"
             post["error"] = str(exc)
             q.save(post)
