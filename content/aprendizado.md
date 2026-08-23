@@ -2,6 +2,18 @@
 
 O que a automação já mandou pro Ramón, com data — pra próxima conversa não remontar do zero. Gravado por `publisher/diagnostico.py` e `publisher/leitura_d1.py`, sempre DEPOIS da entrega confirmada (nunca durante `--simular`). Mais recente em cima.
 
+## 2026-08-23 13:04 UTC — Leitura do dia 1 (2026-08-12_cenoura-filhote)
+
+📈 LEITURA DO DIA 1 — 2026-08-12_cenoura-filhote (REEL, 23h no ar)
+Alcance 179 · visitas ao perfil ? · seguidores ganhos ?
+Curtidas 9 · comentários 2 · salvos 0 · compartilh. 1
+Comparando só com Reels da mesma idade (1 medido(s)): média 173.
+Este está +3% em relação a essa média.
+
+Régua: alcance depois do dia 1 não gerou visita nova em nenhum post medido — por isso só este número decide.
+
+---
+
 ## 2026-08-17 — Diagnóstico da semana 2026-W34
 
 📊 DIAGNÓSTICO DA SEMANA
