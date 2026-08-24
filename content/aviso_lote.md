@@ -47,4 +47,4 @@ eram clipes de Live Photo de ~2 segundos — e no vídeo da praia (IMG_1725.MOV)
 existem cerca de 4 segundos de rosto. Nos outros dois (TV e navio) o laudo
 estava certo: ela está de costas do começo ao fim.
 
-⏳ **1ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
+⏳ **2ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
