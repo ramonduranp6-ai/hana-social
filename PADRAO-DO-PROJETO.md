@@ -15,8 +15,10 @@
 3. **A ÚNICA trava é DINHEIRO** — saldo já pago (APIs, Apify, créditos) pode
    usar à vontade: ele deixou disponível pra isso. Acabou ou precisa comprar
    mais → avisar e ESPERAR o OK. Nunca gastar novo no cartão sem ele saber.
-4. **Chrome: validar o perfil logado ANTES de usar, SEMPRE** — abrir o menu do
-   avatar e conferir nome/e-mail do perfil DESTE projeto. Perfil errado = conta
+4. **Chrome: validar o perfil logado ANTES de usar, SEMPRE.** MAPA FIXO: só
+   Hana Social (hanaduransanches, avatar H) e Canecas POD (brushedandbrewed,
+   avatar bolinha branca) têm Chrome próprio; TODOS os demais usam o pessoal
+   (ramon.d.franca, avatar com a foto dele). Conferir o e-mail logado. Perfil errado = conta
    errada = trabalho travado (o erro que mais custa tempo). Automação de
    navegador é sempre Playwright; SendKeys/mouse por coordenada, nunca.
 5. **IA-Hub antes de gastar token caro** — `ask-ai.py` (Gemini longos, DeepSeek
