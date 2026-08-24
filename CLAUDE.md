@@ -12,3 +12,10 @@
   se conserta NESTA conversa, na hora, sem esperar mensagem dele.
 - Perfil do Chrome deste projeto: ⚠️ preencher na 1ª conversa aberta aqui
   (abrir menu do avatar, conferir nome/e-mail e registrar neste arquivo).
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[PADRAO-DO-PROJETO]]

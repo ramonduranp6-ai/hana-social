@@ -21,4 +21,3 @@
 - [[EXPLICACAO-PROJETO-PARA-IA]]
 - [[ORGANOGRAMA]]
 - [[brand-brief]]
-- [[tecer-vault-obsidian]]

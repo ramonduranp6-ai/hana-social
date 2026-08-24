@@ -29,6 +29,5 @@
 - [[garimpo-apify-2026-08-09]]
 - [[manual-profissional-reels]]
 - [[reuniao-2026-08-18-engajamento]]
-- [[tecer-vault-obsidian]]
 - [[virais-medidos-2026-08-13]]
 - [[vp-marketing-2026-08-21]]

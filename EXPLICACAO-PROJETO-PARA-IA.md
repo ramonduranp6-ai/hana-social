@@ -538,15 +538,15 @@ feito nenhum commit por esta análise.
 > Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
 > partir das citações que já existiam no texto acima.
 
-- [[APRENDIZADO-IA]]
 - [[DECISOES]]
 - [[ESTADO-ATUAL]]
-- [[ESTADO-DOS-PROJETOS]]
-- [[METODO-DE-TRABALHO]]
 - [[ORGANOGRAMA]]
 - [[aviso_lote]]
 - [[benchmark-instagram]]
 - [[benchmark-tecnico]]
 - [[brand-brief]]
 - [[calendario-editorial]]
-- [[checar-credito]]
+- [[hipoteses-produto]]
+- [[parceria-canecas-pod]]
+- [[pauta_extra]]
+- [[pedido-de-cena]]

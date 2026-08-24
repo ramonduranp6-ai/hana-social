@@ -1650,7 +1650,6 @@ crescer exige Reels, hashtag de nicho e presença nos perfis grandes da raça.
 
 - [[2026-08_POV1_a-patroa-mandou]]
 - [[DECISOES]]
-- [[ECONOMIA]]
 - [[ORGANOGRAMA]]
 - [[auditoria-baloes-v4-2026-08-14]]
 - [[aviso_lote]]
@@ -1660,3 +1659,4 @@ crescer exige Reels, hashtag de nicho e presença nos perfis grandes da raça.
 - [[estudo-virais-2026-08]]
 - [[garimpo-apify-2026-08-09]]
 - [[hipoteses-produto]]
+- [[legendas-pov-2026-08-21]]
