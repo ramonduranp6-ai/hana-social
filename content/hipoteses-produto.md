@@ -65,3 +65,11 @@ de alcance e base pessoal medida, 15 dias de post orgânico falam com as mesmas
   utilidade, nunca venda.
 - A base atual do perfil é a rede pessoal do Ramón. Nenhum teste comercial tem
   amostra enquanto isso não mudar.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[DECISOES]]
+- [[brand-brief]]

@@ -49,3 +49,10 @@ O cron do GitHub Actions é **estrangulado**: pedimos `*/30` e ele roda a cada
 ~4h em repositório pouco movimentado. Por isso o vigia local
 (`studio/sentinela.py`, Agendador do Windows, seg/qua/sex 18:10, tolerância de
 5 min) é quem garante o horário do post.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[parceria-canecas-pod]]

@@ -532,3 +532,21 @@ que `ESTADO-ATUAL.md` (gerado antes, às 08:21 de 04/08) registrava várias
 alterações não commitadas que já não estavam mais presentes nesta checagem,
 ou seja, algo foi commitado entre a geração daquele arquivo e agora. Não foi
 feito nenhum commit por esta análise.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[APRENDIZADO-IA]]
+- [[DECISOES]]
+- [[ESTADO-ATUAL]]
+- [[ESTADO-DOS-PROJETOS]]
+- [[METODO-DE-TRABALHO]]
+- [[ORGANOGRAMA]]
+- [[aviso_lote]]
+- [[benchmark-instagram]]
+- [[benchmark-tecnico]]
+- [[brand-brief]]
+- [[calendario-editorial]]
+- [[checar-credito]]

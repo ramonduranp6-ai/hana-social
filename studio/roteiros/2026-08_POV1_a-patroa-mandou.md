@@ -163,3 +163,10 @@ problema deixa de ser o formato e sobe para discussão de distribuição.
 
 Métrica de sucesso desta peça, só uma: **salvo ou compartilhamento > 0.**
 É o que falta em 9/9 posts até hoje.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[reuniao-2026-08-18-engajamento]]

@@ -297,3 +297,10 @@ clipes de 5s** e acabou — não é ferramenta de rotina, é de peça especial.
 **Nada foi publicado, a fila não foi tocada, `DECISOES.md` e `PROXIMA-CONVERSA.md`
 não foram alterados. Gasto nesta sessão: zero** (todos os preços do §1 vieram de
 preflight gratuito).
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[DECISOES]]

@@ -1,0 +1,20 @@
+{
+  "titulo": "ELA CABIA NA MINHA MÃO — VARIANTE CLARA",
+  "historia": "A versão acelera a história e elimina o plano contra a janela: filhote, então adulta dona da cama, depois o desfecho de que ele virou colchão.",
+  "trilha": "content/trilhas/04-crescendo-filhote.mp3",
+  "inicio_trilha": 13.3,
+  "abafar_ate": 2.2,
+  "volume_trilha": 0.9,
+  "volume_trilha_abafada": 0.3,
+  "cortes": [
+    {"arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_filhote_cenoura.mp4", "de": 3.7, "ate": 5.9, "movimento": "punch", "forca": 0.10},
+    {"arquivo": "Fotos da Hana/01 - brutas (suba aqui)/hana_filhote_bolinha.mov", "de": 20.7, "ate": 22.4, "movimento": "acelerado", "fator": 1.3, "aproximar": 2.0, "foco_y": 0.30, "mudo": true},
+    {"arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/11984692-701d-419b-ac51-88434fa3c902.mp4", "de": 6.0, "ate": 8.4, "movimento": "punch", "forca": 0.08, "mudo": true},
+    {"arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/24023CD7-9018-4D40-8792-200F4F0AD9B1.mp4", "de": 1.6, "ate": 3.8, "movimento": "zoomout", "forca": 0.16, "mudo": true}
+  ],
+  "textos": [
+    {"de": 0.25, "ate": 1.85, "texto": "ELA CABIA NA MINHA MÃO", "posicao": "baixo", "px": 72},
+    {"de": 3.45, "ate": 5.55, "texto": "HOJE A CAMA É DELA", "posicao": "alto", "px": 78},
+    {"de": 6.4, "ate": 7.9, "texto": "E EU VIREI O COLCHÃO", "posicao": "baixo", "px": 74}
+  ]
+}

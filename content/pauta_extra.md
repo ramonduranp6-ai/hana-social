@@ -71,3 +71,10 @@ E) ✅ RESOLVIDO EM 31/07/2026 — NÃO SOBE MAIS NA PAUTA.
 Eu tinha proposto cancelar 3 fotos agendadas (03/08, 05/08, 07/08) e o
 Reel-slideshow de 10/08. **Ele decidiu o contrário: fica tudo.** A fila não foi
 tocada. A régua nova começa a valer no post seguinte ao de 10/08.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[hipoteses-produto]]

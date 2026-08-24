@@ -107,3 +107,9 @@ Foto de hoje: 330 seguidores, alcance médio 42.
 
 ---
 
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[2026-08-04]]

@@ -25,3 +25,10 @@ no colo. iCloud sincronizando vai trazer mais.
 - Reels: gravar na vertical (9:16), perto de janela/luz natural, clipes de 5-15s bastam.
 - Áudio em alta: adicionar pelo app do Instagram na hora de aprovar (a API publica sem áudio de trending).
 - Nunca gerar imagem falsa da Hana — só edição de material real (regra do brand-brief).
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[brand-brief]]

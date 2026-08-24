@@ -390,3 +390,14 @@ sem ela (decisão certa, conferida por mim) · custo R$ 0,00 do começo ao fim.
 
 **Nenhum gasto proposto nesta auditoria. Nada foi publicado. Nada foi alterado
 na peça.**
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[DECISOES]]
+- [[auditoria-baloes-v4-2026-08-14]]
+- [[brand-brief]]
+- [[manual-profissional-reels]]
+- [[virais-medidos-2026-08-13]]

@@ -1,0 +1,37 @@
+{
+  "titulo": "ELA NAO PEDIU PRA SUBIR",
+  "historia": "A Hana não é apresentada como um filhote que cresceu: ela entra em cena invadindo a cama. A virada mostra que o 'bebê' virou dona do quarto e o humano ficou com o espaço que sobrou.",
+  "origem": "Substitui a variante v2, rejeitada por parecer apenas uma troca de textos sobre a mesma montagem. Esta versão usa uma situação reconhecível já no primeiro segundo: a cachorra toma a cama sem pedir. Não reutiliza os segundos usados no Reel de regras da casa.",
+  "trilha": "content/trilhas/07-marcha-travessa-edit2.mp3",
+  "inicio_trilha": 0,
+  "abafar_ate": 0,
+  "volume_trilha": 0.9,
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/03472dd5-38fa-43e8-98c1-41af7ff91ecc.mp4",
+      "de": 0.8, "ate": 2.5, "movimento": "punch", "forca": 0.10, "mudo": true,
+      "_nota": "Gancho em ação: ela entra na cama. A ação explica a premissa antes da leitura terminar."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/11984692-701d-419b-ac51-88434fa3c902.mp4",
+      "de": 6.0, "ate": 8.0, "movimento": "punch", "forca": 0.10, "mudo": true,
+      "_nota": "Consequência: dona da cama, olhando para a câmera. Trecho diferente do usado em regras da casa."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/135b6565-9f29-4e4c-b83d-9a434936b424.mp4",
+      "de": 3.6, "ate": 5.0, "movimento": "punch", "forca": 0.14, "mudo": true,
+      "_nota": "Flashback curto: o rosto de filhote sustenta a ironia de ela ainda ser tratada como bebê."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/24023CD7-9018-4D40-8792-200F4F0AD9B1.mp4",
+      "de": 1.7, "ate": 4.0, "movimento": "zoomout", "forca": 0.16, "mudo": true,
+      "_nota": "Desfecho visual: a cabeça dela toma o colo/perna do humano. O humano é quem pede licença."
+    }
+  ],
+  "textos": [
+    {"de": 0.12, "ate": 1.55, "texto": "ELA NAO PEDIU PRA SUBIR", "posicao": "baixo", "px": 70},
+    {"de": 1.75, "ate": 3.35, "texto": "ELA SO TOMOU O LUGAR", "posicao": "alto", "px": 70},
+    {"de": 3.55, "ate": 4.72, "texto": "E EU AINDA CHAMO DE BEBE", "posicao": "baixo", "px": 67},
+    {"de": 4.95, "ate": 6.95, "texto": "AGORA EU QUE PECO LICENCA", "posicao": "baixo", "px": 67}
+  ]
+}

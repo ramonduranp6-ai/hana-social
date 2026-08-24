@@ -21,10 +21,20 @@ if errorlevel 1 exit /b %errorlevel%
 exit /b 0
 
 :rodar
+rem BUG CONSERTADO 23/08/2026: %* no batch NAO respeita shift - o comando saia
+rem com o titulo junto ('"renovar token" python ...') e dava 9009. Agora o
+rem comando e montado argumento a argumento DEPOIS do shift.
 set "NOME=%~1"
 shift
+set "CMD="
+:montar_cmd
+if "%~1"=="" goto exec_cmd
+set "CMD=!CMD! %1"
+shift
+goto montar_cmd
+:exec_cmd
 echo [%date% %time%] INICIO: %NOME% >> "%LOG%"
-%* >> "%LOG%" 2>&1
+call !CMD! >> "%LOG%" 2>&1
 set "CODIGO=!errorlevel!"
 if not "!CODIGO!"=="0" (
   echo [%date% %time%] ERRO: %NOME% (codigo !CODIGO!) >> "%LOG%"

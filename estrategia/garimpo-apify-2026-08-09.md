@@ -73,3 +73,10 @@ curtidas na faixa de contas pequenas (500-3.000 seguidores) fica entre
 pequeno consegue engajamento proporcionalmente alto. Comparar com o placar da
 Hana (`content/placar.md`) nas próximas reuniões para saber se 331 seguidores
 é problema nosso ou o nicho inteiro está devagar.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[internacional]]

@@ -62,3 +62,10 @@ estética. Também alcança o público amplo de pet pela fofura.
 ## Restrições
 - Publicação é automática via pipeline (ver README), com aprovação por Telegram.
 - Design/identidade visual mais elaborada será evoluída depois, junto com o Ramón.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[parceria-canecas-pod]]

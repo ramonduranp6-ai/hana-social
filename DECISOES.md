@@ -1586,3 +1586,21 @@ bully" segue como candidato natural **quando** o assunto reabrir, e as hipótese
 já trabalhadas estão em `content/hipoteses-produto.md`. O gargalo real, medido em
 `content/metricas.md`: a base atual é a rede pessoal do Ramón, não o nicho —
 crescer exige Reels, hashtag de nicho e presença nos perfis grandes da raça.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[2026-08_POV1_a-patroa-mandou]]
+- [[ECONOMIA]]
+- [[ORGANOGRAMA]]
+- [[auditoria-baloes-v4-2026-08-14]]
+- [[aviso_lote]]
+- [[catalogo-garimpo]]
+- [[crescimento-instagram-2026-08-19]]
+- [[estudo-virais-2026-08]]
+- [[garimpo-apify-2026-08-09]]
+- [[hipoteses-produto]]
+- [[legendas-pov-2026-08-21]]
+- [[pacote-da-semana]]

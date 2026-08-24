@@ -94,3 +94,11 @@ Ciclo não travou por isso. Texto que deveria ter ido, para reenvio manual:
 > os 3 Destaques no perfil (2 min no celular).
 > O diretor de Atualidades falhou 2 rodadas seguidas sem motivo técnico — se não entregar
 > até amanhã, minha recomendação é tirá-lo do projeto.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[ESTADO-ATUAL]]
+- [[legendas-pov-2026-08-21]]

@@ -185,3 +185,10 @@ precisa do seu OK.
 Horário, hashtag final e formato → diretor-redes. Geração de imagem/vídeo em si
 (execução da câmera, ranking de ferramenta) → diretor-visual. Preço/margem →
 fora de escopo (não há produto).
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[benchmark-tecnico]]

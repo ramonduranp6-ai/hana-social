@@ -55,3 +55,10 @@ Métricas que a API **recusou** (o placar está incompleto nestes pontos):
 - `2026-08-10_escolheu-o-canal` · **follows**: The Media Insights API does not support the follows metric for this media product type.
 
 Lembrete honesto: o Instagram só dá insights de posts publicados **pela conta**, e alguns números só existem depois de algumas horas no ar.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[2026-08-19]]
