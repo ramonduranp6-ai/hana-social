@@ -160,7 +160,13 @@ def main():
                 print(f"[aprovacao] {pid} -> {status}")
 
     # 2. notifica pendentes
-    if require_approval and tg_token and tg_chat:
+    # DESLIGADO em 25/08/2026 por ordem dele: "não quero mais receber
+    # mensagens pelo telegram, lá não funciona, traga minhas pendências por
+    # aqui" — a aprovação passa a acontecer na conversa (o Claude mostra o
+    # pendente e escreve approved_at/approved_by direto no post.json, como já
+    # faz desde 17/08). Não apagar a função em telegram_approve.py: comandos
+    # (pausar/voltar) e outros avisos pontuais ainda passam por lá.
+    if False and require_approval and tg_token and tg_chat:
         pending = [p for p in posts if p.get("status") == "pending"]
         pending = prontidao.pendentes_prontos(pending)
         tg.notify_pending(tg_token, tg_chat, pending, media_base)

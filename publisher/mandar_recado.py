@@ -80,7 +80,20 @@ def _pedacos(texto, tamanho=LIMITE):
     return partes or [texto[:tamanho]]
 
 
+# DESLIGADO em 25/08/2026, ordem direta dele: "não quero mais receber
+# mensagens pelo telegram, lá não funciona, traga minhas pendências por
+# aqui". Guarda ÚNICA aqui dentro de mandar() porque é a função que
+# avisar_lote.py, cobertura_fila.py, leitura_d1.py, recepcionista.py e
+# sentinel.py (token) importam e chamam — apagar/religar num lugar só.
+# NÃO apaga o bot nem os secrets: só para de empurrar mensagem pra ele.
+TELEGRAM_DESLIGADO = True
+
+
 def mandar(token, chat_id, texto):
+    if TELEGRAM_DESLIGADO:
+        print("[telegram] desligado por ordem do Ramón (25/08/2026) — "
+              "nada enviado. Recado: " + texto[:200])
+        return True
     for parte in _pedacos(texto):
         r = requests.post(API.format(token=token), timeout=60,
                           data={"chat_id": chat_id, "text": parte})
