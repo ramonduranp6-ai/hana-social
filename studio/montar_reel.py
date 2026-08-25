@@ -148,6 +148,21 @@ def _filtro_video(corte):
         partes.append("eq=gamma=%.3f:saturation=%.3f:contrast=%.3f"
                       % (1.0 + clarear, 1.0 + clarear * 0.35, 1.0 + clarear * 0.12))
 
+    # GAMMA. Entrou em 24/08/2026. `clarear` so LEVANTA sombra (o guarda e
+    # `> 0.001`, entao valor negativo era ignorado em silencio) e `cinema` so
+    # escurece junto com vinheta — que o manual profissional (secao 4) proibe
+    # como efeito. Faltava o meio-termo: o "grading leve e uniforme" que a
+    # secao 4 AUTORIZA, sem nada estiloso junto.
+    # Caso que criou a necessidade: o bruto 01_E5DBFA8E (sala de piso e parede
+    # brancos, luz de dia) sai com brilho medio 135,6 — acima da faixa 110-130
+    # do manual e mais claro que os 7 virais medidos (112-127). `gamma: 0.94`
+    # devolve 127,5 sem estourar nem esmagar (YMAX segue em ~228, longe de 255).
+    # Puro gamma de proposito: nao mexe em saturacao para nao adulterar a cor
+    # tri lilac merle, que e item de reprovacao do checklist.
+    gamma = float(corte.get("gamma", 1.0))
+    if abs(gamma - 1.0) > 0.001:
+        partes.append("eq=gamma=%.3f" % gamma)
+
     # CINEMA. Pedido dele em 04/08/2026: "quero reels cinematograficos".
     # Nao e filtro de rede social: e o tratamento que faz material de celular
     # parecer filmado — contraste em S (preto mais fechado), leve dessaturacao

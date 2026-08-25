@@ -1,0 +1,20 @@
+{
+  "_nota": "PLANO UNICO, sem corte, sem texto na tela, sem zoom de pos-producao. Bruto novo do garimpo (nunca usado): 01_E5DBFA8E, 1080x1920 nativo 30fps, 17,35s. Janela 1,70-9,40 = 7,70s. Por que essa janela: o clipe abre num plano geral da sala (ela minuscula sob a cadeira) e o celular faz um push-in in-camera que so pousa em close por volta de 1,5-1,7s -- comecar em 1,70 garante o rosto dela legivel no PRIMEIRO frame (checklist secao 8 do manual). Fim em 9,40 porque em 9,6 a camera tromba (borrao de movimento + teto entrando no quadro) e em 10,2 a moldura inclina. O push-in continua suave dentro da janela: ela cresce sozinha no quadro ate o fim -- e o mesmo recurso do viral de 4,8M ('mao, fecha no rosto no fim'), so que aqui e do material bruto, nao acrescentado por mim.",
+  "_nota_desfecho": "A virada visual e o LADEIO DE CABECA que comeca em ~8,4-8,6s do bruto (= 6,7-6,9s da peca) e segura ate o fim. E o unico movimento dela na janela inteira e serve de desfecho no rosto.",
+  "_nota_som": "MUDO no corte. O audio original tem VOZ HUMANA em rajadas do comeco ao fim (confirmado por espectrograma: pilhas harmonicas de 200-2000Hz, densas entre 10,5 e 14s). Nao consigo ouvir para saber o que e dito nem de quem e a voz -- publicar as cegas fere sigilo (regra do projeto: nada que identifique o Ramon) e a regra de 'sem pessoa terceira'. Bruto medido em -19,2 LUFS, que ja estaria fora do padrao de qualquer jeito. Se ele ouvir e liberar, da pra refazer com som de cena.",
+  "_nota_trilha": "03-comico-pizzicato (Lyria 3, JA EXISTE no projeto -- custo R$ 0,00 nesta peca). Escolhida por ESTRUTURA medida, nao de ouvido: RMS a cada 0,1s mostra a faixa subindo de -16 dB para um PICO em 17,00-17,10s (-10,2 dB) e despencando logo depois (-17,5 / -22,5 / -26,0), com quase-silencio em 17,9-18,2s. Entrando em 10,20s: o pico cai em 6,85s da peca = exatamente em cima do ladeio de cabeca, e a queda deixa o final da peca quase sem musica, com ela parada olhando. Sting comico + silencio, no lugar de cama de fundo generica. Comeca em 10,20 (vale de -20,4 dB) para nao entrar cortando frase no meio.",
+  "trilha": "content/trilhas/03-comico-pizzicato.mp3",
+  "inicio_trilha": 10.20,
+  "volume_trilha": 0.85,
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/01_E5DBFA8E-7D2B-478F-9CD2-F3CCE4F2688F.mp4",
+      "de": 1.70,
+      "ate": 9.40,
+      "movimento": "seco",
+      "mudo": true,
+      "gamma": 0.94
+    }
+  ],
+  "textos": []
+}
