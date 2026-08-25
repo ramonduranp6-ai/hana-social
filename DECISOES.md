@@ -3,6 +3,24 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 📸 25/08/2026 -- Foto de perfil trocada + feed post agendado (retrato Gemini aprovado por ele)
+
+Ele viu o retrato editorial e mandou: "Ficou top essa foto, pode postar, coloque
+essa foto no perfil dela do Instagram tb".
+
+- **Feed:** post agendado 26/08 14:00Z (),
+  aprovado por ele na conversa.
+- **Foto de perfil:** trocada agora, ao vivo -- conferido abrindo
+  instagram.com/hanaduransanches de verdade (nao só a tela de editar). Perfil
+  tinha 47 posts / 331 seguidores no momento (o rastreador interno só
+  acompanha 9 -- ha posts antigos fora do controle do robô, não investigado
+  agora).
+- Cuidado no caminho:  criou aba sem preservar o browser
+  selecionado e caiu no perfil ERRADO (Canecas/brushedandbrewedco) por um
+  instante -- conferido pelo texto da pagina antes de fazer qualquer upload,
+  nada foi enviado la. Sempre reconferir o @ na tela depois de trocar de aba,
+  nao confiar so no deviceId.
+
 ## 🎨 25/08/2026 -- Reel recusado (sem graca); teste de foto premium via Gemini
 
 Ramon recusou "cara de reuniao" (sem graca, sem conflito). Pediu foto + Gemini
@@ -353,28 +371,28 @@ processo no meio:**
 combina com a família, não é calendário de conteúdo) e sem decidir se estica
 a duração (6s vs 9-12s, sugestão do auditor). Esperando ele ver e aprovar.
 
-## 🏁 BASTÃO (atualizado em 21/08 23:26 Itajaí)
-· **Onde paramos:** VP de Marketing e Performance contratado (ordem dele,
-  21/08) — `~/.claude/agents/vp-marketing.md`, revisão a cada 2 dias já
-  agendada (rotina no PC dele, 9h Itajaí). Achou e o time consertou um bug
-  real: a fila ficou 34h travada (post.json sem campo de auditoria que nada
-  no código escrevia) — os 3 posts aprovados em 17/08 já estão destravados.
-  Formato POV+CTA nomeado (18/08) e horário novo 11h/14:00Z (19/08) **ainda
-  não têm nenhuma peça publicada** — 0 salvo/0 compartilhamento continua
-  valendo pros 9 posts antigos, nada novo foi medido ainda.
+## 🏁 BASTÃO (atualizado em 25/08 manhã, Itajaí)
+· **Onde paramos:** Fila vazia (0 posts futuros) — "cara de reunião" (peça do
+  acervo, sem cena encenada) foi recusada por ele ("sem graça"). Telegram
+  DESLIGADO por ordem dele (25/08) — pendência agora se mostra na própria
+  conversa (`SendUserFile`), nunca mais no bot. Testado 1 retrato editorial no
+  Gemini (conta pessoal — a da Hana está bloqueada, é supervisionada/infantil),
+  enviado a ele, resposta ainda pendente. Robô "Vigia de Erros" criado
+  (nuvem, diário 9h30 Itajaí) pra consertar bug de código sozinho; a rotina do
+  VP (a cada 2 dias) ficou muda desde 21/08 porque a ponte com o PC dele caiu.
 · **Esperando ele:**
-  1. **Filmar "a patroa mandou"** (10 min, celular, roteiro pronto em
-     `studio/roteiros/2026-08_POV1_a-patroa-mandou.md`) — é o único gargalo
-     real hoje, aberto desde 07/08.
-  2. Responder se troca a legenda velha dos 2 posts que publicam 21/08 e
-     22/08 pelas novas com CTA de salvar (`content/legendas-pov-2026-08-21.md`)
-     — perguntado, resposta pendente.
-  3. Decidir o futuro do diretor-atualidades: 2ª falha seguida (sem fonte
-     verificável), o VP recomendou última régua (até 22/08 12:00Z) ou
-     aposentar o cargo neste projeto.
-· **Próximo passo:** assim que a filmagem chegar, diretor-reels já monta na
-  hora (roteiro pronto). Sem filmagem, a fila fica vazia depois de 22/08 (só
-  sobra o pilar antigo, todo rejeitado, e a Eloen sem data).
+  1. **Filmar algo novo** (qualquer coisa, 10s+, sem precisar ser encenado —
+     roteiro POV pronto em `studio/roteiros/2026-08_POV1_a-patroa-mandou.md`)
+     — segue sendo o gargalo real, aberto desde 07/08.
+  2. Opinar sobre o retrato do Gemini (aprova o estilo pra virar padrão, ou não
+     curtiu).
+  3. Se quiser a rotina do VP de volta: reconectar o Remote Control (ponte
+     caiu).
+  4. Decidir o futuro do diretor-atualidades — 3ª entrega fraca seguida
+     (21/08 x2 + 25/08), sem fonte verificável nas três.
+· **Próximo passo:** sem filmagem nem decisão sobre o retrato do Gemini, o
+  Claude não tem peça nova pra propor — a fila segue vazia até um dos dois
+  destravar.
 
 ## 🎬 14/08/2026 — TESTE REAL DO HIGGSFIELD: motor bom, catálogo de efeitos reprovado
 
