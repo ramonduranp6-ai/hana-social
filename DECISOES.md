@@ -8,14 +8,14 @@ Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 Ele viu o retrato editorial e mandou: "Ficou top essa foto, pode postar, coloque
 essa foto no perfil dela do Instagram tb".
 
-- **Feed:** post agendado 26/08 14:00Z (),
+- **Feed:** post agendado 26/08 14:00Z ("content/queue/2026-08-26_retrato-oficial"),
   aprovado por ele na conversa.
 - **Foto de perfil:** trocada agora, ao vivo -- conferido abrindo
   instagram.com/hanaduransanches de verdade (nao só a tela de editar). Perfil
   tinha 47 posts / 331 seguidores no momento (o rastreador interno só
   acompanha 9 -- ha posts antigos fora do controle do robô, não investigado
   agora).
-- Cuidado no caminho:  criou aba sem preservar o browser
+- Cuidado no caminho: "tabs_context_mcp" criou aba sem preservar o browser
   selecionado e caiu no perfil ERRADO (Canecas/brushedandbrewedco) por um
   instante -- conferido pelo texto da pagina antes de fazer qualquer upload,
   nada foi enviado la. Sempre reconferir o @ na tela depois de trocar de aba,
