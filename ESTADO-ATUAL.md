@@ -1,15 +1,7 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 24/08/2026 23:08. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 25/08/2026 12:34. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
-
-## 🔴 ALARME — 5 execuções seguidas com falha no GitHub Actions
-```
-- 2026-08-K_chegada-eloen: pronto, mas SEM DATA — esperando ele marcar
- [SENTINELA] PROBLEMAS ENCONTRADOS:
-  - fila com so 0 post(s) futuro(s) (minimo saudavel: 2) — sem reforco a fila acaba e nenhum aviso normal pega isso antes de faltar post
- ##[error]Process completed with exit code 1.
-```
 
 ## Fila (o que ainda vai ao ar)
 
@@ -21,6 +13,8 @@ decisões, use `DECISOES.md`.
 | 2026-08-19T11:00:00Z | 2026-08-19_baloes-dela | reel | rejected |
 | 2026-08-21T11:00:00Z | 2026-08-21_dona-da-casa | reel | rejected |
 | 2026-08-24T11:00:00Z | 2026-08-24_travesseiro | reel | rejected |
+| 2026-08-26T14:00:00Z | 2026-08-26_cara-de-reuniao | reel | rejected |
+| 2026-08-26T14:00:00Z | 2026-08-26_retrato-oficial | image | approved |
 | None | 2026-08-K_chegada-eloen | reel | approved |
 
 ## Publicados: 11
@@ -33,28 +27,19 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-25T02:03:40Z push success
-2026-08-25T00:48:46Z schedule failure
-2026-08-24T23:43:48Z schedule failure
+(não consegui consultar — checar 'gh auth status')
 ```
-- Vigia local (Agendador do Windows): próxima execução quarta-feira, 26 de agosto de 2026 18:10:00
-- Token renovável automático: CONFIGURADO
+- Vigia local (Agendador do Windows): próxima execução não encontrada
+- Token renovável automático: FALTA criar studio/.token
 
 ## Esperando o OK do Ramón
-Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
-
-- 2026-08-22_cenoura-variante-v1.mp4
-- 2026-08-22_cenoura-variante-v2.mp4
-- 2026-08-22_cenoura-variante-v3.mp4
-
-Ele responde pelos números. Enquanto não responder, **não commitar**
-mudança de status nem publicar.
+Nada esperando aprovação (pasta vazia ou inexistente).
 
 ## Acervo de fotos
-- Brutas a processar: 39 arquivos
-- Editadas prontas: 4
-- Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34571
+- Brutas a processar: 0 arquivos
+- Editadas prontas: 0
+- Artes recebidas do outro projeto: 0
+- Fotos do iPhone sincronizadas (iCloud): 0
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -110,23 +95,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
-6111a59 Para o e-mail de fila-vazia em loop + motor Sonnet (comunicado 24/08) + RECUSAS.md
-2f6e6c1 chore: recado do lote semanal [skip ci]
-9e54f57 chore: atualiza estado da fila [skip ci]
-9a1ad62 chore: atualiza manutenção [skip ci]
-62af196 Perfil de Chrome FIXO do projeto (mapa do Ramon 23/08)
-546e096 Vault Obsidian tecido (auditoria 23/08): secoes Relacionados nos .md
-4bb8bb6 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
-091e706 Padrao da casa (auditoria 23/08) + conserto do sentinela.bat + estado local dos robos
-```
-Alterações não commitadas:
-```
-M ESTADO-ATUAL.md
- M content/.lote_semana_executada
- M content/.semanas_sem_cena
- M studio/estado.py
-?? AGENTS.md
-?? SAUDE-DO-PROJETO.md
+3d77a93 Corrige na skill: Telegram desligado, canal principal e a conversa
+d872de4 Corrige buracos de aspas no registro da foto de perfil
+83b8f0c Foto de perfil trocada + registra o quase-erro de conta (Canecas x Hana)
+e1fcb20 Retrato editorial (Gemini) aprovado por ele, agendado 26/08 14:00Z
+c5fc92c Registra recusa do reel + teste de retrato Gemini + achado (conta Hana bloqueada)
+0d69cb1 Ramon recusou 'cara de reuniao' - sem graca, sem conflito na cena
+9516242 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
+e46622e Desliga o Telegram por ordem dele: pendencia passa a vir na conversa
 ```
 
 ## Decisões e contexto
@@ -134,6 +110,44 @@ M ESTADO-ATUAL.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 📸 25/08/2026 -- Foto de perfil trocada + feed post agendado (retrato Gemini aprovado por ele)
+
+Ele viu o retrato editorial e mandou: "Ficou top essa foto, pode postar, coloque
+essa foto no perfil dela do Instagram tb".
+
+- **Feed:** post agendado 26/08 14:00Z ("content/queue/2026-08-26_retrato-oficial"),
+  aprovado por ele na conversa.
+- **Foto de perfil:** trocada agora, ao vivo -- conferido abrindo
+  instagram.com/hanaduransanches de verdade (nao só a tela de editar). Perfil
+  tinha 47 posts / 331 seguidores no momento (o rastreador interno só
+  acompanha 9 -- ha posts antigos fora do controle do robô, não investigado
+  agora).
+- Cuidado no caminho: "tabs_context_mcp" criou aba sem preservar o browser
+  selecionado e caiu no perfil ERRADO (Canecas/brushedandbrewedco) por um
+  instante -- conferido pelo texto da pagina antes de fazer qualquer upload,
+  nada foi enviado la. Sempre reconferir o @ na tela depois de trocar de aba,
+  nao confiar so no deviceId.
+
+## 🎨 25/08/2026 -- Reel recusado (sem graca); teste de foto premium via Gemini
+
+Ramon recusou "cara de reuniao" (sem graca, sem conflito). Pediu foto + Gemini
++ estudo de contas de referencia.
+
+**Achado tecnico:** a conta hanaduransanches@gmail.com esta BLOQUEADA no Gemini
+(conta supervisionada/infantil no Google -- "Nao e possivel acessar este
+servico... 13 anos ou mais"). Usei a conta PESSOAL dele (ramon.d.franca@gmail.com,
+Chrome perfil 2) pro teste -- e onde o plano Gemini pago de verdade mora.
+Gerado 1 retrato editorial (modelo Pro, app, nunca API) a partir de foto real
+dela, salvo em "Fotos da Hana/06 - videos e trilhas/testes-gemini/". Enviado
+a ele pra avaliar -- nada aprovado/publicado ainda.
+
+**Pesquisa de contas de referencia (diretor-atualidades):** achado com
+confianca BAIXA -- misturou WebSearch com o truque novo de embed sem
+distinguir o que foi verificado de verdade. Concluiu "foto parada funciona
+no nicho", mas sem link/legenda concreta citada. NAO tratar como fato
+confirmado; se for decidir reabrir foto parada como regra, medir de novo com
+o Apify (dado real, como fizemos em 13/08), nao confiar neste resultado.
 
 ## 🔓 21/08/2026 (noite) — 3 BUGS OPERACIONAIS CONSERTADOS; REPO VOLTOU A SER PÚBLICO
 
@@ -465,28 +479,28 @@ processo no meio:**
 combina com a família, não é calendário de conteúdo) e sem decidir se estica
 a duração (6s vs 9-12s, sugestão do auditor). Esperando ele ver e aprovar.
 
-## 🏁 BASTÃO (atualizado em 21/08 23:26 Itajaí)
-· **Onde paramos:** VP de Marketing e Performance contratado (ordem dele,
-  21/08) — `~/.claude/agents/vp-marketing.md`, revisão a cada 2 dias já
-  agendada (rotina no PC dele, 9h Itajaí). Achou e o time consertou um bug
-  real: a fila ficou 34h travada (post.json sem campo de auditoria que nada
-  no código escrevia) — os 3 posts aprovados em 17/08 já estão destravados.
-  Formato POV+CTA nomeado (18/08) e horário novo 11h/14:00Z (19/08) **ainda
-  não têm nenhuma peça publicada** — 0 salvo/0 compartilhamento continua
-  valendo pros 9 posts antigos, nada novo foi medido ainda.
+## 🏁 BASTÃO (atualizado em 25/08 manhã, Itajaí)
+· **Onde paramos:** Fila vazia (0 posts futuros) — "cara de reunião" (peça do
+  acervo, sem cena encenada) foi recusada por ele ("sem graça"). Telegram
+  DESLIGADO por ordem dele (25/08) — pendência agora se mostra na própria
+  conversa (`SendUserFile`), nunca mais no bot. Testado 1 retrato editorial no
+  Gemini (conta pessoal — a da Hana está bloqueada, é supervisionada/infantil),
+  enviado a ele, resposta ainda pendente. Robô "Vigia de Erros" criado
+  (nuvem, diário 9h30 Itajaí) pra consertar bug de código sozinho; a rotina do
+  VP (a cada 2 dias) ficou muda desde 21/08 porque a ponte com o PC dele caiu.
 · **Esperando ele:**
-  1. **Filmar "a patroa mandou"** (10 min, celular, roteiro pronto em
-     `studio/roteiros/2026-08_POV1_a-patroa-mandou.md`) — é o único gargalo
-     real hoje, aberto desde 07/08.
-  2. Responder se troca a legenda velha dos 2 posts que publicam 21/08 e
-     22/08 pelas novas com CTA de salvar (`content/legendas-pov-2026-08-21.md`)
-     — perguntado, resposta pendente.
-  3. Decidir o futuro do diretor-atualidades: 2ª falha seguida (sem fonte
-     verificável), o VP recomendou última régua (até 22/08 12:00Z) ou
-     aposentar o cargo neste projeto.
-· **Próximo passo:** assim que a filmagem chegar, diretor-reels já monta na
-  hora (roteiro pronto). Sem filmagem, a fila fica vazia depois de 22/08 (só
-  sobra o pilar antigo, todo rejeitado, e a Eloen sem data).
+  1. **Filmar algo novo** (qualquer coisa, 10s+, sem precisar ser encenado —
+     roteiro POV pronto em `studio/roteiros/2026-08_POV1_a-patroa-mandou.md`)
+     — segue sendo o gargalo real, aberto desde 07/08.
+  2. Opinar sobre o retrato do Gemini (aprova o estilo pra virar padrão, ou não
+     curtiu).
+  3. Se quiser a rotina do VP de volta: reconectar o Remote Control (ponte
+     caiu).
+  4. Decidir o futuro do diretor-atualidades — 3ª entrega fraca seguida
+     (21/08 x2 + 25/08), sem fonte verificável nas três.
+· **Próximo passo:** sem filmagem nem decisão sobre o retrato do Gemini, o
+  Claude não tem peça nova pra propor — a fila segue vazia até um dos dois
+  destravar.
 
 ## 🎬 14/08/2026 — TESTE REAL DO HIGGSFIELD: motor bom, catálogo de efeitos reprovado
 
