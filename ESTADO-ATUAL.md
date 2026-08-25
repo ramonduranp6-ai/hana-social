@@ -1,15 +1,21 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 21/08/2026 09:14. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 24/08/2026 23:08. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
+
+## 🔴 ALARME — 5 execuções seguidas com falha no GitHub Actions
+```
+- 2026-08-K_chegada-eloen: pronto, mas SEM DATA — esperando ele marcar
+ [SENTINELA] PROBLEMAS ENCONTRADOS:
+  - fila com so 0 post(s) futuro(s) (minimo saudavel: 2) — sem reforco a fila acaba e nenhum aviso normal pega isso antes de faltar post
+ ##[error]Process completed with exit code 1.
+```
 
 ## Fila (o que ainda vai ao ar)
 
 | Quando (UTC) | Post | Tipo | Status |
 |---|---|---|---|
-| 2026-08-22T14:00:00Z | 2026-08-12_cenoura-filhote | reel | approved |
 | 2026-08-14T11:00:00Z | 2026-08-14_a-patroa-mimada | reel | rejected |
-| 2026-08-21T14:00:00Z | 2026-08-14_regras-da-casa | reel | approved |
 | 2026-08-17T11:00:00Z | 2026-08-17_golden-hour | reel | rejected |
 | 2026-08-19T11:00:00Z | 2026-08-19_a-noite-dela | reel | rejected |
 | 2026-08-19T11:00:00Z | 2026-08-19_baloes-dela | reel | rejected |
@@ -17,29 +23,38 @@ decisões, use `DECISOES.md`.
 | 2026-08-24T11:00:00Z | 2026-08-24_travesseiro | reel | rejected |
 | None | 2026-08-K_chegada-eloen | reel | approved |
 
-## Publicados: 9
-- 2026-07-31_roda-gigante — IG `17893985169571565`
-- 2026-08-03_dia-de-praia — IG `17963565245962414`
+## Publicados: 11
 - 2026-08-05_navio-importacao — IG `17869247748585560`
 - 2026-08-07_banho-de-sol — IG `17871079455631167`
 - 2026-08-10_escolheu-o-canal — IG `17932612077361476`
+- 2026-08-12_cenoura-filhote — IG `18193474768385556`
+- 2026-08-14_regras-da-casa — IG `18371032486238388`
 
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-(não consegui consultar — checar 'gh auth status')
+2026-08-25T02:03:40Z push success
+2026-08-25T00:48:46Z schedule failure
+2026-08-24T23:43:48Z schedule failure
 ```
-- Vigia local (Agendador do Windows): próxima execução sexta-feira, 21 de agosto de 2026 18:10:00
+- Vigia local (Agendador do Windows): próxima execução quarta-feira, 26 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
-Nada esperando aprovação (pasta vazia ou inexistente).
+Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
+
+- 2026-08-22_cenoura-variante-v1.mp4
+- 2026-08-22_cenoura-variante-v2.mp4
+- 2026-08-22_cenoura-variante-v3.mp4
+
+Ele responde pelos números. Enquanto não responder, **não commitar**
+mudança de status nem publicar.
 
 ## Acervo de fotos
 - Brutas a processar: 39 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34559
+- Fotos do iPhone sincronizadas (iCloud): 34571
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -91,25 +106,27 @@ eram clipes de Live Photo de ~2 segundos — e no vídeo da praia (IMG_1725.MOV)
 existem cerca de 4 segundos de rosto. Nos outros dois (TV e navio) o laudo
 estava certo: ela está de costas do começo ao fim.
 
-⏳ **1ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
+⏳ **2ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
 
 ## Últimas mudanças no projeto
 ```
-0e6b5f9 @ Retomada: remarca os 2 Reels aprovados para 11h de Itajai (21 e 22/08)
-0f3fb3f Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
-1c1f1a5 Destrava o veredito: 2 tipos de pre-condicao nunca existiram no codigo
-1b2a0f4 chore: atualiza estado da fila [skip ci]
-5e2ffb5 chore: atualiza estado da fila [skip ci]
-dfd4b5a Muda o horario fixo de post: 8h -> 11h de Itajai (pico real medido na API)
-26869db Pesquisa de crescimento (20 fontes + 4 IAs) + pico real de horario descoberto
-d4162e3 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
+6111a59 Para o e-mail de fila-vazia em loop + motor Sonnet (comunicado 24/08) + RECUSAS.md
+2f6e6c1 chore: recado do lote semanal [skip ci]
+9e54f57 chore: atualiza estado da fila [skip ci]
+9a1ad62 chore: atualiza manutenção [skip ci]
+62af196 Perfil de Chrome FIXO do projeto (mapa do Ramon 23/08)
+546e096 Vault Obsidian tecido (auditoria 23/08): secoes Relacionados nos .md
+4bb8bb6 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
+091e706 Padrao da casa (auditoria 23/08) + conserto do sentinela.bat + estado local dos robos
 ```
 Alterações não commitadas:
 ```
 M ESTADO-ATUAL.md
- M studio/garimpo_rodada.log
-?? content/legendas-pov-2026-08-21.md
-?? studio/roteiros/2026-08_POV1_a-patroa-mandou.md
+ M content/.lote_semana_executada
+ M content/.semanas_sem_cena
+ M studio/estado.py
+?? AGENTS.md
+?? SAUDE-DO-PROJETO.md
 ```
 
 ## Decisões e contexto
@@ -117,6 +134,68 @@ M ESTADO-ATUAL.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔓 21/08/2026 (noite) — 3 BUGS OPERACIONAIS CONSERTADOS; REPO VOLTOU A SER PÚBLICO
+
+Bronca dele: *"estou recebendo emails de erro... isso não é problema de
+aprovação minha é problema operacional... você precisa trabalhar melhor meu VP"*.
+Ele tinha razão: eu tinha tratado a falha como se dependesse da decisão dele.
+
+**1. CAUSA RAIZ do e-mail em loop (a que importava):** o repositório estava
+**PRIVADO**. O Instagram baixa a mídia por `raw.githubusercontent.com` — com o
+repo privado essa URL devolve **404**, e TODO post falhava. Não era defeito da
+mídia (ffprobe conferiu: 1080x1920 30fps, h264+aac, 11,8s, íntegro).
+**Ele autorizou tornar público** (perguntei porque expõe também o material da
+Eloen/chá revelação, que era sigilo de família). Conferido depois de trocar:
+`HTTP 200, 10.038.432 bytes`, idêntico ao arquivo local. Varredura de segredo
+nos arquivos rastreados **e no histórico inteiro do git** antes de publicar:
+nada encontrado.
+Post `regras-da-casa` destravado (`failed` → `approved`) e remarcado 21/08 →
+**24/08 14:00Z** (o slot de 21/08 já tinha passado; 24/08 é segunda, dia normal
+da grade).
+
+**2. E-mail em loop (o sintoma):** post com `status=failed` fazia o sentinela
+derrubar o job a cada 30 min PARA SEMPRE, repetindo a MESMA falha já
+diagnosticada. Agora só a 1ª vez é alarme; da 2ª em diante vira aviso no log
+(`content/.falhas_avisadas.json`). Mesmo padrão do conserto do post-sem-data
+de 19/08.
+
+**3. "Telegram não saiu" do ciclo do VP:** conferido — as credenciais do
+Telegram **nunca existiram nesta máquina** (nem variável de ambiente, nem
+registro do Windows, nem `studio/.telegram`), só como secret do repositório.
+Por isso o resumo do VP morria no log. `mandar_recado.py` agora procura em 4
+lugares e, não achando nenhum, **dispara o próprio workflow** (que tem os
+secrets) em vez de desistir. Testado ponta a ponta: run `32542427926`,
+**SUCCESS**, recado entregue.
+
+🔴 **CORREÇÃO NA MESMA NOITE — eu afirmei sem conferir (Regra Zero, de novo).**
+Eu escrevi aqui que o *"Não é possível conectar ao seu computador"* era o PC
+suspenso na hora do disparo. **Estava errado**, e ele desmentiu na hora ("o PC
+fica ligado o dia todo, reiniciei às 7 da noite"). Fui ao log real da rotina
+(`RemoteTrigger get_run_log`, sessão `cse_018j3WsjddAREyaqQErsjAwo`):
+**a rodada de 21/08 12:14Z terminou com `result: success`, 18 turnos, 356s** —
+leu o estado, invocou o VP, escreveu `estrategia/vp-marketing-2026-08-21.md`,
+commitou e deu push. **A rotina funcionou.**
+O que a tela dele mostra é a SESSÃO (que continua `active`/`idle`) tendo
+perdido a ponte quando ele reiniciou o PC às 19h — banner de reconexão de uma
+sessão viva, não falha da rodada.
+**O único passo que falhou de verdade naquela rodada foi o Telegram** — e é
+exatamente o que foi consertado nesta noite (fallback pelo GitHub Actions).
+**O que teria pego o erro:** abrir o log da rotina antes de opinar, em vez de
+deduzir pela imagem. Custou 2 comandos.
+## 🧾 21/08/2026 12:20Z — CICLO DO VP DE MARKETING (automático, nada publicado)
+
+Veredito: **NÃO TESTADO — e isso conta como não entrega do time.** 331 seguidores, +0 em 12
+dias, 9/9 posts com 0 salvo e 0 compartilhamento; nada foi ao ar desde 10/08. O VP achou um
+furo ainda consertável: as legendas novas com CTA de salvar (`content/legendas-pov-2026-08-21.md`)
+**não foram coladas em post.json nenhum** — `regras-da-casa` (hoje 14:00Z) e `cenoura-filhote`
+(amanhã) sairiam com o CTA-pergunta declarado morto em 18/08, contaminando o teste de 48h.
+Trocar a legenda **precisa do sim dele** (ele aprovou a versão velha em 17/08), então nada foi
+alterado. Diretores: redes ENTREGOU, reels e criativo entregaram peça mas deixaram o arquivo
+fora do repositório, **atualidades falhou pela 2ª rodada seguida** — recomendação do VP é tirá-lo
+do projeto se não entregar até 22/08 12:00Z (decisão do Ramón). Fila fica vazia a partir de
+23/08. Ordens numeradas, donos e prazos: `estrategia/vp-marketing-2026-08-21.md`.
+
 ## 🔴 21/08/2026 — BUG REAL: "regras da casa" ficou 34h travado, achado ao checar "como estamos"
 
 Causa: `publisher/run.py` exige `post.json["auditoria"]["veredito"]=="SEM OBJECAO"`
@@ -386,31 +465,28 @@ processo no meio:**
 combina com a família, não é calendário de conteúdo) e sem decidir se estica
 a duração (6s vs 9-12s, sugestão do auditor). Esperando ele ver e aprovar.
 
-## 🏁 BASTÃO (atualizado em 14/08 madrugada, PC de casa)
-· **Onde paramos:** Higgsfield testado de verdade (não só assinado) — 1 vídeo
-  real gerado a partir de foto real da Hana, medido com ffprobe/signalstats,
-  estudo completo do diretor-reels em `estrategia/estudo-higgsfield-2026-08-14.md`.
-· **Esperando ele — decidir a PROPOSTA do diretor-reels (nada foi adotado
-  sozinho):**
-  1. Adotar de graça as 4 técnicas de MÉTODO do Higgsfield (preflight de custo,
-     motor declarado por encomenda, gerar em lote e escolher a melhor,
-     encomenda versionada) — custo zero, não depende da assinatura.
-  2. Regra nova de captura: foto que vai virar vídeo sai já em 1080x1920.
-  3. Higgsfield vira motor de EXCEÇÃO (trecho curto de 2-3s dentro de peça de
-     acervo), nunca ferramenta de rotina; os 62 presets prontos ficam
-     PROIBIDOS (feitos pra selfie humana, contradizem "zero efeito" do manual).
-  4. Não gastar os 51 créditos do `reframe` — 6,8x mais caro que regerar do
-     zero (7,5) a partir de uma foto já 9:16.
-  5. Se ele quiser comparação de verdade com Gemini/Flow: falta o OK pra gastar
-     mais ~7,5 créditos testando a MESMA cena nos dois.
-  6. Reaprovar no Telegram os 3 Reels (14/08 regras, 17/08 cenoura, 19/08
-     balões) — a trava reenvia sozinha, é só clicar.
-  7. 2 DMs de collab do celular (@troy.abully, @zaya.lifestylee).
-  8. Piloto de curtir/comentar — falta o "pode montar".
-  9. Decidir o conflito: regra dos 5 cortes × plano único (dado dos virais).
-  10. Se quiser Kairogen da Hana: autorizar "kairogen-hana" no claude.ai.
-· **Próximo passo:** esperar a decisão dele sobre a proposta acima. Toda peça
-  nova continua seguindo o manual-profissional-reels.md.
+## 🏁 BASTÃO (atualizado em 21/08 23:26 Itajaí)
+· **Onde paramos:** VP de Marketing e Performance contratado (ordem dele,
+  21/08) — `~/.claude/agents/vp-marketing.md`, revisão a cada 2 dias já
+  agendada (rotina no PC dele, 9h Itajaí). Achou e o time consertou um bug
+  real: a fila ficou 34h travada (post.json sem campo de auditoria que nada
+  no código escrevia) — os 3 posts aprovados em 17/08 já estão destravados.
+  Formato POV+CTA nomeado (18/08) e horário novo 11h/14:00Z (19/08) **ainda
+  não têm nenhuma peça publicada** — 0 salvo/0 compartilhamento continua
+  valendo pros 9 posts antigos, nada novo foi medido ainda.
+· **Esperando ele:**
+  1. **Filmar "a patroa mandou"** (10 min, celular, roteiro pronto em
+     `studio/roteiros/2026-08_POV1_a-patroa-mandou.md`) — é o único gargalo
+     real hoje, aberto desde 07/08.
+  2. Responder se troca a legenda velha dos 2 posts que publicam 21/08 e
+     22/08 pelas novas com CTA de salvar (`content/legendas-pov-2026-08-21.md`)
+     — perguntado, resposta pendente.
+  3. Decidir o futuro do diretor-atualidades: 2ª falha seguida (sem fonte
+     verificável), o VP recomendou última régua (até 22/08 12:00Z) ou
+     aposentar o cargo neste projeto.
+· **Próximo passo:** assim que a filmagem chegar, diretor-reels já monta na
+  hora (roteiro pronto). Sem filmagem, a fila fica vazia depois de 22/08 (só
+  sobra o pilar antigo, todo rejeitado, e a Eloen sem data).
 
 ## 🎬 14/08/2026 — TESTE REAL DO HIGGSFIELD: motor bom, catálogo de efeitos reprovado
 
@@ -1649,14 +1725,14 @@ crescer exige Reels, hashtag de nicho e presença nos perfis grandes da raça.
 > partir das citações que já existiam no texto acima.
 
 - [[2026-08_POV1_a-patroa-mandou]]
-- [[DECISOES]]
 - [[ORGANOGRAMA]]
 - [[auditoria-baloes-v4-2026-08-14]]
 - [[aviso_lote]]
 - [[catalogo-garimpo]]
 - [[crescimento-instagram-2026-08-19]]
-- [[estudo-higgsfield-2026-08-14]]
 - [[estudo-virais-2026-08]]
 - [[garimpo-apify-2026-08-09]]
 - [[hipoteses-produto]]
 - [[legendas-pov-2026-08-21]]
+- [[pacote-da-semana]]
+- [[pauta_extra]]

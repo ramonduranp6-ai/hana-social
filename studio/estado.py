@@ -22,9 +22,10 @@ ICLOUD = os.path.join(os.path.expanduser("~"), "iCloudPhotos", "Photos")
 SAIDA = os.path.join(RAIZ, "ESTADO-ATUAL.md")
 
 
-def sh(*args, cwd=RAIZ):
+def sh(*args, cwd=RAIZ, timeout=60):
     try:
-        r = subprocess.run(args, cwd=cwd, capture_output=True, text=True, timeout=60)
+        r = subprocess.run(args, cwd=cwd, capture_output=True, text=True,
+                            encoding="utf-8", errors="replace", timeout=timeout)
         return r.stdout.strip()
     except Exception:
         return ""
@@ -65,6 +66,43 @@ def gerar():
         f"{agora.strftime('%d/%m/%Y %H:%M')}. **Não editar à mão** — para registrar")
     add("decisões, use `DECISOES.md`.")
     add("")
+
+    # --- ALARME NO TOPO ---
+    # ACHADO 25/08/2026 (cobrança dele: "vc precisa saber de QUALQUER erro pra
+    # se autocorrigir"): a checagem do GitHub Actions sempre existiu aqui, mas
+    # ficava enterrada embaixo de "Fila"/"Publicados" como lista neutra de
+    # timestamp+status — dava pra ler o estado inteiro sem notar que os
+    # ultimos runs eram TODOS falha. O vigia-saude.py do hub tambem nao ve
+    # GitHub Actions (só maquina local). Este projeto passa a se auto-vigiar:
+    # se os runs recentes forem falha, mostra a razao real (puxada do log,
+    # nao só "failure") NO TOPO, antes de qualquer outra coisa.
+    # BUG achado testando (25/08/2026): sem --workflow, o repo agora tem 3
+    # workflows ("Saude do codigo", "Manutencao diaria" e este) e um "success"
+    # de outro workflow entrava na lista e zerava a contagem de falha do
+    # publicador. Tem que filtrar so o publish.yml.
+    ultimos = sh("gh", "run", "list", "-R", "ramonduranp6-ai/hana-social",
+                 "--workflow", "publish.yml", "--limit", "5",
+                 "--json", "databaseId,conclusion",
+                 "-q", '.[] | "\\(.databaseId) \\(.conclusion)"')
+    linhas_runs = [l for l in ultimos.splitlines() if l.strip()]
+    falhas_seguidas = 0
+    for l in linhas_runs:
+        if l.endswith(" failure"):
+            falhas_seguidas += 1
+        else:
+            break
+    if falhas_seguidas >= 2 and linhas_runs:
+        ultimo_id = linhas_runs[0].split()[0]
+        motivo = sh("bash", "-c",
+                    f"gh run view {ultimo_id} -R ramonduranp6-ai/hana-social --log 2>/dev/null "
+                    r"| grep -E 'PROBLEMAS ENCONTRADOS|TRAVADO|^publish.*  -|##\[error\]'"
+                    r" | sed -E 's/^[a-z]+\t[^\t]+\t[0-9TZ:.\-]+Z//' | head -8",
+                    timeout=45)
+        add(f"## 🔴 ALARME — {falhas_seguidas} execuções seguidas com falha no GitHub Actions")
+        add("```")
+        add(motivo or "(não consegui puxar o motivo do log — rodar 'gh run view --log' na mão)")
+        add("```")
+        add("")
 
     # --- fila ---
     fila = posts("queue")
