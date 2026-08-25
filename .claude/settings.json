@@ -1,4 +1,4 @@
 {
-  "model": "opus",
-  "effortLevel": "high"
+  "model": "sonnet",
+  "effortLevel": "medium"
 }

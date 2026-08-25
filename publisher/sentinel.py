@@ -102,12 +102,20 @@ def checar_fila():
                 futuros += 1
     # BURACO (c): fila com menos de 2 posts futuros é ALARME, nao "tudo em
     # dia" — sem isso o robo so percebe o buraco no dia em que ja faltou post.
+    # ACHADO 25/08/2026: mesmo bug de spam do "failed" (21/08) — sem dedupe
+    # diario isso reabre a cada 30 min pra sempre enquanto a fila nao enche.
     if futuros < MIN_POSTS_FUTUROS:
-        problemas.append(
+        msg = (
             f"fila com so {futuros} post(s) futuro(s) (minimo saudavel: "
             f"{MIN_POSTS_FUTUROS}) — sem reforco a fila acaba e nenhum aviso "
             f"normal pega isso antes de faltar post"
         )
+        chave = f"fila_vazia_{_hoje()}"
+        if chave in falhas_vistas:
+            avisos.append(msg)
+        else:
+            problemas.append(msg)
+            _marcar_falha_avisada(chave, falhas_vistas)
     if avisos:
         print("[SENTINELA] AVISOS (nao derrubam o job, nao mandam e-mail):")
         for x in avisos:
@@ -117,7 +125,11 @@ def checar_fila():
         for x in problemas:
             print(" -", x)
         sys.exit(1)
-    print(f"[SENTINELA] fila saudavel ({futuros} post(s) futuro(s))")
+    if futuros < MIN_POSTS_FUTUROS:
+        print(f"[SENTINELA] fila ainda com so {futuros} post(s) futuro(s) "
+              f"— ja avisado hoje, nao repete o alarme")
+    else:
+        print(f"[SENTINELA] fila saudavel ({futuros} post(s) futuro(s))")
 
 
 def _hoje():
