@@ -2,6 +2,18 @@
 
 O que a automação já mandou pro Ramón, com data — pra próxima conversa não remontar do zero. Gravado por `publisher/diagnostico.py` e `publisher/leitura_d1.py`, sempre DEPOIS da entrega confirmada (nunca durante `--simular`). Mais recente em cima.
 
+## 2026-08-25 13:13 UTC — Leitura do dia 1 (2026-08-14_regras-da-casa)
+
+📈 LEITURA DO DIA 1 — 2026-08-14_regras-da-casa (REEL, 23h no ar)
+Alcance 156 · visitas ao perfil ? · seguidores ganhos ?
+Curtidas 16 · comentários 1 · salvos 0 · compartilh. 0
+Comparando só com Reels da mesma idade (2 medido(s)): média 176.
+Este está -11% em relação a essa média.
+
+Régua: alcance depois do dia 1 não gerou visita nova em nenhum post medido — por isso só este número decide.
+
+---
+
 ## 2026-08-23 13:04 UTC — Leitura do dia 1 (2026-08-12_cenoura-filhote)
 
 📈 LEITURA DO DIA 1 — 2026-08-12_cenoura-filhote (REEL, 23h no ar)
