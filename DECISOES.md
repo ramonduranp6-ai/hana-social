@@ -3,6 +3,26 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🎨 25/08/2026 -- Reel recusado (sem graca); teste de foto premium via Gemini
+
+Ramon recusou "cara de reuniao" (sem graca, sem conflito). Pediu foto + Gemini
++ estudo de contas de referencia.
+
+**Achado tecnico:** a conta hanaduransanches@gmail.com esta BLOQUEADA no Gemini
+(conta supervisionada/infantil no Google -- "Nao e possivel acessar este
+servico... 13 anos ou mais"). Usei a conta PESSOAL dele (ramon.d.franca@gmail.com,
+Chrome perfil 2) pro teste -- e onde o plano Gemini pago de verdade mora.
+Gerado 1 retrato editorial (modelo Pro, app, nunca API) a partir de foto real
+dela, salvo em "Fotos da Hana/06 - videos e trilhas/testes-gemini/". Enviado
+a ele pra avaliar -- nada aprovado/publicado ainda.
+
+**Pesquisa de contas de referencia (diretor-atualidades):** achado com
+confianca BAIXA -- misturou WebSearch com o truque novo de embed sem
+distinguir o que foi verificado de verdade. Concluiu "foto parada funciona
+no nicho", mas sem link/legenda concreta citada. NAO tratar como fato
+confirmado; se for decidir reabrir foto parada como regra, medir de novo com
+o Apify (dado real, como fizemos em 13/08), nao confiar neste resultado.
+
 ## 🔓 21/08/2026 (noite) — 3 BUGS OPERACIONAIS CONSERTADOS; REPO VOLTOU A SER PÚBLICO
 
 Bronca dele: *"estou recebendo emails de erro... isso não é problema de
