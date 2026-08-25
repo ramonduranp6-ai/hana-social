@@ -112,13 +112,21 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    se a Hana puder ser cortada do quadro sem mudar a piada, o post está errado.
 2. **Nada é publicado sem o "aprovado" dele.** A automação prepara, mostra os
    previews numerados e espera. Sem resposta, não sobe.
-2b. **COMO mostrar pra ele — não improvisar.** Ele **não enxerga** link do
-   `raw.githubusercontent.com`, arquivo anexado na conversa, nem link de página
-   publicada: os três já falharam. Gravar as mídias numeradas em
-   `Hana Social\Fotos da Hana\05 - APROVAR (semana)` com um `00_LEGENDAS.txt`
-   na mesma ordem (ele abre no celular). **Canal principal desde 27/07/2026: o
-   Telegram** — bot `@Hanasocial_aproval_bot`, secrets já no GitHub, testado
-   ponta a ponta (manda foto/vídeo com botões Aprovar/Recusar e o clique volta).
+2b. **COMO mostrar pra ele — não improvisar.** ⚠️ **CORRIGIDO 25/08/2026: o
+   Telegram foi DESLIGADO por ordem dele** ("não quero mais receber mensagens
+   pelo telegram, lá não funciona, traga minhas pendências por aqui") — o bot
+   `@Hanasocial_aproval_bot` e os secrets continuam existindo, mas
+   `publisher/mandar_recado.mandar()` tem uma guarda central
+   (`TELEGRAM_DESLIGADO`) que silencia todo aviso automático. **Canal
+   principal agora: a própria conversa** — usar `SendUserFile` pra mandar a
+   mídia direto no chat e pedir aprovar/recusar ali. Testado em 25/08 e ele
+   reagiu ao conteúdo normalmente — o registro antigo de que "arquivo anexado
+   na conversa" falhava **não vale mais nesta ferramenta** (Claude Code
+   Desktop); pode ter sido de uma interface diferente. Link de
+   `raw.githubusercontent.com` cru e link de página publicada continuam sem
+   confirmação de que funcionam — não usar. Se algum dia precisar do canal de
+   pasta (celular sem estar no PC): `Hana Social\Fotos da Hana\05 - APROVAR
+   (semana)` com `00_LEGENDAS.txt`, mas isso é fallback, não o padrão.
 2b-i. **SEMPRE escrever o caminho COMPLETO na mensagem** (ele pediu em
    27/07/2026, depois de não achar uma pasta que descrevi só pelo nome):
    `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)`.
