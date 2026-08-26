@@ -3,6 +3,31 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🤖 26/08/2026 (madrugada, vigia na nuvem) — BUG CONSERTADO: job vermelho a cada 30 min desde 00:50Z (não era spam de fila vazia, era o dedupe quebrado)
+
+O workflow falhou 3x seguidas hoje (runs 553, 554, 555; ver Actions). Causa
+raiz: no `publish.yml`, o passo "Sentinela" rodava **depois** de "Salvar
+estado da fila" — mas é o Sentinela quem grava o marcador de "já avisei hoje"
+(`content/.falhas_avisadas.json`), e só o passo anterior de fato dá
+commit/push em `content/`. Com essa ordem, o marcador nunca chegava a ser
+salvo: cada rodada nascia cega de novo e o alarme de "fila com 0 posts
+futuros" (que devia avisar só 1x por dia, conserto de 24/08) reabria a CADA
+execução — a cada 30 min, sem parar.
+
+**Conserto:** movi o passo "Sentinela" para ANTES de "Salvar estado da fila"
+e marquei "Salvar estado da fila" com `if: always()`, para que o marcador
+gravado pelo sentinela sempre entre no mesmo commit, mesmo quando o job vai
+ficar vermelho. Testado localmente rodando `sentinel.py` duas vezes seguidas:
+1ª vez grava o marcador de hoje e sai com erro (correto — é a 1ª vez que a
+fila vazia é vista hoje); 2ª vez já não repete o alarme (vira aviso no log).
+Isso é exatamente o comportamento que faltava em produção.
+
+**Causa de fundo continua sendo falta de conteúdo** (fila com 0 posts
+futuros — não tem cena nova filmada, ver recado semanal do robô do lote).
+Isso não é bug, é decisão do Ramón sobre quando filmar; avisado via
+`mandar_recado.py` porque exige a máquina/acervo local que esta sessão na
+nuvem não tem acesso.
+
 ## 📊 26/08/2026 -- Novo diário diário de crescimento (rotina automática) + achado no placar
 
 Comecei a rodar `estrategia/diario-crescimento-<data>.md` todo dia, por ordem

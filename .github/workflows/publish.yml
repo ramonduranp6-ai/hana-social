@@ -131,7 +131,25 @@ jobs:
           MIDIA_RESPONDA: ${{ inputs.responda }}
         run: python publisher/mandar_midia.py
 
+      # Falha alto se algum post falhou ou ficou vencido sem publicar.
+      # Job vermelho => GitHub avisa por e-mail. Custo zero.
+      #
+      # PRECISA rodar ANTES de "Salvar estado da fila": o sentinela grava seu
+      # marcador de "já avisei hoje" em content/.falhas_avisadas.json, e só o
+      # passo seguinte de fato dá commit/push em content/. Achado 26/08/2026:
+      # com a ordem invertida (sentinela DEPOIS do commit), o marcador nunca
+      # era salvo — cada rodada nascia "cega" de novo e o alarme de fila vazia
+      # (ou de post failed) reabria a CADA execução (a cada 30 min), nunca só
+      # 1x por dia como o dedupe pretendia. Sem `continue-on-error`: um step
+      # que falha ainda marca o job inteiro como "failure" (GitHub ainda avisa
+      # por e-mail) desde que os passos seguintes usem `if: always()` — não
+      # precisa rodar o sentinela de novo depois para "confirmar" a cor.
+      - name: Sentinela
+        if: always()
+        run: python publisher/sentinel.py
+
       - name: Salvar estado da fila
+        if: always()
         run: |
           git config user.name "hana-bot"
           git config user.email "hana-bot@users.noreply.github.com"
@@ -159,9 +177,3 @@ jobs:
           done
           echo "::error::nao consegui salvar o estado da fila depois de 3 tentativas"
           exit 1
-
-      # Falha alto se algum post falhou ou ficou vencido sem publicar.
-      # Job vermelho => GitHub avisa por e-mail. Custo zero.
-      - name: Sentinela
-        if: always()
-        run: python publisher/sentinel.py
