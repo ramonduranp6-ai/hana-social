@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 25/08/2026 12:34. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 26/08/2026 13:04. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -14,32 +14,40 @@ decisões, use `DECISOES.md`.
 | 2026-08-21T11:00:00Z | 2026-08-21_dona-da-casa | reel | rejected |
 | 2026-08-24T11:00:00Z | 2026-08-24_travesseiro | reel | rejected |
 | 2026-08-26T14:00:00Z | 2026-08-26_cara-de-reuniao | reel | rejected |
-| 2026-08-26T14:00:00Z | 2026-08-26_retrato-oficial | image | approved |
-| None | 2026-08-K_chegada-eloen | reel | approved |
+| 2026-08-26T14:00:00Z | 2026-08-K_chegada-eloen | reel | approved |
 
-## Publicados: 11
-- 2026-08-05_navio-importacao — IG `17869247748585560`
+## Publicados: 12
 - 2026-08-07_banho-de-sol — IG `17871079455631167`
 - 2026-08-10_escolheu-o-canal — IG `17932612077361476`
 - 2026-08-12_cenoura-filhote — IG `18193474768385556`
 - 2026-08-14_regras-da-casa — IG `18371032486238388`
+- 2026-08-26_retrato-oficial — IG `17966006436156379`
 
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-(não consegui consultar — checar 'gh auth status')
+2026-08-26T16:02:38Z schedule success
+2026-08-26T14:36:20Z schedule success
+2026-08-26T14:33:11Z schedule success
 ```
-- Vigia local (Agendador do Windows): próxima execução não encontrada
-- Token renovável automático: FALTA criar studio/.token
+- Vigia local (Agendador do Windows): próxima execução quarta-feira, 26 de agosto de 2026 18:10:00
+- Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
-Nada esperando aprovação (pasta vazia ou inexistente).
+Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
+
+- 2026-08-22_cenoura-variante-v1.mp4
+- 2026-08-22_cenoura-variante-v2.mp4
+- 2026-08-22_cenoura-variante-v3.mp4
+
+Ele responde pelos números. Enquanto não responder, **não commitar**
+mudança de status nem publicar.
 
 ## Acervo de fotos
-- Brutas a processar: 0 arquivos
-- Editadas prontas: 0
-- Artes recebidas do outro projeto: 0
-- Fotos do iPhone sincronizadas (iCloud): 0
+- Brutas a processar: 39 arquivos
+- Editadas prontas: 4
+- Artes recebidas do outro projeto: 1
+- Fotos do iPhone sincronizadas (iCloud): 34579
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -95,14 +103,20 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
-3d77a93 Corrige na skill: Telegram desligado, canal principal e a conversa
-d872de4 Corrige buracos de aspas no registro da foto de perfil
-83b8f0c Foto de perfil trocada + registra o quase-erro de conta (Canecas x Hana)
-e1fcb20 Retrato editorial (Gemini) aprovado por ele, agendado 26/08 14:00Z
-c5fc92c Registra recusa do reel + teste de retrato Gemini + achado (conta Hana bloqueada)
-0d69cb1 Ramon recusou 'cara de reuniao' - sem graca, sem conflito na cena
-9516242 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
-e46622e Desliga o Telegram por ordem dele: pendencia passa a vir na conversa
+db7dc14 Eloen agendada pra hoje 14:00Z - Ramon passou a decisao de data pro Claude
+10ea535 estudo: Reel de referencia @rafabri7o (mandado pelo Ramon 26/08)
+de00cdf Conserta ordem do Sentinela no publish.yml: marcador de dedupe nunca era salvo
+e31fcf5 chore: diário de crescimento diário (26/08) + correção no placar
+59257b5 chore: atualiza estado da fila [skip ci]
+07da6b2 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
+38ae14f Corrige: ele mandou postar AGORA, nao amanha - remarca pra publicacao imediata
+8873537 chore: atualiza manutenção [skip ci]
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+?? AGENTS.md
+?? SAUDE-DO-PROJETO.md
 ```
 
 ## Decisões e contexto
@@ -110,6 +124,40 @@ e46622e Desliga o Telegram por ordem dele: pendencia passa a vir na conversa
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🤖 26/08/2026 (madrugada, vigia na nuvem) — BUG CONSERTADO: job vermelho a cada 30 min desde 00:50Z (não era spam de fila vazia, era o dedupe quebrado)
+
+O workflow falhou 3x seguidas hoje (runs 553, 554, 555; ver Actions). Causa
+raiz: no `publish.yml`, o passo "Sentinela" rodava **depois** de "Salvar
+estado da fila" — mas é o Sentinela quem grava o marcador de "já avisei hoje"
+(`content/.falhas_avisadas.json`), e só o passo anterior de fato dá
+commit/push em `content/`. Com essa ordem, o marcador nunca chegava a ser
+salvo: cada rodada nascia cega de novo e o alarme de "fila com 0 posts
+futuros" (que devia avisar só 1x por dia, conserto de 24/08) reabria a CADA
+execução — a cada 30 min, sem parar.
+
+**Conserto:** movi o passo "Sentinela" para ANTES de "Salvar estado da fila"
+e marquei "Salvar estado da fila" com `if: always()`, para que o marcador
+gravado pelo sentinela sempre entre no mesmo commit, mesmo quando o job vai
+ficar vermelho. Testado localmente rodando `sentinel.py` duas vezes seguidas:
+1ª vez grava o marcador de hoje e sai com erro (correto — é a 1ª vez que a
+fila vazia é vista hoje); 2ª vez já não repete o alarme (vira aviso no log).
+Isso é exatamente o comportamento que faltava em produção.
+
+**Causa de fundo continua sendo falta de conteúdo** (fila com 0 posts
+futuros — não tem cena nova filmada, ver recado semanal do robô do lote).
+Isso não é bug, é decisão do Ramón sobre quando filmar; avisado via
+`mandar_recado.py` porque exige a máquina/acervo local que esta sessão na
+nuvem não tem acesso.
+
+## 📊 26/08/2026 -- Novo diário diário de crescimento (rotina automática) + achado no placar
+
+Comecei a rodar `estrategia/diario-crescimento-<data>.md` todo dia, por ordem
+do Ramón ("falta análise do crescimento, precisa acompanhar diariamente").
+**Achado no placar de hoje:** a suposição de que "9/9 posts têm 0 salvos e 0
+compartilhamentos" está errada — o Reel `2026-08-12_cenoura-filhote` tem
+**1 compartilhamento**. São 10 de 11 em zero, não 9 de 9. Corrigido aqui para
+não repetir o erro. Detalhe completo no diário de hoje.
 
 ## 📸 25/08/2026 -- Foto de perfil trocada + feed post agendado (retrato Gemini aprovado por ele)
 
@@ -479,28 +527,33 @@ processo no meio:**
 combina com a família, não é calendário de conteúdo) e sem decidir se estica
 a duração (6s vs 9-12s, sugestão do auditor). Esperando ele ver e aprovar.
 
-## 🏁 BASTÃO (atualizado em 25/08 manhã, Itajaí)
-· **Onde paramos:** Fila vazia (0 posts futuros) — "cara de reunião" (peça do
-  acervo, sem cena encenada) foi recusada por ele ("sem graça"). Telegram
-  DESLIGADO por ordem dele (25/08) — pendência agora se mostra na própria
-  conversa (`SendUserFile`), nunca mais no bot. Testado 1 retrato editorial no
-  Gemini (conta pessoal — a da Hana está bloqueada, é supervisionada/infantil),
-  enviado a ele, resposta ainda pendente. Robô "Vigia de Erros" criado
-  (nuvem, diário 9h30 Itajaí) pra consertar bug de código sozinho; a rotina do
-  VP (a cada 2 dias) ficou muda desde 21/08 porque a ponte com o PC dele caiu.
+## 🏁 BASTÃO (atualizado em 26/08 manhã, Itajaí)
+· **Onde paramos:** Retrato Gemini APROVADO por ele e publicado (foto de perfil
+  trocada + feed post 25/08, id 17966006436156379). **Eloen agendada pra HOJE
+  26/08 14:00Z** — ele transferiu a decisão de datas pro Claude ("não deixa
+  vídeo parado"). Reel "cara de reunião" recusado ("sem graça"). Estudado o
+  viral @rafabri7o que ele mandou (baixado de verdade via yt-dlp + Whisper):
+  virou a cena "teste das duas canecas", roteiro já no WhatsApp da **Ana
+  (esposa, é ela quem vai filmar agora)** — mandei na conversa arquivada dela,
+  me identificando como assistente. Vigia de Erros da nuvem PROVOU que
+  funciona: pegou e consertou sozinho um bug às 1h35 da madrugada (commit
+  de00cdf); agora roda a cada 4h. Criada também a rotina "Análise Diária de
+  Crescimento" (nuvem, 10h Itajaí): lê o placar, decide 1-3 ações, escreve
+  diário em estrategia/. Gemini do IA-Hub destravou (hub trocou pro flash
+  grátis).
 · **Esperando ele:**
-  1. **Filmar algo novo** (qualquer coisa, 10s+, sem precisar ser encenado —
-     roteiro POV pronto em `studio/roteiros/2026-08_POV1_a-patroa-mandou.md`)
-     — segue sendo o gargalo real, aberto desde 07/08.
-  2. Opinar sobre o retrato do Gemini (aprova o estilo pra virar padrão, ou não
-     curtiu).
-  3. Se quiser a rotina do VP de volta: reconectar o Remote Control (ponte
-     caiu).
-  4. Decidir o futuro do diretor-atualidades — 3ª entrega fraca seguida
-     (21/08 x2 + 25/08), sem fonte verificável nas três.
-· **Próximo passo:** sem filmagem nem decisão sobre o retrato do Gemini, o
-  Claude não tem peça nova pra propor — a fila segue vazia até um dos dois
-  destravar.
+  1. **Escanear o QR do WhatsApp Web** (aba deixada aberta no Chrome pessoal —
+     deslogou sozinho). Sem isso não mando a instrução nova pra Ana (mandar
+     arquivos COMO DOCUMENTO pra manter qualidade) nem baixo o que ela enviar.
+  2. **Google Drive dele está CHEIO (100/100 GB)** — matou a rota de link de
+     upload. Comprar espaço = decisão de dinheiro dele. A pasta criada no
+     Drive ("Fotos e vídeos da Hana — envie aqui") ficou inútil por ora.
+  3. Se quiser a rotina do VP de volta: reconectar o Remote Control.
+  4. Futuro do diretor-atualidades (3 entregas fracas) — decisão pendente.
+· **Próximo passo:** quando a Ana mandar material (WhatsApp), baixar como
+  documento e montar o "teste das duas canecas" no mesmo dia (roteiro em
+  estrategia/referencia-rafabri7o-2026-08-26.md). Conferir amanhã o 1º diário
+  automático de crescimento (estrategia/diario-crescimento-*.md).
 
 ## 🎬 14/08/2026 — TESTE REAL DO HIGGSFIELD: motor bom, catálogo de efeitos reprovado
 

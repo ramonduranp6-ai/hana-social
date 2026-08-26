@@ -405,28 +405,33 @@ processo no meio:**
 combina com a família, não é calendário de conteúdo) e sem decidir se estica
 a duração (6s vs 9-12s, sugestão do auditor). Esperando ele ver e aprovar.
 
-## 🏁 BASTÃO (atualizado em 25/08 manhã, Itajaí)
-· **Onde paramos:** Fila vazia (0 posts futuros) — "cara de reunião" (peça do
-  acervo, sem cena encenada) foi recusada por ele ("sem graça"). Telegram
-  DESLIGADO por ordem dele (25/08) — pendência agora se mostra na própria
-  conversa (`SendUserFile`), nunca mais no bot. Testado 1 retrato editorial no
-  Gemini (conta pessoal — a da Hana está bloqueada, é supervisionada/infantil),
-  enviado a ele, resposta ainda pendente. Robô "Vigia de Erros" criado
-  (nuvem, diário 9h30 Itajaí) pra consertar bug de código sozinho; a rotina do
-  VP (a cada 2 dias) ficou muda desde 21/08 porque a ponte com o PC dele caiu.
+## 🏁 BASTÃO (atualizado em 26/08 manhã, Itajaí)
+· **Onde paramos:** Retrato Gemini APROVADO por ele e publicado (foto de perfil
+  trocada + feed post 25/08, id 17966006436156379). **Eloen agendada pra HOJE
+  26/08 14:00Z** — ele transferiu a decisão de datas pro Claude ("não deixa
+  vídeo parado"). Reel "cara de reunião" recusado ("sem graça"). Estudado o
+  viral @rafabri7o que ele mandou (baixado de verdade via yt-dlp + Whisper):
+  virou a cena "teste das duas canecas", roteiro já no WhatsApp da **Ana
+  (esposa, é ela quem vai filmar agora)** — mandei na conversa arquivada dela,
+  me identificando como assistente. Vigia de Erros da nuvem PROVOU que
+  funciona: pegou e consertou sozinho um bug às 1h35 da madrugada (commit
+  de00cdf); agora roda a cada 4h. Criada também a rotina "Análise Diária de
+  Crescimento" (nuvem, 10h Itajaí): lê o placar, decide 1-3 ações, escreve
+  diário em estrategia/. Gemini do IA-Hub destravou (hub trocou pro flash
+  grátis).
 · **Esperando ele:**
-  1. **Filmar algo novo** (qualquer coisa, 10s+, sem precisar ser encenado —
-     roteiro POV pronto em `studio/roteiros/2026-08_POV1_a-patroa-mandou.md`)
-     — segue sendo o gargalo real, aberto desde 07/08.
-  2. Opinar sobre o retrato do Gemini (aprova o estilo pra virar padrão, ou não
-     curtiu).
-  3. Se quiser a rotina do VP de volta: reconectar o Remote Control (ponte
-     caiu).
-  4. Decidir o futuro do diretor-atualidades — 3ª entrega fraca seguida
-     (21/08 x2 + 25/08), sem fonte verificável nas três.
-· **Próximo passo:** sem filmagem nem decisão sobre o retrato do Gemini, o
-  Claude não tem peça nova pra propor — a fila segue vazia até um dos dois
-  destravar.
+  1. **Escanear o QR do WhatsApp Web** (aba deixada aberta no Chrome pessoal —
+     deslogou sozinho). Sem isso não mando a instrução nova pra Ana (mandar
+     arquivos COMO DOCUMENTO pra manter qualidade) nem baixo o que ela enviar.
+  2. **Google Drive dele está CHEIO (100/100 GB)** — matou a rota de link de
+     upload. Comprar espaço = decisão de dinheiro dele. A pasta criada no
+     Drive ("Fotos e vídeos da Hana — envie aqui") ficou inútil por ora.
+  3. Se quiser a rotina do VP de volta: reconectar o Remote Control.
+  4. Futuro do diretor-atualidades (3 entregas fracas) — decisão pendente.
+· **Próximo passo:** quando a Ana mandar material (WhatsApp), baixar como
+  documento e montar o "teste das duas canecas" no mesmo dia (roteiro em
+  estrategia/referencia-rafabri7o-2026-08-26.md). Conferir amanhã o 1º diário
+  automático de crescimento (estrategia/diario-crescimento-*.md).
 
 ## 🎬 14/08/2026 — TESTE REAL DO HIGGSFIELD: motor bom, catálogo de efeitos reprovado
 
