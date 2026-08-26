@@ -3,6 +3,15 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 📊 26/08/2026 -- Novo diário diário de crescimento (rotina automática) + achado no placar
+
+Comecei a rodar `estrategia/diario-crescimento-<data>.md` todo dia, por ordem
+do Ramón ("falta análise do crescimento, precisa acompanhar diariamente").
+**Achado no placar de hoje:** a suposição de que "9/9 posts têm 0 salvos e 0
+compartilhamentos" está errada — o Reel `2026-08-12_cenoura-filhote` tem
+**1 compartilhamento**. São 10 de 11 em zero, não 9 de 9. Corrigido aqui para
+não repetir o erro. Detalhe completo no diário de hoje.
+
 ## 📸 25/08/2026 -- Foto de perfil trocada + feed post agendado (retrato Gemini aprovado por ele)
 
 Ele viu o retrato editorial e mandou: "Ficou top essa foto, pode postar, coloque
