@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 26/08/2026 13:04. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/08/2026 08:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -14,40 +14,30 @@ decisões, use `DECISOES.md`.
 | 2026-08-21T11:00:00Z | 2026-08-21_dona-da-casa | reel | rejected |
 | 2026-08-24T11:00:00Z | 2026-08-24_travesseiro | reel | rejected |
 | 2026-08-26T14:00:00Z | 2026-08-26_cara-de-reuniao | reel | rejected |
-| 2026-08-26T14:00:00Z | 2026-08-K_chegada-eloen | reel | approved |
 
-## Publicados: 12
-- 2026-08-07_banho-de-sol — IG `17871079455631167`
+## Publicados: 13
 - 2026-08-10_escolheu-o-canal — IG `17932612077361476`
 - 2026-08-12_cenoura-filhote — IG `18193474768385556`
 - 2026-08-14_regras-da-casa — IG `18371032486238388`
 - 2026-08-26_retrato-oficial — IG `17966006436156379`
+- 2026-08-K_chegada-eloen — IG `17988875475044476`
 
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-26T16:02:38Z schedule success
-2026-08-26T14:36:20Z schedule success
-2026-08-26T14:33:11Z schedule success
+(não consegui consultar — checar 'gh auth status')
 ```
-- Vigia local (Agendador do Windows): próxima execução quarta-feira, 26 de agosto de 2026 18:10:00
-- Token renovável automático: CONFIGURADO
+- Vigia local (Agendador do Windows): próxima execução não encontrada
+- Token renovável automático: FALTA criar studio/.token
 
 ## Esperando o OK do Ramón
-Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
-
-- 2026-08-22_cenoura-variante-v1.mp4
-- 2026-08-22_cenoura-variante-v2.mp4
-- 2026-08-22_cenoura-variante-v3.mp4
-
-Ele responde pelos números. Enquanto não responder, **não commitar**
-mudança de status nem publicar.
+Nada esperando aprovação (pasta vazia ou inexistente).
 
 ## Acervo de fotos
-- Brutas a processar: 39 arquivos
-- Editadas prontas: 4
-- Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34579
+- Brutas a processar: 0 arquivos
+- Editadas prontas: 0
+- Artes recebidas do outro projeto: 0
+- Fotos do iPhone sincronizadas (iCloud): 0
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -103,20 +93,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+79259a5 chore: checagem de rotina 27/08 - sem bug novo, so falta de conteudo (ja avisado)
+5fe0b95 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
+191beb7 Checkpoint 26/08: bastao atualizado (Eloen hoje, Ana filma, vigia provou que se cura)
+4ebab7b chore: atualiza estado da fila [skip ci]
+b0f6e18 chore: atualiza manutenção [skip ci]
 db7dc14 Eloen agendada pra hoje 14:00Z - Ramon passou a decisao de data pro Claude
 10ea535 estudo: Reel de referencia @rafabri7o (mandado pelo Ramon 26/08)
 de00cdf Conserta ordem do Sentinela no publish.yml: marcador de dedupe nunca era salvo
-e31fcf5 chore: diário de crescimento diário (26/08) + correção no placar
-59257b5 chore: atualiza estado da fila [skip ci]
-07da6b2 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
-38ae14f Corrige: ele mandou postar AGORA, nao amanha - remarca pra publicacao imediata
-8873537 chore: atualiza manutenção [skip ci]
-```
-Alterações não commitadas:
-```
-M DECISOES.md
-?? AGENTS.md
-?? SAUDE-DO-PROJETO.md
 ```
 
 ## Decisões e contexto
@@ -124,6 +108,20 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🤖 27/08/2026 (vigia na nuvem) — checagem de rotina: nenhum bug novo
+
+Rodei `python studio/estado.py --mostrar` e `python publisher/sentinel.py`
+(sem `gh` autenticado nesta nuvem, então li o estado direto dos arquivos do
+repo). Nenhum ALARME ativo, o conserto do dedupe do Sentinela (25/08→26/08)
+segue de pé em `publish.yml`, e o último post (`2026-08-K_chegada-eloen`)
+publicou normalmente. Único achado do sentinela: fila com 0 posts futuros
+aprovados — é falta de conteúdo, não bug (as 7 peças na fila estão todas
+`rejected`), e o checkpoint de 26/08 já registra que Ramón coordenou nova
+filmagem ("Ana filma"), então não mandei recado de novo. Rodar o sentinela
+gravou o marcador de hoje em `content/.falhas_avisadas.json`
+(`fila_vazia_2026-08-27`), commitado junto para não reabrir o mesmo alarme
+se o job de produção rodar depois.
 
 ## 🤖 26/08/2026 (madrugada, vigia na nuvem) — BUG CONSERTADO: job vermelho a cada 30 min desde 00:50Z (não era spam de fila vazia, era o dedupe quebrado)
 
