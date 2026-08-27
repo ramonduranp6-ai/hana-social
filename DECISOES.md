@@ -3,6 +3,20 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🤖 27/08/2026 (vigia na nuvem) — checagem de rotina: nenhum bug novo
+
+Rodei `python studio/estado.py --mostrar` e `python publisher/sentinel.py`
+(sem `gh` autenticado nesta nuvem, então li o estado direto dos arquivos do
+repo). Nenhum ALARME ativo, o conserto do dedupe do Sentinela (25/08→26/08)
+segue de pé em `publish.yml`, e o último post (`2026-08-K_chegada-eloen`)
+publicou normalmente. Único achado do sentinela: fila com 0 posts futuros
+aprovados — é falta de conteúdo, não bug (as 7 peças na fila estão todas
+`rejected`), e o checkpoint de 26/08 já registra que Ramón coordenou nova
+filmagem ("Ana filma"), então não mandei recado de novo. Rodar o sentinela
+gravou o marcador de hoje em `content/.falhas_avisadas.json`
+(`fila_vazia_2026-08-27`), commitado junto para não reabrir o mesmo alarme
+se o job de produção rodar depois.
+
 ## 🤖 26/08/2026 (madrugada, vigia na nuvem) — BUG CONSERTADO: job vermelho a cada 30 min desde 00:50Z (não era spam de fila vazia, era o dedupe quebrado)
 
 O workflow falhou 3x seguidas hoje (runs 553, 554, 555; ver Actions). Causa

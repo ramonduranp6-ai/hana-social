@@ -102,6 +102,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+38e5f26 chore: estado local + arquivos novos [skip ci]
 5fe0b95 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
 191beb7 Checkpoint 26/08: bastao atualizado (Eloen hoje, Ana filma, vigia provou que se cura)
 4ebab7b chore: atualiza estado da fila [skip ci]
@@ -109,13 +110,12 @@ b0f6e18 chore: atualiza manutenção [skip ci]
 db7dc14 Eloen agendada pra hoje 14:00Z - Ramon passou a decisao de data pro Claude
 10ea535 estudo: Reel de referencia @rafabri7o (mandado pelo Ramon 26/08)
 de00cdf Conserta ordem do Sentinela no publish.yml: marcador de dedupe nunca era salvo
-e31fcf5 chore: diário de crescimento diário (26/08) + correção no placar
 ```
 Alterações não commitadas:
 ```
-M ESTADO-ATUAL.md
-?? AGENTS.md
-?? SAUDE-DO-PROJETO.md
+M  DECISOES.md
+M  ESTADO-ATUAL.md
+M  content/.falhas_avisadas.json
 ```
 
 ## Decisões e contexto
@@ -123,6 +123,20 @@ M ESTADO-ATUAL.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🤖 27/08/2026 (vigia na nuvem) — checagem de rotina: nenhum bug novo
+
+Rodei `python studio/estado.py --mostrar` e `python publisher/sentinel.py`
+(sem `gh` autenticado nesta nuvem, então li o estado direto dos arquivos do
+repo). Nenhum ALARME ativo, o conserto do dedupe do Sentinela (25/08→26/08)
+segue de pé em `publish.yml`, e o último post (`2026-08-K_chegada-eloen`)
+publicou normalmente. Único achado do sentinela: fila com 0 posts futuros
+aprovados — é falta de conteúdo, não bug (as 7 peças na fila estão todas
+`rejected`), e o checkpoint de 26/08 já registra que Ramón coordenou nova
+filmagem ("Ana filma"), então não mandei recado de novo. Rodar o sentinela
+gravou o marcador de hoje em `content/.falhas_avisadas.json`
+(`fila_vazia_2026-08-27`), commitado junto para não reabrir o mesmo alarme
+se o job de produção rodar depois.
 
 ## 🤖 26/08/2026 (madrugada, vigia na nuvem) — BUG CONSERTADO: job vermelho a cada 30 min desde 00:50Z (não era spam de fila vazia, era o dedupe quebrado)
 
