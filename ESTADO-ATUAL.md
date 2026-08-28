@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/08/2026 07:35. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/08/2026 00:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -25,28 +25,19 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-27T06:23:53Z schedule success
-2026-08-27T00:33:42Z push success
-2026-08-26T23:53:43Z schedule success
+(não consegui consultar — checar 'gh auth status')
 ```
-- Vigia local (Agendador do Windows): próxima execução sexta-feira, 28 de agosto de 2026 18:10:00
-- Token renovável automático: CONFIGURADO
+- Vigia local (Agendador do Windows): próxima execução não encontrada
+- Token renovável automático: FALTA criar studio/.token
 
 ## Esperando o OK do Ramón
-Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
-
-- 2026-08-22_cenoura-variante-v1.mp4
-- 2026-08-22_cenoura-variante-v2.mp4
-- 2026-08-22_cenoura-variante-v3.mp4
-
-Ele responde pelos números. Enquanto não responder, **não commitar**
-mudança de status nem publicar.
+Nada esperando aprovação (pasta vazia ou inexistente).
 
 ## Acervo de fotos
-- Brutas a processar: 39 arquivos
-- Editadas prontas: 4
-- Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34583
+- Brutas a processar: 0 arquivos
+- Editadas prontas: 0
+- Artes recebidas do outro projeto: 0
+- Fotos do iPhone sincronizadas (iCloud): 0
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -102,20 +93,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+a576b7d chore: atualiza manutenção [skip ci]
+d193cc9 Diário de crescimento 27/08: sem coleta nova ainda (robô atrasado)
+2a7c2eb merge: resolve conflito ESTADO-ATUAL.md (regenerado) [skip ci]
 38e5f26 chore: estado local + arquivos novos [skip ci]
+9d187b2 chore: atualiza estado da fila [skip ci]
+79259a5 chore: checagem de rotina 27/08 - sem bug novo, so falta de conteudo (ja avisado)
 5fe0b95 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
 191beb7 Checkpoint 26/08: bastao atualizado (Eloen hoje, Ana filma, vigia provou que se cura)
-4ebab7b chore: atualiza estado da fila [skip ci]
-b0f6e18 chore: atualiza manutenção [skip ci]
-db7dc14 Eloen agendada pra hoje 14:00Z - Ramon passou a decisao de data pro Claude
-10ea535 estudo: Reel de referencia @rafabri7o (mandado pelo Ramon 26/08)
-de00cdf Conserta ordem do Sentinela no publish.yml: marcador de dedupe nunca era salvo
-```
-Alterações não commitadas:
-```
-M  DECISOES.md
-M  ESTADO-ATUAL.md
-M  content/.falhas_avisadas.json
 ```
 
 ## Decisões e contexto

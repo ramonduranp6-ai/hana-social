@@ -3,6 +3,25 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🤖 28/08/2026 (vigia na nuvem) — checagem de rotina: nenhum bug novo
+
+Rodei `python studio/estado.py --mostrar`, conferi os últimos runs do
+`publish.yml` pela API do GitHub (`gh` não autenticado nesta nuvem) e rodei
+`python publisher/sentinel.py`. Nenhum ALARME de código: o conserto do
+dedupe do Sentinela (25→26/08) segue de pé, todos os runs desde o 557
+(26/08) terminaram `success`, e o último post (`2026-08-K_chegada-eloen`)
+está publicado. Conferi as 7 peças da fila uma a uma: todas `status:
+rejected` — a de `2026-08-26_cara-de-reuniao` tem `motivo_recusa` explícito
+do Ramón ("bem sem graça"); as outras 6 são recusas mais antigas (antes do
+hábito de registrar `motivo_recusa`/`rejeitado_em`), sem nenhum sinal nos
+scripts (`telegram_approve.py`, `postqueue.py`) de que "rejected" seja
+setado por bug — só o clique de recusar no Telegram grava esse status.
+Único achado do sentinela é o mesmo de ontem: fila com 0 posts futuros
+aprovados, por falta de filmagem nova, não bug. Ramón já foi avisado disso
+em sessões anteriores e já coordenou filmagem nova ("Ana filma") — não
+repeti o recado. Marcador do dia gravado em
+`content/.falhas_avisadas.json` (`fila_vazia_2026-08-28`).
+
 ## 🤖 27/08/2026 (vigia na nuvem) — checagem de rotina: nenhum bug novo
 
 Rodei `python studio/estado.py --mostrar` e `python publisher/sentinel.py`
