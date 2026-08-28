@@ -2,6 +2,24 @@
 
 O que a automação já mandou pro Ramón, com data — pra próxima conversa não remontar do zero. Gravado por `publisher/diagnostico.py` e `publisher/leitura_d1.py`, sempre DEPOIS da entrega confirmada (nunca durante `--simular`). Mais recente em cima.
 
+## 2026-08-27 22:17 UTC — Leitura do dia 1 (2026-08-26_retrato-oficial, 2026-08-K_chegada-eloen)
+
+📈 LEITURA DO DIA 1 — 2026-08-26_retrato-oficial (Foto, 46h no ar)
+Alcance 36 · visitas ao perfil 1 · seguidores ganhos 0
+Curtidas 12 · comentários 1 · salvos 0 · compartilh. 0
+Comparando só com fotos da mesma idade (6 medido(s)): média 38.
+Este está -4% em relação a essa média.
+
+📈 LEITURA DO DIA 1 — 2026-08-K_chegada-eloen (REEL, 32h no ar)
+Alcance 988 · visitas ao perfil ? · seguidores ganhos ?
+Curtidas 31 · comentários 2 · salvos 0 · compartilh. 0
+Comparando só com Reels da mesma idade (3 medido(s)): média 169.
+Este está +483% em relação a essa média.
+
+Régua: alcance depois do dia 1 não gerou visita nova em nenhum post medido — por isso só este número decide.
+
+---
+
 ## 2026-08-25 13:13 UTC — Leitura do dia 1 (2026-08-14_regras-da-casa)
 
 📈 LEITURA DO DIA 1 — 2026-08-14_regras-da-casa (REEL, 23h no ar)

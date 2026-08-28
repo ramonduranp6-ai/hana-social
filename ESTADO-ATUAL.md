@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/08/2026 08:03. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/08/2026 08:04. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -103,6 +103,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+808e2f9 Reel 28/08 'a comida ta servida' pronto para aprovacao (3 rodadas de auditoria, 2 reprovacoes)
 2a7c2eb merge: resolve conflito ESTADO-ATUAL.md (regenerado) [skip ci]
 38e5f26 chore: estado local + arquivos novos [skip ci]
 9d187b2 chore: atualiza estado da fila [skip ci]
@@ -110,16 +111,17 @@ estava certo: ela está de costas do começo ao fim.
 5fe0b95 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
 191beb7 Checkpoint 26/08: bastao atualizado (Eloen hoje, Ana filma, vigia provou que se cura)
 4ebab7b chore: atualiza estado da fila [skip ci]
-b0f6e18 chore: atualiza manutenção [skip ci]
 ```
 Alterações não commitadas:
 ```
-M DECISOES.md
- M SAUDE-DO-PROJETO.md
-?? content/queue/2026-08-28_comida-servida/
-?? studio/roteiros/2026-08-28_comida-servida-v2.json
-?? studio/roteiros/2026-08-28_comida-servida-v3.json
-?? studio/roteiros/2026-08-28_comida-servida.json
+UU DECISOES.md
+UU ESTADO-ATUAL.md
+M  content/.falhas_avisadas.json
+M  content/.leitura_d1_enviada
+M  content/aprendizado.md
+M  content/metricas.json
+M  content/placar.md
+A  estrategia/diario-crescimento-2026-08-27.md
 ```
 
 ## Decisões e contexto
@@ -180,6 +182,24 @@ repassado à sessão do Canecas POD** por mensagem entre sessões, porque o guar
 bloqueia escrita fora da pasta aberta (regra 15, e agiu certo). O conteúdo é
 deles: `reels_agendados.py` publica sem passar por `aprovacoes.py`, e
 `aprovacoes.json` está vazio.
+## 🤖 28/08/2026 (vigia na nuvem) — checagem de rotina: nenhum bug novo
+
+Rodei `python studio/estado.py --mostrar`, conferi os últimos runs do
+`publish.yml` pela API do GitHub (`gh` não autenticado nesta nuvem) e rodei
+`python publisher/sentinel.py`. Nenhum ALARME de código: o conserto do
+dedupe do Sentinela (25→26/08) segue de pé, todos os runs desde o 557
+(26/08) terminaram `success`, e o último post (`2026-08-K_chegada-eloen`)
+está publicado. Conferi as 7 peças da fila uma a uma: todas `status:
+rejected` — a de `2026-08-26_cara-de-reuniao` tem `motivo_recusa` explícito
+do Ramón ("bem sem graça"); as outras 6 são recusas mais antigas (antes do
+hábito de registrar `motivo_recusa`/`rejeitado_em`), sem nenhum sinal nos
+scripts (`telegram_approve.py`, `postqueue.py`) de que "rejected" seja
+setado por bug — só o clique de recusar no Telegram grava esse status.
+Único achado do sentinela é o mesmo de ontem: fila com 0 posts futuros
+aprovados, por falta de filmagem nova, não bug. Ramón já foi avisado disso
+em sessões anteriores e já coordenou filmagem nova ("Ana filma") — não
+repeti o recado. Marcador do dia gravado em
+`content/.falhas_avisadas.json` (`fila_vazia_2026-08-28`).
 
 ## 🤖 27/08/2026 (vigia na nuvem) — checagem de rotina: nenhum bug novo
 
