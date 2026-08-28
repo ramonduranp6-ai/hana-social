@@ -3,6 +3,16 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 28/08/2026 12:33 — checagem de rotina (vigia da nuvem): sem bug novo
+
+Conferi `studio/estado.py --mostrar` e o repositório (sem `gh` autenticado nesta
+nuvem — mesma limitação já conhecida). O post `2026-08-28_comida-servida` está
+`status: pending` com `auditoria.veredito == "SEM OBJECAO"` já preenchido
+corretamente (não travado, não é bug) — só falta o Ramón aprovar ou recusar,
+decisão dele. Os outros 7 da fila seguem `rejected` e vencidos, como já estava.
+Sem filmagem nova (acervo zerado), sem erro de código para consertar. Nada a
+avisar — resolvido em silêncio conforme a regra.
+
 ## 🎬 28/08/2026 — Reel "A COMIDA TÁ SERVIDA": 3 rodadas de auditoria, 2 reprovações
 
 **Contexto:** a fila estava com os 7 posts em `rejected`, todos vencidos, e nada

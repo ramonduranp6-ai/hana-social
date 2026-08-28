@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/08/2026 08:04. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/08/2026 12:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,28 +26,19 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-28T01:57:38Z schedule success
-2026-08-28T00:33:35Z push success
-2026-08-27T23:18:33Z schedule success
+(não consegui consultar — checar 'gh auth status')
 ```
-- Vigia local (Agendador do Windows): próxima execução sexta-feira, 28 de agosto de 2026 18:10:00
-- Token renovável automático: CONFIGURADO
+- Vigia local (Agendador do Windows): próxima execução não encontrada
+- Token renovável automático: FALTA criar studio/.token
 
 ## Esperando o OK do Ramón
-Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
-
-- 2026-08-22_cenoura-variante-v1.mp4
-- 2026-08-22_cenoura-variante-v2.mp4
-- 2026-08-22_cenoura-variante-v3.mp4
-
-Ele responde pelos números. Enquanto não responder, **não commitar**
-mudança de status nem publicar.
+Nada esperando aprovação (pasta vazia ou inexistente).
 
 ## Acervo de fotos
-- Brutas a processar: 39 arquivos
-- Editadas prontas: 4
-- Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34585
+- Brutas a processar: 0 arquivos
+- Editadas prontas: 0
+- Artes recebidas do outro projeto: 0
+- Fotos do iPhone sincronizadas (iCloud): 0
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -103,25 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+5190c8c merge: mantem a entrada do Reel 28/08 e a do vigia da nuvem [skip ci]
 808e2f9 Reel 28/08 'a comida ta servida' pronto para aprovacao (3 rodadas de auditoria, 2 reprovacoes)
+9b9586d chore: atualiza estado (regenerado na checagem de rotina 28/08) [skip ci]
+c52eb38 chore: checagem de rotina 28/08 - sem bug novo, so falta de conteudo (ja avisado)
+a576b7d chore: atualiza manutenção [skip ci]
+d193cc9 Diário de crescimento 27/08: sem coleta nova ainda (robô atrasado)
 2a7c2eb merge: resolve conflito ESTADO-ATUAL.md (regenerado) [skip ci]
 38e5f26 chore: estado local + arquivos novos [skip ci]
-9d187b2 chore: atualiza estado da fila [skip ci]
-79259a5 chore: checagem de rotina 27/08 - sem bug novo, so falta de conteudo (ja avisado)
-5fe0b95 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
-191beb7 Checkpoint 26/08: bastao atualizado (Eloen hoje, Ana filma, vigia provou que se cura)
-4ebab7b chore: atualiza estado da fila [skip ci]
-```
-Alterações não commitadas:
-```
-UU DECISOES.md
-UU ESTADO-ATUAL.md
-M  content/.falhas_avisadas.json
-M  content/.leitura_d1_enviada
-M  content/aprendizado.md
-M  content/metricas.json
-M  content/placar.md
-A  estrategia/diario-crescimento-2026-08-27.md
 ```
 
 ## Decisões e contexto
