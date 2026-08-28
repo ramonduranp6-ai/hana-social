@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/08/2026 12:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/08/2026 16:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+224eda7 Diário de crescimento 28/08: alcance recorde do Reel da Eloen não virou conversão
+e5e99cd chore: checagem de rotina 28/08 12:33 - sem bug novo, post da sexta aguarda aprovacao do Ramon
 5190c8c merge: mantem a entrada do Reel 28/08 e a do vigia da nuvem [skip ci]
 808e2f9 Reel 28/08 'a comida ta servida' pronto para aprovacao (3 rodadas de auditoria, 2 reprovacoes)
 9b9586d chore: atualiza estado (regenerado na checagem de rotina 28/08) [skip ci]
 c52eb38 chore: checagem de rotina 28/08 - sem bug novo, so falta de conteudo (ja avisado)
 a576b7d chore: atualiza manutenção [skip ci]
 d193cc9 Diário de crescimento 27/08: sem coleta nova ainda (robô atrasado)
-2a7c2eb merge: resolve conflito ESTADO-ATUAL.md (regenerado) [skip ci]
-38e5f26 chore: estado local + arquivos novos [skip ci]
 ```
 
 ## Decisões e contexto
@@ -109,6 +109,33 @@ d193cc9 Diário de crescimento 27/08: sem coleta nova ainda (robô atrasado)
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 📊 28/08/2026 — diário de crescimento: alcance recorde não virou conversão
+
+Coleta de 27/08 trouxe o Reel `2026-08-K_chegada-eloen` (anúncio especial,
+fora do calendário): **988 de alcance, 1310 views — 5x o melhor Reel
+anterior (195)**. Mesmo assim: **0 salvos, 0 compartilhamentos, seguidores
+parados em 331**. Confirma o que já se via desde 18/08 — o gargalo do
+perfil é conversão (salvar/compartilhar/seguir), não alcance. Também: o 1º
+post no formato retrato-editorial via Gemini (`2026-08-26_retrato-oficial`)
+fechou com alcance 36, **abaixo** da média das fotos antigas (53) — aposta
+não confirmada ainda, só 1 amostra. Regra de morte do formato POV "A
+PATROA MANDA" (3 Reels 0/0) segue sem bater — só 2 Reels publicados, e um
+deles já tem 1 compartilhamento. Detalhe também no atraso do robô: o run
+de 27/08 do `maintenance.yml` saiu 10h depois do horário do cron (22:17
+UTC em vez de ~12:15) — bem acima do atraso normal visto antes; ainda não
+é pane, mas está piorando. Diário completo em
+`estrategia/diario-crescimento-2026-08-28.md`.
+
+## 🔍 28/08/2026 12:33 — checagem de rotina (vigia da nuvem): sem bug novo
+
+Conferi `studio/estado.py --mostrar` e o repositório (sem `gh` autenticado nesta
+nuvem — mesma limitação já conhecida). O post `2026-08-28_comida-servida` está
+`status: pending` com `auditoria.veredito == "SEM OBJECAO"` já preenchido
+corretamente (não travado, não é bug) — só falta o Ramón aprovar ou recusar,
+decisão dele. Os outros 7 da fila seguem `rejected` e vencidos, como já estava.
+Sem filmagem nova (acervo zerado), sem erro de código para consertar. Nada a
+avisar — resolvido em silêncio conforme a regra.
 
 ## 🎬 28/08/2026 — Reel "A COMIDA TÁ SERVIDA": 3 rodadas de auditoria, 2 reprovações
 
