@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/08/2026 07:35. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/08/2026 08:03. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -14,6 +14,7 @@ decisões, use `DECISOES.md`.
 | 2026-08-21T11:00:00Z | 2026-08-21_dona-da-casa | reel | rejected |
 | 2026-08-24T11:00:00Z | 2026-08-24_travesseiro | reel | rejected |
 | 2026-08-26T14:00:00Z | 2026-08-26_cara-de-reuniao | reel | rejected |
+| 2026-08-28T14:00:00Z | 2026-08-28_comida-servida | reel | pending |
 
 ## Publicados: 13
 - 2026-08-10_escolheu-o-canal — IG `17932612077361476`
@@ -25,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-27T06:23:53Z schedule success
-2026-08-27T00:33:42Z push success
-2026-08-26T23:53:43Z schedule success
+2026-08-28T01:57:38Z schedule success
+2026-08-28T00:33:35Z push success
+2026-08-27T23:18:33Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução sexta-feira, 28 de agosto de 2026 18:10:00
 - Token renovável automático: CONFIGURADO
@@ -46,7 +47,7 @@ mudança de status nem publicar.
 - Brutas a processar: 39 arquivos
 - Editadas prontas: 4
 - Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34583
+- Fotos do iPhone sincronizadas (iCloud): 34585
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -102,20 +103,23 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+2a7c2eb merge: resolve conflito ESTADO-ATUAL.md (regenerado) [skip ci]
 38e5f26 chore: estado local + arquivos novos [skip ci]
+9d187b2 chore: atualiza estado da fila [skip ci]
+79259a5 chore: checagem de rotina 27/08 - sem bug novo, so falta de conteudo (ja avisado)
 5fe0b95 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
 191beb7 Checkpoint 26/08: bastao atualizado (Eloen hoje, Ana filma, vigia provou que se cura)
 4ebab7b chore: atualiza estado da fila [skip ci]
 b0f6e18 chore: atualiza manutenção [skip ci]
-db7dc14 Eloen agendada pra hoje 14:00Z - Ramon passou a decisao de data pro Claude
-10ea535 estudo: Reel de referencia @rafabri7o (mandado pelo Ramon 26/08)
-de00cdf Conserta ordem do Sentinela no publish.yml: marcador de dedupe nunca era salvo
 ```
 Alterações não commitadas:
 ```
-M  DECISOES.md
-M  ESTADO-ATUAL.md
-M  content/.falhas_avisadas.json
+M DECISOES.md
+ M SAUDE-DO-PROJETO.md
+?? content/queue/2026-08-28_comida-servida/
+?? studio/roteiros/2026-08-28_comida-servida-v2.json
+?? studio/roteiros/2026-08-28_comida-servida-v3.json
+?? studio/roteiros/2026-08-28_comida-servida.json
 ```
 
 ## Decisões e contexto
@@ -123,6 +127,59 @@ M  content/.falhas_avisadas.json
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🎬 28/08/2026 — Reel "A COMIDA TÁ SERVIDA": 3 rodadas de auditoria, 2 reprovações
+
+**Contexto:** a fila estava com os 7 posts em `rejected`, todos vencidos, e nada
+agendado à frente. A Ana não mandou material (nada entra em `01 - brutas` desde
+09/08; o roteiro do "teste das duas canecas" foi mandado no WhatsApp dela em
+26/08, mas a instrução seguinte não saiu porque o WhatsApp Web deslogou). Em vez
+de deixar a sexta furar, montei com o **garimpo do rolo de 03/08** (`melhores-30`),
+material inédito — conferido contra `videos-usados.json` e `fotos-usadas.json`.
+
+**O que a auditoria pegou, e que eu não teria pego sozinho:**
+- **v1 REPROVADA (6 defeitos).** O fecho vinha de um clipe do quintal, com ela de
+  pijama rosa. Quebrava a piada (a graça exige que ela passe reto PELA COMIDA, e
+  no quintal não há comida), punha uma perna humana ocupando o terço inferior por
+  4s, e sumia com a cor tri lilac merle. Pior: **abriu dúvida real de identidade**
+  — montei os dois rostos lado a lado e, embora listra branca, padrão merle e
+  orelhas batam, o olho lê cinza-azulado dentro de casa e âmbar no quintal.
+  Não consegui cravar que era a mesma cadela. Apliquei a **regra 3n-ii**
+  (defeito de material troca-se o material): o clipe saiu inteiro e matou os 4.
+- **v2 REPROVADA (2 defeitos de edição).** 1,6s de plano estático sem texto
+  repetindo um enquadramento que o espectador acabara de ver, e a piada morando
+  na legenda porque cadela e comida nunca dividiam o quadro.
+- **v3 SEM OBJEÇÃO.** O segundo plano da sala saiu; entrou a **panorâmica
+  5,2→6,6**, que começa nela esparramada no tapete e sobe até a tigela cheia —
+  os dois no mesmo quadro, sem corte.
+
+**Duas afirmações do auditor foram conferidas na FONTE e estavam erradas** (vale
+como lembrete de que a regra zero vale também para quem me audita):
+1. Ele mandou pousar no quadro 7,35 como prova visual — é um borrão de
+   panorâmica com a cabeça dela cortada. O quadro que serve é o **5,4**, que ele
+   não tinha achado.
+2. Ele acusou a trilha de cortar seca, sem fade. O código prova o contrário:
+   `studio/montar_reel.py` linha 461 já aplica `afade=t=out:d=0.6`. Ele
+   reconheceu o erro por escrito e riscou o item.
+
+**Lição de método:** a trilha foi encaixada por **medição**, não de ouvido — a
+faixa `01-fofo-ukulele` mergulha para -28,2 dB no segundo 8 e salta no 9, e
+`inicio_trilha=2.9` faz essa subida cair exatamente no primeiro quadro em que
+ela levanta. Custo da peça: **R$ 0,00**.
+
+**Pendente dele:** aprovar ou recusar a peça (mandada na conversa). O publicador
+exige `status: approved` **e** `auditoria.veredito == "SEM OBJECAO"` — o campo de
+auditoria já foi escrito na hora, para não repetir o post que ficou 34h travado.
+
+## 🐕 28/08/2026 — achado que é do projeto CANECAS, não deste
+
+Ele reclamou aqui ("de cachorro novamente, somos uma empresa pet?") de um vídeo
+que na verdade é do Canecas POD, e confirmou depois que a mensagem veio no
+projeto errado. Fica registrado só o que interessa a esta pasta: **o achado foi
+repassado à sessão do Canecas POD** por mensagem entre sessões, porque o guardião
+bloqueia escrita fora da pasta aberta (regra 15, e agiu certo). O conteúdo é
+deles: `reels_agendados.py` publica sem passar por `aprovacoes.py`, e
+`aprovacoes.json` está vazio.
 
 ## 🤖 27/08/2026 (vigia na nuvem) — checagem de rotina: nenhum bug novo
 

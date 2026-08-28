@@ -1,0 +1,55 @@
+{
+  "titulo": "A COMIDA TA SERVIDA (E DAI?) -- v3, pilar A PATROA MANDA",
+  "historia": "A camera acha ela largada no tapete e sobe ate o comedouro automatico com a tigela cheia -- os dois no mesmo quadro, sem corte. Ela nao levanta: fica de barriga pra cima fazendo drama. Quando levanta, e pra sair andando sem encostar na racao.",
+
+  "_porque_v3": "A v2 tambem foi reprovada. Dois defeitos que mataram, os dois de EDICAO (o auditor foi explicito que nao era limite de material): (1) 1,6 segundos de plano estatico SEM TEXTO no meio da peca, repetindo um enquadramento que o espectador tinha acabado de ver -- as duas entradas do clipe da sala eram praticamente a mesma imagem, porque o corte 1 abre o zoom e termina no mesmo tamanho do corte 3; (2) a piada continuava morando na legenda, porque a cadela e a comida nunca dividiam o quadro.\n\nConserto: o segundo plano da sala SAIU INTEIRO (agora o clipe A entra uma vez so, no gancho -- zero repeticao de enquadramento) e entrou a PANORAMICA de 5,2 a 6,6 do clipe do comedouro, que comeca nela esparramada no tapete e sobe ate a tigela cheia. E a prova visual da causa, num plano so, sem corte: um estranho ve a cadela E a comida juntas. Tambem cortei o plano da barriga de 1,2s para 0,6s (o auditor recusou meu argumento de 'limite de material' e estava certo: o limite era de edicao) e o fecho passou a terminar em quadro nitido.\n\nCORRECAO A UMA ACUSACAO DO AUDITOR: ele apontou que a trilha corta seca no fim, sem fade. Fui na FONTE e o codigo do montar_reel.py ja aplica `afade=t=out:d=0.6` (linha 461). O fade existe; o que ele mediu foi a janela de RMS, nao a ausencia de fade. Nao mexi.\n\nOUTRA CORRECAO: ele mandou pousar no quadro t=7,35 do clipe do comedouro, dizendo que ali cadela e tigela apareciam juntas. Fui conferir quadro a quadro (7,1 / 7,35 / 7,6 / 7,9) e o 7,35 e um borrao de panoramica com a cabeca dela entrando cortada na borda -- inutil como pouso. O quadro que serve e OUTRO, o 5,4, que ele nao tinha achado. Usei o 5,4.",
+
+  "trilha": "content/trilhas/01-fofo-ukulele.mp3",
+  "inicio_trilha": 2.9,
+  "abafar_ate": 0,
+  "volume_trilha": 1.0,
+  "_nota_trilha": "Alinhada por MEDICAO. A faixa mergulha para -28,2 dB no segundo 8 e salta para -17,0 no 9. Com inicio_trilha=2.9 o mergulho cai em 5,1-6,1s do Reel e a subida cai exatamente em 6,1s, primeiro quadro do corte em que ela levanta. Custo R$ 0,00.",
+
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/01_E5DBFA8E-7D2B-478F-9CD2-F3CCE4F2688F.mp4",
+      "de": 10.2, "ate": 11.5, "movimento": "seco", "mudo": true,
+      "_nota": "GANCHO (Reel 0,0-1,3). Rosto grande, ela inclina a cabeca e mexe as patas -- movimento REAL do bicho, nao zoom de edicao (o auditor confirmou isso na v2). UNICA entrada do clipe da sala na peca inteira: com o segundo plano removido, nao existe mais enquadramento repetido."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/09_7DDBC71C-F182-469E-B71C-079064287077.mp4",
+      "de": 5.2, "ate": 6.6, "movimento": "seco", "mudo": true,
+      "_nota": "A PROVA (Reel 1,3-2,7). O corte que faltava nas duas versoes anteriores. Panoramica: comeca nela largada no tapete e sobe ate o comedouro automatico com a tigela cheia. Cadela e comida NO MESMO QUADRO, ligados sem corte -- e o que transforma a piada de legenda em imagem."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/09_7DDBC71C-F182-469E-B71C-079064287077.mp4",
+      "de": 6.9, "ate": 7.5, "movimento": "seco", "mudo": true,
+      "_nota": "A TIGELA (Reel 2,7-3,3). Plano fechado e nitido da racao servida. Conferido: sem logo de marca legivel, sem risco de parecer publi. Termina em 7,5 de proposito -- de 7,6 em diante o bruto vira borrao de panoramica."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/09_7DDBC71C-F182-469E-B71C-079064287077.mp4",
+      "de": 11.4, "ate": 13.6, "movimento": "seco", "mudo": true,
+      "_nota": "A RECUSA (Reel 3,3-5,5). Barriga pra cima, rosto aparecendo de cabeca pra baixo. E o plano mais longo da peca porque e o miolo da piada."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/09_7DDBC71C-F182-469E-B71C-079064287077.mp4",
+      "de": 8.6, "ate": 9.2, "movimento": "seco", "mudo": true,
+      "_nota": "O DRAMA (Reel 5,5-6,1). Patas pro alto. CORTADO de 1,2s para 0,6s: o auditor recusou meu argumento de que o contraste morto entre a barriga clara e o tapete bege era limite de material, e tinha razao -- em 0,6s o plano vira uma batida rapida e o problema de contraste nao da tempo de incomodar."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/09_7DDBC71C-F182-469E-B71C-079064287077.mp4",
+      "de": 17.2, "ate": 18.6, "movimento": "seco", "mudo": true,
+      "_nota": "O FECHO (Reel 6,1-7,5). Ela se levanta e sai andando pelo tapete. Janela escolhida por nitidez: conferi 17,4 / 17,8 / 18,2 e sao os quadros limpos: de 18,6 em diante ela borra. A trilha sobe no primeiro quadro deste corte."
+    }
+  ],
+
+  "textos": [
+    { "de": 0.15, "ate": 3.2, "texto": "a comida ja ta servida", "posicao": "baixo", "px": 74 },
+    { "de": 3.4, "ate": 6.0, "texto": "eu nao levanto", "posicao": "baixo", "px": 78 },
+    { "de": 6.2, "ate": 7.5, "texto": "levantei. pra ir embora.", "posicao": "baixo", "px": 72 }
+  ],
+  "_nota_textos": "Buraco de texto eliminado: na v2 havia 1,6s de tela sem cartela nenhuma no ponto em que o espectador decide se fica. Agora o maior vao e de 0,2s. A ultima cartela e segurada ate 7,5, o fim exato da peca -- na v2 ela sumia antes do fim e a peca terminava muda.",
+
+  "_nota_som": "Todos os cortes mudos, trilha carregando. O barulho da racao caindo nao existe no bruto (o comedouro serviu antes da filmagem) -- o auditor aceitou como limite real de material e nao como defeito.",
+  "_custo": "R$ 0,00."
+}

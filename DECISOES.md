@@ -3,6 +3,59 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🎬 28/08/2026 — Reel "A COMIDA TÁ SERVIDA": 3 rodadas de auditoria, 2 reprovações
+
+**Contexto:** a fila estava com os 7 posts em `rejected`, todos vencidos, e nada
+agendado à frente. A Ana não mandou material (nada entra em `01 - brutas` desde
+09/08; o roteiro do "teste das duas canecas" foi mandado no WhatsApp dela em
+26/08, mas a instrução seguinte não saiu porque o WhatsApp Web deslogou). Em vez
+de deixar a sexta furar, montei com o **garimpo do rolo de 03/08** (`melhores-30`),
+material inédito — conferido contra `videos-usados.json` e `fotos-usadas.json`.
+
+**O que a auditoria pegou, e que eu não teria pego sozinho:**
+- **v1 REPROVADA (6 defeitos).** O fecho vinha de um clipe do quintal, com ela de
+  pijama rosa. Quebrava a piada (a graça exige que ela passe reto PELA COMIDA, e
+  no quintal não há comida), punha uma perna humana ocupando o terço inferior por
+  4s, e sumia com a cor tri lilac merle. Pior: **abriu dúvida real de identidade**
+  — montei os dois rostos lado a lado e, embora listra branca, padrão merle e
+  orelhas batam, o olho lê cinza-azulado dentro de casa e âmbar no quintal.
+  Não consegui cravar que era a mesma cadela. Apliquei a **regra 3n-ii**
+  (defeito de material troca-se o material): o clipe saiu inteiro e matou os 4.
+- **v2 REPROVADA (2 defeitos de edição).** 1,6s de plano estático sem texto
+  repetindo um enquadramento que o espectador acabara de ver, e a piada morando
+  na legenda porque cadela e comida nunca dividiam o quadro.
+- **v3 SEM OBJEÇÃO.** O segundo plano da sala saiu; entrou a **panorâmica
+  5,2→6,6**, que começa nela esparramada no tapete e sobe até a tigela cheia —
+  os dois no mesmo quadro, sem corte.
+
+**Duas afirmações do auditor foram conferidas na FONTE e estavam erradas** (vale
+como lembrete de que a regra zero vale também para quem me audita):
+1. Ele mandou pousar no quadro 7,35 como prova visual — é um borrão de
+   panorâmica com a cabeça dela cortada. O quadro que serve é o **5,4**, que ele
+   não tinha achado.
+2. Ele acusou a trilha de cortar seca, sem fade. O código prova o contrário:
+   `studio/montar_reel.py` linha 461 já aplica `afade=t=out:d=0.6`. Ele
+   reconheceu o erro por escrito e riscou o item.
+
+**Lição de método:** a trilha foi encaixada por **medição**, não de ouvido — a
+faixa `01-fofo-ukulele` mergulha para -28,2 dB no segundo 8 e salta no 9, e
+`inicio_trilha=2.9` faz essa subida cair exatamente no primeiro quadro em que
+ela levanta. Custo da peça: **R$ 0,00**.
+
+**Pendente dele:** aprovar ou recusar a peça (mandada na conversa). O publicador
+exige `status: approved` **e** `auditoria.veredito == "SEM OBJECAO"` — o campo de
+auditoria já foi escrito na hora, para não repetir o post que ficou 34h travado.
+
+## 🐕 28/08/2026 — achado que é do projeto CANECAS, não deste
+
+Ele reclamou aqui ("de cachorro novamente, somos uma empresa pet?") de um vídeo
+que na verdade é do Canecas POD, e confirmou depois que a mensagem veio no
+projeto errado. Fica registrado só o que interessa a esta pasta: **o achado foi
+repassado à sessão do Canecas POD** por mensagem entre sessões, porque o guardião
+bloqueia escrita fora da pasta aberta (regra 15, e agiu certo). O conteúdo é
+deles: `reels_agendados.py` publica sem passar por `aprovacoes.py`, e
+`aprovacoes.json` está vazio.
+
 ## 🤖 27/08/2026 (vigia na nuvem) — checagem de rotina: nenhum bug novo
 
 Rodei `python studio/estado.py --mostrar` e `python publisher/sentinel.py`

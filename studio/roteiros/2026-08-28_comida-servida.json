@@ -1,0 +1,60 @@
+{
+  "titulo": "A COMIDA TA SERVIDA (E DAI?) -- pilar A PATROA MANDA",
+  "historia": "O comedouro automatico fez a parte dele: a tigela esta cheia. A patroa encara a camera cobrando, mas nao levanta -- fica de barriga pra cima rolando no chao. Quando finalmente levanta, e pra vir andando decidida ate a camera e ir embora sem comer. Recusa ativa, nao preguica passiva.",
+  "origem": "Garimpo do rolo de camera (03/08), pasta melhores-30. Material NUNCA publicado. Os 3 clipes sao 1080x1920 nativo -- sem ampliacao, ao contrario da peca da Eloen que era 576x1024 esticado.",
+  "_roteiro_por": "diretor-reels, 28/08/2026. 7 cortes, 13,7s.",
+
+  "trilha": "content/trilhas/01-fofo-ukulele.mp3",
+  "inicio_trilha": 0.3,
+  "abafar_ate": 0,
+  "volume_trilha": 1.0,
+  "_nota_trilha": "Escolhida por MEDICAO, nao de ouvido (regra 3n-i). Curva de RMS por segundo desta faixa: -20 dB constante de 0 a 7s (leve, brincalhao), MERGULHO para -28,2 dB no segundo 8 (respiro real, silencio quase total) e SALTO para -17,0 em 9s e -13,4 em 10s (a subida). Com inicio_trilha=0.3 o mergulho cai em 7,7-8,7s do Reel (fim do corte 5, ela de barriga pra cima) e a subida cai EXATAMENTE em 8,7s, que e o primeiro quadro do corte 6 -- ela levantando. A musica para de respirar no instante em que a patroa se levanta. Custo R$ 0,00 (faixa Lyria ja existente).",
+
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/01_E5DBFA8E-7D2B-478F-9CD2-F3CCE4F2688F.mp4",
+      "de": 2.0, "ate": 4.2, "movimento": "seco", "mudo": true,
+      "_nota": "GANCHO (Reel 0,0-2,2). Rosto inteiro dela embaixo da cadeira, encarando a camera de frente ja no primeiro quadro -- cumpre a regra do rosto nos 2 primeiros segundos."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/09_7DDBC71C-F182-469E-B71C-079064287077.mp4",
+      "de": 6.0, "ate": 7.5, "movimento": "seco", "mudo": true,
+      "_nota": "A PROVA (Reel 2,2-3,7). Plano fechado do comedouro automatico com a tigela cheia de racao. Conferido no frame extraido: NAO ha logo de marca legivel -- sem risco de parecer publi (defeito 3 apontado pelo diretor-reels, checado e descartado)."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/09_7DDBC71C-F182-469E-B71C-079064287077.mp4",
+      "de": 12.0, "ate": 13.5, "movimento": "seco", "mudo": true,
+      "_nota": "A RECUSA (Reel 3,7-5,2). Ela de barriga pra cima, rosto aparecendo de cabeca pra baixo."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/01_E5DBFA8E-7D2B-478F-9CD2-F3CCE4F2688F.mp4",
+      "de": 8.0, "ate": 9.5, "movimento": "seco", "mudo": true,
+      "_nota": "A COBRANCA DE NOVO (Reel 5,2-6,7). Volta ao encarar. E o beat de repeticao que faz a piada: ela ja cobrou, cobra outra vez."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/09_7DDBC71C-F182-469E-B71C-079064287077.mp4",
+      "de": 8.5, "ate": 10.5, "movimento": "seco", "mudo": true,
+      "_nota": "O DRAMA (Reel 6,7-8,7). Patas pro alto, rolando. Termina exatamente onde a trilha da o respiro."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/02_B9E89AD8-83A4-45BB-845D-6FB2981199BB.mp4",
+      "de": 0.5, "ate": 3.0, "movimento": "seco", "mudo": true,
+      "_nota": "A VIRADA (Reel 8,7-11,2). Ela levanta e vem andando decidida para a camera, de pijama rosa oncinha. A trilha sobe neste primeiro quadro. Mudanca de cenario (sala -> quintal) sinaliza troca de momento, por isso a troca de roupa nao le como erro."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/02_B9E89AD8-83A4-45BB-845D-6FB2981199BB.mp4",
+      "de": 13.0, "ate": 15.5, "movimento": "seco", "mudo": true,
+      "_nota": "O FECHO (Reel 11,2-13,7). Ela vira e vai embora andando, de costas. Corte seco, sem fade. Termina com ela ANDANDO -- patroa nao termina no chao (exigencia do diretor-reels)."
+    }
+  ],
+
+  "textos": [
+    { "de": 2.3, "ate": 5.1, "texto": "a comida ja ta servida", "posicao": "baixo", "px": 74 },
+    { "de": 5.3, "ate": 8.6, "texto": "eu nao levanto", "posicao": "baixo", "px": 78 },
+    { "de": 9.8, "ate": 13.6, "texto": "levantei. pra ir embora.", "posicao": "baixo", "px": 72 }
+  ],
+  "_nota_textos": "3 frases, o teto da regra. Sem acento de proposito -- o renderizador ja quebrou acento antes (o roteiro regras-da-casa saiu com 'PROIBIDO SOF?'). Vai ser conferido no frame antes de qualquer coisa ir pro Ramon.",
+
+  "_nota_som": "TODOS os cortes mudos. O som original e ambiente de 3 cenas diferentes e ficaria picotado; a trilha carrega sozinha. Ele reclamou duas vezes de nao ouvir musica -- aqui a musica e a unica coisa que toca.",
+  "_custo": "R$ 0,00 -- material ja filmado, trilha ja gerada. Nenhuma ferramenta paga."
+}

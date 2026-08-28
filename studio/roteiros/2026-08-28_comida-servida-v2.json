@@ -1,0 +1,55 @@
+{
+  "titulo": "A COMIDA TA SERVIDA (E DAI?) -- v2, pilar A PATROA MANDA",
+  "historia": "O comedouro automatico serviu: a tigela esta cheia. A patroa encara a camera cobrando, mas nao levanta -- fica de barriga pra cima, patas pro alto, fazendo drama no tapete ao lado da comida. Quando finalmente levanta, e pra sair andando sem encostar na racao. Tudo dentro de casa, no mesmo comodo da comida.",
+
+  "_porque_v2": "A v1 foi REPROVADA pelo auditor independente com 6 defeitos. O defeito que matou era de MATERIAL, nao de ajuste (regra 3n-ii): os cortes 6 e 7 vinham de um terceiro clipe, gravado no quintal, com ela de pijama rosa. Isso quebrava a piada (a graca exige que ela passe reto PELA COMIDA, e no quintal nao ha comida nenhuma -- um estranho via 'cachorra deitada' e depois 'cachorra passeando'), abria duvida REAL de identidade (no clipe do quintal o olho le como ambar e a cabeca perde o merle, contra olho cinza-azulado e merle marcado dentro de casa -- comparei os dois rostos lado a lado e nao consegui cravar que e a mesma cadela), punha uma perna humana ocupando o terco inferior nos ultimos 4 segundos, e sumia com a cor tri lilac merle, que e a assinatura da marca. Tirar o clipe do quintal mata os 5 defeitos de uma vez. O desfecho foi reencontrado DENTRO do proprio clipe do comedouro: no fim dele ela se levanta e sai andando.",
+
+  "trilha": "content/trilhas/01-fofo-ukulele.mp3",
+  "inicio_trilha": 1.8,
+  "abafar_ate": 0,
+  "volume_trilha": 1.0,
+  "_nota_trilha": "Alinhada por MEDICAO (regra 3n-i). A faixa tem RMS estavel em -20 dB, um mergulho para -28,2 dB no segundo 8 e salto para -17,0 no 9. Com inicio_trilha=1.8 o mergulho cai em 6,2-7,2s do Reel (fim do drama) e a subida cai exatamente em 7,2s, primeiro quadro do corte 6 -- ela levantando. A musica respira no instante em que a patroa decide levantar. Custo R$ 0,00.",
+
+  "cortes": [
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/01_E5DBFA8E-7D2B-478F-9CD2-F3CCE4F2688F.mp4",
+      "de": 10.2, "ate": 11.6, "movimento": "seco", "mudo": true,
+      "_nota": "GANCHO (Reel 0,0-1,4). Trocado da v1 por causa do defeito (h) do auditor: la o gancho eram 2,2s dela PARADA, e o unico movimento era zoom digital da edicao. Aqui o rosto esta grande no quadro, ela inclina a cabeca e a camera se acomoda -- movimento REAL do bicho, conferido quadro a quadro em 10,1/10,4/10,7/11,0/11,3. Encurtado de 2,2s para 1,4s, como o diretor-reels tinha previsto."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/09_7DDBC71C-F182-469E-B71C-079064287077.mp4",
+      "de": 6.2, "ate": 7.6, "movimento": "seco", "mudo": true,
+      "_nota": "A PROVA (Reel 1,4-2,8). Comedouro automatico com a tigela cheia. Conferido no frame: nao ha logo de marca legivel, sem risco de parecer publi."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/01_E5DBFA8E-7D2B-478F-9CD2-F3CCE4F2688F.mp4",
+      "de": 3.0, "ate": 4.4, "movimento": "seco", "mudo": true,
+      "_nota": "A COBRANCA (Reel 2,8-4,2). Plano mais ABERTO que o corte 1 de proposito -- corpo inteiro embaixo da cadeira. O auditor reprovou a v1 por gastar duas cartelas no mesmo enquadramento; aqui as duas entradas do clipe A tem escalas diferentes."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/09_7DDBC71C-F182-469E-B71C-079064287077.mp4",
+      "de": 11.8, "ate": 13.4, "movimento": "seco", "mudo": true,
+      "_nota": "A RECUSA (Reel 4,2-5,8). Barriga pra cima, rosto aparecendo de cabeca pra baixo."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/09_7DDBC71C-F182-469E-B71C-079064287077.mp4",
+      "de": 8.6, "ate": 10.0, "movimento": "seco", "mudo": true,
+      "_nota": "O DRAMA (Reel 5,8-7,2). Patas pro alto, rolando. Termina exatamente onde a trilha da o respiro."
+    },
+    {
+      "arquivo": "Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30/09_7DDBC71C-F182-469E-B71C-079064287077.mp4",
+      "de": 17.2, "ate": 18.8, "movimento": "seco", "mudo": true,
+      "_nota": "O FECHO (Reel 7,2-8,8). Ela se vira, se levanta e sai andando pelo tapete, ao lado do comedouro que aparece no corte 2 -- ou seja, sai DE PERTO da comida, que e o que a piada exige. Termina com ela andando, nao no chao. Substitui o fecho do quintal que o auditor reprovou."
+    }
+  ],
+
+  "textos": [
+    { "de": 0.15, "ate": 2.7, "texto": "a comida ja ta servida", "posicao": "baixo", "px": 74 },
+    { "de": 4.3, "ate": 7.0, "texto": "eu nao levanto", "posicao": "baixo", "px": 78 },
+    { "de": 7.4, "ate": 8.7, "texto": "levantei. pra ir embora.", "posicao": "baixo", "px": 72 }
+  ],
+  "_nota_textos": "3 frases, o teto. A primeira agora entra em 0,15s -- defeito (h) do auditor: na v1 o gancho passava 2,3s mudo e sem mensagem nenhuma. Sem acento de proposito (o renderizador ja quebrou acento antes).",
+
+  "_nota_som": "Todos os cortes mudos, trilha carregando. O auditor sugeriu recuperar o barulho da racao caindo, mas o clipe nao tem esse som gravado (o comedouro ja tinha servido antes da filmagem) -- registrado como limite do material, nao como escolha.",
+  "_custo": "R$ 0,00."
+}
