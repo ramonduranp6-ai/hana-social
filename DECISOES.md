@@ -3,6 +3,23 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 📊 28/08/2026 — diário de crescimento: alcance recorde não virou conversão
+
+Coleta de 27/08 trouxe o Reel `2026-08-K_chegada-eloen` (anúncio especial,
+fora do calendário): **988 de alcance, 1310 views — 5x o melhor Reel
+anterior (195)**. Mesmo assim: **0 salvos, 0 compartilhamentos, seguidores
+parados em 331**. Confirma o que já se via desde 18/08 — o gargalo do
+perfil é conversão (salvar/compartilhar/seguir), não alcance. Também: o 1º
+post no formato retrato-editorial via Gemini (`2026-08-26_retrato-oficial`)
+fechou com alcance 36, **abaixo** da média das fotos antigas (53) — aposta
+não confirmada ainda, só 1 amostra. Regra de morte do formato POV "A
+PATROA MANDA" (3 Reels 0/0) segue sem bater — só 2 Reels publicados, e um
+deles já tem 1 compartilhamento. Detalhe também no atraso do robô: o run
+de 27/08 do `maintenance.yml` saiu 10h depois do horário do cron (22:17
+UTC em vez de ~12:15) — bem acima do atraso normal visto antes; ainda não
+é pane, mas está piorando. Diário completo em
+`estrategia/diario-crescimento-2026-08-28.md`.
+
 ## 🔍 28/08/2026 12:33 — checagem de rotina (vigia da nuvem): sem bug novo
 
 Conferi `studio/estado.py --mostrar` e o repositório (sem `gh` autenticado nesta
