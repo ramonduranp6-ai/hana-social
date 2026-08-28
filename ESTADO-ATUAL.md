@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/08/2026 00:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/08/2026 08:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -93,6 +93,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+c52eb38 chore: checagem de rotina 28/08 - sem bug novo, so falta de conteudo (ja avisado)
 a576b7d chore: atualiza manutenção [skip ci]
 d193cc9 Diário de crescimento 27/08: sem coleta nova ainda (robô atrasado)
 2a7c2eb merge: resolve conflito ESTADO-ATUAL.md (regenerado) [skip ci]
@@ -100,7 +101,6 @@ d193cc9 Diário de crescimento 27/08: sem coleta nova ainda (robô atrasado)
 9d187b2 chore: atualiza estado da fila [skip ci]
 79259a5 chore: checagem de rotina 27/08 - sem bug novo, so falta de conteudo (ja avisado)
 5fe0b95 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
-191beb7 Checkpoint 26/08: bastao atualizado (Eloen hoje, Ana filma, vigia provou que se cura)
 ```
 
 ## Decisões e contexto
@@ -108,6 +108,25 @@ d193cc9 Diário de crescimento 27/08: sem coleta nova ainda (robô atrasado)
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🤖 28/08/2026 (vigia na nuvem) — checagem de rotina: nenhum bug novo
+
+Rodei `python studio/estado.py --mostrar`, conferi os últimos runs do
+`publish.yml` pela API do GitHub (`gh` não autenticado nesta nuvem) e rodei
+`python publisher/sentinel.py`. Nenhum ALARME de código: o conserto do
+dedupe do Sentinela (25→26/08) segue de pé, todos os runs desde o 557
+(26/08) terminaram `success`, e o último post (`2026-08-K_chegada-eloen`)
+está publicado. Conferi as 7 peças da fila uma a uma: todas `status:
+rejected` — a de `2026-08-26_cara-de-reuniao` tem `motivo_recusa` explícito
+do Ramón ("bem sem graça"); as outras 6 são recusas mais antigas (antes do
+hábito de registrar `motivo_recusa`/`rejeitado_em`), sem nenhum sinal nos
+scripts (`telegram_approve.py`, `postqueue.py`) de que "rejected" seja
+setado por bug — só o clique de recusar no Telegram grava esse status.
+Único achado do sentinela é o mesmo de ontem: fila com 0 posts futuros
+aprovados, por falta de filmagem nova, não bug. Ramón já foi avisado disso
+em sessões anteriores e já coordenou filmagem nova ("Ana filma") — não
+repeti o recado. Marcador do dia gravado em
+`content/.falhas_avisadas.json` (`fila_vazia_2026-08-28`).
 
 ## 🤖 27/08/2026 (vigia na nuvem) — checagem de rotina: nenhum bug novo
 
