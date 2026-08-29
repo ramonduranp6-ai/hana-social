@@ -3,6 +3,20 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 29/08/2026 — checagem de rotina (vigia da nuvem): sem bug novo
+
+Conferi `studio/estado.py --mostrar` (sem ALARME) e o histórico recente (sem
+`gh` autenticado nesta nuvem, mesma limitação já conhecida — baseei o
+diagnóstico nos commits automáticos e nos arquivos de estado). O post
+`2026-08-28_comida-servida` segue `status: pending` com
+`auditoria.veredito == "SEM OBJECAO"` já preenchido corretamente — não travado,
+só falta o Ramón aprovar ou recusar. `content/.falhas_avisadas.json` ganhou a
+entrada `fila_vazia_2026-08-29` (dedupe já aplicado, sem repetir o aviso — fila
+segue vazia depois desse post por falta de filmagem nova, já avisado antes).
+Coleta de métricas de 28/08 rodou normal (seguidores 331→330, variação
+normal). Nenhum erro de código para consertar. Nada a avisar — resolvido em
+silêncio conforme a regra.
+
 ## 📊 28/08/2026 — diário de crescimento: alcance recorde não virou conversão
 
 Coleta de 27/08 trouxe o Reel `2026-08-K_chegada-eloen` (anúncio especial,
