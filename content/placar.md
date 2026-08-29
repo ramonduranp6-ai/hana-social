@@ -1,17 +1,17 @@
 # Placar da Hana — o que cada post rendeu
 
 Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
-Última coleta: **2026-08-28** · fonte: API do Instagram.
+Última coleta: **2026-08-29** · fonte: API do Instagram.
 
 ## Seguidores
 
-**330** (-1 desde 2026-08-27)
+**330** (+0 desde 2026-08-28)
 
 ## Post a post (mais alcance em cima)
 
 | Post | Tipo | alcance | curtidas | comentários | salvos | compartilh. | views | seguidores ganhos |
 |---|---|---|---|---|---|---|---|---|
-| 2026-08-K_chegada-eloen | Reel | 995 | 32 | 2 | 0 | 0 | 1329 | — |
+| 2026-08-K_chegada-eloen | Reel | 996 | 32 | 2 | 0 | 0 | 1330 | — |
 | 2026-08-12_cenoura-filhote | Reel | 196 | 14 | 3 | 0 | 1 | 258 | — |
 | 2026-08-10_escolheu-o-canal | Reel | 185 | 11 | 0 | 0 | 0 | 274 | — |
 | 2026-08-14_regras-da-casa | Reel | 180 | 17 | 1 | 0 | 0 | 257 | — |
@@ -23,7 +23,7 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 | 2026-08-05_navio-importacao | Foto | 50 | 10 | 1 | 0 | 0 | — | 0 |
 | 2026-08-07_banho-de-sol | Foto | 49 | 13 | 1 | 0 | 0 | — | 0 |
 | 2026-08-03_dia-de-praia | Foto | 47 | 11 | 0 | 0 | 0 | — | 0 |
-| 2026-08-26_retrato-oficial | Foto | 40 | 12 | 1 | 0 | 0 | — | 0 |
+| 2026-08-26_retrato-oficial | Foto | 41 | 12 | 1 | 0 | 0 | — | 0 |
 
 ## Reel x Foto (média de alcance)
 
@@ -32,7 +32,7 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 
 ## Alcance médio por pilar
 
-- **ANUNCIO ESPECIAL (fora do calendario normal)**: 995 de alcance médio (1 post(s))
+- **ANUNCIO ESPECIAL (fora do calendario normal)**: 996 de alcance médio (1 post(s))
 - **A PATROA MANDA**: 139 de alcance médio (3 post(s))
 - **sem pilar**: 68 de alcance médio (9 post(s))
 
@@ -40,7 +40,6 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 
 | Data | Seguidores |
 |---|---|
-| 2026-08-17 | 331 |
 | 2026-08-18 | 331 |
 | 2026-08-19 | 331 |
 | 2026-08-20 | 331 |
@@ -52,6 +51,7 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 | 2026-08-26 | 331 |
 | 2026-08-27 | 331 |
 | 2026-08-28 | 330 |
+| 2026-08-29 | 330 |
 
 ## Limites desta coleta
 
