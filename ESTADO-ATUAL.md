@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/08/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 29/08/2026 16:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+0d8dcfd chore: diário de crescimento 29/08 - analisa 27/08→28/08 (coleta de hoje ainda atrasada)
+16ac201 Conserta sentinela derrubando publish.yml a cada 30min por post pending vencido
+155668a chore: checagem de rotina 29/08 (vigia da nuvem) - sem bug novo, post da sexta aguarda aprovacao do Ramon
+deea595 chore: atualiza estado da fila [skip ci]
+e9ea633 chore: atualiza manutenção [skip ci]
+5585db7 chore: checagem de rotina 28/08 (vigia da nuvem) - sem bug novo, post da sexta aguarda aprovacao do Ramon
 224eda7 Diário de crescimento 28/08: alcance recorde do Reel da Eloen não virou conversão
 e5e99cd chore: checagem de rotina 28/08 12:33 - sem bug novo, post da sexta aguarda aprovacao do Ramon
-5190c8c merge: mantem a entrada do Reel 28/08 e a do vigia da nuvem [skip ci]
-808e2f9 Reel 28/08 'a comida ta servida' pronto para aprovacao (3 rodadas de auditoria, 2 reprovacoes)
-9b9586d chore: atualiza estado (regenerado na checagem de rotina 28/08) [skip ci]
-c52eb38 chore: checagem de rotina 28/08 - sem bug novo, so falta de conteudo (ja avisado)
-a576b7d chore: atualiza manutenção [skip ci]
-d193cc9 Diário de crescimento 27/08: sem coleta nova ainda (robô atrasado)
 ```
 
 ## Decisões e contexto
@@ -109,6 +109,39 @@ d193cc9 Diário de crescimento 27/08: sem coleta nova ainda (robô atrasado)
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🐛 29/08/2026 (2ª checagem) — conserto: sentinela derrubava o job a cada 30 min
+
+`gh` não estava disponível nesta nuvem, mas dei `mcp__github__actions_list`
+direto: `publish.yml` estava **vermelho desde 28/08 23:15Z, 4 rodadas seguidas**
+(runs 581-584). O passo "Sentinela" (`publisher/sentinel.py`) falhava porque o
+post `2026-08-28_comida-servida` está `status: "pending"` (esperando o Ramón
+aprovar ou recusar) e seu `scheduled_for` já tinha passado há mais de 45 min —
+mas o código tratava QUALQUER post `pending`/`approved` vencido como falha
+técnica, sem diferenciar. Um post `pending` vencido não é bug: é a mesma
+"decisão de família sem prazo" que o próprio código já tratava como aviso
+2 linhas acima para posts sem data — só `approved` vencido é falha real
+(deveria ter publicado sozinho e não publicou). Pior: esse branch não tinha
+o dedupe diário que os casos `failed` (achado 21/08) e `fila vazia` (achado
+25/08) já ganharam, então reabria o alarme a cada execução, para sempre, até
+ele decidir. Conserto: `pending` vencido agora vira aviso (não email), só
+`approved` vencido continua derrubando o job de verdade. Testado localmente
+(`python publisher/sentinel.py` → exit 0, antes dava exit 1). `git push`
+depois deste commit.
+
+## 🔍 29/08/2026 — checagem de rotina (vigia da nuvem): sem bug novo
+
+Conferi `studio/estado.py --mostrar` (sem ALARME) e o histórico recente (sem
+`gh` autenticado nesta nuvem, mesma limitação já conhecida — baseei o
+diagnóstico nos commits automáticos e nos arquivos de estado). O post
+`2026-08-28_comida-servida` segue `status: pending` com
+`auditoria.veredito == "SEM OBJECAO"` já preenchido corretamente — não travado,
+só falta o Ramón aprovar ou recusar. `content/.falhas_avisadas.json` ganhou a
+entrada `fila_vazia_2026-08-29` (dedupe já aplicado, sem repetir o aviso — fila
+segue vazia depois desse post por falta de filmagem nova, já avisado antes).
+Coleta de métricas de 28/08 rodou normal (seguidores 331→330, variação
+normal). Nenhum erro de código para consertar. Nada a avisar — resolvido em
+silêncio conforme a regra.
 
 ## 📊 28/08/2026 — diário de crescimento: alcance recorde não virou conversão
 
