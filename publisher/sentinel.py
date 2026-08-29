@@ -97,7 +97,19 @@ def checar_fila():
             t = dt.datetime.fromisoformat(p["scheduled_for"].replace("Z", "+00:00"))
             atraso_min = (agora - t).total_seconds() / 60
             if atraso_min > TOLERANCIA_MIN:
-                problemas.append(f"{p['_id']}: vencido ha {int(atraso_min)} min sem publicar")
+                if status == "pending":
+                    # ACHADO 29/08/2026: post 'pending' vencido nao e' falha
+                    # tecnica -- e' peca pronta esperando o Ramon aprovar ou
+                    # recusar (mesmo raciocinio do caso "sem data" acima: uma
+                    # decisao de familia sem prazo nao pode tocar o alarme).
+                    # So 'approved' vencido e' bug de verdade (deveria ter
+                    # publicado sozinho e nao publicou). Antes deste conserto
+                    # nao havia essa distincao, e o job ficava vermelho a
+                    # CADA rodada de 30 min desde a noite de 28/08 (runs
+                    # 581-584) so porque ele ainda nao tinha decidido.
+                    avisos.append(f"{p['_id']}: pronto ha {int(atraso_min)} min, ESPERANDO ELE aprovar/recusar")
+                else:
+                    problemas.append(f"{p['_id']}: vencido ha {int(atraso_min)} min sem publicar")
             else:
                 futuros += 1
     # BURACO (c): fila com menos de 2 posts futuros é ALARME, nao "tudo em

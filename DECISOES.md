@@ -3,6 +3,25 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🐛 29/08/2026 (2ª checagem) — conserto: sentinela derrubava o job a cada 30 min
+
+`gh` não estava disponível nesta nuvem, mas dei `mcp__github__actions_list`
+direto: `publish.yml` estava **vermelho desde 28/08 23:15Z, 4 rodadas seguidas**
+(runs 581-584). O passo "Sentinela" (`publisher/sentinel.py`) falhava porque o
+post `2026-08-28_comida-servida` está `status: "pending"` (esperando o Ramón
+aprovar ou recusar) e seu `scheduled_for` já tinha passado há mais de 45 min —
+mas o código tratava QUALQUER post `pending`/`approved` vencido como falha
+técnica, sem diferenciar. Um post `pending` vencido não é bug: é a mesma
+"decisão de família sem prazo" que o próprio código já tratava como aviso
+2 linhas acima para posts sem data — só `approved` vencido é falha real
+(deveria ter publicado sozinho e não publicou). Pior: esse branch não tinha
+o dedupe diário que os casos `failed` (achado 21/08) e `fila vazia` (achado
+25/08) já ganharam, então reabria o alarme a cada execução, para sempre, até
+ele decidir. Conserto: `pending` vencido agora vira aviso (não email), só
+`approved` vencido continua derrubando o job de verdade. Testado localmente
+(`python publisher/sentinel.py` → exit 0, antes dava exit 1). `git push`
+depois deste commit.
+
 ## 🔍 29/08/2026 — checagem de rotina (vigia da nuvem): sem bug novo
 
 Conferi `studio/estado.py --mostrar` (sem ALARME) e o histórico recente (sem
