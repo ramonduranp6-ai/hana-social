@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 30/08/2026 04:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 30/08/2026 04:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+2f11aae chore: atualiza estado [skip ci]
+1ab930b chore: checagem de rotina 30/08 (vigia da nuvem) - sem bug novo, alarme de fila vazia era o dedupe funcionando
 7b9feb2 chore: atualiza estado da fila [skip ci]
 b11e9b3 chore: atualiza estado [skip ci]
 f94bf3c chore: atualiza manutenção [skip ci]
 e3a344e chore: atualiza estado da fila [skip ci]
 0d8dcfd chore: diário de crescimento 29/08 - analisa 27/08→28/08 (coleta de hoje ainda atrasada)
 16ac201 Conserta sentinela derrubando publish.yml a cada 30min por post pending vencido
-155668a chore: checagem de rotina 29/08 (vigia da nuvem) - sem bug novo, post da sexta aguarda aprovacao do Ramon
-deea595 chore: atualiza estado da fila [skip ci]
 ```
 
 ## Decisões e contexto
@@ -109,6 +109,20 @@ deea595 chore: atualiza estado da fila [skip ci]
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 30/08/2026 — checagem de rotina (vigia da nuvem): sem bug novo
+
+Conferi `studio/estado.py --mostrar` (sem ALARME) e `publish.yml` via
+`mcp__github__actions_list` (sem `gh` autenticado nesta nuvem). O único run
+vermelho recente (591, 02:47Z) foi o alarme diário por-desenho de fila vazia
+(0 posts futuros) — conferido em `content/.falhas_avisadas.json`: a chave
+`fila_vazia_2026-08-30` foi gravada certinho e o run seguinte (592) já não
+repete. Não é bug, é o dedupe funcionando como o conserto de 25/08 previu.
+O post `2026-08-28_comida-servida` segue `pending` (auditoria já preenchida,
+`SEM OBJECAO`) — só falta o Ramón aprovar ou recusar, decisão dele, já
+avisado em sessões anteriores. Fila vazia por falta de filmagem também já
+avisada (25 a 29/08) — nada novo para repetir. Nenhum erro de código para
+consertar. Nada a avisar — resolvido em silêncio conforme a regra.
 
 ## 🐛 29/08/2026 (2ª checagem) — conserto: sentinela derrubava o job a cada 30 min
 
