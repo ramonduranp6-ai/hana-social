@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 29/08/2026 20:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 30/08/2026 04:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+7b9feb2 chore: atualiza estado da fila [skip ci]
+b11e9b3 chore: atualiza estado [skip ci]
 f94bf3c chore: atualiza manutenção [skip ci]
 e3a344e chore: atualiza estado da fila [skip ci]
 0d8dcfd chore: diário de crescimento 29/08 - analisa 27/08→28/08 (coleta de hoje ainda atrasada)
 16ac201 Conserta sentinela derrubando publish.yml a cada 30min por post pending vencido
 155668a chore: checagem de rotina 29/08 (vigia da nuvem) - sem bug novo, post da sexta aguarda aprovacao do Ramon
 deea595 chore: atualiza estado da fila [skip ci]
-e9ea633 chore: atualiza manutenção [skip ci]
-5585db7 chore: checagem de rotina 28/08 (vigia da nuvem) - sem bug novo, post da sexta aguarda aprovacao do Ramon
 ```
 
 ## Decisões e contexto
