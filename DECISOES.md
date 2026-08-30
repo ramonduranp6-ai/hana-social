@@ -3,6 +3,20 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 30/08/2026 — checagem de rotina (vigia da nuvem): sem bug novo
+
+Conferi `studio/estado.py --mostrar` (sem ALARME) e `publish.yml` via
+`mcp__github__actions_list` (sem `gh` autenticado nesta nuvem). O único run
+vermelho recente (591, 02:47Z) foi o alarme diário por-desenho de fila vazia
+(0 posts futuros) — conferido em `content/.falhas_avisadas.json`: a chave
+`fila_vazia_2026-08-30` foi gravada certinho e o run seguinte (592) já não
+repete. Não é bug, é o dedupe funcionando como o conserto de 25/08 previu.
+O post `2026-08-28_comida-servida` segue `pending` (auditoria já preenchida,
+`SEM OBJECAO`) — só falta o Ramón aprovar ou recusar, decisão dele, já
+avisado em sessões anteriores. Fila vazia por falta de filmagem também já
+avisada (25 a 29/08) — nada novo para repetir. Nenhum erro de código para
+consertar. Nada a avisar — resolvido em silêncio conforme a regra.
+
 ## 🐛 29/08/2026 (2ª checagem) — conserto: sentinela derrubava o job a cada 30 min
 
 `gh` não estava disponível nesta nuvem, mas dei `mcp__github__actions_list`
