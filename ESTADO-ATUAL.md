@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 30/08/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 30/08/2026 20:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+d4d4d6d chore: atualiza manutenção [skip ci]
+26af21f chore: atualiza estado [skip ci]
 e8731c2 checkpoint 30/08: bastao atualizado (Reel pronto e auditado, parado esperando o OK dele)
 a9bccde diario: 30/08 - coleta de hoje ainda nao rodou, sem numero novo pra comparar
 2d5031a chore: atualiza estado [skip ci]
 232ecd9 chore: atualiza estado [skip ci]
 1775949 chore: atualiza estado [skip ci]
 2f11aae chore: atualiza estado [skip ci]
-1ab930b chore: checagem de rotina 30/08 (vigia da nuvem) - sem bug novo, alarme de fila vazia era o dedupe funcionando
-7b9feb2 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
