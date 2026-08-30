@@ -564,33 +564,40 @@ processo no meio:**
 combina com a família, não é calendário de conteúdo) e sem decidir se estica
 a duração (6s vs 9-12s, sugestão do auditor). Esperando ele ver e aprovar.
 
-## 🏁 BASTÃO (atualizado em 26/08 manhã, Itajaí)
-· **Onde paramos:** Retrato Gemini APROVADO por ele e publicado (foto de perfil
-  trocada + feed post 25/08, id 17966006436156379). **Eloen agendada pra HOJE
-  26/08 14:00Z** — ele transferiu a decisão de datas pro Claude ("não deixa
-  vídeo parado"). Reel "cara de reunião" recusado ("sem graça"). Estudado o
-  viral @rafabri7o que ele mandou (baixado de verdade via yt-dlp + Whisper):
-  virou a cena "teste das duas canecas", roteiro já no WhatsApp da **Ana
-  (esposa, é ela quem vai filmar agora)** — mandei na conversa arquivada dela,
-  me identificando como assistente. Vigia de Erros da nuvem PROVOU que
-  funciona: pegou e consertou sozinho um bug às 1h35 da madrugada (commit
-  de00cdf); agora roda a cada 4h. Criada também a rotina "Análise Diária de
-  Crescimento" (nuvem, 10h Itajaí): lê o placar, decide 1-3 ações, escreve
-  diário em estrategia/. Gemini do IA-Hub destravou (hub trocou pro flash
-  grátis).
-· **Esperando ele:**
-  1. **Escanear o QR do WhatsApp Web** (aba deixada aberta no Chrome pessoal —
-     deslogou sozinho). Sem isso não mando a instrução nova pra Ana (mandar
-     arquivos COMO DOCUMENTO pra manter qualidade) nem baixo o que ela enviar.
-  2. **Google Drive dele está CHEIO (100/100 GB)** — matou a rota de link de
-     upload. Comprar espaço = decisão de dinheiro dele. A pasta criada no
-     Drive ("Fotos e vídeos da Hana — envie aqui") ficou inútil por ora.
-  3. Se quiser a rotina do VP de volta: reconectar o Remote Control.
-  4. Futuro do diretor-atualidades (3 entregas fracas) — decisão pendente.
-· **Próximo passo:** quando a Ana mandar material (WhatsApp), baixar como
-  documento e montar o "teste das duas canecas" no mesmo dia (roteiro em
-  estrategia/referencia-rafabri7o-2026-08-26.md). Conferir amanhã o 1º diário
-  automático de crescimento (estrategia/diario-crescimento-*.md).
+## 🏁 BASTÃO (atualizado em 30/08 10:00, PC de casa)
+
+· **Onde paramos:** o Reel **"a comida tá servida"** está pronto, auditado e
+  **SEM OBJEÇÃO**, mas **NÃO foi ao ar** — ficou `pending` porque não teve o
+  aprovar/recusar dele, e o slot de 28/08 14:00Z passou em branco. A peça está
+  em `content/queue/2026-08-28_comida-servida/` (vídeo `comida-servida-v3.mp4`,
+  7,5s, 6 cortes, custo R$ 0). O campo `auditoria.veredito` **já está escrito** —
+  falta só `status: approved`. Se ele aprovar, reagendar para o próximo slot
+  (seg/qua/sex, 14:00Z) em vez de publicar fora de hora.
+
+· **Esperando ele (3 coisas, em ordem de importância):**
+  1. **Aprovar ou recusar o Reel** acima — mandado na conversa em 28/08.
+  2. **Escanear o QR do WhatsApp Web.** Sem isso não sai a instrução para a
+     **Ana** (mandar arquivos COMO DOCUMENTO) nem entra material novo. O
+     roteiro do "teste das duas canecas" já foi mandado a ela em 26/08, antes
+     do logout. **Causa do logout descoberta em 27/08: eu abria um Chrome NOVO
+     a cada uso e ele só permite 4 sessões.** Conserto combinado: manter UMA
+     aba fixa, nunca fechada — exceção consciente à regra 7 do projeto.
+  3. Google Drive dele está cheio (100/100 GB) — decisão de dinheiro dele.
+
+· **Próximo passo:** **a fila está vazia e é esse o problema real** — os 7 posts
+  antigos estão todos `rejected` e vencidos, e nada entrou em
+  `01 - brutas` desde 09/08. Ainda há garimpo inédito aproveitável em
+  `Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30` (os clipes 08, 20
+  e 26 nunca foram olhados). Montar a próxima peça de lá **sem esperar a Ana**,
+  e avisá-lo quando o garimpo acabar — a regra 3l manda pedir cena nova ANTES
+  de a prateleira esvaziar, não depois.
+
+· **Cuidado que custou caro nesta rodada:** clipe `05_A5077980` do garimpo tem
+  um cão marrom/fawn dormindo que **NÃO parece a Hana** — não usar sem certeza.
+  E o clipe `02_B9E89AD8` (quintal, pijama rosa) tem dúvida de identidade não
+  resolvida: olho lê âmbar contra o cinza-azulado dos clipes de dentro de casa.
+  **Os dois estão fora até alguém confirmar com ele.**
+
 
 ## 🎬 14/08/2026 — TESTE REAL DO HIGGSFIELD: motor bom, catálogo de efeitos reprovado
 

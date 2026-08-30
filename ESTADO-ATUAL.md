@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 30/08/2026 12:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 30/08/2026 11:00. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,19 +26,28 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-(não consegui consultar — checar 'gh auth status')
+2026-08-30T13:06:08Z push success
+2026-08-30T08:46:17Z schedule success
+2026-08-30T02:47:27Z schedule failure
 ```
-- Vigia local (Agendador do Windows): próxima execução não encontrada
-- Token renovável automático: FALTA criar studio/.token
+- Vigia local (Agendador do Windows): próxima execução domingo, 30 de agosto de 2026 18:10:00
+- Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
-Nada esperando aprovação (pasta vazia ou inexistente).
+Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
+
+- 2026-08-22_cenoura-variante-v1.mp4
+- 2026-08-22_cenoura-variante-v2.mp4
+- 2026-08-22_cenoura-variante-v3.mp4
+
+Ele responde pelos números. Enquanto não responder, **não commitar**
+mudança de status nem publicar.
 
 ## Acervo de fotos
-- Brutas a processar: 0 arquivos
-- Editadas prontas: 0
-- Artes recebidas do outro projeto: 0
-- Fotos do iPhone sincronizadas (iCloud): 0
+- Brutas a processar: 39 arquivos
+- Editadas prontas: 4
+- Artes recebidas do outro projeto: 1
+- Fotos do iPhone sincronizadas (iCloud): 34599
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -94,14 +103,19 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+a9bccde diario: 30/08 - coleta de hoje ainda nao rodou, sem numero novo pra comparar
+2d5031a chore: atualiza estado [skip ci]
 232ecd9 chore: atualiza estado [skip ci]
 1775949 chore: atualiza estado [skip ci]
 2f11aae chore: atualiza estado [skip ci]
 1ab930b chore: checagem de rotina 30/08 (vigia da nuvem) - sem bug novo, alarme de fila vazia era o dedupe funcionando
 7b9feb2 chore: atualiza estado da fila [skip ci]
 b11e9b3 chore: atualiza estado [skip ci]
-f94bf3c chore: atualiza manutenção [skip ci]
-e3a344e chore: atualiza estado da fila [skip ci]
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M SAUDE-DO-PROJETO.md
 ```
 
 ## Decisões e contexto
@@ -671,33 +685,40 @@ processo no meio:**
 combina com a família, não é calendário de conteúdo) e sem decidir se estica
 a duração (6s vs 9-12s, sugestão do auditor). Esperando ele ver e aprovar.
 
-## 🏁 BASTÃO (atualizado em 26/08 manhã, Itajaí)
-· **Onde paramos:** Retrato Gemini APROVADO por ele e publicado (foto de perfil
-  trocada + feed post 25/08, id 17966006436156379). **Eloen agendada pra HOJE
-  26/08 14:00Z** — ele transferiu a decisão de datas pro Claude ("não deixa
-  vídeo parado"). Reel "cara de reunião" recusado ("sem graça"). Estudado o
-  viral @rafabri7o que ele mandou (baixado de verdade via yt-dlp + Whisper):
-  virou a cena "teste das duas canecas", roteiro já no WhatsApp da **Ana
-  (esposa, é ela quem vai filmar agora)** — mandei na conversa arquivada dela,
-  me identificando como assistente. Vigia de Erros da nuvem PROVOU que
-  funciona: pegou e consertou sozinho um bug às 1h35 da madrugada (commit
-  de00cdf); agora roda a cada 4h. Criada também a rotina "Análise Diária de
-  Crescimento" (nuvem, 10h Itajaí): lê o placar, decide 1-3 ações, escreve
-  diário em estrategia/. Gemini do IA-Hub destravou (hub trocou pro flash
-  grátis).
-· **Esperando ele:**
-  1. **Escanear o QR do WhatsApp Web** (aba deixada aberta no Chrome pessoal —
-     deslogou sozinho). Sem isso não mando a instrução nova pra Ana (mandar
-     arquivos COMO DOCUMENTO pra manter qualidade) nem baixo o que ela enviar.
-  2. **Google Drive dele está CHEIO (100/100 GB)** — matou a rota de link de
-     upload. Comprar espaço = decisão de dinheiro dele. A pasta criada no
-     Drive ("Fotos e vídeos da Hana — envie aqui") ficou inútil por ora.
-  3. Se quiser a rotina do VP de volta: reconectar o Remote Control.
-  4. Futuro do diretor-atualidades (3 entregas fracas) — decisão pendente.
-· **Próximo passo:** quando a Ana mandar material (WhatsApp), baixar como
-  documento e montar o "teste das duas canecas" no mesmo dia (roteiro em
-  estrategia/referencia-rafabri7o-2026-08-26.md). Conferir amanhã o 1º diário
-  automático de crescimento (estrategia/diario-crescimento-*.md).
+## 🏁 BASTÃO (atualizado em 30/08 10:00, PC de casa)
+
+· **Onde paramos:** o Reel **"a comida tá servida"** está pronto, auditado e
+  **SEM OBJEÇÃO**, mas **NÃO foi ao ar** — ficou `pending` porque não teve o
+  aprovar/recusar dele, e o slot de 28/08 14:00Z passou em branco. A peça está
+  em `content/queue/2026-08-28_comida-servida/` (vídeo `comida-servida-v3.mp4`,
+  7,5s, 6 cortes, custo R$ 0). O campo `auditoria.veredito` **já está escrito** —
+  falta só `status: approved`. Se ele aprovar, reagendar para o próximo slot
+  (seg/qua/sex, 14:00Z) em vez de publicar fora de hora.
+
+· **Esperando ele (3 coisas, em ordem de importância):**
+  1. **Aprovar ou recusar o Reel** acima — mandado na conversa em 28/08.
+  2. **Escanear o QR do WhatsApp Web.** Sem isso não sai a instrução para a
+     **Ana** (mandar arquivos COMO DOCUMENTO) nem entra material novo. O
+     roteiro do "teste das duas canecas" já foi mandado a ela em 26/08, antes
+     do logout. **Causa do logout descoberta em 27/08: eu abria um Chrome NOVO
+     a cada uso e ele só permite 4 sessões.** Conserto combinado: manter UMA
+     aba fixa, nunca fechada — exceção consciente à regra 7 do projeto.
+  3. Google Drive dele está cheio (100/100 GB) — decisão de dinheiro dele.
+
+· **Próximo passo:** **a fila está vazia e é esse o problema real** — os 7 posts
+  antigos estão todos `rejected` e vencidos, e nada entrou em
+  `01 - brutas` desde 09/08. Ainda há garimpo inédito aproveitável em
+  `Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30` (os clipes 08, 20
+  e 26 nunca foram olhados). Montar a próxima peça de lá **sem esperar a Ana**,
+  e avisá-lo quando o garimpo acabar — a regra 3l manda pedir cena nova ANTES
+  de a prateleira esvaziar, não depois.
+
+· **Cuidado que custou caro nesta rodada:** clipe `05_A5077980` do garimpo tem
+  um cão marrom/fawn dormindo que **NÃO parece a Hana** — não usar sem certeza.
+  E o clipe `02_B9E89AD8` (quintal, pijama rosa) tem dúvida de identidade não
+  resolvida: olho lê âmbar contra o cinza-azulado dos clipes de dentro de casa.
+  **Os dois estão fora até alguém confirmar com ele.**
+
 
 ## 🎬 14/08/2026 — TESTE REAL DO HIGGSFIELD: motor bom, catálogo de efeitos reprovado
 
