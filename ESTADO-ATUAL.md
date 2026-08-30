@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 30/08/2026 11:00. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 30/08/2026 16:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,28 +26,19 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-08-30T13:06:08Z push success
-2026-08-30T08:46:17Z schedule success
-2026-08-30T02:47:27Z schedule failure
+(não consegui consultar — checar 'gh auth status')
 ```
-- Vigia local (Agendador do Windows): próxima execução domingo, 30 de agosto de 2026 18:10:00
-- Token renovável automático: CONFIGURADO
+- Vigia local (Agendador do Windows): próxima execução não encontrada
+- Token renovável automático: FALTA criar studio/.token
 
 ## Esperando o OK do Ramón
-Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
-
-- 2026-08-22_cenoura-variante-v1.mp4
-- 2026-08-22_cenoura-variante-v2.mp4
-- 2026-08-22_cenoura-variante-v3.mp4
-
-Ele responde pelos números. Enquanto não responder, **não commitar**
-mudança de status nem publicar.
+Nada esperando aprovação (pasta vazia ou inexistente).
 
 ## Acervo de fotos
-- Brutas a processar: 39 arquivos
-- Editadas prontas: 4
-- Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34599
+- Brutas a processar: 0 arquivos
+- Editadas prontas: 0
+- Artes recebidas do outro projeto: 0
+- Fotos do iPhone sincronizadas (iCloud): 0
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -103,6 +94,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+e8731c2 checkpoint 30/08: bastao atualizado (Reel pronto e auditado, parado esperando o OK dele)
 a9bccde diario: 30/08 - coleta de hoje ainda nao rodou, sem numero novo pra comparar
 2d5031a chore: atualiza estado [skip ci]
 232ecd9 chore: atualiza estado [skip ci]
@@ -110,12 +102,10 @@ a9bccde diario: 30/08 - coleta de hoje ainda nao rodou, sem numero novo pra comp
 2f11aae chore: atualiza estado [skip ci]
 1ab930b chore: checagem de rotina 30/08 (vigia da nuvem) - sem bug novo, alarme de fila vazia era o dedupe funcionando
 7b9feb2 chore: atualiza estado da fila [skip ci]
-b11e9b3 chore: atualiza estado [skip ci]
 ```
 Alterações não commitadas:
 ```
-M DECISOES.md
- M SAUDE-DO-PROJETO.md
+M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
