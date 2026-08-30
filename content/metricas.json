@@ -4428,6 +4428,223 @@
           "follows": "The Media Insights API does not support the follows metric for this media product type."
         }
       }
+    },
+    {
+      "data": "2026-08-30",
+      "hora_utc": "16:42",
+      "seguidores": 332,
+      "midias_no_perfil": 49,
+      "posts": {
+        "2026-07-22_bar-hana": {
+          "instagram_id": "18118796690302997",
+          "tipo": "IMAGE",
+          "publicado_em": "2026-07-22T21:00:00Z",
+          "pilar": null,
+          "metricas": {
+            "reach": 54,
+            "likes": 11,
+            "comments": 0,
+            "saved": 0,
+            "shares": 0,
+            "profile_visits": 2,
+            "follows": 0
+          }
+        },
+        "2026-07-23_olhar-no-tapete": {
+          "instagram_id": "18140672137562244",
+          "tipo": "IMAGE",
+          "publicado_em": "2026-07-23T18:00:00Z",
+          "pilar": null,
+          "metricas": {
+            "reach": 60,
+            "likes": 15,
+            "comments": 7,
+            "saved": 0,
+            "shares": 0,
+            "profile_visits": 4,
+            "follows": 0
+          }
+        },
+        "2026-07-27_pijama-oncinha": {
+          "instagram_id": "18073337600408952",
+          "tipo": "IMAGE",
+          "publicado_em": "2026-07-27T17:40:10Z",
+          "pilar": null,
+          "metricas": {
+            "reach": 52,
+            "likes": 10,
+            "comments": 2,
+            "saved": 0,
+            "shares": 0,
+            "profile_visits": 3,
+            "follows": 0
+          }
+        },
+        "2026-07-29_lilac-ao-sol": {
+          "instagram_id": "18112183567998703",
+          "tipo": "IMAGE",
+          "publicado_em": "2026-07-29T21:00:00Z",
+          "pilar": null,
+          "metricas": {
+            "reach": 52,
+            "likes": 13,
+            "comments": 1,
+            "saved": 0,
+            "shares": 0,
+            "profile_visits": 1,
+            "follows": 0
+          }
+        },
+        "2026-07-31_roda-gigante": {
+          "instagram_id": "17893985169571565",
+          "tipo": "IMAGE",
+          "publicado_em": "2026-07-31T21:00:00Z",
+          "pilar": null,
+          "metricas": {
+            "reach": 60,
+            "likes": 12,
+            "comments": 0,
+            "saved": 0,
+            "shares": 0,
+            "profile_visits": 3,
+            "follows": 0
+          }
+        },
+        "2026-08-03_dia-de-praia": {
+          "instagram_id": "17963565245962414",
+          "tipo": "IMAGE",
+          "publicado_em": "2026-08-03T21:00:00Z",
+          "pilar": null,
+          "metricas": {
+            "reach": 47,
+            "likes": 11,
+            "comments": 0,
+            "saved": 0,
+            "shares": 0,
+            "profile_visits": 1,
+            "follows": 0
+          }
+        },
+        "2026-08-05_navio-importacao": {
+          "instagram_id": "17869247748585560",
+          "tipo": "IMAGE",
+          "publicado_em": "2026-08-05T11:00:00Z",
+          "pilar": null,
+          "metricas": {
+            "reach": 50,
+            "likes": 10,
+            "comments": 1,
+            "saved": 0,
+            "shares": 0,
+            "profile_visits": 2,
+            "follows": 0
+          }
+        },
+        "2026-08-07_banho-de-sol": {
+          "instagram_id": "17871079455631167",
+          "tipo": "IMAGE",
+          "publicado_em": "2026-08-07T11:00:00Z",
+          "pilar": null,
+          "metricas": {
+            "reach": 49,
+            "likes": 13,
+            "comments": 1,
+            "saved": 0,
+            "shares": 0,
+            "profile_visits": 3,
+            "follows": 0
+          }
+        },
+        "2026-08-10_escolheu-o-canal": {
+          "instagram_id": "17932612077361476",
+          "tipo": "REELS",
+          "publicado_em": "2026-08-10T11:00:00Z",
+          "pilar": null,
+          "metricas": {
+            "reach": 185,
+            "likes": 11,
+            "comments": 0,
+            "saved": 0,
+            "shares": 0,
+            "views": 274
+          }
+        },
+        "2026-08-12_cenoura-filhote": {
+          "instagram_id": "18193474768385556",
+          "tipo": "REELS",
+          "publicado_em": "2026-08-22T14:00:00Z",
+          "pilar": "A PATROA MANDA",
+          "metricas": {
+            "reach": 196,
+            "likes": 14,
+            "comments": 3,
+            "saved": 0,
+            "shares": 1,
+            "views": 258
+          }
+        },
+        "2026-08-14_regras-da-casa": {
+          "instagram_id": "18371032486238388",
+          "tipo": "REELS",
+          "publicado_em": "2026-08-24T14:00:00Z",
+          "pilar": "A PATROA MANDA",
+          "metricas": {
+            "reach": 181,
+            "likes": 17,
+            "comments": 1,
+            "saved": 0,
+            "shares": 0,
+            "views": 261
+          }
+        },
+        "2026-08-26_retrato-oficial": {
+          "instagram_id": "17966006436156379",
+          "tipo": "IMAGE",
+          "publicado_em": "2026-08-26T00:29:00Z",
+          "pilar": "A PATROA MANDA",
+          "metricas": {
+            "reach": 44,
+            "likes": 13,
+            "comments": 1,
+            "saved": 0,
+            "shares": 0,
+            "profile_visits": 2,
+            "follows": 0
+          }
+        },
+        "2026-08-K_chegada-eloen": {
+          "instagram_id": "17988875475044476",
+          "tipo": "REELS",
+          "publicado_em": "2026-08-26T14:00:00Z",
+          "pilar": "ANUNCIO ESPECIAL (fora do calendario normal)",
+          "metricas": {
+            "reach": 1000,
+            "likes": 33,
+            "comments": 3,
+            "saved": 0,
+            "shares": 0,
+            "views": 1335
+          }
+        }
+      },
+      "faltando": {
+        "2026-08-10_escolheu-o-canal": {
+          "profile_visits": "The Media Insights API does not support the profile_visits metric for this media product type.",
+          "follows": "The Media Insights API does not support the follows metric for this media product type."
+        },
+        "2026-08-12_cenoura-filhote": {
+          "profile_visits": "The Media Insights API does not support the profile_visits metric for this media product type.",
+          "follows": "The Media Insights API does not support the follows metric for this media product type."
+        },
+        "2026-08-14_regras-da-casa": {
+          "profile_visits": "The Media Insights API does not support the profile_visits metric for this media product type.",
+          "follows": "The Media Insights API does not support the follows metric for this media product type."
+        },
+        "2026-08-K_chegada-eloen": {
+          "profile_visits": "The Media Insights API does not support the profile_visits metric for this media product type.",
+          "follows": "The Media Insights API does not support the follows metric for this media product type."
+        }
+      }
     }
   ]
 }
