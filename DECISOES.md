@@ -3,6 +3,18 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 31/08/2026 (4ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
+nesta nuvem; conferi via `mcp__github__actions_list`. `publish.yml`: run 601
+(mais recente) verde, 600 e 599 também verdes — nenhuma sequência de falha.
+`maintenance.yml` (run 9) e `health.yml` (run 35): últimos runs verdes. Post
+`2026-08-28_comida-servida` segue `pending` (auditoria já `SEM OBJECAO`,
+v3) — só falta o Ramón aprovar ou recusar, já avisado em sessões anteriores,
+não repito. Fila vazia por falta de filmagem também já avisada
+(`.falhas_avisadas.json` com dedupe até 31/08). Nenhum erro de código novo
+para consertar. Nada a avisar — resolvido em silêncio conforme a regra.
+
 ## 🔍 31/08/2026 (3ª checagem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
