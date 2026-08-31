@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 31/08/2026 16:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 31/08/2026 20:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+88b2cd9 chore: atualiza manutenção [skip ci]
+ed0f68d chore: atualiza estado [skip ci]
+0ac2950 chore: checagem de rotina 31/08 (3a, vigia da nuvem) - sem bug novo
 891a331 diario de crescimento 31/08: sem coleta nova ainda, +2 seguidores (30/08) e sem conversao
 3a5b084 chore: atualiza estado [skip ci]
 dcff35c chore: checagem de rotina 31/08 (2a, vigia da nuvem) - sem bug novo
 2e9d810 chore: atualiza estado da fila [skip ci]
 0312c9e chore: checagem de rotina 31/08 (vigia da nuvem) - sem bug novo
-40f3a20 chore: atualiza estado [skip ci]
-d4d4d6d chore: atualiza manutenção [skip ci]
-26af21f chore: atualiza estado [skip ci]
 ```
 Alterações não commitadas:
 ```
@@ -113,6 +113,18 @@ M ESTADO-ATUAL.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 31/08/2026 (3ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
+nesta nuvem; conferi via `mcp__github__actions_list`/`get_job_logs` direto.
+`publish.yml`: run 599 (mais recente) verde; o único vermelho (598, 02:40Z)
+é o mesmo alarme por-desenho de fila vazia (log confirma: "fila com so 0
+post(s) futuro(s)"), run seguinte já não repete — dedupe funcionando como
+esperado. `maintenance.yml` e `health.yml`: últimos runs verdes. Post
+`2026-08-28_comida-servida` segue `pending`, já avisado. Fila vazia por falta
+de filmagem também já avisada. Nenhum erro de código novo para consertar.
+Nada a avisar — resolvido em silêncio conforme a regra.
 
 ## 🔍 31/08/2026 (2ª checagem) — confirmação: sem bug novo
 
