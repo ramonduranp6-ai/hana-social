@@ -3,6 +3,19 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 31/08/2026 — checagem de rotina (vigia da nuvem): sem bug novo
+
+Conferi `studio/estado.py --mostrar` (sem ALARME no topo) e os 3 workflows via
+`mcp__github__actions_list` (`gh` continua sem `gh` instalado nesta nuvem, sem
+diferença — a API do MCP cobre o mesmo dado). `publish.yml`: runs 592-597 todos
+verdes; o único vermelho recente (591, 30/08 02:47Z) já estava documentado como
+o alarme de fila vazia funcionando certo (dedupe). `maintenance.yml` e
+`health.yml`: últimos runs também verdes, sem padrão de falha. Post
+`2026-08-28_comida-servida` segue `pending` (auditoria já `SEM OBJECAO`) — só
+falta o Ramón decidir, já avisado em sessões anteriores, não repito. Fila vazia
+por falta de filmagem também já avisada. Nenhum erro de código novo para
+consertar. Nada a avisar — resolvido em silêncio conforme a regra.
+
 ## 🔍 30/08/2026 — checagem de rotina (vigia da nuvem): sem bug novo
 
 Conferi `studio/estado.py --mostrar` (sem ALARME) e `publish.yml` via
