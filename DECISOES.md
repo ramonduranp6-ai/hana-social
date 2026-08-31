@@ -3,6 +3,18 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 31/08/2026 (3ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
+nesta nuvem; conferi via `mcp__github__actions_list`/`get_job_logs` direto.
+`publish.yml`: run 599 (mais recente) verde; o único vermelho (598, 02:40Z)
+é o mesmo alarme por-desenho de fila vazia (log confirma: "fila com so 0
+post(s) futuro(s)"), run seguinte já não repete — dedupe funcionando como
+esperado. `maintenance.yml` e `health.yml`: últimos runs verdes. Post
+`2026-08-28_comida-servida` segue `pending`, já avisado. Fila vazia por falta
+de filmagem também já avisada. Nenhum erro de código novo para consertar.
+Nada a avisar — resolvido em silêncio conforme a regra.
+
 ## 🔍 31/08/2026 (2ª checagem) — confirmação: sem bug novo
 
 Sessão anterior de hoje (mesmo dia) já tinha checado e concluído "sem bug
