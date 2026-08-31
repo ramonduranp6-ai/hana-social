@@ -3,6 +3,20 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 31/08/2026 (2ª checagem) — confirmação: sem bug novo
+
+Sessão anterior de hoje (mesmo dia) já tinha checado e concluído "sem bug
+novo" (commit `0312c9e`). Reconferi do zero: clone local estava 7 commits
+atrás do `origin/main` (sincronizado com `git pull`), `publish.yml` run 598
+(a checagem anterior) mostrou vermelho — investiguei o log e é o alarme
+por-desenho de fila vazia (0 posts futuros, `content/.falhas_avisadas.json`
+já tem a chave `fila_vazia_2026-08-31` gravada, dedupe funcionando).
+`maintenance.yml` e `health.yml`: últimos runs verdes. Post
+`2026-08-28_comida-servida` segue `pending` esperando o Ramón aprovar/recusar
+— já avisado em sessões anteriores, não repito. Fila vazia por falta de
+filmagem também já avisada. Nenhum código para consertar. Nada a avisar —
+resolvido em silêncio conforme a regra.
+
 ## 🔍 31/08/2026 — checagem de rotina (vigia da nuvem): sem bug novo
 
 Conferi `studio/estado.py --mostrar` (sem ALARME no topo) e os 3 workflows via
