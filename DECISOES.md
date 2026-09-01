@@ -3,6 +3,17 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 01/09/2026 (3ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `publish.yml`: run 604 (mais
+recente) verde — sentinel confirma dedupe funcionando ("fila ainda com so 0
+post(s) futuro(s) — ja avisado hoje, nao repete o alarme"); run 603 (anterior)
+vermelho é o mesmo alarme por-desenho, já coberto pela dedupe no job seguinte.
+`maintenance.yml` e `health.yml` seguem verdes nos últimos runs. Post
+`2026-08-28_comida-servida` segue `pending`, já avisado. Fila vazia por falta
+de filmagem também já avisada. Nada novo, nada a consertar — silêncio
+conforme a regra.
+
 ## 🔍 01/09/2026 (2ª checagem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
