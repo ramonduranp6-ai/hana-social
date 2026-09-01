@@ -3,6 +3,16 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 01/09/2026 (5ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Sem acesso a `gh` nesta nuvem
+(comando não encontrado); estado conferido pelos arquivos do próprio repo.
+Post `2026-08-28_comida-servida` segue `pending` com auditoria já
+`SEM OBJECAO` — só falta o Ramón aprovar ou recusar pelo Telegram, já avisado
+em sessões anteriores, não repito. Fila vazia depois desse post é falta de
+filmagem nova (nada em `01 - brutas` desde 09/08), também já avisada. Nada
+novo para consertar nem para avisar — silêncio.
+
 ## 🔍 01/09/2026 (4ª checagem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `publish.yml`: run 606 (mais

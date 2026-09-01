@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 01/09/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 01/09/2026 20:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,19 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
-1e3aade chore: checagem de rotina 01/09 (vigia da nuvem) - sem bug novo
+812b9c5 chore: atualiza manutenção [skip ci]
+bb5766a chore: checagem de rotina 01/09 (4a, vigia da nuvem) - sem bug novo
+a86b5a9 diario: crescimento 01/09 - seguidores parados em 332, coleta ainda nao chegou hoje
+f243f2c chore: checagem de rotina 01/09 (3a, vigia da nuvem) - sem bug novo
+57fd413 chore: checagem de rotina 01/09 (2a, vigia da nuvem) - sem bug novo
+8f7cdd8 chore: atualiza estado da fila [skip ci]
+2b84480 chore: checagem de rotina 01/09 (vigia da nuvem) - sem bug novo
 20ac16d chore: atualiza estado [skip ci]
-cf52dc2 chore: checagem de rotina 31/08 (4a, vigia da nuvem) - sem bug novo
-88b2cd9 chore: atualiza manutenção [skip ci]
-ed0f68d chore: atualiza estado [skip ci]
-0ac2950 chore: checagem de rotina 31/08 (3a, vigia da nuvem) - sem bug novo
-891a331 diario de crescimento 31/08: sem coleta nova ainda, +2 seguidores (30/08) e sem conversao
-3a5b084 chore: atualiza estado [skip ci]
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -109,6 +114,56 @@ ed0f68d chore: atualiza estado [skip ci]
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 01/09/2026 (5ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Sem acesso a `gh` nesta nuvem
+(comando não encontrado); estado conferido pelos arquivos do próprio repo.
+Post `2026-08-28_comida-servida` segue `pending` com auditoria já
+`SEM OBJECAO` — só falta o Ramón aprovar ou recusar pelo Telegram, já avisado
+em sessões anteriores, não repito. Fila vazia depois desse post é falta de
+filmagem nova (nada em `01 - brutas` desde 09/08), também já avisada. Nada
+novo para consertar nem para avisar — silêncio.
+
+## 🔍 01/09/2026 (4ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `publish.yml`: run 606 (mais
+recente) verde; run 603 (00:59Z) vermelho é o mesmo alarme por-desenho de
+fila vazia, já coberto pelo dedupe (`content/.falhas_avisadas.json` já tem
+`fila_vazia_2026-09-01`). `maintenance.yml` (run 9) e `health.yml` (run 39):
+últimos runs verdes. Post `2026-08-28_comida-servida` segue `pending`
+(auditoria já `SEM OBJECAO`) — só falta o Ramón aprovar ou recusar, já
+avisado em sessões anteriores, não repito. Fila vazia por falta de filmagem
+também já avisada. Repositório local estava em HEAD destacado e 1 commit
+atrás do `origin/main`; sincronizado (`git checkout main && git pull`).
+Nenhum erro de código novo para consertar. Nada a avisar — resolvido em
+silêncio conforme a regra.
+
+## 🔍 01/09/2026 (3ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `publish.yml`: run 604 (mais
+recente) verde — sentinel confirma dedupe funcionando ("fila ainda com so 0
+post(s) futuro(s) — ja avisado hoje, nao repete o alarme"); run 603 (anterior)
+vermelho é o mesmo alarme por-desenho, já coberto pela dedupe no job seguinte.
+`maintenance.yml` e `health.yml` seguem verdes nos últimos runs. Post
+`2026-08-28_comida-servida` segue `pending`, já avisado. Fila vazia por falta
+de filmagem também já avisada. Nada novo, nada a consertar — silêncio
+conforme a regra.
+
+## 🔍 01/09/2026 (2ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
+nesta nuvem; conferi via `mcp__github__actions_list`. `publish.yml`: run 603
+(mais recente) veio vermelho, mas é o alarme por-desenho de fila vazia (log
+do sentinel: "fila com so 0 post(s) futuro(s), minimo saudavel: 2") — sem
+traceback, estado salvo normalmente no mesmo job; `content/.falhas_avisadas.json`
+já tem a chave `fila_vazia_2026-09-01`, dedupe funcionando. Runs 599-602
+(anteriores) todos verdes. `maintenance.yml` (run 9) e `health.yml` (run 36):
+últimos runs verdes. Post `2026-08-28_comida-servida` segue `pending`
+(auditoria já `SEM OBJECAO`) — só falta o Ramón aprovar ou recusar, já
+avisado em sessões anteriores, não repito. Fila vazia por falta de filmagem
+também já avisada. Nenhum erro de código novo para consertar. Nada a avisar
+— resolvido em silêncio conforme a regra.
 
 ## 🔍 01/09/2026 — checagem de rotina (vigia da nuvem): sem bug novo
 
