@@ -3,6 +3,21 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 01/09/2026 (2ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
+nesta nuvem; conferi via `mcp__github__actions_list`. `publish.yml`: run 603
+(mais recente) veio vermelho, mas é o alarme por-desenho de fila vazia (log
+do sentinel: "fila com so 0 post(s) futuro(s), minimo saudavel: 2") — sem
+traceback, estado salvo normalmente no mesmo job; `content/.falhas_avisadas.json`
+já tem a chave `fila_vazia_2026-09-01`, dedupe funcionando. Runs 599-602
+(anteriores) todos verdes. `maintenance.yml` (run 9) e `health.yml` (run 36):
+últimos runs verdes. Post `2026-08-28_comida-servida` segue `pending`
+(auditoria já `SEM OBJECAO`) — só falta o Ramón aprovar ou recusar, já
+avisado em sessões anteriores, não repito. Fila vazia por falta de filmagem
+também já avisada. Nenhum erro de código novo para consertar. Nada a avisar
+— resolvido em silêncio conforme a regra.
+
 ## 🔍 01/09/2026 — checagem de rotina (vigia da nuvem): sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
