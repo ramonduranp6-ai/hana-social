@@ -3,6 +3,20 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 01/09/2026 (4ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `publish.yml`: run 606 (mais
+recente) verde; run 603 (00:59Z) vermelho é o mesmo alarme por-desenho de
+fila vazia, já coberto pelo dedupe (`content/.falhas_avisadas.json` já tem
+`fila_vazia_2026-09-01`). `maintenance.yml` (run 9) e `health.yml` (run 39):
+últimos runs verdes. Post `2026-08-28_comida-servida` segue `pending`
+(auditoria já `SEM OBJECAO`) — só falta o Ramón aprovar ou recusar, já
+avisado em sessões anteriores, não repito. Fila vazia por falta de filmagem
+também já avisada. Repositório local estava em HEAD destacado e 1 commit
+atrás do `origin/main`; sincronizado (`git checkout main && git pull`).
+Nenhum erro de código novo para consertar. Nada a avisar — resolvido em
+silêncio conforme a regra.
+
 ## 🔍 01/09/2026 (3ª checagem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `publish.yml`: run 604 (mais
