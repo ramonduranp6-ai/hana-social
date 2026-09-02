@@ -3,6 +3,18 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 02/09/2026 (4ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
+nesta nuvem; conferi via `mcp__github__actions_list`: `publish.yml` run 616
+(mais recente) veio verde, mesmo estado das checagens anteriores hoje.
+`content/.falhas_avisadas.json` sem entrada nova (`fila_vazia_2026-09-02`
+já estava lá). Post `2026-08-28_comida-servida` segue `pending` com
+auditoria `SEM OBJECAO` — só falta o Ramón aprovar ou recusar pelo
+Telegram, já avisado em sessões anteriores, não repito. Repositório local
+estava em HEAD destacado de novo; sincronizado (`git checkout main && git
+pull`). Nada novo desde a 3ª checagem — silêncio conforme a regra.
+
 ## 🔍 02/09/2026 (3ª checagem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
