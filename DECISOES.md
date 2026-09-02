@@ -3,6 +3,23 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 02/09/2026 (1ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Sem acesso a `gh` nesta nuvem
+(comando não encontrado, mesma limitação já registrada); estado conferido
+pelos arquivos do próprio repo — `git log`, `content/.falhas_avisadas.json`
+(dedupe de fila vazia seguindo até `fila_vazia_2026-09-01`, sem novo alarme
+hoje) e `SAUDE-DO-PROJETO.md` ("Nenhum erro aberto", varredura local de
+30/08 — arquivo é escrito pelo agendador do Windows, fora do alcance desta
+sessão na nuvem). Post `2026-08-28_comida-servida` segue `pending` com
+auditoria `SEM OBJECAO` — só falta o Ramón aprovar ou recusar pelo Telegram,
+já avisado em sessões anteriores, não repito. Fila vazia depois desse post
+continua por falta de filmagem nova (nada em `01 - brutas` desde 09/08),
+também já avisada. Repositório local estava em HEAD destacado de novo (efeito
+colateral de rodar `estado.py --mostrar` antes do checkout); sincronizado
+(`git checkout main && git pull`). Nenhum erro de código novo para
+consertar. Nada a avisar — silêncio conforme a regra.
+
 ## 🔍 01/09/2026 (5ª checagem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Sem acesso a `gh` nesta nuvem
