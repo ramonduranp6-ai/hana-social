@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 01/09/2026 20:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 02/09/2026 12:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,19 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+0097cae chore: checagem de rotina 02/09 (2a, vigia da nuvem) - sem bug novo
+b17a7f7 chore: atualiza estado da fila [skip ci]
+84a6916 chore: checagem de rotina 02/09 (1a, vigia da nuvem) - sem bug novo
+90d64de chore: checagem de rotina 01/09 (5a, vigia da nuvem) - sem bug novo
 812b9c5 chore: atualiza manutenção [skip ci]
 bb5766a chore: checagem de rotina 01/09 (4a, vigia da nuvem) - sem bug novo
 a86b5a9 diario: crescimento 01/09 - seguidores parados em 332, coleta ainda nao chegou hoje
 f243f2c chore: checagem de rotina 01/09 (3a, vigia da nuvem) - sem bug novo
-57fd413 chore: checagem de rotina 01/09 (2a, vigia da nuvem) - sem bug novo
-8f7cdd8 chore: atualiza estado da fila [skip ci]
-2b84480 chore: checagem de rotina 01/09 (vigia da nuvem) - sem bug novo
-20ac16d chore: atualiza estado [skip ci]
-```
-Alterações não commitadas:
-```
-M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -114,6 +109,41 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 02/09/2026 (2ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
+nesta nuvem; conferi via `mcp__github__actions_list`/`get_job_logs`.
+`publish.yml` run 611 (mais recente) veio vermelho, mas é o alarme
+por-desenho de fila vazia ("fila com so 0 post(s) futuro(s), minimo
+saudavel: 2"), já coberto pelo dedupe (`content/.falhas_avisadas.json` já
+tem `fila_vazia_2026-09-02`) — o job seguinte ("Salvar estado da fila")
+rodou normal. Runs 604-610 (anteriores) todos verdes. Post
+`2026-08-28_comida-servida` segue `pending` (auditoria já `SEM OBJECAO`) —
+só falta o Ramón aprovar ou recusar pelo Telegram, já avisado em sessões
+anteriores, não repito. Fila vazia depois desse post continua por falta de
+filmagem nova, também já avisada. Repositório local estava em HEAD
+destacado de novo (mesmo efeito colateral de rodar `estado.py --mostrar`
+antes do checkout); sincronizado (`git checkout main && git pull`). Nenhum
+erro de código novo para consertar. Nada a avisar — silêncio conforme a
+regra.
+
+## 🔍 02/09/2026 (1ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Sem acesso a `gh` nesta nuvem
+(comando não encontrado, mesma limitação já registrada); estado conferido
+pelos arquivos do próprio repo — `git log`, `content/.falhas_avisadas.json`
+(dedupe de fila vazia seguindo até `fila_vazia_2026-09-01`, sem novo alarme
+hoje) e `SAUDE-DO-PROJETO.md` ("Nenhum erro aberto", varredura local de
+30/08 — arquivo é escrito pelo agendador do Windows, fora do alcance desta
+sessão na nuvem). Post `2026-08-28_comida-servida` segue `pending` com
+auditoria `SEM OBJECAO` — só falta o Ramón aprovar ou recusar pelo Telegram,
+já avisado em sessões anteriores, não repito. Fila vazia depois desse post
+continua por falta de filmagem nova (nada em `01 - brutas` desde 09/08),
+também já avisada. Repositório local estava em HEAD destacado de novo (efeito
+colateral de rodar `estado.py --mostrar` antes do checkout); sincronizado
+(`git checkout main && git pull`). Nenhum erro de código novo para
+consertar. Nada a avisar — silêncio conforme a regra.
 
 ## 🔍 01/09/2026 (5ª checagem) — confirmação: sem bug novo
 
