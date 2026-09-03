@@ -3,6 +3,20 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 03/09/2026 (vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
+nesta nuvem; conferi via `mcp__github__actions_list`/`get_job_logs`:
+`publish.yml` run 618 (mais recente) veio vermelho, mas é o mesmo alarme
+por-desenho de fila vazia ("fila com so 0 post(s) futuro(s), minimo
+saudavel: 2") — `content/.falhas_avisadas.json` já tem `fila_vazia_2026-09-03`,
+dedupe funcionando; o job seguinte ("Salvar estado da fila") rodou normal
+(estado salvo). Post `2026-08-28_comida-servida` segue `pending` com
+auditoria `SEM OBJECAO` — só falta o Ramón aprovar ou recusar pelo
+Telegram, já avisado em sessões anteriores, não repito. Fila vazia é falta
+de filmagem nova (0 arquivos em brutas/editadas), não bug de código — nada
+a consertar. Silêncio conforme a regra.
+
 ## 🔍 02/09/2026 (4ª checagem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
