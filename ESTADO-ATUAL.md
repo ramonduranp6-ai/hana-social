@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 03/09/2026 12:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 03/09/2026 16:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,18 +94,19 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+b9db820 chore: atualiza manutenção [skip ci]
+097c1ce diario: analise de crescimento 03/09 - fila parada ha 8 dias, seguidor sem tendencia
+ba27b8c chore: checagem de rotina 03/09 (3a, vigia da nuvem) - sem bug novo
 a53b6d2 chore: atualiza estado [skip ci]
 53c7162 chore: checagem de rotina 03/09 (2a, vigia da nuvem) - sem bug novo
 c947e30 chore: checagem de rotina 03/09 (vigia da nuvem) - sem bug novo
 2587f05 chore: atualiza estado da fila [skip ci]
 50c19a1 chore: checagem de rotina 02/09 (4a, vigia da nuvem) - sem bug novo
-388b749 chore: atualiza manutenção [skip ci]
-f2bb2c9 Diário de crescimento 02/09: sem coleta nova, fila parada há 7 dias
-df89960 chore: atualiza estado [skip ci]
 ```
 Alterações não commitadas:
 ```
-M ESTADO-ATUAL.md
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -113,6 +114,30 @@ M ESTADO-ATUAL.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 03/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `publish.yml` run 621 (mais
+recente, após a 3ª checagem de hoje) veio verde — mesmo estado, nada mudou.
+Repositório local estava em HEAD destacado de novo; sincronizado (`git
+checkout -B main origin/main`). Post `2026-08-28_comida-servida` segue
+`pending` com auditoria `SEM OBJECAO` — só falta o Ramón aprovar ou recusar,
+já avisado em sessões anteriores, não repito. Nada novo desde a checagem
+anterior de hoje — silêncio conforme a regra.
+
+## 🔍 03/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `publish.yml` runs 619 e 620
+(as duas mais recentes) verdes; `health.yml` run 48 e `maintenance.yml` run 11
+verdes. Li o log completo do único vermelho recente (run 618) via
+`get_job_logs`: o job só cai no passo `publisher/sentinel.py`, com a mensagem
+"fila com so 0 post(s) futuro(s) (minimo saudavel: 2)" — alarme por desenho de
+fila vazia, não erro de código; o passo seguinte, de salvar o estado, passou
+("estado salvo (tentativa 1)"). `content/.falhas_avisadas.json` já traz
+`fila_vazia_2026-09-03`, então o Ramón já foi avisado hoje e não repito o
+recado. Post `2026-08-28_comida-servida` segue `pending` com
+`auditoria.veredito: "SEM OBJECAO"` já preenchido — falta só o aprovar/recusar
+dele, que não é meu para dar. Nada a consertar.
 
 ## 🔍 03/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
 

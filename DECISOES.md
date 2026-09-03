@@ -3,6 +3,16 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 03/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `publish.yml` run 621 (mais
+recente, após a 3ª checagem de hoje) veio verde — mesmo estado, nada mudou.
+Repositório local estava em HEAD destacado de novo; sincronizado (`git
+checkout -B main origin/main`). Post `2026-08-28_comida-servida` segue
+`pending` com auditoria `SEM OBJECAO` — só falta o Ramón aprovar ou recusar,
+já avisado em sessões anteriores, não repito. Nada novo desde a checagem
+anterior de hoje — silêncio conforme a regra.
+
 ## 🔍 03/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `publish.yml` runs 619 e 620
