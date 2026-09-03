@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 02/09/2026 12:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 03/09/2026 08:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+c947e30 chore: checagem de rotina 03/09 (vigia da nuvem) - sem bug novo
+2587f05 chore: atualiza estado da fila [skip ci]
+50c19a1 chore: checagem de rotina 02/09 (4a, vigia da nuvem) - sem bug novo
+388b749 chore: atualiza manutenção [skip ci]
+f2bb2c9 Diário de crescimento 02/09: sem coleta nova, fila parada há 7 dias
+df89960 chore: atualiza estado [skip ci]
+1c86629 chore: checagem de rotina 02/09 (3a, vigia da nuvem) - sem bug novo
 0097cae chore: checagem de rotina 02/09 (2a, vigia da nuvem) - sem bug novo
-b17a7f7 chore: atualiza estado da fila [skip ci]
-84a6916 chore: checagem de rotina 02/09 (1a, vigia da nuvem) - sem bug novo
-90d64de chore: checagem de rotina 01/09 (5a, vigia da nuvem) - sem bug novo
-812b9c5 chore: atualiza manutenção [skip ci]
-bb5766a chore: checagem de rotina 01/09 (4a, vigia da nuvem) - sem bug novo
-a86b5a9 diario: crescimento 01/09 - seguidores parados em 332, coleta ainda nao chegou hoje
-f243f2c chore: checagem de rotina 01/09 (3a, vigia da nuvem) - sem bug novo
 ```
 
 ## Decisões e contexto
@@ -109,6 +109,43 @@ f243f2c chore: checagem de rotina 01/09 (3a, vigia da nuvem) - sem bug novo
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 03/09/2026 (vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
+nesta nuvem; conferi via `mcp__github__actions_list`/`get_job_logs`:
+`publish.yml` run 618 (mais recente) veio vermelho, mas é o mesmo alarme
+por-desenho de fila vazia ("fila com so 0 post(s) futuro(s), minimo
+saudavel: 2") — `content/.falhas_avisadas.json` já tem `fila_vazia_2026-09-03`,
+dedupe funcionando; o job seguinte ("Salvar estado da fila") rodou normal
+(estado salvo). Post `2026-08-28_comida-servida` segue `pending` com
+auditoria `SEM OBJECAO` — só falta o Ramón aprovar ou recusar pelo
+Telegram, já avisado em sessões anteriores, não repito. Fila vazia é falta
+de filmagem nova (0 arquivos em brutas/editadas), não bug de código — nada
+a consertar. Silêncio conforme a regra.
+
+## 🔍 02/09/2026 (4ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
+nesta nuvem; conferi via `mcp__github__actions_list`: `publish.yml` run 616
+(mais recente) veio verde, mesmo estado das checagens anteriores hoje.
+`content/.falhas_avisadas.json` sem entrada nova (`fila_vazia_2026-09-02`
+já estava lá). Post `2026-08-28_comida-servida` segue `pending` com
+auditoria `SEM OBJECAO` — só falta o Ramón aprovar ou recusar pelo
+Telegram, já avisado em sessões anteriores, não repito. Repositório local
+estava em HEAD destacado de novo; sincronizado (`git checkout main && git
+pull`). Nada novo desde a 3ª checagem — silêncio conforme a regra.
+
+## 🔍 02/09/2026 (3ª checagem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
+nesta nuvem; conferi via `mcp__github__actions_list`: `publish.yml` run 613
+(mais recente) veio verde, mesmo estado já registrado na 2ª checagem de
+hoje. `content/.falhas_avisadas.json` sem entrada nova (`fila_vazia_2026-09-02`
+já estava lá). Post `2026-08-28_comida-servida` segue `pending` com
+auditoria `SEM OBJECAO` — só falta o Ramón aprovar ou recusar pelo
+Telegram, já avisado em sessões anteriores, não repito. Nada novo desde a
+2ª checagem — silêncio conforme a regra.
 
 ## 🔍 02/09/2026 (2ª checagem) — confirmação: sem bug novo
 
