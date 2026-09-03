@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 03/09/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 03/09/2026 20:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,6 +94,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+f6a8a98 chore: checagem de rotina 03/09 (4a, vigia da nuvem) - sem bug novo
 b9db820 chore: atualiza manutenção [skip ci]
 097c1ce diario: analise de crescimento 03/09 - fila parada ha 8 dias, seguidor sem tendencia
 ba27b8c chore: checagem de rotina 03/09 (3a, vigia da nuvem) - sem bug novo
@@ -101,12 +102,10 @@ a53b6d2 chore: atualiza estado [skip ci]
 53c7162 chore: checagem de rotina 03/09 (2a, vigia da nuvem) - sem bug novo
 c947e30 chore: checagem de rotina 03/09 (vigia da nuvem) - sem bug novo
 2587f05 chore: atualiza estado da fila [skip ci]
-50c19a1 chore: checagem de rotina 02/09 (4a, vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
 M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -114,6 +113,17 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 03/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo; `SAUDE-DO-PROJETO.md` segue
+"Nenhum erro aberto". Repositório local estava em HEAD destacado de novo
+(mesmo padrão das checagens anteriores hoje); sincronizado (`git checkout -B
+main origin/main`). `gh` continua sem autenticação nesta nuvem, então CI não
+foi conferido via `gh run list` — baseei o diagnóstico nos arquivos do
+próprio repo. Fila e post `2026-08-28_comida-servida` (`pending`, auditoria
+já `SEM OBJECAO`) seguem no mesmo estado das checagens anteriores — nada novo
+para avisar o Ramón, silêncio conforme a regra.
 
 ## 🔍 03/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
 

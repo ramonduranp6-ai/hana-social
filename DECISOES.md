@@ -3,6 +3,17 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 03/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo; `SAUDE-DO-PROJETO.md` segue
+"Nenhum erro aberto". Repositório local estava em HEAD destacado de novo
+(mesmo padrão das checagens anteriores hoje); sincronizado (`git checkout -B
+main origin/main`). `gh` continua sem autenticação nesta nuvem, então CI não
+foi conferido via `gh run list` — baseei o diagnóstico nos arquivos do
+próprio repo. Fila e post `2026-08-28_comida-servida` (`pending`, auditoria
+já `SEM OBJECAO`) seguem no mesmo estado das checagens anteriores — nada novo
+para avisar o Ramón, silêncio conforme a regra.
+
 ## 🔍 03/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `publish.yml` run 621 (mais
