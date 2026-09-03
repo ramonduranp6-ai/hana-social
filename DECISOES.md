@@ -3,6 +3,20 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 03/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `publish.yml` runs 619 e 620
+(as duas mais recentes) verdes; `health.yml` run 48 e `maintenance.yml` run 11
+verdes. Li o log completo do único vermelho recente (run 618) via
+`get_job_logs`: o job só cai no passo `publisher/sentinel.py`, com a mensagem
+"fila com so 0 post(s) futuro(s) (minimo saudavel: 2)" — alarme por desenho de
+fila vazia, não erro de código; o passo seguinte, de salvar o estado, passou
+("estado salvo (tentativa 1)"). `content/.falhas_avisadas.json` já traz
+`fila_vazia_2026-09-03`, então o Ramón já foi avisado hoje e não repito o
+recado. Post `2026-08-28_comida-servida` segue `pending` com
+`auditoria.veredito: "SEM OBJECAO"` já preenchido — falta só o aprovar/recusar
+dele, que não é meu para dar. Nada a consertar.
+
 ## 🔍 03/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:

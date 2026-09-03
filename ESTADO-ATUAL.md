@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 03/09/2026 08:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 03/09/2026 12:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,18 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+a53b6d2 chore: atualiza estado [skip ci]
+53c7162 chore: checagem de rotina 03/09 (2a, vigia da nuvem) - sem bug novo
 c947e30 chore: checagem de rotina 03/09 (vigia da nuvem) - sem bug novo
 2587f05 chore: atualiza estado da fila [skip ci]
 50c19a1 chore: checagem de rotina 02/09 (4a, vigia da nuvem) - sem bug novo
 388b749 chore: atualiza manutenção [skip ci]
 f2bb2c9 Diário de crescimento 02/09: sem coleta nova, fila parada há 7 dias
 df89960 chore: atualiza estado [skip ci]
-1c86629 chore: checagem de rotina 02/09 (3a, vigia da nuvem) - sem bug novo
-0097cae chore: checagem de rotina 02/09 (2a, vigia da nuvem) - sem bug novo
+```
+Alterações não commitadas:
+```
+M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -109,6 +113,16 @@ df89960 chore: atualiza estado [skip ci]
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 03/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 619 (mais recente, após a 1ª checagem de hoje) já veio
+verde — o alarme do run 618 era mesmo o falso-alarme de fila vazia, já
+deduplicado. Post `2026-08-28_comida-servida` segue `pending` com auditoria
+`SEM OBJECAO`, esperando aprovação do Ramón pelo Telegram — já avisado em
+sessões anteriores, não repito. Nada novo desde a checagem anterior de
+hoje — silêncio conforme a regra.
 
 ## 🔍 03/09/2026 (vigia da nuvem) — confirmação: sem bug novo
 
