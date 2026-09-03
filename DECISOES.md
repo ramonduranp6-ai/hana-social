@@ -3,6 +3,16 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 03/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 619 (mais recente, após a 1ª checagem de hoje) já veio
+verde — o alarme do run 618 era mesmo o falso-alarme de fila vazia, já
+deduplicado. Post `2026-08-28_comida-servida` segue `pending` com auditoria
+`SEM OBJECAO`, esperando aprovação do Ramón pelo Telegram — já avisado em
+sessões anteriores, não repito. Nada novo desde a checagem anterior de
+hoje — silêncio conforme a regra.
+
 ## 🔍 03/09/2026 (vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `gh` continua sem instalar
