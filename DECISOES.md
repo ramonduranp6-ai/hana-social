@@ -3,6 +3,19 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 04/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+Mesmo estado da checagem anterior de hoje: `publish.yml` run 626 segue o
+único vermelho recente, e o log (via `get_job_logs`) mostra de novo só o
+alarme de desenho "fila com so 0 post(s) futuro(s) (minimo saudavel: 2)" no
+passo `Sentinela` — não erro de código; `content/.falhas_avisadas.json` já
+tinha `fila_vazia_2026-09-04`, dedupe funcionando, não repito o recado. Post
+`2026-08-28_comida-servida` segue `pending` com auditoria `SEM OBJECAO`,
+esperando o Ramón aprovar/recusar pelo Telegram — já avisado antes. Local
+estava em HEAD destacado com ref desatualizada (mostrava 23 commits atrás
+antes do `git fetch`); sincronizado (`git fetch` + `git checkout -B main
+origin/main`). Nada novo, nada a consertar — silêncio conforme a regra.
+
 ## 🔍 04/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`,
