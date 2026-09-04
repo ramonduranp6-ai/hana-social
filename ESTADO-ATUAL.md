@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 04/09/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 04/09/2026 20:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,18 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+125fa58 chore: atualiza estado [skip ci]
+732860c chore: checagem de rotina 04/09 (5a, vigia da nuvem) - sem bug novo
 c83b496 chore: atualiza manutenção [skip ci]
 889d974 diario: analise de crescimento 04/09 - fila parada ha 9 dias, seguidor caiu 1
 847f2fb chore: checagem de rotina 04/09 (4a, vigia da nuvem) - sem bug novo
 b51521d chore: checagem de rotina 04/09 (3a, vigia da nuvem) - sem bug novo
 88be914 chore: checagem de rotina 04/09 (2a, vigia da nuvem) - sem bug novo
 f9f351e chore: checagem de rotina 04/09 (vigia da nuvem) - sem bug novo
-6c01950 chore: atualiza estado da fila [skip ci]
-d3774e6 chore: checagem de rotina 03/09 (5a, vigia da nuvem) - sem bug novo
-```
-Alterações não commitadas:
-```
-M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -113,6 +109,17 @@ M ESTADO-ATUAL.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 04/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+Via `mcp__github__actions_list`: `publish.yml` run 629 (13:38Z, mais recente)
+veio verde. O único vermelho segue sendo o run 626 (00:13Z), mesmo alarme de
+desenho de fila vazia já deduplicado (`fila_vazia_2026-09-04` já em
+`content/.falhas_avisadas.json` antes desta checagem) — nenhum erro de código
+novo. Post `2026-08-28_comida-servida` segue `pending` com auditoria
+`SEM OBJECAO`, esperando o Ramón pelo Telegram — sem mudança. Repositório
+local sincronizado (`git fetch` + `git checkout -B main origin/main`). Nada a
+consertar.
 
 ## 🔍 04/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
