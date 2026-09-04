@@ -3,6 +3,16 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 04/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+Via `mcp__github__actions_list`: `publish.yml` run 628 (09:13Z, mais recente)
+veio verde. O único vermelho segue sendo o run 626 (00:13Z), mesmo alarme de
+desenho de fila vazia já deduplicado (`fila_vazia_2026-09-04` já registrado
+antes desta checagem) — nenhum erro de código novo. Post
+`2026-08-28_comida-servida` segue `pending` com auditoria `SEM OBJECAO`,
+esperando o Ramón pelo Telegram — sem mudança. Repositório local sincronizado
+(`git checkout -B main origin/main`). Nada a consertar.
+
 ## 🔍 04/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 Via `mcp__github__actions_list`: `publish.yml` run 627 (04:50Z, mais recente)
