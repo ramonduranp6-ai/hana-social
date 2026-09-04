@@ -3,6 +3,18 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 04/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+Via `mcp__github__actions_list`: `publish.yml` run 627 (04:50Z, mais recente)
+veio verde. O único vermelho ainda é o run 626 (00:13Z), já visto e commitado
+na checagem anterior de hoje — passo `Sentinela` falhou só com o alarme de
+desenho de fila vazia (todos os outros passos, incluindo `Salvar estado da
+fila`, passaram); `content/.falhas_avisadas.json` já tinha `fila_vazia_2026-09-04`
+antes desta checagem, dedupe funcionando, não repito o recado ao Ramón. Post
+`2026-08-28_comida-servida` segue `pending` com auditoria `SEM OBJECAO`,
+esperando ele aprovar/recusar pelo Telegram — sem mudança, não é bug de código.
+Nada novo, nada a consertar.
+
 ## 🔍 04/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 Mesmo estado da checagem anterior de hoje: `publish.yml` run 626 segue o

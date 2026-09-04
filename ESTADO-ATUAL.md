@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 03/09/2026 20:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 04/09/2026 08:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,18 +94,19 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+88be914 chore: checagem de rotina 04/09 (2a, vigia da nuvem) - sem bug novo
+f9f351e chore: checagem de rotina 04/09 (vigia da nuvem) - sem bug novo
+6c01950 chore: atualiza estado da fila [skip ci]
+d3774e6 chore: checagem de rotina 03/09 (5a, vigia da nuvem) - sem bug novo
 f6a8a98 chore: checagem de rotina 03/09 (4a, vigia da nuvem) - sem bug novo
 b9db820 chore: atualiza manutenção [skip ci]
 097c1ce diario: analise de crescimento 03/09 - fila parada ha 8 dias, seguidor sem tendencia
 ba27b8c chore: checagem de rotina 03/09 (3a, vigia da nuvem) - sem bug novo
-a53b6d2 chore: atualiza estado [skip ci]
-53c7162 chore: checagem de rotina 03/09 (2a, vigia da nuvem) - sem bug novo
-c947e30 chore: checagem de rotina 03/09 (vigia da nuvem) - sem bug novo
-2587f05 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
 M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -113,6 +114,46 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 04/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+Via `mcp__github__actions_list`: `publish.yml` run 627 (04:50Z, mais recente)
+veio verde. O único vermelho ainda é o run 626 (00:13Z), já visto e commitado
+na checagem anterior de hoje — passo `Sentinela` falhou só com o alarme de
+desenho de fila vazia (todos os outros passos, incluindo `Salvar estado da
+fila`, passaram); `content/.falhas_avisadas.json` já tinha `fila_vazia_2026-09-04`
+antes desta checagem, dedupe funcionando, não repito o recado ao Ramón. Post
+`2026-08-28_comida-servida` segue `pending` com auditoria `SEM OBJECAO`,
+esperando ele aprovar/recusar pelo Telegram — sem mudança, não é bug de código.
+Nada novo, nada a consertar.
+
+## 🔍 04/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+Mesmo estado da checagem anterior de hoje: `publish.yml` run 626 segue o
+único vermelho recente, e o log (via `get_job_logs`) mostra de novo só o
+alarme de desenho "fila com so 0 post(s) futuro(s) (minimo saudavel: 2)" no
+passo `Sentinela` — não erro de código; `content/.falhas_avisadas.json` já
+tinha `fila_vazia_2026-09-04`, dedupe funcionando, não repito o recado. Post
+`2026-08-28_comida-servida` segue `pending` com auditoria `SEM OBJECAO`,
+esperando o Ramón aprovar/recusar pelo Telegram — já avisado antes. Local
+estava em HEAD destacado com ref desatualizada (mostrava 23 commits atrás
+antes do `git fetch`); sincronizado (`git fetch` + `git checkout -B main
+origin/main`). Nada novo, nada a consertar — silêncio conforme a regra.
+
+## 🔍 04/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`,
+o run mais recente do `publish.yml` (626, 00:13 UTC) veio vermelho, mas só no
+passo `Sentinela`: log mostra exatamente "fila com so 0 post(s) futuro(s)
+(minimo saudavel: 2)" — o mesmo alarme de desenho de fila vazia das checagens
+anteriores, não erro de código; o passo seguinte (`Salvar estado da fila`)
+passou normalmente ("estado salvo (tentativa 1)"). `content/.falhas_avisadas.json`
+já tinha `fila_vazia_2026-09-04`, então o Ramón já foi avisado hoje — não repito
+o recado. Post `2026-08-28_comida-servida` segue `pending` com auditoria
+`SEM OBJECAO`, esperando ele aprovar/recusar pelo Telegram (~6,4 dias) — já
+avisado em sessões anteriores. Repositório local estava em HEAD destacado de
+novo, com `ESTADO-ATUAL.md` só desatualizado no timestamp (sem mudança real);
+sincronizado (`git checkout -B main origin/main`). Nada a consertar.
 
 ## 🔍 03/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
