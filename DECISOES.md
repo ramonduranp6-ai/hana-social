@@ -3,6 +3,21 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 04/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`,
+o run mais recente do `publish.yml` (626, 00:13 UTC) veio vermelho, mas só no
+passo `Sentinela`: log mostra exatamente "fila com so 0 post(s) futuro(s)
+(minimo saudavel: 2)" — o mesmo alarme de desenho de fila vazia das checagens
+anteriores, não erro de código; o passo seguinte (`Salvar estado da fila`)
+passou normalmente ("estado salvo (tentativa 1)"). `content/.falhas_avisadas.json`
+já tinha `fila_vazia_2026-09-04`, então o Ramón já foi avisado hoje — não repito
+o recado. Post `2026-08-28_comida-servida` segue `pending` com auditoria
+`SEM OBJECAO`, esperando ele aprovar/recusar pelo Telegram (~6,4 dias) — já
+avisado em sessões anteriores. Repositório local estava em HEAD destacado de
+novo, com `ESTADO-ATUAL.md` só desatualizado no timestamp (sem mudança real);
+sincronizado (`git checkout -B main origin/main`). Nada a consertar.
+
 ## 🔍 03/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo; `SAUDE-DO-PROJETO.md` segue
