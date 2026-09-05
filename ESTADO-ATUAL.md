@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 05/09/2026 00:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 05/09/2026 04:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+1e00ae7 chore: atualiza estado da fila [skip ci]
+481d141 chore: atualiza estado [skip ci]
+fcaa513 chore: checagem de rotina 05/09 (vigia da nuvem) - sem bug novo
 bde0eeb chore: checagem de rotina 04/09 (6a, vigia da nuvem) - sem bug novo
 125fa58 chore: atualiza estado [skip ci]
 732860c chore: checagem de rotina 04/09 (5a, vigia da nuvem) - sem bug novo
 c83b496 chore: atualiza manutenção [skip ci]
 889d974 diario: analise de crescimento 04/09 - fila parada ha 9 dias, seguidor caiu 1
-847f2fb chore: checagem de rotina 04/09 (4a, vigia da nuvem) - sem bug novo
-b51521d chore: checagem de rotina 04/09 (3a, vigia da nuvem) - sem bug novo
-88be914 chore: checagem de rotina 04/09 (2a, vigia da nuvem) - sem bug novo
 ```
 
 ## Decisões e contexto
@@ -109,6 +109,18 @@ b51521d chore: checagem de rotina 04/09 (3a, vigia da nuvem) - sem bug novo
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 05/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`,
+`publish.yml` run 634 (23:47Z de 04/09, mais recente) veio verde, assim como
+os runs anteriores do dia (630 a 633) — nenhum vermelho novo desde o run 626
+já visto e commitado em checagens anteriores. `content/.falhas_avisadas.json`
+segue com `fila_vazia_2026-08-25` até `fila_vazia_2026-09-04` (dedupe
+funcionando), sem novo dia registrado ainda. Post `2026-08-28_comida-servida`
+segue `pending` com auditoria `SEM OBJECAO`, esperando o Ramón pelo Telegram
+— sem mudança, já avisado antes. Repositório local estava em HEAD destacado;
+sincronizado. Nada a consertar.
 
 ## 🔍 04/09/2026 (6ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
