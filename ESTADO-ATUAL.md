@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 04/09/2026 20:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 05/09/2026 00:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,6 +94,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+bde0eeb chore: checagem de rotina 04/09 (6a, vigia da nuvem) - sem bug novo
 125fa58 chore: atualiza estado [skip ci]
 732860c chore: checagem de rotina 04/09 (5a, vigia da nuvem) - sem bug novo
 c83b496 chore: atualiza manutenção [skip ci]
@@ -101,7 +102,6 @@ c83b496 chore: atualiza manutenção [skip ci]
 847f2fb chore: checagem de rotina 04/09 (4a, vigia da nuvem) - sem bug novo
 b51521d chore: checagem de rotina 04/09 (3a, vigia da nuvem) - sem bug novo
 88be914 chore: checagem de rotina 04/09 (2a, vigia da nuvem) - sem bug novo
-f9f351e chore: checagem de rotina 04/09 (vigia da nuvem) - sem bug novo
 ```
 
 ## Decisões e contexto
@@ -109,6 +109,17 @@ f9f351e chore: checagem de rotina 04/09 (vigia da nuvem) - sem bug novo
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 04/09/2026 (6ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+Via `mcp__github__actions_list`: `publish.yml` run 632 (19:44Z, mais recente)
+veio verde, assim como todos os runs entre ele e a checagem anterior (627 a
+631). O único vermelho continua sendo o run 626 (00:13Z), já visto e
+commitado nas checagens anteriores de hoje — mesmo alarme de desenho de fila
+vazia, `fila_vazia_2026-09-04` já deduplicado, nenhum erro de código novo.
+Post `2026-08-28_comida-servida` segue `pending` com auditoria
+`SEM OBJECAO`, esperando o Ramón pelo Telegram — sem mudança. Nada a
+consertar.
 
 ## 🔍 04/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
