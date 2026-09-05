@@ -3,6 +3,18 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 05/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`,
+`publish.yml` run 634 (23:47Z de 04/09, mais recente) veio verde, assim como
+os runs anteriores do dia (630 a 633) — nenhum vermelho novo desde o run 626
+já visto e commitado em checagens anteriores. `content/.falhas_avisadas.json`
+segue com `fila_vazia_2026-08-25` até `fila_vazia_2026-09-04` (dedupe
+funcionando), sem novo dia registrado ainda. Post `2026-08-28_comida-servida`
+segue `pending` com auditoria `SEM OBJECAO`, esperando o Ramón pelo Telegram
+— sem mudança, já avisado antes. Repositório local estava em HEAD destacado;
+sincronizado. Nada a consertar.
+
 ## 🔍 04/09/2026 (6ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 Via `mcp__github__actions_list`: `publish.yml` run 632 (19:44Z, mais recente)
