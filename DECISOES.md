@@ -3,6 +3,19 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 05/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo e `SAUDE-DO-PROJETO.md` sem
+erro aberto. Via `mcp__github__actions_list`: `publish.yml` run 636 (07:01Z,
+mais recente) veio verde. O único vermelho desde a checagem anterior é o run
+635 (02:16Z), já visto e registrado — mesmo alarme de fila vazia (falta de
+filmagem, não bug de código), já deduplicado em
+`content/.falhas_avisadas.json` e já avisado ao Ramón em checagem anterior.
+Post `2026-08-28_comida-servida` segue `pending` com auditoria `SEM OBJECAO`,
+esperando ele pelo Telegram — sem mudança. Repositório local estava em HEAD
+destacado; sincronizado (`git fetch` + `git checkout -B main origin/main`).
+Nada a consertar.
+
 ## 🔍 05/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`,
