@@ -3,6 +3,16 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 07/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo e `SAUDE-DO-PROJETO.md` sem
+erro aberto. Via `mcp__github__actions_list`: nenhuma run nova de
+`publish.yml` desde a checagem anterior (run 654, 05:30Z, verde) — estado
+idêntico ao já registrado às 04:33Z. Post `2026-08-28_comida-servida` segue
+`pending` com auditoria `SEM OBJECAO`, esperando o Ramón — sem mudança.
+Fila vazia segue deduplicada em `content/.falhas_avisadas.json`
+(`fila_vazia_2026-09-07`), não repito o recado. Nada a consertar.
+
 ## 🔍 07/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo e `SAUDE-DO-PROJETO.md` sem
