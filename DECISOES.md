@@ -3,6 +3,16 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 07/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo e `SAUDE-DO-PROJETO.md` sem
+erro aberto. Via `mcp__github__actions_list`: runs 651 e 652 (20:39Z e 22:35Z
+de 06/09, mais recentes) vieram verdes — nenhum vermelho novo desde a
+checagem anterior (run 650, já registrado). Post `2026-08-28_comida-servida`
+segue `pending` com auditoria `SEM OBJECAO`, esperando o Ramón — sem mudança.
+Fila vazia segue deduplicada em `content/.falhas_avisadas.json` (até
+`fila_vazia_2026-09-06`, sem novo dia registrado ainda). Nada a consertar.
+
 ## 🔍 06/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo e `SAUDE-DO-PROJETO.md` sem
