@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 07/09/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 07/09/2026 16:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,18 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+00355b0 diario: crescimento 07/09 - 13o dia sem post, seguidores parados em 331
+c5d8fa9 chore: checagem de rotina 07/09 (4a, vigia da nuvem) - sem bug novo
+a355ff8 chore: checagem de rotina 07/09 (3a, vigia da nuvem) - sem bug novo
+cb43194 chore: checagem de rotina 07/09 (2a, vigia da nuvem) - sem bug novo
+862d5c8 chore: atualiza estado da fila [skip ci]
+a3b3f89 chore: atualiza estado [skip ci]
+d702568 chore: checagem de rotina 07/09 (vigia da nuvem) - sem bug novo
 359ffc6 chore: checagem de rotina 06/09 (4a, vigia da nuvem) - sem bug novo
-1df504a chore: atualiza manutenção [skip ci]
-0d6e5c4 docs: diario de crescimento 06/09 - 12o dia sem post, 331 parado
-b7bf2a1 chore: checagem de rotina 06/09 (3a, vigia da nuvem) - sem bug novo
-80a1d1b chore: atualiza estado [skip ci]
-69d0489 chore: checagem de rotina 06/09 (2a, vigia da nuvem) - sem bug novo
-8e3f8c7 chore: checagem de rotina 06/09 (vigia da nuvem) - sem bug novo
-132b897 chore: atualiza estado da fila [skip ci]
-```
-Alterações não commitadas:
-```
-M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -113,6 +109,49 @@ M ESTADO-ATUAL.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 07/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo e `SAUDE-DO-PROJETO.md` sem
+erro aberto. Via `mcp__github__actions_list`: run 655 (11:11Z, mais recente)
+veio verde — nenhum vermelho novo desde a checagem anterior (run 653, 00:33Z,
+já registrado como o mesmo alarme de fila vazia, não bug). Post
+`2026-08-28_comida-servida` segue `pending` com auditoria `SEM OBJECAO`,
+esperando o Ramón — sem mudança. Fila vazia segue deduplicada em
+`content/.falhas_avisadas.json` (até `fila_vazia_2026-09-07`), não repito o
+recado. Nada a consertar.
+
+## 🔍 07/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo e `SAUDE-DO-PROJETO.md` sem
+erro aberto. Via `mcp__github__actions_list`: nenhuma run nova de
+`publish.yml` desde a checagem anterior (run 654, 05:30Z, verde) — estado
+idêntico ao já registrado às 04:33Z. Post `2026-08-28_comida-servida` segue
+`pending` com auditoria `SEM OBJECAO`, esperando o Ramón — sem mudança.
+Fila vazia segue deduplicada em `content/.falhas_avisadas.json`
+(`fila_vazia_2026-09-07`), não repito o recado. Nada a consertar.
+
+## 🔍 07/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo e `SAUDE-DO-PROJETO.md` sem
+erro aberto. Via `mcp__github__actions_list`/`get_job_logs`: run 653 (00:33Z,
+mais recente) veio vermelho, mas é o mesmo alarme de sempre — `Sentinela`
+só reportou "fila com 0 post(s) futuro(s)" (falta de filmagem, não bug); o
+passo de salvar estado da fila rodou normal e commitou (862d5c8). Runs 651 e
+652 (checagem anterior) seguem verdes. `content/.falhas_avisadas.json` já
+tinha `fila_vazia_2026-09-07` registrado — dedupe funcionando, não repito o
+recado ao Ramón. Post `2026-08-28_comida-servida` segue `pending` com
+auditoria `SEM OBJECAO`, esperando ele — sem mudança. Nada a consertar.
+
+## 🔍 07/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo e `SAUDE-DO-PROJETO.md` sem
+erro aberto. Via `mcp__github__actions_list`: runs 651 e 652 (20:39Z e 22:35Z
+de 06/09, mais recentes) vieram verdes — nenhum vermelho novo desde a
+checagem anterior (run 650, já registrado). Post `2026-08-28_comida-servida`
+segue `pending` com auditoria `SEM OBJECAO`, esperando o Ramón — sem mudança.
+Fila vazia segue deduplicada em `content/.falhas_avisadas.json` (até
+`fila_vazia_2026-09-06`, sem novo dia registrado ainda). Nada a consertar.
 
 ## 🔍 06/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
