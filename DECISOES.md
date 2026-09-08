@@ -3,6 +3,15 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 08/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo e `SAUDE-DO-PROJETO.md` sem
+erro aberto. Via `mcp__github__actions_list`: últimas 5 runs de `publish.yml`
+(655-659, até 22:55Z de 07/09) todas verdes — nenhuma nova desde então (agora
+00:32Z de 08/09), dentro do atraso normal do cron best-effort do GitHub. Post
+`2026-08-28_comida-servida` segue `pending` com auditoria `SEM OBJECAO`,
+esperando o Ramón — sem mudança. Nada a consertar.
+
 ## 🔍 07/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo e `SAUDE-DO-PROJETO.md` sem
