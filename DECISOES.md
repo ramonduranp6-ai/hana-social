@@ -3,6 +3,17 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 08/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo e `SAUDE-DO-PROJETO.md` sem
+erro aberto. Via `mcp__github__actions_list`: run 660 (00:50Z) veio vermelha,
+mas é o mesmo alarme de sempre — `Sentinela` só reportou "fila com 0 post(s)
+futuro(s)" (falta de filmagem, não bug); o passo de salvar estado da fila
+rodou normal e commitou (535f6ab). `content/.falhas_avisadas.json` já tinha
+`fila_vazia_2026-09-08` registrado — dedupe funcionando, não repito o recado
+ao Ramón. Post `2026-08-28_comida-servida` segue `pending` com auditoria
+`SEM OBJECAO`, esperando ele — sem mudança. Nada a consertar.
+
 ## 🔍 08/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo e `SAUDE-DO-PROJETO.md` sem
