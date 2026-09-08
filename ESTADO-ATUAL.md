@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 08/09/2026 00:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 08/09/2026 08:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,18 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+b9f4dec chore: checagem de rotina 08/09 (2a, vigia da nuvem) - sem bug novo
+535f6ab chore: atualiza estado da fila [skip ci]
+89e039e chore: checagem de rotina 08/09 (vigia da nuvem) - sem bug novo
 b0785a6 chore: atualiza estado (6a checagem 07/09, vigia da nuvem) - sem bug novo
 6e3840d chore: atualiza manutenção [skip ci]
 a2d3650 chore: atualiza estado [skip ci]
 ec13906 chore: checagem de rotina 07/09 (5a, vigia da nuvem) - sem bug novo
 00355b0 diario: crescimento 07/09 - 13o dia sem post, seguidores parados em 331
-c5d8fa9 chore: checagem de rotina 07/09 (4a, vigia da nuvem) - sem bug novo
-a355ff8 chore: checagem de rotina 07/09 (3a, vigia da nuvem) - sem bug novo
-cb43194 chore: checagem de rotina 07/09 (2a, vigia da nuvem) - sem bug novo
+```
+Alterações não commitadas:
+```
+M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -109,6 +113,26 @@ cb43194 chore: checagem de rotina 07/09 (2a, vigia da nuvem) - sem bug novo
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 08/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo e `SAUDE-DO-PROJETO.md` sem
+erro aberto. Via `mcp__github__actions_list`: run 660 (00:50Z) veio vermelha,
+mas é o mesmo alarme de sempre — `Sentinela` só reportou "fila com 0 post(s)
+futuro(s)" (falta de filmagem, não bug); o passo de salvar estado da fila
+rodou normal e commitou (535f6ab). `content/.falhas_avisadas.json` já tinha
+`fila_vazia_2026-09-08` registrado — dedupe funcionando, não repito o recado
+ao Ramón. Post `2026-08-28_comida-servida` segue `pending` com auditoria
+`SEM OBJECAO`, esperando ele — sem mudança. Nada a consertar.
+
+## 🔍 08/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo e `SAUDE-DO-PROJETO.md` sem
+erro aberto. Via `mcp__github__actions_list`: últimas 5 runs de `publish.yml`
+(655-659, até 22:55Z de 07/09) todas verdes — nenhuma nova desde então (agora
+00:32Z de 08/09), dentro do atraso normal do cron best-effort do GitHub. Post
+`2026-08-28_comida-servida` segue `pending` com auditoria `SEM OBJECAO`,
+esperando o Ramón — sem mudança. Nada a consertar.
 
 ## 🔍 07/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
