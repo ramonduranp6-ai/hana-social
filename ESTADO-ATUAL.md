@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 09/09/2026 12:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 09/09/2026 16:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,19 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+7ac68eb diario: crescimento 09/09 - seguidores parados 6o dia, fila travada 15 dias
+db69142 chore: atualiza estado da fila [skip ci]
 16bf1f6 chore: checagem de rotina 09/09 (3a, vigia da nuvem) - sem bug novo
 07d86a6 chore: atualiza estado da fila [skip ci]
 096f094 chore: checagem de rotina 09/09 (2a, vigia da nuvem) - sem bug novo
 9afb52d chore: atualiza estado da fila [skip ci]
 1e00ad4 chore: checagem de rotina 09/09 (vigia da nuvem) - sem bug novo
 ca6f131 chore: checagem de rotina 08/09 (5a, vigia da nuvem) - sem bug novo
-fbe8f1e chore: atualiza manutenção [skip ci]
-2dd96fc chore: atualiza estado da fila [skip ci]
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -109,6 +114,14 @@ fbe8f1e chore: atualiza manutenção [skip ci]
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 09/09/2026 (4a checagem, vigia da nuvem) - confirmacao: sem bug novo
+
+Runs 669/670/671 (apos a checagem anterior) vieram verdes; unico vermelho
+seguinte (668) ja deduplicado, mesmo alarme de fila vazia (falta de
+filmagem, nao bug). SAUDE-DO-PROJETO.md sem erro aberto (30/08). Post
+2026-08-28_comida-servida segue pending com auditoria.veredito SEM OBJECAO,
+esperando aprovacao manual do Ramon. Nada a consertar.
 
 ## 🔍 09/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
