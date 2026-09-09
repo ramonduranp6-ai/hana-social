@@ -3,6 +3,18 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 09/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+Via `mcp__github__actions_list`: run 668 (01:20Z) veio **vermelha**, mas é o
+mesmo alarme de sempre — o passo `Sentinela` só reportou "fila com 0 post(s)
+futuro(s)" (log confirmado: falta de filmagem, não bug de código); o passo de
+salvar estado rodou normal e commitou (9afb52d). Já deduplicado em
+`content/.falhas_avisadas.json` (`fila_vazia_2026-09-09`), não repito o
+recado. `SAUDE-DO-PROJETO.md` sem erro aberto (30/08). Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito`
+`SEM OBJECAO`, esperando aprovação manual do Ramón — sem mudança. Nada a
+consertar.
+
 ## 🔍 09/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo e `SAUDE-DO-PROJETO.md` sem
