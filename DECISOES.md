@@ -3,6 +3,15 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 09/09/2026 (5a checagem, vigia da nuvem) - confirmacao: sem bug novo
+
+Via `mcp__github__actions_list`: runs 672 (17:23Z) e 673 (18:57Z, mais
+recente) vieram verdes, publish.yml normal. `SAUDE-DO-PROJETO.md` sem erro
+aberto (30/08). Post `2026-08-28_comida-servida` segue `pending` com
+`auditoria.veredito` `SEM OBJECAO`, esperando aprovação manual do Ramón —
+sem mudança. Fila vazia segue deduplicada em `content/.falhas_avisadas.json`
+(até `fila_vazia_2026-09-09`), não repito o recado. Nada a consertar.
+
 ## 🔍 09/09/2026 (4a checagem, vigia da nuvem) - confirmacao: sem bug novo
 
 Runs 669/670/671 (apos a checagem anterior) vieram verdes; unico vermelho
