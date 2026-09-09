@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 09/09/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 09/09/2026 04:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,19 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+096f094 chore: checagem de rotina 09/09 (2a, vigia da nuvem) - sem bug novo
+9afb52d chore: atualiza estado da fila [skip ci]
+1e00ad4 chore: checagem de rotina 09/09 (vigia da nuvem) - sem bug novo
 ca6f131 chore: checagem de rotina 08/09 (5a, vigia da nuvem) - sem bug novo
 fbe8f1e chore: atualiza manutenção [skip ci]
 2dd96fc chore: atualiza estado da fila [skip ci]
 1211e0a chore: checagem de rotina 08/09 (4a, vigia da nuvem) - sem bug novo
 6f3bee4 Diário de crescimento 08/09: 5º dia parado em 331 seguidores, 14º dia sem post novo
-13fafc7 chore: atualiza estado da fila [skip ci]
-424f0bb chore: checagem de rotina 08/09 (3a, vigia da nuvem) - sem bug novo
-c66de6d chore: atualiza estado da fila [skip ci]
-```
-Alterações não commitadas:
-```
-M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -114,6 +109,18 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 09/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+Via `mcp__github__actions_list`: run 668 (01:20Z) veio **vermelha**, mas é o
+mesmo alarme de sempre — o passo `Sentinela` só reportou "fila com 0 post(s)
+futuro(s)" (log confirmado: falta de filmagem, não bug de código); o passo de
+salvar estado rodou normal e commitou (9afb52d). Já deduplicado em
+`content/.falhas_avisadas.json` (`fila_vazia_2026-09-09`), não repito o
+recado. `SAUDE-DO-PROJETO.md` sem erro aberto (30/08). Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito`
+`SEM OBJECAO`, esperando aprovação manual do Ramón — sem mudança. Nada a
+consertar.
 
 ## 🔍 09/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
 
