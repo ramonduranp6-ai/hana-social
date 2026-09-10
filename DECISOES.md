@@ -3,6 +3,15 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 10/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+runs 677 (07:25Z) e 678 (12:17Z, mais recente) vieram **verdes**; único
+vermelho do dia segue sendo o run 676, já investigado e registrado acima como
+o alarme diário normal de fila vazia (não bug). Post
+`2026-08-28_comida-servida` segue `pending` esperando aprovação manual dele.
+Nada a consertar, nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 10/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
