@@ -3,6 +3,19 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 10/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Run 676 (02:23Z de 10/09,
+`publish.yml`) veio **vermelha**, mas confirmado no job (`Sentinela` failure)
+e reproduzido localmente com `python publisher/sentinel.py`: é o alarme
+diário normal de "fila com 0 post(s) futuro(s)" — o marcador
+`content/.falhas_avisadas.json` vira o dia às 00:00Z e o sentinela dispara
+uma vez por dia de propósito (não é bug). Runs 672-675 anteriores vieram
+verdes. `SAUDE-DO-PROJETO.md` sem erro aberto (30/08). Post
+`2026-08-28_comida-servida` segue `pending` esperando aprovação manual dele.
+Fila vazia por falta de filmagem nova segue sem mudança — já avisado, sem
+recado novo. Nada a consertar.
+
 ## 🔍 10/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md` sem

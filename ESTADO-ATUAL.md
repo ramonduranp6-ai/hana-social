@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 09/09/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 10/09/2026 04:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+a6c5e8d chore: atualiza estado da fila [skip ci]
+7ff8a1b chore: checagem de rotina 10/09 (vigia da nuvem) - sem bug novo
+6e0d9d0 chore: checagem de rotina 09/09 (5a, vigia da nuvem) - sem bug novo
+c13881a chore: atualiza manutenção [skip ci]
+e51b5d5 chore: checagem de rotina 09/09 (4a, vigia da nuvem) - sem bug novo
 7ac68eb diario: crescimento 09/09 - seguidores parados 6o dia, fila travada 15 dias
 db69142 chore: atualiza estado da fila [skip ci]
 16bf1f6 chore: checagem de rotina 09/09 (3a, vigia da nuvem) - sem bug novo
-07d86a6 chore: atualiza estado da fila [skip ci]
-096f094 chore: checagem de rotina 09/09 (2a, vigia da nuvem) - sem bug novo
-9afb52d chore: atualiza estado da fila [skip ci]
-1e00ad4 chore: checagem de rotina 09/09 (vigia da nuvem) - sem bug novo
-ca6f131 chore: checagem de rotina 08/09 (5a, vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
@@ -114,6 +114,41 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 10/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Run 676 (02:23Z de 10/09,
+`publish.yml`) veio **vermelha**, mas confirmado no job (`Sentinela` failure)
+e reproduzido localmente com `python publisher/sentinel.py`: é o alarme
+diário normal de "fila com 0 post(s) futuro(s)" — o marcador
+`content/.falhas_avisadas.json` vira o dia às 00:00Z e o sentinela dispara
+uma vez por dia de propósito (não é bug). Runs 672-675 anteriores vieram
+verdes. `SAUDE-DO-PROJETO.md` sem erro aberto (30/08). Post
+`2026-08-28_comida-servida` segue `pending` esperando aprovação manual dele.
+Fila vazia por falta de filmagem nova segue sem mudança — já avisado, sem
+recado novo. Nada a consertar.
+
+## 🔍 10/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md` sem
+erro aberto (varredura de 30/08, nada novo desde então). Via
+`mcp__github__actions_list`: runs 672-675 (17:23Z de 09/09 até 23:42Z de
+09/09, a mais recente) vieram todas verdes, publish.yml normal. Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito` já
+`SEM OBJECAO` (3 rodadas de auditoria registradas no próprio `post.json`) —
+apenas esperando aprovação manual do Ramón, não é bug de código. Fila vazia
+segue por falta de filmagem nova (nada em `01 - brutas` desde 09/08),
+condição já avisada e deduplicada em `content/.falhas_avisadas.json`. Nada
+a consertar.
+
+## 🔍 09/09/2026 (5a checagem, vigia da nuvem) - confirmacao: sem bug novo
+
+Via `mcp__github__actions_list`: runs 672 (17:23Z) e 673 (18:57Z, mais
+recente) vieram verdes, publish.yml normal. `SAUDE-DO-PROJETO.md` sem erro
+aberto (30/08). Post `2026-08-28_comida-servida` segue `pending` com
+`auditoria.veredito` `SEM OBJECAO`, esperando aprovação manual do Ramón —
+sem mudança. Fila vazia segue deduplicada em `content/.falhas_avisadas.json`
+(até `fila_vazia_2026-09-09`), não repito o recado. Nada a consertar.
 
 ## 🔍 09/09/2026 (4a checagem, vigia da nuvem) - confirmacao: sem bug novo
 
