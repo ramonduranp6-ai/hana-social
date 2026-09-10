@@ -3,6 +3,19 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 10/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md` sem
+erro aberto (varredura de 30/08, nada novo desde então). Via
+`mcp__github__actions_list`: runs 672-675 (17:23Z de 09/09 até 23:42Z de
+09/09, a mais recente) vieram todas verdes, publish.yml normal. Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito` já
+`SEM OBJECAO` (3 rodadas de auditoria registradas no próprio `post.json`) —
+apenas esperando aprovação manual do Ramón, não é bug de código. Fila vazia
+segue por falta de filmagem nova (nada em `01 - brutas` desde 09/08),
+condição já avisada e deduplicada em `content/.falhas_avisadas.json`. Nada
+a consertar.
+
 ## 🔍 09/09/2026 (5a checagem, vigia da nuvem) - confirmacao: sem bug novo
 
 Via `mcp__github__actions_list`: runs 672 (17:23Z) e 673 (18:57Z, mais
