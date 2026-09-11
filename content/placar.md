@@ -1,11 +1,11 @@
 # Placar da Hana — o que cada post rendeu
 
 Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
-Última coleta: **2026-09-10** · fonte: API do Instagram.
+Última coleta: **2026-09-11** · fonte: API do Instagram.
 
 ## Seguidores
 
-**331** (+0 desde 2026-09-09)
+**332** (+1 desde 2026-09-10)
 
 ## Post a post (mais alcance em cima)
 
@@ -40,7 +40,6 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 
 | Data | Seguidores |
 |---|---|
-| 2026-08-30 | 332 |
 | 2026-08-31 | 332 |
 | 2026-09-01 | 331 |
 | 2026-09-02 | 332 |
@@ -52,6 +51,7 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 | 2026-09-08 | 331 |
 | 2026-09-09 | 331 |
 | 2026-09-10 | 331 |
+| 2026-09-11 | 332 |
 
 ## Limites desta coleta
 
