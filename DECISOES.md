@@ -3,6 +3,20 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 11/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+run 684 (02:18Z de 11/09, mais recente) veio **vermelho** — job da Sentinela
+com `exit code 1`, log lido inteiro. Causa: mesmo alarme diário de sempre,
+`fila com so 0 post(s) futuro(s) (minimo saudavel: 2)` — falta de filmagem
+nova, não bug de código (já documentado desde 25/08). `content/.falhas_avisadas.json`
+já tem `fila_vazia_2026-09-11` (a própria Sentinela marcou ao rodar), não repito
+o recado — ele já foi avisado disso à exaustão nos diários de crescimento.
+`SAUDE-DO-PROJETO.md` sem erro aberto (varredura de 30/08, nada novo). Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito`
+`SEM OBJECAO`, esperando aprovação manual do Ramón — não é bug de código.
+Nada a consertar, nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 11/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
