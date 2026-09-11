@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 11/09/2026 08:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 11/09/2026 12:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,19 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+02b3473 chore: atualiza estado da fila [skip ci]
+429793e chore: checagem de rotina 11/09 (3a, vigia da nuvem) - sem bug novo
 fd6ebbb chore: checagem de rotina 11/09 (2a, vigia da nuvem) - sem bug novo
 e963f81 chore: atualiza estado da fila [skip ci]
 4b009a1 chore: checagem de rotina 11/09 (vigia da nuvem) - sem bug novo
 64ec2ac chore: checagem de rotina 10/09 (6a, vigia da nuvem) - sem bug novo
 a7efc3b chore: checagem de rotina 10/09 (5a, vigia da nuvem) - sem bug novo
 6a01a40 chore: atualiza manutenção [skip ci]
-8f6f355 diario: crescimento 10/09 - seguidores parados 7o dia, fila travada 16 dias
-d69e2c1 chore: checagem de rotina 10/09 (4a, vigia da nuvem) - sem bug novo
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -109,6 +114,30 @@ d69e2c1 chore: checagem de rotina 10/09 (4a, vigia da nuvem) - sem bug novo
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 11/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+run 686 (12:16Z de 11/09, mais recente) veio **verde**; único vermelho do dia
+segue sendo o run 684, já investigado e registrado abaixo como o alarme diário
+normal de fila vazia (não bug de código). `content/.falhas_avisadas.json` já
+tem `fila_vazia_2026-09-11`, não repito o recado. `SAUDE-DO-PROJETO.md` sem
+erro aberto (varredura de 30/08, nada novo). Post `2026-08-28_comida-servida`
+segue `pending` com `auditoria.veredito` `SEM OBJECAO` (conferido no
+post.json), esperando aprovação manual do Ramón — não é bug de código. Nada a
+consertar, nada a avisar — silêncio conforme a regra 3.
+
+## 🔍 11/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+run 685 (07:22Z de 11/09, mais recente) veio **verde**; único vermelho do dia
+segue sendo o run 684, já investigado e registrado abaixo como o alarme diário
+normal de fila vazia (não bug de código). `content/.falhas_avisadas.json` já
+tem `fila_vazia_2026-09-11`, não repito o recado. `SAUDE-DO-PROJETO.md` sem
+erro aberto (varredura de 30/08, nada novo). Post `2026-08-28_comida-servida`
+segue `pending` com `auditoria.veredito` `SEM OBJECAO` (conferido no
+post.json), esperando aprovação manual do Ramón — não é bug de código. Nada a
+consertar, nada a avisar — silêncio conforme a regra 3.
 
 ## 🔍 11/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
