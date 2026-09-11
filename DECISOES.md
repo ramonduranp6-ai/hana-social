@@ -3,6 +3,17 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 11/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `gh` indisponível nesta
+sessão; confirmado via arquivos do repo: `SAUDE-DO-PROJETO.md` sem erro
+aberto (varredura de 30/08, nada novo). `content/.falhas_avisadas.json` já
+tem `fila_vazia_2026-09-11`, não repito o recado. Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito`
+`SEM OBJECAO` (conferido no post.json), esperando aprovação manual do
+Ramón — não é bug de código. Nada a consertar, nada a avisar — silêncio
+conforme a regra 3.
+
 ## 🔍 11/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
