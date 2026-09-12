@@ -3,6 +3,19 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 12/09/2026 (2ª checagem, vigia da nuvem) — falha do publish.yml é o alarme esperado de fila vazia, não bug
+
+Achei 1 run vermelho novo desde a checagem anterior: `publish.yml` run 692
+(02:25:47Z), passo "Sentinela" falhou. Log lido via `get_job_logs`: o motivo
+é `fila com so 0 post(s) futuro(s)` — exatamente a causa conhecida (fila vazia
+por falta de filmagem nova, não bug de código). É a 1ª vez hoje que o
+sentinela viu isso, por isso tocou o alarme de verdade (por desenho, ver
+`publisher/sentinel.py`) e gravou `fila_vazia_2026-09-12` em
+`content/.falhas_avisadas.json` — as próximas rodadas de hoje viram só aviso,
+sem derrubar o job de novo. `content/recados.md` sem recado pendente sem
+resposta. Nada a consertar, nada a avisar de novo — o acervo vazio já foi
+comunicado nos dias anteriores e ele decide quando filmar.
+
 ## 🔍 12/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`

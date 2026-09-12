@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 12/09/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 12/09/2026 04:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+f0de9d9 chore: atualiza estado da fila [skip ci]
+54b0829 chore: checagem de rotina 12/09 (vigia da nuvem) - sem bug novo
 e713817 chore: checagem de rotina 11/09 (6a, vigia da nuvem) - sem bug novo
 b74e58a chore: atualiza estado da fila [skip ci]
 e245cb8 chore: checagem de rotina 11/09 (5a, vigia da nuvem) - sem bug novo
 71f5fab chore: atualiza manutenção [skip ci]
 1635911 Diário de crescimento 11/09: seguidores parados em 331 (8º dia), comida-servida pendente há 16 dias
 1ce2ba5 chore: checagem de rotina 11/09 (4a, vigia da nuvem) - sem bug novo
-02b3473 chore: atualiza estado da fila [skip ci]
-429793e chore: checagem de rotina 11/09 (3a, vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
@@ -114,6 +114,19 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 12/09/2026 (2ª checagem, vigia da nuvem) — falha do publish.yml é o alarme esperado de fila vazia, não bug
+
+Achei 1 run vermelho novo desde a checagem anterior: `publish.yml` run 692
+(02:25:47Z), passo "Sentinela" falhou. Log lido via `get_job_logs`: o motivo
+é `fila com so 0 post(s) futuro(s)` — exatamente a causa conhecida (fila vazia
+por falta de filmagem nova, não bug de código). É a 1ª vez hoje que o
+sentinela viu isso, por isso tocou o alarme de verdade (por desenho, ver
+`publisher/sentinel.py`) e gravou `fila_vazia_2026-09-12` em
+`content/.falhas_avisadas.json` — as próximas rodadas de hoje viram só aviso,
+sem derrubar o job de novo. `content/recados.md` sem recado pendente sem
+resposta. Nada a consertar, nada a avisar de novo — o acervo vazio já foi
+comunicado nos dias anteriores e ele decide quando filmar.
 
 ## 🔍 12/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
 
