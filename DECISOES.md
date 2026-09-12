@@ -3,6 +3,19 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 12/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`
+nos 3 workflows (`publish.yml` runs 696-698, `maintenance.yml` run 21,
+`health.yml` run 105): todas as runs desde a última checagem (4ª, run 695)
+vieram **verdes** — nenhum run vermelho novo. `content/recados.md` com todos
+os itens já marcados `[x]`, nada pendente sem resposta. `SAUDE-DO-PROJETO.md`
+sem erro aberto. Post `2026-08-28_comida-servida` segue `pending` com
+`auditoria.veredito` `SEM OBJECAO` (conferido no post.json), esperando
+aprovação manual do Ramón (~15 dias) — não é bug de código, é decisão de
+família sem prazo, já avisada nas checagens anteriores. Nada a consertar,
+nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 12/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`

@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 12/09/2026 04:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 12/09/2026 20:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+12061de chore: checagem de rotina 12/09 (4a, vigia da nuvem) - sem bug novo
+65f55a1 chore: atualiza manutenção [skip ci]
+3a3fd11 Diário de crescimento 12/09: seguidores oscilam 331/332 (ruído), comida-servida pendente há 15 dias
+04c70d1 chore: checagem de rotina 12/09 (3a, vigia da nuvem) - sem bug novo
+94ae5ef chore: checagem de rotina 12/09 (2a, vigia da nuvem) - sem bug novo
 f0de9d9 chore: atualiza estado da fila [skip ci]
 54b0829 chore: checagem de rotina 12/09 (vigia da nuvem) - sem bug novo
 e713817 chore: checagem de rotina 11/09 (6a, vigia da nuvem) - sem bug novo
-b74e58a chore: atualiza estado da fila [skip ci]
-e245cb8 chore: checagem de rotina 11/09 (5a, vigia da nuvem) - sem bug novo
-71f5fab chore: atualiza manutenção [skip ci]
-1635911 Diário de crescimento 11/09: seguidores parados em 331 (8º dia), comida-servida pendente há 16 dias
-1ce2ba5 chore: checagem de rotina 11/09 (4a, vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
@@ -114,6 +114,45 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 12/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`
+nos 3 workflows (`publish.yml` runs 696-698, `maintenance.yml` run 21,
+`health.yml` run 105): todas as runs desde a última checagem (4ª, run 695)
+vieram **verdes** — nenhum run vermelho novo. `content/recados.md` com todos
+os itens já marcados `[x]`, nada pendente sem resposta. `SAUDE-DO-PROJETO.md`
+sem erro aberto. Post `2026-08-28_comida-servida` segue `pending` com
+`auditoria.veredito` `SEM OBJECAO` (conferido no post.json), esperando
+aprovação manual do Ramón (~15 dias) — não é bug de código, é decisão de
+família sem prazo, já avisada nas checagens anteriores. Nada a consertar,
+nada a avisar — silêncio conforme a regra 3.
+
+## 🔍 12/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`
+nos 3 workflows (`publish.yml` run 695, `maintenance.yml` run 21, `health.yml`
+run 104): todas as runs desde a última checagem (3ª, commit `3a3fd11`) vieram
+**verdes** — nenhum run vermelho novo. `content/recados.md` com todos os itens
+já marcados `[x]`, nada pendente sem resposta. Post `2026-08-28_comida-servida`
+segue `pending` com `auditoria.veredito` `SEM OBJECAO` (conferido no
+post.json), esperando aprovação manual do Ramón (~15 dias) — não é bug de
+código, é decisão de família sem prazo (mesmo raciocínio do `sentinel.py`).
+Nada a consertar, nada a avisar — silêncio conforme a regra 3.
+
+## 🔍 12/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `gh` indisponível nesta
+sessão; confirmado via `mcp__github__actions_list` nos 3 workflows
+(`publish.yml`, `maintenance.yml`, `health.yml`): todas as runs desde a
+última checagem (12/09, 2ª, até 11:40Z) vieram **verdes** — o único
+vermelho do dia (run 692) já foi investigado e registrado acima como o
+alarme diário normal de fila vazia, não bug de código. `content/.falhas_avisadas.json`
+já tem `fila_vazia_2026-09-12`, não repito o recado. `content/recados.md`
+sem recado pendente sem resposta. Post `2026-08-28_comida-servida` segue
+`pending` com `auditoria.veredito` `SEM OBJECAO` (conferido no post.json),
+esperando aprovação manual do Ramón — não é bug de código. Nada a
+consertar, nada a avisar — silêncio conforme a regra 3.
 
 ## 🔍 12/09/2026 (2ª checagem, vigia da nuvem) — falha do publish.yml é o alarme esperado de fila vazia, não bug
 
