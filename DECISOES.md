@@ -3,6 +3,20 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 12/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `gh` indisponível nesta
+sessão; confirmado via `mcp__github__actions_list` nos 3 workflows
+(`publish.yml`, `maintenance.yml`, `health.yml`): todas as runs desde a
+última checagem (12/09, 2ª, até 11:40Z) vieram **verdes** — o único
+vermelho do dia (run 692) já foi investigado e registrado acima como o
+alarme diário normal de fila vazia, não bug de código. `content/.falhas_avisadas.json`
+já tem `fila_vazia_2026-09-12`, não repito o recado. `content/recados.md`
+sem recado pendente sem resposta. Post `2026-08-28_comida-servida` segue
+`pending` com `auditoria.veredito` `SEM OBJECAO` (conferido no post.json),
+esperando aprovação manual do Ramón — não é bug de código. Nada a
+consertar, nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 12/09/2026 (2ª checagem, vigia da nuvem) — falha do publish.yml é o alarme esperado de fila vazia, não bug
 
 Achei 1 run vermelho novo desde a checagem anterior: `publish.yml` run 692
