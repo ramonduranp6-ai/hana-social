@@ -3,6 +3,18 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 13/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 703 (12:59Z) veio **verde**, `health.yml` run 111 e
+`maintenance.yml` run 22 seguem verdes — nenhum run vermelho novo desde a 4ª
+checagem (commit `6ae4abb`). `SAUDE-DO-PROJETO.md` sem erro aberto,
+`content/recados.md` com todos os itens `[x]`. Post `2026-08-28_comida-servida`
+com `auditoria.veredito` `SEM OBJECAO` (conferido no post.json) segue `pending`
+esperando aprovação manual do Ramón — decisão de família, já avisada. Fila
+vazia de filmagem segue como decisão de família, já avisada. Nada a
+consertar, nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 13/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
