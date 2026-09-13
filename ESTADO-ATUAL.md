@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 13/09/2026 04:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 13/09/2026 08:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,6 +94,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+b467b57 chore: checagem de rotina 13/09 (2a, vigia da nuvem) - sem bug novo
 7174e7e chore: atualiza estado da fila [skip ci]
 d8ec75c chore: checagem de rotina 13/09 (vigia da nuvem) - sem bug novo
 abf1985 chore: checagem de rotina 12/09 (5a, vigia da nuvem) - sem bug novo
@@ -101,7 +102,6 @@ abf1985 chore: checagem de rotina 12/09 (5a, vigia da nuvem) - sem bug novo
 65f55a1 chore: atualiza manutenção [skip ci]
 3a3fd11 Diário de crescimento 12/09: seguidores oscilam 331/332 (ruído), comida-servida pendente há 15 dias
 04c70d1 chore: checagem de rotina 12/09 (3a, vigia da nuvem) - sem bug novo
-94ae5ef chore: checagem de rotina 12/09 (2a, vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
@@ -114,6 +114,18 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 13/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 702 (07:34Z) já veio **verde** depois da falha do run 701
+(fila vazia, já registrada abaixo) — nenhum run vermelho novo desde a última
+checagem. `health.yml` run 108 e `maintenance.yml` run 21 seguem verdes.
+`SAUDE-DO-PROJETO.md` sem erro aberto, `content/recados.md` com todos os itens
+`[x]`. Fila vazia de filmagem (20º dia, `fila_vazia_2026-09-13` já em
+`content/.falhas_avisadas.json`) e post `2026-08-28_comida-servida` `pending`
+seguem como decisão de família, já avisadas. Nada a consertar, nada a avisar —
+silêncio conforme a regra 3.
 
 ## 🔍 13/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
