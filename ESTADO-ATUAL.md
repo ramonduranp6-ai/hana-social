@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 13/09/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 13/09/2026 20:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,6 +94,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+4e21169 chore: checagem de rotina 13/09 (5a, vigia da nuvem) - sem bug novo
 6ae4abb chore: atualiza manutenção [skip ci]
 87850dd Diário de crescimento 13/09: sem novidade, 18º dia sem post, comida-servida 16 dias pending
 f025819 chore: atualiza estado da fila [skip ci]
@@ -101,7 +102,6 @@ f025819 chore: atualiza estado da fila [skip ci]
 d4af9c0 chore: checagem de rotina 13/09 (3a, vigia da nuvem) - sem bug novo
 b467b57 chore: checagem de rotina 13/09 (2a, vigia da nuvem) - sem bug novo
 7174e7e chore: atualiza estado da fila [skip ci]
-d8ec75c chore: checagem de rotina 13/09 (vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
@@ -114,6 +114,16 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 13/09/2026 (6ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` runs 704/705/706 (até 19:09Z) seguem **verdes**, `health.yml`
+run 112 e `maintenance.yml` run 22 seguem verdes — nenhum run vermelho novo
+desde a 5ª checagem (commit `4e21169`). `SAUDE-DO-PROJETO.md` sem erro aberto,
+`content/recados.md` com todos os itens `[x]`. Post `2026-08-28_comida-servida`
+`pending` e fila vazia de filmagem seguem como decisão de família, já
+avisadas. Nada a consertar, nada a avisar — silêncio conforme a regra 3.
 
 ## 🔍 13/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
