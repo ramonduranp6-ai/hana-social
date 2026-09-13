@@ -3,6 +3,19 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 13/09/2026 (checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`
+nos 3 workflows (`publish.yml` runs até 700, `maintenance.yml` run 21,
+`health.yml` run 106): todas as runs desde a última checagem (12/09, 5ª,
+commit `abf1985`) vieram **verdes** — nenhum run vermelho novo. `content/recados.md`
+com todos os itens já marcados `[x]`, nada pendente sem resposta.
+`SAUDE-DO-PROJETO.md` sem erro aberto. Post `2026-08-28_comida-servida` segue
+`pending`, esperando aprovação manual do Ramón — não é bug de código. Fila
+vazia de filmagem nova segue em `content/.falhas_avisadas.json` (19 dias
+seguidos), já avisada, não repito. Nada a consertar, nada a avisar — silêncio
+conforme a regra 3.
+
 ## 🔍 12/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`
