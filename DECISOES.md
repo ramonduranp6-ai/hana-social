@@ -3,6 +3,20 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 14/09/2026 (2ª checagem, vigia da nuvem) — falha do publish.yml é o alarme esperado de fila vazia, não bug
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 709 (02:41Z) veio vermelho — log lido inteiro (`get_job_logs`),
+causa é o passo `Sentinela` reportando "fila com so 0 post(s) futuro(s) (minimo
+saudavel: 2)", o mesmo alarme por-desenho de sempre (fila vazia por falta de
+filmagem nova, 21º dia). `content/.falhas_avisadas.json` já tem
+`fila_vazia_2026-09-14` (dedupe funcionando), não repito o recado — já avisado
+à exaustão. `health.yml` run 114 e `maintenance.yml` run 22 seguem verdes.
+`SAUDE-DO-PROJETO.md` sem erro aberto, `content/recados.md` com todos os itens
+`[x]`. Post `2026-08-28_comida-servida` `pending` segue como decisão de
+família, já avisada. Nada a consertar, nada a avisar — silêncio conforme a
+regra 3.
+
 ## 🔍 14/09/2026 (1ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:

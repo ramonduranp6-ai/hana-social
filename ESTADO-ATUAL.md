@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 14/09/2026 00:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 14/09/2026 04:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+c282af2 chore: atualiza estado da fila [skip ci]
+9618904 chore: checagem de rotina 14/09 (1a, vigia da nuvem) - sem bug novo
 1053551 chore: checagem de rotina 13/09 (6a, vigia da nuvem) - sem bug novo
 4e21169 chore: checagem de rotina 13/09 (5a, vigia da nuvem) - sem bug novo
 6ae4abb chore: atualiza manutenção [skip ci]
 87850dd Diário de crescimento 13/09: sem novidade, 18º dia sem post, comida-servida 16 dias pending
 f025819 chore: atualiza estado da fila [skip ci]
 37dc74b chore: checagem de rotina 13/09 (4a, vigia da nuvem) - sem bug novo
-d4af9c0 chore: checagem de rotina 13/09 (3a, vigia da nuvem) - sem bug novo
-b467b57 chore: checagem de rotina 13/09 (2a, vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
@@ -114,6 +114,20 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 14/09/2026 (2ª checagem, vigia da nuvem) — falha do publish.yml é o alarme esperado de fila vazia, não bug
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 709 (02:41Z) veio vermelho — log lido inteiro (`get_job_logs`),
+causa é o passo `Sentinela` reportando "fila com so 0 post(s) futuro(s) (minimo
+saudavel: 2)", o mesmo alarme por-desenho de sempre (fila vazia por falta de
+filmagem nova, 21º dia). `content/.falhas_avisadas.json` já tem
+`fila_vazia_2026-09-14` (dedupe funcionando), não repito o recado — já avisado
+à exaustão. `health.yml` run 114 e `maintenance.yml` run 22 seguem verdes.
+`SAUDE-DO-PROJETO.md` sem erro aberto, `content/recados.md` com todos os itens
+`[x]`. Post `2026-08-28_comida-servida` `pending` segue como decisão de
+família, já avisada. Nada a consertar, nada a avisar — silêncio conforme a
+regra 3.
 
 ## 🔍 14/09/2026 (1ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
