@@ -3,6 +3,17 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 14/09/2026 (6ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` runs 710-713 (até 19:53Z) seguem **verdes**, `health.yml` run 118
+(16:32Z) segue verde — nenhum run vermelho novo desde a 5ª checagem (commit
+`6b794fa`). Post `2026-08-28_comida-servida` já com `auditoria.veredito`
+= `SEM OBJECAO` preenchido (conferido no post.json), não é o bug de campo
+faltando. Fila vazia de filmagem (19º dia) segue como decisão de família, já
+avisada e deduplicada. Nada a consertar, nada a avisar — silêncio conforme a
+regra 3.
+
 ## 🔍 14/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:

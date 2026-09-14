@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 14/09/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 14/09/2026 20:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+7115299 chore: atualiza manutenção [skip ci]
+6b794fa chore: checagem de rotina 14/09 (5a, vigia da nuvem) - sem bug novo
 d765541 diario: crescimento 14/09 - sem novidade, 19o dia sem post, comida-servida 17 dias pending
 5f6923a chore: atualiza estado [skip ci]
 b8a81a5 chore: checagem de rotina 14/09 (4a, vigia da nuvem) - sem bug novo
 401e19e chore: atualiza estado [skip ci]
 402bbff chore: checagem de rotina 14/09 (3a, vigia da nuvem) - sem bug novo
 e05c514 chore: checagem de rotina 14/09 (2a, vigia da nuvem) - sem bug novo
-c282af2 chore: atualiza estado da fila [skip ci]
-9618904 chore: checagem de rotina 14/09 (1a, vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
@@ -114,6 +114,17 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 14/09/2026 (6ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` runs 710-713 (até 19:53Z) seguem **verdes**, `health.yml` run 118
+(16:32Z) segue verde — nenhum run vermelho novo desde a 5ª checagem (commit
+`6b794fa`). Post `2026-08-28_comida-servida` já com `auditoria.veredito`
+= `SEM OBJECAO` preenchido (conferido no post.json), não é o bug de campo
+faltando. Fila vazia de filmagem (19º dia) segue como decisão de família, já
+avisada e deduplicada. Nada a consertar, nada a avisar — silêncio conforme a
+regra 3.
 
 ## 🔍 14/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
