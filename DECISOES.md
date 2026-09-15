@@ -3,6 +3,121 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 15/09/2026 (1ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` runs 710-714 e `health.yml` runs 117-119 seguem **verdes**, sem
+run vermelho novo desde a última checagem (commit `36aa0b4`, 14/09). Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito` =
+`SEM OBJECAO` já preenchido (conferido no post.json), não é o bug de campo
+faltando. `SAUDE-DO-PROJETO.md` sem erro aberto. Fila vazia de filmagem (20º
+dia) segue como decisão de família já avisada e deduplicada em
+`content/.falhas_avisadas.json`. Nada a consertar, nada a avisar — silêncio
+conforme a regra 3.
+
+## 🔍 14/09/2026 (6ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` runs 710-713 (até 19:53Z) seguem **verdes**, `health.yml` run 118
+(16:32Z) segue verde — nenhum run vermelho novo desde a 5ª checagem (commit
+`6b794fa`). Post `2026-08-28_comida-servida` já com `auditoria.veredito`
+= `SEM OBJECAO` preenchido (conferido no post.json), não é o bug de campo
+faltando. Fila vazia de filmagem (19º dia) segue como decisão de família, já
+avisada e deduplicada. Nada a consertar, nada a avisar — silêncio conforme a
+regra 3.
+
+## 🔍 14/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 711 (15:07Z) veio **verde**, `health.yml` run 117 (13:15Z)
+também — nenhum run vermelho novo desde a 4ª checagem (commit `d765541`).
+`SAUDE-DO-PROJETO.md` sem erro aberto, `content/recados.md` com todos os itens
+`[x]`, `content/.falhas_avisadas.json` já com `fila_vazia_2026-09-14` (dedupe
+funcionando, não repito o recado). Post `2026-08-28_comida-servida` `pending`
+e fila vazia de filmagem (22º dia) seguem como decisão de família, já
+avisadas. Nada a consertar, nada a avisar — silêncio conforme a regra 3.
+
+## 🔍 14/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 710 (08:23Z) segue **verde**, `health.yml` run 116 (08:32Z)
+e `maintenance.yml` run 22 seguem verdes — nenhum run novo (vermelho ou não)
+desde a 3ª checagem (commit `402bbff`). `SAUDE-DO-PROJETO.md` sem erro aberto,
+`content/recados.md` com todos os itens `[x]`, `content/.falhas_avisadas.json`
+já com `fila_vazia_2026-09-14` (dedupe funcionando, não repito o recado). Post
+`2026-08-28_comida-servida` `pending` e fila vazia de filmagem (22º dia)
+seguem como decisão de família, já avisadas. Nada a consertar, nada a avisar
+— silêncio conforme a regra 3.
+
+## 🔍 14/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 710 (08:23Z) segue **verde** — nenhum run vermelho novo desde
+a 2ª checagem (run 709, já diagnosticado como o alarme por-desenho de fila
+vazia). `SAUDE-DO-PROJETO.md` sem erro aberto, `content/recados.md` com todos
+os itens `[x]`, `content/.falhas_avisadas.json` já com `fila_vazia_2026-09-14`
+(dedupe funcionando, não repito o recado). Post `2026-08-28_comida-servida`
+`pending` e fila vazia de filmagem (22º dia) seguem como decisão de família,
+já avisadas. Nada a consertar, nada a avisar — silêncio conforme a regra 3.
+
+## 🔍 14/09/2026 (2ª checagem, vigia da nuvem) — falha do publish.yml é o alarme esperado de fila vazia, não bug
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 709 (02:41Z) veio vermelho — log lido inteiro (`get_job_logs`),
+causa é o passo `Sentinela` reportando "fila com so 0 post(s) futuro(s) (minimo
+saudavel: 2)", o mesmo alarme por-desenho de sempre (fila vazia por falta de
+filmagem nova, 21º dia). `content/.falhas_avisadas.json` já tem
+`fila_vazia_2026-09-14` (dedupe funcionando), não repito o recado — já avisado
+à exaustão. `health.yml` run 114 e `maintenance.yml` run 22 seguem verdes.
+`SAUDE-DO-PROJETO.md` sem erro aberto, `content/recados.md` com todos os itens
+`[x]`. Post `2026-08-28_comida-servida` `pending` segue como decisão de
+família, já avisada. Nada a consertar, nada a avisar — silêncio conforme a
+regra 3.
+
+## 🔍 14/09/2026 (1ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 708 (23:48Z de 13/09) segue **verde**, `health.yml` run 113
+e `maintenance.yml` run 22 seguem verdes — nenhum run vermelho novo desde a
+6ª checagem de 13/09 (commit `1053551`). `SAUDE-DO-PROJETO.md` sem erro
+aberto, `content/recados.md` com todos os itens `[x]`. Post
+`2026-08-28_comida-servida` `pending` e fila vazia de filmagem seguem como
+decisão de família, já avisadas. Nada a consertar, nada a avisar — silêncio
+conforme a regra 3.
+
+## 🔍 13/09/2026 (6ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` runs 704/705/706 (até 19:09Z) seguem **verdes**, `health.yml`
+run 112 e `maintenance.yml` run 22 seguem verdes — nenhum run vermelho novo
+desde a 5ª checagem (commit `4e21169`). `SAUDE-DO-PROJETO.md` sem erro aberto,
+`content/recados.md` com todos os itens `[x]`. Post `2026-08-28_comida-servida`
+`pending` e fila vazia de filmagem seguem como decisão de família, já
+avisadas. Nada a consertar, nada a avisar — silêncio conforme a regra 3.
+
+## 🔍 13/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 703 (12:59Z) veio **verde**, `health.yml` run 111 e
+`maintenance.yml` run 22 seguem verdes — nenhum run vermelho novo desde a 4ª
+checagem (commit `6ae4abb`). `SAUDE-DO-PROJETO.md` sem erro aberto,
+`content/recados.md` com todos os itens `[x]`. Post `2026-08-28_comida-servida`
+com `auditoria.veredito` `SEM OBJECAO` (conferido no post.json) segue `pending`
+esperando aprovação manual do Ramón — decisão de família, já avisada. Fila
+vazia de filmagem segue como decisão de família, já avisada. Nada a
+consertar, nada a avisar — silêncio conforme a regra 3.
+
+## 🔍 13/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 702 segue a última execução (verde, 07:34Z), nenhum run novo
+desde a 3ª checagem. `health.yml` run 109 e `maintenance.yml` run 21 seguem
+verdes. `SAUDE-DO-PROJETO.md` sem erro aberto, `content/recados.md` com todos
+os itens `[x]`. Fila vazia de filmagem (20º dia, `fila_vazia_2026-09-13` já em
+`content/.falhas_avisadas.json`) e post `2026-08-28_comida-servida` `pending`
+seguem como decisão de família, já avisadas. Nada a consertar, nada a avisar —
+silêncio conforme a regra 3.
+
 ## 🔍 13/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
