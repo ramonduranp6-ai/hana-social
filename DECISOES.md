@@ -3,6 +3,19 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 15/09/2026 (2ª checagem, vigia da nuvem) — run 715 vermelho é o mesmo alarme por-desenho de fila vazia
+
+`publish.yml` run 715 (01:06Z) veio vermelho — log lido inteiro
+(`get_job_logs`): causa é `publisher/sentinel.py` reportando "fila com so 0
+post(s) futuro(s) (minimo saudavel: 2)", exit code 1 — mesmo padrão já
+diagnosticado na 2ª checagem de 14/09 (run 709). `content/.falhas_avisadas.json`
+já tem `fila_vazia_2026-09-15` (dedupe funcionando, não repito o recado). Post
+`2026-08-28_comida-servida` `pending` com `auditoria.veredito` = `SEM OBJECAO`
+conferido de novo no post.json (não é o bug de campo faltando). `health.yml`
+run 121 segue verde. `SAUDE-DO-PROJETO.md` sem erro aberto. Fila vazia de
+filmagem (23º dia) segue como decisão de família, já avisada à exaustão. Nada
+a consertar, nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 15/09/2026 (1ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:

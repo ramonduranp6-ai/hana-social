@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 14/09/2026 21:48. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 15/09/2026 04:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,28 +26,19 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-09-15T00:32:48Z push success
-2026-09-14T22:52:55Z schedule success
-2026-09-14T20:32:53Z push success
+(não consegui consultar — checar 'gh auth status')
 ```
-- Vigia local (Agendador do Windows): próxima execução quarta-feira, 16 de setembro de 2026 18:10:00
-- Token renovável automático: CONFIGURADO
+- Vigia local (Agendador do Windows): próxima execução não encontrada
+- Token renovável automático: FALTA criar studio/.token
 
 ## Esperando o OK do Ramón
-Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
-
-- 2026-08-22_cenoura-variante-v1.mp4
-- 2026-08-22_cenoura-variante-v2.mp4
-- 2026-08-22_cenoura-variante-v3.mp4
-
-Ele responde pelos números. Enquanto não responder, **não commitar**
-mudança de status nem publicar.
+Nada esperando aprovação (pasta vazia ou inexistente).
 
 ## Acervo de fotos
-- Brutas a processar: 39 arquivos
-- Editadas prontas: 4
-- Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34678
+- Brutas a processar: 0 arquivos
+- Editadas prontas: 0
+- Artes recebidas do outro projeto: 0
+- Fotos do iPhone sincronizadas (iCloud): 0
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -103,18 +94,19 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+63dce5f chore: atualiza estado da fila [skip ci]
+d6e635d checkpoint 14/09: bastao - perfil parado ha 19 dias, reel 17 dias pending esperando o OK dele
 989dec3 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
 48646c9 chore: saude do projeto (vigia local) [skip ci]
 4a078ac chore: checagem de rotina 15/09 (1a, vigia da nuvem) - sem bug novo
 36aa0b4 chore: checagem de rotina 14/09 (6a, vigia da nuvem) - sem bug novo
 7115299 chore: atualiza manutenção [skip ci]
 6b794fa chore: checagem de rotina 14/09 (5a, vigia da nuvem) - sem bug novo
-d765541 diario: crescimento 14/09 - sem novidade, 19o dia sem post, comida-servida 17 dias pending
-5f6923a chore: atualiza estado [skip ci]
 ```
 Alterações não commitadas:
 ```
 M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -122,6 +114,19 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 15/09/2026 (2ª checagem, vigia da nuvem) — run 715 vermelho é o mesmo alarme por-desenho de fila vazia
+
+`publish.yml` run 715 (01:06Z) veio vermelho — log lido inteiro
+(`get_job_logs`): causa é `publisher/sentinel.py` reportando "fila com so 0
+post(s) futuro(s) (minimo saudavel: 2)", exit code 1 — mesmo padrão já
+diagnosticado na 2ª checagem de 14/09 (run 709). `content/.falhas_avisadas.json`
+já tem `fila_vazia_2026-09-15` (dedupe funcionando, não repito o recado). Post
+`2026-08-28_comida-servida` `pending` com `auditoria.veredito` = `SEM OBJECAO`
+conferido de novo no post.json (não é o bug de campo faltando). `health.yml`
+run 121 segue verde. `SAUDE-DO-PROJETO.md` sem erro aberto. Fila vazia de
+filmagem (23º dia) segue como decisão de família, já avisada à exaustão. Nada
+a consertar, nada a avisar — silêncio conforme a regra 3.
 
 ## 🔍 15/09/2026 (1ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
