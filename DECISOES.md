@@ -3,6 +3,18 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 15/09/2026 (1ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` runs 710-714 e `health.yml` runs 117-119 seguem **verdes**, sem
+run vermelho novo desde a última checagem (commit `36aa0b4`, 14/09). Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito` =
+`SEM OBJECAO` já preenchido (conferido no post.json), não é o bug de campo
+faltando. `SAUDE-DO-PROJETO.md` sem erro aberto. Fila vazia de filmagem (20º
+dia) segue como decisão de família já avisada e deduplicada em
+`content/.falhas_avisadas.json`. Nada a consertar, nada a avisar — silêncio
+conforme a regra 3.
+
 ## 🔍 14/09/2026 (6ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
