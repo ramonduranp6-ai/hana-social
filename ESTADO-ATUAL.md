@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 15/09/2026 12:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 15/09/2026 16:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,18 +94,19 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+698479c diario: 15/09 - 20o dia sem post, comida-servida 18 dias parada
+cd289d5 chore: atualiza estado da fila [skip ci]
+9cda765 chore: checagem de rotina 15/09 (4a, vigia da nuvem) - sem bug novo
 9ca4b4e chore: checagem de rotina 15/09 (3a, vigia da nuvem) - sem bug novo
 b7479db chore: checagem de rotina 15/09 (2a, vigia da nuvem) - sem bug novo
 63dce5f chore: atualiza estado da fila [skip ci]
 d6e635d checkpoint 14/09: bastao - perfil parado ha 19 dias, reel 17 dias pending esperando o OK dele
 989dec3 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
-48646c9 chore: saude do projeto (vigia local) [skip ci]
-4a078ac chore: checagem de rotina 15/09 (1a, vigia da nuvem) - sem bug novo
-36aa0b4 chore: checagem de rotina 14/09 (6a, vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
-M ESTADO-ATUAL.md
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -113,6 +114,33 @@ M ESTADO-ATUAL.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 15/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 718 (16:14Z) e `health.yml` run 125 (13:11Z) seguem
+**verdes** — nenhum run vermelho novo desde a 4ª checagem (run 717/124).
+`SAUDE-DO-PROJETO.md` sem erro aberto, `content/recados.md` com todos os
+itens `[x]`, `content/.falhas_avisadas.json` já com `fila_vazia_2026-09-15`
+(dedupe funcionando). Post `2026-08-28_comida-servida` `pending` com
+`auditoria.veredito` = `SEM OBJECAO` já preenchido e fila vazia de filmagem
+(21º dia) seguem como decisão de família, já avisadas à exaustão. Nada a
+consertar, nada a avisar — silêncio conforme a regra 3.
+
+## 🔍 15/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 717 (11:57Z) segue **verde**, `health.yml` run 123 (08:33Z)
+também — nenhum run vermelho novo desde a 3ª checagem (run 716). Log do run
+715 (o único vermelho de hoje) já lido por inteiro nesta checagem também:
+confirma de novo que é `publisher/sentinel.py` saindo com exit 1 por-desenho
+("fila com so 0 post(s) futuro(s)"), dedupado em `content/.falhas_avisadas.json`
+(`fila_vazia_2026-09-15` já presente) — não é bug de código. `SAUDE-DO-PROJETO.md`
+sem erro aberto, `content/recados.md` com todos os itens `[x]`. Post
+`2026-08-28_comida-servida` `pending` com `auditoria.veredito` = `SEM OBJECAO`
+já preenchido (conferido no post.json), e fila vazia de filmagem (23º dia)
+seguem como decisão de família, já avisadas à exaustão em checagens
+anteriores. Nada a consertar, nada a avisar — silêncio conforme a regra 3.
 
 ## 🔍 15/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
