@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 15/09/2026 04:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 15/09/2026 08:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,6 +94,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+b7479db chore: checagem de rotina 15/09 (2a, vigia da nuvem) - sem bug novo
 63dce5f chore: atualiza estado da fila [skip ci]
 d6e635d checkpoint 14/09: bastao - perfil parado ha 19 dias, reel 17 dias pending esperando o OK dele
 989dec3 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
@@ -101,7 +102,6 @@ d6e635d checkpoint 14/09: bastao - perfil parado ha 19 dias, reel 17 dias pendin
 4a078ac chore: checagem de rotina 15/09 (1a, vigia da nuvem) - sem bug novo
 36aa0b4 chore: checagem de rotina 14/09 (6a, vigia da nuvem) - sem bug novo
 7115299 chore: atualiza manutenção [skip ci]
-6b794fa chore: checagem de rotina 14/09 (5a, vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
@@ -114,6 +114,18 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 15/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 716 (06:20Z) segue **verde**, `health.yml` run 122 (04:33Z)
+também — nenhum run vermelho novo desde a 2ª checagem (run 715, já
+diagnosticado como fila vazia por-desenho). `SAUDE-DO-PROJETO.md` sem erro
+aberto, `content/recados.md` com todos os itens `[x]`, `content/.falhas_avisadas.json`
+com `fila_vazia_2026-09-15` (dedupe funcionando, não repito o recado). Post
+`2026-08-28_comida-servida` `pending` e fila vazia de filmagem (23º dia)
+seguem como decisão de família, já avisadas à exaustão. Nada a consertar,
+nada a avisar — silêncio conforme a regra 3.
 
 ## 🔍 15/09/2026 (2ª checagem, vigia da nuvem) — run 715 vermelho é o mesmo alarme por-desenho de fila vazia
 

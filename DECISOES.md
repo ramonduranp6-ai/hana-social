@@ -3,6 +3,18 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 15/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 716 (06:20Z) segue **verde**, `health.yml` run 122 (04:33Z)
+também — nenhum run vermelho novo desde a 2ª checagem (run 715, já
+diagnosticado como fila vazia por-desenho). `SAUDE-DO-PROJETO.md` sem erro
+aberto, `content/recados.md` com todos os itens `[x]`, `content/.falhas_avisadas.json`
+com `fila_vazia_2026-09-15` (dedupe funcionando, não repito o recado). Post
+`2026-08-28_comida-servida` `pending` e fila vazia de filmagem (23º dia)
+seguem como decisão de família, já avisadas à exaustão. Nada a consertar,
+nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 15/09/2026 (2ª checagem, vigia da nuvem) — run 715 vermelho é o mesmo alarme por-desenho de fila vazia
 
 `publish.yml` run 715 (01:06Z) veio vermelho — log lido inteiro
