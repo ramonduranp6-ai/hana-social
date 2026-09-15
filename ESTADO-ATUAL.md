@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 15/09/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 15/09/2026 20:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,19 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+9f34b8b chore: checagem de rotina 15/09 (6a, vigia da nuvem) - sem bug novo
+d920515 chore: atualiza manutenção [skip ci]
+3ac76f1 chore: checagem de rotina 15/09 (5a, vigia da nuvem) - sem bug novo
 698479c diario: 15/09 - 20o dia sem post, comida-servida 18 dias parada
 cd289d5 chore: atualiza estado da fila [skip ci]
 9cda765 chore: checagem de rotina 15/09 (4a, vigia da nuvem) - sem bug novo
 9ca4b4e chore: checagem de rotina 15/09 (3a, vigia da nuvem) - sem bug novo
 b7479db chore: checagem de rotina 15/09 (2a, vigia da nuvem) - sem bug novo
-63dce5f chore: atualiza estado da fila [skip ci]
-d6e635d checkpoint 14/09: bastao - perfil parado ha 19 dias, reel 17 dias pending esperando o OK dele
-989dec3 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
-```
-Alterações não commitadas:
-```
-M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -114,6 +109,18 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 15/09/2026 (6ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 720 (19:45Z) segue **verde**, `health.yml` run 126 (16:32Z)
+também — nenhum run vermelho novo desde a 5ª checagem (run 718/125).
+`SAUDE-DO-PROJETO.md` sem erro aberto, `content/recados.md` com todos os
+itens `[x]`, `content/.falhas_avisadas.json` já com `fila_vazia_2026-09-15`
+(dedupe funcionando). Post `2026-08-28_comida-servida` `pending` com
+`auditoria.veredito` = `SEM OBJECAO` conferido de novo no post.json e fila
+vazia de filmagem (21º dia) seguem como decisão de família, já avisadas à
+exaustão. Nada a consertar, nada a avisar — silêncio conforme a regra 3.
 
 ## 🔍 15/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
