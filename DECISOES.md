@@ -1492,39 +1492,38 @@ processo no meio:**
 combina com a família, não é calendário de conteúdo) e sem decidir se estica
 a duração (6s vs 9-12s, sugestão do auditor). Esperando ele ver e aprovar.
 
-## 🏁 BASTÃO (atualizado em 30/08 10:00, PC de casa)
+## 🏁 BASTÃO (atualizado em 14/09 manhã)
 
-· **Onde paramos:** o Reel **"a comida tá servida"** está pronto, auditado e
-  **SEM OBJEÇÃO**, mas **NÃO foi ao ar** — ficou `pending` porque não teve o
-  aprovar/recusar dele, e o slot de 28/08 14:00Z passou em branco. A peça está
-  em `content/queue/2026-08-28_comida-servida/` (vídeo `comida-servida-v3.mp4`,
-  7,5s, 6 cortes, custo R$ 0). O campo `auditoria.veredito` **já está escrito** —
-  falta só `status: approved`. Se ele aprovar, reagendar para o próximo slot
-  (seg/qua/sex, 14:00Z) em vez de publicar fora de hora.
+· **Onde paramos: o perfil está PARADO há 19 dias.** Último post foi
+  26/08 (Eloen). O Reel **"a comida tá servida"** está pronto, auditado
+  (SEM OBJEÇÃO) e **17 dias `pending`** em
+  `content/queue/2026-08-28_comida-servida/` — nunca teve o aprovar/recusar
+  dele. O robô de crescimento na nuvem vem escrevendo isso no diário TODO DIA
+  desde 28/08, sem ninguém ler.
 
-· **Esperando ele (3 coisas, em ordem de importância):**
-  1. **Aprovar ou recusar o Reel** acima — mandado na conversa em 28/08.
-  2. **Escanear o QR do WhatsApp Web.** Sem isso não sai a instrução para a
-     **Ana** (mandar arquivos COMO DOCUMENTO) nem entra material novo. O
-     roteiro do "teste das duas canecas" já foi mandado a ela em 26/08, antes
-     do logout. **Causa do logout descoberta em 27/08: eu abria um Chrome NOVO
-     a cada uso e ele só permite 4 sessões.** Conserto combinado: manter UMA
-     aba fixa, nunca fechada — exceção consciente à regra 7 do projeto.
-  3. Google Drive dele está cheio (100/100 GB) — decisão de dinheiro dele.
+· **Esperando ele (é só isto, e trava tudo):** aprovar ou recusar o Reel.
+  O `auditoria.veredito` já está escrito; falta só `status: approved` e
+  reagendar pro próximo slot (seg/qua/sex 14:00Z). Se ele recusar, tudo bem —
+  mas aí a fila fica ZERADA e o projeto precisa de cena nova.
 
-· **Próximo passo:** **a fila está vazia e é esse o problema real** — os 7 posts
-  antigos estão todos `rejected` e vencidos, e nada entrou em
-  `01 - brutas` desde 09/08. Ainda há garimpo inédito aproveitável em
-  `Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30` (os clipes 08, 20
-  e 26 nunca foram olhados). Montar a próxima peça de lá **sem esperar a Ana**,
-  e avisá-lo quando o garimpo acabar — a regra 3l manda pedir cena nova ANTES
-  de a prateleira esvaziar, não depois.
+· **O que os números dizem (coleta de 12/09):** 332 seguidores, +1 em 12 dias.
+  **Reel = 392 de alcance médio · Foto = 52** — Reel rende ~7,5x. O da Eloen
+  fez 1000 de alcance e 1341 views, muito acima de tudo, porque tinha notícia
+  de verdade. Confirma a regra 3l (foto parada fora) e sugere que o que puxa
+  não é bonito, é ACONTECIMENTO.
 
-· **Cuidado que custou caro nesta rodada:** clipe `05_A5077980` do garimpo tem
-  um cão marrom/fawn dormindo que **NÃO parece a Hana** — não usar sem certeza.
-  E o clipe `02_B9E89AD8` (quintal, pijama rosa) tem dúvida de identidade não
-  resolvida: olho lê âmbar contra o cinza-azulado dos clipes de dentro de casa.
-  **Os dois estão fora até alguém confirmar com ele.**
+· **Alerta do hub de 12/09 NÃO se aplica aqui** (conferido no código): o
+  comunicado diz que reel "rejected" costuma ser o publicador chamando
+  `media_publish` antes do container chegar em `FINISHED`. Neste projeto
+  `rejected` é **recusa do Ramón** (`publisher/telegram_approve.py:295`);
+  falha de API cairia em `failed`, e não há nenhum. Os 7 posts vencidos na
+  fila foram recusados por ele mesmo, não por bug.
+
+· **Material que ainda existe:** garimpo inédito em
+  `Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30` (clipes 08, 20 e
+  26 nunca foram olhados). **FORA:** o clipe `05_A5077980` (cão marrom que não
+  parece a Hana) e o `02_B9E89AD8` (quintal/pijama, dúvida de identidade não
+  resolvida — olho âmbar contra cinza-azulado).
 
 
 ## 🎬 14/08/2026 — TESTE REAL DO HIGGSFIELD: motor bom, catálogo de efeitos reprovado

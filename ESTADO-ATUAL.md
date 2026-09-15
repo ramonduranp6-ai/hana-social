@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 14/09/2026 20:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 14/09/2026 21:48. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,19 +26,28 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-(não consegui consultar — checar 'gh auth status')
+2026-09-15T00:32:48Z push success
+2026-09-14T22:52:55Z schedule success
+2026-09-14T20:32:53Z push success
 ```
-- Vigia local (Agendador do Windows): próxima execução não encontrada
-- Token renovável automático: FALTA criar studio/.token
+- Vigia local (Agendador do Windows): próxima execução quarta-feira, 16 de setembro de 2026 18:10:00
+- Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
-Nada esperando aprovação (pasta vazia ou inexistente).
+Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
+
+- 2026-08-22_cenoura-variante-v1.mp4
+- 2026-08-22_cenoura-variante-v2.mp4
+- 2026-08-22_cenoura-variante-v3.mp4
+
+Ele responde pelos números. Enquanto não responder, **não commitar**
+mudança de status nem publicar.
 
 ## Acervo de fotos
-- Brutas a processar: 0 arquivos
-- Editadas prontas: 0
-- Artes recebidas do outro projeto: 0
-- Fotos do iPhone sincronizadas (iCloud): 0
+- Brutas a processar: 39 arquivos
+- Editadas prontas: 4
+- Artes recebidas do outro projeto: 1
+- Fotos do iPhone sincronizadas (iCloud): 34678
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -94,19 +103,18 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+989dec3 Merge branch 'main' of https://github.com/ramonduranp6-ai/hana-social
+48646c9 chore: saude do projeto (vigia local) [skip ci]
+4a078ac chore: checagem de rotina 15/09 (1a, vigia da nuvem) - sem bug novo
+36aa0b4 chore: checagem de rotina 14/09 (6a, vigia da nuvem) - sem bug novo
 7115299 chore: atualiza manutenção [skip ci]
 6b794fa chore: checagem de rotina 14/09 (5a, vigia da nuvem) - sem bug novo
 d765541 diario: crescimento 14/09 - sem novidade, 19o dia sem post, comida-servida 17 dias pending
 5f6923a chore: atualiza estado [skip ci]
-b8a81a5 chore: checagem de rotina 14/09 (4a, vigia da nuvem) - sem bug novo
-401e19e chore: atualiza estado [skip ci]
-402bbff chore: checagem de rotina 14/09 (3a, vigia da nuvem) - sem bug novo
-e05c514 chore: checagem de rotina 14/09 (2a, vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
 M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -114,6 +122,18 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 15/09/2026 (1ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` runs 710-714 e `health.yml` runs 117-119 seguem **verdes**, sem
+run vermelho novo desde a última checagem (commit `36aa0b4`, 14/09). Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito` =
+`SEM OBJECAO` já preenchido (conferido no post.json), não é o bug de campo
+faltando. `SAUDE-DO-PROJETO.md` sem erro aberto. Fila vazia de filmagem (20º
+dia) segue como decisão de família já avisada e deduplicada em
+`content/.falhas_avisadas.json`. Nada a consertar, nada a avisar — silêncio
+conforme a regra 3.
 
 ## 🔍 14/09/2026 (6ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
@@ -1592,39 +1612,38 @@ processo no meio:**
 combina com a família, não é calendário de conteúdo) e sem decidir se estica
 a duração (6s vs 9-12s, sugestão do auditor). Esperando ele ver e aprovar.
 
-## 🏁 BASTÃO (atualizado em 30/08 10:00, PC de casa)
+## 🏁 BASTÃO (atualizado em 14/09 manhã)
 
-· **Onde paramos:** o Reel **"a comida tá servida"** está pronto, auditado e
-  **SEM OBJEÇÃO**, mas **NÃO foi ao ar** — ficou `pending` porque não teve o
-  aprovar/recusar dele, e o slot de 28/08 14:00Z passou em branco. A peça está
-  em `content/queue/2026-08-28_comida-servida/` (vídeo `comida-servida-v3.mp4`,
-  7,5s, 6 cortes, custo R$ 0). O campo `auditoria.veredito` **já está escrito** —
-  falta só `status: approved`. Se ele aprovar, reagendar para o próximo slot
-  (seg/qua/sex, 14:00Z) em vez de publicar fora de hora.
+· **Onde paramos: o perfil está PARADO há 19 dias.** Último post foi
+  26/08 (Eloen). O Reel **"a comida tá servida"** está pronto, auditado
+  (SEM OBJEÇÃO) e **17 dias `pending`** em
+  `content/queue/2026-08-28_comida-servida/` — nunca teve o aprovar/recusar
+  dele. O robô de crescimento na nuvem vem escrevendo isso no diário TODO DIA
+  desde 28/08, sem ninguém ler.
 
-· **Esperando ele (3 coisas, em ordem de importância):**
-  1. **Aprovar ou recusar o Reel** acima — mandado na conversa em 28/08.
-  2. **Escanear o QR do WhatsApp Web.** Sem isso não sai a instrução para a
-     **Ana** (mandar arquivos COMO DOCUMENTO) nem entra material novo. O
-     roteiro do "teste das duas canecas" já foi mandado a ela em 26/08, antes
-     do logout. **Causa do logout descoberta em 27/08: eu abria um Chrome NOVO
-     a cada uso e ele só permite 4 sessões.** Conserto combinado: manter UMA
-     aba fixa, nunca fechada — exceção consciente à regra 7 do projeto.
-  3. Google Drive dele está cheio (100/100 GB) — decisão de dinheiro dele.
+· **Esperando ele (é só isto, e trava tudo):** aprovar ou recusar o Reel.
+  O `auditoria.veredito` já está escrito; falta só `status: approved` e
+  reagendar pro próximo slot (seg/qua/sex 14:00Z). Se ele recusar, tudo bem —
+  mas aí a fila fica ZERADA e o projeto precisa de cena nova.
 
-· **Próximo passo:** **a fila está vazia e é esse o problema real** — os 7 posts
-  antigos estão todos `rejected` e vencidos, e nada entrou em
-  `01 - brutas` desde 09/08. Ainda há garimpo inédito aproveitável em
-  `Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30` (os clipes 08, 20
-  e 26 nunca foram olhados). Montar a próxima peça de lá **sem esperar a Ana**,
-  e avisá-lo quando o garimpo acabar — a regra 3l manda pedir cena nova ANTES
-  de a prateleira esvaziar, não depois.
+· **O que os números dizem (coleta de 12/09):** 332 seguidores, +1 em 12 dias.
+  **Reel = 392 de alcance médio · Foto = 52** — Reel rende ~7,5x. O da Eloen
+  fez 1000 de alcance e 1341 views, muito acima de tudo, porque tinha notícia
+  de verdade. Confirma a regra 3l (foto parada fora) e sugere que o que puxa
+  não é bonito, é ACONTECIMENTO.
 
-· **Cuidado que custou caro nesta rodada:** clipe `05_A5077980` do garimpo tem
-  um cão marrom/fawn dormindo que **NÃO parece a Hana** — não usar sem certeza.
-  E o clipe `02_B9E89AD8` (quintal, pijama rosa) tem dúvida de identidade não
-  resolvida: olho lê âmbar contra o cinza-azulado dos clipes de dentro de casa.
-  **Os dois estão fora até alguém confirmar com ele.**
+· **Alerta do hub de 12/09 NÃO se aplica aqui** (conferido no código): o
+  comunicado diz que reel "rejected" costuma ser o publicador chamando
+  `media_publish` antes do container chegar em `FINISHED`. Neste projeto
+  `rejected` é **recusa do Ramón** (`publisher/telegram_approve.py:295`);
+  falha de API cairia em `failed`, e não há nenhum. Os 7 posts vencidos na
+  fila foram recusados por ele mesmo, não por bug.
+
+· **Material que ainda existe:** garimpo inédito em
+  `Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30` (clipes 08, 20 e
+  26 nunca foram olhados). **FORA:** o clipe `05_A5077980` (cão marrom que não
+  parece a Hana) e o `02_B9E89AD8` (quintal/pijama, dúvida de identidade não
+  resolvida — olho âmbar contra cinza-azulado).
 
 
 ## 🎬 14/08/2026 — TESTE REAL DO HIGGSFIELD: motor bom, catálogo de efeitos reprovado
