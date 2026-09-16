@@ -3,6 +3,17 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 16/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 724 (10:34Z) veio **verde** — único run novo desde a 2ª
+checagem (run 723). `health.yml` run 129 segue verde. `SAUDE-DO-PROJETO.md`
+sem erro aberto, `content/recados.md` com todos os itens `[x]`,
+`content/.falhas_avisadas.json` já com `fila_vazia_2026-09-16` (dedupe
+funcionando). Post `2026-08-28_comida-servida` segue `pending` e fila vazia
+de filmagem (22º dia) seguem como decisão de família, já avisadas à
+exaustão. Nada a consertar, nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 16/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
