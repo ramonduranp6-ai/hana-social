@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 16/09/2026 04:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 16/09/2026 08:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,6 +94,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+1266e75 chore: checagem de rotina 16/09 (1a, vigia da nuvem) - sem bug novo
 39bdb0a chore: atualiza estado da fila [skip ci]
 a85e011 chore: checagem de rotina 15/09 (6a, vigia da nuvem) - sem bug novo
 d920515 chore: atualiza manutenção [skip ci]
@@ -101,7 +102,6 @@ d920515 chore: atualiza manutenção [skip ci]
 698479c diario: 15/09 - 20o dia sem post, comida-servida 18 dias parada
 cd289d5 chore: atualiza estado da fila [skip ci]
 9cda765 chore: checagem de rotina 15/09 (4a, vigia da nuvem) - sem bug novo
-9ca4b4e chore: checagem de rotina 15/09 (3a, vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
@@ -114,6 +114,18 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 16/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 723 (05:32Z) veio **verde** — o único vermelho desde a 1ª
+checagem (run 722) já tinha sido diagnosticado lá (`sentinel.py` saindo com
+exit 1 por-desenho, fila vazia, dedupado). `health.yml` run 128 segue verde.
+`SAUDE-DO-PROJETO.md` sem erro aberto, `content/recados.md` com todos os
+itens `[x]`, `content/.falhas_avisadas.json` já com `fila_vazia_2026-09-16`.
+Post `2026-08-28_comida-servida` segue `pending` e fila vazia de filmagem
+(22º dia) seguem como decisão de família, já avisadas à exaustão. Nada a
+consertar, nada a avisar — silêncio conforme a regra 3.
 
 ## 🔍 16/09/2026 (1ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
