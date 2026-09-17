@@ -3,6 +3,20 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 17/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 730 (05:04Z, mais recente) veio **verde** — único run novo
+desde a 2ª checagem de hoje (run 729, já diagnosticado como `sentinel.py`
+saindo 1 por-desenho com fila vazia). `health.yml` run 133 (00:33Z) segue
+verde, nenhum run novo. `SAUDE-DO-PROJETO.md` sem erro aberto.
+`content/.falhas_avisadas.json` já com `fila_vazia_2026-09-17` (dedupe
+funcionando, não repito o recado). Post `2026-08-28_comida-servida` segue
+`pending` com auditoria `SEM OBJECAO` — só falta o Ramón aprovar ou
+recusar, decisão dele, não mexo. Fila vazia de filmagem (24º dia) segue
+decisão de família, já avisada à exaustão. Nada a consertar, nada a
+avisar — silêncio conforme a regra 3.
+
 ## 🔍 17/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
