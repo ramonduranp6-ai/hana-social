@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 17/09/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 17/09/2026 20:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,19 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+e1dc361 chore: checagem de rotina 17/09 (6a, vigia da nuvem) - sem bug novo
+e422156 chore: atualiza manutenção [skip ci]
+c57ba00 chore: checagem de rotina 17/09 (5a, vigia da nuvem) - sem bug novo
 3b031ab Diario de crescimento 17/09: seguidores comecam a cair (332->330 em 6 dias)
 3e2c02b chore: checagem de rotina 17/09 (4a, vigia da nuvem) - sem bug novo
 29a99bb chore: checagem de rotina 17/09 (3a, vigia da nuvem) - sem bug novo
 8ea12ec chore: atualiza estado da fila [skip ci]
 f701fda chore: checagem de rotina 17/09 (2a, vigia da nuvem) - sem bug novo
-c12d869 chore: checagem de rotina 17/09 (1a, vigia da nuvem) - sem bug novo
-6569b5e chore: atualiza estado da fila [skip ci]
-ef744f8 chore: checagem de rotina 16/09 (5a, vigia da nuvem) - sem bug novo
-```
-Alterações não commitadas:
-```
-M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -114,6 +109,18 @@ M DECISOES.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 17/09/2026 (6ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 734 (19:08Z, mais recente) veio **verde** — dois runs novos
+desde a 5ª checagem de hoje (run 733 também verde). `health.yml` sem run novo
+desde o 137 (16:32Z, push da 5ª checagem). `SAUDE-DO-PROJETO.md` sem erro
+aberto. Post `2026-08-28_comida-servida` segue `pending` com auditoria
+`SEM OBJECAO` — só falta o Ramón aprovar ou recusar, decisão dele, não mexo.
+Fila vazia de filmagem (25º dia) segue decisão de família, já avisada à
+exaustão (dedupe em `content/.falhas_avisadas.json` funcionando). Nada a
+consertar, nada a avisar — silêncio conforme a regra 3.
 
 ## 🔍 17/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
