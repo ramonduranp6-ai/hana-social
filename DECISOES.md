@@ -3,6 +3,17 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 📉 17/09/2026 — análise diária de crescimento: seguidores começaram a cair
+
+Coleta de 09-16 (330 seguidores) mostra a primeira queda desde 09-11→09-13:
+últimos 6 dias 332, 332, 331, 331, 331, **330**. Continua sem nenhum
+salvo/compartilhamento novo (12 dos 13 posts em 0/0) e é o **22º dia sem
+post novo** — `2026-08-28_comida-servida` segue `pending`, auditoria
+`SEM OBJECAO` desde 28/08, **20 dias parado** esperando o Ramón aprovar ou
+recusar. Não dá pra provar causa e efeito, mas a fila travada e a queda
+de seguidor estão acontecendo juntas. Detalhe em
+`estrategia/diario-crescimento-2026-09-17.md`.
+
 ## 🔍 17/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
