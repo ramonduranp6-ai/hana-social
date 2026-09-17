@@ -3,6 +3,18 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 17/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 732 (15:07Z, mais recente) veio **verde** — único run novo
+desde a 4ª checagem de hoje (run 731). `health.yml` run 136 (13:06Z, o próprio
+push da análise de crescimento) segue verde, nenhum run novo desde então.
+`SAUDE-DO-PROJETO.md` sem erro aberto. Post `2026-08-28_comida-servida` segue
+`pending` com auditoria `SEM OBJECAO` — só falta o Ramón aprovar ou recusar,
+decisão dele, não mexo. Fila vazia de filmagem (25º dia) segue decisão de
+família, já avisada à exaustão (dedupe em `content/.falhas_avisadas.json`
+funcionando). Nada a consertar, nada a avisar — silêncio conforme a regra 3.
+
 ## 📉 17/09/2026 — análise diária de crescimento: seguidores começaram a cair
 
 Coleta de 09-16 (330 seguidores) mostra a primeira queda desde 09-11→09-13:

@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 17/09/2026 04:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 17/09/2026 16:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,14 +94,19 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+3b031ab Diario de crescimento 17/09: seguidores comecam a cair (332->330 em 6 dias)
+3e2c02b chore: checagem de rotina 17/09 (4a, vigia da nuvem) - sem bug novo
+29a99bb chore: checagem de rotina 17/09 (3a, vigia da nuvem) - sem bug novo
+8ea12ec chore: atualiza estado da fila [skip ci]
+f701fda chore: checagem de rotina 17/09 (2a, vigia da nuvem) - sem bug novo
 c12d869 chore: checagem de rotina 17/09 (1a, vigia da nuvem) - sem bug novo
 6569b5e chore: atualiza estado da fila [skip ci]
 ef744f8 chore: checagem de rotina 16/09 (5a, vigia da nuvem) - sem bug novo
-ccb84b7 chore: atualiza manutenção [skip ci]
-d574470 chore: checagem de rotina 16/09 (4a, vigia da nuvem) - sem bug novo
-f9da4f3 Diario de crescimento 16/09: sem mudanca, 21o dia sem post, comida-servida 19 dias parada
-ebf64a0 chore: atualiza estado da fila [skip ci]
-54e88a7 chore: checagem de rotina 16/09 (3a, vigia da nuvem) - sem bug novo
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -109,6 +114,70 @@ ebf64a0 chore: atualiza estado da fila [skip ci]
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 17/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 732 (15:07Z, mais recente) veio **verde** — único run novo
+desde a 4ª checagem de hoje (run 731). `health.yml` run 136 (13:06Z, o próprio
+push da análise de crescimento) segue verde, nenhum run novo desde então.
+`SAUDE-DO-PROJETO.md` sem erro aberto. Post `2026-08-28_comida-servida` segue
+`pending` com auditoria `SEM OBJECAO` — só falta o Ramón aprovar ou recusar,
+decisão dele, não mexo. Fila vazia de filmagem (25º dia) segue decisão de
+família, já avisada à exaustão (dedupe em `content/.falhas_avisadas.json`
+funcionando). Nada a consertar, nada a avisar — silêncio conforme a regra 3.
+
+## 📉 17/09/2026 — análise diária de crescimento: seguidores começaram a cair
+
+Coleta de 09-16 (330 seguidores) mostra a primeira queda desde 09-11→09-13:
+últimos 6 dias 332, 332, 331, 331, 331, **330**. Continua sem nenhum
+salvo/compartilhamento novo (12 dos 13 posts em 0/0) e é o **22º dia sem
+post novo** — `2026-08-28_comida-servida` segue `pending`, auditoria
+`SEM OBJECAO` desde 28/08, **20 dias parado** esperando o Ramón aprovar ou
+recusar. Não dá pra provar causa e efeito, mas a fila travada e a queda
+de seguidor estão acontecendo juntas. Detalhe em
+`estrategia/diario-crescimento-2026-09-17.md`.
+
+## 🔍 17/09/2026 (4ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 731 (10:11Z, mais recente) veio **verde** — único run novo
+desde a 3ª checagem de hoje (run 730, também verde). `health.yml` run 134
+(08:32Z, o próprio push da 3ª checagem) segue verde, nenhum run novo desde
+então. `SAUDE-DO-PROJETO.md` sem erro aberto. Post `2026-08-28_comida-servida`
+segue `pending` com auditoria `SEM OBJECAO` — só falta o Ramón aprovar ou
+recusar, decisão dele, não mexo. Fila vazia de filmagem (24º dia) segue
+decisão de família, já avisada à exaustão (dedupe em
+`content/.falhas_avisadas.json` funcionando). Nada a consertar, nada a
+avisar — silêncio conforme a regra 3.
+
+## 🔍 17/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 730 (05:04Z, mais recente) veio **verde** — único run novo
+desde a 2ª checagem de hoje (run 729, já diagnosticado como `sentinel.py`
+saindo 1 por-desenho com fila vazia). `health.yml` run 133 (00:33Z) segue
+verde, nenhum run novo. `SAUDE-DO-PROJETO.md` sem erro aberto.
+`content/.falhas_avisadas.json` já com `fila_vazia_2026-09-17` (dedupe
+funcionando, não repito o recado). Post `2026-08-28_comida-servida` segue
+`pending` com auditoria `SEM OBJECAO` — só falta o Ramón aprovar ou
+recusar, decisão dele, não mexo. Fila vazia de filmagem (24º dia) segue
+decisão de família, já avisada à exaustão. Nada a consertar, nada a
+avisar — silêncio conforme a regra 3.
+
+## 🔍 17/09/2026 (2ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 729 (00:04Z) segue o mais recente, já diagnosticado na 1ª
+checagem de hoje (`sentinel.py` saindo com exit 1 por-desenho, fila com 0
+post(s) futuro(s), estado salvo normalmente) — nenhum run novo desde então.
+`health.yml` run 133 (00:33Z) verde. `SAUDE-DO-PROJETO.md` sem erro aberto.
+`content/.falhas_avisadas.json` já com `fila_vazia_2026-09-17` (dedupe
+funcionando, não repito o recado). Post `2026-08-28_comida-servida` segue
+`pending` com auditoria `SEM OBJECAO` — só falta o Ramón aprovar ou recusar,
+decisão dele, não mexo. Fila vazia de filmagem (23º dia) segue decisão de
+família, já avisada à exaustão. Nada a consertar, nada a avisar — silêncio
+conforme a regra 3.
 
 ## 🔍 17/09/2026 (1ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
