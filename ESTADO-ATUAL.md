@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 16/09/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 17/09/2026 04:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -94,18 +94,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+c12d869 chore: checagem de rotina 17/09 (1a, vigia da nuvem) - sem bug novo
+6569b5e chore: atualiza estado da fila [skip ci]
+ef744f8 chore: checagem de rotina 16/09 (5a, vigia da nuvem) - sem bug novo
+ccb84b7 chore: atualiza manutenção [skip ci]
+d574470 chore: checagem de rotina 16/09 (4a, vigia da nuvem) - sem bug novo
 f9da4f3 Diario de crescimento 16/09: sem mudanca, 21o dia sem post, comida-servida 19 dias parada
 ebf64a0 chore: atualiza estado da fila [skip ci]
 54e88a7 chore: checagem de rotina 16/09 (3a, vigia da nuvem) - sem bug novo
-887e304 chore: checagem de rotina 16/09 (2a, vigia da nuvem) - sem bug novo
-1266e75 chore: checagem de rotina 16/09 (1a, vigia da nuvem) - sem bug novo
-39bdb0a chore: atualiza estado da fila [skip ci]
-a85e011 chore: checagem de rotina 15/09 (6a, vigia da nuvem) - sem bug novo
-d920515 chore: atualiza manutenção [skip ci]
-```
-Alterações não commitadas:
-```
-M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
@@ -113,6 +109,34 @@ M ESTADO-ATUAL.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 17/09/2026 (1ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 729 (00:04Z, mais recente) veio **vermelho** — log lido inteiro
+(`get_job_logs`): mesma causa já diagnosticada em runs anteriores,
+`publisher/sentinel.py` saindo com exit 1 por-desenho ("fila com so 0
+post(s) futuro(s)"), e o job salvou o estado da fila normalmente antes de
+terminar (`estado salvo (tentativa 1)`). `health.yml` run 132 (20:32Z de
+ontem) segue verde. `SAUDE-DO-PROJETO.md` sem erro aberto.
+`content/.falhas_avisadas.json` já tem `fila_vazia_2026-09-17` (dedupe
+funcionando, não repito o recado). Post `2026-08-28_comida-servida` segue
+`pending` (27964 min esperando ele aprovar/recusar) e fila vazia de
+filmagem (23º dia) seguem como decisão de família, já avisadas à exaustão.
+Nada a consertar, nada a avisar — silêncio conforme a regra 3.
+
+## 🔍 16/09/2026 (5ª checagem, vigia da nuvem) — confirmação: sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 727 (18:58Z, mais recente) veio **verde** — todos os 5
+últimos runs (723 a 727) verdes hoje. `health.yml` run 131 (16:32Z) também
+verde. `SAUDE-DO-PROJETO.md` sem erro aberto (última varredura 13/09,
+conserto automático já registrado). `content/recados.md` com todos os itens
+`[x]`, `content/.falhas_avisadas.json` já com `fila_vazia_2026-09-16`
+(dedupe funcionando). Post `2026-08-28_comida-servida` segue `pending` e
+fila vazia de filmagem (22º dia) seguem como decisão de família, já
+avisadas à exaustão. Nada a consertar, nada a avisar — silêncio conforme a
+regra 3.
 
 ## 🔍 16/09/2026 (3ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
