@@ -42,3 +42,11 @@ conferido com ffprobe e extração de frames: nunca existiram 12 vídeos — nov
 eram clipes de Live Photo de ~2 segundos — e no vídeo da praia (IMG_1725.MOV)
 existem cerca de 4 segundos de rosto. Nos outros dois (TV e navio) o laudo
 estava certo: ela está de costas do começo ao fim.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[content/aviso_lote|aviso_lote]]
+- [[studio/roteiros/2026-08_POV1_a-patroa-mandou|2026-08_POV1_a-patroa-mandou]]
+- [[content/plano-semana|plano-semana]]

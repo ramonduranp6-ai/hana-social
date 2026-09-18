@@ -140,3 +140,11 @@ montada — não mandar o nome da faixa e pedir decisão.
 - **Não ouvi as faixas** — não consigo. A escolha é por medição (BPM, densidade
   de ataques, energia), não por audição. Por isso a regra 3g vale dobrado aqui.
 - Este Reel tem o Ramón no slide 5: **não entregar à parceria Canecas** (regra 5).
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/auditoria-chegada-eloen-2026-08-14|auditoria-chegada-eloen-2026-08-14]]
+- [[studio/roteiros/2026-08_POV1_a-patroa-mandou|2026-08_POV1_a-patroa-mandou]]
+- [[estrategia/reel-cara-de-reuniao-2026-08-24|reel-cara-de-reuniao-2026-08-24]]

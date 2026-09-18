@@ -80,3 +80,11 @@ do rosto, um resultado ruim tem duas explicações e não mata o formato.
    Fica com o som da cena ou você quer a trilha?
 3. Ronda de engajamento: o combinado era fazer UMA ronda de 10 comentários e
    ler o placar. O plano suspende sem fazer. Aprova suspender até 13/08?
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[content/aprendizado|aprendizado]]
+- [[ORGANOGRAMA|ORGANOGRAMA]]
+- [[content/pauta_extra|pauta_extra]]

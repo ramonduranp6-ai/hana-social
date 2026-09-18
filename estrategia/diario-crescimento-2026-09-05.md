@@ -41,3 +41,10 @@ dado novo pra decidir nada, e isso já se repete há vários dias seguidos.
    jeito de tirar a fila do zero, voltar a publicar e gerar dado novo (já
    são 10 dias parado, subindo todo dia sem ação).
 3. **Robô**: nenhuma ação nova.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[DECISOES]]

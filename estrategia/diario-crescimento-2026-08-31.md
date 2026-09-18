@@ -43,3 +43,11 @@ sendo o problema real, sem mudança hoje.
    POV — aí a regra de morte entra em jogo (3 peças 0 salvo E 0 share = mata
    o formato).
 3. **Robô**: nenhuma ação nova.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/diario-crescimento-2026-08-30|diario-crescimento-2026-08-30]]
+- [[estrategia/diario-crescimento-2026-09-01|diario-crescimento-2026-09-01]]
+- [[estrategia/diario-crescimento-2026-09-02|diario-crescimento-2026-09-02]]

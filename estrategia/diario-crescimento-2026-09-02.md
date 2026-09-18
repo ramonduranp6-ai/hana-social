@@ -36,3 +36,11 @@ novo pra decidir nada.
 2. **Ramon**: aprovar ou recusar `2026-08-28_comida-servida` — é o único
    jeito de tirar a fila do zero e voltar a gerar dado novo.
 3. **Robô**: nenhuma ação nova.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/diario-crescimento-2026-09-03|diario-crescimento-2026-09-03]]
+- [[estrategia/diario-crescimento-2026-09-04|diario-crescimento-2026-09-04]]
+- [[estrategia/diario-crescimento-2026-09-01|diario-crescimento-2026-09-01]]

@@ -67,3 +67,11 @@ Métricas que a API **recusou** (o placar está incompleto nestes pontos):
 - `2026-08-K_chegada-eloen` · **follows**: The Media Insights API does not support the follows metric for this media product type.
 
 Lembrete honesto: o Instagram só dá insights de posts publicados **pela conta**, e alguns números só existem depois de algumas horas no ar.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/diario-crescimento-2026-08-28|diario-crescimento-2026-08-28]]
+- [[content/aprendizado|aprendizado]]
+- [[estrategia/diario-crescimento-2026-08-29|diario-crescimento-2026-08-29]]

@@ -183,8 +183,8 @@ Bruto já existia, trilha já existia, edição 100% ffmpeg. Custo R$ 0,00.
 
 ## 🔗 Relacionados
 
-- [[manual-profissional-reels]]
-- [[virais-medidos-2026-08-13]]
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
 - [[legendas-pov-2026-08-21]]
-- [[auditoria-chegada-eloen-2026-08-14]]
-- [[placar]]
+- [[pedido-de-cena]]

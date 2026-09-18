@@ -35,3 +35,11 @@ Método: ffmpeg (sem ffprobe disponível) — duração + resolução via `-i`, 
 
 ## Observação
 A pasta garimpo tem 3 arquivos que não são conteúdo da Hana (peru, meme de Pinterest, border collie de referência) e 1 arquivo de tour vazio da casa sem a cachorra aparecer nos frames analisados — provavelmente foram parar aí por engano ao salvar referências. Vale conferir se devem ser removidos da pasta.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[content/calendario-editorial|calendario-editorial]]
+- [[content/pedido-de-cena|pedido-de-cena]]
+- [[content/aviso_lote|aviso_lote]]

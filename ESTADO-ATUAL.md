@@ -3078,15 +3078,15 @@ crescer exige Reels, hashtag de nicho e presença nos perfis grandes da raça.
 > Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
 > partir das citações que já existiam no texto acima.
 
-- [[2026-08_POV1_a-patroa-mandou]]
+- [[DECISOES]]
 - [[ORGANOGRAMA]]
+- [[SAUDE-DO-PROJETO]]
 - [[auditoria-baloes-v4-2026-08-14]]
 - [[aviso_lote]]
 - [[catalogo-garimpo]]
 - [[crescimento-instagram-2026-08-19]]
+- [[diario-crescimento-2026-08-28]]
 - [[estudo-virais-2026-08]]
 - [[garimpo-apify-2026-08-09]]
 - [[hipoteses-produto]]
 - [[legendas-pov-2026-08-21]]
-- [[pacote-da-semana]]
-- [[pauta_extra]]

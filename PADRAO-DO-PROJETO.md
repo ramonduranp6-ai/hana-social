@@ -46,3 +46,10 @@ permissão). 3. Se a causa for acesso/login vencido: refazer o login pelo
 Playwright/perfil certo; só envolver o Ramón se for 2FA/senha que apenas ele
 tem — e aí em UM pedido único e completo. 4. Registrar a lição na caixa de
 entrada do hub se servir a outros projetos.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[SAUDE-DO-PROJETO]]

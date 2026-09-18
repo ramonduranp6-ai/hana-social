@@ -40,3 +40,11 @@ post novo não há dado novo pra decidir nada.
    jeito de tirar a fila do zero, voltar a publicar e gerar dado novo (já são
    8 dias parado).
 3. **Robô**: nenhuma ação nova.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/diario-crescimento-2026-09-04|diario-crescimento-2026-09-04]]
+- [[estrategia/diario-crescimento-2026-09-02|diario-crescimento-2026-09-02]]
+- [[estrategia/diario-crescimento-2026-09-05|diario-crescimento-2026-09-05]]

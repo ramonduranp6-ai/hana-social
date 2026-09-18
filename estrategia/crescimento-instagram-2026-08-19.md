@@ -50,3 +50,11 @@ sem crédito, não respondeu)
   (sugestão do DeepSeek) fica em espera — esbarra na ronda de engajamento já
   morta pelo conselheiro, não ativa sem OK dele.
 - **CTA nomeado:** já em curso desde ontem, sem mudança.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/reuniao-2026-08-18-engajamento|reuniao-2026-08-18-engajamento]]
+- [[estrategia/vp-marketing-2026-08-21|vp-marketing-2026-08-21]]
+- [[ORGANOGRAMA|ORGANOGRAMA]]

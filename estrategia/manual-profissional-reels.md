@@ -122,3 +122,11 @@ corte) · som da cena limpo (sem TV/voz de fundo, a menos que seja a piada).
 
 Sem gasto novo sem OK dele. O salto de qualidade imediato (luz + som) é
 100% ffmpeg, custo zero, e já vale para o próximo Reel.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/auditoria-chegada-eloen-2026-08-14|auditoria-chegada-eloen-2026-08-14]]
+- [[studio/roteiros/2026-08_POV1_a-patroa-mandou|2026-08_POV1_a-patroa-mandou]]
+- [[estrategia/auditoria-baloes-v4-2026-08-14|auditoria-baloes-v4-2026-08-14]]

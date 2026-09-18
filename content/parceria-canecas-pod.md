@@ -46,3 +46,11 @@ ora — revisar em 3-5 mil seguidores ou quando existir produto próprio dela.
 - Preservar as marcas dela: manchas merle e lista branca da testa.
 - Nada de foto do Ramón em conteúdo público.
 - Arte de IA sempre claramente estilizada, nunca passada como foto real.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[brand-brief|brand-brief]]
+- [[EXPLICACAO-PROJETO-PARA-IA|EXPLICACAO-PROJETO-PARA-IA]]
+- [[Índice — Hana Social|Índice — Hana Social]]

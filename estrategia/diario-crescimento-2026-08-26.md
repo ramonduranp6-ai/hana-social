@@ -20,3 +20,11 @@ Sem coleta nova desde ontem para julgar; o único achado real é que compartilha
 1. **Claude da conversa**: assim que a coleta de hoje (26/08, ~12:15 UTC) estiver no placar, olhar o retrato-oficial (formato novo, foto premium Gemini) e comparar o alcance dele com a média de foto antiga (53) e com o Reel cenoura-filhote (o único com compartilhamento) — é o dado que responde se o formato novo rende diferente.
 2. **Claude da conversa**: ao ler o próximo placar, checar se o compartilhamento do cenoura-filhote foi ruído (1 evento isolado) ou se mais Reels estão saindo do zero — isso muda se vale investir mais em Reel do estilo dele.
 3. **Robô**: nenhuma ação nova pedida hoje — a fila e a coleta seguem no automático.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/diario-crescimento-2026-08-30|diario-crescimento-2026-08-30]]
+- [[estrategia/diario-crescimento-2026-08-29|diario-crescimento-2026-08-29]]
+- [[estrategia/diario-crescimento-2026-08-31|diario-crescimento-2026-08-31]]

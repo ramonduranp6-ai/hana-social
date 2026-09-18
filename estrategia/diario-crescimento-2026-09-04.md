@@ -42,3 +42,10 @@ não o conteúdo — sem post novo não há dado novo pra decidir nada.
    jeito de tirar a fila do zero, voltar a publicar e gerar dado novo (já
    são 9 dias parado).
 3. **Robô**: nenhuma ação nova.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[DECISOES]]

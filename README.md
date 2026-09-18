@@ -60,3 +60,11 @@ content/
 Ver [`SETUP.md`](SETUP.md). São as coisas que só o Ramón pode fazer:
 criar o app na Meta, o bot do Telegram e cadastrar os segredos.
 Enquanto isso não estiver pronto, o código está completo mas não publica.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[EXPLICACAO-PROJETO-PARA-IA|EXPLICACAO-PROJETO-PARA-IA]]
+- [[SETUP|SETUP]]
+- [[content/Índice — content|Índice — content]]

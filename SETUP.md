@@ -89,3 +89,11 @@ Se for usar Telegram, adicione também os secrets `TELEGRAM_BOT_TOKEN` e
 Quando tiver o **`IG_USER_ID`** e o **`IG_ACCESS_TOKEN`**, e o repo estiver
 público, me avisa. Eu te passo o `MEDIA_BASE_URL` pronto e a gente dispara o
 teste. Se a Meta travar em algum passo, manda o print do erro.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[EXPLICACAO-PROJETO-PARA-IA|EXPLICACAO-PROJETO-PARA-IA]]
+- [[README|README]]
+- [[content/benchmark-tecnico|benchmark-tecnico]]

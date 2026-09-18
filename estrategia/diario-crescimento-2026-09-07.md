@@ -40,3 +40,10 @@ sem post novo não há dado novo pra julgar.
 2. **Ramon**: aprovar ou recusar `2026-08-28_comida-servida` — único jeito de
    destravar a fila e voltar a publicar (13 dias parado, subindo todo dia).
 3. **Robô**: nenhuma ação nova.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[DECISOES]]

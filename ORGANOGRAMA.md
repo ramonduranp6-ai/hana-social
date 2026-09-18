@@ -115,3 +115,11 @@ Objeções aceitas:
 5. **Faltava critério de corte** — que número, em que data, prova que funciona.
 
 Objeção não aceita: nenhuma. As cinco entraram no desenho acima.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[EXPLICACAO-PROJETO-PARA-IA|EXPLICACAO-PROJETO-PARA-IA]]
+- [[content/pauta_extra|pauta_extra]]
+- [[content/plano-semana|plano-semana]]

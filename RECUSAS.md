@@ -20,3 +20,11 @@ retroativo nesta data com o que já tinha acontecido.
 Antes de propor tática de crescimento, formato de peça, ferramenta nova ou
 reabrir ideia antiga: conferir esta tabela primeiro. Bateu com uma linha
 "permanente"? Não propor de novo sem fato novo que mude o cenário.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/auditoria-chegada-eloen-2026-08-14|auditoria-chegada-eloen-2026-08-14]]
+- [[content/pauta_extra|pauta_extra]]
+- [[content/hipoteses-produto|hipoteses-produto]]

@@ -1,8 +1,27 @@
 # 🗂️ Índice — content
 
-> Gerado por `tecer-vault-obsidian.py --indices` para nenhum
-> arquivo desta pasta ficar solto no grafo. Regenerável.
+> Gerado por `tecer-vault-obsidian.py` para nenhum arquivo desta pasta
+> ficar solto no grafo. A lista de arquivos e subpastas é regenerada a
+> cada execução; linhas adicionadas à mão são preservadas abaixo.
 
+- [[content/aprendizado|aprendizado]]
+- [[content/aviso_lote|aviso_lote]]
+- [[content/benchmark-instagram|benchmark-instagram]]
+- [[content/benchmark-tecnico|benchmark-tecnico]]
+- [[content/calendario-editorial|calendario-editorial]]
+- [[content/hipoteses-produto|hipoteses-produto]]
+- [[content/legendas-pov-2026-08-21|legendas-pov-2026-08-21]]
+- [[content/metricas|metricas]]
+- [[content/pacote-da-semana|pacote-da-semana]]
+- [[content/parceria-canecas-pod|parceria-canecas-pod]]
+- [[content/pauta_extra|pauta_extra]]
+- [[content/pedido-de-cena|pedido-de-cena]]
+- [[content/placar|placar]]
+- [[content/plano-semana|plano-semana]]
+- [[content/playbook-reels|playbook-reels]]
+- [[content/recados|recados]]
+
+**Notas manuais:**
 - [[Hana Social/content/aprendizado|aprendizado]]
 - [[Hana Social/content/aviso_lote|aviso_lote]]
 - [[Hana Social/content/benchmark-instagram|benchmark-instagram]]

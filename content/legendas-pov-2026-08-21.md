@@ -62,3 +62,11 @@ Marca quem também tem um garçom de dois pés em casa.
 ---
 
 *Escrito pelo diretor-criativo, aguardando aprovação do Ramón antes de qualquer publicação.*
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/vp-marketing-2026-08-21|vp-marketing-2026-08-21]]
+- [[estrategia/reuniao-2026-08-18-engajamento|reuniao-2026-08-18-engajamento]]
+- [[estrategia/reel-cara-de-reuniao-2026-08-24|reel-cara-de-reuniao-2026-08-24]]

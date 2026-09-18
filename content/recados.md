@@ -17,3 +17,11 @@ sensível.
 - [x] 02/08 — "me traga aqui as fotos e os videos": o Reel de 12/08 foi entregue no Telegram com video, legenda e botoes Aprovar/Recusar (conferido: notified=True no post.json). Anexo na conversa nao serve — ele esta no celular.
 - [x] 09/08 — "Pode seguir" / "Aprovado, pode mandar": ja executados na sessao de 09/08 (14/08 aprovado, DMs de collab entregues no Telegram, video novo processado).
 - [x] 13/08 — "Aprovado" + clique no botao: Reel da cenoura v8 marcado approved, remarcado para 17/08 (perdeu o slot de 12/08).
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[ESTADO-ATUAL|ESTADO-ATUAL]]
+- [[DECISOES|DECISOES]]
+- [[README|README]]

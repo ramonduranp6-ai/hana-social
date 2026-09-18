@@ -36,3 +36,11 @@ continua sendo a fila travada esperando aprovação do Ramón.
 2. **Claude da conversa**: quando `comida-servida` for ao ar, comparar
    alcance com a média dos outros Reels do pilar e checar salvo/compartilhamento.
 3. **Robô**: nenhuma ação nova.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/diario-crescimento-2026-09-15|diario-crescimento-2026-09-15]]
+- [[estrategia/diario-crescimento-2026-09-14|diario-crescimento-2026-09-14]]
+- [[estrategia/diario-crescimento-2026-09-13|diario-crescimento-2026-09-13]]

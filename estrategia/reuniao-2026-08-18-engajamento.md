@@ -61,3 +61,11 @@ Regra de morte (escrita agora, antes do resultado): depois de **3 Reels neste
 formato novo**, se continuar 0 salvo E 0 compartilhamento nos 3, o problema não
 é o formato — sobe pra discussão de distribuição (TikTok volta à mesa, agora
 com premissa testada, não suposta).
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/vp-marketing-2026-08-21|vp-marketing-2026-08-21]]
+- [[content/pauta_extra|pauta_extra]]
+- [[ORGANOGRAMA|ORGANOGRAMA]]

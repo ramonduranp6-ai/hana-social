@@ -78,3 +78,11 @@ acima era só metadado. Baixei os 7 maiores (30M, 6,3M, 4,8M, 1,2M, 1,0M, 945k,
 ⚠️ Conflito declarado com a regra 3n-i (mínimo 5 cortes, ordem dele de
 02-03/08): a regra nasceu de material fraco que precisava de montagem para ter
 graça. O dado diz que cena forte dispensa corte. **Quem resolve a regra é ele.**
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/manual-profissional-reels|manual-profissional-reels]]
+- [[estrategia/referencia-rafabri7o-2026-08-26|referencia-rafabri7o-2026-08-26]]
+- [[studio/roteiros/2026-08_POV1_a-patroa-mandou|2026-08_POV1_a-patroa-mandou]]

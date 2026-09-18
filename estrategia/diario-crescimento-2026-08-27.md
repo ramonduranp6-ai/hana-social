@@ -29,3 +29,11 @@ dura de não analisar placar velho. Isto é um possível problema de robô
    isso vira problema real de robô (2 dias sem coleta) e aí sim vale
    recado pro Ramón, porque só ele mexe na máquina/config fora do repo.
 2. **Robô**: nenhuma ação nova pedida — só observar se o cron dispara.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/diario-crescimento-2026-08-30|diario-crescimento-2026-08-30]]
+- [[estrategia/diario-crescimento-2026-08-28|diario-crescimento-2026-08-28]]
+- [[estrategia/diario-crescimento-2026-08-31|diario-crescimento-2026-08-31]]

@@ -101,3 +101,11 @@ e não é promessa nossa.
    dizer "isso é você" para um amigo.
 7. **Mínimo 5 cortes** e trilha (regra dele, 3n-i da skill).
 8. **Testar aberturas diferentes** (Hook Point) e ler o placar depois.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/referencia-rafabri7o-2026-08-26|referencia-rafabri7o-2026-08-26]]
+- [[estrategia/virais-medidos-2026-08-13|virais-medidos-2026-08-13]]
+- [[estrategia/auditoria-chegada-eloen-2026-08-14|auditoria-chegada-eloen-2026-08-14]]

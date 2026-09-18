@@ -37,3 +37,10 @@ continua zerada.
 2. **Ramon**: aprovar ou recusar `2026-08-28_comida-servida` — é o que
    destrava a 3ª peça do formato POV e permite julgar a regra de morte.
 3. **Robô**: nenhuma ação nova.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[DECISOES]]

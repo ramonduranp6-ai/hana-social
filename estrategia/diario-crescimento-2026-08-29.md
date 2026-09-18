@@ -58,3 +58,11 @@ não alcance.
    52-53) ou o 3º Reel do formato POV (aí a regra de morte entra em jogo).
 3. **Robô**: nenhuma ação nova — só observar se o atraso do cron piora de
    novo amanhã.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/diario-crescimento-2026-08-30|diario-crescimento-2026-08-30]]
+- [[estrategia/diario-crescimento-2026-08-28|diario-crescimento-2026-08-28]]
+- [[estrategia/diario-crescimento-2026-08-31|diario-crescimento-2026-08-31]]

@@ -61,3 +61,11 @@ alcance, confirmando o que já tinha sido visto em 18/08.
    `regras-da-casa` (0/0) + o novo, e checar se os dois batem 0/0.
 3. **Robô**: nenhuma ação nova — só observar se o atraso do cron piora de
    novo amanhã.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/diario-crescimento-2026-08-29|diario-crescimento-2026-08-29]]
+- [[estrategia/diario-crescimento-2026-08-30|diario-crescimento-2026-08-30]]
+- [[estrategia/diario-crescimento-2026-08-31|diario-crescimento-2026-08-31]]

@@ -41,3 +41,11 @@ Ramón — não o conteúdo nem o algoritmo.
    alcance dela com a média dos outros Reels do pilar e checar se salvo ou
    compartilhamento saiu do zero.
 3. **Robô**: nenhuma ação nova.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/diario-crescimento-2026-09-12|diario-crescimento-2026-09-12]]
+- [[estrategia/diario-crescimento-2026-09-14|diario-crescimento-2026-09-14]]
+- [[estrategia/diario-crescimento-2026-09-16|diario-crescimento-2026-09-16]]

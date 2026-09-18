@@ -33,3 +33,11 @@ Ninguém faz o lado "socialite premium com humor + design gráfico consistente".
 - [ ] Série educativa sobre a cor tri lilac merle (ela é o produto visual).
 - [ ] Organizar destaques do perfil (Rolês, A Patroa, Looks, Escola Bully).
 - [ ] Interagir com as contas grandes do nicho (comentários da Hana como personagem).
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[brand-brief|brand-brief]]
+- [[content/calendario-editorial|calendario-editorial]]
+- [[estrategia/virais-medidos-2026-08-13|virais-medidos-2026-08-13]]

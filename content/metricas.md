@@ -47,3 +47,11 @@ pessoal — Reels, hashtag de nicho, presença nos perfis grandes da raça. Ganh
 - Reels: zero publicados até agora. Medir alcance do primeiro contra a média de
   foto — é a hipótese mais importante a testar.
 - Refazer esta tabela a cada lote semanal, para ter série temporal.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/garimpo-apify-2026-08-09|garimpo-apify-2026-08-09]]
+- [[content/aprendizado|aprendizado]]
+- [[ORGANOGRAMA|ORGANOGRAMA]]

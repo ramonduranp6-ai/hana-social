@@ -223,3 +223,11 @@ ffmpeg -i <arq> -af ebur128=peak=true -f null -                          # confe
 Rosto: OpenCV `FaceDetectorYN` (modelo YuNet, gratuito) nos 216 quadros +
 conferência visual das detecções fortes. Nitidez: variância do Laplaciano.
 Quadro vazio: máscara HSV de verde (25–75 de matiz).
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/auditoria-chegada-eloen-2026-08-14|auditoria-chegada-eloen-2026-08-14]]
+- [[estrategia/manual-profissional-reels|manual-profissional-reels]]
+- [[estrategia/reel-cara-de-reuniao-2026-08-24|reel-cara-de-reuniao-2026-08-24]]

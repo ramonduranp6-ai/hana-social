@@ -40,3 +40,11 @@ travada esperando aprovação do Ramón, não o conteúdo nem o algoritmo.
    alcance dela com a média dos outros Reels do pilar e checar se salvo ou
    compartilhamento saiu do zero.
 3. **Robô**: nenhuma ação nova.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/diario-crescimento-2026-09-10|diario-crescimento-2026-09-10]]
+- [[estrategia/diario-crescimento-2026-09-11|diario-crescimento-2026-09-11]]
+- [[estrategia/diario-crescimento-2026-09-13|diario-crescimento-2026-09-13]]

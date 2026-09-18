@@ -45,3 +45,11 @@ antes (não repito, dedupe do vigia confirma).
    alcance dela com a média dos outros Reels do pilar e checar se salvo ou
    compartilhamento saiu do zero.
 3. **Robô**: nenhuma ação nova.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[estrategia/diario-crescimento-2026-09-13|diario-crescimento-2026-09-13]]
+- [[estrategia/diario-crescimento-2026-09-16|diario-crescimento-2026-09-16]]
+- [[estrategia/diario-crescimento-2026-09-15|diario-crescimento-2026-09-15]]
