@@ -5,7 +5,7 @@
 > (regra 37). Ao consertar, remover a linha (a varredura reescreve tudo).
 
 ## ⛔ ERROS ABERTOS — consertar na conversa desta pasta
-- [ ] tarefa agendada 'Hana Sentinela' QUEBRADA (código 1) — reiniciar não resolveu, precisa de diagnóstico
+(nenhum aberto no momento — ver DECISOES.md 18/09/2026 para o conserto do código 1 da 'Hana Sentinela')
 
 ## 🔗 Relacionados
 

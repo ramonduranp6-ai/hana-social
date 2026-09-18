@@ -3,6 +3,32 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔧 18/09/2026 (vigia da nuvem) — CONSERTADO: 'Hana Sentinela' quebrada (código 1)
+
+`SAUDE-DO-PROJETO.md` trazia erro aberto: a tarefa agendada `Hana Sentinela`
+(`studio\sentinela.bat`) falhava com código 1 e reiniciar não resolvia.
+Causa real, achada lendo o código (sem acesso à máquina local): o `.bat` roda
+`renovar_token.py` como primeiro passo e aborta a cadeia inteira (sentinela,
+lote semanal, garimpo, estado atual) se esse passo sair com erro. `ler()` em
+`studio/renovar_token.py` chamava `sys.exit(1)` sempre que `studio/.token` não
+existe — e esse arquivo nunca foi criado (confirmado no próprio
+`ESTADO-ATUAL.md`: "Token renovável automático: FALTA criar studio/.token").
+Resultado: a tarefa falhava 100% das vezes, sempre no mesmo primeiro passo,
+por isso reiniciar nunca ajudava — não era falha intermitente, era código
+tratando "ainda não configurado" como erro fatal.
+
+Conserto: `ler()` agora retorna `None` (não configurado) em vez de abortar
+quando o arquivo simplesmente não existe; `main()` aí só avisa e sai com
+código 0, sem tentar renovar nada. Arquivo presente mas quebrado (sem
+`IG_ACCESS_TOKEN` preenchido) continua fatal — isso é bug de configuração de
+verdade. Testado localmente: sem `studio/.token`, o script agora sai com
+código 0 e mensagem informativa; com o arquivo presente e vazio, ainda falha
+como antes. A renovação automática do token segue desligada até o Ramón criar
+`studio/.token` (isso não é bug — é passo manual de bootstrap que só ele pode
+fazer, com o token do painel da Meta), mas agora isso não derruba mais o
+`sentinela.py`, `lote_automatico.py`, `garimpo.py` nem `estado.py` que rodavam
+depois na mesma tarefa.
+
 ## 🔍 18/09/2026 (checagem de rotina, vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:

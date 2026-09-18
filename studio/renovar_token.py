@@ -30,12 +30,11 @@ DIAS_ANTES = 20
 
 
 def ler():
+    """Retorna None se o arquivo simplesmente nao existe ainda (bootstrap
+    manual pendente — nao e' erro, e' "nao configurado"). sys.exit(1) so'
+    para arquivo PRESENTE mas quebrado (esse sim e' bug de configuracao)."""
     if not os.path.isfile(ARQ):
-        print(f"[ERRO] {ARQ} nao existe.")
-        print("Crie o arquivo com duas linhas (o token vem do painel da Meta):")
-        print("    IG_ACCESS_TOKEN=<cole aqui>")
-        print("    EXPIRA_EM=2026-09-21")
-        sys.exit(1)
+        return None
     dados = {}
     with open(ARQ, encoding="utf-8-sig") as f:
         for linha in f:
@@ -90,6 +89,12 @@ def renovar(token):
 def main():
     forcar = "--forcar" in sys.argv
     dados = ler()
+    if dados is None:
+        print(f"[info] {ARQ} nao existe ainda -- renovacao automatica desligada")
+        print("Crie o arquivo com duas linhas (o token vem do painel da Meta) para ligar:")
+        print("    IG_ACCESS_TOKEN=<cole aqui>")
+        print("    EXPIRA_EM=2026-09-21")
+        return
     token = dados["IG_ACCESS_TOKEN"]
 
     if not forcar and dados.get("EXPIRA_EM"):

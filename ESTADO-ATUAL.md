@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 18/09/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 18/09/2026 04:34. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -92,20 +92,31 @@ estava certo: ela está de costas do começo ao fim.
 
 ⏳ **2ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
 
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[content/pedido-de-cena|pedido-de-cena]]
+- [[content/plano-semana|plano-semana]]
+- [[studio/roteiros/2026-08_POV1_a-patroa-mandou|2026-08_POV1_a-patroa-mandou]]
+
 ## Últimas mudanças no projeto
 ```
+e74a3eb vault: links resolvem no vault Desktop (nome unico ou caminho completo)
+6e0b5a0 vault: indices por pasta + vizinhos por assunto (ordem do Ramon 17/09)
+7fce49d chore: atualiza estado da fila [skip ci]
+45b1053 chore: checagem de rotina 18/09 (vigia da nuvem) - sem bug novo
+1815b31 chore: atualiza estado da fila [skip ci]
 ef51c8f chore: checagem de rotina 17/09 (6a, vigia da nuvem) - sem bug novo
 e422156 chore: atualiza manutenção [skip ci]
 c57ba00 chore: checagem de rotina 17/09 (5a, vigia da nuvem) - sem bug novo
-3b031ab Diario de crescimento 17/09: seguidores comecam a cair (332->330 em 6 dias)
-3e2c02b chore: checagem de rotina 17/09 (4a, vigia da nuvem) - sem bug novo
-29a99bb chore: checagem de rotina 17/09 (3a, vigia da nuvem) - sem bug novo
-8ea12ec chore: atualiza estado da fila [skip ci]
-f701fda chore: checagem de rotina 17/09 (2a, vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
-M ESTADO-ATUAL.md
+M DECISOES.md
+ M ESTADO-ATUAL.md
+ M SAUDE-DO-PROJETO.md
+ M studio/renovar_token.py
 ```
 
 ## Decisões e contexto
@@ -113,6 +124,44 @@ M ESTADO-ATUAL.md
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔧 18/09/2026 (vigia da nuvem) — CONSERTADO: 'Hana Sentinela' quebrada (código 1)
+
+`SAUDE-DO-PROJETO.md` trazia erro aberto: a tarefa agendada `Hana Sentinela`
+(`studio\sentinela.bat`) falhava com código 1 e reiniciar não resolvia.
+Causa real, achada lendo o código (sem acesso à máquina local): o `.bat` roda
+`renovar_token.py` como primeiro passo e aborta a cadeia inteira (sentinela,
+lote semanal, garimpo, estado atual) se esse passo sair com erro. `ler()` em
+`studio/renovar_token.py` chamava `sys.exit(1)` sempre que `studio/.token` não
+existe — e esse arquivo nunca foi criado (confirmado no próprio
+`ESTADO-ATUAL.md`: "Token renovável automático: FALTA criar studio/.token").
+Resultado: a tarefa falhava 100% das vezes, sempre no mesmo primeiro passo,
+por isso reiniciar nunca ajudava — não era falha intermitente, era código
+tratando "ainda não configurado" como erro fatal.
+
+Conserto: `ler()` agora retorna `None` (não configurado) em vez de abortar
+quando o arquivo simplesmente não existe; `main()` aí só avisa e sai com
+código 0, sem tentar renovar nada. Arquivo presente mas quebrado (sem
+`IG_ACCESS_TOKEN` preenchido) continua fatal — isso é bug de configuração de
+verdade. Testado localmente: sem `studio/.token`, o script agora sai com
+código 0 e mensagem informativa; com o arquivo presente e vazio, ainda falha
+como antes. A renovação automática do token segue desligada até o Ramón criar
+`studio/.token` (isso não é bug — é passo manual de bootstrap que só ele pode
+fazer, com o token do painel da Meta), mas agora isso não derruba mais o
+`sentinela.py`, `lote_automatico.py`, `garimpo.py` nem `estado.py` que rodavam
+depois na mesma tarefa.
+
+## 🔍 18/09/2026 (checagem de rotina, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 735 (22:18Z de 17/09, mais recente) veio **verde** — único
+run novo desde a última checagem. `health.yml` run 138 (20:33Z de 17/09) segue
+verde, nenhum run novo desde então. `SAUDE-DO-PROJETO.md` sem erro aberto.
+Post `2026-08-28_comida-servida` segue `pending` com auditoria `SEM OBJECAO` —
+só falta o Ramón aprovar ou recusar, decisão dele, não mexo. Fila vazia de
+filmagem (26º dia) segue decisão de família, já avisada à exaustão (dedupe em
+`content/.falhas_avisadas.json` funcionando). Nada a consertar, nada a
+avisar — silêncio conforme a regra 3.
 
 ## 🔍 17/09/2026 (6ª checagem, vigia da nuvem) — confirmação: sem bug novo
 
@@ -3082,9 +3131,9 @@ crescer exige Reels, hashtag de nicho e presença nos perfis grandes da raça.
 - [[aviso_lote]]
 - [[catalogo-garimpo]]
 - [[crescimento-instagram-2026-08-19]]
-- [[DECISOES]]
 - [[diario-crescimento-2026-08-28]]
 - [[diario-crescimento-2026-09-17]]
+- [[ESTADO-ATUAL]]
 - [[estudo-virais-2026-08]]
 - [[garimpo-apify-2026-08-09]]
 - [[hipoteses-produto]]
