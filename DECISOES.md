@@ -3,6 +3,16 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 18/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 738 (09:56Z de 18/09, mais recente) veio **verde** — único
+run novo desde a 2ª checagem de hoje. `SAUDE-DO-PROJETO.md` sem erro aberto.
+`content/.falhas_avisadas.json` já tinha `fila_vazia_2026-09-18` registrado —
+dedupe funcionando, não repito o recado. Post `2026-08-28_comida-servida`
+segue `pending` com auditoria `SEM OBJECAO` — decisão do Ramón, não mexo.
+Nada a consertar, nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 18/09/2026 (checagem de rotina, vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`

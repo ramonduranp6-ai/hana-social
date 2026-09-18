@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 18/09/2026 08:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 18/09/2026 12:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,6 +102,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+29757e5 chore: checagem de rotina 18/09 (2a, vigia da nuvem) - sem bug novo
 f759c10 fix(sentinela): renovar_token.py nao derruba mais a tarefa local por token nao configurado
 e74a3eb vault: links resolvem no vault Desktop (nome unico ou caminho completo)
 6e0b5a0 vault: indices por pasta + vizinhos por assunto (ordem do Ramon 17/09)
@@ -109,7 +110,6 @@ e74a3eb vault: links resolvem no vault Desktop (nome unico ou caminho completo)
 45b1053 chore: checagem de rotina 18/09 (vigia da nuvem) - sem bug novo
 1815b31 chore: atualiza estado da fila [skip ci]
 ef51c8f chore: checagem de rotina 17/09 (6a, vigia da nuvem) - sem bug novo
-e422156 chore: atualiza manutenção [skip ci]
 ```
 
 ## Decisões e contexto
@@ -117,6 +117,24 @@ e422156 chore: atualiza manutenção [skip ci]
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
+
+## 🔍 18/09/2026 (checagem de rotina, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
+confirma HEAD local == `origin/main` (`f759c10`), sem commits perdidos. Via
+`mcp__github__actions_list`: `publish.yml` run 737 (05:25Z de 18/09) veio
+**verde** — mais recente. Havia um run vermelho no meio (736, 00:32Z de
+18/09) que investiguei com `get_job_logs`: não é bug — é o passo `Sentinela`
+saindo com código 1 de propósito porque a fila tem 0 posts futuros (mínimo
+saudável: 2), mesma causa raiz de sempre (falta de filmagem nova, não de
+código). `content/.falhas_avisadas.json` já tinha `fila_vazia_2026-09-18`
+registrado (dedupe funcionando, aviso de hoje já mandado antes desta
+checagem) — não repito o recado. `health.yml` run 141 (mesmo commit do
+conserto do `renovar_token.py` de ontem) segue verde. `SAUDE-DO-PROJETO.md`
+sem erro aberto. Post `2026-08-28_comida-servida` segue `pending` com
+auditoria `SEM OBJECAO` — decisão do Ramón, não mexo. Fila vazia (27º dia)
+segue decisão de família já avisada à exaustão. Nada a consertar, nada a
+avisar — silêncio conforme a regra 3.
 
 ## 🔧 18/09/2026 (vigia da nuvem) — CONSERTADO: 'Hana Sentinela' quebrada (código 1)
 
