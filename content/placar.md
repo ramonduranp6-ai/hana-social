@@ -1,11 +1,11 @@
 # Placar da Hana — o que cada post rendeu
 
 Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
-Última coleta: **2026-09-17** · fonte: API do Instagram.
+Última coleta: **2026-09-18** · fonte: API do Instagram.
 
 ## Seguidores
 
-**330** (+0 desde 2026-09-16)
+**330** (+0 desde 2026-09-17)
 
 ## Post a post (mais alcance em cima)
 
@@ -40,7 +40,6 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 
 | Data | Seguidores |
 |---|---|
-| 2026-09-06 | 331 |
 | 2026-09-07 | 331 |
 | 2026-09-08 | 331 |
 | 2026-09-09 | 331 |
@@ -52,6 +51,7 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 | 2026-09-15 | 331 |
 | 2026-09-16 | 330 |
 | 2026-09-17 | 330 |
+| 2026-09-18 | 330 |
 
 ## Limites desta coleta
 
@@ -67,11 +67,3 @@ Métricas que a API **recusou** (o placar está incompleto nestes pontos):
 - `2026-08-K_chegada-eloen` · **follows**: The Media Insights API does not support the follows metric for this media product type.
 
 Lembrete honesto: o Instagram só dá insights de posts publicados **pela conta**, e alguns números só existem depois de algumas horas no ar.
-
-## 🔗 Relacionados
-
-> Vizinhos por assunto (calculados automaticamente)
-
-- [[estrategia/diario-crescimento-2026-08-28|diario-crescimento-2026-08-28]]
-- [[content/aprendizado|aprendizado]]
-- [[estrategia/diario-crescimento-2026-08-29|diario-crescimento-2026-08-29]]
