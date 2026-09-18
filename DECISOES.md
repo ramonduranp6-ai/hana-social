@@ -3,6 +3,24 @@
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
 
+## 🔍 18/09/2026 (checagem de rotina, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
+confirma HEAD local == `origin/main` (`f759c10`), sem commits perdidos. Via
+`mcp__github__actions_list`: `publish.yml` run 737 (05:25Z de 18/09) veio
+**verde** — mais recente. Havia um run vermelho no meio (736, 00:32Z de
+18/09) que investiguei com `get_job_logs`: não é bug — é o passo `Sentinela`
+saindo com código 1 de propósito porque a fila tem 0 posts futuros (mínimo
+saudável: 2), mesma causa raiz de sempre (falta de filmagem nova, não de
+código). `content/.falhas_avisadas.json` já tinha `fila_vazia_2026-09-18`
+registrado (dedupe funcionando, aviso de hoje já mandado antes desta
+checagem) — não repito o recado. `health.yml` run 141 (mesmo commit do
+conserto do `renovar_token.py` de ontem) segue verde. `SAUDE-DO-PROJETO.md`
+sem erro aberto. Post `2026-08-28_comida-servida` segue `pending` com
+auditoria `SEM OBJECAO` — decisão do Ramón, não mexo. Fila vazia (27º dia)
+segue decisão de família já avisada à exaustão. Nada a consertar, nada a
+avisar — silêncio conforme a regra 3.
+
 ## 🔧 18/09/2026 (vigia da nuvem) — CONSERTADO: 'Hana Sentinela' quebrada (código 1)
 
 `SAUDE-DO-PROJETO.md` trazia erro aberto: a tarefa agendada `Hana Sentinela`

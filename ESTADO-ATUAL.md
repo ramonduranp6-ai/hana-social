@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 18/09/2026 04:34. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 18/09/2026 08:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,6 +102,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+f759c10 fix(sentinela): renovar_token.py nao derruba mais a tarefa local por token nao configurado
 e74a3eb vault: links resolvem no vault Desktop (nome unico ou caminho completo)
 6e0b5a0 vault: indices por pasta + vizinhos por assunto (ordem do Ramon 17/09)
 7fce49d chore: atualiza estado da fila [skip ci]
@@ -109,14 +110,6 @@ e74a3eb vault: links resolvem no vault Desktop (nome unico ou caminho completo)
 1815b31 chore: atualiza estado da fila [skip ci]
 ef51c8f chore: checagem de rotina 17/09 (6a, vigia da nuvem) - sem bug novo
 e422156 chore: atualiza manutenção [skip ci]
-c57ba00 chore: checagem de rotina 17/09 (5a, vigia da nuvem) - sem bug novo
-```
-Alterações não commitadas:
-```
-M DECISOES.md
- M ESTADO-ATUAL.md
- M SAUDE-DO-PROJETO.md
- M studio/renovar_token.py
 ```
 
 ## Decisões e contexto
