@@ -41,3 +41,11 @@ não só estagnando.
 2. **Claude da conversa**: quando `comida-servida` for ao ar, comparar
    alcance com a média dos outros Reels do pilar e checar salvo/compartilhamento.
 3. **Robô**: nenhuma ação nova.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[diario-crescimento-2026-09-15]]
+- [[diario-crescimento-2026-09-16]]
+- [[diario-crescimento-2026-09-13]]

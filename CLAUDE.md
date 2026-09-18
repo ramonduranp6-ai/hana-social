@@ -17,5 +17,5 @@
 > Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
 > partir das citações que já existiam no texto acima.
 
-- [[PADRAO-DO-PROJETO]]
-- [[SAUDE-DO-PROJETO]]
+- [[Hana Social/PADRAO-DO-PROJETO|PADRAO-DO-PROJETO]]
+- [[Hana Social/SAUDE-DO-PROJETO|SAUDE-DO-PROJETO]]

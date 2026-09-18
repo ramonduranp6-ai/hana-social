@@ -71,5 +71,5 @@ de alcance e base pessoal medida, 15 dias de post orgânico falam com as mesmas
 > Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
 > partir das citações que já existiam no texto acima.
 
-- [[DECISOES]]
 - [[brand-brief]]
+- [[DECISOES]]

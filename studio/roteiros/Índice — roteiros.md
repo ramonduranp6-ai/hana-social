@@ -4,7 +4,7 @@
 > ficar solto no grafo. A lista de arquivos e subpastas é regenerada a
 > cada execução; linhas adicionadas à mão são preservadas abaixo.
 
-- [[studio/roteiros/2026-08_POV1_a-patroa-mandou|2026-08_POV1_a-patroa-mandou]]
+- [[2026-08_POV1_a-patroa-mandou]]
 
 ## 🔗 Relacionados
 

@@ -396,8 +396,8 @@ na peça.**
 > Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
 > partir das citações que já existiam no texto acima.
 
-- [[DECISOES]]
 - [[auditoria-baloes-v4-2026-08-14]]
 - [[brand-brief]]
+- [[DECISOES]]
 - [[manual-profissional-reels]]
 - [[virais-medidos-2026-08-13]]
