@@ -1,5 +1,20 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 19/09/2026 (checagem de rotina, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
+confirma HEAD local == `origin/main` (`ec70b7c`), sem commits perdidos. Via
+`mcp__github__actions_list`: `publish.yml` run 743 (22:42Z de 18/09, mais
+recente) e `health.yml` run 145 (20:34Z de 18/09, mais recente) vieram
+**verdes**. `gh` continua sem `PATH` nesta nuvem (`command not found`), usei
+a ferramenta MCP do GitHub no lugar, como nas checagens anteriores.
+`SAUDE-DO-PROJETO.md` sem erro aberto. `content/.falhas_avisadas.json` já
+tinha `fila_vazia_2026-09-18` registrado (dedupe cobre até ontem; hoje seria
+o 24º dia sem filmagem nova, causa de conteúdo já avisada à exaustão, não
+bug — não repito o recado). Post `2026-08-28_comida-servida` segue `pending`
+com auditoria `SEM OBJECAO` — decisão do Ramón, não mexo. Nada a consertar,
+nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 18/09/2026 (5ª checagem, vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`

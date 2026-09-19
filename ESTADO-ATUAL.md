@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 18/09/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 19/09/2026 00:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,22 +102,50 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+ec70b7c chore: checagem de rotina 18/09 (5a, vigia da nuvem) - sem bug novo
+25410ee chore: atualiza estado da fila [skip ci]
 3ef7e16 chore: checagem de rotina 18/09 (4a, vigia da nuvem) - sem bug novo
 6bc595c chore: atualiza manutenção [skip ci]
 724f286 Diario de crescimento 18/09: seguidores seguram em 330, fila parada 23o dia
 6cd977b chore: checagem de rotina 18/09 (3a, vigia da nuvem) - sem bug novo
 29757e5 chore: checagem de rotina 18/09 (2a, vigia da nuvem) - sem bug novo
 f759c10 fix(sentinela): renovar_token.py nao derruba mais a tarefa local por token nao configurado
-e74a3eb vault: links resolvem no vault Desktop (nome unico ou caminho completo)
-6e0b5a0 vault: indices por pasta + vizinhos por assunto (ordem do Ramon 17/09)
 ```
 Alterações não commitadas:
 ```
-M ESTADO-ATUAL.md
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 # Decisões e contexto — Hana Social
+
+## 🔍 19/09/2026 (checagem de rotina, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
+confirma HEAD local == `origin/main` (`ec70b7c`), sem commits perdidos. Via
+`mcp__github__actions_list`: `publish.yml` run 743 (22:42Z de 18/09, mais
+recente) e `health.yml` run 145 (20:34Z de 18/09, mais recente) vieram
+**verdes**. `gh` continua sem `PATH` nesta nuvem (`command not found`), usei
+a ferramenta MCP do GitHub no lugar, como nas checagens anteriores.
+`SAUDE-DO-PROJETO.md` sem erro aberto. `content/.falhas_avisadas.json` já
+tinha `fila_vazia_2026-09-18` registrado (dedupe cobre até ontem; hoje seria
+o 24º dia sem filmagem nova, causa de conteúdo já avisada à exaustão, não
+bug — não repito o recado). Post `2026-08-28_comida-servida` segue `pending`
+com auditoria `SEM OBJECAO` — decisão do Ramón, não mexo. Nada a consertar,
+nada a avisar — silêncio conforme a regra 3.
+
+## 🔍 18/09/2026 (5ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
+confirma HEAD local == `origin/main` (`25410ee`), sem commits perdidos. Via
+`mcp__github__actions_list`: `publish.yml` run 742 (20:12Z de 18/09) e
+`health.yml` run 144 (13:13Z de 18/09, mais recente de cada workflow) vieram
+**verdes**. `SAUDE-DO-PROJETO.md` sem erro aberto. `content/.falhas_avisadas.json`
+já tinha `fila_vazia_2026-09-18` registrado — dedupe funcionando, não repito
+o recado. Post `2026-08-28_comida-servida` segue `pending` com auditoria
+`SEM OBJECAO` — decisão do Ramón, não mexo. Nada a consertar, nada a avisar
+— silêncio conforme a regra 3.
 
 Parte humana do estado: o que o Ramón decidiu e o que código nenhum adivinha.
 **Atualizar ao fim de cada sessão** (a parte automática vem de `studio/estado.py`).
