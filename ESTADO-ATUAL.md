@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 19/09/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 19/09/2026 12:42. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,23 +102,61 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+2939dc2 chore: checagem de rotina 19/09 (4a, vigia da nuvem) - sem bug novo
+eb8d56f chore: checagem de rotina 19/09 (3a, vigia da nuvem) - sem bug novo
+d4ceed3 chore: checagem de rotina 19/09 (2a, vigia da nuvem) - sem bug novo
+0e48247 chore: atualiza estado da fila [skip ci]
+b68b759 chore: checagem de rotina 19/09 (vigia da nuvem) - sem bug novo
 ec70b7c chore: checagem de rotina 18/09 (5a, vigia da nuvem) - sem bug novo
 25410ee chore: atualiza estado da fila [skip ci]
 3ef7e16 chore: checagem de rotina 18/09 (4a, vigia da nuvem) - sem bug novo
-6bc595c chore: atualiza manutenção [skip ci]
-724f286 Diario de crescimento 18/09: seguidores seguram em 330, fila parada 23o dia
-6cd977b chore: checagem de rotina 18/09 (3a, vigia da nuvem) - sem bug novo
-29757e5 chore: checagem de rotina 18/09 (2a, vigia da nuvem) - sem bug novo
-f759c10 fix(sentinela): renovar_token.py nao derruba mais a tarefa local por token nao configurado
-```
-Alterações não commitadas:
-```
-M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 # Decisões e contexto — Hana Social
+
+## 🔍 19/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
+confirma HEAD local == `origin/main` (`eb8d56f`), sem commits perdidos. Via
+`mcp__github__actions_list`: `publish.yml` run 746 (09:38Z de 19/09, mais
+recente) e `health.yml` run 148 (08:32Z de 19/09, mais recente) vieram
+**verdes**. `SAUDE-DO-PROJETO.md` sem erro aberto. `content/.falhas_avisadas.json`
+já tinha `fila_vazia_2026-09-19` registrado (28º dia sem filmagem nova, causa
+de conteúdo já avisada à exaustão, não bug — não repito o recado). Post
+`2026-08-28_comida-servida` segue `pending` com auditoria `SEM OBJECAO` —
+decisão do Ramón, não mexo. Nada a consertar, nada a avisar — silêncio
+conforme a regra 3.
+
+## 🔍 19/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
+confirma HEAD local == `origin/main` (`d4ceed3`), sem commits perdidos. Via
+`mcp__github__actions_list`: `publish.yml` run 745 (05:21Z de 19/09, mais
+recente) e `health.yml` run 147 (04:34Z de 19/09, mais recente) vieram
+**verdes**. `SAUDE-DO-PROJETO.md` sem erro aberto. `content/.falhas_avisadas.json`
+já tinha `fila_vazia_2026-09-19` registrado (27º dia sem filmagem nova,
+causa de conteúdo já avisada à exaustão, não bug — não repito o recado).
+Post `2026-08-28_comida-servida` segue `pending` com auditoria `SEM OBJECAO`
+— decisão do Ramón, não mexo. Nada a consertar, nada a avisar — silêncio
+conforme a regra 3.
+
+## 🔍 19/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
+confirma HEAD local == `origin/main` (`0e48247`), sem commits perdidos. Via
+`mcp__github__actions_list`/`get_job_logs`: `publish.yml` run 744 (00:50Z de
+19/09, mais recente) veio **vermelho** — mas o motivo é o alarme diário
+esperado do `sentinel.py` (`fila com so 0 post(s) futuro(s)`, 1ª vez que essa
+chave `fila_vazia_2026-09-19` aparece no dia, por desenho manda e-mail uma
+vez e depois vira só aviso — ver comentário "ACHADO 25/08/2026" no próprio
+arquivo). Não é bug de código novo: mesma causa de sempre, fila vazia por
+falta de filmagem (26º dia), já registrada e já avisada à exaustão nas
+checagens anteriores. `health.yml` run 146 (00:33Z de 19/09) veio verde.
+`SAUDE-DO-PROJETO.md` sem erro aberto. Post `2026-08-28_comida-servida`
+segue `pending` com auditoria `SEM OBJECAO` — decisão do Ramón, não mexo.
+Nada a consertar, nada a avisar (recado de fila vazia já mandado e deduplicado
+em dias anteriores) — silêncio conforme a regra 3.
 
 ## 🔍 19/09/2026 (checagem de rotina, vigia da nuvem) — sem bug novo
 
