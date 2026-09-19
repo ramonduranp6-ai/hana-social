@@ -1,5 +1,22 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 19/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
+confirma HEAD local == `origin/main` (`0e48247`), sem commits perdidos. Via
+`mcp__github__actions_list`/`get_job_logs`: `publish.yml` run 744 (00:50Z de
+19/09, mais recente) veio **vermelho** — mas o motivo é o alarme diário
+esperado do `sentinel.py` (`fila com so 0 post(s) futuro(s)`, 1ª vez que essa
+chave `fila_vazia_2026-09-19` aparece no dia, por desenho manda e-mail uma
+vez e depois vira só aviso — ver comentário "ACHADO 25/08/2026" no próprio
+arquivo). Não é bug de código novo: mesma causa de sempre, fila vazia por
+falta de filmagem (26º dia), já registrada e já avisada à exaustão nas
+checagens anteriores. `health.yml` run 146 (00:33Z de 19/09) veio verde.
+`SAUDE-DO-PROJETO.md` sem erro aberto. Post `2026-08-28_comida-servida`
+segue `pending` com auditoria `SEM OBJECAO` — decisão do Ramón, não mexo.
+Nada a consertar, nada a avisar (recado de fila vazia já mandado e deduplicado
+em dias anteriores) — silêncio conforme a regra 3.
+
 ## 🔍 19/09/2026 (checagem de rotina, vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
