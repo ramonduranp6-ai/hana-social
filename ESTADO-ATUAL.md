@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 20/09/2026 00:38. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 20/09/2026 04:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,23 +102,34 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+95f1369 chore: checagem de rotina 20/09 (2a, vigia da nuvem) - sem bug novo
+67032af chore: atualiza estado da fila [skip ci]
+463e693 chore: checagem de rotina 20/09 (vigia da nuvem) - sem bug novo
 315eb6b chore: checagem de rotina 19/09 (6a, vigia da nuvem) - sem bug novo
 5f54e17 chore: atualiza manutenção [skip ci]
 bd94272 chore: checagem de rotina 19/09 (5a, vigia da nuvem) - sem bug novo
 c8b1f02 chore: atualiza manutenção [skip ci]
 7861bf5 Diário de crescimento 19/09: 3ª coleta seguida em 330, sem novidade
-08f137c chore: atualiza estado da fila [skip ci]
-2939dc2 chore: checagem de rotina 19/09 (4a, vigia da nuvem) - sem bug novo
-eb8d56f chore: checagem de rotina 19/09 (3a, vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
-UU DECISOES.md
-UU ESTADO-ATUAL.md
+M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 # Decisões e contexto — Hana Social
+
+## 🔍 20/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
+confirma HEAD local == `origin/main` (`67032af`), sem commits perdidos —
+inclui o commit automático do bot `atualiza estado da fila` (só regravou
+`content/.falhas_avisadas.json` com a chave de hoje). `SAUDE-DO-PROJETO.md`
+sem erro aberto. Post `2026-08-28_comida-servida` segue `pending` com
+`auditoria.veredito` já `"SEM OBJECAO"` (conferido no `post.json`) — agenda
+do Ramón, não mexo. Fila vazia de conteúdo novo (`fila_vazia_2026-09-20`) já
+registrada como avisada — não repito o recado. Nada a consertar, nada a
+avisar — silêncio conforme a regra 3.
 
 ## 🔍 20/09/2026 (checagem de rotina, vigia da nuvem) — sem bug novo
 
