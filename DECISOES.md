@@ -1,5 +1,20 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 20/09/2026 (checagem de rotina, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
+confirma HEAD local == `origin/main` (`315eb6b`), sem commits perdidos. Via
+`mcp__github__actions_list`: `publish.yml` run 752 (23:48Z de 19/09, mais
+recente) e `health.yml` run 152 (20:32Z de 19/09, mais recente) vieram
+**verdes**. `SAUDE-DO-PROJETO.md` sem erro aberto. `content/.falhas_avisadas.json`
+já tinha `fila_vazia_2026-09-19` registrado (causa de conteúdo já avisada à
+exaustão nos últimos 26 dias, não bug — não repito o recado; o `sentinel.py`
+ainda não rodou para gerar a chave de 20/09, mas a causa é a mesma). Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito`
+já preenchido como `"SEM OBJECAO"` (conferido na fonte, `post.json`) — decisão
+de agenda do Ramón, não mexo. Nada a consertar, nada a avisar — silêncio
+conforme a regra 3.
+
 ## 🔍 19/09/2026 (6ª checagem, vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`

@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 19/09/2026 16:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 20/09/2026 00:38. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,18 +102,64 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+315eb6b chore: checagem de rotina 19/09 (6a, vigia da nuvem) - sem bug novo
+5f54e17 chore: atualiza manutenção [skip ci]
+bd94272 chore: checagem de rotina 19/09 (5a, vigia da nuvem) - sem bug novo
 c8b1f02 chore: atualiza manutenção [skip ci]
 7861bf5 Diário de crescimento 19/09: 3ª coleta seguida em 330, sem novidade
 08f137c chore: atualiza estado da fila [skip ci]
 2939dc2 chore: checagem de rotina 19/09 (4a, vigia da nuvem) - sem bug novo
 eb8d56f chore: checagem de rotina 19/09 (3a, vigia da nuvem) - sem bug novo
-d4ceed3 chore: checagem de rotina 19/09 (2a, vigia da nuvem) - sem bug novo
-0e48247 chore: atualiza estado da fila [skip ci]
-b68b759 chore: checagem de rotina 19/09 (vigia da nuvem) - sem bug novo
+```
+Alterações não commitadas:
+```
+UU DECISOES.md
+UU ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 # Decisões e contexto — Hana Social
+
+## 🔍 20/09/2026 (checagem de rotina, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
+confirma HEAD local == `origin/main` (`315eb6b`), sem commits perdidos. Via
+`mcp__github__actions_list`: `publish.yml` run 752 (23:48Z de 19/09, mais
+recente) e `health.yml` run 152 (20:32Z de 19/09, mais recente) vieram
+**verdes**. `SAUDE-DO-PROJETO.md` sem erro aberto. `content/.falhas_avisadas.json`
+já tinha `fila_vazia_2026-09-19` registrado (causa de conteúdo já avisada à
+exaustão nos últimos 26 dias, não bug — não repito o recado; o `sentinel.py`
+ainda não rodou para gerar a chave de 20/09, mas a causa é a mesma). Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito`
+já preenchido como `"SEM OBJECAO"` (conferido na fonte, `post.json`) — decisão
+de agenda do Ramón, não mexo. Nada a consertar, nada a avisar — silêncio
+conforme a regra 3.
+
+## 🔍 19/09/2026 (6ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
+confirma HEAD local == `origin/main` (`5f54e17`), sem commits perdidos. Via
+`mcp__github__actions_list`: `publish.yml` run 750 (19:08Z de 19/09, mais
+recente) e `health.yml` run 151 (16:32Z de 19/09, mais recente) vieram
+**verdes**. `SAUDE-DO-PROJETO.md` sem erro aberto. `content/.falhas_avisadas.json`
+já tinha `fila_vazia_2026-09-19` registrado (29º dia sem filmagem nova, causa
+de conteúdo já avisada à exaustão, não bug — não repito o recado). Post
+`2026-08-28_comida-servida` segue `pending` com auditoria `SEM OBJECAO` —
+decisão do Ramón, não mexo. Nada a consertar, nada a avisar — silêncio
+conforme a regra 3.
+
+## 🔍 19/09/2026 (5ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
+confirma HEAD local == `origin/main` (`c8b1f02`), sem commits perdidos. Via
+`mcp__github__actions_list`: `publish.yml` run 747 (13:36Z de 19/09, mais
+recente) e `health.yml` run 150 (13:04Z de 19/09, mais recente) vieram
+**verdes**. `SAUDE-DO-PROJETO.md` sem erro aberto. `content/.falhas_avisadas.json`
+já tinha `fila_vazia_2026-09-19` registrado (29º dia sem filmagem nova, causa
+de conteúdo já avisada à exaustão, não bug — não repito o recado). Post
+`2026-08-28_comida-servida` segue `pending` com auditoria `SEM OBJECAO` —
+decisão do Ramón, não mexo. Nada a consertar, nada a avisar — silêncio
+conforme a regra 3.
 
 ## 🔍 19/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
 
