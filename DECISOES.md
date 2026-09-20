@@ -1,5 +1,18 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 20/09/2026 (6ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
+confirma HEAD local == `origin/main` (`cf7d7d7`), sem commits perdidos. Via
+`mcp__github__actions_list`: `publish.yml` runs 756, 757 e 758 (16:54Z,
+17:04Z, 19:11Z) todos **verdes** — nenhum vermelho novo desde a checagem
+anterior (o único vermelho do dia segue sendo o run 753, já diagnosticado
+como alarme proposital de fila vazia). `health.yml` segue verde no último
+run (156, 16:32Z). `SAUDE-DO-PROJETO.md` sem erro aberto. Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito` já
+`"SEM OBJECAO"` — agenda do Ramón, não mexo. Nada novo a consertar, nada a
+avisar — silêncio conforme a regra 3.
+
 ## 🔍 20/09/2026 (5ª checagem, vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
