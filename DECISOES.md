@@ -1,5 +1,17 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 20/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
+confirma HEAD local == `origin/main` (`67032af`), sem commits perdidos —
+inclui o commit automático do bot `atualiza estado da fila` (só regravou
+`content/.falhas_avisadas.json` com a chave de hoje). `SAUDE-DO-PROJETO.md`
+sem erro aberto. Post `2026-08-28_comida-servida` segue `pending` com
+`auditoria.veredito` já `"SEM OBJECAO"` (conferido no `post.json`) — agenda
+do Ramón, não mexo. Fila vazia de conteúdo novo (`fila_vazia_2026-09-20`) já
+registrada como avisada — não repito o recado. Nada a consertar, nada a
+avisar — silêncio conforme a regra 3.
+
 ## 🔍 20/09/2026 (checagem de rotina, vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
