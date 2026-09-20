@@ -1,5 +1,25 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 20/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md` sem
+erro aberto. Via `mcp__github__actions_list`: achei 1 run vermelho no meio
+dos verdes — `publish.yml` run 753 (02:40Z), job `Sentinela` com exit 1.
+Log completo do job (`get_job_logs`) mostra a causa: `sentinel.py` acusou
+"fila com so 0 post(s) futuro(s)" — é o alarme proposital de fila vazia
+(1x por dia, código em `publisher/sentinel.py` linha ~113), que dispara
+com exit 1 (e manda e-mail do GitHub) na primeira rodada depois da virada
+do dia UTC, até gravar a chave `fila_vazia_2026-09-20` em
+`content/.falhas_avisadas.json` — já gravada logo nesse mesmo run (confirmado
+no arquivo). Todos os runs seguintes do dia (754 em diante) vieram verdes,
+como esperado. Não é bug: é o comportamento desenhado desde o conserto
+"BURACO (c)" de 25/08/2026. Causa raiz continua sendo falta de filmagem
+nova (conteúdo, não código) — já registrada e avisada à exaustão nos
+últimos 26+ dias, não repito o recado. Post `2026-08-28_comida-servida`
+segue `pending` com `auditoria.veredito` já `"SEM OBJECAO"` — agenda do
+Ramón, não mexo. Nada a consertar, nada a avisar — silêncio conforme a
+regra 3.
+
 ## 🔍 20/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`

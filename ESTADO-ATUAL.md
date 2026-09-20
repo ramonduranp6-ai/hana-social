@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 20/09/2026 04:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 20/09/2026 08:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,6 +102,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+aaaebaf chore: atualiza estado da fila [skip ci]
 95f1369 chore: checagem de rotina 20/09 (2a, vigia da nuvem) - sem bug novo
 67032af chore: atualiza estado da fila [skip ci]
 463e693 chore: checagem de rotina 20/09 (vigia da nuvem) - sem bug novo
@@ -109,11 +110,6 @@ estava certo: ela está de costas do começo ao fim.
 5f54e17 chore: atualiza manutenção [skip ci]
 bd94272 chore: checagem de rotina 19/09 (5a, vigia da nuvem) - sem bug novo
 c8b1f02 chore: atualiza manutenção [skip ci]
-7861bf5 Diário de crescimento 19/09: 3ª coleta seguida em 330, sem novidade
-```
-Alterações não commitadas:
-```
-M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
