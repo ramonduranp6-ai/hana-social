@@ -1,5 +1,22 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 21/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 762 (08:25Z, mais recente) veio **verde**; run 761 (02:37Z)
+veio vermelho, mas confirmado job a job — só o passo "Sentinela" falhou
+(alarme proposital de fila vazia), "Rodar publicador" e "Salvar estado da
+fila" vieram verdes, mesma causa das checagens anteriores; chave
+`fila_vazia_2026-09-21` já gravada em `content/.falhas_avisadas.json`, sem
+repetir aviso. `SAUDE-DO-PROJETO.md` sem erro aberto. Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito`
+conferido de novo na fonte (`content/queue/2026-08-28_comida-servida/post.json`)
+= `"SEM OBJECAO"` — falta só o Ramón aprovar ou recusar, agenda dele, já
+avisado em sessões anteriores, não repito. Fila segue com 0 posts futuros
+por falta de filmagem nova (sem material desde 09/08) — mesma causa já
+avisada repetidamente, não é bug de código. Nenhum erro de código novo
+para consertar. Nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 21/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
