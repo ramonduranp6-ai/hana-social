@@ -1,5 +1,21 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 21/09/2026 (checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Repositório local estava em
+HEAD destacado de novo (mesmo padrão de sempre), sincronizado com `git stash
+-u` + `git checkout -B main origin/main` — nenhuma mudança real perdida, só o
+timestamp regenerado de `ESTADO-ATUAL.md`. Via `mcp__github__actions_list`:
+`publish.yml` runs 756-760 (16:54Z a 20/09 23:44Z) todos **verdes**;
+`health.yml` run 157 (20/09 20:32Z) também verde. `SAUDE-DO-PROJETO.md` sem
+erro aberto. Post `2026-08-28_comida-servida` segue `pending` com
+`auditoria.veredito` já `"SEM OBJECAO"` — falta só o Ramón aprovar ou
+recusar, agenda dele, já avisado em sessões anteriores, não repito. Fila
+segue com 0 posts futuros por falta de filmagem nova (sem material desde
+09/08) — mesma causa já avisada repetidamente, dedupe (`.falhas_avisadas.json`)
+segue até 20/09; não é bug de código. Nenhum erro de código novo para
+consertar. Nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 20/09/2026 (6ª checagem, vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `git fetch origin main`
