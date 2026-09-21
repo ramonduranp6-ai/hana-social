@@ -1,5 +1,20 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 21/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 762 (08:25Z) segue o mais recente e **verde**; nenhum run
+novo desde a checagem anterior. `SAUDE-DO-PROJETO.md` sem erro aberto (nenhuma
+linha na seção de erros abertos). Nenhum post com `status: "failed"` na fila
+(`content/queue/*/post.json` conferido item a item). Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito` já
+`"SEM OBJECAO"` — falta só o Ramón aprovar ou recusar, agenda dele, já
+avisado em sessões anteriores, não repito. Fila segue com 0 posts futuros
+por falta de filmagem nova (sem material desde 09/08) — mesma causa já
+avisada repetidamente, dedupe (`content/.falhas_avisadas.json`) já cobre
+`fila_vazia_2026-09-21`, não repete o alarme. Nenhum erro de código novo
+para consertar. Nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 21/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
