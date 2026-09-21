@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 21/09/2026 04:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 21/09/2026 08:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,18 +102,34 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+a6e8e9a chore: atualiza estado da fila [skip ci]
+55679e6 chore: checagem de rotina 21/09 (2a, vigia da nuvem) - sem bug novo
 3d2e3cf chore: atualiza estado da fila [skip ci]
 b16521a chore: checagem de rotina 21/09 (vigia da nuvem) - sem bug novo
 161e0f3 chore: checagem de rotina 20/09 (6a, vigia da nuvem) - sem bug novo
 cf7d7d7 chore: atualiza estado da fila [skip ci]
 4673dd9 chore: checagem de rotina 20/09 (5a, vigia da nuvem) - sem bug novo
 8f3c38e chore: atualiza manutenção [skip ci]
-948f33d diario: analise de crescimento 20/09 - seguidores 329 (-1), sem post novo, comida-servida 23 dias parada
-169f251 chore: atualiza estado da fila [skip ci]
 ```
 
 ## Decisões e contexto
 # Decisões e contexto — Hana Social
+
+## 🔍 21/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 761 (02:37Z, mais recente) veio **vermelho**, mas só no
+passo "Sentinela" — os passos "Rodar publicador" e "Salvar estado da fila"
+vieram verdes. Motivo: alarme proposital de fila vazia (0 posts futuros),
+chave `fila_vazia_2026-09-21` já gravada em `content/.falhas_avisadas.json`
+antes deste run — mesma causa das checagens anteriores, sem repetir aviso
+(dedupe já cobre o dia). `SAUDE-DO-PROJETO.md` sem erro aberto. Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito` já
+`"SEM OBJECAO"` — falta só o Ramón aprovar ou recusar, agenda dele, já
+avisado em sessões anteriores, não repito. Fila segue com 0 posts futuros
+por falta de filmagem nova (sem material desde 09/08) — mesma causa já
+avisada repetidamente, não é bug de código. Nenhum erro de código novo
+para consertar. Nada a avisar — silêncio conforme a regra 3.
 
 ## 🔍 21/09/2026 (checagem, vigia da nuvem) — sem bug novo
 
