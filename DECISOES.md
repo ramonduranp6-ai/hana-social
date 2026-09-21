@@ -1,5 +1,21 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 21/09/2026 (6ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+runs 765 (20:03Z) e 764 (18:57Z) do `publish.yml`, ambos **verdes**, HEAD em
+`2d1ea44` (mesmo commit da checagem anterior, só o chore de manutenção no
+meio — nenhum commit de conteúdo novo). `SAUDE-DO-PROJETO.md` sem erro aberto.
+Nenhum post com `status: "failed"` na fila (`content/queue/*/post.json`
+conferido item a item — 7 `rejected` datados, 1 `pending`). Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito` já
+`"SEM OBJECAO"` — falta só o Ramón aprovar ou recusar, agenda dele, já
+avisado em sessões anteriores, não repito. Fila segue com 0 posts futuros
+por falta de filmagem nova (sem material desde 09/08) — mesma causa já
+avisada repetidamente, dedupe (`content/.falhas_avisadas.json`) já cobre o
+dia. Nenhum erro de código novo para consertar. Nada a avisar — silêncio
+conforme a regra 3.
+
 ## 🔍 21/09/2026 (5ª checagem, vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Confirmado direto no GitHub
