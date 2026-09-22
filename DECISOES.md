@@ -1,5 +1,22 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 22/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `publish.yml` run 768
+(22/09 07:06Z, mais recente) veio **verde**, HEAD em `fc3bee0` — confirma o
+diagnóstico da checagem anterior: a falha do run 767 foi só o alarme
+proposital do Sentinela (fila vazia, dedupe do dia já gravado), sem código
+quebrado. `SAUDE-DO-PROJETO.md` sem erro aberto. Nenhum post com
+`status: "failed"` na fila (`content/queue/*/post.json` conferido item a
+item — 7 `rejected` datados, 1 `pending`). Post `2026-08-28_comida-servida`
+segue `pending` com `auditoria.veredito` já `"SEM OBJECAO"` — falta só o
+Ramón aprovar ou recusar, agenda dele, já avisado em sessões anteriores,
+não repito. Fila segue com 0 posts futuros por falta de filmagem nova (sem
+material desde 09/08) — mesma causa já avisada repetidamente, dedupe
+(`content/.falhas_avisadas.json`) já cobre `fila_vazia_2026-09-22`. Nenhum
+erro de código novo para consertar. Nada a avisar — silêncio conforme a
+regra 3.
+
 ## 🔍 22/09/2026 (2ª checagem, vigia da nuvem) — job vermelho investigado, não é bug
 
 `publish.yml` run 767 (22/09 01:42Z) apareceu **vermelho** — primeira falha

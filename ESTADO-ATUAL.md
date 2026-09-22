@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 22/09/2026 00:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 22/09/2026 08:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,18 +102,86 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+fc3bee0 chore: checagem de rotina 22/09 (2a, vigia da nuvem) - job vermelho investigado, sem bug de codigo
+c0838a0 chore: atualiza estado da fila [skip ci]
+26b2b15 chore: atualiza manutenção [skip ci]
+5c0f727 chore: checagem de rotina 22/09 (vigia da nuvem) - sem bug novo
 2935a2e chore: checagem de rotina 21/09 (6a, vigia da nuvem) - sem bug novo
 2d1ea44 chore: atualiza manutenção [skip ci]
 b5b81a8 chore: checagem de rotina 21/09 (5a, vigia da nuvem) - sem bug novo
 34b0107 Diário de crescimento 21/09: perfil parado, 26 dias sem post, gargalo segue comida-servida (24 dias esperando aprovação)
-be6d233 chore: checagem de rotina 21/09 (4a, vigia da nuvem) - sem bug novo
-4cd16e6 chore: atualiza estado da fila [skip ci]
-2d1dfcc chore: checagem de rotina 21/09 (3a, vigia da nuvem) - sem bug novo
-a6e8e9a chore: atualiza estado da fila [skip ci]
+```
+Alterações não commitadas:
+```
+M  DECISOES.md
+M  ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 # Decisões e contexto — Hana Social
+
+## 🔍 22/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `publish.yml` run 768
+(22/09 07:06Z, mais recente) veio **verde**, HEAD em `fc3bee0` — confirma o
+diagnóstico da checagem anterior: a falha do run 767 foi só o alarme
+proposital do Sentinela (fila vazia, dedupe do dia já gravado), sem código
+quebrado. `SAUDE-DO-PROJETO.md` sem erro aberto. Nenhum post com
+`status: "failed"` na fila (`content/queue/*/post.json` conferido item a
+item — 7 `rejected` datados, 1 `pending`). Post `2026-08-28_comida-servida`
+segue `pending` com `auditoria.veredito` já `"SEM OBJECAO"` — falta só o
+Ramón aprovar ou recusar, agenda dele, já avisado em sessões anteriores,
+não repito. Fila segue com 0 posts futuros por falta de filmagem nova (sem
+material desde 09/08) — mesma causa já avisada repetidamente, dedupe
+(`content/.falhas_avisadas.json`) já cobre `fila_vazia_2026-09-22`. Nenhum
+erro de código novo para consertar. Nada a avisar — silêncio conforme a
+regra 3.
+
+## 🔍 22/09/2026 (2ª checagem, vigia da nuvem) — job vermelho investigado, não é bug
+
+`publish.yml` run 767 (22/09 01:42Z) apareceu **vermelho** — primeira falha
+desde a checagem anterior (run 766, verde). Investigado via `mcp__github__get_job_logs`:
+o step "Rodar publicador" passou normal (nada a publicar/aprovar/rejeitar no
+horário); quem derrubou o job foi o step "Sentinela"
+(`publisher/sentinel.py`), saindo com `exit(1)` porque a fila segue com 0
+posts futuros (mínimo saudável: 2 — `MIN_POSTS_FUTUROS`, `sentinel.py:42`).
+
+Não é bug: `sentinel.py` já tem dedupe por dia para esse alarme
+(`chave = f"fila_vazia_{_hoje()}"`, linha 125) — de propósito, ele deixa o
+job vermelho **uma vez por dia** quando a fila está vazia, justamente para o
+GitHub mandar o e-mail automático de "workflow falhou" ao dono (Ramón) sem
+precisar de nada rodando na máquina local. Conferido em
+`content/.falhas_avisadas.json` (via `origin/main`): a chave
+`fila_vazia_2026-09-22` já estava gravada pelo próprio run 767 (commit
+`c0838a0`) — o alarme de hoje já disparou e não vai repetir até amanhã. Runs
+seguintes do dia (768+) voltam a ficar verdes.
+
+Causa raiz é a mesma já registrada todo dia desde 25/08/2026: falta
+filmagem nova (nada em "01 - brutas" desde 09/08), fora do meu alcance nesta
+nuvem (sem acesso ao acervo local nem aos subagentes de produção). Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito`
+`"SEM OBJECAO"`, só esperando o Ramón aprovar/recusar no Telegram — nenhuma
+mudança desde a checagem anterior hoje. `SAUDE-DO-PROJETO.md` sem erro
+aberto. Nenhum código alterado — o comportamento do sentinela está correto
+e documentado no próprio arquivo. Já avisado repetidamente em sessões
+anteriores (fila vazia) e o e-mail automático do GitHub de hoje já cobre o
+aviso; não repito recado.
+
+## 🔍 22/09/2026 (checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
+`publish.yml` run 766 (21/09 23:26Z, mais recente) e `health.yml` run 163
+(21/09 20:33Z) ambos **verdes**, HEAD ainda em `2935a2e` — nenhum commit ou
+run novo desde a checagem anterior. `SAUDE-DO-PROJETO.md` sem erro aberto.
+Nenhum post com `status: "failed"` na fila (`content/queue/*/post.json`
+conferido item a item — 7 `rejected` datados, 1 `pending`). Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito` já
+`"SEM OBJECAO"` (conferido de novo na fonte) — falta só o Ramón aprovar ou
+recusar, agenda dele, já avisado em sessões anteriores, não repito. Fila
+segue com 0 posts futuros por falta de filmagem nova (sem material desde
+09/08) — mesma causa já avisada repetidamente, dedupe
+(`content/.falhas_avisadas.json`) já cobre os dias anteriores. Nenhum erro
+de código novo para consertar. Nada a avisar — silêncio conforme a regra 3.
 
 ## 🔍 21/09/2026 (6ª checagem, vigia da nuvem) — sem bug novo
 
