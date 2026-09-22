@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 22/09/2026 12:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 22/09/2026 16:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,18 +102,47 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+c2ad6bc diario: 22/09 - perfil parado, comida-servida 25 dias sem aprovacao
+8150393 chore: atualiza estado da fila [skip ci]
+69cc8ac chore: checagem de rotina 22/09 (4a, vigia da nuvem) - sem bug novo
 d45e916 chore: checagem de rotina 22/09 (3a, vigia da nuvem) - sem bug novo
 fc3bee0 chore: checagem de rotina 22/09 (2a, vigia da nuvem) - job vermelho investigado, sem bug de codigo
 c0838a0 chore: atualiza estado da fila [skip ci]
 26b2b15 chore: atualiza manutenção [skip ci]
 5c0f727 chore: checagem de rotina 22/09 (vigia da nuvem) - sem bug novo
-2935a2e chore: checagem de rotina 21/09 (6a, vigia da nuvem) - sem bug novo
-2d1ea44 chore: atualiza manutenção [skip ci]
-b5b81a8 chore: checagem de rotina 21/09 (5a, vigia da nuvem) - sem bug novo
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 # Decisões e contexto — Hana Social
+
+## 🔍 22/09/2026 (5ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run 769 (22/09 12:43Z, mais recente) veio **verde**, HEAD em
+`c2ad6bc`. `studio/estado.py --mostrar` sem ALARME no topo, `SAUDE-DO-PROJETO.md`
+sem erro aberto. Fila igual às checagens anteriores de hoje: 7 `rejected`,
+1 `pending` (`2026-08-28_comida-servida`, `auditoria.veredito` já
+`"SEM OBJECAO"`, esperando só o Ramón aprovar/recusar). Fila com 0 posts
+futuros por falta de filmagem nova, mesma causa já avisada e coberta pelo
+dedupe (`fila_vazia_2026-09-22` já gravado). Nenhum código alterado, nenhum
+erro novo. Nada a avisar — silêncio conforme a regra 3.
+
+## 🔍 22/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `publish.yml` run 768
+(22/09 07:06Z) segue sendo o mais recente e verde — nenhum run novo desde a
+checagem anterior de hoje, HEAD (`d45e916`) um commit à frente do run (só o
+commit de rotina anterior, `[skip ci]` não roda workflow). `SAUDE-DO-PROJETO.md`
+sem erro aberto. Fila igual à checagem anterior: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já `"SEM OBJECAO"`,
+esperando só o Ramón aprovar/recusar). Fila com 0 posts futuros por falta de
+filmagem nova, mesma causa já avisada e coberta pelo dedupe
+(`fila_vazia_2026-09-22` já gravado). Nenhum código alterado, nenhum erro
+novo. Nada a avisar — silêncio conforme a regra 3.
 
 ## 🔍 22/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
 

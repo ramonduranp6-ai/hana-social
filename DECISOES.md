@@ -1,5 +1,16 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 22/09/2026 (5ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run 769 (22/09 12:43Z, mais recente) veio **verde**, HEAD em
+`c2ad6bc`. `studio/estado.py --mostrar` sem ALARME no topo, `SAUDE-DO-PROJETO.md`
+sem erro aberto. Fila igual às checagens anteriores de hoje: 7 `rejected`,
+1 `pending` (`2026-08-28_comida-servida`, `auditoria.veredito` já
+`"SEM OBJECAO"`, esperando só o Ramón aprovar/recusar). Fila com 0 posts
+futuros por falta de filmagem nova, mesma causa já avisada e coberta pelo
+dedupe (`fila_vazia_2026-09-22` já gravado). Nenhum código alterado, nenhum
+erro novo. Nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 22/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `publish.yml` run 768
