@@ -1,5 +1,18 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 22/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `publish.yml` run 768
+(22/09 07:06Z) segue sendo o mais recente e verde — nenhum run novo desde a
+checagem anterior de hoje, HEAD (`d45e916`) um commit à frente do run (só o
+commit de rotina anterior, `[skip ci]` não roda workflow). `SAUDE-DO-PROJETO.md`
+sem erro aberto. Fila igual à checagem anterior: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já `"SEM OBJECAO"`,
+esperando só o Ramón aprovar/recusar). Fila com 0 posts futuros por falta de
+filmagem nova, mesma causa já avisada e coberta pelo dedupe
+(`fila_vazia_2026-09-22` já gravado). Nenhum código alterado, nenhum erro
+novo. Nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 22/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `publish.yml` run 768
