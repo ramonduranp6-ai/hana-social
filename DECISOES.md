@@ -1,5 +1,35 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 22/09/2026 (2ª checagem, vigia da nuvem) — job vermelho investigado, não é bug
+
+`publish.yml` run 767 (22/09 01:42Z) apareceu **vermelho** — primeira falha
+desde a checagem anterior (run 766, verde). Investigado via `mcp__github__get_job_logs`:
+o step "Rodar publicador" passou normal (nada a publicar/aprovar/rejeitar no
+horário); quem derrubou o job foi o step "Sentinela"
+(`publisher/sentinel.py`), saindo com `exit(1)` porque a fila segue com 0
+posts futuros (mínimo saudável: 2 — `MIN_POSTS_FUTUROS`, `sentinel.py:42`).
+
+Não é bug: `sentinel.py` já tem dedupe por dia para esse alarme
+(`chave = f"fila_vazia_{_hoje()}"`, linha 125) — de propósito, ele deixa o
+job vermelho **uma vez por dia** quando a fila está vazia, justamente para o
+GitHub mandar o e-mail automático de "workflow falhou" ao dono (Ramón) sem
+precisar de nada rodando na máquina local. Conferido em
+`content/.falhas_avisadas.json` (via `origin/main`): a chave
+`fila_vazia_2026-09-22` já estava gravada pelo próprio run 767 (commit
+`c0838a0`) — o alarme de hoje já disparou e não vai repetir até amanhã. Runs
+seguintes do dia (768+) voltam a ficar verdes.
+
+Causa raiz é a mesma já registrada todo dia desde 25/08/2026: falta
+filmagem nova (nada em "01 - brutas" desde 09/08), fora do meu alcance nesta
+nuvem (sem acesso ao acervo local nem aos subagentes de produção). Post
+`2026-08-28_comida-servida` segue `pending` com `auditoria.veredito`
+`"SEM OBJECAO"`, só esperando o Ramón aprovar/recusar no Telegram — nenhuma
+mudança desde a checagem anterior hoje. `SAUDE-DO-PROJETO.md` sem erro
+aberto. Nenhum código alterado — o comportamento do sentinela está correto
+e documentado no próprio arquivo. Já avisado repetidamente em sessões
+anteriores (fila vazia) e o e-mail automático do GitHub de hoje já cobre o
+aviso; não repito recado.
+
 ## 🔍 22/09/2026 (checagem, vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. Via `mcp__github__actions_list`:
