@@ -1,5 +1,20 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 23/09/2026 (1ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run 773 (22/09 23:05Z, mais recente) veio **verde**, HEAD em
+`3dd3ecd`. Últimos 5 runs (773, 772, 771, 770, 769) todos **verdes**.
+`studio/estado.py --mostrar` sem ALARME no topo, `SAUDE-DO-PROJETO.md` sem
+erro aberto. Fila igual às checagens de ontem: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já `"SEM OBJECAO"`,
+esperando só o Ramón aprovar/recusar — decisão dele, não repito aviso).
+Fila com 0 posts futuros por falta de filmagem nova, mesma causa já avisada
+e coberta pelo dedupe do próprio `sentinel.py`
+(`content/.falhas_avisadas.json` cobre até `fila_vazia_2026-09-22`; o aviso
+de hoje, se a fila continuar vazia, é responsabilidade do workflow
+automático, não desta checagem). Nenhum código alterado, nenhum erro novo.
+Nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 22/09/2026 (6ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` runs 772 (20:21Z), 771 (17:48Z) e 770 (17:27Z) todos **verdes**,

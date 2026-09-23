@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 22/09/2026 20:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 23/09/2026 00:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,18 +102,50 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+3dd3ecd chore: atualiza estado da fila [skip ci]
+120fbea chore: checagem de rotina 22/09 (6a, vigia da nuvem) - sem bug novo
 67129f8 chore: atualiza manutenção [skip ci]
 7dadd52 chore: checagem de rotina 22/09 (5a, vigia da nuvem) - sem bug novo
 c2ad6bc diario: 22/09 - perfil parado, comida-servida 25 dias sem aprovacao
 8150393 chore: atualiza estado da fila [skip ci]
 69cc8ac chore: checagem de rotina 22/09 (4a, vigia da nuvem) - sem bug novo
 d45e916 chore: checagem de rotina 22/09 (3a, vigia da nuvem) - sem bug novo
-fc3bee0 chore: checagem de rotina 22/09 (2a, vigia da nuvem) - job vermelho investigado, sem bug de codigo
-c0838a0 chore: atualiza estado da fila [skip ci]
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 # Decisões e contexto — Hana Social
+
+## 🔍 23/09/2026 (1ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run 773 (22/09 23:05Z, mais recente) veio **verde**, HEAD em
+`3dd3ecd`. Últimos 5 runs (773, 772, 771, 770, 769) todos **verdes**.
+`studio/estado.py --mostrar` sem ALARME no topo, `SAUDE-DO-PROJETO.md` sem
+erro aberto. Fila igual às checagens de ontem: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já `"SEM OBJECAO"`,
+esperando só o Ramón aprovar/recusar — decisão dele, não repito aviso).
+Fila com 0 posts futuros por falta de filmagem nova, mesma causa já avisada
+e coberta pelo dedupe do próprio `sentinel.py`
+(`content/.falhas_avisadas.json` cobre até `fila_vazia_2026-09-22`; o aviso
+de hoje, se a fila continuar vazia, é responsabilidade do workflow
+automático, não desta checagem). Nenhum código alterado, nenhum erro novo.
+Nada a avisar — silêncio conforme a regra 3.
+
+## 🔍 22/09/2026 (6ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` runs 772 (20:21Z), 771 (17:48Z) e 770 (17:27Z) todos **verdes**,
+HEAD em `67129f8`. `studio/estado.py --mostrar` sem ALARME no topo,
+`SAUDE-DO-PROJETO.md` sem erro aberto. Fila igual às checagens anteriores de
+hoje: 7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`,
+`auditoria.veredito` já `"SEM OBJECAO"`, esperando só o Ramón
+aprovar/recusar — decisão dele, não repito aviso). Fila com 0 posts futuros
+por falta de filmagem nova, mesma causa já avisada e coberta pelo dedupe
+(`fila_vazia_2026-09-22` já gravado). Nenhum código alterado, nenhum erro
+novo. Nada a avisar — silêncio conforme a regra 3.
 
 ## 🔍 22/09/2026 (5ª checagem, vigia da nuvem) — sem bug novo
 
