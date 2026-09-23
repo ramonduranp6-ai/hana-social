@@ -1,5 +1,23 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 23/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run 774 (23/09 01:35Z, mais recente) veio **vermelho** —
+conferido no log real (`get_job_logs`), não suposto: `publisher/sentinel.py`
+saiu com `exit code 1` de propósito, porque a fila tem **0 posts futuros**
+(mínimo saudável: 2) — é o alarme desenhado assim, não bug de código. O
+mesmo job ainda salvou o estado da fila normalmente (push em `add3b25`
+funcionou). `studio/estado.py --mostrar` sem ALARME no topo,
+`SAUDE-DO-PROJETO.md` sem erro aberto. Fila igual à checagem anterior de
+hoje: 7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`, esperando só o
+Ramón aprovar/recusar — 25+ dias, decisão dele, já avisado antes, não repito).
+Fila vazia por falta de filmagem nova é a mesma causa aberta desde
+25/08/2026, coberta pelo dedupe (`content/.falhas_avisadas.json` agora
+inclui `fila_vazia_2026-09-23`, escrito pelo próprio sentinel nesta run) —
+já avisada a ele repetidamente nas checagens anteriores, sem fato novo para
+justificar aviso de novo. Nenhum código alterado. Nada a avisar — silêncio
+conforme a regra 3.
+
 ## 🔍 23/09/2026 (1ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run 773 (22/09 23:05Z, mais recente) veio **verde**, HEAD em

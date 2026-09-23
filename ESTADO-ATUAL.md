@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 23/09/2026 00:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 23/09/2026 04:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,14 +102,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+add3b25 chore: atualiza estado da fila [skip ci]
+33933e9 chore: checagem de rotina 23/09 (1a, vigia da nuvem) - sem bug novo
 3dd3ecd chore: atualiza estado da fila [skip ci]
 120fbea chore: checagem de rotina 22/09 (6a, vigia da nuvem) - sem bug novo
 67129f8 chore: atualiza manutenção [skip ci]
 7dadd52 chore: checagem de rotina 22/09 (5a, vigia da nuvem) - sem bug novo
 c2ad6bc diario: 22/09 - perfil parado, comida-servida 25 dias sem aprovacao
 8150393 chore: atualiza estado da fila [skip ci]
-69cc8ac chore: checagem de rotina 22/09 (4a, vigia da nuvem) - sem bug novo
-d45e916 chore: checagem de rotina 22/09 (3a, vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
@@ -119,6 +119,24 @@ M DECISOES.md
 
 ## Decisões e contexto
 # Decisões e contexto — Hana Social
+
+## 🔍 23/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run 774 (23/09 01:35Z, mais recente) veio **vermelho** —
+conferido no log real (`get_job_logs`), não suposto: `publisher/sentinel.py`
+saiu com `exit code 1` de propósito, porque a fila tem **0 posts futuros**
+(mínimo saudável: 2) — é o alarme desenhado assim, não bug de código. O
+mesmo job ainda salvou o estado da fila normalmente (push em `add3b25`
+funcionou). `studio/estado.py --mostrar` sem ALARME no topo,
+`SAUDE-DO-PROJETO.md` sem erro aberto. Fila igual à checagem anterior de
+hoje: 7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`, esperando só o
+Ramón aprovar/recusar — 25+ dias, decisão dele, já avisado antes, não repito).
+Fila vazia por falta de filmagem nova é a mesma causa aberta desde
+25/08/2026, coberta pelo dedupe (`content/.falhas_avisadas.json` agora
+inclui `fila_vazia_2026-09-23`, escrito pelo próprio sentinel nesta run) —
+já avisada a ele repetidamente nas checagens anteriores, sem fato novo para
+justificar aviso de novo. Nenhum código alterado. Nada a avisar — silêncio
+conforme a regra 3.
 
 ## 🔍 23/09/2026 (1ª checagem, vigia da nuvem) — sem bug novo
 
