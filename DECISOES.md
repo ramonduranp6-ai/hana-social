@@ -1,5 +1,17 @@
 # Decisões e contexto — Hana Social
 
+## 🔍 23/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run 775 (23/09 07:04Z, mais recente) veio **verde**, HEAD em
+`54f22ee` — confirma o diagnóstico da checagem anterior de hoje: o vermelho
+do run 774 foi só o alarme proposital do `sentinel.py` (fila vazia), sem
+código quebrado. `SAUDE-DO-PROJETO.md` sem erro aberto. Fila igual às
+checagens anteriores: 7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`,
+`auditoria.veredito` já `"SEM OBJECAO"`, esperando só o Ramón
+aprovar/recusar). Fila com 0 posts futuros por falta de filmagem nova, mesma
+causa já avisada e coberta pelo dedupe. Nenhum código alterado, nenhum erro
+novo. Nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 23/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run 774 (23/09 01:35Z, mais recente) veio **vermelho** —

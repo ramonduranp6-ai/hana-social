@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 23/09/2026 04:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 23/09/2026 08:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,6 +102,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+54f22ee chore: checagem de rotina 23/09 (2a, vigia da nuvem) - sem bug novo
 add3b25 chore: atualiza estado da fila [skip ci]
 33933e9 chore: checagem de rotina 23/09 (1a, vigia da nuvem) - sem bug novo
 3dd3ecd chore: atualiza estado da fila [skip ci]
@@ -109,7 +110,6 @@ add3b25 chore: atualiza estado da fila [skip ci]
 67129f8 chore: atualiza manutenção [skip ci]
 7dadd52 chore: checagem de rotina 22/09 (5a, vigia da nuvem) - sem bug novo
 c2ad6bc diario: 22/09 - perfil parado, comida-servida 25 dias sem aprovacao
-8150393 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
@@ -119,6 +119,18 @@ M DECISOES.md
 
 ## Decisões e contexto
 # Decisões e contexto — Hana Social
+
+## 🔍 23/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run 775 (23/09 07:04Z, mais recente) veio **verde**, HEAD em
+`54f22ee` — confirma o diagnóstico da checagem anterior de hoje: o vermelho
+do run 774 foi só o alarme proposital do `sentinel.py` (fila vazia), sem
+código quebrado. `SAUDE-DO-PROJETO.md` sem erro aberto. Fila igual às
+checagens anteriores: 7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`,
+`auditoria.veredito` já `"SEM OBJECAO"`, esperando só o Ramón
+aprovar/recusar). Fila com 0 posts futuros por falta de filmagem nova, mesma
+causa já avisada e coberta pelo dedupe. Nenhum código alterado, nenhum erro
+novo. Nada a avisar — silêncio conforme a regra 3.
 
 ## 🔍 23/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
 
