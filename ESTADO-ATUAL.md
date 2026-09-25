@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 25/09/2026 04:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 25/09/2026 08:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,6 +102,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+5e34aa9 chore: checagem de rotina 25/09 (2a, vigia da nuvem) - sem bug novo
 4a74ab2 chore: atualiza estado da fila [skip ci]
 0187d15 chore: checagem de rotina 25/09 (vigia da nuvem) - sem bug novo
 4edbc66 chore: atualiza estado da fila [skip ci]
@@ -109,10 +110,42 @@ estava certo: ela está de costas do começo ao fim.
 242c1a2 chore: atualiza manutenção [skip ci]
 06b6fc0 chore: atualiza estado da fila [skip ci]
 8753f21 chore: atualiza manutenção [skip ci]
-3174d22 chore: checagem de rotina 23/09 (3a, vigia da nuvem) - sem bug novo
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 25/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #789 (25/09 08:23Z, mais recente) veio **verde**, HEAD em
+`5e34aa9` — confirma que o vermelho do run #788 foi mesmo só o alarme
+proposital de fila vazia, sem código quebrado. `studio/estado.py --mostrar`
+sem ALARME no topo. `SAUDE-DO-PROJETO.md` sem erro aberto. Fila igual às
+checagens anteriores de hoje: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, esperando só o Ramón aprovar/recusar —
+decisão dele, não repito aviso). Fila vazia por falta de filmagem nova é a
+mesma causa aberta desde 25/08/2026, já coberta pelo dedupe. Nenhum código
+alterado, nenhum erro novo. Nada a avisar — silêncio conforme a regra 3.
+
+## 🔍 25/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #788 (25/09 02:46Z, mais recente) veio **vermelho** —
+conferido nos jobs reais (`actions_list/list_workflow_jobs`), não suposto:
+só o passo "Sentinela" falhou, todos os outros passos (publicador, salvar
+estado da fila) vieram verdes — é o mesmo alarme proposital de fila vazia
+(0 posts futuros) já visto nas checagens anteriores, não bug de código.
+`studio/estado.py --mostrar` sem ALARME no topo, `SAUDE-DO-PROJETO.md` sem
+erro aberto. Fila igual à checagem anterior de hoje: 7 `rejected`, 1
+`pending` (`2026-08-28_comida-servida`, esperando só o Ramón
+aprovar/recusar — decisão dele, não repito aviso). Fila vazia por falta de
+filmagem nova é a mesma causa aberta desde 25/08/2026, já coberta pelo
+dedupe (`content/.falhas_avisadas.json` já tem `fila_vazia_2026-09-25`,
+mesmo motivo hoje). Nenhum código alterado, nenhum erro novo. Nada a
+avisar — silêncio conforme a regra 3.
+
 ## 🔍 25/09/2026 (vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md` sem

@@ -1,3 +1,15 @@
+## 🔍 25/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #789 (25/09 08:23Z, mais recente) veio **verde**, HEAD em
+`5e34aa9` — confirma que o vermelho do run #788 foi mesmo só o alarme
+proposital de fila vazia, sem código quebrado. `studio/estado.py --mostrar`
+sem ALARME no topo. `SAUDE-DO-PROJETO.md` sem erro aberto. Fila igual às
+checagens anteriores de hoje: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, esperando só o Ramón aprovar/recusar —
+decisão dele, não repito aviso). Fila vazia por falta de filmagem nova é a
+mesma causa aberta desde 25/08/2026, já coberta pelo dedupe. Nenhum código
+alterado, nenhum erro novo. Nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 25/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run #788 (25/09 02:46Z, mais recente) veio **vermelho** —
