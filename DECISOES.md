@@ -1,3 +1,19 @@
+## 🔍 25/09/2026 (vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md` sem
+erro aberto (última varredura 17/09, nada pendente). `gh` CLI não instalado
+nesta nuvem; usei os tools MCP do GitHub em vez disso —
+`actions_list/list_workflow_runs` nos últimos 5 runs do `publish.yml`
+(#783 a #787, 24/09) veio **tudo verde** (`conclusion: success`), HEAD em
+`4edbc66`. Fila igual às checagens anteriores: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já `"SEM OBJECAO"`,
+esperando só o Ramón aprovar/recusar — decisão dele, não repito aviso).
+Fila com 0 posts futuros por falta de filmagem nova, mesma causa aberta
+desde 25/08/2026, já coberta pelo dedupe
+(`content/.falhas_avisadas.json` tem `fila_vazia_2026-09-24`, mesmo motivo
+hoje). Nenhum código alterado, nenhum erro novo. Nada a avisar — silêncio
+conforme a regra 3.
+
 ## 🔍 24/09/2026 (vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md` sem

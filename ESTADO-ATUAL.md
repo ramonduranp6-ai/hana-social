@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 24/09/2026 20:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 25/09/2026 00:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,17 +102,47 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+a4ea3d5 chore: checagem de rotina 25/09 (vigia da nuvem) - sem bug novo
+4edbc66 chore: atualiza estado da fila [skip ci]
+1f823eb chore: checagem de rotina 24/09 (vigia da nuvem) - sem bug novo
 242c1a2 chore: atualiza manutenção [skip ci]
 06b6fc0 chore: atualiza estado da fila [skip ci]
 8753f21 chore: atualiza manutenção [skip ci]
 3174d22 chore: checagem de rotina 23/09 (3a, vigia da nuvem) - sem bug novo
 54f22ee chore: checagem de rotina 23/09 (2a, vigia da nuvem) - sem bug novo
-add3b25 chore: atualiza estado da fila [skip ci]
-33933e9 chore: checagem de rotina 23/09 (1a, vigia da nuvem) - sem bug novo
-3dd3ecd chore: atualiza estado da fila [skip ci]
 ```
 
 ## Decisões e contexto
+## 🔍 25/09/2026 (vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md` sem
+erro aberto (última varredura 17/09, nada pendente). `gh` CLI não instalado
+nesta nuvem; usei os tools MCP do GitHub em vez disso —
+`actions_list/list_workflow_runs` nos últimos 5 runs do `publish.yml`
+(#783 a #787, 24/09) veio **tudo verde** (`conclusion: success`), HEAD em
+`4edbc66`. Fila igual às checagens anteriores: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já `"SEM OBJECAO"`,
+esperando só o Ramón aprovar/recusar — decisão dele, não repito aviso).
+Fila com 0 posts futuros por falta de filmagem nova, mesma causa aberta
+desde 25/08/2026, já coberta pelo dedupe
+(`content/.falhas_avisadas.json` tem `fila_vazia_2026-09-24`, mesmo motivo
+hoje). Nenhum código alterado, nenhum erro novo. Nada a avisar — silêncio
+conforme a regra 3.
+
+## 🔍 24/09/2026 (vigia da nuvem) — sem bug novo
+
+`studio/estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md` sem
+erro aberto (última varredura 17/09, nada pendente). `gh` não disponível
+nesta nuvem; sem acesso a `gh run view`, então o diagnóstico se apoiou nos
+arquivos do repo, como o passo a passo prevê. Fila igual às checagens
+anteriores: 7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`,
+`auditoria.veredito` já `"SEM OBJECAO"`, esperando só o Ramón
+aprovar/recusar — decisão dele, não repito aviso). Fila com 0 posts futuros
+por falta de filmagem nova, mesma causa aberta desde 25/08/2026, coberta
+pelo dedupe (`content/.falhas_avisadas.json` já tem `fila_vazia_2026-09-24`).
+Nenhum código alterado, nenhum erro novo. Nada a avisar — silêncio conforme
+a regra 3.
+
 # Decisões e contexto — Hana Social
 
 ## 🔍 23/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
