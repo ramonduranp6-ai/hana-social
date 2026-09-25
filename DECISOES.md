@@ -1,3 +1,17 @@
+## 🔍 25/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` runs #789 a #792 (25/09, até 18:46Z, mais recente) vieram
+todos **verdes**, HEAD em `86829ed`. `studio/estado.py --mostrar` sem
+ALARME no topo. `SAUDE-DO-PROJETO.md` sem erro aberto. Fila idêntica às
+checagens anteriores de hoje: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já `"SEM OBJECAO"`,
+esperando só o Ramón aprovar/recusar — decisão dele, não repito aviso).
+Fila vazia por falta de filmagem nova é a mesma causa aberta desde
+25/08/2026, já coberta pelo dedupe
+(`content/.falhas_avisadas.json` já tem `fila_vazia_2026-09-25`). Nenhum
+código alterado, nenhum erro novo. Nada a avisar — silêncio conforme a
+regra 3.
+
 ## 🔍 25/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run #789 (25/09 08:23Z, mais recente) veio **verde**, HEAD em
