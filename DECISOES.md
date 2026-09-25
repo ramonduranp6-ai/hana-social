@@ -1,3 +1,19 @@
+## 🔍 25/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #788 (25/09 02:46Z, mais recente) veio **vermelho** —
+conferido nos jobs reais (`actions_list/list_workflow_jobs`), não suposto:
+só o passo "Sentinela" falhou, todos os outros passos (publicador, salvar
+estado da fila) vieram verdes — é o mesmo alarme proposital de fila vazia
+(0 posts futuros) já visto nas checagens anteriores, não bug de código.
+`studio/estado.py --mostrar` sem ALARME no topo, `SAUDE-DO-PROJETO.md` sem
+erro aberto. Fila igual à checagem anterior de hoje: 7 `rejected`, 1
+`pending` (`2026-08-28_comida-servida`, esperando só o Ramón
+aprovar/recusar — decisão dele, não repito aviso). Fila vazia por falta de
+filmagem nova é a mesma causa aberta desde 25/08/2026, já coberta pelo
+dedupe (`content/.falhas_avisadas.json` já tem `fila_vazia_2026-09-25`,
+mesmo motivo hoje). Nenhum código alterado, nenhum erro novo. Nada a
+avisar — silêncio conforme a regra 3.
+
 ## 🔍 25/09/2026 (vigia da nuvem) — sem bug novo
 
 `studio/estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md` sem
