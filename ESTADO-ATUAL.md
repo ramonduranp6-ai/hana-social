@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 25/09/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 26/09/2026 00:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,17 +102,31 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+c377dfb chore: atualiza estado da fila [skip ci]
+02f08b6 chore: checagem de rotina 25/09 (4a, vigia da nuvem) - sem bug novo
+86829ed chore: atualiza manutenção [skip ci]
+3da70c0 chore: atualiza estado da fila [skip ci]
 129cf13 diario: analise de crescimento 25/09 - seguidores 330 (+1), sem post novo, comida-servida 28 dias parada
 9d63a45 chore: atualiza estado da fila [skip ci]
 1e68dc1 chore: checagem de rotina 25/09 (3a, vigia da nuvem) - sem bug novo
 5e34aa9 chore: checagem de rotina 25/09 (2a, vigia da nuvem) - sem bug novo
-4a74ab2 chore: atualiza estado da fila [skip ci]
-0187d15 chore: checagem de rotina 25/09 (vigia da nuvem) - sem bug novo
-4edbc66 chore: atualiza estado da fila [skip ci]
-1f823eb chore: checagem de rotina 24/09 (vigia da nuvem) - sem bug novo
 ```
 
 ## Decisões e contexto
+## 🔍 25/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` runs #789 a #792 (25/09, até 18:46Z, mais recente) vieram
+todos **verdes**, HEAD em `86829ed`. `studio/estado.py --mostrar` sem
+ALARME no topo. `SAUDE-DO-PROJETO.md` sem erro aberto. Fila idêntica às
+checagens anteriores de hoje: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já `"SEM OBJECAO"`,
+esperando só o Ramón aprovar/recusar — decisão dele, não repito aviso).
+Fila vazia por falta de filmagem nova é a mesma causa aberta desde
+25/08/2026, já coberta pelo dedupe
+(`content/.falhas_avisadas.json` já tem `fila_vazia_2026-09-25`). Nenhum
+código alterado, nenhum erro novo. Nada a avisar — silêncio conforme a
+regra 3.
+
 ## 🔍 25/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run #789 (25/09 08:23Z, mais recente) veio **verde**, HEAD em
