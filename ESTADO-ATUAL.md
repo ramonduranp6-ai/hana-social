@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 26/09/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 26/09/2026 04:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,6 +102,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+9ce5a19 chore: checagem de rotina 26/09 (vigia da nuvem) - sem bug novo
 c377dfb chore: atualiza estado da fila [skip ci]
 02f08b6 chore: checagem de rotina 25/09 (4a, vigia da nuvem) - sem bug novo
 86829ed chore: atualiza manutenção [skip ci]
@@ -109,10 +110,45 @@ c377dfb chore: atualiza estado da fila [skip ci]
 129cf13 diario: analise de crescimento 25/09 - seguidores 330 (+1), sem post novo, comida-servida 28 dias parada
 9d63a45 chore: atualiza estado da fila [skip ci]
 1e68dc1 chore: checagem de rotina 25/09 (3a, vigia da nuvem) - sem bug novo
-5e34aa9 chore: checagem de rotina 25/09 (2a, vigia da nuvem) - sem bug novo
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 26/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #794 (26/09 00:17Z) continua sendo o mais recente — sem
+run novo desde a checagem anterior de hoje. Confirmei de novo nos jobs
+reais (`list_workflow_jobs`): só o passo "Sentinela" falhou, "Rodar
+publicador" e "Salvar estado da fila" vieram verdes — mesmo alarme
+proposital de fila vazia (0 posts futuros), não bug de código.
+`studio/estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md` sem
+erro aberto. Fila igual: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já `"SEM OBJECAO"`,
+esperando só o Ramón aprovar/recusar — decisão dele, não repito aviso).
+Fila vazia por falta de filmagem nova é a mesma causa aberta desde
+25/08/2026, já coberta pelo dedupe (`fila_vazia_2026-09-26`). `gh` CLI não
+disponível nesta nuvem; usei os tools MCP do GitHub. Nenhum código
+alterado, nenhum erro novo. Nada a avisar — silêncio conforme a regra 3.
+
+## 🔍 26/09/2026 (vigia da nuvem) — sem bug novo
+
+`publish.yml` run #794 (26/09 00:17Z, mais recente) veio **vermelho** —
+conferido nos jobs reais (`list_workflow_jobs`), não suposto: só o passo
+"Sentinela" falhou, publicador e "Salvar estado da fila" vieram verdes —
+mesmo alarme proposital de fila vazia (0 posts futuros) das checagens
+anteriores, não bug de código. `studio/estado.py --mostrar` sem ALARME no
+topo. `SAUDE-DO-PROJETO.md` sem erro aberto. Fila igual: 7 `rejected`, 1
+`pending` (`2026-08-28_comida-servida`, `auditoria.veredito` já
+`"SEM OBJECAO"`, esperando só o Ramón aprovar/recusar — decisão dele, não
+repito aviso). Fila vazia por falta de filmagem nova é a mesma causa aberta
+desde 25/08/2026, já coberta pelo dedupe. `gh` CLI não disponível nesta
+nuvem; usei os tools MCP do GitHub. Nenhum código alterado, nenhum erro
+novo. Nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 25/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` runs #789 a #792 (25/09, até 18:46Z, mais recente) vieram
