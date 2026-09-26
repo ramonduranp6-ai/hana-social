@@ -1,3 +1,18 @@
+## 🔍 26/09/2026 (5ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #797 (26/09 14:37Z) é o mais recente e veio **verde**
+(`list_workflow_runs`, não suposto). `studio/estado.py --mostrar` sem
+ALARME no topo. `SAUDE-DO-PROJETO.md` sem erro aberto (última varredura
+do `vigia-saude.py` em 17/09, nenhuma linha na seção de erros). Fila
+igual às checagens anteriores: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já `"SEM OBJECAO"`,
+esperando só o Ramón aprovar/recusar — decisão dele, não repito aviso).
+Fila vazia por falta de filmagem nova é a mesma causa aberta desde
+25/08/2026, já coberta pelo dedupe (`fila_vazia_2026-09-26` já em
+`content/.falhas_avisadas.json`). `gh` CLI não disponível nesta nuvem;
+usei os tools MCP do GitHub. Nenhum código alterado, nenhum erro novo.
+Nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 26/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run #796 (26/09 10:00Z) é o mais recente e veio **verde**
