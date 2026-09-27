@@ -1,3 +1,19 @@
+## 🔍 27/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #802 (27/09 02:50Z) continua o mais recente
+(`list_workflow_runs`, não suposto) — nenhum run novo apareceu desde a
+checagem anterior, então a falha já investigada (alarme diário de
+`fila com so 0 post(s) futuro(s)`, dedupe funcionando) segue sendo a mesma,
+sem fato novo. `studio/estado.py --mostrar` sem ALARME no topo.
+`SAUDE-DO-PROJETO.md` sem erro aberto (última varredura do
+`vigia-saude.py` em 17/09). Fila igual: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já `"SEM OBJECAO"`,
+esperando só o Ramón aprovar/recusar — decisão dele, não repito aviso).
+`content/.falhas_avisadas.json` já tem `fila_vazia_2026-09-27` registrada.
+`gh` CLI não disponível nesta nuvem; usei os tools MCP do GitHub. Nenhum
+código alterado, nenhum erro novo. Nada a avisar — silêncio conforme a
+regra 3.
+
 ## 🔍 27/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run #802 (27/09 02:50Z) apareceu **failure** no `actions_list`
