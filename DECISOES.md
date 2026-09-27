@@ -1,3 +1,16 @@
+## 🔍 27/09/2026 (5ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` runs #804 a #806 (14:27Z, 17:58Z e 18:35Z) apareceram novos
+desde a checagem anterior e vieram todos **success** (`actions_list`, não
+suposto). `studio/estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md`
+sem erro aberto (última varredura do `vigia-saude.py` em 17/09). Fila igual:
+7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`, `auditoria.veredito`
+já `"SEM OBJECAO"`, esperando só o Ramón aprovar/recusar — decisão dele, não
+repito aviso). Fila vazia por falta de filmagem nova é a mesma causa aberta
+desde 25/08/2026, já coberta pelo dedupe (`content/.falhas_avisadas.json`).
+Nenhum código alterado, nenhum erro novo. Nada a avisar — silêncio conforme
+a regra 3.
+
 ## 🔍 27/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run #803 (27/09 08:47Z) apareceu novo desde a checagem
