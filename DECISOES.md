@@ -1,3 +1,22 @@
+## 🔍 27/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #802 (27/09 02:50Z) apareceu **failure** no `actions_list`
+do GitHub — investiguei o log do job (`get_job_logs`, conteúdo real, não
+suposto). Causa: `publisher/sentinel.py` disparou o alarme diário
+`fila com so 0 post(s) futuro(s)` — a chave de dedupe
+`fila_vazia_2026-09-27` (novo dia) ainda não estava em
+`content/.falhas_avisadas.json`, então o robô tocou o alarme uma vez, como
+projetado (ver comentário "ACHADO 25/08/2026" em `sentinel.py`), e já a
+gravou depois. Não é bug de código novo: é o mesmo buraco de fila vazia por
+falta de filmagem, aberto desde 25/08/2026 e já avisado ao Ramón em sessões
+anteriores — a chave de hoje só repete o mesmo aviso diário sem duplicar
+e-mail (dedupe funcionando). `studio/estado.py --mostrar` sem ALARME no
+topo. `SAUDE-DO-PROJETO.md` sem erro aberto. Post
+`2026-08-28_comida-servida` segue `pending` (auditoria já `SEM OBJECAO`),
+esperando só o Ramón aprovar/recusar — decisão dele, não repito aviso.
+Nenhum código alterado, nenhum recado novo (já avisado antes, regra do
+dedupe). Silêncio conforme a regra 3.
+
 ## 🔍 27/09/2026 (vigia da nuvem) — sem bug novo
 
 `publish.yml` run #801 (26/09 23:42Z) é o mais recente e veio **verde**

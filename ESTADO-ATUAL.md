@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/09/2026 00:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/09/2026 04:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,17 +102,32 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+2e35291 chore: atualiza estado da fila [skip ci]
+9e1a0b3 chore: atualiza estado da fila [skip ci]
+5559c46 chore: checagem de rotina 27/09 (vigia da nuvem) - sem bug novo
 edbe2d0 chore: checagem de rotina 26/09 (6a, vigia da nuvem) - sem bug novo
 f47512f chore: checagem de rotina 26/09 (5a, vigia da nuvem) - sem bug novo
 bff17d7 chore: atualiza manutenção [skip ci]
 dcca988 diario: analise de crescimento 26/09 - seguidores 329 (-1), sem post novo, comida-servida 29 dias parada
 d011ea5 chore: checagem de rotina 26/09 (4a, vigia da nuvem) - sem bug novo
-c621eb8 chore: checagem de rotina 26/09 (3a, vigia da nuvem) - sem bug novo
-c7516f7 chore: checagem de rotina 26/09 (2a, vigia da nuvem) - sem bug novo
-9ce5a19 chore: checagem de rotina 26/09 (vigia da nuvem) - sem bug novo
 ```
 
 ## Decisões e contexto
+## 🔍 27/09/2026 (vigia da nuvem) — sem bug novo
+
+`publish.yml` run #801 (26/09 23:42Z) é o mais recente e veio **verde**
+(`list_workflow_runs`, não suposto — runs #797 a #801 todos `success`).
+`studio/estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md` sem
+erro aberto (última varredura do `vigia-saude.py` em 17/09, nenhuma linha
+na seção de erros). Fila igual às checagens anteriores: 7 `rejected`, 1
+`pending` (`2026-08-28_comida-servida`, `auditoria.veredito` já
+`"SEM OBJECAO"`, esperando só o Ramón aprovar/recusar — decisão dele, não
+repito aviso). Fila vazia por falta de filmagem nova é a mesma causa aberta
+desde 25/08/2026, já coberta pelo dedupe (`content/.falhas_avisadas.json`
+tem entradas até `fila_vazia_2026-09-26`). `gh` CLI não disponível nesta
+nuvem; usei os tools MCP do GitHub. Nenhum código alterado, nenhum erro
+novo. Nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 26/09/2026 (6ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run #799 (26/09 18:11Z) é o mais recente e veio **verde**
