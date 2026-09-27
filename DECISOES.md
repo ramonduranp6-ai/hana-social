@@ -1,3 +1,17 @@
+## 🔍 27/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #803 (27/09 08:47Z) apareceu novo desde a checagem
+anterior e veio **success** (`list_workflow_runs`, não suposto — #799 a
+#801 e #803 todos `success`; só o #802 já investigado falhou, alarme
+diário de fila vazia, dedupe funcionando). `studio/estado.py --mostrar`
+sem ALARME no topo. `SAUDE-DO-PROJETO.md` sem erro aberto (última
+varredura do `vigia-saude.py` em 17/09). Fila igual: 7 `rejected`, 1
+`pending` (`2026-08-28_comida-servida`, `auditoria.veredito` já
+`"SEM OBJECAO"`, esperando só o Ramón aprovar/recusar — decisão dele, não
+repito aviso). `content/.falhas_avisadas.json` já tem `fila_vazia_2026-09-27`
+registrada. Nenhum código alterado, nenhum erro novo. Nada a avisar —
+silêncio conforme a regra 3.
+
 ## 🔍 27/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run #802 (27/09 02:50Z) continua o mais recente

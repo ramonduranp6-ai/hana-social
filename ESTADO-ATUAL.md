@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/09/2026 04:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/09/2026 12:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,17 +102,71 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+bb95b10 chore: checagem de rotina 27/09 (3a, vigia da nuvem) - sem bug novo
+f7143cb chore: checagem de rotina 27/09 (2a, vigia da nuvem) - sem bug novo
 2e35291 chore: atualiza estado da fila [skip ci]
 9e1a0b3 chore: atualiza estado da fila [skip ci]
 5559c46 chore: checagem de rotina 27/09 (vigia da nuvem) - sem bug novo
 edbe2d0 chore: checagem de rotina 26/09 (6a, vigia da nuvem) - sem bug novo
 f47512f chore: checagem de rotina 26/09 (5a, vigia da nuvem) - sem bug novo
 bff17d7 chore: atualiza manutenção [skip ci]
-dcca988 diario: analise de crescimento 26/09 - seguidores 329 (-1), sem post novo, comida-servida 29 dias parada
-d011ea5 chore: checagem de rotina 26/09 (4a, vigia da nuvem) - sem bug novo
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 27/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #803 (27/09 08:47Z) apareceu novo desde a checagem
+anterior e veio **success** (`list_workflow_runs`, não suposto — #799 a
+#801 e #803 todos `success`; só o #802 já investigado falhou, alarme
+diário de fila vazia, dedupe funcionando). `studio/estado.py --mostrar`
+sem ALARME no topo. `SAUDE-DO-PROJETO.md` sem erro aberto (última
+varredura do `vigia-saude.py` em 17/09). Fila igual: 7 `rejected`, 1
+`pending` (`2026-08-28_comida-servida`, `auditoria.veredito` já
+`"SEM OBJECAO"`, esperando só o Ramón aprovar/recusar — decisão dele, não
+repito aviso). `content/.falhas_avisadas.json` já tem `fila_vazia_2026-09-27`
+registrada. Nenhum código alterado, nenhum erro novo. Nada a avisar —
+silêncio conforme a regra 3.
+
+## 🔍 27/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #802 (27/09 02:50Z) continua o mais recente
+(`list_workflow_runs`, não suposto) — nenhum run novo apareceu desde a
+checagem anterior, então a falha já investigada (alarme diário de
+`fila com so 0 post(s) futuro(s)`, dedupe funcionando) segue sendo a mesma,
+sem fato novo. `studio/estado.py --mostrar` sem ALARME no topo.
+`SAUDE-DO-PROJETO.md` sem erro aberto (última varredura do
+`vigia-saude.py` em 17/09). Fila igual: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já `"SEM OBJECAO"`,
+esperando só o Ramón aprovar/recusar — decisão dele, não repito aviso).
+`content/.falhas_avisadas.json` já tem `fila_vazia_2026-09-27` registrada.
+`gh` CLI não disponível nesta nuvem; usei os tools MCP do GitHub. Nenhum
+código alterado, nenhum erro novo. Nada a avisar — silêncio conforme a
+regra 3.
+
+## 🔍 27/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #802 (27/09 02:50Z) apareceu **failure** no `actions_list`
+do GitHub — investiguei o log do job (`get_job_logs`, conteúdo real, não
+suposto). Causa: `publisher/sentinel.py` disparou o alarme diário
+`fila com so 0 post(s) futuro(s)` — a chave de dedupe
+`fila_vazia_2026-09-27` (novo dia) ainda não estava em
+`content/.falhas_avisadas.json`, então o robô tocou o alarme uma vez, como
+projetado (ver comentário "ACHADO 25/08/2026" em `sentinel.py`), e já a
+gravou depois. Não é bug de código novo: é o mesmo buraco de fila vazia por
+falta de filmagem, aberto desde 25/08/2026 e já avisado ao Ramón em sessões
+anteriores — a chave de hoje só repete o mesmo aviso diário sem duplicar
+e-mail (dedupe funcionando). `studio/estado.py --mostrar` sem ALARME no
+topo. `SAUDE-DO-PROJETO.md` sem erro aberto. Post
+`2026-08-28_comida-servida` segue `pending` (auditoria já `SEM OBJECAO`),
+esperando só o Ramón aprovar/recusar — decisão dele, não repito aviso.
+Nenhum código alterado, nenhum recado novo (já avisado antes, regra do
+dedupe). Silêncio conforme a regra 3.
+
 ## 🔍 27/09/2026 (vigia da nuvem) — sem bug novo
 
 `publish.yml` run #801 (26/09 23:42Z) é o mais recente e veio **verde**
