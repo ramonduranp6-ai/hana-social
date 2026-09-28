@@ -1,3 +1,14 @@
+## 📊 28/09/2026 — manutenção diária não rodou no horário (análise de crescimento)
+
+`content/placar.md` não atualizou hoje: última coleta ainda é 09-27.
+Conferido na fonte (`actions_list`, não suposto): `maintenance.yml`
+(cron 12:15 UTC, roda `metrics.py`) não teve run hoje — o último sucesso
+foi 27/09 16:59 UTC. Analisei a coleta de 09-27 vs 09-26 (ainda inédita):
+seguidor +1 (330, ruído), sem post novo, sem salvo/compartilhamento novo.
+Se amanhã a manutenção também não rodar no horário, é bug de agendamento a
+investigar, não só falta de dado. Detalhe em
+`estrategia/diario-crescimento-2026-09-28.md`.
+
 ## 🔍 28/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
 
 `list_workflow_runs` (não suposto) mostra runs #809 (05:38Z) e #810 (12:30Z)
