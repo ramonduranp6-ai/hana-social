@@ -1,3 +1,22 @@
+## 🔍 28/09/2026 (vigia da nuvem) — sem bug novo
+
+`publish.yml` run #808 (28/09 00:10Z) apareceu **failure** (`actions_list`,
+não suposto) desde a última checagem. Investiguei o log real
+(`get_job_logs`, conteúdo, não suposto): `publisher/sentinel.py` disparou o
+mesmo alarme diário `fila com so 0 post(s) futuro(s)` — a chave de dedupe
+`fila_vazia_2026-09-28` (dia novo) ainda não estava em
+`content/.falhas_avisadas.json`, então tocou uma vez, como projetado, e já
+gravou a chave (confirmei lendo o JSON do HEAD após o run: chave presente).
+Runs #805 a #807 (17:58Z, 18:35Z, 21:45Z de 27/09) todos `success`. Não é
+bug de código novo: mesmo buraco de fila vazia por falta de filmagem, aberto
+desde 25/08/2026 e já avisado ao Ramón em sessões anteriores. `estado.py
+--mostrar` sem ALARME no topo. Fila igual: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já `"SEM OBJECAO"`,
+esperando só o Ramón aprovar/recusar — decisão dele, não repito aviso).
+`gh` CLI não disponível nesta nuvem; usei os tools MCP do GitHub. Nenhum
+código alterado, nenhum recado novo (dedupe evitando repetição). Silêncio
+conforme a regra 3.
+
 ## 🔍 27/09/2026 (5ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` runs #804 a #806 (14:27Z, 17:58Z e 18:35Z) apareceram novos
