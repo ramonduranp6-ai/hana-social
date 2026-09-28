@@ -1,3 +1,12 @@
+## 🔍 28/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+Rechecagem: `list_workflow_runs` (não suposto) mostra #808 ainda como o run
+mais recente do `publish.yml` — nada novo desde a checagem anterior de hoje.
+`content/.falhas_avisadas.json` já tinha a chave `fila_vazia_2026-09-28`
+gravada, `content/recados.md` sem recado novo do Ramón, working tree limpa
+(só timestamp do `estado.py --mostrar`, sem informação nova). Nenhum código
+alterado, nada a avisar — silêncio conforme a regra 3.
+
 ## 🔍 28/09/2026 (vigia da nuvem) — sem bug novo
 
 `publish.yml` run #808 (28/09 00:10Z) apareceu **failure** (`actions_list`,

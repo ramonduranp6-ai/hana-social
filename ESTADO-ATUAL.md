@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/09/2026 12:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/09/2026 04:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,22 +102,63 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+aa80234 chore: checagem de rotina 28/09 (vigia da nuvem) - sem bug novo
+b4a4718 chore: atualiza estado da fila [skip ci]
+ae2a44f chore: checagem de rotina 27/09 (5a, vigia da nuvem) - sem bug novo
+aa29e2d chore: atualiza manutenção [skip ci]
+9e7471f diario: analise de crescimento 27/09 - seguidores 329 (+0), sem post novo, comida-servida 30 dias parada
+819d479 chore: checagem de rotina 27/09 (4a, vigia da nuvem) - sem bug novo
 bb95b10 chore: checagem de rotina 27/09 (3a, vigia da nuvem) - sem bug novo
 f7143cb chore: checagem de rotina 27/09 (2a, vigia da nuvem) - sem bug novo
-2e35291 chore: atualiza estado da fila [skip ci]
-9e1a0b3 chore: atualiza estado da fila [skip ci]
-5559c46 chore: checagem de rotina 27/09 (vigia da nuvem) - sem bug novo
-edbe2d0 chore: checagem de rotina 26/09 (6a, vigia da nuvem) - sem bug novo
-f47512f chore: checagem de rotina 26/09 (5a, vigia da nuvem) - sem bug novo
-bff17d7 chore: atualiza manutenção [skip ci]
 ```
 Alterações não commitadas:
 ```
-M DECISOES.md
- M ESTADO-ATUAL.md
+M  DECISOES.md
+M  ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 28/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+Rechecagem: `list_workflow_runs` (não suposto) mostra #808 ainda como o run
+mais recente do `publish.yml` — nada novo desde a checagem anterior de hoje.
+`content/.falhas_avisadas.json` já tinha a chave `fila_vazia_2026-09-28`
+gravada, `content/recados.md` sem recado novo do Ramón, working tree limpa
+(só timestamp do `estado.py --mostrar`, sem informação nova). Nenhum código
+alterado, nada a avisar — silêncio conforme a regra 3.
+
+## 🔍 28/09/2026 (vigia da nuvem) — sem bug novo
+
+`publish.yml` run #808 (28/09 00:10Z) apareceu **failure** (`actions_list`,
+não suposto) desde a última checagem. Investiguei o log real
+(`get_job_logs`, conteúdo, não suposto): `publisher/sentinel.py` disparou o
+mesmo alarme diário `fila com so 0 post(s) futuro(s)` — a chave de dedupe
+`fila_vazia_2026-09-28` (dia novo) ainda não estava em
+`content/.falhas_avisadas.json`, então tocou uma vez, como projetado, e já
+gravou a chave (confirmei lendo o JSON do HEAD após o run: chave presente).
+Runs #805 a #807 (17:58Z, 18:35Z, 21:45Z de 27/09) todos `success`. Não é
+bug de código novo: mesmo buraco de fila vazia por falta de filmagem, aberto
+desde 25/08/2026 e já avisado ao Ramón em sessões anteriores. `estado.py
+--mostrar` sem ALARME no topo. Fila igual: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já `"SEM OBJECAO"`,
+esperando só o Ramón aprovar/recusar — decisão dele, não repito aviso).
+`gh` CLI não disponível nesta nuvem; usei os tools MCP do GitHub. Nenhum
+código alterado, nenhum recado novo (dedupe evitando repetição). Silêncio
+conforme a regra 3.
+
+## 🔍 27/09/2026 (5ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` runs #804 a #806 (14:27Z, 17:58Z e 18:35Z) apareceram novos
+desde a checagem anterior e vieram todos **success** (`actions_list`, não
+suposto). `studio/estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md`
+sem erro aberto (última varredura do `vigia-saude.py` em 17/09). Fila igual:
+7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`, `auditoria.veredito`
+já `"SEM OBJECAO"`, esperando só o Ramón aprovar/recusar — decisão dele, não
+repito aviso). Fila vazia por falta de filmagem nova é a mesma causa aberta
+desde 25/08/2026, já coberta pelo dedupe (`content/.falhas_avisadas.json`).
+Nenhum código alterado, nenhum erro novo. Nada a avisar — silêncio conforme
+a regra 3.
+
 ## 🔍 27/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run #803 (27/09 08:47Z) apareceu novo desde a checagem
