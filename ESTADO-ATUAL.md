@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/09/2026 12:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/09/2026 16:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,17 +102,39 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+76a8519 diario: analise de crescimento 28/09 - seguidores 330 (+1), sem post novo, manutencao nao rodou hoje
+1fd6584 chore: atualiza estado da fila [skip ci]
+8589e11 chore: checagem de rotina 28/09 (3a, vigia da nuvem) - sem bug novo
 7a8179f chore: checagem de rotina 28/09 (2a, vigia da nuvem) - sem bug novo
 aa80234 chore: checagem de rotina 28/09 (vigia da nuvem) - sem bug novo
 b4a4718 chore: atualiza estado da fila [skip ci]
 ae2a44f chore: checagem de rotina 27/09 (5a, vigia da nuvem) - sem bug novo
 aa29e2d chore: atualiza manutenção [skip ci]
-9e7471f diario: analise de crescimento 27/09 - seguidores 329 (+0), sem post novo, comida-servida 30 dias parada
-819d479 chore: checagem de rotina 27/09 (4a, vigia da nuvem) - sem bug novo
-bb95b10 chore: checagem de rotina 27/09 (3a, vigia da nuvem) - sem bug novo
 ```
 
 ## Decisões e contexto
+## 📊 28/09/2026 — manutenção diária não rodou no horário (análise de crescimento)
+
+`content/placar.md` não atualizou hoje: última coleta ainda é 09-27.
+Conferido na fonte (`actions_list`, não suposto): `maintenance.yml`
+(cron 12:15 UTC, roda `metrics.py`) não teve run hoje — o último sucesso
+foi 27/09 16:59 UTC. Analisei a coleta de 09-27 vs 09-26 (ainda inédita):
+seguidor +1 (330, ruído), sem post novo, sem salvo/compartilhamento novo.
+Se amanhã a manutenção também não rodar no horário, é bug de agendamento a
+investigar, não só falta de dado. Detalhe em
+`estrategia/diario-crescimento-2026-09-28.md`.
+
+## 🔍 28/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+`list_workflow_runs` (não suposto) mostra runs #809 (05:38Z) e #810 (12:30Z)
+novos desde a checagem anterior de hoje, ambos `success` — nenhuma falha para
+investigar. `studio/estado.py --mostrar` sem ALARME no topo. Fila igual: 7
+`rejected`, 1 `pending` (`2026-08-28_comida-servida`, `auditoria.veredito`
+já `"SEM OBJECAO"`, esperando só o Ramón aprovar/recusar — decisão dele, não
+repito aviso). `content/.falhas_avisadas.json` já tem a chave
+`fila_vazia_2026-09-28` gravada; `content/recados.md` sem recado novo do
+Ramón. Nenhum código alterado, nenhum erro novo — silêncio conforme a regra 3.
+
 ## 🔍 28/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
 
 Rechecagem: `list_workflow_runs` (não suposto) mostra #808 ainda como o run

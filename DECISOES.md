@@ -1,3 +1,21 @@
+## 🔍 28/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` sem run novo desde #810 (12:30Z), `success` (`list_workflow_runs`,
+não suposto). `maintenance.yml` ainda sem run hoje às 16:32Z (cron é 12:15Z) —
+conferi o histórico dos últimos 5 runs (`actions_list`, não suposto): todos
+disparam entre 16:26Z e 17:14Z, nunca perto de 12:15Z, então este atraso de
+~4h é o padrão normal do agendador do GitHub para este repo sob carga, não
+uma regressão nova — ainda dentro da janela histórica, vou conferir de novo
+se passar de 17:15Z sem rodar. `publish.yml` e `maintenance.yml` compartilham
+`concurrency: group: hana-publish` (conferido nos dois YAML), mas os runs do
+`publish.yml` terminam em segundos, então não é fila entupida bloqueando a
+manutenção. `studio/estado.py --mostrar` sem ALARME no topo. Fila igual: 7
+`rejected`, 1 `pending` (`2026-08-28_comida-servida`, `auditoria.veredito`
+já `"SEM OBJECAO"`, esperando só o Ramón aprovar/recusar — decisão dele, não
+repito aviso). `content/.falhas_avisadas.json` já tem `fila_vazia_2026-09-28`
+gravada. `content/recados.md` sem recado novo do Ramón. Nenhum código
+alterado, nenhum erro novo — silêncio conforme a regra 3.
+
 ## 📊 28/09/2026 — manutenção diária não rodou no horário (análise de crescimento)
 
 `content/placar.md` não atualizou hoje: última coleta ainda é 09-27.
