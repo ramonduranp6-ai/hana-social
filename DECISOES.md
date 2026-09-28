@@ -1,3 +1,14 @@
+## 🔍 28/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+`list_workflow_runs` (não suposto) mostra runs #809 (05:38Z) e #810 (12:30Z)
+novos desde a checagem anterior de hoje, ambos `success` — nenhuma falha para
+investigar. `studio/estado.py --mostrar` sem ALARME no topo. Fila igual: 7
+`rejected`, 1 `pending` (`2026-08-28_comida-servida`, `auditoria.veredito`
+já `"SEM OBJECAO"`, esperando só o Ramón aprovar/recusar — decisão dele, não
+repito aviso). `content/.falhas_avisadas.json` já tem a chave
+`fila_vazia_2026-09-28` gravada; `content/recados.md` sem recado novo do
+Ramón. Nenhum código alterado, nenhum erro novo — silêncio conforme a regra 3.
+
 ## 🔍 28/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
 
 Rechecagem: `list_workflow_runs` (não suposto) mostra #808 ainda como o run
