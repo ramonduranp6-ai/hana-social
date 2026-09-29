@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 29/09/2026 08:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 29/09/2026 12:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,6 +102,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+09c5e4c chore: checagem de rotina 29/09 (2a, vigia da nuvem) - sem bug novo
 363251e chore: atualiza estado da fila [skip ci]
 b26818d diario: checagem de rotina 29/09 (vigia da nuvem) - sem bug novo
 4e39632 chore: atualiza estado da fila [skip ci]
@@ -109,7 +110,6 @@ b26818d diario: checagem de rotina 29/09 (vigia da nuvem) - sem bug novo
 87ce07a chore: atualiza manutenção [skip ci]
 4ed88ca chore: checagem de rotina 28/09 (4a, vigia da nuvem) - sem bug novo
 76a8519 diario: analise de crescimento 28/09 - seguidores 330 (+1), sem post novo, manutencao nao rodou hoje
-1fd6584 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
@@ -118,6 +118,20 @@ M DECISOES.md
 ```
 
 ## Decisões e contexto
+## 🔍 29/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #815 (12:03Z) novo desde a checagem anterior, `success`
+(`actions_list`, não suposto). `maintenance.yml` sem run novo desde o #37
+(28/09 19:41Z) — cron de hoje ainda não rodou. `estado.py --mostrar` sem
+ALARME no topo. Fila igual: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já "SEM OBJECAO",
+esperando só o Ramón). `content/.falhas_avisadas.json` já tem
+`fila_vazia_2026-09-29` gravada (mesmo buraco de fila vazia por falta de
+filmagem, aberto desde 25/08/2026, 36 dias — não repito aviso).
+`SAUDE-DO-PROJETO.md` sem erro aberto. `content/recados.md` sem recado
+novo do Ramón. Nenhum código alterado, nenhum erro novo — silêncio
+conforme a regra 3.
+
 ## 🔍 29/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run #814 (05:56Z) novo desde a checagem anterior, `success`
