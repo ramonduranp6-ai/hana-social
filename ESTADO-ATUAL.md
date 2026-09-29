@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 29/09/2026 12:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 29/09/2026 16:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,17 +102,36 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+7777153 diario: 29/09 - placar sem coleta de hoje, analisa 28/09 vs 27/09
+e97b583 chore: atualiza estado da fila [skip ci]
 8f08b09 chore: checagem de rotina 29/09 (3a, vigia da nuvem) - sem bug novo
 09c5e4c chore: checagem de rotina 29/09 (2a, vigia da nuvem) - sem bug novo
 363251e chore: atualiza estado da fila [skip ci]
 b26818d diario: checagem de rotina 29/09 (vigia da nuvem) - sem bug novo
 4e39632 chore: atualiza estado da fila [skip ci]
 8ac27de chore: checagem de rotina 28/09 (5a, vigia da nuvem) - sem bug novo
-87ce07a chore: atualiza manutenção [skip ci]
-4ed88ca chore: checagem de rotina 28/09 (4a, vigia da nuvem) - sem bug novo
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 29/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
+
+`gh` não autenticado nesta nuvem (`gh: command not found`) — diagnóstico
+pelas fontes do próprio repo, como previsto no passo a passo. `estado.py
+--mostrar` sem ALARME no topo. Fila igual às checagens anteriores hoje: 7
+`rejected`, 1 `pending` (`2026-08-28_comida-servida`, `auditoria.veredito`
+já `"SEM OBJECAO"`, esperando só o Ramón aprovar/recusar — nada a
+consertar). `content/recados.md` sem recado novo dele.
+`SAUDE-DO-PROJETO.md` sem erro aberto (última varredura 17/09). Últimos
+commits (`git log`) são as checagens de rotina anteriores, nada de erro
+novo entre elas. Fila vazia de filmagem já avisada e registrada
+(`fila_vazia_2026-09-29`) — não repito. Nenhum código alterado, nenhum
+erro novo — silêncio conforme a regra 3.
+
 ## 🔍 29/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run #815 (12:03Z) novo desde a checagem anterior, `success`

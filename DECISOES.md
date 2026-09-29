@@ -1,3 +1,17 @@
+## 🔍 29/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
+
+`gh` não autenticado nesta nuvem (`gh: command not found`) — diagnóstico
+pelas fontes do próprio repo, como previsto no passo a passo. `estado.py
+--mostrar` sem ALARME no topo. Fila igual às checagens anteriores hoje: 7
+`rejected`, 1 `pending` (`2026-08-28_comida-servida`, `auditoria.veredito`
+já `"SEM OBJECAO"`, esperando só o Ramón aprovar/recusar — nada a
+consertar). `content/recados.md` sem recado novo dele.
+`SAUDE-DO-PROJETO.md` sem erro aberto (última varredura 17/09). Últimos
+commits (`git log`) são as checagens de rotina anteriores, nada de erro
+novo entre elas. Fila vazia de filmagem já avisada e registrada
+(`fila_vazia_2026-09-29`) — não repito. Nenhum código alterado, nenhum
+erro novo — silêncio conforme a regra 3.
+
 ## 🔍 29/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run #815 (12:03Z) novo desde a checagem anterior, `success`
