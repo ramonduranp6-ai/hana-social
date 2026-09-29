@@ -1,3 +1,16 @@
+## 🔍 29/09/2026 (5ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` runs #816 (18:09Z) e #817 (18:58Z) novos desde a checagem
+anterior, ambos `success` (`actions_list`, não suposto). `estado.py
+--mostrar` sem ALARME no topo. Fila igual: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já `"SEM OBJECAO"`,
+esperando só o Ramón). `content/.falhas_avisadas.json` já tem
+`fila_vazia_2026-09-29` gravada (mesmo buraco de fila vazia por falta de
+filmagem, aberto desde 25/08/2026, 35 dias — não repito aviso).
+`SAUDE-DO-PROJETO.md` sem erro aberto (última varredura 17/09).
+`content/recados.md` sem recado novo do Ramón. Nenhum código alterado,
+nenhum erro novo — silêncio conforme a regra 3.
+
 ## 🔍 29/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
 
 `gh` não autenticado nesta nuvem (`gh: command not found`) — diagnóstico
