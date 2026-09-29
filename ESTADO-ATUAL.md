@@ -102,6 +102,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+8f08b09 chore: checagem de rotina 29/09 (3a, vigia da nuvem) - sem bug novo
 09c5e4c chore: checagem de rotina 29/09 (2a, vigia da nuvem) - sem bug novo
 363251e chore: atualiza estado da fila [skip ci]
 b26818d diario: checagem de rotina 29/09 (vigia da nuvem) - sem bug novo
@@ -109,12 +110,6 @@ b26818d diario: checagem de rotina 29/09 (vigia da nuvem) - sem bug novo
 8ac27de chore: checagem de rotina 28/09 (5a, vigia da nuvem) - sem bug novo
 87ce07a chore: atualiza manutenção [skip ci]
 4ed88ca chore: checagem de rotina 28/09 (4a, vigia da nuvem) - sem bug novo
-76a8519 diario: analise de crescimento 28/09 - seguidores 330 (+1), sem post novo, manutencao nao rodou hoje
-```
-Alterações não commitadas:
-```
-M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
