@@ -1,3 +1,17 @@
+## 🔍 29/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #814 (05:56Z) novo desde a checagem anterior, `success`
+(`actions_list`, não suposto). `maintenance.yml` sem run novo hoje (cron
+12:15Z ainda não chegou às 08:32Z de agora). `estado.py --mostrar` sem
+ALARME no topo. Fila igual: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `auditoria.veredito` já `"SEM OBJECAO"`,
+esperando só o Ramón aprovar/recusar). `content/.falhas_avisadas.json` já
+tem `fila_vazia_2026-09-29` gravada (mesmo buraco de fila vazia por falta
+de filmagem, aberto desde 25/08/2026, 36 dias — não repito aviso, decisão
+já registrada nas checagens anteriores). `SAUDE-DO-PROJETO.md` sem erro
+aberto. `content/recados.md` sem recado novo do Ramón. Nenhum código
+alterado, nenhum erro novo — silêncio conforme a regra 3.
+
 ## 🔍 29/09/2026 (vigia da nuvem) — sem bug novo
 
 `publish.yml` run #813 (00:06Z) apareceu **failure** desde a ultima checagem
