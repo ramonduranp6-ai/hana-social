@@ -1,26 +1,26 @@
 # Placar da Hana — o que cada post rendeu
 
 Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
-Última coleta: **2026-09-28** · fonte: API do Instagram.
+Última coleta: **2026-09-29** · fonte: API do Instagram.
 
 ## Seguidores
 
-**331** (+1 desde 2026-09-27)
+**331** (+0 desde 2026-09-28)
 
 ## Post a post (mais alcance em cima)
 
 | Post | Tipo | alcance | curtidas | comentários | salvos | compartilh. | views | seguidores ganhos |
 |---|---|---|---|---|---|---|---|---|
-| 2026-08-K_chegada-eloen | Reel | 1000 | 33 | 4 | 0 | 0 | 1341 | — |
-| 2026-08-12_cenoura-filhote | Reel | 197 | 14 | 3 | 0 | 1 | 260 | — |
-| 2026-08-10_escolheu-o-canal | Reel | 186 | 11 | 0 | 0 | 0 | 276 | — |
-| 2026-08-14_regras-da-casa | Reel | 184 | 18 | 1 | 0 | 0 | 267 | — |
+| 2026-08-K_chegada-eloen | Reel | 1000 | 33 | 4 | 0 | 0 | 1342 | — |
+| 2026-08-12_cenoura-filhote | Reel | 197 | 14 | 3 | 0 | 1 | 262 | — |
+| 2026-08-10_escolheu-o-canal | Reel | 186 | 11 | 0 | 0 | 0 | 278 | — |
+| 2026-08-14_regras-da-casa | Reel | 184 | 18 | 1 | 0 | 0 | 269 | — |
 | 2026-07-23_olhar-no-tapete | Foto | 60 | 15 | 7 | 0 | 0 | — | 0 |
 | 2026-07-31_roda-gigante | Foto | 60 | 12 | 0 | 0 | 0 | — | 0 |
-| 2026-07-22_bar-hana | Foto | 54 | 11 | 0 | 0 | 0 | — | 0 |
+| 2026-07-22_bar-hana | Foto | 55 | 11 | 0 | 0 | 0 | — | 0 |
 | 2026-07-27_pijama-oncinha | Foto | 52 | 10 | 2 | 0 | 0 | — | 0 |
 | 2026-07-29_lilac-ao-sol | Foto | 52 | 13 | 1 | 0 | 0 | — | 0 |
-| 2026-08-05_navio-importacao | Foto | 50 | 10 | 1 | 0 | 0 | — | 0 |
+| 2026-08-05_navio-importacao | Foto | 51 | 10 | 1 | 0 | 0 | — | 0 |
 | 2026-08-07_banho-de-sol | Foto | 49 | 13 | 1 | 0 | 0 | — | 0 |
 | 2026-08-03_dia-de-praia | Foto | 47 | 11 | 0 | 0 | 0 | — | 0 |
 | 2026-08-26_retrato-oficial | Foto | 44 | 13 | 1 | 0 | 0 | — | 0 |
@@ -40,7 +40,6 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 
 | Data | Seguidores |
 |---|---|
-| 2026-09-17 | 330 |
 | 2026-09-18 | 330 |
 | 2026-09-19 | 329 |
 | 2026-09-20 | 329 |
@@ -52,6 +51,7 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 | 2026-09-26 | 329 |
 | 2026-09-27 | 330 |
 | 2026-09-28 | 331 |
+| 2026-09-29 | 331 |
 
 ## Limites desta coleta
 
