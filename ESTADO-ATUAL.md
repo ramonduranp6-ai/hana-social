@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 30/09/2026 04:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 30/09/2026 16:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -102,17 +102,69 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+3d667eb diario: 30/09 - sem novidade de crescimento, coleta atrasada 3o dia seguido
+9052b90 chore: checagem de rotina 30/09 (4a, vigia da nuvem) - sem bug novo
+cb25d97 chore: checagem de rotina 30/09 (3a, vigia da nuvem) - sem bug novo
+fa15162 chore: checagem de rotina 30/09 (2a, vigia da nuvem) - sem bug novo
 d8ecde0 chore: atualiza estado da fila [skip ci]
 df5650f chore: checagem de rotina 30/09 (vigia da nuvem) - sem bug novo
 08d575c chore: atualiza estado da fila [skip ci]
 b195093 chore: checagem de rotina 29/09 (5a, vigia da nuvem) - sem bug novo
-f51e3d0 chore: atualiza manutenção [skip ci]
-8a440a5 chore: checagem de rotina 29/09 (4a, vigia da nuvem) - sem bug novo
-7777153 diario: 29/09 - placar sem coleta de hoje, analisa 28/09 vs 27/09
-e97b583 chore: atualiza estado da fila [skip ci]
 ```
 
 ## Decisões e contexto
+## 🔍 30/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #820 (06:58Z, `success`) segue sendo o mais recente —
+nenhum run novo desde a checagem anterior (`actions_list`, não suposto).
+`health.yml` run #206 (08:32Z) novo, `success`. Nenhum run `failure` novo
+em nenhum workflow. `estado.py --mostrar` sem ALARME no topo. Fila igual:
+7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`, `post.json`
+conferido de novo — `auditoria.veredito` já `"SEM OBJECAO"`, esperando só
+o Ramón aprovar/recusar, nada a consertar). `content/.falhas_avisadas.json`
+já tem `fila_vazia_2026-09-30` gravada (mesmo buraco de fila vazia por
+falta de filmagem, aberto desde 25/08/2026, 37 dias — dedupe por dia, hoje
+ainda não bateu meia-noite UTC de novo; não repito aviso).
+`SAUDE-DO-PROJETO.md` sem erro aberto (última varredura 17/09).
+`content/recados.md` sem recado novo do Ramón. Nenhum código alterado,
+nenhum erro novo — silêncio conforme a regra 3.
+
+## 🔍 30/09/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #820 (06:58Z) novo desde a checagem anterior, `success`
+(`actions_list`, não suposto). `health.yml` run #205 (04:39Z) também
+`success`. Nenhum run `failure` novo desde o #819 já registrado na
+checagem passada. `estado.py --mostrar` sem ALARME no topo. Fila igual:
+7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`, `post.json`
+conferido de novo — `auditoria.veredito` já `"SEM OBJECAO"`, esperando só
+o Ramón aprovar/recusar, nada a consertar). `content/.falhas_avisadas.json`
+já tem `fila_vazia_2026-09-30` gravada (mesmo buraco de fila vazia por
+falta de filmagem, aberto desde 25/08/2026, 37 dias — dedupe por dia, hoje
+ainda não bateu meia-noite UTC de novo desde a checagem anterior; não
+repito aviso). `SAUDE-DO-PROJETO.md` sem erro aberto (última varredura
+17/09). `content/recados.md` sem recado novo do Ramón. Nenhum código
+alterado, nenhum erro novo — silêncio conforme a regra 3.
+
+## 🔍 30/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #819 (01:24Z) apareceu **failure** desde a checagem
+anterior (`actions_list`, não suposto). Log real conferido (`get_job_logs`,
+conteúdo, não suposto): `publisher/sentinel.py` disparou o mesmo alarme
+diário `fila com so 0 post(s) futuro(s)` — a chave de dedupe virou
+`fila_vazia_2026-09-30` (dia novo, UTC virou meia-noite) e ainda não estava
+em `content/.falhas_avisadas.json`, então tocou uma vez, exatamente como
+projetado em `sentinel.py` (`checar_fila`), e o próprio job já gravou a
+chave (`d8ecde0`, salvo pelo runner). Isto é o MESMO buraco de fila vazia
+por falta de filmagem, aberto desde 25/08/2026 (37 dias seguidos) — não é
+bug de código novo, é falta de CONTEÚDO (regra do vigia). Fila igual: 7
+`rejected`, 1 `pending` (`2026-08-28_comida-servida`, `auditoria.veredito`
+já "SEM OBJECAO", esperando só o Ramón aprovar/recusar). `TELEGRAM_DESLIGADO`
+continua ligado (ordem dele, 25/08) — não chamei `mandar_recado.py` por não
+ter novidade que justifique quebrar o silêncio dos últimos 37 dias sobre o
+mesmo buraco. `estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md`
+sem erro aberto. `content/recados.md` sem recado novo. Nenhum código
+alterado, nenhum erro novo — silêncio conforme a regra 3.
+
 ## 🔍 30/09/2026 (vigia da nuvem) — sem bug novo
 
 `gh` não instalado nesta nuvem (`gh: command not found`) — diagnóstico pelo
