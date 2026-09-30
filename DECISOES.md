@@ -1,3 +1,23 @@
+## 🔍 30/09/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #819 (01:24Z) apareceu **failure** desde a checagem
+anterior (`actions_list`, não suposto). Log real conferido (`get_job_logs`,
+conteúdo, não suposto): `publisher/sentinel.py` disparou o mesmo alarme
+diário `fila com so 0 post(s) futuro(s)` — a chave de dedupe virou
+`fila_vazia_2026-09-30` (dia novo, UTC virou meia-noite) e ainda não estava
+em `content/.falhas_avisadas.json`, então tocou uma vez, exatamente como
+projetado em `sentinel.py` (`checar_fila`), e o próprio job já gravou a
+chave (`d8ecde0`, salvo pelo runner). Isto é o MESMO buraco de fila vazia
+por falta de filmagem, aberto desde 25/08/2026 (37 dias seguidos) — não é
+bug de código novo, é falta de CONTEÚDO (regra do vigia). Fila igual: 7
+`rejected`, 1 `pending` (`2026-08-28_comida-servida`, `auditoria.veredito`
+já "SEM OBJECAO", esperando só o Ramón aprovar/recusar). `TELEGRAM_DESLIGADO`
+continua ligado (ordem dele, 25/08) — não chamei `mandar_recado.py` por não
+ter novidade que justifique quebrar o silêncio dos últimos 37 dias sobre o
+mesmo buraco. `estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md`
+sem erro aberto. `content/recados.md` sem recado novo. Nenhum código
+alterado, nenhum erro novo — silêncio conforme a regra 3.
+
 ## 🔍 30/09/2026 (vigia da nuvem) — sem bug novo
 
 `gh` não instalado nesta nuvem (`gh: command not found`) — diagnóstico pelo
