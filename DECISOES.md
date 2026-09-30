@@ -1,3 +1,18 @@
+## 🔍 30/09/2026 (6ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #823 (18:39Z, `success`) e #822 (18:29Z, `success`) novos
+desde a checagem anterior (`actions_list`, não suposto). `health.yml` segue
+no #208 (13:16Z, `success`), nada novo. Nenhum run `failure` novo em
+nenhum workflow desde o #819 já registrado e explicado nas checagens
+passadas. `estado.py --mostrar` sem ALARME no topo. Fila igual: 7
+`rejected`, 1 `pending` (`2026-08-28_comida-servida`, `post.json`
+conferido de novo — `auditoria.veredito` já `"SEM OBJECAO"`, esperando só
+o Ramón aprovar/recusar, nada a consertar). Mesmo buraco de fila vazia por
+falta de filmagem, aberto desde 25/08/2026 (37 dias), já avisado e sem
+novidade hoje — não repito aviso. `SAUDE-DO-PROJETO.md` sem erro aberto
+(última varredura 17/09). `content/recados.md` sem recado novo do Ramón.
+Nenhum código alterado, nenhum erro novo — silêncio conforme a regra 3.
+
 ## 🔍 30/09/2026 (5ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run #821 (13:24Z, `success`) novo desde a checagem anterior
