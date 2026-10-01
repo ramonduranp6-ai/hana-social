@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 01/10/2026 08:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 01/10/2026 12:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-01T08:32:28Z push success
 2026-10-01T07:29:11Z schedule success
 2026-10-01T04:33:09Z push success
-2026-10-01T01:26:40Z schedule failure
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+65fcf03 chore: checagem de rotina 01/10 (3a, vigia da nuvem) - sem bug novo
 31cfc20 chore: checagem de rotina 01/10 (2a, vigia da nuvem) - sem bug novo
 62a5bfe chore: atualiza estado da fila [skip ci]
 b5a421c chore: atualiza estado da fila [skip ci]
@@ -111,10 +112,23 @@ b5a421c chore: atualiza estado da fila [skip ci]
 4eb1919 chore: checagem de rotina 30/09 (6a, vigia da nuvem) - sem bug novo
 d153eff chore: atualiza manutenção [skip ci]
 714e4f7 chore: atualiza estado da fila [skip ci]
-e265b55 chore: checagem de rotina 30/09 (5a, vigia da nuvem) - sem bug novo
 ```
 
 ## Decisões e contexto
+## 🔍 01/10/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+Nenhum run novo desde a checagem anterior: `publish.yml` segue no #827
+(01:26Z, `failure`, já investigado e explicado nesta mesma data — buraco
+de fila vazia detectado pelo sentinela, dedupe já gravado) e #828
+(07:29:11Z, `success`), `health.yml` segue no run das 04:33:09Z
+(`success`). `estado.py --mostrar` sem ALARME no topo. Fila igual: 7
+`rejected`, 1 `pending` (`2026-08-28_comida-servida`). Mesmo buraco de
+fila vazia por falta de filmagem, aberto desde 25/08/2026 (38 dias), já
+avisado e sem novidade hoje — não repito aviso. `SAUDE-DO-PROJETO.md` sem
+erro aberto (última varredura 17/09). `content/recados.md` sem recado
+novo do Ramón. Nenhum código alterado, nenhum erro novo — silêncio
+conforme a regra 3.
+
 ## 🔍 01/10/2026 (2ª checagem, vigia da nuvem) — sem bug novo
 
 Run novo desde a checagem anterior: `Publicar posts da Hana` #827 (01:26Z,

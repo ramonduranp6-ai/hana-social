@@ -1,3 +1,19 @@
+## 🔍 01/10/2026 (4ª checagem, vigia da nuvem) — sem bug novo
+
+Nenhum run novo desde a checagem anterior: `publish.yml` segue no #827
+(01:26Z, `failure`, já investigado e explicado nesta mesma data — buraco
+de fila vazia detectado pelo sentinela, dedupe já gravado) e #828
+(07:29:11Z, `success`); conferido via `mcp__github__get_job_logs` que o
+#827 falhou só no passo "Sentinela" (exit 1 por `fila com so 0 post(s)
+futuro(s)`), nunca no publicador. `health.yml` segue no run das 08:32:28Z
+(`success`). `estado.py --mostrar` sem ALARME no topo. Fila igual: 7
+`rejected`, 1 `pending` (`2026-08-28_comida-servida`). Mesmo buraco de
+fila vazia por falta de filmagem, aberto desde 25/08/2026 (38 dias), já
+avisado e sem novidade hoje — não repito aviso. `SAUDE-DO-PROJETO.md` sem
+erro aberto (última varredura 17/09). `content/recados.md` sem recado
+novo do Ramón. Nenhum código alterado, nenhum erro novo — silêncio
+conforme a regra 3.
+
 ## 🔍 01/10/2026 (3ª checagem, vigia da nuvem) — sem bug novo
 
 Nenhum run novo desde a checagem anterior: `publish.yml` segue no #827
