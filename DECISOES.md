@@ -1,3 +1,15 @@
+## 🔍 01/10/2026 (vigia da nuvem) — sem bug novo
+
+`publish.yml` runs mais recentes: #826 (22:30Z), #825 (20:33Z push), #824
+(18:39Z) — todos `success` (`gh run list`, não suposto). Nenhum `failure`
+novo em nenhum workflow. `estado.py --mostrar` sem ALARME no topo. Fila
+igual: 7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`), nada a
+consertar. Mesmo buraco de fila vazia por falta de filmagem, aberto desde
+25/08/2026 (37 dias), já avisado e sem novidade hoje — não repito aviso.
+`SAUDE-DO-PROJETO.md` sem erro aberto (última varredura 17/09).
+`content/recados.md` sem recado novo do Ramón. Nenhum código alterado,
+nenhum erro novo — silêncio conforme a regra 3.
+
 ## 🔍 30/09/2026 (6ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run #823 (18:39Z, `success`) e #822 (18:29Z, `success`) novos
