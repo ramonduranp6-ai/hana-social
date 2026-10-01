@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 01/10/2026 04:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 01/10/2026 08:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-01T07:29:11Z schedule success
+2026-10-01T04:33:09Z push success
 2026-10-01T01:26:40Z schedule failure
-2026-10-01T00:32:39Z push success
-2026-09-30T22:30:02Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+31cfc20 chore: checagem de rotina 01/10 (2a, vigia da nuvem) - sem bug novo
 62a5bfe chore: atualiza estado da fila [skip ci]
 b5a421c chore: atualiza estado da fila [skip ci]
 21b92b6 chore: checagem de rotina 01/10 (vigia da nuvem) - sem bug novo
@@ -111,10 +112,29 @@ b5a421c chore: atualiza estado da fila [skip ci]
 d153eff chore: atualiza manutenção [skip ci]
 714e4f7 chore: atualiza estado da fila [skip ci]
 e265b55 chore: checagem de rotina 30/09 (5a, vigia da nuvem) - sem bug novo
-3d667eb diario: 30/09 - sem novidade de crescimento, coleta atrasada 3o dia seguido
 ```
 
 ## Decisões e contexto
+## 🔍 01/10/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+Run novo desde a checagem anterior: `Publicar posts da Hana` #827 (01:26Z,
+`failure` — job vermelho). Investigado (`gh run view --log` sem acesso ao
+zip de log nesta nuvem; diagnóstico feito rodando `publisher/sentinel.py`
+local e lendo `jobs` via `gh api`): falhou no passo "Sentinela", não no
+publicador. Causa: `content/.falhas_avisadas.json` ainda não tinha a chave
+`fila_vazia_2026-10-01` (o dia virou à meia-noite UTC) — pela lógica já
+existente do `sentinel.py` (dedupe diário, linha 119-130), a 1ª detecção do
+dia de "fila com menos de 2 posts futuros" É PARA ser `problema` (job
+vermelho, e-mail), só a partir da 2ª repete como `aviso` silencioso. O
+próprio job gravou a chave no passo seguinte ("Salvar estado da fila",
+commit `62a5bfe`) — rodei o sentinela de novo agora e confirmei `exit 0`
+("já avisado hoje, não repete"). Não é bug: é o mesmo buraco de fila vazia
+por falta de filmagem, aberto desde 25/08/2026 (38 dias), fazendo o alarme
+diário que o próprio código já prevê. Nenhum recado novo do Ramón em
+`content/recados.md`, nenhum erro em `SAUDE-DO-PROJETO.md` (última
+varredura 17/09). Nenhum código alterado — silêncio conforme a regra 3 (ele
+já sabe do buraco de filmagem; repetir o aviso todo dia não ajuda).
+
 ## 🔍 01/10/2026 (vigia da nuvem) — sem bug novo
 
 `publish.yml` runs mais recentes: #826 (22:30Z), #825 (20:33Z push), #824
