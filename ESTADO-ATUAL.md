@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 01/10/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 01/10/2026 04:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-01T01:26:40Z schedule failure
+2026-10-01T00:32:39Z push success
 2026-09-30T22:30:02Z schedule success
-2026-09-30T20:33:17Z push success
-2026-09-30T18:39:08Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,21 +104,29 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+62a5bfe chore: atualiza estado da fila [skip ci]
+b5a421c chore: atualiza estado da fila [skip ci]
+21b92b6 chore: checagem de rotina 01/10 (vigia da nuvem) - sem bug novo
 4eb1919 chore: checagem de rotina 30/09 (6a, vigia da nuvem) - sem bug novo
 d153eff chore: atualiza manutenção [skip ci]
 714e4f7 chore: atualiza estado da fila [skip ci]
 e265b55 chore: checagem de rotina 30/09 (5a, vigia da nuvem) - sem bug novo
 3d667eb diario: 30/09 - sem novidade de crescimento, coleta atrasada 3o dia seguido
-9052b90 chore: checagem de rotina 30/09 (4a, vigia da nuvem) - sem bug novo
-cb25d97 chore: checagem de rotina 30/09 (3a, vigia da nuvem) - sem bug novo
-fa15162 chore: checagem de rotina 30/09 (2a, vigia da nuvem) - sem bug novo
-```
-Alterações não commitadas:
-```
-M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 01/10/2026 (vigia da nuvem) — sem bug novo
+
+`publish.yml` runs mais recentes: #826 (22:30Z), #825 (20:33Z push), #824
+(18:39Z) — todos `success` (`gh run list`, não suposto). Nenhum `failure`
+novo em nenhum workflow. `estado.py --mostrar` sem ALARME no topo. Fila
+igual: 7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`), nada a
+consertar. Mesmo buraco de fila vazia por falta de filmagem, aberto desde
+25/08/2026 (37 dias), já avisado e sem novidade hoje — não repito aviso.
+`SAUDE-DO-PROJETO.md` sem erro aberto (última varredura 17/09).
+`content/recados.md` sem recado novo do Ramón. Nenhum código alterado,
+nenhum erro novo — silêncio conforme a regra 3.
+
 ## 🔍 30/09/2026 (6ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run #823 (18:39Z, `success`) e #822 (18:29Z, `success`) novos
