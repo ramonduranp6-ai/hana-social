@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 01/10/2026 16:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 01/10/2026 20:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-01T14:40:53Z schedule success
-2026-10-01T13:16:06Z push success
-2026-10-01T12:34:18Z push success
+2026-10-01T20:00:06Z schedule success
+2026-10-01T19:06:05Z schedule success
+2026-10-01T18:26:16Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,14 +104,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+ad0d1cf chore: atualiza manutenção [skip ci]
+6d50d3f chore: checagem de rotina 01/10 (5a, vigia da nuvem) - sem bug novo
 dedf1f1 diario: 01/10 - estagnacao total (09-30 vs 09-29, zero mudanca em tudo), coleta de hoje ainda atrasada
 d17993c chore: checagem de rotina 01/10 (4a, vigia da nuvem) - sem bug novo
 65fcf03 chore: checagem de rotina 01/10 (3a, vigia da nuvem) - sem bug novo
 31cfc20 chore: checagem de rotina 01/10 (2a, vigia da nuvem) - sem bug novo
 62a5bfe chore: atualiza estado da fila [skip ci]
 b5a421c chore: atualiza estado da fila [skip ci]
-21b92b6 chore: checagem de rotina 01/10 (vigia da nuvem) - sem bug novo
-4eb1919 chore: checagem de rotina 30/09 (6a, vigia da nuvem) - sem bug novo
 ```
 
 ## Decisões e contexto
