@@ -1,3 +1,16 @@
+## 🔍 01/10/2026 (5ª checagem, vigia da nuvem) — sem bug novo
+
+Rodei `estado.py --mostrar`: sem ALARME no topo. `gh run list --workflow=publish.yml
+--limit 5` mostra só runs já vistos: #827 (01:26:40Z, `failure` — mesmo buraco de
+fila vazia já investigado e explicado nas checagens anteriores desta mesma data) e
+#828, #(14:40:53Z), #(19:06:05Z), #(20:00:06Z) todos `success`, nenhum run novo desde
+a 4ª checagem. Fila igual: 7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`).
+Mesmo buraco de fila vazia por falta de filmagem, aberto desde 25/08/2026 (37 dias),
+já avisado ao Ramón em sessões anteriores — não repito aviso (regra 3). `content/
+.falhas_avisadas.json` tem a chave `fila_vazia_2026-10-01` (sentinela já gravou hoje).
+`SAUDE-DO-PROJETO.md` sem erro aberto (última varredura 17/09). `content/recados.md`
+sem recado novo do Ramón. Nenhum código alterado, nenhum erro novo — silêncio.
+
 ## 🔍 01/10/2026 (4ª checagem, vigia da nuvem) — sem bug novo
 
 Nenhum run novo desde a checagem anterior: `publish.yml` segue no #827
