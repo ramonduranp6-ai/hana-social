@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 30/09/2026 16:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 01/10/2026 00:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,7 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-(não consegui consultar — checar 'gh auth status')
+2026-09-30T22:30:02Z schedule success
+2026-09-30T20:33:17Z push success
+2026-09-30T18:39:08Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -102,17 +104,51 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+4eb1919 chore: checagem de rotina 30/09 (6a, vigia da nuvem) - sem bug novo
+d153eff chore: atualiza manutenção [skip ci]
+714e4f7 chore: atualiza estado da fila [skip ci]
+e265b55 chore: checagem de rotina 30/09 (5a, vigia da nuvem) - sem bug novo
 3d667eb diario: 30/09 - sem novidade de crescimento, coleta atrasada 3o dia seguido
 9052b90 chore: checagem de rotina 30/09 (4a, vigia da nuvem) - sem bug novo
 cb25d97 chore: checagem de rotina 30/09 (3a, vigia da nuvem) - sem bug novo
 fa15162 chore: checagem de rotina 30/09 (2a, vigia da nuvem) - sem bug novo
-d8ecde0 chore: atualiza estado da fila [skip ci]
-df5650f chore: checagem de rotina 30/09 (vigia da nuvem) - sem bug novo
-08d575c chore: atualiza estado da fila [skip ci]
-b195093 chore: checagem de rotina 29/09 (5a, vigia da nuvem) - sem bug novo
+```
+Alterações não commitadas:
+```
+M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 30/09/2026 (6ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #823 (18:39Z, `success`) e #822 (18:29Z, `success`) novos
+desde a checagem anterior (`actions_list`, não suposto). `health.yml` segue
+no #208 (13:16Z, `success`), nada novo. Nenhum run `failure` novo em
+nenhum workflow desde o #819 já registrado e explicado nas checagens
+passadas. `estado.py --mostrar` sem ALARME no topo. Fila igual: 7
+`rejected`, 1 `pending` (`2026-08-28_comida-servida`, `post.json`
+conferido de novo — `auditoria.veredito` já `"SEM OBJECAO"`, esperando só
+o Ramón aprovar/recusar, nada a consertar). Mesmo buraco de fila vazia por
+falta de filmagem, aberto desde 25/08/2026 (37 dias), já avisado e sem
+novidade hoje — não repito aviso. `SAUDE-DO-PROJETO.md` sem erro aberto
+(última varredura 17/09). `content/recados.md` sem recado novo do Ramón.
+Nenhum código alterado, nenhum erro novo — silêncio conforme a regra 3.
+
+## 🔍 30/09/2026 (5ª checagem, vigia da nuvem) — sem bug novo
+
+`publish.yml` run #821 (13:24Z, `success`) novo desde a checagem anterior
+(`actions_list`, não suposto). `health.yml` run #208 (13:16Z, `success`)
+também novo. Nenhum run `failure` novo em nenhum workflow desde o #819 já
+registrado e explicado nas checagens passadas. `estado.py --mostrar` sem
+ALARME no topo. Fila igual: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`, `post.json` conferido de novo —
+`auditoria.veredito` já `"SEM OBJECAO"`, esperando só o Ramón
+aprovar/recusar, nada a consertar). Mesmo buraco de fila vazia por falta
+de filmagem, aberto desde 25/08/2026 (37 dias), já avisado e sem
+novidade hoje — não repito aviso. `SAUDE-DO-PROJETO.md` sem erro aberto
+(última varredura 17/09). `content/recados.md` sem recado novo do Ramón.
+Nenhum código alterado, nenhum erro novo — silêncio conforme a regra 3.
+
 ## 🔍 30/09/2026 (4ª checagem, vigia da nuvem) — sem bug novo
 
 `publish.yml` run #820 (06:58Z, `success`) segue sendo o mais recente —
