@@ -1,3 +1,16 @@
+## 🔍 02/10/2026 (6ª checagem, vigia da nuvem) — sem bug novo
+
+Rodei `estado.py --mostrar`: sem ALARME no topo. `gh run list --workflow=publish.yml
+--limit 5 --json` mostra só `success` nos 4 runs agendados mais recentes
+(10:49Z, 16:26Z, 18:45Z e mais um) — a única `failure` da lista é o
+`workflow_dispatch` de 01:33:40Z, já investigado e explicado numa checagem
+anterior desta mesma data (corrida do alarme de fila vazia no primeiro
+disparo do dia). `SAUDE-DO-PROJETO.md` sem erro aberto; `content/recados.md`
+sem recado novo do Ramón. Fila igual: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`) — segue sendo falta de filmagem, não bug, e já
+está documentado (recado do robô do lote dentro do próprio `ESTADO-ATUAL.md`).
+Nenhum código alterado — silêncio.
+
 ## 🔍 02/10/2026 (5ª checagem, vigia da nuvem) — sem bug novo
 
 Rodei `estado.py --mostrar` de novo: sem ALARME, fila igual (7 `rejected`,
