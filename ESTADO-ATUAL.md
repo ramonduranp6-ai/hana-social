@@ -1,12 +1,7 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 02/10/2026 04:34. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 02/10/2026 08:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
-
-## 🔴 ALARME — 2 execuções seguidas com falha no GitHub Actions
-```
-(não consegui puxar o motivo do log — rodar 'gh run view --log' na mão)
-```
 
 ## Fila (o que ainda vai ao ar)
 
@@ -31,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-02T04:50:15Z schedule success
 2026-10-02T01:34:57Z push success
 2026-10-02T01:33:40Z workflow_dispatch failure
-2026-10-02T01:33:37Z workflow_dispatch failure
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -109,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+21b7009 chore: atualiza estado [skip ci]
 a7ef90e chore: checagem de rotina 02/10 (2a, vigia da nuvem) - ALARME investigado, nao e bug
 b7f0c87 checkpoint: estado regenerado para a conversa nova [skip ci]
 b6f6267 conserta Sentinela: ciclo que se alimentava sozinho + workflow disparado a toa
@@ -116,7 +112,10 @@ e319770 chore: atualiza estado da fila [skip ci]
 03a579e chore: atualiza estado da fila [skip ci]
 56b71a9 chore: checagem de rotina 02/10 (vigia da nuvem) - sem bug novo
 3e1e4f1 chore: checagem de rotina 01/10 (6a, vigia da nuvem) - sem bug novo
-cf79885 chore: checagem de rotina 01/10 (5a, vigia da nuvem) - sem bug novo
+```
+Alterações não commitadas:
+```
+M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
