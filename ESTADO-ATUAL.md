@@ -1,7 +1,12 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 02/10/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 01/10/2026 22:36. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
+
+## 🔴 ALARME — 2 execuções seguidas com falha no GitHub Actions
+```
+(não consegui puxar o motivo do log — rodar 'gh run view --log' na mão)
+```
 
 ## Fila (o que ainda vai ao ar)
 
@@ -26,21 +31,28 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-01T23:59:13Z schedule success
-2026-10-01T20:33:57Z push success
-2026-10-01T20:00:06Z schedule success
+2026-10-02T01:34:57Z push success
+2026-10-02T01:33:40Z workflow_dispatch failure
+2026-10-02T01:33:37Z workflow_dispatch failure
 ```
-- Vigia local (Agendador do Windows): próxima execução não encontrada
-- Token renovável automático: FALTA criar studio/.token
+- Vigia local (Agendador do Windows): próxima execução sexta-feira, 2 de outubro de 2026 18:10:00
+- Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
-Nada esperando aprovação (pasta vazia ou inexistente).
+Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
+
+- 2026-08-22_cenoura-variante-v1.mp4
+- 2026-08-22_cenoura-variante-v2.mp4
+- 2026-08-22_cenoura-variante-v3.mp4
+
+Ele responde pelos números. Enquanto não responder, **não commitar**
+mudança de status nem publicar.
 
 ## Acervo de fotos
-- Brutas a processar: 0 arquivos
-- Editadas prontas: 0
-- Artes recebidas do outro projeto: 0
-- Fotos do iPhone sincronizadas (iCloud): 0
+- Brutas a processar: 39 arquivos
+- Editadas prontas: 4
+- Artes recebidas do outro projeto: 1
+- Fotos do iPhone sincronizadas (iCloud): 34805
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -104,21 +116,31 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+b6f6267 conserta Sentinela: ciclo que se alimentava sozinho + workflow disparado a toa
+e319770 chore: atualiza estado da fila [skip ci]
+03a579e chore: atualiza estado da fila [skip ci]
+56b71a9 chore: checagem de rotina 02/10 (vigia da nuvem) - sem bug novo
 3e1e4f1 chore: checagem de rotina 01/10 (6a, vigia da nuvem) - sem bug novo
 cf79885 chore: checagem de rotina 01/10 (5a, vigia da nuvem) - sem bug novo
 ad0d1cf chore: atualiza manutenção [skip ci]
 6d50d3f chore: checagem de rotina 01/10 (5a, vigia da nuvem) - sem bug novo
-dedf1f1 diario: 01/10 - estagnacao total (09-30 vs 09-29, zero mudanca em tudo), coleta de hoje ainda atrasada
-d17993c chore: checagem de rotina 01/10 (4a, vigia da nuvem) - sem bug novo
-65fcf03 chore: checagem de rotina 01/10 (3a, vigia da nuvem) - sem bug novo
-31cfc20 chore: checagem de rotina 01/10 (2a, vigia da nuvem) - sem bug novo
-```
-Alterações não commitadas:
-```
-M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 02/10/2026 (checagem, vigia da nuvem) — sem bug novo
+
+Rodei `estado.py --mostrar`: sem ALARME no topo. `gh run list` (10 últimos, todos
+os workflows) mostra só `success` desde a checagem anterior (commit `3e1e4f1`,
+01/10 20:33Z) — `Publicar posts da Hana` nas 19:06Z, 20:00Z e 23:59:13Z, e
+`Manutenção diária da Hana` nas 18:26:16Z, todos verdes; nenhum run novo de
+`failure`. Fila igual: 7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`).
+Mesmo buraco de fila vazia por falta de filmagem, aberto desde 25/08/2026 (38
+dias) — `content/.falhas_avisadas.json` já tem `fila_vazia_2026-10-01` gravada
+pelo sentinela (dedupe diário), e já foi avisado ao Ramón em sessões anteriores
+(regra 3: não repito aviso sem novidade). `SAUDE-DO-PROJETO.md` sem erro aberto
+(última varredura 17/09). `content/recados.md` sem recado novo do Ramón.
+Nenhum código alterado, nenhum erro novo — silêncio.
+
 ## 🔍 01/10/2026 (6ª checagem, vigia da nuvem) — sem bug novo
 
 Rodei `estado.py --mostrar`: sem ALARME no topo. `gh run list --workflow=publish.yml
@@ -2896,38 +2918,36 @@ processo no meio:**
 combina com a família, não é calendário de conteúdo) e sem decidir se estica
 a duração (6s vs 9-12s, sugestão do auditor). Esperando ele ver e aprovar.
 
-## 🏁 BASTÃO (atualizado em 14/09 manhã)
+## 🏁 BASTÃO (atualizado em 01/10 22:35)
 
-· **Onde paramos: o perfil está PARADO há 19 dias.** Último post foi
-  26/08 (Eloen). O Reel **"a comida tá servida"** está pronto, auditado
-  (SEM OBJEÇÃO) e **17 dias `pending`** em
-  `content/queue/2026-08-28_comida-servida/` — nunca teve o aprovar/recusar
-  dele. O robô de crescimento na nuvem vem escrevendo isso no diário TODO DIA
-  desde 28/08, sem ninguém ler.
+· **Onde paramos: o perfil está PARADO há 36 dias** (último post 26/08, a
+  Eloen) e os seguidores **caíram de 332 para 330**. A causa é uma só: o Reel
+  **"a comida tá servida"** está **34 dias `pending`** — pronto, auditado
+  (SEM OBJEÇÃO), esperando só o aprovar/recusar dele.
 
-· **Esperando ele (é só isto, e trava tudo):** aprovar ou recusar o Reel.
-  O `auditoria.veredito` já está escrito; falta só `status: approved` e
-  reagendar pro próximo slot (seg/qua/sex 14:00Z). Se ele recusar, tudo bem —
-  mas aí a fila fica ZERADA e o projeto precisa de cena nova.
+· **Esperando ele:** aprovar ou recusar esse Reel. É a única coisa que trava
+  o projeto inteiro. Se recusar, a fila zera e precisa de cena nova.
 
-· **O que os números dizem (coleta de 12/09):** 332 seguidores, +1 em 12 dias.
-  **Reel = 392 de alcance médio · Foto = 52** — Reel rende ~7,5x. O da Eloen
-  fez 1000 de alcance e 1341 views, muito acima de tudo, porque tinha notícia
-  de verdade. Confirma a regra 3l (foto parada fora) e sugere que o que puxa
-  não é bonito, é ACONTECIMENTO.
+· **CONSERTADO nesta sessão (01/10) — 2 defeitos reais no `sentinela.py`:**
+  1. **Ciclo que se alimentava sozinho.** O `vigia-saude.py` reescreve
+     `SAUDE-DO-PROJETO.md` 3x/dia; o arquivo ficava sujo e o `git pull
+     --ff-only` do Sentinela falhava ("local changes would be overwritten").
+     O erro ia parar DENTRO do mesmo arquivo, que seguia sujo. Quebrado desde
+     28/09 (o conserto tentado em 18/09 não pegou a causa). Agora o Sentinela
+     descarta a cópia local dos arquivos gerados por robô (`SAUDE-DO-PROJETO.md`,
+     `ESTADO-ATUAL.md`) antes do pull. **Não ampliar essa lista para arquivo
+     escrito por gente.**
+  2. **Workflow disparado à toa há 34 dias.** O Sentinela tratava `pending`
+     como "atrasado" e re-disparava o `publish.yml` a cada rodada — mas post
+     `pending` nunca publica (o publicador exige `approved`). Queimava execução
+     do GitHub Actions sem parar. Agora só `approved` dispara; `pending`
+     vencido vira aviso, não re-disparo.
+  Testado: roda limpo 2x seguidas, exit 0. Tarefa agendada: status "Pronto".
 
-· **Alerta do hub de 12/09 NÃO se aplica aqui** (conferido no código): o
-  comunicado diz que reel "rejected" costuma ser o publicador chamando
-  `media_publish` antes do container chegar em `FINISHED`. Neste projeto
-  `rejected` é **recusa do Ramón** (`publisher/telegram_approve.py:295`);
-  falha de API cairia em `failed`, e não há nenhum. Os 7 posts vencidos na
-  fila foram recusados por ele mesmo, não por bug.
-
-· **Material que ainda existe:** garimpo inédito em
+· **Material que ainda existe** para a próxima peça: garimpo inédito em
   `Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30` (clipes 08, 20 e
-  26 nunca foram olhados). **FORA:** o clipe `05_A5077980` (cão marrom que não
-  parece a Hana) e o `02_B9E89AD8` (quintal/pijama, dúvida de identidade não
-  resolvida — olho âmbar contra cinza-azulado).
+  26 nunca olhados). **FORA:** `05_A5077980` (cão marrom que não parece a Hana)
+  e `02_B9E89AD8` (quintal/pijama, dúvida de identidade não resolvida).
 
 
 ## 🎬 14/08/2026 — TESTE REAL DO HIGGSFIELD: motor bom, catálogo de efeitos reprovado
