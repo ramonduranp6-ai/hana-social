@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 02/10/2026 12:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 02/10/2026 16:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-02T10:49:00Z schedule success
-2026-10-02T08:32:27Z push success
-2026-10-02T04:50:15Z schedule success
+2026-10-02T16:26:18Z schedule success
+2026-10-02T13:17:23Z push success
+2026-10-02T12:32:38Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,14 +104,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+8a53401 diario de crescimento 02/10: perfil parado, placar sem coleta de hoje
+81ce96c chore: checagem de rotina 02/10 (4a, vigia da nuvem) - sem bug novo
 3f8c699 chore: atualiza estado [skip ci]
 9338420 chore: checagem de rotina 02/10 (3a, vigia da nuvem) - sem bug novo
 21b7009 chore: atualiza estado [skip ci]
 a7ef90e chore: checagem de rotina 02/10 (2a, vigia da nuvem) - ALARME investigado, nao e bug
 b7f0c87 checkpoint: estado regenerado para a conversa nova [skip ci]
 b6f6267 conserta Sentinela: ciclo que se alimentava sozinho + workflow disparado a toa
-e319770 chore: atualiza estado da fila [skip ci]
-03a579e chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
@@ -120,6 +120,17 @@ M DECISOES.md
 ```
 
 ## Decisões e contexto
+## 🔍 02/10/2026 (5ª checagem, vigia da nuvem) — sem bug novo
+
+Rodei `estado.py --mostrar` de novo: sem ALARME, fila igual (7 `rejected`,
+1 `pending`, `2026-08-28_comida-servida`). `git fetch origin main` trouxe
+`8a53401` (diário de crescimento) — já era o HEAD local, sem divergência.
+`gh run list --workflow=publish.yml --limit 5`: mais um run agendado
+(16:26:18Z) `success`; as 2 falhas de `workflow_dispatch` (01:33Z) continuam
+sendo a mesma corrida de fila vazia já investigada hoje — não é bug novo.
+`SAUDE-DO-PROJETO.md` sem erro aberto (última varredura 17/09).
+`content/recados.md` sem recado novo. Nenhum código alterado — silêncio.
+
 ## 🔍 02/10/2026 (4ª checagem, vigia da nuvem) — sem bug novo
 
 Rodei `estado.py --mostrar` de novo: sem ALARME, fila igual (7 `rejected`,

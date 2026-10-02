@@ -1,3 +1,14 @@
+## 🔍 02/10/2026 (5ª checagem, vigia da nuvem) — sem bug novo
+
+Rodei `estado.py --mostrar` de novo: sem ALARME, fila igual (7 `rejected`,
+1 `pending`, `2026-08-28_comida-servida`). `git fetch origin main` trouxe
+`8a53401` (diário de crescimento) — já era o HEAD local, sem divergência.
+`gh run list --workflow=publish.yml --limit 5`: mais um run agendado
+(16:26:18Z) `success`; as 2 falhas de `workflow_dispatch` (01:33Z) continuam
+sendo a mesma corrida de fila vazia já investigada hoje — não é bug novo.
+`SAUDE-DO-PROJETO.md` sem erro aberto (última varredura 17/09).
+`content/recados.md` sem recado novo. Nenhum código alterado — silêncio.
+
 ## 🔍 02/10/2026 (4ª checagem, vigia da nuvem) — sem bug novo
 
 Rodei `estado.py --mostrar` de novo: sem ALARME, fila igual (7 `rejected`,
