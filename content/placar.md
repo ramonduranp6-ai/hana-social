@@ -1,20 +1,20 @@
 # Placar da Hana — o que cada post rendeu
 
 Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
-Última coleta: **2026-10-01** · fonte: API do Instagram.
+Última coleta: **2026-10-02** · fonte: API do Instagram.
 
 ## Seguidores
 
-**331** (+0 desde 2026-09-30)
+**331** (+0 desde 2026-10-01)
 
 ## Post a post (mais alcance em cima)
 
 | Post | Tipo | alcance | curtidas | comentários | salvos | compartilh. | views | seguidores ganhos |
 |---|---|---|---|---|---|---|---|---|
-| 2026-08-K_chegada-eloen | Reel | 1000 | 33 | 4 | 0 | 0 | 1342 | — |
+| 2026-08-K_chegada-eloen | Reel | 1000 | 33 | 4 | 0 | 0 | 1343 | — |
 | 2026-08-12_cenoura-filhote | Reel | 197 | 14 | 3 | 0 | 1 | 262 | — |
-| 2026-08-10_escolheu-o-canal | Reel | 186 | 11 | 0 | 0 | 0 | 278 | — |
-| 2026-08-14_regras-da-casa | Reel | 184 | 18 | 1 | 0 | 0 | 269 | — |
+| 2026-08-10_escolheu-o-canal | Reel | 186 | 11 | 0 | 0 | 0 | 279 | — |
+| 2026-08-14_regras-da-casa | Reel | 184 | 18 | 1 | 0 | 0 | 270 | — |
 | 2026-07-23_olhar-no-tapete | Foto | 60 | 15 | 7 | 0 | 0 | — | 0 |
 | 2026-07-31_roda-gigante | Foto | 60 | 12 | 0 | 0 | 0 | — | 0 |
 | 2026-07-22_bar-hana | Foto | 55 | 11 | 0 | 0 | 0 | — | 0 |
@@ -40,7 +40,6 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 
 | Data | Seguidores |
 |---|---|
-| 2026-09-20 | 329 |
 | 2026-09-21 | 329 |
 | 2026-09-22 | 329 |
 | 2026-09-23 | 329 |
@@ -52,6 +51,7 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 | 2026-09-29 | 331 |
 | 2026-09-30 | 331 |
 | 2026-10-01 | 331 |
+| 2026-10-02 | 331 |
 
 ## Limites desta coleta
 
