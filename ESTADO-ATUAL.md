@@ -109,6 +109,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+a7ef90e chore: checagem de rotina 02/10 (2a, vigia da nuvem) - ALARME investigado, nao e bug
 b7f0c87 checkpoint: estado regenerado para a conversa nova [skip ci]
 b6f6267 conserta Sentinela: ciclo que se alimentava sozinho + workflow disparado a toa
 e319770 chore: atualiza estado da fila [skip ci]
@@ -116,12 +117,6 @@ e319770 chore: atualiza estado da fila [skip ci]
 56b71a9 chore: checagem de rotina 02/10 (vigia da nuvem) - sem bug novo
 3e1e4f1 chore: checagem de rotina 01/10 (6a, vigia da nuvem) - sem bug novo
 cf79885 chore: checagem de rotina 01/10 (5a, vigia da nuvem) - sem bug novo
-ad0d1cf chore: atualiza manutenção [skip ci]
-```
-Alterações não commitadas:
-```
-M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
