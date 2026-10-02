@@ -1,3 +1,18 @@
+## 🔍 02/10/2026 (3ª checagem, vigia da nuvem) — sem bug novo
+
+Rodei `estado.py --mostrar`: sem ALARME no topo. `gh run list --workflow=publish.yml
+--limit 5` mostra o run agendado das 04:50:15Z como `success` — ou seja, a
+rodada seguinte às duas falhas de `workflow_dispatch` (01:33:37Z/01:33:40Z,
+já investigadas e explicadas na checagem anterior desta mesma data: corrida
+do alarme de fila vazia no primeiro disparo do dia, dedupe já gravado em
+`content/.falhas_avisadas.json`) confirma que o publicador segue saudável.
+Nenhum run `failure` novo desde então. Fila igual: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`). Mesmo buraco de fila vazia por falta de
+filmagem, aberto desde 25/08/2026 (39 dias) — já avisado ao Ramón em sessões
+anteriores, não repito (regra 3). `SAUDE-DO-PROJETO.md` sem erro aberto
+(última varredura 17/09). `content/recados.md` sem recado novo. Nenhum
+código alterado, nenhum erro novo — silêncio.
+
 ## 🔍 02/10/2026 (2ª checagem, vigia da nuvem) — ALARME investigado, não é bug novo
 
 `estado.py --mostrar` abriu com "🔴 ALARME — 2 execuções seguidas com falha".
