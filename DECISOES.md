@@ -1,3 +1,17 @@
+## 🔍 02/10/2026 (checagem, vigia da nuvem) — sem bug novo
+
+Rodei `estado.py --mostrar`: sem ALARME no topo. `gh run list` (10 últimos, todos
+os workflows) mostra só `success` desde a checagem anterior (commit `3e1e4f1`,
+01/10 20:33Z) — `Publicar posts da Hana` nas 19:06Z, 20:00Z e 23:59:13Z, e
+`Manutenção diária da Hana` nas 18:26:16Z, todos verdes; nenhum run novo de
+`failure`. Fila igual: 7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`).
+Mesmo buraco de fila vazia por falta de filmagem, aberto desde 25/08/2026 (38
+dias) — `content/.falhas_avisadas.json` já tem `fila_vazia_2026-10-01` gravada
+pelo sentinela (dedupe diário), e já foi avisado ao Ramón em sessões anteriores
+(regra 3: não repito aviso sem novidade). `SAUDE-DO-PROJETO.md` sem erro aberto
+(última varredura 17/09). `content/recados.md` sem recado novo do Ramón.
+Nenhum código alterado, nenhum erro novo — silêncio.
+
 ## 🔍 01/10/2026 (6ª checagem, vigia da nuvem) — sem bug novo
 
 Rodei `estado.py --mostrar`: sem ALARME no topo. `gh run list --workflow=publish.yml
