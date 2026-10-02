@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 01/10/2026 22:36. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 02/10/2026 04:34. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## 🔴 ALARME — 2 execuções seguidas com falha no GitHub Actions
@@ -35,24 +35,17 @@ decisões, use `DECISOES.md`.
 2026-10-02T01:33:40Z workflow_dispatch failure
 2026-10-02T01:33:37Z workflow_dispatch failure
 ```
-- Vigia local (Agendador do Windows): próxima execução sexta-feira, 2 de outubro de 2026 18:10:00
-- Token renovável automático: CONFIGURADO
+- Vigia local (Agendador do Windows): próxima execução não encontrada
+- Token renovável automático: FALTA criar studio/.token
 
 ## Esperando o OK do Ramón
-Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
-
-- 2026-08-22_cenoura-variante-v1.mp4
-- 2026-08-22_cenoura-variante-v2.mp4
-- 2026-08-22_cenoura-variante-v3.mp4
-
-Ele responde pelos números. Enquanto não responder, **não commitar**
-mudança de status nem publicar.
+Nada esperando aprovação (pasta vazia ou inexistente).
 
 ## Acervo de fotos
-- Brutas a processar: 39 arquivos
-- Editadas prontas: 4
-- Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34805
+- Brutas a processar: 0 arquivos
+- Editadas prontas: 0
+- Artes recebidas do outro projeto: 0
+- Fotos do iPhone sincronizadas (iCloud): 0
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -116,6 +109,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+b7f0c87 checkpoint: estado regenerado para a conversa nova [skip ci]
 b6f6267 conserta Sentinela: ciclo que se alimentava sozinho + workflow disparado a toa
 e319770 chore: atualiza estado da fila [skip ci]
 03a579e chore: atualiza estado da fila [skip ci]
@@ -123,10 +117,33 @@ e319770 chore: atualiza estado da fila [skip ci]
 3e1e4f1 chore: checagem de rotina 01/10 (6a, vigia da nuvem) - sem bug novo
 cf79885 chore: checagem de rotina 01/10 (5a, vigia da nuvem) - sem bug novo
 ad0d1cf chore: atualiza manutenção [skip ci]
-6d50d3f chore: checagem de rotina 01/10 (5a, vigia da nuvem) - sem bug novo
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 02/10/2026 (2ª checagem, vigia da nuvem) — ALARME investigado, não é bug novo
+
+`estado.py --mostrar` abriu com "🔴 ALARME — 2 execuções seguidas com falha".
+Conferi `gh run view --log` (via `get_job_logs`, o `gh run view --log` direto
+deu 403 do proxy): as duas falhas são `workflow_dispatch` às 01:33:37Z e
+01:33:40Z — 3s de intervalo, disparadas na própria sessão em que o Ramón
+(commit `b6f6267`, 01:34:48Z, autor `ramonduranp6-ai`) consertou o Sentinela
+local. Causa real: `publisher/sentinel.py` saiu com código 1 por
+"fila com 0 post(s) futuro(s)" — é o alarme de praxe do PRIMEIRO disparo do
+dia (chave `fila_vazia_2026-10-02`, dedupe diário), não falha de código; as
+duas rodadas caíram quase juntas (corrida) antes de qualquer uma commitar o
+marcador, por isso as duas (e não só a primeira) saíram vermelhas. O marcador
+já está gravado em `content/.falhas_avisadas.json` (confirmado, leitura
+agora) — rodadas agendadas de hoje em diante voltam a ser só aviso. Mesmo
+buraco de fila vazia por falta de filmagem, aberto desde 25/08/2026 (38 dias),
+já avisado antes (regra 3: não repito). `SAUDE-DO-PROJETO.md` sem erro aberto;
+`content/recados.md` sem recado novo. Nenhum código alterado por mim — o
+Ramón já tinha corrigido os dois bugs reais do Sentinela nesta mesma janela.
+
 ## 🔍 02/10/2026 (checagem, vigia da nuvem) — sem bug novo
 
 Rodei `estado.py --mostrar`: sem ALARME no topo. `gh run list` (10 últimos, todos

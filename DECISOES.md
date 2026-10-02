@@ -1,3 +1,22 @@
+## 🔍 02/10/2026 (2ª checagem, vigia da nuvem) — ALARME investigado, não é bug novo
+
+`estado.py --mostrar` abriu com "🔴 ALARME — 2 execuções seguidas com falha".
+Conferi `gh run view --log` (via `get_job_logs`, o `gh run view --log` direto
+deu 403 do proxy): as duas falhas são `workflow_dispatch` às 01:33:37Z e
+01:33:40Z — 3s de intervalo, disparadas na própria sessão em que o Ramón
+(commit `b6f6267`, 01:34:48Z, autor `ramonduranp6-ai`) consertou o Sentinela
+local. Causa real: `publisher/sentinel.py` saiu com código 1 por
+"fila com 0 post(s) futuro(s)" — é o alarme de praxe do PRIMEIRO disparo do
+dia (chave `fila_vazia_2026-10-02`, dedupe diário), não falha de código; as
+duas rodadas caíram quase juntas (corrida) antes de qualquer uma commitar o
+marcador, por isso as duas (e não só a primeira) saíram vermelhas. O marcador
+já está gravado em `content/.falhas_avisadas.json` (confirmado, leitura
+agora) — rodadas agendadas de hoje em diante voltam a ser só aviso. Mesmo
+buraco de fila vazia por falta de filmagem, aberto desde 25/08/2026 (38 dias),
+já avisado antes (regra 3: não repito). `SAUDE-DO-PROJETO.md` sem erro aberto;
+`content/recados.md` sem recado novo. Nenhum código alterado por mim — o
+Ramón já tinha corrigido os dois bugs reais do Sentinela nesta mesma janela.
+
 ## 🔍 02/10/2026 (checagem, vigia da nuvem) — sem bug novo
 
 Rodei `estado.py --mostrar`: sem ALARME no topo. `gh run list` (10 últimos, todos
