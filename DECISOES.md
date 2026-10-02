@@ -2789,38 +2789,36 @@ processo no meio:**
 combina com a família, não é calendário de conteúdo) e sem decidir se estica
 a duração (6s vs 9-12s, sugestão do auditor). Esperando ele ver e aprovar.
 
-## 🏁 BASTÃO (atualizado em 14/09 manhã)
+## 🏁 BASTÃO (atualizado em 01/10 22:35)
 
-· **Onde paramos: o perfil está PARADO há 19 dias.** Último post foi
-  26/08 (Eloen). O Reel **"a comida tá servida"** está pronto, auditado
-  (SEM OBJEÇÃO) e **17 dias `pending`** em
-  `content/queue/2026-08-28_comida-servida/` — nunca teve o aprovar/recusar
-  dele. O robô de crescimento na nuvem vem escrevendo isso no diário TODO DIA
-  desde 28/08, sem ninguém ler.
+· **Onde paramos: o perfil está PARADO há 36 dias** (último post 26/08, a
+  Eloen) e os seguidores **caíram de 332 para 330**. A causa é uma só: o Reel
+  **"a comida tá servida"** está **34 dias `pending`** — pronto, auditado
+  (SEM OBJEÇÃO), esperando só o aprovar/recusar dele.
 
-· **Esperando ele (é só isto, e trava tudo):** aprovar ou recusar o Reel.
-  O `auditoria.veredito` já está escrito; falta só `status: approved` e
-  reagendar pro próximo slot (seg/qua/sex 14:00Z). Se ele recusar, tudo bem —
-  mas aí a fila fica ZERADA e o projeto precisa de cena nova.
+· **Esperando ele:** aprovar ou recusar esse Reel. É a única coisa que trava
+  o projeto inteiro. Se recusar, a fila zera e precisa de cena nova.
 
-· **O que os números dizem (coleta de 12/09):** 332 seguidores, +1 em 12 dias.
-  **Reel = 392 de alcance médio · Foto = 52** — Reel rende ~7,5x. O da Eloen
-  fez 1000 de alcance e 1341 views, muito acima de tudo, porque tinha notícia
-  de verdade. Confirma a regra 3l (foto parada fora) e sugere que o que puxa
-  não é bonito, é ACONTECIMENTO.
+· **CONSERTADO nesta sessão (01/10) — 2 defeitos reais no `sentinela.py`:**
+  1. **Ciclo que se alimentava sozinho.** O `vigia-saude.py` reescreve
+     `SAUDE-DO-PROJETO.md` 3x/dia; o arquivo ficava sujo e o `git pull
+     --ff-only` do Sentinela falhava ("local changes would be overwritten").
+     O erro ia parar DENTRO do mesmo arquivo, que seguia sujo. Quebrado desde
+     28/09 (o conserto tentado em 18/09 não pegou a causa). Agora o Sentinela
+     descarta a cópia local dos arquivos gerados por robô (`SAUDE-DO-PROJETO.md`,
+     `ESTADO-ATUAL.md`) antes do pull. **Não ampliar essa lista para arquivo
+     escrito por gente.**
+  2. **Workflow disparado à toa há 34 dias.** O Sentinela tratava `pending`
+     como "atrasado" e re-disparava o `publish.yml` a cada rodada — mas post
+     `pending` nunca publica (o publicador exige `approved`). Queimava execução
+     do GitHub Actions sem parar. Agora só `approved` dispara; `pending`
+     vencido vira aviso, não re-disparo.
+  Testado: roda limpo 2x seguidas, exit 0. Tarefa agendada: status "Pronto".
 
-· **Alerta do hub de 12/09 NÃO se aplica aqui** (conferido no código): o
-  comunicado diz que reel "rejected" costuma ser o publicador chamando
-  `media_publish` antes do container chegar em `FINISHED`. Neste projeto
-  `rejected` é **recusa do Ramón** (`publisher/telegram_approve.py:295`);
-  falha de API cairia em `failed`, e não há nenhum. Os 7 posts vencidos na
-  fila foram recusados por ele mesmo, não por bug.
-
-· **Material que ainda existe:** garimpo inédito em
+· **Material que ainda existe** para a próxima peça: garimpo inédito em
   `Fotos da Hana/01 - brutas (suba aqui)/garimpo/melhores-30` (clipes 08, 20 e
-  26 nunca foram olhados). **FORA:** o clipe `05_A5077980` (cão marrom que não
-  parece a Hana) e o `02_B9E89AD8` (quintal/pijama, dúvida de identidade não
-  resolvida — olho âmbar contra cinza-azulado).
+  26 nunca olhados). **FORA:** `05_A5077980` (cão marrom que não parece a Hana)
+  e `02_B9E89AD8` (quintal/pijama, dúvida de identidade não resolvida).
 
 
 ## 🎬 14/08/2026 — TESTE REAL DO HIGGSFIELD: motor bom, catálogo de efeitos reprovado
