@@ -47,3 +47,11 @@ atrasando 3 dias seguidos — vale acompanhar se vira bug de agendamento.
    alcance com a média dos outros Reels do pilar, checar
    salvo/compartilhamento, e só então julgar a regra de morte do formato
    POV (3 Reels publicados).
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[diario-crescimento-2026-09-28]]
+- [[diario-crescimento-2026-09-22]]
+- [[diario-crescimento-2026-09-19]]

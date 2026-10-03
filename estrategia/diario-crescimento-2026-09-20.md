@@ -42,3 +42,11 @@ aprovação do Ramón há 23 dias.
    salvo/compartilhamento; julgar a regra de morte do formato POV quando
    os 3 Reels estiverem publicados.
 3. **Robô**: nenhuma ação nova.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[diario-crescimento-2026-09-21]]
+- [[diario-crescimento-2026-09-22]]
+- [[diario-crescimento-2026-09-19]]

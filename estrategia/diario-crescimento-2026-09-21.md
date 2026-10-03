@@ -41,3 +41,11 @@ Ramón há 24 dias — é a única coisa que destravaria dado novo.
    salvo/compartilhamento; julgar a regra de morte do formato POV quando
    os 3 Reels estiverem publicados.
 3. **Robô**: nenhuma ação nova.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[diario-crescimento-2026-09-22]]
+- [[diario-crescimento-2026-09-20]]
+- [[diario-crescimento-2026-09-25]]

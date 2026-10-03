@@ -39,3 +39,10 @@ ar, e a manutenção diária que gera o placar falhou de novo hoje.
 3. **Claude da conversa**: quando `comida-servida` for ao ar, comparar
    alcance com a média dos outros Reels do pilar e julgar a regra de morte
    do formato POV (3 Reels publicados).
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[DECISOES]]

@@ -43,3 +43,11 @@ manutenção diária (que gera o placar) não rodou hoje.
    alcance com a média dos outros Reels do pilar e checar
    salvo/compartilhamento; julgar a regra de morte do formato POV quando
    os 3 Reels estiverem publicados.
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[diario-crescimento-2026-09-30]]
+- [[diario-crescimento-2026-09-27]]
+- [[diario-crescimento-2026-09-26]]

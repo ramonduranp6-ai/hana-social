@@ -38,3 +38,10 @@ só, e é o mesmo há um mês.
    salvo/compartilhamento; julgar a regra de morte do formato POV quando
    os 3 Reels estiverem publicados.
 3. **Robô**: nenhuma ação nova.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[DECISOES]]
