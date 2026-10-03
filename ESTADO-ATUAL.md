@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 03/10/2026 00:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 03/10/2026 04:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-03T00:32:54Z push success
 2026-10-03T00:04:48Z schedule failure
 2026-10-02T20:51:17Z schedule success
-2026-10-02T20:32:51Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+f0e2583 chore: checagem de rotina 03/10 (vigia da nuvem) - sem bug novo
 f417393 chore: atualiza estado da fila [skip ci]
 d883c59 chore: checagem de rotina 02/10 (6a, vigia da nuvem) - sem bug novo
 f6eda68 chore: atualiza manutenção [skip ci]
@@ -111,10 +112,32 @@ f6eda68 chore: atualiza manutenção [skip ci]
 8a53401 diario de crescimento 02/10: perfil parado, placar sem coleta de hoje
 81ce96c chore: checagem de rotina 02/10 (4a, vigia da nuvem) - sem bug novo
 3f8c699 chore: atualiza estado [skip ci]
-9338420 chore: checagem de rotina 02/10 (3a, vigia da nuvem) - sem bug novo
+```
+Alterações não commitadas:
+```
+M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 03/10/2026 (checagem, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` abriu sem ALARME no topo. `gh run list --workflow=publish.yml
+--limit 5` mostra 1 `failure` (schedule, 00:04:48Z) e os outros 4 runs agendados
+de 02/10 (10:49Z, 16:26Z, 18:45Z, 20:51Z) todos `success`. Puxei o log do job
+que falhou (`get_job_logs`, run `37080501187`): `publisher/sentinel.py` saiu
+com código 1 por "fila com só 0 post(s) futuro(s) (mínimo saudável: 2)" — o
+mesmo alarme de praxe do primeiro disparo do dia, não um bug de código; o
+commit seguinte do robô (`f417393`, 00:05:08Z) já gravou `fila_vazia_2026-10-03`
+em `content/.falhas_avisadas.json`, então o dedupe funcionou e as rodadas
+seguintes de hoje voltam a ser só aviso, sem derrubar o job. O mesmo log
+mostra o post único pendente `2026-08-28_comida-servida` esperando o Ramón
+aprovar/recusar há ~35 dias (51005 min) — não é bug, é fila esperando decisão
+dele. Fila continua: 7 `rejected`, 1 `pending`; buraco de fila vazia por
+falta de filmagem aberto desde 25/08/2026 (39 dias), já avisado ao Ramón em
+sessões anteriores (regra 3: não repito aviso sem novidade). `SAUDE-DO-PROJETO.md`
+sem erro aberto; `content/recados.md` sem recado novo. Nenhum código
+alterado — silêncio.
+
 ## 🔍 02/10/2026 (6ª checagem, vigia da nuvem) — sem bug novo
 
 Rodei `estado.py --mostrar`: sem ALARME no topo. `gh run list --workflow=publish.yml
