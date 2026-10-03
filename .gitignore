@@ -43,3 +43,6 @@ studio/aprovar.html
 # Com a recepcionista isso ficaria caro de verdade — cada reprocessamento chama
 # o Gemini e REENVIA a resposta (ate 48 vezes por dia, por mensagem).
 # O offset e um numero, nao e segredo. Ele PRECISA ser versionado.
+
+# Fotos arquivadas na faxina (03/10/2026) seguem a mesma regra de /Fotos da Hana/: nunca vao para o repo publico
+_arquivo/*/Fotos da Hana/
