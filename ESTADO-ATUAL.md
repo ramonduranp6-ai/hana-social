@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 03/10/2026 04:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 03/10/2026 16:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-03T00:32:54Z push success
-2026-10-03T00:04:48Z schedule failure
-2026-10-02T20:51:17Z schedule success
+2026-10-03T16:19:55Z schedule success
+2026-10-03T15:00:38Z schedule success
+2026-10-03T10:53:22Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -92,26 +92,26 @@ eram clipes de Live Photo de ~2 segundos — e no vídeo da praia (IMG_1725.MOV)
 existem cerca de 4 segundos de rosto. Nos outros dois (TV e navio) o laudo
 estava certo: ela está de costas do começo ao fim.
 
-⏳ **2ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
-
 ## 🔗 Relacionados
 
 > Vizinhos por assunto (calculados automaticamente)
 
-- [[content/pedido-de-cena|pedido-de-cena]]
-- [[content/plano-semana|plano-semana]]
+- [[content/aviso_lote|aviso_lote]]
 - [[studio/roteiros/2026-08_POV1_a-patroa-mandou|2026-08_POV1_a-patroa-mandou]]
+- [[content/plano-semana|plano-semana]]
+
+⏳ **3ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
 
 ## Últimas mudanças no projeto
 ```
+d442b93 chore: atualiza manutenção [skip ci]
+8c3c92c chore: recado do lote semanal [skip ci]
+99e0d10 vault Obsidian 03/10/2026: indice por pasta, links Relacionados e links quebrados corrigidos (so wikilinks, nenhum conteudo alterado)
+f1b8692 faxina auditada 03/10/2026: arquivados 11 arquivos sem uso (_arquivo/2026-10-03, manifesto incluso)
+8f93733 vault: link Relacionados em DECISOES.md (03/10/2026)
+3a2540a vault: links Relacionados (tecelagem Obsidian) e notas atualizadas (03/10/2026)
+d49a0e1 chore: atualiza estado [skip ci]
 f0e2583 chore: checagem de rotina 03/10 (vigia da nuvem) - sem bug novo
-f417393 chore: atualiza estado da fila [skip ci]
-d883c59 chore: checagem de rotina 02/10 (6a, vigia da nuvem) - sem bug novo
-f6eda68 chore: atualiza manutenção [skip ci]
-3da2438 chore: checagem de rotina 02/10 (5a, vigia da nuvem) - sem bug novo
-8a53401 diario de crescimento 02/10: perfil parado, placar sem coleta de hoje
-81ce96c chore: checagem de rotina 02/10 (4a, vigia da nuvem) - sem bug novo
-3f8c699 chore: atualiza estado [skip ci]
 ```
 Alterações não commitadas:
 ```
@@ -4272,9 +4272,9 @@ crescer exige Reels, hashtag de nicho e presença nos perfis grandes da raça.
 - [[crescimento-instagram-2026-08-19]]
 - [[diario-crescimento-2026-08-28]]
 - [[diario-crescimento-2026-09-17]]
+- [[diario-crescimento-2026-09-28]]
 - [[ESTADO-ATUAL]]
 - [[estudo-virais-2026-08]]
 - [[garimpo-apify-2026-08-09]]
 - [[hipoteses-produto]]
 - [[legendas-pov-2026-08-21]]
-- [[ORGANOGRAMA]]
