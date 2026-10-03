@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 02/10/2026 20:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 03/10/2026 00:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-02T18:45:57Z schedule success
-2026-10-02T17:53:07Z schedule success
-2026-10-02T16:33:00Z push success
+2026-10-03T00:04:48Z schedule failure
+2026-10-02T20:51:17Z schedule success
+2026-10-02T20:32:51Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,21 +104,30 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+f417393 chore: atualiza estado da fila [skip ci]
+d883c59 chore: checagem de rotina 02/10 (6a, vigia da nuvem) - sem bug novo
 f6eda68 chore: atualiza manutenção [skip ci]
 3da2438 chore: checagem de rotina 02/10 (5a, vigia da nuvem) - sem bug novo
 8a53401 diario de crescimento 02/10: perfil parado, placar sem coleta de hoje
 81ce96c chore: checagem de rotina 02/10 (4a, vigia da nuvem) - sem bug novo
 3f8c699 chore: atualiza estado [skip ci]
 9338420 chore: checagem de rotina 02/10 (3a, vigia da nuvem) - sem bug novo
-21b7009 chore: atualiza estado [skip ci]
-a7ef90e chore: checagem de rotina 02/10 (2a, vigia da nuvem) - ALARME investigado, nao e bug
-```
-Alterações não commitadas:
-```
-M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 02/10/2026 (6ª checagem, vigia da nuvem) — sem bug novo
+
+Rodei `estado.py --mostrar`: sem ALARME no topo. `gh run list --workflow=publish.yml
+--limit 5 --json` mostra só `success` nos 4 runs agendados mais recentes
+(10:49Z, 16:26Z, 18:45Z e mais um) — a única `failure` da lista é o
+`workflow_dispatch` de 01:33:40Z, já investigado e explicado numa checagem
+anterior desta mesma data (corrida do alarme de fila vazia no primeiro
+disparo do dia). `SAUDE-DO-PROJETO.md` sem erro aberto; `content/recados.md`
+sem recado novo do Ramón. Fila igual: 7 `rejected`, 1 `pending`
+(`2026-08-28_comida-servida`) — segue sendo falta de filmagem, não bug, e já
+está documentado (recado do robô do lote dentro do próprio `ESTADO-ATUAL.md`).
+Nenhum código alterado — silêncio.
+
 ## 🔍 02/10/2026 (5ª checagem, vigia da nuvem) — sem bug novo
 
 Rodei `estado.py --mostrar` de novo: sem ALARME, fila igual (7 `rejected`,

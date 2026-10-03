@@ -1,3 +1,22 @@
+## 🔍 03/10/2026 (checagem, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` abriu sem ALARME no topo. `gh run list --workflow=publish.yml
+--limit 5` mostra 1 `failure` (schedule, 00:04:48Z) e os outros 4 runs agendados
+de 02/10 (10:49Z, 16:26Z, 18:45Z, 20:51Z) todos `success`. Puxei o log do job
+que falhou (`get_job_logs`, run `37080501187`): `publisher/sentinel.py` saiu
+com código 1 por "fila com só 0 post(s) futuro(s) (mínimo saudável: 2)" — o
+mesmo alarme de praxe do primeiro disparo do dia, não um bug de código; o
+commit seguinte do robô (`f417393`, 00:05:08Z) já gravou `fila_vazia_2026-10-03`
+em `content/.falhas_avisadas.json`, então o dedupe funcionou e as rodadas
+seguintes de hoje voltam a ser só aviso, sem derrubar o job. O mesmo log
+mostra o post único pendente `2026-08-28_comida-servida` esperando o Ramón
+aprovar/recusar há ~35 dias (51005 min) — não é bug, é fila esperando decisão
+dele. Fila continua: 7 `rejected`, 1 `pending`; buraco de fila vazia por
+falta de filmagem aberto desde 25/08/2026 (39 dias), já avisado ao Ramón em
+sessões anteriores (regra 3: não repito aviso sem novidade). `SAUDE-DO-PROJETO.md`
+sem erro aberto; `content/recados.md` sem recado novo. Nenhum código
+alterado — silêncio.
+
 ## 🔍 02/10/2026 (6ª checagem, vigia da nuvem) — sem bug novo
 
 Rodei `estado.py --mostrar`: sem ALARME no topo. `gh run list --workflow=publish.yml
