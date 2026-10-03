@@ -43,6 +43,7 @@
 - [[diario-crescimento-2026-09-29]]
 - [[diario-crescimento-2026-09-30]]
 - [[diario-crescimento-2026-10-01]]
+- [[diario-crescimento-2026-10-02]]
 - [[estudo-higgsfield-2026-08-14]]
 - [[estudo-virais-2026-08]]
 - [[garimpo-apify-2026-08-09]]

@@ -18,6 +18,7 @@
 - [[SETUP]]
 
 **Subpastas:**
+- [[Índice — 2026-10-03|📁 2026-10-03]]
 - [[Hana Social/content/Índice — content|📁 content]]
 - [[Índice — estrategia|📁 estrategia]]
 - [[Índice — garimpo|📁 garimpo]]
@@ -35,6 +36,7 @@
 - [[ORGANOGRAMA]]
 - [[Hana Social/PADRAO-DO-PROJETO|PADRAO-DO-PROJETO]]
 - [[Hana Social/SAUDE-DO-PROJETO|SAUDE-DO-PROJETO]]
+- [[Índice — 2026-10-03]]
 - [[Hana Social/content/Índice — content|Índice — content]]
 - [[Índice — estrategia]]
 - [[Índice — garimpo]]
