@@ -10,7 +10,7 @@
   custo, IA-Hub, git contínuo, painel da frota na abertura.
 - `SAUDE-DO-PROJETO.md` é escrito 3x/dia pelo `vigia-saude.py`: erro aberto lá
   se conserta NESTA conversa, na hora, sem esperar mensagem dele.
-- Perfil do Chrome deste projeto (FIXO, ordem dele 23/08/2026): **Chrome DA MARCA: hanaduransanches@gmail.com (avatar H; Profile 1)**.
+- Perfil do Chrome deste projeto: **Chrome DA HANA (hanaduransanches@gmail.com)** — regra única do hub (conduta 4 das regras globais: Canecas = Chrome da marca, Hana = Chrome da Hana, demais = pessoal); conferir por COMANDO (`qual-perfil-chrome.py --projeto hana`), nunca pelo avatar.
 
 ## 🔗 Relacionados
 

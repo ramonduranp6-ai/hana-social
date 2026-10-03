@@ -15,12 +15,11 @@
 3. **A ÚNICA trava é DINHEIRO** — saldo já pago (APIs, Apify, créditos) pode
    usar à vontade: ele deixou disponível pra isso. Acabou ou precisa comprar
    mais → avisar e ESPERAR o OK. Nunca gastar novo no cartão sem ele saber.
-4. **Chrome: validar o perfil logado ANTES de usar, SEMPRE.** MAPA FIXO: só
-   Hana Social (hanaduransanches, avatar H) e Canecas POD (brushedandbrewed,
-   avatar bolinha branca) têm Chrome próprio; TODOS os demais usam o pessoal
-   (ramon.d.franca, avatar com a foto dele). Conferir o e-mail logado. Perfil errado = conta
-   errada = trabalho travado (o erro que mais custa tempo). Automação de
-   navegador é sempre Playwright; SendKeys/mouse por coordenada, nunca.
+4. **Chrome: regra única do hub (conduta 4 das regras globais).** Canecas POD = Chrome da marca ·
+   Hana Social = Chrome da Hana · TODOS os demais = Chrome pessoal (ramon.d.franca). Conferir por
+   COMANDO (`qual-perfil-chrome.py --projeto <hana|canecas|outro>`), nunca pelo avatar. Perfil errado =
+   conta errada = trabalho travado (o erro que mais custa tempo). Navegador nunca por posição de
+   mouse/teclado às cegas: extensão Claude-in-Chrome (pelo nome do elemento) ou Playwright em robô.
 5. **IA-Hub antes de gastar token caro** — `ask-ai.py` (Gemini longos, DeepSeek
    volume, ChatGPT criativo, Grok atualidades, Kimi 2ª opinião, NIM/OpenRouter
    grátis). O crédito é checado sozinho por hook; se barrar, trocar de IA.

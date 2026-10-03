@@ -46,3 +46,8 @@ studio/aprovar.html
 
 # Fotos arquivadas na faxina (03/10/2026) seguem a mesma regra de /Fotos da Hana/: nunca vao para o repo publico
 _arquivo/*/Fotos da Hana/
+
+# backups de edicao (.bak e .bak-AAAAMMDD...) nunca vao para o git - o AutoManutencao-Hub
+# roda git add -A no domingo (higiene de 03/10/2026, auditor independente)
+*.bak
+*.bak-*

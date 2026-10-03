@@ -27,7 +27,7 @@ SAIDA = os.path.join(AQUI, "aprovar.html")
 # Sempre o Chrome do perfil da Hana (hanaduransanches@gmail.com), NUNCA o padrão
 # do Windows — o padrão é o perfil da marca Canecas. Regra dada pelo Ramón em
 # 27/07/2026 depois de o painel abrir na janela errada.
-PERFIL_HANA = "Profile 2"
+PERFIL_HANA = "Profile 1"  # conferido por comando 03/10/2026: qual-perfil-chrome.py --projeto hana -> Profile 1 (Profile 2 = Canecas)
 
 ROTULO = {
     "pending": ("aguardando você", "#b45309", "#fef3c7"),
