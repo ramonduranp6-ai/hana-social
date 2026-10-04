@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 03/10/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 04/10/2026 04:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-03T16:19:55Z schedule success
-2026-10-03T15:00:38Z schedule success
-2026-10-03T10:53:22Z schedule success
+2026-10-04T00:33:49Z push success
+2026-10-04T00:18:42Z schedule failure
+2026-10-03T21:55:56Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,21 +104,35 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+0eb033c chore: checagem de rotina 04/10 (vigia da nuvem) - sem bug novo
+8daeea5 chore: atualiza estado da fila [skip ci]
+055ea95 higiene 03/10: regra unica do Chrome (conferir por comando), padrao do projeto e .gitignore sem backups
+de2f752 chore: atualiza estado da fila [skip ci]
 d442b93 chore: atualiza manutenção [skip ci]
 8c3c92c chore: recado do lote semanal [skip ci]
 99e0d10 vault Obsidian 03/10/2026: indice por pasta, links Relacionados e links quebrados corrigidos (so wikilinks, nenhum conteudo alterado)
 f1b8692 faxina auditada 03/10/2026: arquivados 11 arquivos sem uso (_arquivo/2026-10-03, manifesto incluso)
-8f93733 vault: link Relacionados em DECISOES.md (03/10/2026)
-3a2540a vault: links Relacionados (tecelagem Obsidian) e notas atualizadas (03/10/2026)
-d49a0e1 chore: atualiza estado [skip ci]
-f0e2583 chore: checagem de rotina 03/10 (vigia da nuvem) - sem bug novo
-```
-Alterações não commitadas:
-```
-M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 04/10/2026 (checagem, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` abriu sem ALARME no topo. `gh run list --workflow=publish.yml
+--limit 10` mostra 1 `failure` (schedule, 00:18:42Z) e os outros 9 runs recentes
+(02/10 a 03/10) todos `success`. Puxei o log do job que falhou (`get_job_logs`,
+run `37164553179`): `publisher/sentinel.py` saiu com código 1 por "fila com só 0
+post(s) futuro(s) (mínimo saudável: 2)" — o mesmo alarme de praxe do primeiro
+disparo do dia (dedupe por `fila_vazia_<data>` em `content/.falhas_avisadas.json`,
+que já tinha a entrada de hoje gravada pelo commit seguinte, `8daeea5`), não um
+bug de código. Mesmo log mostra o único post pendente `2026-08-28_comida-servida`
+esperando o Ramón aprovar/recusar há ~52458 min (~36 dias) — fila esperando
+decisão dele, já documentado em checagens anteriores. Fila continua: 7
+`rejected`, 1 `pending`; buraco de fila vazia por falta de filmagem aberto desde
+25/08/2026 (40 dias), já avisado ao Ramón em sessões anteriores (regra 3: não
+repito aviso sem novidade). `SAUDE-DO-PROJETO.md` sem erro aberto (última
+varredura 17/09); `content/recados.md` sem recado novo. Nenhum código
+alterado — silêncio.
+
 ## 🔍 03/10/2026 (checagem, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` abriu sem ALARME no topo. `gh run list --workflow=publish.yml
