@@ -11,7 +11,7 @@ metadata:
 
 Projeto: crescer o Instagram **@hanaduransanches** (Hana, Exotic Bully Micro
 tri lilac merle) até ter audiência e autoridade para vender produto no futuro.
-Repositório: `C:\Users\Ramón França\OneDrive\Desktop\Hana Social`.
+Repositório: `C:\Users\Ramón França\OneDrive\Desktop\Projetos\Hana Social`.
 
 ## 0. 🚨 REGRA ZERO — NÃO AFIRMAR SEM CONFERIR (cobrança dele, 28/07/2026)
 
@@ -103,7 +103,7 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
 ## 2. Regras que não se reabrem sem ordem dele
 
 0. **TUDO do projeto mora dentro de uma pasta só** (ele mandou em 28/07/2026):
-   `C:\Users\Ramón França\OneDrive\Desktop\Hana Social`. Nada de arquivo solto
+   `C:\Users\Ramón França\OneDrive\Desktop\Projetos\Hana Social`. Nada de arquivo solto
    na raiz do OneDrive nem em outro canto — as fotos, que ficavam em
    `OneDrive\Fotos da Hana`, foram movidas para `Hana Social\Fotos da Hana`.
    Ao criar qualquer pasta ou saída nova, ela nasce aqui dentro. Continua
@@ -129,7 +129,7 @@ outro projeto) · `content/benchmark-tecnico.md` (arquitetura e limites da API).
    (semana)` com `00_LEGENDAS.txt`, mas isso é fallback, não o padrão.
 2b-i. **SEMPRE escrever o caminho COMPLETO na mensagem** (ele pediu em
    27/07/2026, depois de não achar uma pasta que descrevi só pelo nome):
-   `C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\05 - APROVAR (semana)`.
+   `C:\Users\Ramón França\OneDrive\Desktop\Projetos\Hana Social\Fotos da Hana\05 - APROVAR (semana)`.
    Nunca "a pasta de sempre", nunca só o nome da subpasta.
 2b-ii. **Não criar pasta nova dentro da de aprovação.** Tudo numerado direto em
    `05 - APROVAR (semana)`. Subpasta nova ele não encontra — já aconteceu com as

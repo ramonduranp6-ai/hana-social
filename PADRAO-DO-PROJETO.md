@@ -51,4 +51,4 @@ entrada do hub se servir a outros projetos.
 > Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
 > partir das citações que já existiam no texto acima.
 
-- [[Hana Social/SAUDE-DO-PROJETO|SAUDE-DO-PROJETO]]
+- [[Projetos/Hana Social/SAUDE-DO-PROJETO|SAUDE-DO-PROJETO]]

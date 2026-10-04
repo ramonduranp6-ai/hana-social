@@ -546,7 +546,7 @@ feito nenhum commit por esta análise.
 - [[DECISOES]]
 - [[ESTADO-ATUAL]]
 - [[hipoteses-produto]]
-- [[Hana Social/_arquivo/2026-10-03/MANIFESTO|MANIFESTO]]
+- [[Projetos/Hana Social/_arquivo/2026-10-03/MANIFESTO|MANIFESTO]]
 - [[ORGANOGRAMA]]
 - [[parceria-canecas-pod]]
 - [[pauta_extra]]
