@@ -1,3 +1,17 @@
+## 🔍 04/10/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` abriu sem ALARME no topo. `gh run list --workflow=publish.yml
+--limit 10` mostra os mesmos 9 `success` mais recentes e a mesma `failure`
+de 00:18:42Z já investigada na checagem anterior de hoje (fila vazia no
+primeiro disparo do dia, dedupe confirmado em `content/.falhas_avisadas.json`
+com `fila_vazia_2026-10-04`) — nenhuma falha nova desde então. Fila
+continua: 7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`, já com
+`auditoria.veredito` = "SEM OBJECAO" no `post.json`, travada só esperando o
+Ramón aprovar/recusar, não é bug de código). `SAUDE-DO-PROJETO.md` sem erro
+aberto (última varredura 17/09); `content/recados.md` sem recado novo do
+Ramón. Nada mudou desde a checagem anterior de hoje — nenhum código
+alterado, nenhum aviso novo (regra 3: não repito aviso sem novidade).
+
 ## 🔍 04/10/2026 (checagem, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` abriu sem ALARME no topo. `gh run list --workflow=publish.yml
