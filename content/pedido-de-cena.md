@@ -29,7 +29,7 @@ o rosto não apareceu e perder a semana.
 ═══════════════════════════════════════
 
 ONDE SALVAR (caminho completo — dá para jogar pelo OneDrive do celular):
-C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\01 - brutas (suba aqui)
+C:\Users\Ramón França\OneDrive\Desktop\Projetos\Hana Social\Fotos da Hana\01 - brutas (suba aqui)
 
 SE NÃO DER ATÉ QUINTA: existe um plano B guardado — um Reel curto com os ~4
 segundos de rosto que foram achados no vídeo antigo da praia. Ele só vai ao ar
