@@ -15,7 +15,7 @@ Esta máquina roda o Claude Code (Anthropic) como orquestrador principal. Além 
 **Hub de aprendizado (somente leitura de fora)**: pasta `Crescimento IA` no Desktop
 do OneDrive é a consultoria central — regras de trabalho, ranking de ferramentas de
 IA visual, lições dos "diretores" (agentes especializados) e o diário de bordo de
-todos os projetos. Caminho: `%USERPROFILE%\OneDrive\Desktop\Crescimento IA`.
+todos os projetos. Caminho: `%USERPROFILE%\OneDrive\Desktop\Projetos\Crescimento IA`.
 Arquivos-chave lá dentro: `APRENDIZADO-IA.md` (ranking de foto/vídeo, evolui),
 `METODO-DE-TRABALHO.md` (escada de custo e ciclo de trabalho), `06-SISTEMAS\
 agentes\memoria\*.json` (memória de cada diretor), `06-SISTEMAS\ambiente.json`
