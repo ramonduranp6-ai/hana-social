@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 04/10/2026 12:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 04/10/2026 20:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-04T06:07:10Z schedule success
-2026-10-04T00:33:49Z push success
-2026-10-04T00:18:42Z schedule failure
+2026-10-04T20:17:15Z schedule success
+2026-10-04T17:53:45Z schedule success
+2026-10-04T17:12:45Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,14 +104,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+de50383 chore: atualiza manutenção [skip ci]
+2c1811d EXPLICACAO: caminho do hub agora em Desktop/Projetos/Crescimento IA
+0d3e409 caminhos: projeto agora em Desktop/Projetos/Hana Social
+025d544 diario de crescimento 04/10: perfil parado, placar com 1 dia de atraso, comida-servida 37 dias esperando aprovacao
+4ed5728 chore: atualiza estado da fila [skip ci]
 7ae649a chore: atualiza estado da fila [skip ci]
 0eb033c chore: checagem de rotina 04/10 (vigia da nuvem) - sem bug novo
 8daeea5 chore: atualiza estado da fila [skip ci]
-055ea95 higiene 03/10: regra unica do Chrome (conferir por comando), padrao do projeto e .gitignore sem backups
-de2f752 chore: atualiza estado da fila [skip ci]
-d442b93 chore: atualiza manutenção [skip ci]
-8c3c92c chore: recado do lote semanal [skip ci]
-99e0d10 vault Obsidian 03/10/2026: indice por pasta, links Relacionados e links quebrados corrigidos (so wikilinks, nenhum conteudo alterado)
 ```
 
 ## Decisões e contexto
