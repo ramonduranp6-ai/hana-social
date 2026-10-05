@@ -1,3 +1,31 @@
+## 🔧 05/10/2026 (vigia da nuvem) — CONSERTADO: 'Hana Sentinela' quebrada (código 1), de novo
+
+`SAUDE-DO-PROJETO.md` trazia erro aberto de 04/10 19:50: `Hana Sentinela`
+código 1, reiniciar não resolveu. **Diagnóstico por leitura de código, sem
+acesso à máquina local** (mesmo método do conserto de 18/09, que foi outra
+causa — aquele já não se repete, `renovar_token.py` segue certo). Achado: no
+domingo (04/10 foi domingo) o `sentinela.bat` chama `lote_automatico.py
+--so-domingo` logo depois do `sentinela.py`, e a rota de aviso dele
+(`_empurrar_para_o_github`) faz `git commit` local e tenta `git push` 3x com
+`git pull --rebase --autostash` entre tentativas; se as 3 falharem, a
+exceção é engolida mas o repo podia sobrar com rebase pela metade (HEAD
+destacado) — e isso só quebra o PRÓXIMO disparo do `sentinela.py`, com
+"not currently on a branch", sem relação óbvia de causa. Reproduzi esse
+exato erro nesta sessão (`git pull --ff-only` falhando por HEAD destacado) e
+confirmei que reiniciar a tarefa não ajudaria (o problema é o estado do git
+no disco, não o processo). **Não tenho como confirmar no log real da máquina
+dele que foi EXATAMENTE isso** — fica marcado como inferência de código, não
+fato conferido na fonte.
+Conserto: (1) `lote_automatico.py` agora faz `git rebase --abort` +
+`git checkout main` se desistir depois das 3 tentativas, nunca mais deixando
+rebase pendurado; (2) `sentinela.py` ganhou autorrecuperação — se o
+`git pull --ff-only` falhar, aborta rebase, volta pra `main` e realinha com
+`origin/main` (`fetch` + `reset --hard`) antes de tentar de novo, em vez de
+travar. Testado nesta sessão: rodando `sentinela.py` a partir do mesmo estado
+quebrado (HEAD destacado), ele se recuperou sozinho e saiu com código 0.
+Repositório é 100% gerado por automação nesta região (trabalho humano chega
+só por commit do Claude) — realinhar com o remoto na recuperação é seguro.
+
 ## 🔍 04/10/2026 (2ª checagem, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` abriu sem ALARME no topo. `gh run list --workflow=publish.yml

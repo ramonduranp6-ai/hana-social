@@ -40,7 +40,26 @@ def main():
 
     pull = sh("git", "pull", "--ff-only")
     if pull.returncode:
-        raise RuntimeError("git pull falhou: " + (pull.stderr.strip() or pull.stdout.strip()))
+        # CONSERTO 05/10/2026 — achado lendo o `lote_automatico.py` (que roda na
+        # mesma tarefa, só no domingo, logo antes deste passo): se o push dele
+        # falhasse 3x, o repositório local podia sobrar com um rebase pela
+        # metade (HEAD destacado), e o `git pull --ff-only` passava a falhar
+        # sempre com "not currently on a branch" — reiniciar a tarefa não
+        # resolve, porque o problema é o estado do repo no disco, não o
+        # processo. Mesmo sintoma do erro aberto em `SAUDE-DO-PROJETO.md` em
+        # 04/10 (código 1, reiniciar não ajudou).
+        # Recuperação pelo mesmo caminho SEGURO que o resto do projeto já usa
+        # (publish.yml e lote_automatico.py: `pull --rebase --autostash`) —
+        # nunca `reset --hard`, que descartaria de vez commit local ainda não
+        # empurrado (achado na própria sessão deste conserto: um `reset --hard`
+        # de teste apagou a correção que estava sendo escrita antes do commit).
+        sh("git", "rebase", "--abort")
+        sh("git", "checkout", "main")
+        pull = sh("git", "pull", "--rebase", "--autostash")
+        if pull.returncode:
+            raise RuntimeError("git pull falhou: " + (pull.stderr.strip() or pull.stdout.strip()))
+        print("[auto-recuperação] repositório estava num estado inconsistente "
+              "(rebase pela metade / HEAD destacado) — realinhado com origin/main.")
 
     qdir = os.path.join(REPO, "content", "queue")
     agora = dt.datetime.now(dt.timezone.utc)

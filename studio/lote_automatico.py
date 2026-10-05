@@ -356,6 +356,16 @@ def _empurrar_para_o_github():
             git("pull", "--rebase", "--autostash")
         raise RuntimeError("push rejeitado 3 vezes")
     except Exception as exc:  # noqa: BLE001 — aviso nunca pode derrubar o lote
+        # CONSERTO 05/10/2026: se as 3 tentativas falharem, o `git pull --rebase`
+        # podia deixar o repositório pela metade de um rebase (HEAD destacado) —
+        # e isso só aparecia dias depois, quebrando o `sentinela.py` com "You are
+        # not currently on a branch", sem relação óbvia com este script. Achado
+        # lendo o código, sem acesso à máquina local onde roda (erro real achado
+        # em 04/10: tarefa 'Hana Sentinela' código 1, reiniciar não resolveu).
+        # Ao desistir, sempre devolve o repo a um estado limpo e anexado a um
+        # branch — nunca deixa rebase aberto.
+        git("rebase", "--abort")
+        git("checkout", "main")
         print(f"      [aviso] não consegui empurrar o recado ({str(exc)[:120]}). "
               f"Ele ficou em content/aviso_lote.md e o Claude lê ao abrir a conversa.")
 
