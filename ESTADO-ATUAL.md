@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 05/10/2026 09:00. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 05/10/2026 20:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,26 +26,21 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-(não consegui consultar — checar 'gh auth status')
+2026-10-05T18:39:44Z schedule success
+2026-10-05T17:14:43Z push success
+2026-10-05T09:20:39Z schedule success
 ```
-- Vigia local (Agendador do Windows): próxima execução segunda-feira, 5 de outubro de 2026 18:10:00
-- Token renovável automático: CONFIGURADO
+- Vigia local (Agendador do Windows): próxima execução não encontrada
+- Token renovável automático: FALTA criar studio/.token
 
 ## Esperando o OK do Ramón
-Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Projetos\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
-
-- 2026-08-22_cenoura-variante-v1.mp4
-- 2026-08-22_cenoura-variante-v2.mp4
-- 2026-08-22_cenoura-variante-v3.mp4
-
-Ele responde pelos números. Enquanto não responder, **não commitar**
-mudança de status nem publicar.
+Nada esperando aprovação (pasta vazia ou inexistente).
 
 ## Acervo de fotos
-- Brutas a processar: 39 arquivos
-- Editadas prontas: 4
-- Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34814
+- Brutas a processar: 0 arquivos
+- Editadas prontas: 0
+- Artes recebidas do outro projeto: 0
+- Fotos do iPhone sincronizadas (iCloud): 0
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -109,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+a0a01c6 snapshot de passagem de conta (05/10/2026 14:09): estado salvo para qualquer conta Claude seguir
 4d2d29b chore: recado do lote semanal [skip ci]
 65875d6 chore: atualiza estado da fila [skip ci]
 12fb0a0 conserta Sentinela: git pull autorrecupera de rebase travado/HEAD destacado
@@ -116,14 +112,6 @@ b01d6d9 snapshot de passagem de conta (04/10/2026 19:57): estado salvo para qual
 5ebf2ec chore: atualiza estado da fila [skip ci]
 3e20b51 checagem de rotina 04/10 (2a, vigia da nuvem) - sem bug novo
 de50383 chore: atualiza manutenção [skip ci]
-2c1811d EXPLICACAO: caminho do hub agora em Desktop/Projetos/Crescimento IA
-```
-Alterações não commitadas:
-```
-M content/.lote_semana_executada
- M content/.semanas_sem_cena
-?? .claude/settings.local.json
-?? BRIEFING-DA-ROTINA.md
 ```
 
 ## Decisões e contexto
