@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 04/10/2026 20:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 05/10/2026 09:00. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,21 +26,26 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-04T20:17:15Z schedule success
-2026-10-04T17:53:45Z schedule success
-2026-10-04T17:12:45Z schedule success
+(não consegui consultar — checar 'gh auth status')
 ```
-- Vigia local (Agendador do Windows): próxima execução não encontrada
-- Token renovável automático: FALTA criar studio/.token
+- Vigia local (Agendador do Windows): próxima execução segunda-feira, 5 de outubro de 2026 18:10:00
+- Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
-Nada esperando aprovação (pasta vazia ou inexistente).
+Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Projetos\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
+
+- 2026-08-22_cenoura-variante-v1.mp4
+- 2026-08-22_cenoura-variante-v2.mp4
+- 2026-08-22_cenoura-variante-v3.mp4
+
+Ele responde pelos números. Enquanto não responder, **não commitar**
+mudança de status nem publicar.
 
 ## Acervo de fotos
-- Brutas a processar: 0 arquivos
-- Editadas prontas: 0
-- Artes recebidas do outro projeto: 0
-- Fotos do iPhone sincronizadas (iCloud): 0
+- Brutas a processar: 39 arquivos
+- Editadas prontas: 4
+- Artes recebidas do outro projeto: 1
+- Fotos do iPhone sincronizadas (iCloud): 34814
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -78,7 +83,7 @@ o rosto não apareceu e perder a semana.
 ═══════════════════════════════════════
 
 ONDE SALVAR (caminho completo — dá para jogar pelo OneDrive do celular):
-C:\Users\Ramón França\OneDrive\Desktop\Hana Social\Fotos da Hana\01 - brutas (suba aqui)
+C:\Users\Ramón França\OneDrive\Desktop\Projetos\Hana Social\Fotos da Hana\01 - brutas (suba aqui)
 
 SE NÃO DER ATÉ QUINTA: existe um plano B guardado — um Reel curto com os ~4
 segundos de rosto que foram achados no vídeo antigo da praia. Ele só vai ao ar
@@ -100,21 +105,70 @@ estava certo: ela está de costas do começo ao fim.
 - [[studio/roteiros/2026-08_POV1_a-patroa-mandou|2026-08_POV1_a-patroa-mandou]]
 - [[content/plano-semana|plano-semana]]
 
-⏳ **3ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
+⏳ **4ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
 
 ## Últimas mudanças no projeto
 ```
+4d2d29b chore: recado do lote semanal [skip ci]
+65875d6 chore: atualiza estado da fila [skip ci]
+12fb0a0 conserta Sentinela: git pull autorrecupera de rebase travado/HEAD destacado
+b01d6d9 snapshot de passagem de conta (04/10/2026 19:57): estado salvo para qualquer conta Claude seguir
+5ebf2ec chore: atualiza estado da fila [skip ci]
+3e20b51 checagem de rotina 04/10 (2a, vigia da nuvem) - sem bug novo
 de50383 chore: atualiza manutenção [skip ci]
 2c1811d EXPLICACAO: caminho do hub agora em Desktop/Projetos/Crescimento IA
-0d3e409 caminhos: projeto agora em Desktop/Projetos/Hana Social
-025d544 diario de crescimento 04/10: perfil parado, placar com 1 dia de atraso, comida-servida 37 dias esperando aprovacao
-4ed5728 chore: atualiza estado da fila [skip ci]
-7ae649a chore: atualiza estado da fila [skip ci]
-0eb033c chore: checagem de rotina 04/10 (vigia da nuvem) - sem bug novo
-8daeea5 chore: atualiza estado da fila [skip ci]
+```
+Alterações não commitadas:
+```
+M content/.lote_semana_executada
+ M content/.semanas_sem_cena
+?? .claude/settings.local.json
+?? BRIEFING-DA-ROTINA.md
 ```
 
 ## Decisões e contexto
+## 🔧 05/10/2026 (vigia da nuvem) — CONSERTADO: 'Hana Sentinela' quebrada (código 1), de novo
+
+`SAUDE-DO-PROJETO.md` trazia erro aberto de 04/10 19:50: `Hana Sentinela`
+código 1, reiniciar não resolveu. **Diagnóstico por leitura de código, sem
+acesso à máquina local** (mesmo método do conserto de 18/09, que foi outra
+causa — aquele já não se repete, `renovar_token.py` segue certo). Achado: no
+domingo (04/10 foi domingo) o `sentinela.bat` chama `lote_automatico.py
+--so-domingo` logo depois do `sentinela.py`, e a rota de aviso dele
+(`_empurrar_para_o_github`) faz `git commit` local e tenta `git push` 3x com
+`git pull --rebase --autostash` entre tentativas; se as 3 falharem, a
+exceção é engolida mas o repo podia sobrar com rebase pela metade (HEAD
+destacado) — e isso só quebra o PRÓXIMO disparo do `sentinela.py`, com
+"not currently on a branch", sem relação óbvia de causa. Reproduzi esse
+exato erro nesta sessão (`git pull --ff-only` falhando por HEAD destacado) e
+confirmei que reiniciar a tarefa não ajudaria (o problema é o estado do git
+no disco, não o processo). **Não tenho como confirmar no log real da máquina
+dele que foi EXATAMENTE isso** — fica marcado como inferência de código, não
+fato conferido na fonte.
+Conserto: (1) `lote_automatico.py` agora faz `git rebase --abort` +
+`git checkout main` se desistir depois das 3 tentativas, nunca mais deixando
+rebase pendurado; (2) `sentinela.py` ganhou autorrecuperação — se o
+`git pull --ff-only` falhar, aborta rebase, volta pra `main` e realinha com
+`origin/main` (`fetch` + `reset --hard`) antes de tentar de novo, em vez de
+travar. Testado nesta sessão: rodando `sentinela.py` a partir do mesmo estado
+quebrado (HEAD destacado), ele se recuperou sozinho e saiu com código 0.
+Repositório é 100% gerado por automação nesta região (trabalho humano chega
+só por commit do Claude) — realinhar com o remoto na recuperação é seguro.
+
+## 🔍 04/10/2026 (2ª checagem, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` abriu sem ALARME no topo. `gh run list --workflow=publish.yml
+--limit 10` mostra os mesmos 9 `success` mais recentes e a mesma `failure`
+de 00:18:42Z já investigada na checagem anterior de hoje (fila vazia no
+primeiro disparo do dia, dedupe confirmado em `content/.falhas_avisadas.json`
+com `fila_vazia_2026-10-04`) — nenhuma falha nova desde então. Fila
+continua: 7 `rejected`, 1 `pending` (`2026-08-28_comida-servida`, já com
+`auditoria.veredito` = "SEM OBJECAO" no `post.json`, travada só esperando o
+Ramón aprovar/recusar, não é bug de código). `SAUDE-DO-PROJETO.md` sem erro
+aberto (última varredura 17/09); `content/recados.md` sem recado novo do
+Ramón. Nada mudou desde a checagem anterior de hoje — nenhum código
+alterado, nenhum aviso novo (regra 3: não repito aviso sem novidade).
+
 ## 🔍 04/10/2026 (checagem, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` abriu sem ALARME no topo. `gh run list --workflow=publish.yml
