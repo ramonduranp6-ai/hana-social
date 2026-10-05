@@ -55,4 +55,4 @@ estava certo: ela está de costas do começo ao fim.
 - [[studio/roteiros/2026-08_POV1_a-patroa-mandou|2026-08_POV1_a-patroa-mandou]]
 - [[content/plano-semana|plano-semana]]
 
-⏳ **3ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
+⏳ **4ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
