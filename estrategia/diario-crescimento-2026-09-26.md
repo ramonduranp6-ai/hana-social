@@ -44,4 +44,4 @@ só, e é o mesmo há um mês.
 > Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
 > partir das citações que já existiam no texto acima.
 
-- [[DECISOES]]
+- [[Hana Social/DECISOES|DECISOES]]

@@ -43,3 +43,11 @@ isso depende só do Ramón.
 3. **Claude da conversa**: quando `comida-servida` for ao ar, comparar
    alcance com a média dos outros Reels do pilar e só então julgar a
    regra de morte do formato POV (3 Reels publicados).
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[diario-crescimento-2026-10-04]]
+- [[diario-crescimento-2026-10-01]]
+- [[diario-crescimento-2026-09-27]]

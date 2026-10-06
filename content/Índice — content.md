@@ -16,7 +16,7 @@
 - [[parceria-canecas-pod]]
 - [[pauta_extra]]
 - [[pedido-de-cena]]
-- [[placar]]
+- [[Hana Social/content/placar|placar]]
 - [[plano-semana]]
 - [[playbook-reels]]
 - [[recados]]

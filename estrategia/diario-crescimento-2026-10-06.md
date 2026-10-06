@@ -40,3 +40,11 @@ O atraso dobrou (1 dia → 2 dias) e isso é, em si, um sinal pior que
    lenta pontual.
 3. **Ramon**: nada novo que só ele possa fazer hoje (segue valendo o pedido
    já registrado antes: aprovar/recusar `comida-servida`).
+
+## 🔗 Relacionados
+
+> Vizinhos por assunto (calculados automaticamente)
+
+- [[diario-crescimento-2026-10-04]]
+- [[diario-crescimento-2026-10-02]]
+- [[diario-crescimento-2026-09-30]]

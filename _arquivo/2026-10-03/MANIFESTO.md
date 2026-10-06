@@ -19,3 +19,10 @@ Total arquivado: 11 arquivo(s), 10.60 MB. Os 65 itens .pyc / __pycache__ da list
 | `content/posted/.gitkeep` | 0 | A | Lixo A (0 bytes). content/posted tem 13 pastas de post, entao o marcador de pasta vazia nao serve mais; metrics.py:75 pula entradas sem post.json (nao muda contagem) e postqueue.py:163 recria a pasta com makedirs; ripgrep de '.gitkeep' = so um comentario em para_aprovar.py (que le content/queue). Rastreado no git (recuperavel).... | `git mv "_arquivo/2026-10-03/content/posted/.gitkeep" "content/posted/.gitkeep"` |
 
 Observacao: os 5 arquivos de `Fotos da Hana/` ficam so no disco (a regra `_arquivo/*/Fotos da Hana/` no .gitignore os mantem fora do GitHub publico, igual a pasta de origem). `yolov8n.pt` tambem e ignorado pelo git.
+
+## 🔗 Relacionados
+
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
+
+- [[Hana Social/EXPLICACAO-PROJETO-PARA-IA|EXPLICACAO-PROJETO-PARA-IA]]

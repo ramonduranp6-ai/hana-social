@@ -398,6 +398,6 @@ na peça.**
 
 - [[auditoria-baloes-v4-2026-08-14]]
 - [[brand-brief]]
-- [[DECISOES]]
+- [[Hana Social/DECISOES|DECISOES]]
 - [[manual-profissional-reels]]
 - [[virais-medidos-2026-08-13]]

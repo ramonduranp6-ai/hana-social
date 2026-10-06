@@ -94,11 +94,21 @@ estava certo: ela está de costas do começo ao fim.
 
 ## 🔗 Relacionados
 
-> Vizinhos por assunto (calculados automaticamente)
+> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
+> partir das citações que já existiam no texto acima.
 
-- [[content/aviso_lote|aviso_lote]]
-- [[studio/roteiros/2026-08_POV1_a-patroa-mandou|2026-08_POV1_a-patroa-mandou]]
-- [[content/plano-semana|plano-semana]]
+- [[auditoria-baloes-v4-2026-08-14]]
+- [[aviso_lote]]
+- [[catalogo-garimpo]]
+- [[crescimento-instagram-2026-08-19]]
+- [[Hana Social/DECISOES|DECISOES]]
+- [[diario-crescimento-2026-08-28]]
+- [[diario-crescimento-2026-09-17]]
+- [[diario-crescimento-2026-09-28]]
+- [[diario-crescimento-2026-10-06]]
+- [[estudo-virais-2026-08]]
+- [[garimpo-apify-2026-08-09]]
+- [[hipoteses-produto]]
 
 ⏳ **4ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
 

@@ -72,4 +72,4 @@ de alcance e base pessoal medida, 15 dias de post orgânico falam com as mesmas
 > partir das citações que já existiam no texto acima.
 
 - [[brand-brief]]
-- [[DECISOES]]
+- [[Hana Social/DECISOES|DECISOES]]

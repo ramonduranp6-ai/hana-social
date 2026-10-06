@@ -47,4 +47,4 @@ dado novo pra decidir nada, e isso já se repete há vários dias seguidos.
 > Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
 > partir das citações que já existiam no texto acima.
 
-- [[DECISOES]]
+- [[Hana Social/DECISOES|DECISOES]]
