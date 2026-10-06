@@ -1,3 +1,19 @@
+## 🔧 06/10/2026 (vigia da nuvem) — CONSERTADO: coleta de métricas travada em 10-04 por push sem retry
+
+Causa real, achada no log do job (`get_job_logs`, run `37370552955`,
+10-05 20:45): `publisher/metrics.py` **rodou certo** e coletou
+2026-10-05 (330 seguidores) — mas o step "Salvar estado" do
+`maintenance.yml` faz `git push` simples, sem retry. Esse push foi
+**rejeitado** (`! [rejected] main -> main (fetch first)`, corrida com outro
+push no mesmo instante) e o job morreu ali — o commit local no runner
+efêmero nunca chegou ao `origin`, então a coleta inteira se perdeu, não só
+atrasou. `publish.yml` já tem exatamente este conserto desde o incidente de
+31/07/2026 (comentário no próprio arquivo); `maintenance.yml` nunca recebeu
+a mesma correção. Repliquei o padrão (3 tentativas de
+`git pull --rebase --autostash` + `git push`, `if: always()` no step) em
+`.github/workflows/maintenance.yml`. Fonte conferida: log real do job, não
+suposição.
+
 ## 📊 06/10/2026 (diário de crescimento) — coleta de métricas parou de atualizar
 
 `content/placar.md` e `content/metricas.json` estão travados em

@@ -57,10 +57,23 @@ jobs:
         run: |
           if [ "${{ inputs.forcar_reporte }}" = "true" ]; then python publisher/reporte_semanal.py --forcar; else python publisher/reporte_semanal.py; fi
       - name: Salvar estado
+        if: always()
         run: |
           git config user.name "hana-bot"
           git config user.email "hana-bot@users.noreply.github.com"
           git add content/ publisher/.telegram_offset || true
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "chore: atualiza manutenção [skip ci]"
-          git push
+          # Mesma corrida de push do publish.yml (incidente de 31/07/2026): sem
+          # retry, um push rejeitado por "fetch first" perde o commit inteiro —
+          # foi o que travou a coleta de métricas em 2026-10-04 por 2 dias.
+          for tentativa in 1 2 3; do
+            if git push; then
+              echo "estado salvo (tentativa $tentativa)"
+              exit 0
+            fi
+            echo "push rejeitado — rebaseando e tentando de novo ($tentativa/3)"
+            git pull --rebase --autostash origin main || true
+          done
+          echo "::error::nao consegui salvar o estado depois de 3 tentativas"
+          exit 1

@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 06/10/2026 08:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 06/10/2026 16:35. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-06T07:02:48Z schedule success
-2026-10-06T05:09:47Z push success
-2026-10-06T04:33:07Z push success
+2026-10-06T14:18:34Z schedule success
+2026-10-06T13:17:17Z push success
+2026-10-06T12:33:31Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,17 +104,64 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+f0c80bd diario de crescimento 06/10: coleta de metricas travada em 10-04 (2 dias de atraso)
+917a2b7 checagem de rotina 06/10 12:31 (vigia da nuvem) - sem bug novo
+c40aa37 chore: atualiza estado da fila [skip ci]
 f3d3df9 snapshot de passagem de conta (06/10/2026 02:09): estado salvo para qualquer conta Claude seguir
 f1d2194 checagem de rotina 06/10 04:31 (vigia da nuvem) - sem bug novo
 9540d50 checagem de rotina 06/10 (vigia da nuvem) - sem bug novo
 ff2e81b chore: atualiza estado da fila [skip ci]
 1dcdedb snapshot de passagem de conta (05/10/2026 20:09): estado salvo para qualquer conta Claude seguir
-bc1ea4e chore: atualiza estado da fila [skip ci]
-a0a01c6 snapshot de passagem de conta (05/10/2026 14:09): estado salvo para qualquer conta Claude seguir
-4d2d29b chore: recado do lote semanal [skip ci]
+```
+Alterações não commitadas:
+```
+M  .github/workflows/maintenance.yml
+M  DECISOES.md
+UU ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔧 06/10/2026 (vigia da nuvem) — CONSERTADO: coleta de métricas travada em 10-04 por push sem retry
+
+Causa real, achada no log do job (`get_job_logs`, run `37370552955`,
+10-05 20:45): `publisher/metrics.py` **rodou certo** e coletou
+2026-10-05 (330 seguidores) — mas o step "Salvar estado" do
+`maintenance.yml` faz `git push` simples, sem retry. Esse push foi
+**rejeitado** (`! [rejected] main -> main (fetch first)`, corrida com outro
+push no mesmo instante) e o job morreu ali — o commit local no runner
+efêmero nunca chegou ao `origin`, então a coleta inteira se perdeu, não só
+atrasou. `publish.yml` já tem exatamente este conserto desde o incidente de
+31/07/2026 (comentário no próprio arquivo); `maintenance.yml` nunca recebeu
+a mesma correção. Repliquei o padrão (3 tentativas de
+`git pull --rebase --autostash` + `git push`, `if: always()` no step) em
+`.github/workflows/maintenance.yml`. Fonte conferida: log real do job, não
+suposição.
+
+## 📊 06/10/2026 (diário de crescimento) — coleta de métricas parou de atualizar
+
+`content/placar.md` e `content/metricas.json` estão travados em
+**2026-10-04** — hoje é dia 06, então faltam as coletas de 10-05 e 10-06.
+O atraso que vinha sendo normal (1 dia, API lenta) dobrou para 2 dias. Não
+julguei número de crescimento hoje porque seria julgar dado velho (regra da
+rotina). Falta checar o log do workflow `maintenance.yml`
+(`publisher/metrics.py` roda com `continue-on-error: true`, então uma
+falha não derruba o job nem avisa ninguém — pode estar falhando silenciosa
+há 2 dias). Detalhe completo em
+`estrategia/diario-crescimento-2026-10-06.md`.
+
+## 🔍 06/10/2026 (checagem 12:31, vigia da nuvem) — sem bug novo
+
+Terceira varredura do dia. `estado.py --mostrar` sem ALARME no topo. `gh run
+list --workflow=publish.yml --limit 5`: desde a checagem anterior rodaram 4
+execuções novas, todas `success` (09:20, 18:39, 21:15, 07:02 — a última já do
+dia seguinte em UTC). Nenhuma `failure` nova; a última continua sendo a mesma
+`37394385402` (00:30:38Z) já diagnosticada e deduplicada
+(`fila_vazia_2026-10-06` em `.falhas_avisadas.json`). Fila sem mudança: 7
+`rejected`, 1 `pending` (`2026-08-28_comida-servida`, ~38 dias esperando
+aprovação) — mesmo buraco de conteúdo já avisado ao Ramón em sessões
+anteriores. `content/recados.md` sem recado novo dele. Nenhum código
+alterado — silêncio (regra 3).
+
 ## 🔍 06/10/2026 (checagem 04:31, vigia da nuvem) — sem bug novo
 
 Segunda varredura do dia, ~4h depois da anterior (commit `9540d50`, 00:33).
