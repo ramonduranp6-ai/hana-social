@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 06/10/2026 16:35. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 06/10/2026 20:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-06T14:18:34Z schedule success
-2026-10-06T13:17:17Z push success
-2026-10-06T12:33:31Z push success
+2026-10-06T19:37:40Z schedule success
+2026-10-06T19:11:37Z schedule success
+2026-10-06T18:24:22Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,23 +104,33 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+cfb6b22 checagem de rotina 06/10 20:31 (vigia da nuvem) - sem bug novo
+a54af73 chore: atualiza manutenção [skip ci]
+fabc32a conserta maintenance.yml: push sem retry travou a coleta de metricas em 10-04
 f0c80bd diario de crescimento 06/10: coleta de metricas travada em 10-04 (2 dias de atraso)
 917a2b7 checagem de rotina 06/10 12:31 (vigia da nuvem) - sem bug novo
 c40aa37 chore: atualiza estado da fila [skip ci]
 f3d3df9 snapshot de passagem de conta (06/10/2026 02:09): estado salvo para qualquer conta Claude seguir
 f1d2194 checagem de rotina 06/10 04:31 (vigia da nuvem) - sem bug novo
-9540d50 checagem de rotina 06/10 (vigia da nuvem) - sem bug novo
-ff2e81b chore: atualiza estado da fila [skip ci]
-1dcdedb snapshot de passagem de conta (05/10/2026 20:09): estado salvo para qualquer conta Claude seguir
-```
-Alterações não commitadas:
-```
-M  .github/workflows/maintenance.yml
-M  DECISOES.md
-UU ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 06/10/2026 (checagem 20:31, vigia da nuvem) — sem bug novo, conserto do push confirmado
+
+Quarta varredura do dia. `estado.py --mostrar` abriu sem ALARME no topo.
+`gh run list --workflow=publish.yml --limit 5`: todas as execuções desde a
+última checagem são `success` (14:18, 19:11, 19:37); a única `failure`
+continua sendo a mesma `37394385402` (00:30:38Z) já diagnosticada e
+deduplicada (`fila_vazia_2026-10-06` em `.falhas_avisadas.json`).
+`gh run list --workflow=maintenance.yml`: rodou de novo às 18:24 com
+`success` — e `content/metricas.json`/`content/placar.md` já têm a coleta
+de **2026-10-06**, confirmando que o conserto do push com retry (entrada
+acima) funcionou de verdade, não só passou no CI. Fila sem mudança: 7
+`rejected`, 1 `pending` (`2026-08-28_comida-servida`) — mesmo buraco de
+conteúdo (falta filmagem) já avisado ao Ramón em sessões anteriores, sem
+novidade para repetir aviso. `content/recados.md` sem recado novo dele.
+Nenhum código alterado — silêncio (regra 3).
+
 ## 🔧 06/10/2026 (vigia da nuvem) — CONSERTADO: coleta de métricas travada em 10-04 por push sem retry
 
 Causa real, achada no log do job (`get_job_logs`, run `37370552955`,

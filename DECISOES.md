@@ -1,3 +1,19 @@
+## 🔍 06/10/2026 (checagem 20:31, vigia da nuvem) — sem bug novo, conserto do push confirmado
+
+Quarta varredura do dia. `estado.py --mostrar` abriu sem ALARME no topo.
+`gh run list --workflow=publish.yml --limit 5`: todas as execuções desde a
+última checagem são `success` (14:18, 19:11, 19:37); a única `failure`
+continua sendo a mesma `37394385402` (00:30:38Z) já diagnosticada e
+deduplicada (`fila_vazia_2026-10-06` em `.falhas_avisadas.json`).
+`gh run list --workflow=maintenance.yml`: rodou de novo às 18:24 com
+`success` — e `content/metricas.json`/`content/placar.md` já têm a coleta
+de **2026-10-06**, confirmando que o conserto do push com retry (entrada
+acima) funcionou de verdade, não só passou no CI. Fila sem mudança: 7
+`rejected`, 1 `pending` (`2026-08-28_comida-servida`) — mesmo buraco de
+conteúdo (falta filmagem) já avisado ao Ramón em sessões anteriores, sem
+novidade para repetir aviso. `content/recados.md` sem recado novo dele.
+Nenhum código alterado — silêncio (regra 3).
+
 ## 🔧 06/10/2026 (vigia da nuvem) — CONSERTADO: coleta de métricas travada em 10-04 por push sem retry
 
 Causa real, achada no log do job (`get_job_logs`, run `37370552955`,
