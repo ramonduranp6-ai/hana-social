@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 06/10/2026 04:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 06/10/2026 08:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-06T00:34:07Z push success
-2026-10-06T00:30:38Z schedule failure
-2026-10-05T23:09:55Z push success
+2026-10-06T07:02:48Z schedule success
+2026-10-06T05:09:47Z push success
+2026-10-06T04:33:07Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,17 +104,30 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+f3d3df9 snapshot de passagem de conta (06/10/2026 02:09): estado salvo para qualquer conta Claude seguir
+f1d2194 checagem de rotina 06/10 04:31 (vigia da nuvem) - sem bug novo
 9540d50 checagem de rotina 06/10 (vigia da nuvem) - sem bug novo
 ff2e81b chore: atualiza estado da fila [skip ci]
 1dcdedb snapshot de passagem de conta (05/10/2026 20:09): estado salvo para qualquer conta Claude seguir
 bc1ea4e chore: atualiza estado da fila [skip ci]
 a0a01c6 snapshot de passagem de conta (05/10/2026 14:09): estado salvo para qualquer conta Claude seguir
 4d2d29b chore: recado do lote semanal [skip ci]
-65875d6 chore: atualiza estado da fila [skip ci]
-12fb0a0 conserta Sentinela: git pull autorrecupera de rebase travado/HEAD destacado
 ```
 
 ## Decisões e contexto
+## 🔍 06/10/2026 (checagem 04:31, vigia da nuvem) — sem bug novo
+
+Segunda varredura do dia, ~4h depois da anterior (commit `9540d50`, 00:33).
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml
+--limit 5`: nenhuma execução nova desde a checagem anterior — a última ainda é
+a mesma `failure` de 00:30:38Z (run `37394385402`), já diagnosticada como fila
+vazia (0 posts futuros) e já deduplicada em `.falhas_avisadas.json`
+(`fila_vazia_2026-10-06`). `content/recados.md` sem recado novo do Ramón.
+`SAUDE-DO-PROJETO.md` continua com a mesma entrada antiga da 'Hana Sentinela'
+(varredura de 04/10 19:50, pré-conserto de 05/10). Nada mudou desde a última
+checagem — nenhum código alterado, nenhum aviso novo (regra 3: sem novidade,
+sem repetir recado).
+
 ## 🔍 06/10/2026 (checagem, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` abriu sem ALARME no topo. `gh run list --workflow=publish.yml
