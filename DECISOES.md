@@ -1,3 +1,15 @@
+## 📊 06/10/2026 (diário de crescimento) — coleta de métricas parou de atualizar
+
+`content/placar.md` e `content/metricas.json` estão travados em
+**2026-10-04** — hoje é dia 06, então faltam as coletas de 10-05 e 10-06.
+O atraso que vinha sendo normal (1 dia, API lenta) dobrou para 2 dias. Não
+julguei número de crescimento hoje porque seria julgar dado velho (regra da
+rotina). Falta checar o log do workflow `maintenance.yml`
+(`publisher/metrics.py` roda com `continue-on-error: true`, então uma
+falha não derruba o job nem avisa ninguém — pode estar falhando silenciosa
+há 2 dias). Detalhe completo em
+`estrategia/diario-crescimento-2026-10-06.md`.
+
 ## 🔍 06/10/2026 (checagem 12:31, vigia da nuvem) — sem bug novo
 
 Terceira varredura do dia. `estado.py --mostrar` sem ALARME no topo. `gh run
