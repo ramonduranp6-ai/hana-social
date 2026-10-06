@@ -1,3 +1,22 @@
+## 🔍 06/10/2026 (checagem, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` abriu sem ALARME no topo. `gh run list --workflow=publish.yml
+--limit 30` mostra 1 `failure` (schedule, 00:30:38Z) e o resto `success`. Log do
+job que falhou (`get_job_logs`, run `37394385402`): `publisher/sentinel.py` saiu
+com código 1 por "fila com só 0 post(s) futuro(s)" — o mesmo alarme de praxe do
+primeiro disparo do dia; `content/.falhas_avisadas.json` já tem
+`fila_vazia_2026-10-06` (dedupe automático funcionou, gravado pelo commit
+seguinte do próprio robô). Não é bug de código. Fila continua: 7 `rejected`,
+1 `pending` (`2026-08-28_comida-servida`, ~55350 min / 38 dias esperando o
+Ramón aprovar/recusar) — buraco de fila vazia por falta de filmagem aberto
+desde 25/08/2026, já avisado ao Ramón em sessões anteriores (regra 3: não
+repito aviso sem novidade). `SAUDE-DO-PROJETO.md` ainda lista a `Hana
+Sentinela` quebrada como erro aberto, mas essa varredura é de 04/10 19:50 —
+ANTES do conserto desta mesma sessão de 05/10 (commit `12fb0a0`); não dá para
+confirmar na máquina local se já saiu da lista (sem acesso), mas não é um
+problema novo, é a mesma entrada já tratada. `content/recados.md` sem recado
+novo do Ramón. Nenhum código alterado — silêncio.
+
 ## 🔧 05/10/2026 (vigia da nuvem) — CONSERTADO: 'Hana Sentinela' quebrada (código 1), de novo
 
 `SAUDE-DO-PROJETO.md` trazia erro aberto de 04/10 19:50: `Hana Sentinela`

@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 05/10/2026 18:54. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 06/10/2026 00:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,26 +26,21 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-(não consegui consultar — checar 'gh auth status')
+2026-10-06T00:30:38Z schedule failure
+2026-10-05T23:09:55Z push success
+2026-10-05T21:15:56Z schedule success
 ```
-- Vigia local (Agendador do Windows): próxima execução quarta-feira, 7 de outubro de 2026 18:10:00
-- Token renovável automático: CONFIGURADO
+- Vigia local (Agendador do Windows): próxima execução não encontrada
+- Token renovável automático: FALTA criar studio/.token
 
 ## Esperando o OK do Ramón
-Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Projetos\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
-
-- 2026-08-22_cenoura-variante-v1.mp4
-- 2026-08-22_cenoura-variante-v2.mp4
-- 2026-08-22_cenoura-variante-v3.mp4
-
-Ele responde pelos números. Enquanto não responder, **não commitar**
-mudança de status nem publicar.
+Nada esperando aprovação (pasta vazia ou inexistente).
 
 ## Acervo de fotos
-- Brutas a processar: 39 arquivos
-- Editadas prontas: 4
-- Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34815
+- Brutas a processar: 0 arquivos
+- Editadas prontas: 0
+- Artes recebidas do outro projeto: 0
+- Fotos do iPhone sincronizadas (iCloud): 0
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -109,22 +104,41 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+ff2e81b chore: atualiza estado da fila [skip ci]
+1dcdedb snapshot de passagem de conta (05/10/2026 20:09): estado salvo para qualquer conta Claude seguir
 bc1ea4e chore: atualiza estado da fila [skip ci]
 a0a01c6 snapshot de passagem de conta (05/10/2026 14:09): estado salvo para qualquer conta Claude seguir
 4d2d29b chore: recado do lote semanal [skip ci]
 65875d6 chore: atualiza estado da fila [skip ci]
 12fb0a0 conserta Sentinela: git pull autorrecupera de rebase travado/HEAD destacado
 b01d6d9 snapshot de passagem de conta (04/10/2026 19:57): estado salvo para qualquer conta Claude seguir
-5ebf2ec chore: atualiza estado da fila [skip ci]
-3e20b51 checagem de rotina 04/10 (2a, vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
-?? .claude/settings.local.json
-?? BRIEFING-DA-ROTINA.md
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 06/10/2026 (checagem, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` abriu sem ALARME no topo. `gh run list --workflow=publish.yml
+--limit 30` mostra 1 `failure` (schedule, 00:30:38Z) e o resto `success`. Log do
+job que falhou (`get_job_logs`, run `37394385402`): `publisher/sentinel.py` saiu
+com código 1 por "fila com só 0 post(s) futuro(s)" — o mesmo alarme de praxe do
+primeiro disparo do dia; `content/.falhas_avisadas.json` já tem
+`fila_vazia_2026-10-06` (dedupe automático funcionou, gravado pelo commit
+seguinte do próprio robô). Não é bug de código. Fila continua: 7 `rejected`,
+1 `pending` (`2026-08-28_comida-servida`, ~55350 min / 38 dias esperando o
+Ramón aprovar/recusar) — buraco de fila vazia por falta de filmagem aberto
+desde 25/08/2026, já avisado ao Ramón em sessões anteriores (regra 3: não
+repito aviso sem novidade). `SAUDE-DO-PROJETO.md` ainda lista a `Hana
+Sentinela` quebrada como erro aberto, mas essa varredura é de 04/10 19:50 —
+ANTES do conserto desta mesma sessão de 05/10 (commit `12fb0a0`); não dá para
+confirmar na máquina local se já saiu da lista (sem acesso), mas não é um
+problema novo, é a mesma entrada já tratada. `content/recados.md` sem recado
+novo do Ramón. Nenhum código alterado — silêncio.
+
 ## 🔧 05/10/2026 (vigia da nuvem) — CONSERTADO: 'Hana Sentinela' quebrada (código 1), de novo
 
 `SAUDE-DO-PROJETO.md` trazia erro aberto de 04/10 19:50: `Hana Sentinela`
