@@ -1,3 +1,16 @@
+## 🔍 07/10/2026 (checagem 16:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml` run 863 (09:35:36Z)
+continua a mais recente, `success`, sem execução nova desde a checagem de
+12:32; `maintenance.yml` sem falha desde 06/10 18:24 (`success`). Nenhum
+recado novo em `content/recados.md`. Fila sem mudança: 7 `rejected` + 1
+`pending` (`2026-08-28_comida-servida`, aguardando o Ramón, já avisado).
+`HEAD` local estava destacado num commit de passagem de conta
+(`850eabf`) idêntico a `origin/main`; voltei para `main` e dei
+fast-forward, e descartei o `ESTADO-ATUAL.md` regenerado localmente (só
+timestamp, sem mudança de conteúdo real) para manter o working tree
+limpo. Nenhum código alterado — silêncio (regra 3).
+
 ## 🔍 07/10/2026 (checagem 12:32, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml` run 863 (09:35:36Z,
