@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 07/10/2026 12:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 07/10/2026 20:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-07T09:35:36Z schedule success
-2026-10-07T08:32:44Z push success
-2026-10-07T04:33:45Z push success
+2026-10-07T19:37:12Z schedule success
+2026-10-07T18:57:35Z schedule success
+2026-10-07T17:07:45Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,21 +104,55 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+105beeb chore: atualiza manutenção [skip ci]
+c026039 checagem de rotina 07/10 16:32 (vigia da nuvem) - sem bug novo
+850eabf snapshot de passagem de conta (07/10/2026 12:16): estado salvo para qualquer conta Claude seguir
+25b7cbb chore: atualiza estado da fila [skip ci]
+16e07a4 checagem de rotina 07/10 12:32 (vigia da nuvem) - sem bug novo
 19ad68e checagem de rotina 07/10 08:31 (vigia da nuvem) - sem bug novo
 09f6367 docs: registra checagem de 07/10 (02:50) — falha do publish.yml é a mesma fila vazia já deduplicada
 3e2d6c1 chore: atualiza estado da fila [skip ci]
-3b3171b chore: atualiza estado da fila [skip ci]
-fbf9df3 checagem de rotina 07/10 00:32 (vigia da nuvem) - sem bug novo
-6ddbfb1 snapshot de passagem de conta (06/10/2026 20:38): estado salvo para qualquer conta Claude seguir
-13f9f5b checagem de rotina 06/10 20:31 (vigia da nuvem) - sem bug novo
-a54af73 chore: atualiza manutenção [skip ci]
 ```
 Alterações não commitadas:
 ```
-M ESTADO-ATUAL.md
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 07/10/2026 (checagem 20:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml` run 37675856355
+(19:37:12Z) é a mais recente, `success`; `maintenance.yml` sem falha desde
+06/10 18:24 (`success`). Nenhum recado novo em `content/recados.md`. Fila
+sem mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+aguardando o Ramón, já avisado). `HEAD` local estava destacado de novo num
+commit idêntico a `origin/main` (`105beeb`); voltei para `main` e dei
+fast-forward, descartando o `ESTADO-ATUAL.md` regenerado localmente (só
+timestamp). Nenhum código alterado — silêncio (regra 3).
+
+## 🔍 07/10/2026 (checagem 16:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml` run 863 (09:35:36Z)
+continua a mais recente, `success`, sem execução nova desde a checagem de
+12:32; `maintenance.yml` sem falha desde 06/10 18:24 (`success`). Nenhum
+recado novo em `content/recados.md`. Fila sem mudança: 7 `rejected` + 1
+`pending` (`2026-08-28_comida-servida`, aguardando o Ramón, já avisado).
+`HEAD` local estava destacado num commit de passagem de conta
+(`850eabf`) idêntico a `origin/main`; voltei para `main` e dei
+fast-forward, e descartei o `ESTADO-ATUAL.md` regenerado localmente (só
+timestamp, sem mudança de conteúdo real) para manter o working tree
+limpo. Nenhum código alterado — silêncio (regra 3).
+
+## 🔍 07/10/2026 (checagem 12:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml` run 863 (09:35:36Z,
+mais recente, depois da checagem de 08:31) veio `success`; `maintenance.yml`
+sem falha desde 06/10 18:24 (`success`). Nenhum recado novo em
+`content/recados.md`. Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón, já avisado). Nenhum código
+alterado — silêncio (regra 3).
+
 ## 🔍 07/10/2026 (checagem 08:31, vigia da nuvem) — sem bug novo
 
 Sem execução nova de `publish.yml` desde a falha das 02:37 (`37562830845`,
