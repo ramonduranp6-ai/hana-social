@@ -1,3 +1,12 @@
+## 🔍 07/10/2026 (checagem 12:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml` run 863 (09:35:36Z,
+mais recente, depois da checagem de 08:31) veio `success`; `maintenance.yml`
+sem falha desde 06/10 18:24 (`success`). Nenhum recado novo em
+`content/recados.md`. Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón, já avisado). Nenhum código
+alterado — silêncio (regra 3).
+
 ## 🔍 07/10/2026 (checagem 08:31, vigia da nuvem) — sem bug novo
 
 Sem execução nova de `publish.yml` desde a falha das 02:37 (`37562830845`,
