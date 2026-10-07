@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 07/10/2026 08:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 07/10/2026 12:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-07T09:35:36Z schedule success
+2026-10-07T08:32:44Z push success
 2026-10-07T04:33:45Z push success
-2026-10-07T02:37:04Z schedule failure
-2026-10-07T00:33:23Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+19ad68e checagem de rotina 07/10 08:31 (vigia da nuvem) - sem bug novo
 09f6367 docs: registra checagem de 07/10 (02:50) — falha do publish.yml é a mesma fila vazia já deduplicada
 3e2d6c1 chore: atualiza estado da fila [skip ci]
 3b3171b chore: atualiza estado da fila [skip ci]
@@ -111,12 +112,10 @@ fbf9df3 checagem de rotina 07/10 00:32 (vigia da nuvem) - sem bug novo
 6ddbfb1 snapshot de passagem de conta (06/10/2026 20:38): estado salvo para qualquer conta Claude seguir
 13f9f5b checagem de rotina 06/10 20:31 (vigia da nuvem) - sem bug novo
 a54af73 chore: atualiza manutenção [skip ci]
-fabc32a conserta maintenance.yml: push sem retry travou a coleta de metricas em 10-04
 ```
 Alterações não commitadas:
 ```
-M DECISOES.md
- M ESTADO-ATUAL.md
+M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
