@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 06/10/2026 20:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 07/10/2026 00:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-06T19:37:40Z schedule success
-2026-10-06T19:11:37Z schedule success
-2026-10-06T18:24:22Z schedule success
+2026-10-06T23:39:46Z push success
+2026-10-06T23:28:50Z schedule success
+2026-10-06T20:33:19Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -94,34 +94,24 @@ estava certo: ela está de costas do começo ao fim.
 
 ## 🔗 Relacionados
 
-> Ligações geradas automaticamente por `tecer-vault-obsidian.py` a
-> partir das citações que já existiam no texto acima.
+> Vizinhos por assunto (calculados automaticamente)
 
-- [[auditoria-baloes-v4-2026-08-14]]
-- [[aviso_lote]]
-- [[catalogo-garimpo]]
-- [[crescimento-instagram-2026-08-19]]
-- [[Hana Social/DECISOES|DECISOES]]
-- [[diario-crescimento-2026-08-28]]
-- [[diario-crescimento-2026-09-17]]
-- [[diario-crescimento-2026-09-28]]
-- [[diario-crescimento-2026-10-06]]
-- [[estudo-virais-2026-08]]
-- [[garimpo-apify-2026-08-09]]
-- [[hipoteses-produto]]
+- [[content/aviso_lote|aviso_lote]]
+- [[studio/roteiros/2026-08_POV1_a-patroa-mandou|2026-08_POV1_a-patroa-mandou]]
+- [[content/plano-semana|plano-semana]]
 
 ⏳ **4ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
 
 ## Últimas mudanças no projeto
 ```
-cfb6b22 checagem de rotina 06/10 20:31 (vigia da nuvem) - sem bug novo
+6ddbfb1 snapshot de passagem de conta (06/10/2026 20:38): estado salvo para qualquer conta Claude seguir
+13f9f5b checagem de rotina 06/10 20:31 (vigia da nuvem) - sem bug novo
 a54af73 chore: atualiza manutenção [skip ci]
 fabc32a conserta maintenance.yml: push sem retry travou a coleta de metricas em 10-04
 f0c80bd diario de crescimento 06/10: coleta de metricas travada em 10-04 (2 dias de atraso)
 917a2b7 checagem de rotina 06/10 12:31 (vigia da nuvem) - sem bug novo
 c40aa37 chore: atualiza estado da fila [skip ci]
 f3d3df9 snapshot de passagem de conta (06/10/2026 02:09): estado salvo para qualquer conta Claude seguir
-f1d2194 checagem de rotina 06/10 04:31 (vigia da nuvem) - sem bug novo
 ```
 
 ## Decisões e contexto
@@ -4428,8 +4418,8 @@ crescer exige Reels, hashtag de nicho e presença nos perfis grandes da raça.
 - [[diario-crescimento-2026-08-28]]
 - [[diario-crescimento-2026-09-17]]
 - [[diario-crescimento-2026-09-28]]
+- [[diario-crescimento-2026-10-06]]
 - [[ESTADO-ATUAL]]
 - [[estudo-virais-2026-08]]
 - [[garimpo-apify-2026-08-09]]
 - [[hipoteses-produto]]
-- [[legendas-pov-2026-08-21]]
