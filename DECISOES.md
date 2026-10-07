@@ -1,3 +1,18 @@
+## 🔍 07/10/2026 (checagem 02:50, vigia da nuvem) — sem bug novo
+
+Nova `failure` em `publish.yml` desde a checagem de 00:32: run `37562830845`
+(02:37:04Z). Log real (`get_job_logs`): o step "Rodar publicador" e os de
+Telegram passaram; quem derrubou o job foi o `publisher/sentinel.py` —
+"fila com só 0 post(s) futuro(s) (mínimo saudável: 2)" — mesma causa de
+sempre (falta de filmagem nova, regra 3b da skill), já registrada em
+`.falhas_avisadas.json` como `fila_vazia_2026-10-07` antes desta checagem,
+ou seja, o próprio robô já a deduplicou e não é fato novo para repetir
+aviso ao Ramón. `maintenance.yml` sem falha desde 06/10 18:24 (`success`);
+`content/placar.md` segue com a coleta de 10-06 (331→329 seguidores),
+sem gap que precise de conserto agora. Fila continua 7 `rejected` + 1
+`pending` (`2026-08-28_comida-servida`, aguardando o Ramón). Nenhum
+código alterado — silêncio (regra 3).
+
 ## 🔍 07/10/2026 (checagem 00:32, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` abriu sem ALARME no topo. `actions_list` em

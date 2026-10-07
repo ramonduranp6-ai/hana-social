@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 07/10/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 07/10/2026 04:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-07T02:37:04Z schedule failure
+2026-10-07T00:33:23Z push success
 2026-10-06T23:39:46Z push success
-2026-10-06T23:28:50Z schedule success
-2026-10-06T20:33:19Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,17 +104,53 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+3e2d6c1 chore: atualiza estado da fila [skip ci]
+3b3171b chore: atualiza estado da fila [skip ci]
+fbf9df3 checagem de rotina 07/10 00:32 (vigia da nuvem) - sem bug novo
 6ddbfb1 snapshot de passagem de conta (06/10/2026 20:38): estado salvo para qualquer conta Claude seguir
 13f9f5b checagem de rotina 06/10 20:31 (vigia da nuvem) - sem bug novo
 a54af73 chore: atualiza manutenção [skip ci]
 fabc32a conserta maintenance.yml: push sem retry travou a coleta de metricas em 10-04
 f0c80bd diario de crescimento 06/10: coleta de metricas travada em 10-04 (2 dias de atraso)
-917a2b7 checagem de rotina 06/10 12:31 (vigia da nuvem) - sem bug novo
-c40aa37 chore: atualiza estado da fila [skip ci]
-f3d3df9 snapshot de passagem de conta (06/10/2026 02:09): estado salvo para qualquer conta Claude seguir
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 07/10/2026 (checagem 02:50, vigia da nuvem) — sem bug novo
+
+Nova `failure` em `publish.yml` desde a checagem de 00:32: run `37562830845`
+(02:37:04Z). Log real (`get_job_logs`): o step "Rodar publicador" e os de
+Telegram passaram; quem derrubou o job foi o `publisher/sentinel.py` —
+"fila com só 0 post(s) futuro(s) (mínimo saudável: 2)" — mesma causa de
+sempre (falta de filmagem nova, regra 3b da skill), já registrada em
+`.falhas_avisadas.json` como `fila_vazia_2026-10-07` antes desta checagem,
+ou seja, o próprio robô já a deduplicou e não é fato novo para repetir
+aviso ao Ramón. `maintenance.yml` sem falha desde 06/10 18:24 (`success`);
+`content/placar.md` segue com a coleta de 10-06 (331→329 seguidores),
+sem gap que precise de conserto agora. Fila continua 7 `rejected` + 1
+`pending` (`2026-08-28_comida-servida`, aguardando o Ramón). Nenhum
+código alterado — silêncio (regra 3).
+
+## 🔍 07/10/2026 (checagem 00:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` abriu sem ALARME no topo. `actions_list` em
+`publish.yml`: nenhuma execução nova desde a checagem anterior (última
+em 23:28:50 de 06/10, `success`); mesmo em `maintenance.yml` (última
+`success` em 18:24:22 de 06/10, com o conserto do push-com-retry já
+confirmado). `HEAD` local estava destacado num snapshot mais novo que a
+branch `main` local — só desatualização do ref local, `origin/main` e o
+snapshot já coincidiam (`6ddbfb1`); voltei para `main` e dei fast-forward,
+sem perda de histórico. `content/recados.md`: nenhum recado novo do
+Ramón (últimos marcados `[x]` são de 13/08). Fila sem mudança: 7
+`rejected`, 1 `pending` (`2026-08-28_comida-servida`) — mesmo buraco de
+conteúdo por falta de filmagem já avisado em sessões anteriores, sem
+novidade para repetir aviso. Nenhum código alterado além desta entrada —
+silêncio (regra 3).
+
 ## 🔍 06/10/2026 (checagem 20:31, vigia da nuvem) — sem bug novo, conserto do push confirmado
 
 Quarta varredura do dia. `estado.py --mostrar` abriu sem ALARME no topo.
