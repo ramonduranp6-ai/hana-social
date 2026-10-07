@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 07/10/2026 20:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 07/10/2026 18:53. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,21 +26,26 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-07T19:37:12Z schedule success
-2026-10-07T18:57:35Z schedule success
-2026-10-07T17:07:45Z schedule success
+(não consegui consultar — checar 'gh auth status')
 ```
-- Vigia local (Agendador do Windows): próxima execução não encontrada
-- Token renovável automático: FALTA criar studio/.token
+- Vigia local (Agendador do Windows): próxima execução sexta-feira, 9 de outubro de 2026 18:10:00
+- Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
-Nada esperando aprovação (pasta vazia ou inexistente).
+Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Projetos\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
+
+- 2026-08-22_cenoura-variante-v1.mp4
+- 2026-08-22_cenoura-variante-v2.mp4
+- 2026-08-22_cenoura-variante-v3.mp4
+
+Ele responde pelos números. Enquanto não responder, **não commitar**
+mudança de status nem publicar.
 
 ## Acervo de fotos
-- Brutas a processar: 0 arquivos
-- Editadas prontas: 0
-- Artes recebidas do outro projeto: 0
-- Fotos do iPhone sincronizadas (iCloud): 0
+- Brutas a processar: 39 arquivos
+- Editadas prontas: 4
+- Artes recebidas do outro projeto: 1
+- Fotos do iPhone sincronizadas (iCloud): 34829
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -104,6 +109,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+55100db checagem de rotina 07/10 20:32 (vigia da nuvem) - sem bug novo
 105beeb chore: atualiza manutenção [skip ci]
 c026039 checagem de rotina 07/10 16:32 (vigia da nuvem) - sem bug novo
 850eabf snapshot de passagem de conta (07/10/2026 12:16): estado salvo para qualquer conta Claude seguir
@@ -111,12 +117,11 @@ c026039 checagem de rotina 07/10 16:32 (vigia da nuvem) - sem bug novo
 16e07a4 checagem de rotina 07/10 12:32 (vigia da nuvem) - sem bug novo
 19ad68e checagem de rotina 07/10 08:31 (vigia da nuvem) - sem bug novo
 09f6367 docs: registra checagem de 07/10 (02:50) — falha do publish.yml é a mesma fila vazia já deduplicada
-3e2d6c1 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
-M DECISOES.md
- M ESTADO-ATUAL.md
+?? .claude/settings.local.json
+?? BRIEFING-DA-ROTINA.md
 ```
 
 ## Decisões e contexto
