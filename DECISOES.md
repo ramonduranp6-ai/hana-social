@@ -1,3 +1,10 @@
+## 🔍 07/10/2026 (checagem 08:31, vigia da nuvem) — sem bug novo
+
+Sem execução nova de `publish.yml` desde a falha das 02:37 (`37562830845`,
+já registrada); `maintenance.yml` sem falha desde 06/10 18:24. Nenhum recado
+novo em `content/recados.md`. Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`). Nenhum código alterado — silêncio (regra 3).
+
 ## 🔍 07/10/2026 (checagem 02:50, vigia da nuvem) — sem bug novo
 
 Nova `failure` em `publish.yml` desde a checagem de 00:32: run `37562830845`

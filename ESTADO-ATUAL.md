@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 07/10/2026 04:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 07/10/2026 08:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-07T04:33:45Z push success
 2026-10-07T02:37:04Z schedule failure
 2026-10-07T00:33:23Z push success
-2026-10-06T23:39:46Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+09f6367 docs: registra checagem de 07/10 (02:50) — falha do publish.yml é a mesma fila vazia já deduplicada
 3e2d6c1 chore: atualiza estado da fila [skip ci]
 3b3171b chore: atualiza estado da fila [skip ci]
 fbf9df3 checagem de rotina 07/10 00:32 (vigia da nuvem) - sem bug novo
@@ -111,7 +112,6 @@ fbf9df3 checagem de rotina 07/10 00:32 (vigia da nuvem) - sem bug novo
 13f9f5b checagem de rotina 06/10 20:31 (vigia da nuvem) - sem bug novo
 a54af73 chore: atualiza manutenção [skip ci]
 fabc32a conserta maintenance.yml: push sem retry travou a coleta de metricas em 10-04
-f0c80bd diario de crescimento 06/10: coleta de metricas travada em 10-04 (2 dias de atraso)
 ```
 Alterações não commitadas:
 ```
@@ -120,6 +120,13 @@ M DECISOES.md
 ```
 
 ## Decisões e contexto
+## 🔍 07/10/2026 (checagem 08:31, vigia da nuvem) — sem bug novo
+
+Sem execução nova de `publish.yml` desde a falha das 02:37 (`37562830845`,
+já registrada); `maintenance.yml` sem falha desde 06/10 18:24. Nenhum recado
+novo em `content/recados.md`. Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`). Nenhum código alterado — silêncio (regra 3).
+
 ## 🔍 07/10/2026 (checagem 02:50, vigia da nuvem) — sem bug novo
 
 Nova `failure` em `publish.yml` desde a checagem de 00:32: run `37562830845`
