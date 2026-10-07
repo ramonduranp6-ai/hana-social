@@ -1,3 +1,19 @@
+## 🔍 07/10/2026 (checagem 00:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` abriu sem ALARME no topo. `actions_list` em
+`publish.yml`: nenhuma execução nova desde a checagem anterior (última
+em 23:28:50 de 06/10, `success`); mesmo em `maintenance.yml` (última
+`success` em 18:24:22 de 06/10, com o conserto do push-com-retry já
+confirmado). `HEAD` local estava destacado num snapshot mais novo que a
+branch `main` local — só desatualização do ref local, `origin/main` e o
+snapshot já coincidiam (`6ddbfb1`); voltei para `main` e dei fast-forward,
+sem perda de histórico. `content/recados.md`: nenhum recado novo do
+Ramón (últimos marcados `[x]` são de 13/08). Fila sem mudança: 7
+`rejected`, 1 `pending` (`2026-08-28_comida-servida`) — mesmo buraco de
+conteúdo por falta de filmagem já avisado em sessões anteriores, sem
+novidade para repetir aviso. Nenhum código alterado além desta entrada —
+silêncio (regra 3).
+
 ## 🔍 06/10/2026 (checagem 20:31, vigia da nuvem) — sem bug novo, conserto do push confirmado
 
 Quarta varredura do dia. `estado.py --mostrar` abriu sem ALARME no topo.
