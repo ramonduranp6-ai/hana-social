@@ -1,3 +1,19 @@
+## 🔍 08/10/2026 (checagem 20:33, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `actions_list`/`gh run list` em
+`publish.yml`: 1 `failure` nova desde a última checagem — run `37716382839`
+(08/10 02:08:13Z). Log real (`get_job_logs`): todos os passos de publicação
+e Telegram passaram; quem derrubou o job foi `publisher/sentinel.py` —
+"fila com só 0 post(s) futuro(s) (mínimo saudável: 2)" — mesma causa de
+sempre (falta de filmagem nova, regra 3b da skill), e já estava deduplicada
+em `.falhas_avisadas.json` como `fila_vazia_2026-10-08` antes mesmo desta
+checagem (o próprio sentinela não repetiu o alarme nas 3 execuções
+seguintes, 09:14/16:41/19:32, todas `success`). `maintenance.yml` sem falha
+desde 06/10 18:24 (`success`). Nenhum recado novo em `content/recados.md`.
+Fila sem mudança real: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+aguardando o Ramón há ~40 dias, já avisado antes — decisão de família sem
+prazo, não é bug). Nenhum código alterado — silêncio (regra 3).
+
 ## 🔍 07/10/2026 (checagem 20:32, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml` run 37675856355
