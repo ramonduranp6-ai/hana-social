@@ -1,3 +1,12 @@
+## 🔍 09/10/2026 (checagem 00:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: run 871 (08/10
+21:40:34Z) é o mais recente, `success`; sem execução nova desde a checagem
+anterior (20:33). Nenhum recado novo em `content/recados.md`. Fila sem
+mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, aguardando
+o Ramón há ~42 dias, já avisado antes — decisão de família sem prazo, não é
+bug). Nenhum código alterado — silêncio (regra 3).
+
 ## 🔍 08/10/2026 (checagem 20:33, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `actions_list`/`gh run list` em
