@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 08/10/2026 20:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 09/10/2026 20:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-08T19:32:59Z schedule success
-2026-10-08T18:52:03Z schedule success
-2026-10-08T16:41:39Z schedule success
+2026-10-09T20:11:23Z schedule success
+2026-10-09T19:07:36Z schedule success
+2026-10-09T18:22:29Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,17 +104,103 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
-0cea889 chore: atualiza estado da fila [skip ci]
-ec1fc4c chore: atualiza manutenção [skip ci]
-d9674fb chore: atualiza estado da fila [skip ci]
-67fa3bd snapshot de passagem de conta (08/10/2026 02:09): estado salvo para qualquer conta Claude seguir
-bac8832 chore: atualiza estado da fila [skip ci]
-5dee90e snapshot de passagem de conta (07/10/2026 20:09): estado salvo para qualquer conta Claude seguir
-55100db checagem de rotina 07/10 20:32 (vigia da nuvem) - sem bug novo
-105beeb chore: atualiza manutenção [skip ci]
+8f2c1ca chore: atualiza estado da fila [skip ci]
+974a941 chore: atualiza manutenção [skip ci]
+ee2f53b snapshot de passagem de conta (09/10/2026 15:08): estado salvo para qualquer conta Claude seguir
+44193cc checagem de rotina 09/10 16:32 (vigia da nuvem) - sem bug novo
+d610f56 chore: atualiza estado da fila [skip ci]
+59a248f snapshot de passagem de conta (09/10/2026 09:21): estado salvo para qualquer conta Claude seguir
+1420674 checagem de rotina 09/10 08:32 (vigia da nuvem) - sem bug novo
+55af69e chore: atualiza estado da fila [skip ci]
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 09/10/2026 (checagem 20:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: run `37985293470`
+(09/10 20:11:23Z) é a mais recente, `success` — sem `failure` nova desde a
+checagem anterior (16:32); a única falha do dia (`37870524552`, 01:35:39Z)
+continua a mesma, já diagnosticada como fila vazia e deduplicada em
+`content/.falhas_avisadas.json` (`fila_vazia_2026-10-09`). `maintenance.yml`
+ainda sem falha desde 06/10 18:24 (`success`). Nenhum recado novo em
+`content/recados.md`. Fila sem mudança real: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón há ~43 dias, já avisado
+antes — decisão de família sem prazo, não é bug). Nenhum código
+alterado — silêncio (regra 3).
+
+## 🔍 09/10/2026 (checagem 16:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: run `37951576267`
+(09/10 15:25:06Z) é a mais recente, `success` — sem `failure` nova desde a
+checagem anterior (08:32); a única falha do dia (`37870524552`, 01:35:39Z)
+já estava diagnosticada como fila vazia e deduplicada em
+`content/.falhas_avisadas.json` (`fila_vazia_2026-10-09`). `maintenance.yml`
+ainda sem falha desde 06/10 18:24 (`success`). Nenhum recado novo em
+`content/recados.md`. Fila sem mudança real: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón há ~43 dias, já avisado
+antes — decisão de família sem prazo, não é bug). Nenhum código
+alterado — silêncio (regra 3).
+
+## 🔍 09/10/2026 (checagem 08:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: run `37903724682`
+(09/10 08:14:15Z) é o mais recente, `success` — sem execução nova (e sem
+`failure` nova) desde a checagem anterior (04:32), que já tinha diagnosticado
+a única falha do dia (`37870524552`, 01:35:39Z) como a "fila vazia" de
+sempre, não um bug. `maintenance.yml` ainda sem falha desde 06/10 18:24.
+Nenhum recado novo em `content/recados.md`. Fila sem mudança real: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, aguardando o Ramón
+há ~42 dias, decisão de família sem prazo). Nenhum código alterado —
+silêncio (regra 3).
+
+## 🔍 09/10/2026 (checagem 04:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: 1 `failure` nova
+desde a checagem anterior — run `37870524552` (09/10 01:35:39Z). Log real
+(`get_job_logs`): todos os passos de publicação e Telegram passaram; quem
+derrubou o job foi `publisher/sentinel.py` — "fila com só 0 post(s)
+futuro(s) (mínimo saudável: 2)" — mesma causa de sempre (falta de filmagem
+nova, regra 3b da skill), e já estava deduplicada em
+`content/.falhas_avisadas.json` como `fila_vazia_2026-10-09` antes mesmo
+desta checagem. `maintenance.yml` sem falha desde 06/10 18:24 (`success`).
+Nenhum recado novo em `content/recados.md`. Fila sem mudança real: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, aguardando o Ramón
+há ~42 dias, já avisado antes — decisão de família sem prazo, não é bug).
+`HEAD` local estava destacado num commit idêntico a `origin/main`
+(`5088ac9`); voltei para `main` (já estava em fast-forward) e descartei o
+`ESTADO-ATUAL.md` regenerado localmente (só timestamp/log, sem mudança de
+conteúdo real). Nenhum código alterado — silêncio (regra 3).
+
+## 🔍 09/10/2026 (checagem 00:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: run 871 (08/10
+21:40:34Z) é o mais recente, `success`; sem execução nova desde a checagem
+anterior (20:33). Nenhum recado novo em `content/recados.md`. Fila sem
+mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, aguardando
+o Ramón há ~42 dias, já avisado antes — decisão de família sem prazo, não é
+bug). Nenhum código alterado — silêncio (regra 3).
+
+## 🔍 08/10/2026 (checagem 20:33, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `actions_list`/`gh run list` em
+`publish.yml`: 1 `failure` nova desde a última checagem — run `37716382839`
+(08/10 02:08:13Z). Log real (`get_job_logs`): todos os passos de publicação
+e Telegram passaram; quem derrubou o job foi `publisher/sentinel.py` —
+"fila com só 0 post(s) futuro(s) (mínimo saudável: 2)" — mesma causa de
+sempre (falta de filmagem nova, regra 3b da skill), e já estava deduplicada
+em `.falhas_avisadas.json` como `fila_vazia_2026-10-08` antes mesmo desta
+checagem (o próprio sentinela não repetiu o alarme nas 3 execuções
+seguintes, 09:14/16:41/19:32, todas `success`). `maintenance.yml` sem falha
+desde 06/10 18:24 (`success`). Nenhum recado novo em `content/recados.md`.
+Fila sem mudança real: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+aguardando o Ramón há ~40 dias, já avisado antes — decisão de família sem
+prazo, não é bug). Nenhum código alterado — silêncio (regra 3).
+
 ## 🔍 07/10/2026 (checagem 20:32, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml` run 37675856355
