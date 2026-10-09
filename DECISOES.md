@@ -1,3 +1,15 @@
+## 🔍 09/10/2026 (checagem 08:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: run `37903724682`
+(09/10 08:14:15Z) é o mais recente, `success` — sem execução nova (e sem
+`failure` nova) desde a checagem anterior (04:32), que já tinha diagnosticado
+a única falha do dia (`37870524552`, 01:35:39Z) como a "fila vazia" de
+sempre, não um bug. `maintenance.yml` ainda sem falha desde 06/10 18:24.
+Nenhum recado novo em `content/recados.md`. Fila sem mudança real: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, aguardando o Ramón
+há ~42 dias, decisão de família sem prazo). Nenhum código alterado —
+silêncio (regra 3).
+
 ## 🔍 09/10/2026 (checagem 04:32, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml`: 1 `failure` nova
