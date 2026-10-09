@@ -1,3 +1,21 @@
+## 🔍 09/10/2026 (checagem 04:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: 1 `failure` nova
+desde a checagem anterior — run `37870524552` (09/10 01:35:39Z). Log real
+(`get_job_logs`): todos os passos de publicação e Telegram passaram; quem
+derrubou o job foi `publisher/sentinel.py` — "fila com só 0 post(s)
+futuro(s) (mínimo saudável: 2)" — mesma causa de sempre (falta de filmagem
+nova, regra 3b da skill), e já estava deduplicada em
+`content/.falhas_avisadas.json` como `fila_vazia_2026-10-09` antes mesmo
+desta checagem. `maintenance.yml` sem falha desde 06/10 18:24 (`success`).
+Nenhum recado novo em `content/recados.md`. Fila sem mudança real: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, aguardando o Ramón
+há ~42 dias, já avisado antes — decisão de família sem prazo, não é bug).
+`HEAD` local estava destacado num commit idêntico a `origin/main`
+(`5088ac9`); voltei para `main` (já estava em fast-forward) e descartei o
+`ESTADO-ATUAL.md` regenerado localmente (só timestamp/log, sem mudança de
+conteúdo real). Nenhum código alterado — silêncio (regra 3).
+
 ## 🔍 09/10/2026 (checagem 00:32, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml`: run 871 (08/10
