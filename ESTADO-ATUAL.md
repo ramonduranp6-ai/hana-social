@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 10/10/2026 08:21. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 10/10/2026 20:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,26 +26,21 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-(não consegui consultar — checar 'gh auth status')
+2026-10-10T18:06:15Z schedule success
+2026-10-10T17:33:38Z schedule success
+2026-10-10T17:21:30Z schedule success
 ```
-- Vigia local (Agendador do Windows): próxima execução domingo, 11 de outubro de 2026 18:10:00
-- Token renovável automático: CONFIGURADO
+- Vigia local (Agendador do Windows): próxima execução não encontrada
+- Token renovável automático: FALTA criar studio/.token
 
 ## Esperando o OK do Ramón
-Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Projetos\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
-
-- 2026-08-22_cenoura-variante-v1.mp4
-- 2026-08-22_cenoura-variante-v2.mp4
-- 2026-08-22_cenoura-variante-v3.mp4
-
-Ele responde pelos números. Enquanto não responder, **não commitar**
-mudança de status nem publicar.
+Nada esperando aprovação (pasta vazia ou inexistente).
 
 ## Acervo de fotos
-- Brutas a processar: 39 arquivos
-- Editadas prontas: 4
-- Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34831
+- Brutas a processar: 0 arquivos
+- Editadas prontas: 0
+- Artes recebidas do outro projeto: 0
+- Fotos do iPhone sincronizadas (iCloud): 0
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -109,22 +104,50 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+7fd5445 chore: atualiza estado da fila [skip ci]
+794f976 chore: atualiza manutenção [skip ci]
+bc8c6b8 snapshot de passagem de conta (10/10/2026 14:09): estado salvo para qualquer conta Claude seguir
+5947781 checagem de rotina 10/10 16:32 (vigia da nuvem) - sem bug novo
+7050595 chore: atualiza estado da fila [skip ci]
+b65ae95 checagem de rotina 10/10 12:32 (vigia da nuvem) - sem bug novo
 851721c checagem de rotina 10/10 08:32 (vigia da nuvem) - sem bug novo
 a06d795 chore: atualiza estado da fila [skip ci]
-092dc57 checagem de rotina 10/10 00:32 (vigia da nuvem) - sem bug novo
-66d2b5e chore: atualiza estado da fila [skip ci]
-9093062 checagem de rotina 09/10 20:32 (vigia da nuvem) - sem bug novo
-8f2c1ca chore: atualiza estado da fila [skip ci]
-974a941 chore: atualiza manutenção [skip ci]
-ee2f53b snapshot de passagem de conta (09/10/2026 15:08): estado salvo para qualquer conta Claude seguir
-```
-Alterações não commitadas:
-```
-?? .claude/settings.local.json
-?? BRIEFING-DA-ROTINA.md
 ```
 
 ## Decisões e contexto
+## 🔍 10/10/2026 (checagem 16:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: run mais recente
+`38053308913` (10/10 12:48:18Z) `success` — sem `failure` nova desde a
+checagem anterior (12:32); a única falha do dia (`38007767860`, 00:08:55Z)
+continua a mesma causa já diagnosticada (fila vazia, chave
+`fila_vazia_2026-10-10` já deduplicada em `content/.falhas_avisadas.json`)
+— falta de filmagem nova, não bug de código, já avisado ao Ramón antes
+(decisão de família sem prazo). `maintenance.yml` sem falha desde 06/10
+18:24 (`success`). Nenhum recado novo em `content/recados.md`. Fila sem
+mudança real: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+aguardando o Ramón há ~43 dias). `HEAD` local estava detached de novo num
+commit idêntico a `origin/main` (`7050595`); voltei para `main`
+(fast-forward limpo, sem perda — `origin/main` já tinha esses 46 commits,
+só a ref local estava desatualizada). Nenhum código alterado, nenhum
+recado novo mandado — silêncio (regra 3).
+
+## 🔍 10/10/2026 (checagem 12:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: run mais recente
+`38029863761` (10/10 06:07:50Z) `success` — sem `failure` nova desde a
+checagem anterior (08:32); a única falha do dia (`38007767860`, 00:08:55Z)
+já estava diagnosticada como a mesma causa de sempre (fila vazia, chave
+`fila_vazia_2026-10-10` já deduplicada em `content/.falhas_avisadas.json`)
+— falta de filmagem nova, não bug de código, já avisado ao Ramón antes
+(decisão de família sem prazo). `maintenance.yml` sem falha desde 06/10
+18:24 (`success`). Nenhum recado novo em `content/recados.md`. Fila sem
+mudança real: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+aguardando o Ramón há ~43 dias). `HEAD` local estava detached de novo num
+commit idêntico a `origin/main` (`851721c`); voltei para `main`
+(fast-forward limpo, sem perda). Nenhum código alterado, nenhum recado
+novo mandado — silêncio (regra 3).
+
 ## 🔍 10/10/2026 (checagem 08:31, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml`: run mais recente
