@@ -1,3 +1,20 @@
+## 🔍 10/10/2026 (checagem 16:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: run mais recente
+`38053308913` (10/10 12:48:18Z) `success` — sem `failure` nova desde a
+checagem anterior (12:32); a única falha do dia (`38007767860`, 00:08:55Z)
+continua a mesma causa já diagnosticada (fila vazia, chave
+`fila_vazia_2026-10-10` já deduplicada em `content/.falhas_avisadas.json`)
+— falta de filmagem nova, não bug de código, já avisado ao Ramón antes
+(decisão de família sem prazo). `maintenance.yml` sem falha desde 06/10
+18:24 (`success`). Nenhum recado novo em `content/recados.md`. Fila sem
+mudança real: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+aguardando o Ramón há ~43 dias). `HEAD` local estava detached de novo num
+commit idêntico a `origin/main` (`7050595`); voltei para `main`
+(fast-forward limpo, sem perda — `origin/main` já tinha esses 46 commits,
+só a ref local estava desatualizada). Nenhum código alterado, nenhum
+recado novo mandado — silêncio (regra 3).
+
 ## 🔍 10/10/2026 (checagem 12:32, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml`: run mais recente
