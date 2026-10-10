@@ -1,3 +1,24 @@
+## 🔍 10/10/2026 (checagem 00:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: 1 `failure` nova
+desde a checagem anterior (20:32 de 09/10) — run `38007767860` (10/10
+00:08:55Z). `sentinel.py` rodado localmente confirma a mesma causa de
+sempre: "fila com só 0 post(s) futuro(s) (mínimo saudável: 2)" — falta de
+filmagem nova (regra 3b da skill), não bug de código. A falha é a
+primeira do dia 10/10 em UTC (o dedupe de `content/.falhas_avisadas.json`
+é por data; a chave `fila_vazia_2026-10-09` já existia, `fila_vazia_2026-10-10`
+foi criada só agora), por isso o job ficou vermelho uma vez só — as 4
+execuções seguintes do dia (08:14, 15:25, 19:07, 20:11) já saíram `success`
+porque a chave de hoje ainda não existia até a execução das 00:08. Mesmo
+padrão repetido desde 25/08/2026, já avisado ao Ramón antes (decisão dele,
+sem prazo). `maintenance.yml` sem falha desde 06/10 18:24 (`success`).
+Nenhum recado novo em `content/recados.md`. Fila sem mudança real: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, aguardando o Ramón
+há ~44 dias). `HEAD` local estava destacado num commit idêntico a
+`origin/main` (`66d2b5e`); voltei para `main` (fast-forward, sem perda)
+e descartei o `ESTADO-ATUAL.md` regenerado localmente (só timestamp/log).
+Nenhum código alterado, nenhum recado novo mandado — silêncio (regra 3).
+
 ## 🔍 09/10/2026 (checagem 20:32, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml`: run `37985293470`
