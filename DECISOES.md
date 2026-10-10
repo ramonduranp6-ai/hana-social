@@ -1,3 +1,22 @@
+## 🔍 10/10/2026 (checagem 20:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: 2 runs novos desde a
+checagem anterior (16:32) — `38072236524` (17:33:38Z) e `38074428615`
+(18:06:15Z), ambos `success`. Nenhuma falha nova; a única do dia
+(`38007767860`, 00:08:55Z) continua a mesma causa já diagnosticada (fila
+vazia, chave `fila_vazia_2026-10-10` já deduplicada em
+`content/.falhas_avisadas.json`) — falta de filmagem, não bug de código,
+já avisado ao Ramón. `maintenance.yml`: sem falha desde 06/10 (último run,
+17:21:30Z, `success`). Nenhum recado novo em `content/recados.md` (todos
+já marcados `[x]`). Fila sem mudança real: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón há ~43 dias). Este
+container estava com a branch `main` local presa num ponto velho (06/10),
+tendo divergido de `origin/main` por 50 commits automáticos de cada lado
+(mesmo conteúdo/rotina, hashes diferentes — não é trabalho único perdido);
+`git reset --hard origin/main` realinhou sem perda, já que são só commits
+de bot já superados na história remota. Nenhum código alterado, nenhum
+recado novo mandado — silêncio (regra 3).
+
 ## 🔍 10/10/2026 (checagem 16:32, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml`: run mais recente
