@@ -1,3 +1,20 @@
+## 🔍 11/10/2026 (checagem 00:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: 1 falha nova desde a
+checagem anterior (20:32 de 10/10) — `38097221932` (00:05:14Z) — passo
+"Sentinela" vermelho; os 2 runs seguintes (`38085747874` 20:57:10Z e mais
+recente) voltaram a `success`. Causa confirmada rodando `publisher/sentinel.py`
+local: alarme diário "fila com só 0 post(s) futuro(s)" com chave nova
+`fila_vazia_2026-10-11` (ver `content/.falhas_avisadas.json`) — mesma causa de
+todo dia desde 25/08 (falta de filmagem, não bug de código), já avisada ao
+Ramón antes, sem prazo dele. Fila sem mudança real: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón há ~44 dias). Nenhum recado
+novo em `content/recados.md`. Este container estava de novo preso num
+snapshot velho de HEAD (divergente de `origin/main` por 50 commits de bot de
+cada lado, mesmo conteúdo, hashes diferentes); `git reset --hard origin/main`
+realinhou sem perda. Nenhum código alterado, nenhum recado novo mandado —
+silêncio (regra 3).
+
 ## 🔍 10/10/2026 (checagem 20:32, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml`: 2 runs novos desde a

@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 10/10/2026 20:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 11/10/2026 00:34. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-10T18:06:15Z schedule success
-2026-10-10T17:33:38Z schedule success
-2026-10-10T17:21:30Z schedule success
+2026-10-11T00:05:14Z schedule failure
+2026-10-10T20:57:10Z schedule success
+2026-10-10T20:33:33Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,17 +104,57 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+c917c2c chore: atualiza estado da fila [skip ci]
+7033a20 chore: atualiza estado da fila [skip ci]
+3842c7b chore: atualiza estado da fila [skip ci]
+cd29d4c checagem de rotina 10/10 20:32 (vigia da nuvem) - sem bug novo
 7fd5445 chore: atualiza estado da fila [skip ci]
 794f976 chore: atualiza manutenção [skip ci]
 bc8c6b8 snapshot de passagem de conta (10/10/2026 14:09): estado salvo para qualquer conta Claude seguir
 5947781 checagem de rotina 10/10 16:32 (vigia da nuvem) - sem bug novo
-7050595 chore: atualiza estado da fila [skip ci]
-b65ae95 checagem de rotina 10/10 12:32 (vigia da nuvem) - sem bug novo
-851721c checagem de rotina 10/10 08:32 (vigia da nuvem) - sem bug novo
-a06d795 chore: atualiza estado da fila [skip ci]
+```
+Alterações não commitadas:
+```
+M DECISOES.md
 ```
 
 ## Decisões e contexto
+## 🔍 11/10/2026 (checagem 00:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: 1 falha nova desde a
+checagem anterior (20:32 de 10/10) — `38097221932` (00:05:14Z) — passo
+"Sentinela" vermelho; os 2 runs seguintes (`38085747874` 20:57:10Z e mais
+recente) voltaram a `success`. Causa confirmada rodando `publisher/sentinel.py`
+local: alarme diário "fila com só 0 post(s) futuro(s)" com chave nova
+`fila_vazia_2026-10-11` (ver `content/.falhas_avisadas.json`) — mesma causa de
+todo dia desde 25/08 (falta de filmagem, não bug de código), já avisada ao
+Ramón antes, sem prazo dele. Fila sem mudança real: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón há ~44 dias). Nenhum recado
+novo em `content/recados.md`. Este container estava de novo preso num
+snapshot velho de HEAD (divergente de `origin/main` por 50 commits de bot de
+cada lado, mesmo conteúdo, hashes diferentes); `git reset --hard origin/main`
+realinhou sem perda. Nenhum código alterado, nenhum recado novo mandado —
+silêncio (regra 3).
+
+## 🔍 10/10/2026 (checagem 20:32, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: 2 runs novos desde a
+checagem anterior (16:32) — `38072236524` (17:33:38Z) e `38074428615`
+(18:06:15Z), ambos `success`. Nenhuma falha nova; a única do dia
+(`38007767860`, 00:08:55Z) continua a mesma causa já diagnosticada (fila
+vazia, chave `fila_vazia_2026-10-10` já deduplicada em
+`content/.falhas_avisadas.json`) — falta de filmagem, não bug de código,
+já avisado ao Ramón. `maintenance.yml`: sem falha desde 06/10 (último run,
+17:21:30Z, `success`). Nenhum recado novo em `content/recados.md` (todos
+já marcados `[x]`). Fila sem mudança real: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón há ~43 dias). Este
+container estava com a branch `main` local presa num ponto velho (06/10),
+tendo divergido de `origin/main` por 50 commits automáticos de cada lado
+(mesmo conteúdo/rotina, hashes diferentes — não é trabalho único perdido);
+`git reset --hard origin/main` realinhou sem perda, já que são só commits
+de bot já superados na história remota. Nenhum código alterado, nenhum
+recado novo mandado — silêncio (regra 3).
+
 ## 🔍 10/10/2026 (checagem 16:32, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml`: run mais recente
