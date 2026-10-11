@@ -1,3 +1,18 @@
+## 🔍 11/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: run mais recente
+`38142196440` (13:11:37Z) `success`; nenhuma falha nova desde a checagem
+anterior (12:3x) — a única falha do dia continua `38097221932` (00:05:14Z),
+mesma causa já diagnosticada: "fila com só 0 post(s) futuro(s)", falta de
+filmagem, não bug de código, já deduplicada (`fila_vazia_2026-10-11`) e já
+avisada ao Ramón antes, sem prazo dele. Fila sem mudança real: 7 `rejected`
++ 1 `pending` (`2026-08-28_comida-servida`, aguardando o Ramón há ~45 dias).
+Nenhum recado novo em `content/recados.md` (todos já `[x]`). `SAUDE-DO-PROJETO.md`
+sem erro aberto. Este container de novo com `HEAD` detached (mesmo padrão
+recorrente de commits de bot); `git checkout -B main origin/main` realinhou
+sem perda. Nenhum código alterado, nenhum recado novo mandado — silêncio
+(regra 3).
+
 ## 🔍 11/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml`: run mais recente

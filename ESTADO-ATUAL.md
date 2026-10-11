@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 11/10/2026 12:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 11/10/2026 16:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-11T13:11:37Z schedule success
+2026-10-11T12:33:41Z push success
 2026-10-11T08:33:07Z push success
-2026-10-11T06:05:17Z schedule success
-2026-10-11T04:34:22Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,21 +104,32 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+516fb1d chore: atualiza estado da fila [skip ci]
+c625438 checagem de rotina 11/10 12:32 (vigia da nuvem) - sem bug novo
 bac6e6a checagem de rotina 11/10 (vigia da nuvem) - sem bug novo
 c17ba73 chore: atualiza estado da fila [skip ci]
 beb3647 checagem de rotina 11/10 04:48 (vigia da nuvem) - sem bug novo
 10f333b snapshot de passagem de conta (11/10/2026 01:11): estado salvo para qualquer conta Claude seguir
 0d3f908 checagem de rotina 11/10 00:32 (vigia da nuvem) - sem bug novo
 c917c2c chore: atualiza estado da fila [skip ci]
-7033a20 chore: atualiza estado da fila [skip ci]
-3842c7b chore: atualiza estado da fila [skip ci]
-```
-Alterações não commitadas:
-```
-M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 11/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: run mais recente
+`38116910378` (06:05:17Z) `success`; nenhuma falha nova desde a checagem
+anterior (08:3x) — a única falha do dia continua `38097221932` (00:05:14Z),
+mesma causa já diagnosticada: "fila com só 0 post(s) futuro(s)", falta de
+filmagem, não bug de código, já deduplicada (`fila_vazia_2026-10-11`) e já
+avisada ao Ramón antes, sem prazo dele. Fila sem mudança real: 7 `rejected`
++ 1 `pending` (`2026-08-28_comida-servida`, aguardando o Ramón há ~45 dias).
+Nenhum recado novo em `content/recados.md` (todos já `[x]`). `SAUDE-DO-PROJETO.md`
+sem erro aberto. Este container de novo com `HEAD` detached (mesmo padrão
+recorrente de commits de bot); `git checkout -B main origin/main` realinhou
+sem perda. Nenhum código alterado, nenhum recado novo mandado — silêncio
+(regra 3).
+
 ## 🔍 11/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml`: run mais recente
