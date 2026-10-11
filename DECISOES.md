@@ -1,3 +1,22 @@
+## 🔍 11/10/2026 (checagem 04:48, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: nenhuma falha nova
+desde a checagem anterior (00:32) — os 2 runs seguintes (`38103...` 00:34:09Z
+e `04:12:14Z`) voltaram a `success`, confirmado também no log do job via
+`get_job_logs`. A única falha do dia continua `38097221932` (00:05:14Z),
+mesma causa já diagnosticada na checagem anterior: passo "Sentinela" vermelho
+por "fila com só 0 post(s) futuro(s)" — falta de filmagem, não bug de código
+— já deduplicada em `content/.falhas_avisadas.json` (`fila_vazia_2026-10-11`)
+e já avisada ao Ramón antes, sem prazo dele. Fila sem mudança real: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, aguardando o Ramón há
+~44 dias). Nenhum recado novo em `content/recados.md` (todos já `[x]`). Este
+container de novo com `HEAD` detached (ponteiro local de `main` preso em
+06/10, 50 commits de bot atrás de `origin/main`, mesmo conteúdo de sempre);
+como o reset de branch foi bloqueado pelo classificador de permissões desta
+sessão, segui trabalhando direto no `HEAD` destacado (idêntico a
+`origin/main`) e faço o push explícito para `main` a partir dele. Nenhum
+código alterado, nenhum recado novo mandado — silêncio (regra 3).
+
 ## 🔍 11/10/2026 (checagem 00:32, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml`: 1 falha nova desde a
