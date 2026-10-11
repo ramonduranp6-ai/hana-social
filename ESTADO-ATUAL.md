@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 11/10/2026 20:37. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 11/10/2026 18:10. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,21 +26,26 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-11T18:30:24Z schedule success
-2026-10-11T18:13:02Z schedule success
-2026-10-11T17:41:40Z schedule success
+(não consegui consultar — checar 'gh auth status')
 ```
-- Vigia local (Agendador do Windows): próxima execução não encontrada
-- Token renovável automático: FALTA criar studio/.token
+- Vigia local (Agendador do Windows): próxima execução segunda-feira, 12 de outubro de 2026 18:10:00
+- Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
-Nada esperando aprovação (pasta vazia ou inexistente).
+Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Projetos\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
+
+- 2026-08-22_cenoura-variante-v1.mp4
+- 2026-08-22_cenoura-variante-v2.mp4
+- 2026-08-22_cenoura-variante-v3.mp4
+
+Ele responde pelos números. Enquanto não responder, **não commitar**
+mudança de status nem publicar.
 
 ## Acervo de fotos
-- Brutas a processar: 0 arquivos
-- Editadas prontas: 0
-- Artes recebidas do outro projeto: 0
-- Fotos do iPhone sincronizadas (iCloud): 0
+- Brutas a processar: 39 arquivos
+- Editadas prontas: 4
+- Artes recebidas do outro projeto: 1
+- Fotos do iPhone sincronizadas (iCloud): 34831
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -104,6 +109,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+3880872 checagem de rotina 11/10 20:3x (vigia da nuvem) - sem bug novo
 5018b95 chore: atualiza estado da fila [skip ci]
 e9ef2c9 chore: atualiza estado da fila [skip ci]
 4f3bd32 chore: atualiza manutenção [skip ci]
@@ -111,11 +117,11 @@ b22f08d checagem de rotina 11/10 16:32 (vigia da nuvem) - sem bug novo
 516fb1d chore: atualiza estado da fila [skip ci]
 c625438 checagem de rotina 11/10 12:32 (vigia da nuvem) - sem bug novo
 bac6e6a checagem de rotina 11/10 (vigia da nuvem) - sem bug novo
-c17ba73 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
-M DECISOES.md
+?? .claude/settings.local.json
+?? BRIEFING-DA-ROTINA.md
 ```
 
 ## Decisões e contexto
