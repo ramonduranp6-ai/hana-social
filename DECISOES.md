@@ -1,3 +1,20 @@
+## 🔍 12/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh` sem autenticação nesta nuvem
+(token inválido) — diagnóstico feito pelos arquivos do próprio repo, como
+previsto no passo a passo. `publish.yml` embutido no `estado.py`: última
+execução `schedule success` (07:45:44Z), sem falha nova desde a checagem
+anterior. Fila sem mudança real: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón há ~46 dias). Causa já
+conhecida continua: fila com só 0 post(s) futuro(s) por falta de filmagem
+(não bug de código) — `fila_vazia_2026-10-12` já estava em
+`.falhas_avisadas.json` e já avisada ao Ramón antes, sem prazo dele.
+`SAUDE-DO-PROJETO.md` sem erro aberto. `content/recados.md` sem recado novo
+(todos `[x]`). Container de novo com `HEAD` detached (mesmo padrão
+recorrente de commits de bot); `git fetch` + `git checkout -B main
+origin/main` realinhou sem perda de histórico. Nenhum código alterado,
+nenhum recado novo mandado — silêncio (regra 3).
+
 ## 🔍 12/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml`: 1 run novo desde a
