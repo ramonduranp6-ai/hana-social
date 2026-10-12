@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 12/10/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 12/10/2026 20:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-12T17:11:12Z schedule success
+2026-10-12T16:33:10Z push success
 2026-10-12T12:34:14Z push success
-2026-10-12T08:33:16Z push success
-2026-10-12T07:45:44Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+3136d01 checagem de rotina 12/10 16:3x (vigia da nuvem) - sem bug novo
 de97bef checagem de rotina 12/10 12:3x (vigia da nuvem) - sem bug novo
 f9ae5bc checagem de rotina 12/10 08:3x (vigia da nuvem) - sem bug novo
 19fff53 snapshot de passagem de conta (12/10/2026 02:09): estado salvo para qualquer conta Claude seguir
@@ -111,7 +112,6 @@ f9ae5bc checagem de rotina 12/10 08:3x (vigia da nuvem) - sem bug novo
 16bb852 docs: registra checagem da nuvem (12/10 04:3x) — sem bug novo
 3ce47de chore: atualiza estado da fila [skip ci]
 7e2f064 checagem de rotina 12/10 00:3x (vigia da nuvem) - sem bug novo
-8859079 snapshot de passagem de conta (11/10/2026 20:09): estado salvo para qualquer conta Claude seguir
 ```
 Alterações não commitadas:
 ```
@@ -119,6 +119,21 @@ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
+## 🔍 12/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh` autenticado nesta checagem:
+`publish.yml` últimos 5 runs — 1 `failure` antigo (01:27:51Z, já diagnosticado
+nas checagens anteriores) e os demais `success`, incluindo o mais recente
+(07:45:44Z), igual ao que `estado.py` já mostrava. Nenhuma falha nova desde a
+checagem das 12:3x. Fila sem mudança real: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón). Causa já conhecida
+continua: fila com 0 post(s) futuro(s) por falta de filmagem (não bug de
+código), já avisada ao Ramón antes, sem prazo dele. `SAUDE-DO-PROJETO.md`:
+"Nenhum erro aberto". Container de novo com `HEAD` detached (mesmo padrão
+recorrente de commits de bot); `git fetch` + `git checkout -B main
+origin/main` realinhou sem perda de histórico. Nenhum código alterado,
+nenhum recado novo mandado — silêncio (regra 3).
+
 ## 🔍 12/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh` autenticado nesta checagem:
