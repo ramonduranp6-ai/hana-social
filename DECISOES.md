@@ -1,3 +1,18 @@
+## 🔍 12/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh` autenticado nesta checagem:
+`publish.yml` últimos 5 runs — 1 `failure` antigo (01:27:51Z, já diagnosticado
+nas checagens anteriores) e os demais `success`, incluindo o mais recente
+(07:45:44Z), igual ao que `estado.py` já mostrava. Nenhuma falha nova desde a
+checagem das 12:3x. Fila sem mudança real: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón). Causa já conhecida
+continua: fila com 0 post(s) futuro(s) por falta de filmagem (não bug de
+código), já avisada ao Ramón antes, sem prazo dele. `SAUDE-DO-PROJETO.md`:
+"Nenhum erro aberto". Container de novo com `HEAD` detached (mesmo padrão
+recorrente de commits de bot); `git fetch` + `git checkout -B main
+origin/main` realinhou sem perda de histórico. Nenhum código alterado,
+nenhum recado novo mandado — silêncio (regra 3).
+
 ## 🔍 12/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh` autenticado nesta checagem:
