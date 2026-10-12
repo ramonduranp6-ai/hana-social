@@ -1,3 +1,20 @@
+## 🔍 12/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: 1 run novo desde a
+checagem anterior (00:3x) — `38191978803` (01:27:51Z) `failure`. Log da
+Sentinela confirma mesma causa já diagnosticada, não um bug novo: "fila com
+só 0 post(s) futuro(s) (mínimo saudável: 2)" — já deduplicada hoje
+(`.falhas_avisadas.json` tem `fila_vazia_2026-10-12`) e já avisada ao Ramón
+antes, sem prazo dele; o próprio passo "Salvar estado da fila" rodou e deu
+push normal depois do job vermelho (estado não se perdeu). Fila sem mudança
+real: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, aguardando o
+Ramón há ~46 dias). `SAUDE-DO-PROJETO.md` sem erro aberto. Container de novo
+com `HEAD` detached (mesmo padrão recorrente de commits de bot: ref local de
+`origin/main` ficou em `9540d50`, 06/10, enquanto o remoto real já estava em
+`3ce47de`); `git fetch` + `git checkout -B main origin/main` realinhou sem
+perda de histórico. Nenhum código alterado, nenhum recado novo mandado —
+silêncio (regra 3).
+
 ## 🔍 12/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml`: 5 runs mais recentes,
