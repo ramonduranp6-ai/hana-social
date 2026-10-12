@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 12/10/2026 20:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 12/10/2026 18:10. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,21 +26,26 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-12T17:11:12Z schedule success
-2026-10-12T16:33:10Z push success
-2026-10-12T12:34:14Z push success
+(não consegui consultar — checar 'gh auth status')
 ```
-- Vigia local (Agendador do Windows): próxima execução não encontrada
-- Token renovável automático: FALTA criar studio/.token
+- Vigia local (Agendador do Windows): próxima execução quarta-feira, 14 de outubro de 2026 18:10:00
+- Token renovável automático: CONFIGURADO
 
 ## Esperando o OK do Ramón
-Nada esperando aprovação (pasta vazia ou inexistente).
+Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Projetos\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
+
+- 2026-08-22_cenoura-variante-v1.mp4
+- 2026-08-22_cenoura-variante-v2.mp4
+- 2026-08-22_cenoura-variante-v3.mp4
+
+Ele responde pelos números. Enquanto não responder, **não commitar**
+mudança de status nem publicar.
 
 ## Acervo de fotos
-- Brutas a processar: 0 arquivos
-- Editadas prontas: 0
-- Artes recebidas do outro projeto: 0
-- Fotos do iPhone sincronizadas (iCloud): 0
+- Brutas a processar: 39 arquivos
+- Editadas prontas: 4
+- Artes recebidas do outro projeto: 1
+- Fotos do iPhone sincronizadas (iCloud): 34848
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -100,25 +105,43 @@ estava certo: ela está de costas do começo ao fim.
 - [[studio/roteiros/2026-08_POV1_a-patroa-mandou|2026-08_POV1_a-patroa-mandou]]
 - [[content/plano-semana|plano-semana]]
 
-⏳ **4ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
+⏳ **5ª semana sem filmagem nova.** Quem decide se muda a estratégia é o comitê — o robô só cutuca, nunca reduz o pedido sozinho.
 
 ## Últimas mudanças no projeto
 ```
+beb2d15 chore: recado do lote semanal [skip ci]
+a795b1f checagem de rotina 12/10 20:3x (vigia da nuvem) - sem bug novo
 3136d01 checagem de rotina 12/10 16:3x (vigia da nuvem) - sem bug novo
 de97bef checagem de rotina 12/10 12:3x (vigia da nuvem) - sem bug novo
 f9ae5bc checagem de rotina 12/10 08:3x (vigia da nuvem) - sem bug novo
 19fff53 snapshot de passagem de conta (12/10/2026 02:09): estado salvo para qualquer conta Claude seguir
 0302eba chore: atualiza snapshot de ESTADO-ATUAL.md (checagem 12/10 04:3x)
 16bb852 docs: registra checagem da nuvem (12/10 04:3x) — sem bug novo
-3ce47de chore: atualiza estado da fila [skip ci]
-7e2f064 checagem de rotina 12/10 00:3x (vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
-M ESTADO-ATUAL.md
+M content/.lote_semana_executada
+ M content/.semanas_sem_cena
+?? .claude/settings.local.json
+?? BRIEFING-DA-ROTINA.md
 ```
 
 ## Decisões e contexto
+## 🔍 12/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh` autenticado nesta checagem:
+`publish.yml` últimos 5 runs — 1 `failure` antigo (01:27:51Z, já diagnosticado
+nas checagens anteriores) e os demais `success`, incluindo o mais recente
+(17:11:12Z). Nenhuma falha nova desde a checagem das 16:3x. Fila sem mudança
+real: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, aguardando o
+Ramón). Causa já conhecida continua: fila com 0 post(s) futuro(s) por falta
+de filmagem (não bug de código), já avisada ao Ramón antes, sem prazo dele.
+`SAUDE-DO-PROJETO.md`: "Nenhum erro aberto". `content/recados.md` sem recado
+novo (todos `[x]`). Container de novo com `HEAD` detached (mesmo padrão
+recorrente de commits de bot); `git fetch` + `git checkout -B main
+origin/main` realinhou sem perda de histórico. Nenhum código alterado,
+nenhum recado novo mandado — silêncio (regra 3).
+
 ## 🔍 12/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh` autenticado nesta checagem:
