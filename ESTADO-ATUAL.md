@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 12/10/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 12/10/2026 04:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-12T01:27:51Z schedule failure
+2026-10-12T00:33:03Z push success
 2026-10-11T23:11:01Z push success
-2026-10-11T22:11:41Z schedule success
-2026-10-11T20:37:46Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,17 +104,31 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+3ce47de chore: atualiza estado da fila [skip ci]
+7e2f064 checagem de rotina 12/10 00:3x (vigia da nuvem) - sem bug novo
 8859079 snapshot de passagem de conta (11/10/2026 20:09): estado salvo para qualquer conta Claude seguir
 3880872 checagem de rotina 11/10 20:3x (vigia da nuvem) - sem bug novo
 5018b95 chore: atualiza estado da fila [skip ci]
 e9ef2c9 chore: atualiza estado da fila [skip ci]
 4f3bd32 chore: atualiza manutenção [skip ci]
 b22f08d checagem de rotina 11/10 16:32 (vigia da nuvem) - sem bug novo
-516fb1d chore: atualiza estado da fila [skip ci]
-c625438 checagem de rotina 11/10 12:32 (vigia da nuvem) - sem bug novo
 ```
 
 ## Decisões e contexto
+## 🔍 12/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `publish.yml`: 5 runs mais recentes,
+todos `success` (22:11:41Z, 18:30:24Z, 18:13:02Z, 13:11:37Z, 06:05:17Z) —
+nenhuma falha nova. Fila sem mudança real: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón há ~46 dias). Causa já
+conhecida continua: fila com só 0 post(s) futuro(s) por falta de filmagem
+(não bug de código), já deduplicada (`fila_vazia_2026-10-11`) e já avisada
+ao Ramón, sem prazo dele. `SAUDE-DO-PROJETO.md` sem erro aberto. Container
+de novo com `HEAD` detached (mesmo padrão recorrente de commits de bot);
+`git checkout -B main origin/main` realinhou sem perda de histórico. Nenhum
+código alterado além do snapshot regenerado de `ESTADO-ATUAL.md`, nenhum
+recado novo mandado — silêncio (regra 3).
+
 ## 🔍 11/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `publish.yml`: 4 runs novos desde a
