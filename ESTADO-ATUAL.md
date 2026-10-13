@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 13/10/2026 08:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 13/10/2026 12:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-13T12:23:00Z schedule success
+2026-10-13T08:33:22Z push success
 2026-10-13T05:10:30Z push success
-2026-10-13T04:48:16Z schedule failure
-2026-10-13T04:33:12Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+8f47817 checagem de rotina 13/10 08:3x (vigia da nuvem): falha real investigada, não é bug
 6afb48c snapshot de passagem de conta (13/10/2026 02:09): estado salvo para qualquer conta Claude seguir
 94c8fe0 chore: atualiza estado da fila [skip ci]
 de9d169 checagem de rotina 13/10 04:3x (vigia da nuvem) - sem bug novo
@@ -111,11 +112,32 @@ de9d169 checagem de rotina 13/10 04:3x (vigia da nuvem) - sem bug novo
 b686320 snapshot de passagem de conta (12/10/2026 19:44): estado salvo para qualquer conta Claude seguir
 d5ae054 chore: atualiza manutenção [skip ci]
 beb2d15 chore: recado do lote semanal [skip ci]
-a795b1f checagem de rotina 12/10 20:3x (vigia da nuvem) - sem bug novo
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+## 🔍 13/10/2026 (checagem 08:3x, vigia da nuvem) — falha real no run 38348216058 (04:48:16Z), não é bug
+
+`estado.py --mostrar` mostrou "schedule failure" às 04:48:16Z, diferente das
+checagens anteriores (que só viam o `failure` antigo de 12/10 01:27:51Z). Esse
+run 38348216058 é novo, inspecionado com `gh run view` — o step que o
+derrubou foi o `Sentinela` (exit 1), não `Rodar publicador` (esse passou).
+Rodei `publisher/sentinel.py` nesta checagem e reproduzi: `fila com so 0
+post(s) futuro(s)` — a causa é a já conhecida (fila vazia por falta de
+filmagem, regra do `sentinel.py`: menos de 2 posts futuros é ALARME e derruba
+o job na 1ª vez do dia). `content/.falhas_avisadas.json` já tinha a chave
+`fila_vazia_2026-10-13` gravada pelo próprio run das 04:48 — ou seja, o
+alarme de hoje já foi disparado e dedupado corretamente (próximas rodadas de
+hoje não repetem o job vermelho). Não é bug de código: o sentinela funcionou
+como projetado (gritar 1x por dia quando a fila seca). Causa raiz é falta de
+filmagem — já avisada ao Ramón em ocasiões anteriores, sem prazo dele; não
+mando recado novo (regra 6: só reavisar quando for informação nova, e isto
+não é). `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto". `publish.yml` runs
+seguintes (depois das 04:48) seguem `success` porque o alarme já foi
+dedupado. Container de novo com `HEAD` detached; `git fetch` + `git checkout
+-B main origin/main` realinhou sem perda de histórico. Nenhum código
+alterado, nenhum recado novo mandado — silêncio (regra 3).
+
 ## 🔍 13/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh` autenticado nesta checagem:

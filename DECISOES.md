@@ -1,4 +1,21 @@
 ## Decisões e contexto
+## 🔍 13/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo; 4 commits locais presos sem push
+
+`estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md`: "Nenhum
+erro aberto". `content/recados.md` sem recado novo (todos `[x]`).
+`publish.yml` últimos 5 runs: o mais recente (12:23:00Z) `success`, e os
+3 seguintes também `success` — só a falha antiga das 04:48:16Z (já
+diagnosticada: fila vazia, sentinela funcionando como projetado, dedupada).
+Fila sem mudança real: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón). Achado desta checagem:
+o container abriu com HEAD destacado 4 commits ADIANTE de `origin/main`
+(commits de checagens anteriores — 13/10 08:3x, duas passagens de conta e
+um `chore` de fila — feitos localmente mas nunca enviados ao GitHub, pelo
+visto porque a sessão anterior encerrou antes do `git push`). Não é bug de
+código, é uma falha de processo (git contínuo, regra da casa): corrigido
+nesta checagem enviando os 4 commits represados + este para `origin/main`.
+Nenhum recado novo mandado — silêncio (regra 3).
+
 ## 🔍 13/10/2026 (checagem 08:3x, vigia da nuvem) — falha real no run 38348216058 (04:48:16Z), não é bug
 
 `estado.py --mostrar` mostrou "schedule failure" às 04:48:16Z, diferente das
