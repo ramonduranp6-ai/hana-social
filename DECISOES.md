@@ -1,4 +1,26 @@
 ## Decisões e contexto
+## 🔍 13/10/2026 (checagem 08:3x, vigia da nuvem) — falha real no run 38348216058 (04:48:16Z), não é bug
+
+`estado.py --mostrar` mostrou "schedule failure" às 04:48:16Z, diferente das
+checagens anteriores (que só viam o `failure` antigo de 12/10 01:27:51Z). Esse
+run 38348216058 é novo, inspecionado com `gh run view` — o step que o
+derrubou foi o `Sentinela` (exit 1), não `Rodar publicador` (esse passou).
+Rodei `publisher/sentinel.py` nesta checagem e reproduzi: `fila com so 0
+post(s) futuro(s)` — a causa é a já conhecida (fila vazia por falta de
+filmagem, regra do `sentinel.py`: menos de 2 posts futuros é ALARME e derruba
+o job na 1ª vez do dia). `content/.falhas_avisadas.json` já tinha a chave
+`fila_vazia_2026-10-13` gravada pelo próprio run das 04:48 — ou seja, o
+alarme de hoje já foi disparado e dedupado corretamente (próximas rodadas de
+hoje não repetem o job vermelho). Não é bug de código: o sentinela funcionou
+como projetado (gritar 1x por dia quando a fila seca). Causa raiz é falta de
+filmagem — já avisada ao Ramón em ocasiões anteriores, sem prazo dele; não
+mando recado novo (regra 6: só reavisar quando for informação nova, e isto
+não é). `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto". `publish.yml` runs
+seguintes (depois das 04:48) seguem `success` porque o alarme já foi
+dedupado. Container de novo com `HEAD` detached; `git fetch` + `git checkout
+-B main origin/main` realinhou sem perda de histórico. Nenhum código
+alterado, nenhum recado novo mandado — silêncio (regra 3).
+
 ## 🔍 13/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh` autenticado nesta checagem:
