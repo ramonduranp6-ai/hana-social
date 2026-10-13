@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 12/10/2026 18:10. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 13/10/2026 00:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,26 +26,21 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-(não consegui consultar — checar 'gh auth status')
+2026-10-12T23:41:12Z schedule success
+2026-10-12T22:46:45Z push success
+2026-10-12T21:54:07Z schedule success
 ```
-- Vigia local (Agendador do Windows): próxima execução quarta-feira, 14 de outubro de 2026 18:10:00
-- Token renovável automático: CONFIGURADO
+- Vigia local (Agendador do Windows): próxima execução não encontrada
+- Token renovável automático: FALTA criar studio/.token
 
 ## Esperando o OK do Ramón
-Mídias numeradas em `C:\Users\ramon\OneDrive\Desktop\Projetos\Hana Social\Fotos da Hana\05 - APROVAR (semana)` (ele abre no OneDrive do celular):
-
-- 2026-08-22_cenoura-variante-v1.mp4
-- 2026-08-22_cenoura-variante-v2.mp4
-- 2026-08-22_cenoura-variante-v3.mp4
-
-Ele responde pelos números. Enquanto não responder, **não commitar**
-mudança de status nem publicar.
+Nada esperando aprovação (pasta vazia ou inexistente).
 
 ## Acervo de fotos
-- Brutas a processar: 39 arquivos
-- Editadas prontas: 4
-- Artes recebidas do outro projeto: 1
-- Fotos do iPhone sincronizadas (iCloud): 34848
+- Brutas a processar: 0 arquivos
+- Editadas prontas: 0
+- Artes recebidas do outro projeto: 0
+- Fotos do iPhone sincronizadas (iCloud): 0
 
 ## 🤖 O que o robô do lote fez no domingo
 # Recado do robô do lote (semanal)
@@ -109,21 +104,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+b686320 snapshot de passagem de conta (12/10/2026 19:44): estado salvo para qualquer conta Claude seguir
+d5ae054 chore: atualiza manutenção [skip ci]
 beb2d15 chore: recado do lote semanal [skip ci]
 a795b1f checagem de rotina 12/10 20:3x (vigia da nuvem) - sem bug novo
 3136d01 checagem de rotina 12/10 16:3x (vigia da nuvem) - sem bug novo
 de97bef checagem de rotina 12/10 12:3x (vigia da nuvem) - sem bug novo
 f9ae5bc checagem de rotina 12/10 08:3x (vigia da nuvem) - sem bug novo
 19fff53 snapshot de passagem de conta (12/10/2026 02:09): estado salvo para qualquer conta Claude seguir
-0302eba chore: atualiza snapshot de ESTADO-ATUAL.md (checagem 12/10 04:3x)
-16bb852 docs: registra checagem da nuvem (12/10 04:3x) — sem bug novo
-```
-Alterações não commitadas:
-```
-M content/.lote_semana_executada
- M content/.semanas_sem_cena
-?? .claude/settings.local.json
-?? BRIEFING-DA-ROTINA.md
 ```
 
 ## Decisões e contexto
