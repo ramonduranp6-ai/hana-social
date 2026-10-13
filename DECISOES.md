@@ -1,4 +1,16 @@
 ## Decisões e contexto
+## 🔍 13/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md`: "Nenhum
+erro aberto" (varredura de 12/10 19:50). `content/recados.md` sem recado
+novo (todos `[x]`). `publish.yml` sem falha nova: o run mais recente
+(12:23:00Z) `success`, e os que vieram depois na listagem geral do repo
+também `success` — a única `failure` continua sendo a das 04:48:16Z, já
+diagnosticada nas checagens anteriores (fila vazia, sentinela dedupou
+corretamente, não é bug de código). Fila sem mudança real: 7 `rejected` +
+1 `pending` (`2026-08-28_comida-servida`, aguardando o Ramón). Nenhum
+código alterado, nenhum recado novo mandado — silêncio (regra 3).
+
 ## 🔍 13/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo; 4 commits locais presos sem push
 
 `estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md`: "Nenhum
