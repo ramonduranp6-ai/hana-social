@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 14/10/2026 08:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 14/10/2026 12:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-14T08:32:43Z push success
 2026-10-14T07:51:05Z schedule success
 2026-10-14T04:33:25Z push success
-2026-10-14T02:01:34Z schedule failure
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+f1659e2 checagem de rotina 14/10 08:3x (vigia da nuvem) - sem bug novo
 9c3b306 chore: atualiza estado da fila [skip ci]
 c47d945 checagem de rotina 14/10 04:3x (vigia da nuvem) - falha explicada (fila vazia, dedupada), sem bug novo
 cd02c3d chore: atualiza estado da fila [skip ci]
@@ -111,15 +112,42 @@ cd02c3d chore: atualiza estado da fila [skip ci]
 7f88381 checagem de rotina 14/10 00:3x (vigia da nuvem) - sem bug novo
 06d94e3 chore: atualiza estado da fila [skip ci]
 04e98ba chore: atualiza manutenção [skip ci]
-2019fbd chore: atualiza snapshot de ESTADO-ATUAL.md (checagem 16:3x) [skip ci]
 ```
 Alterações não commitadas:
 ```
-M ESTADO-ATUAL.md
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+## 🔍 14/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+mesmo run `success` das 07:51:05Z continua o mais recente, nenhuma falha
+nova desde a das 02:01:34Z (já diagnosticada: fila vazia, dedupada, não é
+bug de código). `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto" (varredura de
+13/10 19:50, ainda a mais recente). `content/recados.md` sem recado novo
+(todos `[x]`). Fila sem mudança real: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón, sem prazo dele).
+Container abriu com `HEAD` detached de novo; realinhado com `git fetch` +
+`checkout -B main origin/main` sem perda de histórico. Nenhum código
+alterado além deste snapshot, nenhum recado novo mandado — silêncio (regra 3).
+
+## 🔍 14/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+o run mais recente (07:51:05Z) `success` — a falha das 02:01:34Z já tinha
+sido diagnosticada na checagem anterior (fila vazia, dedupada em
+`.falhas_avisadas.json`, não é bug de código) e não se repetiu. `SAUDE-DO-PROJETO.md`:
+"Nenhum erro aberto" (varredura de 13/10 19:50, ainda a mais recente).
+`content/recados.md` sem recado novo (todos `[x]`). Fila sem mudança real:
+7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, aguardando o
+Ramón, sem prazo dele). Container abriu com `HEAD` detached de novo;
+realinhado com `git fetch` + `checkout -B main origin/main` sem perda de
+histórico. Nenhum código alterado além deste snapshot, nenhum recado novo
+mandado — silêncio (regra 3).
+
 ## 🔍 14/10/2026 (checagem 04:3x, vigia da nuvem) — falha real no run 38498858455 (02:01:34Z), não é bug
 
 `estado.py --mostrar` mostrou "schedule failure" às 02:01:34Z. Inspecionado
