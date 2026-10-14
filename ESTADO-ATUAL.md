@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 13/10/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 14/10/2026 00:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-13T12:34:25Z push success
-2026-10-13T12:23:00Z schedule success
-2026-10-13T08:33:22Z push success
+2026-10-13T23:20:55Z schedule success
+2026-10-13T19:58:38Z schedule success
+2026-10-13T19:24:44Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,18 +104,49 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+06d94e3 chore: atualiza estado da fila [skip ci]
+04e98ba chore: atualiza manutenção [skip ci]
+2019fbd chore: atualiza snapshot de ESTADO-ATUAL.md (checagem 16:3x) [skip ci]
+4b66937 checagem de rotina 13/10 16:3x (vigia da nuvem) - sem bug novo
 8b7c957 checagem de rotina 13/10 12:3x (vigia da nuvem) - sem bug novo; envia 4 commits represados
 8f47817 checagem de rotina 13/10 08:3x (vigia da nuvem): falha real investigada, não é bug
 6afb48c snapshot de passagem de conta (13/10/2026 02:09): estado salvo para qualquer conta Claude seguir
 94c8fe0 chore: atualiza estado da fila [skip ci]
-de9d169 checagem de rotina 13/10 04:3x (vigia da nuvem) - sem bug novo
-8b889af checagem de rotina 13/10 00:3x (vigia da nuvem) - sem bug novo
-b686320 snapshot de passagem de conta (12/10/2026 19:44): estado salvo para qualquer conta Claude seguir
-d5ae054 chore: atualiza manutenção [skip ci]
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+## 🔍 14/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md`: "Nenhum
+erro aberto" (varredura de 12/10 19:50, ainda a mais recente). `content/recados.md`
+sem recado novo (todos `[x]`). `gh run list --workflow=publish.yml` (autenticado
+nesta checagem): últimos 5 runs — 4 `success` (23:20:55Z, 19:58:38Z, 19:24:44Z,
+12:23:00Z de 13/10) e só a `failure` antiga das 04:48:16Z de 13/10, já
+diagnosticada nas checagens anteriores (fila vazia, sentinela dedupou
+corretamente, não é bug de código). Fila sem mudança real: 7 `rejected` + 1
+`pending` (`2026-08-28_comida-servida`, aguardando o Ramón). Container abriu
+com `HEAD` detached de novo; realinhado com `git fetch` + `checkout -B main
+origin/main` sem perda de histórico. Nenhum código alterado além deste
+snapshot, nenhum recado novo mandado — silêncio (regra 3).
+
+## 🔍 13/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md`: "Nenhum
+erro aberto" (varredura de 12/10 19:50). `content/recados.md` sem recado
+novo (todos `[x]`). `publish.yml` sem falha nova: o run mais recente
+(12:23:00Z) `success`, e os que vieram depois na listagem geral do repo
+também `success` — a única `failure` continua sendo a das 04:48:16Z, já
+diagnosticada nas checagens anteriores (fila vazia, sentinela dedupou
+corretamente, não é bug de código). Fila sem mudança real: 7 `rejected` +
+1 `pending` (`2026-08-28_comida-servida`, aguardando o Ramón). Nenhum
+código alterado, nenhum recado novo mandado — silêncio (regra 3).
+
 ## 🔍 13/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo; 4 commits locais presos sem push
 
 `estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md`: "Nenhum

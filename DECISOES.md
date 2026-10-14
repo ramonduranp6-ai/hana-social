@@ -1,4 +1,18 @@
 ## Decisões e contexto
+## 🔍 14/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md`: "Nenhum
+erro aberto" (varredura de 12/10 19:50, ainda a mais recente). `content/recados.md`
+sem recado novo (todos `[x]`). `gh run list --workflow=publish.yml` (autenticado
+nesta checagem): últimos 5 runs — 4 `success` (23:20:55Z, 19:58:38Z, 19:24:44Z,
+12:23:00Z de 13/10) e só a `failure` antiga das 04:48:16Z de 13/10, já
+diagnosticada nas checagens anteriores (fila vazia, sentinela dedupou
+corretamente, não é bug de código). Fila sem mudança real: 7 `rejected` + 1
+`pending` (`2026-08-28_comida-servida`, aguardando o Ramón). Container abriu
+com `HEAD` detached de novo; realinhado com `git fetch` + `checkout -B main
+origin/main` sem perda de histórico. Nenhum código alterado além deste
+snapshot, nenhum recado novo mandado — silêncio (regra 3).
+
 ## 🔍 13/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md`: "Nenhum
