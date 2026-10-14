@@ -1,4 +1,18 @@
 ## Decisões e contexto
+## 🔍 14/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+o run mais recente (07:51:05Z) `success` — a falha das 02:01:34Z já tinha
+sido diagnosticada na checagem anterior (fila vazia, dedupada em
+`.falhas_avisadas.json`, não é bug de código) e não se repetiu. `SAUDE-DO-PROJETO.md`:
+"Nenhum erro aberto" (varredura de 13/10 19:50, ainda a mais recente).
+`content/recados.md` sem recado novo (todos `[x]`). Fila sem mudança real:
+7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, aguardando o
+Ramón, sem prazo dele). Container abriu com `HEAD` detached de novo;
+realinhado com `git fetch` + `checkout -B main origin/main` sem perda de
+histórico. Nenhum código alterado além deste snapshot, nenhum recado novo
+mandado — silêncio (regra 3).
+
 ## 🔍 14/10/2026 (checagem 04:3x, vigia da nuvem) — falha real no run 38498858455 (02:01:34Z), não é bug
 
 `estado.py --mostrar` mostrou "schedule failure" às 02:01:34Z. Inspecionado
