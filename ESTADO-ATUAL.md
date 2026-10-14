@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 14/10/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 14/10/2026 04:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-13T23:20:55Z schedule success
-2026-10-13T19:58:38Z schedule success
-2026-10-13T19:24:44Z schedule success
+2026-10-14T02:01:34Z schedule failure
+2026-10-14T00:52:33Z push success
+2026-10-14T00:33:04Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,14 +104,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+cd02c3d chore: atualiza estado da fila [skip ci]
+89ef16b snapshot de passagem de conta (13/10/2026 21:51): estado salvo para qualquer conta Claude seguir
+7f88381 checagem de rotina 14/10 00:3x (vigia da nuvem) - sem bug novo
 06d94e3 chore: atualiza estado da fila [skip ci]
 04e98ba chore: atualiza manutenção [skip ci]
 2019fbd chore: atualiza snapshot de ESTADO-ATUAL.md (checagem 16:3x) [skip ci]
 4b66937 checagem de rotina 13/10 16:3x (vigia da nuvem) - sem bug novo
 8b7c957 checagem de rotina 13/10 12:3x (vigia da nuvem) - sem bug novo; envia 4 commits represados
-8f47817 checagem de rotina 13/10 08:3x (vigia da nuvem): falha real investigada, não é bug
-6afb48c snapshot de passagem de conta (13/10/2026 02:09): estado salvo para qualquer conta Claude seguir
-94c8fe0 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
@@ -121,6 +121,27 @@ M DECISOES.md
 
 ## Decisões e contexto
 ## Decisões e contexto
+## 🔍 14/10/2026 (checagem 04:3x, vigia da nuvem) — falha real no run 38498858455 (02:01:34Z), não é bug
+
+`estado.py --mostrar` mostrou "schedule failure" às 02:01:34Z. Inspecionado
+com `gh run view` + `get_job_logs`: o step que derrubou foi o `Sentinela`
+(exit 1), `Rodar publicador` passou normal. Log mostra a causa exata: `fila
+com so 0 post(s) futuro(s) (minimo saudavel: 2)`. `content/.falhas_avisadas.json`
+já tinha a chave `fila_vazia_2026-10-14` gravada por esse mesmo run — alarme
+dedupado corretamente, próximas rodadas de hoje não repetem o vermelho
+(confirmado: todos os runs futuros ainda não rodaram, mas o padrão é igual
+aos dias anteriores). Mesma causa recorrente desde 25/08/2026 (lista completa
+de datas no `.falhas_avisadas.json`) — falta de filmagem nova, não bug de
+código. Já avisada ao Ramón em ocasiões anteriores, sem prazo dele; não é
+informação nova, não mando recado (regra 6). `SAUDE-DO-PROJETO.md`: "Nenhum
+erro aberto" (varredura de 12/10, ainda a mais recente). `content/recados.md`
+sem recado novo (todos `[x]`). Fila sem mudança real: 7 `rejected` + 1
+`pending` (`2026-08-28_comida-servida`, aguardando o Ramón, parado há ~46
+dias — sem prazo dele, sigo sem cobrar). Container abriu com `HEAD` detached
+de novo; realinhado com `git fetch` + `checkout -B main origin/main` sem
+perda de histórico. Nenhum código alterado além deste snapshot, nenhum
+recado novo mandado — silêncio (regra 3).
+
 ## 🔍 14/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md`: "Nenhum

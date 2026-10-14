@@ -1,4 +1,25 @@
 ## Decisões e contexto
+## 🔍 14/10/2026 (checagem 04:3x, vigia da nuvem) — falha real no run 38498858455 (02:01:34Z), não é bug
+
+`estado.py --mostrar` mostrou "schedule failure" às 02:01:34Z. Inspecionado
+com `gh run view` + `get_job_logs`: o step que derrubou foi o `Sentinela`
+(exit 1), `Rodar publicador` passou normal. Log mostra a causa exata: `fila
+com so 0 post(s) futuro(s) (minimo saudavel: 2)`. `content/.falhas_avisadas.json`
+já tinha a chave `fila_vazia_2026-10-14` gravada por esse mesmo run — alarme
+dedupado corretamente, próximas rodadas de hoje não repetem o vermelho
+(confirmado: todos os runs futuros ainda não rodaram, mas o padrão é igual
+aos dias anteriores). Mesma causa recorrente desde 25/08/2026 (lista completa
+de datas no `.falhas_avisadas.json`) — falta de filmagem nova, não bug de
+código. Já avisada ao Ramón em ocasiões anteriores, sem prazo dele; não é
+informação nova, não mando recado (regra 6). `SAUDE-DO-PROJETO.md`: "Nenhum
+erro aberto" (varredura de 12/10, ainda a mais recente). `content/recados.md`
+sem recado novo (todos `[x]`). Fila sem mudança real: 7 `rejected` + 1
+`pending` (`2026-08-28_comida-servida`, aguardando o Ramón, parado há ~46
+dias — sem prazo dele, sigo sem cobrar). Container abriu com `HEAD` detached
+de novo; realinhado com `git fetch` + `checkout -B main origin/main` sem
+perda de histórico. Nenhum código alterado além deste snapshot, nenhum
+recado novo mandado — silêncio (regra 3).
+
 ## 🔍 14/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `SAUDE-DO-PROJETO.md`: "Nenhum
