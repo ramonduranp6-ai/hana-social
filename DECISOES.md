@@ -1,4 +1,19 @@
 ## Decisões e contexto
+## 🔍 15/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. Desta vez `gh` autenticado na nuvem:
+`gh run list --workflow=publish.yml` confirma a run mais recente (04:56:25Z)
+`schedule success`; a única falha no período (00:12:12Z) já foi diagnosticada
+na checagem anterior (fila vazia, mesma causa desde 25/08, dedupada em
+`content/.falhas_avisadas.json` até `fila_vazia_2026-10-15`) e não se repetiu.
+`SAUDE-DO-PROJETO.md`: "Nenhum erro aberto" (varredura de 13/10 19:50, ainda a
+mais recente). `content/recados.md` sem recado novo (todos `[x]`). Fila sem
+mudança real: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+aguardando o Ramón, sem prazo dele). Container abriu com `HEAD` detached de
+novo; realinhado com `git fetch` + `checkout -B main origin/main` sem perda
+de histórico. Nenhum código alterado além deste snapshot, nenhum recado novo
+mandado — silêncio (regra 3).
+
 ## 🔍 15/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh` não autenticado nesta nuvem;
