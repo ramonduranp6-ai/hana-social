@@ -1,4 +1,19 @@
 ## Decisões e contexto
+## 🔍 15/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+run mais recente (00:12:12Z) `failure` — inspecionado com `gh run view` +
+`get_job_logs`: o step `Sentinela` derrubou o job (exit 1), `Rodar publicador`
+passou normal. Causa exata no log: `fila com so 0 post(s) futuro(s) (minimo
+saudavel: 2)` — mesmo padrão de todas as falhas anteriores desde 25/08, já
+dedupado em `.falhas_avisadas.json` (`fila_vazia_2026-10-15`). Não é bug de
+código, é falta de conteúdo/aprovação. `SAUDE-DO-PROJETO.md`: "Nenhum erro
+aberto" (varredura de 13/10 19:50, ainda a mais recente). `content/recados.md`
+sem recado novo (todos `[x]`). Fila sem mudança real: 7 `rejected` + 1
+`pending` (`2026-08-28_comida-servida`, aguardando o Ramón, sem prazo dele).
+Nenhum código alterado além deste snapshot, nenhum recado novo mandado —
+silêncio (regra 3).
+
 ## 🔍 14/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
