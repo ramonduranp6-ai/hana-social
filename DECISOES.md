@@ -1,5 +1,23 @@
 ## Decisões e contexto
-## 🔍 16/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+## 🔍 16/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+mostra 1 `failure` nova desde a última checagem (03:47:54Z) — `gh run view`
++ `sentinel.py` local confirmam a mesma causa já diagnosticada desde 25/08:
+fila com 0 posts futuros (`MIN_POSTS_FUTUROS=2`), dedupada em
+`content/.falhas_avisadas.json` (chave `fila_vazia_2026-10-16` já gravada
+pela própria run, não repete hoje). Não é bug de código — é falta de
+filmagem nova, fora do alcance desta sessão (sem acervo local nem
+subagentes). `gh run view --log`/`--log-failed` bloqueado pelo proxy desta
+nuvem (`results-receiver.actions.githubusercontent.com` recusado), mas não
+foi necessário: o `sentinel.py` roda localmente e reproduz o motivo exato do
+exit 1. `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto" (varredura de 13/10
+19:50, ainda vigente). `content/recados.md` sem recado novo (todos `[x]`).
+Fila sem mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+aguardando o Ramón, sem prazo dele). Container abriu com `HEAD` detached de
+novo; realinhado com `git fetch` + `checkout -B main origin/main` sem perda
+de histórico. Nenhum código alterado além deste snapshot, nenhum recado
+novo mandado — causa já conhecida e já sinalizada antes, silêncio (regra 6).
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
 5 runs mais recentes todas `schedule success`/`push success` (até 23:59:07Z),

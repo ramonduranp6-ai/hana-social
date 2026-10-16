@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 16/10/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 16/10/2026 04:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-16T03:47:54Z schedule failure
+2026-10-16T00:32:42Z push success
 2026-10-15T23:59:07Z schedule success
-2026-10-15T21:52:42Z schedule success
-2026-10-15T20:32:26Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,18 +104,30 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+b1dc4a2 chore: atualiza estado da fila [skip ci]
+232483d checagem de rotina 16/10 00:3x (vigia da nuvem) - sem bug novo
 e340ed5 checagem de rotina 15/10 20:3x (vigia da nuvem) - sem bug novo
 7a7197d chore: atualiza estado da fila [skip ci]
 a1b84f6 chore: atualiza estado da fila [skip ci]
 d3ec885 chore: atualiza manutenção [skip ci]
 828ccbf chore: atualiza estado da fila [skip ci]
 9941718 chore: atualiza estado da fila [skip ci]
-4e95d9e checagem de rotina 15/10 08:3x (vigia da nuvem) - sem bug novo Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com> Claude-Session: https://claude.ai/code/session_01P4BCoD6sYWBHm7FmJiKSDB
-5592f9c chore: atualiza estado da fila [skip ci]
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+## 🔍 16/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes todas `schedule success`/`push success` (até 23:59:07Z),
+nenhuma falha no período. `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto" (última
+varredura 13/10 19:50, ainda vigente). `content/recados.md` sem recado novo
+(todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón, sem prazo dele). Container
+abriu com `HEAD` detached de novo; realinhado com `git fetch` + `checkout -B
+main origin/main` sem perda de histórico. Nenhum código alterado além deste
+snapshot, nenhum recado novo mandado — silêncio (regra 6).
+
 ## 🔍 15/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
