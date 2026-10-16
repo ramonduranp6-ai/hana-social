@@ -1,4 +1,16 @@
 ## Decisões e contexto
+## 🔍 16/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes todas `schedule success`/`push success` (até 23:59:07Z),
+nenhuma falha no período. `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto" (última
+varredura 13/10 19:50, ainda vigente). `content/recados.md` sem recado novo
+(todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón, sem prazo dele). Container
+abriu com `HEAD` detached de novo; realinhado com `git fetch` + `checkout -B
+main origin/main` sem perda de histórico. Nenhum código alterado além deste
+snapshot, nenhum recado novo mandado — silêncio (regra 6).
+
 ## 🔍 15/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
