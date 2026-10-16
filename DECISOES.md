@@ -1,5 +1,20 @@
 ## Decisões e contexto
-## 🔍 16/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+## 🔍 16/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+nenhuma run nova desde a checagem das 12:3x (última, 13:39:15Z, `schedule
+success`) — a `failure` de 03:47:54Z continua sendo a mesma causa já
+diagnosticada (fila com 0 posts futuros, `MIN_POSTS_FUTUROS=2`, falta
+filmagem nova) e confirmada rodando `publisher/sentinel.py` localmente:
+exit 0, "ja avisado hoje, nao repete o alarme" (dedupada em
+`content/.falhas_avisadas.json`). `SAUDE-DO-PROJETO.md`: "Nenhum erro
+aberto" (varredura de 13/10 19:50, ainda vigente). `content/recados.md` sem
+recado novo (todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando o Ramón, sem prazo dele, parado há
+~49 dias). Container abriu com `HEAD` detached de novo; realinhado com
+`git fetch` + `checkout -B main origin/main` sem perda de histórico. Nenhum
+código alterado além deste snapshot, nenhum recado novo mandado — causa já
+conhecida e já sinalizada antes, silêncio (regra 6).
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
 nenhuma run nova desde a checagem das 08:3x (última, 08:38:18Z, `schedule
