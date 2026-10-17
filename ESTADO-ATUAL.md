@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 17/10/2026 08:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 17/10/2026 12:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-17T09:32:25Z schedule success
 2026-10-17T05:16:04Z schedule success
 2026-10-17T00:56:10Z schedule success
-2026-10-17T00:32:17Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,18 +104,48 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+c426ed2 chore: atualiza estado da fila [skip ci]
+2e5b5d7 chore: atualiza estado da fila [skip ci]
+a0e4a2c checagem de rotina 17/10 09:3x (vigia da nuvem) - sem bug novo
 d6b43df chore: atualiza estado da fila [skip ci]
 ad361a6 checagem de rotina 17/10 00:3x (vigia da nuvem) - sem bug novo
 a56e893 checagem de rotina 16/10 20:3x (vigia da nuvem) - sem bug novo
 75a7903 chore: atualiza manutenção [skip ci]
 d0f8ce0 checagem de rotina 16/10 16:3x (vigia da nuvem) - sem bug novo
-b206348 chore: atualiza estado da fila [skip ci]
-0e88798 checagem de rotina 16/10 12:3x (vigia da nuvem) - sem bug novo
-2a26110 chore: atualiza estado da fila [skip ci]
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+## 🔍 17/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes, todas `schedule success` (última 09:32:25Z) — nenhuma
+`failure` nova. `publisher/sentinel.py` rodado localmente: exit 0, mesmos dois
+avisos de sempre (fila com 0 posts futuros; `2026-08-28_comida-servida`
+pronto esperando o Ramón aprovar/recusar, já com `auditoria.veredito="SEM
+OBJECAO"` correto) — dedupado em `content/.falhas_avisadas.json`.
+`SAUDE-DO-PROJETO.md`: "Nenhum erro aberto". `content/recados.md` sem
+recado novo (todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`.
+Container abriu com `HEAD` detached de novo (origin avançou com commits
+automáticos do próprio workflow); realinhado com `git fetch` + `checkout -B
+main origin/main` sem perda de histórico. Nenhum código alterado além deste
+snapshot, nenhum recado novo mandado — causa já conhecida e já sinalizada
+antes, silêncio (regra 6).
+## 🔍 17/10/2026 (checagem 09:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `actions_list` (MCP, `gh` sem auth
+nesta nuvem) nos 8 runs mais recentes de `publish.yml`: todos `success`
+(última 2026-10-17T05:16:04Z). Fila: 7 `rejected` (decisão já tomada,
+esperada) + 1 `pending` (`2026-08-28_comida-servida`) cujo `post.json` já
+tem `auditoria.veredito="SEM OBJECAO"` preenchido de verdade — não é o bug
+antigo de veredito vazio; está vencido só porque espera o Ramón
+aprovar/recusar (comportamento esperado do `sentinel.py`, não bug). Nada
+para consertar.
 ## 🔍 17/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
