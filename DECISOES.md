@@ -1,4 +1,14 @@
 ## Decisões e contexto
+## 🔍 17/10/2026 (checagem 09:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `actions_list` (MCP, `gh` sem auth
+nesta nuvem) nos 8 runs mais recentes de `publish.yml`: todos `success`
+(última 2026-10-17T05:16:04Z). Fila: 7 `rejected` (decisão já tomada,
+esperada) + 1 `pending` (`2026-08-28_comida-servida`) cujo `post.json` já
+tem `auditoria.veredito="SEM OBJECAO"` preenchido de verdade — não é o bug
+antigo de veredito vazio; está vencido só porque espera o Ramón
+aprovar/recusar (comportamento esperado do `sentinel.py`, não bug). Nada
+para consertar.
 ## 🔍 17/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
