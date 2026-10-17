@@ -1,4 +1,16 @@
 ## Decisões e contexto
+## 🔍 17/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes, todas `schedule success` (última 13:22:58Z) — nenhuma
+`failure` nova. `publisher/sentinel.py` rodado localmente: exit 0, mesmos dois
+avisos de sempre (fila com 0 posts futuros, falta de filmagem — não é bug;
+`2026-08-28_comida-servida` pronto esperando o Ramón aprovar/recusar, já com
+`auditoria.veredito="SEM OBJECAO"` correto) — dedupado em
+`content/.falhas_avisadas.json`. `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto".
+`content/recados.md` sem recado novo (todos `[x]`). Fila sem mudança: 7
+`rejected` + 1 `pending`. Nenhum código alterado além deste snapshot, nenhum
+recado novo mandado — nada para consertar, silêncio (regra 6).
 ## 🔍 17/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
