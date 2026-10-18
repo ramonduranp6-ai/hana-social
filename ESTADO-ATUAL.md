@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 18/10/2026 00:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 18/10/2026 04:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-18T01:18:22Z schedule success
+2026-10-18T00:32:47Z push success
 2026-10-17T23:15:17Z schedule success
-2026-10-17T21:14:02Z schedule success
-2026-10-17T20:32:57Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+112fbc7 checagem de rotina 18/10 00:3x (vigia da nuvem) - sem bug novo
 1a90b35 checagem de rotina 17/10 20:3x (vigia da nuvem) - sem bug novo
 4179ec7 chore: atualiza estado da fila [skip ci]
 9cb3479 chore: atualiza estado da fila [skip ci]
@@ -111,11 +112,28 @@ estava certo: ela está de costas do começo ao fim.
 e669178 chore: atualiza manutenção [skip ci]
 756a2cb chore: atualiza estado da fila [skip ci]
 35c609f checagem de rotina 17/10 12:3x (vigia da nuvem) - sem bug novo
-c426ed2 chore: atualiza estado da fila [skip ci]
+```
+Alterações não commitadas:
+```
+M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+## 🔍 18/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes, todas `schedule success` (última 23:15:17Z) — nenhuma
+`failure` nova. `publisher/sentinel.py` rodado: exit 0, mesmos dois avisos de
+sempre (fila com 0 posts futuros — falta de filmagem, não é bug;
+`2026-08-28_comida-servida` pronto esperando o Ramón aprovar/recusar, já com
+`auditoria.veredito="SEM OBJECAO"` correto). `SAUDE-DO-PROJETO.md`: "Nenhum
+erro aberto". `content/recados.md` sem recado novo (todos `[x]`). Fila sem
+mudança: 7 `rejected` + 1 `pending`. Container abriu com `HEAD` detached de
+novo (origin avançou com commits automáticos do próprio workflow);
+realinhado com `git fetch` + `checkout -B main origin/main`, sem perda de
+histórico. Nenhum código alterado além deste snapshot, nenhum recado novo
+mandado — nada para consertar, silêncio (regra 6).
 ## 🔍 17/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
