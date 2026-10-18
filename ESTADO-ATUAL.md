@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 17/10/2026 20:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 18/10/2026 00:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-17T18:57:29Z schedule success
-2026-10-17T16:43:42Z schedule success
-2026-10-17T16:33:00Z schedule success
+2026-10-17T23:15:17Z schedule success
+2026-10-17T21:14:02Z schedule success
+2026-10-17T20:32:57Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+1a90b35 checagem de rotina 17/10 20:3x (vigia da nuvem) - sem bug novo
 4179ec7 chore: atualiza estado da fila [skip ci]
 9cb3479 chore: atualiza estado da fila [skip ci]
 10ed5f5 checagem de rotina 17/10 16:3x (vigia da nuvem) - sem bug novo
@@ -111,7 +112,6 @@ e669178 chore: atualiza manutenção [skip ci]
 756a2cb chore: atualiza estado da fila [skip ci]
 35c609f checagem de rotina 17/10 12:3x (vigia da nuvem) - sem bug novo
 c426ed2 chore: atualiza estado da fila [skip ci]
-2e5b5d7 chore: atualiza estado da fila [skip ci]
 ```
 
 ## Decisões e contexto
