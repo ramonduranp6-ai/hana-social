@@ -1,5 +1,24 @@
 ## Decisões e contexto
-## 🔍 19/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+## 🔍 19/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes, a mais nova é a `schedule success` de 11:00:58Z —
+nenhuma falha nova desde a `failure` de 00:18:56Z já investigada nas
+checagens anteriores (passo "Sentinela" falhando de propósito por fila
+vazia, não bug novo). Log do job falho conferido de novo via
+`get_job_logs` para confirmar: `sentinel.py` saiu com exit 1 só por causa
+de `fila_vazia_2026-10-19` (1ª vez do dia, dispara alarme por desenho) —
+os dois runs seguintes do dia já deduplicam essa chave e saem com exit 0.
+`content/.falhas_avisadas.json` confirma a chave de hoje já marcada.
+`SAUDE-DO-PROJETO.md`: "Nenhum erro aberto". `content/recados.md` sem
+recado novo (todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, ~74 mil min esperando o Ramón
+aprovar/recusar). Container abriu com `HEAD` detached de novo (origin
+avançou com commits automáticos do próprio workflow); realinhado com
+`git fetch` + `checkout -B main origin/main`, sem perda de histórico —
+`ESTADO-ATUAL.md` só tinha o timestamp regenerado, descartado sem commit.
+Nenhum código alterado, nenhum recado novo mandado — causa já é conhecida
+e repetida (falta de filmagem, decisão dele) — silêncio (regra 6).
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
 5 runs mais recentes, a mais nova é a `schedule success` de 05:00:37Z —
