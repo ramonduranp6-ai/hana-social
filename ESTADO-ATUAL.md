@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 18/10/2026 12:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 19/10/2026 12:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-18T11:28:57Z schedule success
-2026-10-18T08:32:09Z push success
-2026-10-18T06:12:42Z schedule success
+2026-10-19T12:33:07Z push 
+2026-10-19T11:00:58Z schedule success
+2026-10-19T08:32:39Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,18 +104,123 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
-5934432 chore: atualiza estado da fila [skip ci]
-9ba9352 checagem de rotina 18/10 08:3x (vigia da nuvem) - sem bug novo
-7d2c6de checagem de rotina 18/10 04:3x (vigia da nuvem) - sem bug novo
-112fbc7 checagem de rotina 18/10 00:3x (vigia da nuvem) - sem bug novo
-1a90b35 checagem de rotina 17/10 20:3x (vigia da nuvem) - sem bug novo
-4179ec7 chore: atualiza estado da fila [skip ci]
-9cb3479 chore: atualiza estado da fila [skip ci]
-10ed5f5 checagem de rotina 17/10 16:3x (vigia da nuvem) - sem bug novo
+76eb800 checagem de rotina 19/10 12:3x (vigia da nuvem) - sem bug novo
+c47bbc2 chore: atualiza estado da fila [skip ci]
+c3cc60d checagem de rotina 19/10 08:3x (vigia da nuvem) - sem bug novo
+1da12ae checagem de rotina 19/10 04:3x (vigia da nuvem) - sem bug novo
+828127b checagem de rotina 19/10 00:3x (vigia da nuvem) - sem bug novo
+fcfa87c chore: atualiza estado da fila [skip ci]
+09d2eb1 checagem de rotina 18/10 16:3x (vigia da nuvem) - sem bug novo
+4ccb643 chore: atualiza manutenção [skip ci]
+```
+Alterações não commitadas:
+```
+M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+## 🔍 19/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes, a mais nova é a `schedule success` de 11:00:58Z —
+nenhuma falha nova desde a `failure` de 00:18:56Z já investigada nas
+checagens anteriores (passo "Sentinela" falhando de propósito por fila
+vazia, não bug novo). Log do job falho conferido de novo via
+`get_job_logs` para confirmar: `sentinel.py` saiu com exit 1 só por causa
+de `fila_vazia_2026-10-19` (1ª vez do dia, dispara alarme por desenho) —
+os dois runs seguintes do dia já deduplicam essa chave e saem com exit 0.
+`content/.falhas_avisadas.json` confirma a chave de hoje já marcada.
+`SAUDE-DO-PROJETO.md`: "Nenhum erro aberto". `content/recados.md` sem
+recado novo (todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, ~74 mil min esperando o Ramón
+aprovar/recusar). Container abriu com `HEAD` detached de novo (origin
+avançou com commits automáticos do próprio workflow); realinhado com
+`git fetch` + `checkout -B main origin/main`, sem perda de histórico —
+`ESTADO-ATUAL.md` só tinha o timestamp regenerado, descartado sem commit.
+Nenhum código alterado, nenhum recado novo mandado — causa já é conhecida
+e repetida (falta de filmagem, decisão dele) — silêncio (regra 6).
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes, a mais nova é a `schedule success` de 05:00:37Z —
+nenhuma falha nova desde a `failure` de 00:18:56Z já investigada em checagens
+anteriores (passo "Sentinela" falhando de propósito por fila vazia). `sentinel.py`
+rodado de novo: exit 0, mesmos dois avisos crônicos (fila com 0 posts futuros
+— falta de filmagem, chave `fila_vazia_2026-10-19` já dedupada hoje, não
+repete alarme; `2026-08-28_comida-servida` pronto há ~74552 min esperando o
+Ramón aprovar/recusar). `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto".
+`content/recados.md` sem recado novo (todos `[x]`). Fila sem mudança: 7
+`rejected` + 1 `pending`. Container abriu com `HEAD` detached de novo (origin
+avançou com commits automáticos do próprio workflow); realinhado com
+`git fetch` + `checkout -B main origin/main`, sem perda de histórico —
+`ESTADO-ATUAL.md` só tinha o timestamp regenerado, descartado sem commit.
+Nenhum código alterado, nenhum recado novo mandado — causa já é conhecida e
+repetida (falta de filmagem, decisão dele) — silêncio (regra 6).
+## 🔍 19/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes, a mais nova ainda é a `failure` de 00:18:56Z já
+investigada na checagem anterior (passo "Sentinela" falhando de propósito por
+fila vazia — não um bug novo); nenhuma falha nova desde então. `sentinel.py`
+rodado de novo: mesmos dois avisos (fila com 0 posts futuros — falta de
+filmagem, chave `fila_vazia_2026-10-19` já dedupada hoje, não repete alarme;
+`2026-08-28_comida-servida` pronto há ~74312 min esperando o Ramón
+aprovar/recusar). `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto".
+`content/recados.md` sem recado novo. Fila sem mudança: 7 `rejected` + 1
+`pending`. Container abriu com `HEAD` detached de novo (origin avançou com
+commit automático do próprio workflow); realinhado com `git fetch` +
+`checkout -B main origin/main`, sem perda de histórico. Nenhum código
+alterado, nenhum recado novo mandado — causa já é conhecida e repetida
+(falta de filmagem, decisão dele) — silêncio (regra 6).
+## 🔍 19/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes, a mais nova (00:18:56Z) `schedule failure` — investigada
+com `gh run view`: o job falhou no passo "Sentinela" (único passo sem
+`continue-on-error`, de propósito — é o que faz o GitHub avisar por e-mail).
+Logs do step não puderam ser baixados (`gh run view --log`: 403 Forbidden no
+armazenamento de logs, token desta nuvem é só leitura de metadados), então
+rodei `publisher/sentinel.py` localmente para confirmar a causa real: exit 1
+por fila com 0 posts futuros (mínimo saudável: 2) — é o mesmo alarme crônico
+de falta de filmagem já visto e documentado em toda checagem desde 25/08/2026,
+não um bug novo. `content/.falhas_avisadas.json` já tinha a chave do dia
+(`fila_vazia_2026-10-19`) marcada por essa própria rodada, então o alarme não
+repete nas próximas execuções de hoje. `SAUDE-DO-PROJETO.md`: "Nenhum erro
+aberto". Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, esperando o Ramón aprovar/recusar). Container
+abriu com `HEAD` detached (origin avançou com commits automáticos do próprio
+workflow); realinhado com `git fetch` + `checkout -B main origin/main`, sem
+perda de histórico — `ESTADO-ATUAL.md` só tinha o timestamp regenerado,
+descartado sem commit. Nenhum código alterado, nenhum recado novo mandado —
+causa já é conhecida e repetida (falta de filmagem, decisão dele, já
+sinalizada em runs anteriores) — silêncio (regra 6).
+## 🔍 18/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes, todas `schedule success` (última 14:44:51Z) — nenhuma
+`failure` nova. `publisher/sentinel.py` rodado: exit 0, mesmos dois avisos de
+sempre (fila com 0 posts futuros — falta de filmagem, não é bug; já avisado
+hoje, não repete alarme; `2026-08-28_comida-servida` pronto há ~73592 min
+esperando o Ramón aprovar/recusar). `SAUDE-DO-PROJETO.md`: "Nenhum erro
+aberto". Fila sem mudança: 7 `rejected` + 1 `pending`. Container abriu com
+`HEAD` detached de novo (origin avançou com commits automáticos do próprio
+workflow); realinhado com `git fetch` + `checkout -B main origin/main`, sem
+perda de histórico. Nenhum código alterado além deste realinhamento, nenhum
+recado novo mandado — nada para consertar, silêncio (regra 6).
+## 🔍 18/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes, todas `schedule success` (última 11:28:57Z) — nenhuma
+`failure` nova. `publisher/sentinel.py` rodado: exit 0, mesmos dois avisos de
+sempre (fila com 0 posts futuros — falta de filmagem, não é bug; já avisado
+hoje, não repete alarme; `2026-08-28_comida-servida` pronto há ~73352 min
+esperando o Ramón aprovar/recusar). `SAUDE-DO-PROJETO.md`: "Nenhum erro
+aberto". `content/recados.md` sem recado novo (todos `[x]`). Fila sem
+mudança: 7 `rejected` + 1 `pending`. Container abriu com `HEAD` detached de
+novo (origin avançou com commits automáticos do próprio workflow);
+realinhado com `git fetch` + `checkout -B main origin/main`, sem perda de
+histórico. Nenhum código alterado além deste snapshot, nenhum recado novo
+mandado — nada para consertar, silêncio (regra 6).
 ## 🔍 18/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
