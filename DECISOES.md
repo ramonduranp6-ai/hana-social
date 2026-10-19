@@ -1,4 +1,21 @@
 ## Decisões e contexto
+## 🔍 19/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes, a mais nova é a `schedule success` de 05:00:37Z —
+nenhuma falha nova desde a `failure` de 00:18:56Z já investigada em checagens
+anteriores (passo "Sentinela" falhando de propósito por fila vazia). `sentinel.py`
+rodado de novo: exit 0, mesmos dois avisos crônicos (fila com 0 posts futuros
+— falta de filmagem, chave `fila_vazia_2026-10-19` já dedupada hoje, não
+repete alarme; `2026-08-28_comida-servida` pronto há ~74552 min esperando o
+Ramón aprovar/recusar). `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto".
+`content/recados.md` sem recado novo (todos `[x]`). Fila sem mudança: 7
+`rejected` + 1 `pending`. Container abriu com `HEAD` detached de novo (origin
+avançou com commits automáticos do próprio workflow); realinhado com
+`git fetch` + `checkout -B main origin/main`, sem perda de histórico —
+`ESTADO-ATUAL.md` só tinha o timestamp regenerado, descartado sem commit.
+Nenhum código alterado, nenhum recado novo mandado — causa já é conhecida e
+repetida (falta de filmagem, decisão dele) — silêncio (regra 6).
 ## 🔍 19/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
