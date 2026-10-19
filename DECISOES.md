@@ -1,4 +1,26 @@
 ## Decisões e contexto
+## 🔍 19/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes, a mais nova (00:18:56Z) `schedule failure` — investigada
+com `gh run view`: o job falhou no passo "Sentinela" (único passo sem
+`continue-on-error`, de propósito — é o que faz o GitHub avisar por e-mail).
+Logs do step não puderam ser baixados (`gh run view --log`: 403 Forbidden no
+armazenamento de logs, token desta nuvem é só leitura de metadados), então
+rodei `publisher/sentinel.py` localmente para confirmar a causa real: exit 1
+por fila com 0 posts futuros (mínimo saudável: 2) — é o mesmo alarme crônico
+de falta de filmagem já visto e documentado em toda checagem desde 25/08/2026,
+não um bug novo. `content/.falhas_avisadas.json` já tinha a chave do dia
+(`fila_vazia_2026-10-19`) marcada por essa própria rodada, então o alarme não
+repete nas próximas execuções de hoje. `SAUDE-DO-PROJETO.md`: "Nenhum erro
+aberto". Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, esperando o Ramón aprovar/recusar). Container
+abriu com `HEAD` detached (origin avançou com commits automáticos do próprio
+workflow); realinhado com `git fetch` + `checkout -B main origin/main`, sem
+perda de histórico — `ESTADO-ATUAL.md` só tinha o timestamp regenerado,
+descartado sem commit. Nenhum código alterado, nenhum recado novo mandado —
+causa já é conhecida e repetida (falta de filmagem, decisão dele, já
+sinalizada em runs anteriores) — silêncio (regra 6).
 ## 🔍 18/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
