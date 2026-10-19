@@ -1,5 +1,21 @@
 ## Decisões e contexto
-## 🔍 19/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+## 🔍 19/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes, a mais nova é a `schedule success` de 19:32:36Z —
+nenhuma falha nova desde a `failure` de 00:18:56Z já investigada e explicada
+nas checagens anteriores (passo "Sentinela" falhando de propósito por fila
+vazia, não bug de código). Log do job falho reconferido via `get_job_logs`
+pelo GitHub MCP (o `gh` CLI local deu 403 ao baixar o zip de log, proxy —
+contornado usando a ferramenta MCP em vez do CLI): confirma de novo que o
+`exit 1` foi só a chave `fila_vazia_2026-10-19`, já dedupada nos runs
+seguintes. `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto". `content/recados.md`
+sem recado novo (todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, ~74,6 mil min esperando o Ramón
+aprovar/recusar). `ESTADO-ATUAL.md` só tinha o timestamp regenerado,
+descartado sem commit. Nenhum código alterado, nenhum recado novo mandado —
+causa já é conhecida e repetida (falta de filmagem, decisão dele) —
+silêncio (regra 6).
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
 5 runs mais recentes, a mais nova é a `schedule success` de 11:00:58Z —
