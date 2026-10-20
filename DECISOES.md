@@ -1,5 +1,21 @@
 ## Decisões e contexto
-## 🔍 20/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+## 🔍 20/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 runs mais recentes): só a `failure` crônica de 00:50:40Z, já investigada
+nas checagens anteriores de hoje; as três execuções seguintes (05:34:55Z,
+10:44:00Z, 15:30:09Z) voltaram a `success`. Causa da falha já conhecida
+(Sentinela acusando `fila com so 0 post(s) futuro(s)`, falta de filmagem,
+não é bug) e já dedupada em `content/.falhas_avisadas.json`
+(`fila_vazia_2026-10-20`). `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto".
+`content/recados.md` sem recado novo (todos `[x]`). Fila sem mudança: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, ainda esperando o
+Ramón aprovar/recusar). Container abriu com `HEAD` detached de novo (origin
+avançou com o commit automático da checagem anterior); realinhado com
+`git fetch` + `checkout -B main origin/main`, sem perda de histórico.
+`ESTADO-ATUAL.md` só tinha o timestamp regenerado, descartado sem commit.
+Nenhum código alterado, nenhum recado novo mandado — causa já é conhecida e
+repetida (falta de filmagem, decisão dele, regra 6) — silêncio.
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
 via GitHub MCP (5 runs mais recentes): só a `failure` de 00:50:40Z, já
