@@ -1,4 +1,18 @@
 ## Decisões e contexto
+## 🔍 20/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+via GitHub MCP (5 runs mais recentes): só a `failure` de 00:50:40Z, já
+investigada nas checagens anteriores de hoje; as duas execuções seguintes
+(05:34:55Z e 10:44:00Z) voltaram a `success`. Log do job falho já conferido
+antes: passo "Sentinela" saiu com `fila com so 0 post(s) futuro(s)`, mesma
+causa crônica de sempre (falta de filmagem, não é bug). `content/.falhas_avisadas.json`
+já tem `fila_vazia_2026-10-20` dedupada, por isso os runs do resto do dia não
+voltam a falhar por essa causa. `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto".
+`content/recados.md` sem recado novo. Fila sem mudança (7 `rejected` + 1
+`pending`). Nenhum código alterado, nenhum recado novo — causa já conhecida e
+já avisada — silêncio.
+
 ## 🔍 20/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
