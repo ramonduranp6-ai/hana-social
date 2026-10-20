@@ -1,5 +1,25 @@
 ## Decisões e contexto
-## 🔍 20/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+## 🔍 20/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes, nenhuma falha nova desde a `failure` de 00:50:40Z já
+investigada e explicada nas checagens anteriores. Log do job falho
+reconferido via `get_job_logs` (GitHub MCP, já que o `gh` CLI local dá 403
+ao baixar o zip de log pelo proxy): `publisher/run.py` e o passo "Rodar
+publicador" passaram; só o passo "Sentinela" saiu com exit 1, e o motivo
+impresso no próprio log é só `fila com so 0 post(s) futuro(s)` — mesma
+causa crônica (falta de filmagem) já registrada desde 25/08/2026, sem
+nenhum problema de código novo. `content/.falhas_avisadas.json` confirma a
+chave `fila_vazia_2026-10-20` já dedupada, então os runs seguintes do dia
+não voltam a falhar por isso. `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto".
+`content/recados.md` sem recado novo (todos `[x]`). Fila sem mudança: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, ~75,5 mil min
+esperando o Ramón aprovar/recusar). Container abriu com `HEAD` detached de
+novo (origin avançou com o commit automático do publicador); realinhado
+com `git fetch` + `checkout -B main origin/main`, sem perda de histórico.
+`ESTADO-ATUAL.md` só tinha o timestamp regenerado, descartado sem commit.
+Nenhum código alterado, nenhum recado novo mandado — causa já é conhecida
+e repetida (falta de filmagem, decisão dele, regra 6) — silêncio.
 
 `estado.py --mostrar` sem ALARME no topo. `gh` CLI nesta nuvem sem auth
 válido (`GH_TOKEN` invalido — proxy), então a leitura de automação veio do
