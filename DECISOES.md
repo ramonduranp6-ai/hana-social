@@ -1,5 +1,24 @@
 ## Decisões e contexto
-## 🔍 19/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+## 🔍 20/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh` CLI nesta nuvem sem auth
+válido (`GH_TOKEN` invalido — proxy), então a leitura de automação veio do
+próprio `estado.py` (que já traz os últimos runs do publicador) e do
+histórico de commits: últimas 3 execuções do publicador todas
+`schedule/push success` (mais recente 19/10 21:53:15Z), nenhuma falha nova.
+`sentinel.py` rodado direto: mesmos dois avisos crônicos de sempre — fila
+com 0 posts futuros (falta de filmagem, decisão dele, regra 6 — não é bug)
+e `2026-08-28_comida-servida` ainda esperando ele aprovar/recusar (~75,5
+mil min). `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto". `content/recados.md`
+sem recado novo (todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`.
+Container abriu com `HEAD` detached de novo (origin avançou com o commit
+automático da checagem anterior); realinhado com `git fetch` + `checkout
+-B main origin/main`, sem perda de histórico — confirmado que o commit
+anterior já estava em `origin/main`. `ESTADO-ATUAL.md` e
+`content/.falhas_avisadas.json` só tinham o timestamp/chave do dia
+regenerados, descartados sem commit. Nenhum código alterado, nenhum recado
+novo mandado — causa já é conhecida e repetida (falta de filmagem, decisão
+dele) — silêncio (regra 6).
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
 5 runs mais recentes, a mais nova é a `schedule success` de 19:32:36Z —
