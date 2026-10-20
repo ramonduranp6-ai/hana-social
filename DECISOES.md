@@ -1,4 +1,17 @@
 ## Decisões e contexto
+## 🔍 20/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. Automação (últimos runs do
+publicador, lidos direto do `estado.py`): três `schedule success` seguidas
+(17:11:26Z, 18:10:24Z, 19:45:33Z), nenhuma falha nova desde a crônica já
+investigada e dedupada nas checagens anteriores de hoje (`fila_vazia_2026-10-20`
+em `content/.falhas_avisadas.json`). `SAUDE-DO-PROJETO.md`: "Nenhum erro
+aberto". `content/recados.md` sem recado novo (todos `[x]`). Fila sem
+mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, ainda
+esperando o Ramón aprovar/recusar) — falta de filmagem, decisão dele, regra
+6, não é bug. `ESTADO-ATUAL.md` só tinha o timestamp regenerado, descartado
+sem commit. Nenhum código alterado, nenhum recado novo mandado — silêncio.
+
 ## 🔍 20/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
