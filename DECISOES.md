@@ -1,4 +1,18 @@
 ## Decisões e contexto
+## 🔍 21/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `actions_list` (GitHub MCP,
+`publish.yml`, 5 runs mais recentes): todas `success`, nenhuma falha nova
+desde as checagens anteriores de 20/10. `SAUDE-DO-PROJETO.md`: "Nenhum erro
+aberto". `content/recados.md` sem recado novo (todos `[x]`). Fila sem
+mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, ainda
+esperando o Ramón aprovar/recusar) — falta de filmagem, decisão dele, regra
+6, não é bug (já dedupado em `content/.falhas_avisadas.json` até
+`fila_vazia_2026-10-20`). `HEAD` já estava alinhado com `origin/main`, sem
+precisar realinhar. `ESTADO-ATUAL.md` só tinha o timestamp regenerado,
+descartado sem commit. Nenhum código alterado, nenhum recado novo mandado —
+silêncio.
+
 ## 🔍 20/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. Automação (últimos runs do
