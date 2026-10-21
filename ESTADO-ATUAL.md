@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 20/10/2026 04:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 21/10/2026 08:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-20T00:50:40Z schedule failure
-2026-10-20T00:32:59Z push success
-2026-10-19T21:53:15Z schedule success
+2026-10-21T06:13:05Z schedule success
+2026-10-21T04:33:21Z push success
+2026-10-21T01:09:46Z schedule failure
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,19 +104,111 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
-52a5a64 chore: atualiza estado da fila [skip ci]
-e835c57 checagem de rotina 20/10 00:3x (vigia da nuvem) - sem bug novo
-ca0ccb4 checagem de rotina 19/10 20:3x (vigia da nuvem) - sem bug novo
-e681161 chore: atualiza manutenção [skip ci]
-e34d879 checagem de rotina 19/10 16:3x (vigia da nuvem) - sem bug novo
-3424542 chore: atualiza estado da fila [skip ci]
-76eb800 checagem de rotina 19/10 12:3x (vigia da nuvem) - sem bug novo
-c47bbc2 chore: atualiza estado da fila [skip ci]
+01f8b31 checagem de rotina 21/10 04:3x (vigia da nuvem) - sem bug novo
+2d0f260 chore: atualiza estado da fila [skip ci]
+8957d61 checagem de rotina 21/10 00:3x (vigia da nuvem) - sem bug novo
+b4dc10e checagem de rotina 20/10 20:3x (vigia da nuvem) - sem bug novo
+86be444 chore: atualiza estado da fila [skip ci]
+e3b7411 chore: atualiza manutenção [skip ci]
+584dccc checagem de rotina 20/10 16:3x (vigia da nuvem) - sem bug novo
+cb2c3e9 chore: atualiza estado da fila [skip ci]
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
-## 🔍 20/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+## 🔍 21/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 runs mais recentes): só a `failure` de 01:09:46Z; log do job confirmado via
+`gh api .../jobs` — o passo que falhou foi "Sentinela", com a causa já
+conhecida: "fila com so 0 post(s) futuro(s)" (rodei `publisher/sentinel.py`
+localmente e reproduzi o mesmo aviso). É a mesma crônica de falta de
+filmagem (regra 6, decisão do Ramón, não é bug de código) — já dedupada em
+`content/.falhas_avisadas.json` como `fila_vazia_2026-10-21`, por isso o job
+seguinte (22:51:11Z) voltou a `success` sem repetir o alarme. `SAUDE-DO-PROJETO.md`:
+"Nenhum erro aberto". Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, ainda esperando o Ramón aprovar/recusar).
+Nenhum código alterado, nenhum recado novo mandado (causa já avisada antes,
+nada de novo para ele decidir agora) — silêncio.
+
+## 🔍 21/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `actions_list` (GitHub MCP,
+`publish.yml`, 5 runs mais recentes): todas `success`, nenhuma falha nova
+desde as checagens anteriores de 20/10. `SAUDE-DO-PROJETO.md`: "Nenhum erro
+aberto". `content/recados.md` sem recado novo (todos `[x]`). Fila sem
+mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, ainda
+esperando o Ramón aprovar/recusar) — falta de filmagem, decisão dele, regra
+6, não é bug (já dedupado em `content/.falhas_avisadas.json` até
+`fila_vazia_2026-10-20`). `HEAD` já estava alinhado com `origin/main`, sem
+precisar realinhar. `ESTADO-ATUAL.md` só tinha o timestamp regenerado,
+descartado sem commit. Nenhum código alterado, nenhum recado novo mandado —
+silêncio.
+
+## 🔍 20/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. Automação (últimos runs do
+publicador, lidos direto do `estado.py`): três `schedule success` seguidas
+(17:11:26Z, 18:10:24Z, 19:45:33Z), nenhuma falha nova desde a crônica já
+investigada e dedupada nas checagens anteriores de hoje (`fila_vazia_2026-10-20`
+em `content/.falhas_avisadas.json`). `SAUDE-DO-PROJETO.md`: "Nenhum erro
+aberto". `content/recados.md` sem recado novo (todos `[x]`). Fila sem
+mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, ainda
+esperando o Ramón aprovar/recusar) — falta de filmagem, decisão dele, regra
+6, não é bug. `ESTADO-ATUAL.md` só tinha o timestamp regenerado, descartado
+sem commit. Nenhum código alterado, nenhum recado novo mandado — silêncio.
+
+## 🔍 20/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 runs mais recentes): só a `failure` crônica de 00:50:40Z, já investigada
+nas checagens anteriores de hoje; as três execuções seguintes (05:34:55Z,
+10:44:00Z, 15:30:09Z) voltaram a `success`. Causa da falha já conhecida
+(Sentinela acusando `fila com so 0 post(s) futuro(s)`, falta de filmagem,
+não é bug) e já dedupada em `content/.falhas_avisadas.json`
+(`fila_vazia_2026-10-20`). `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto".
+`content/recados.md` sem recado novo (todos `[x]`). Fila sem mudança: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, ainda esperando o
+Ramón aprovar/recusar). Container abriu com `HEAD` detached de novo (origin
+avançou com o commit automático da checagem anterior); realinhado com
+`git fetch` + `checkout -B main origin/main`, sem perda de histórico.
+`ESTADO-ATUAL.md` só tinha o timestamp regenerado, descartado sem commit.
+Nenhum código alterado, nenhum recado novo mandado — causa já é conhecida e
+repetida (falta de filmagem, decisão dele, regra 6) — silêncio.
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+via GitHub MCP (5 runs mais recentes): só a `failure` de 00:50:40Z, já
+investigada nas checagens anteriores de hoje; as duas execuções seguintes
+(05:34:55Z e 10:44:00Z) voltaram a `success`. Log do job falho já conferido
+antes: passo "Sentinela" saiu com `fila com so 0 post(s) futuro(s)`, mesma
+causa crônica de sempre (falta de filmagem, não é bug). `content/.falhas_avisadas.json`
+já tem `fila_vazia_2026-10-20` dedupada, por isso os runs do resto do dia não
+voltam a falhar por essa causa. `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto".
+`content/recados.md` sem recado novo. Fila sem mudança (7 `rejected` + 1
+`pending`). Nenhum código alterado, nenhum recado novo — causa já conhecida e
+já avisada — silêncio.
+
+## 🔍 20/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+5 runs mais recentes, nenhuma falha nova desde a `failure` de 00:50:40Z já
+investigada e explicada nas checagens anteriores. Log do job falho
+reconferido via `get_job_logs` (GitHub MCP, já que o `gh` CLI local dá 403
+ao baixar o zip de log pelo proxy): `publisher/run.py` e o passo "Rodar
+publicador" passaram; só o passo "Sentinela" saiu com exit 1, e o motivo
+impresso no próprio log é só `fila com so 0 post(s) futuro(s)` — mesma
+causa crônica (falta de filmagem) já registrada desde 25/08/2026, sem
+nenhum problema de código novo. `content/.falhas_avisadas.json` confirma a
+chave `fila_vazia_2026-10-20` já dedupada, então os runs seguintes do dia
+não voltam a falhar por isso. `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto".
+`content/recados.md` sem recado novo (todos `[x]`). Fila sem mudança: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, ~75,5 mil min
+esperando o Ramón aprovar/recusar). Container abriu com `HEAD` detached de
+novo (origin avançou com o commit automático do publicador); realinhado
+com `git fetch` + `checkout -B main origin/main`, sem perda de histórico.
+`ESTADO-ATUAL.md` só tinha o timestamp regenerado, descartado sem commit.
+Nenhum código alterado, nenhum recado novo mandado — causa já é conhecida
+e repetida (falta de filmagem, decisão dele, regra 6) — silêncio.
 
 `estado.py --mostrar` sem ALARME no topo. `gh` CLI nesta nuvem sem auth
 válido (`GH_TOKEN` invalido — proxy), então a leitura de automação veio do
