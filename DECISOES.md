@@ -1,4 +1,17 @@
 ## Decisões e contexto
+## 🔍 21/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 runs mais recentes): `success` em 18:17:30Z, 17:28:03Z, 12:07:42Z,
+06:13:05Z; só a `failure` crônica de 01:09:46Z, já investigada e dedupada
+(`fila_vazia_2026-10-21` em `content/.falhas_avisadas.json`), causa "fila
+com so 0 post(s) futuro(s)" — falta de filmagem, regra 6, não é bug de
+código. `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto". `content/recados.md`
+sem recado novo (todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, ainda esperando o Ramón aprovar/recusar) —
+falta de filmagem, decisão dele, não é bug. Nenhum código alterado, nenhum
+recado novo mandado — silêncio.
+
 ## 🔍 21/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
