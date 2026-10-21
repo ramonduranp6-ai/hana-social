@@ -1,4 +1,19 @@
 ## Decisões e contexto
+## 🔍 21/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 runs mais recentes): só a `failure` de 01:09:46Z; log do job confirmado via
+`gh api .../jobs` — o passo que falhou foi "Sentinela", com a causa já
+conhecida: "fila com so 0 post(s) futuro(s)" (rodei `publisher/sentinel.py`
+localmente e reproduzi o mesmo aviso). É a mesma crônica de falta de
+filmagem (regra 6, decisão do Ramón, não é bug de código) — já dedupada em
+`content/.falhas_avisadas.json` como `fila_vazia_2026-10-21`, por isso o job
+seguinte (22:51:11Z) voltou a `success` sem repetir o alarme. `SAUDE-DO-PROJETO.md`:
+"Nenhum erro aberto". Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, ainda esperando o Ramón aprovar/recusar).
+Nenhum código alterado, nenhum recado novo mandado (causa já avisada antes,
+nada de novo para ele decidir agora) — silêncio.
+
 ## 🔍 21/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `actions_list` (GitHub MCP,
