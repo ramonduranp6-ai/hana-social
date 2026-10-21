@@ -1,4 +1,14 @@
 ## Decisões e contexto
+## 🔍 21/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. Runs do `publish.yml`: a
+`failure` de 01:09:46Z continua sendo a mesma crônica de fila vazia (já
+dedupada em `content/.falhas_avisadas.json`), e os runs seguintes
+(04:33:21Z, 06:13:05Z) voltaram a `success`. `SAUDE-DO-PROJETO.md`: nenhum
+erro aberto. `content/recados.md`: sem recado novo. Fila sem mudança: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, esperando o Ramón).
+Nenhum código alterado, nenhum recado mandado — silêncio.
+
 ## 🔍 21/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
