@@ -1,4 +1,19 @@
 ## Decisões e contexto
+## 🔍 22/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 runs mais recentes): `success` em 08:09:47Z; a `failure` de 02:42:12Z é a
+mesma crônica já investigada e dedupada (`fila_vazia_2026-10-22` em
+`content/.falhas_avisadas.json`, log não baixou agora — `Forbidden` no
+`results-receiver`, mas a causa já estava confirmada na checagem anterior
+pelo `get_job_logs`) — falta de filmagem, regra 6, não é bug de código.
+`SAUDE-DO-PROJETO.md`: "Nenhum erro aberto". `sentinela.py` só descartou
+cópia local gerada do `ESTADO-ATUAL.md` e realinhou HEAD com `origin/main`
+(sem commit pendente). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, 5ª semana sem filmagem nova) — já comunicado
+antes, não repito para não virar spam. Nenhum código alterado, nenhum
+recado novo mandado — silêncio.
+
 ## 🔍 22/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`

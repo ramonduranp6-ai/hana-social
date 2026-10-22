@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 22/10/2026 08:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 22/10/2026 12:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-22T08:33:14Z push success
 2026-10-22T08:09:47Z schedule success
 2026-10-22T04:34:05Z push success
-2026-10-22T02:42:12Z schedule failure
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,7 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
-aafd57a checagem de rotina 22/10 08:3x (vigia da nuvem) - sem bug novo
+47344e3 checagem de rotina 22/10 08:3x (vigia da nuvem) - sem bug novo
 82532bf chore: atualiza estado da fila [skip ci]
 a823883 checagem de rotina 22/10 04:4x (vigia da nuvem) - sem bug novo
 077a899 chore: atualiza estado da fila [skip ci]
@@ -113,9 +113,28 @@ d93c974 checagem de rotina 21/10 20:3x (vigia da nuvem) - sem bug novo
 4e21931 chore: atualiza manutenção [skip ci]
 4cde9c2 checagem de rotina 21/10 16:3x (vigia da nuvem) - sem bug novo
 ```
+Alterações não commitadas:
+```
+M DECISOES.md
+```
 
 ## Decisões e contexto
 ## Decisões e contexto
+## 🔍 22/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 runs mais recentes): `success` em 08:09:47Z; a `failure` de 02:42:12Z é a
+mesma crônica já investigada e dedupada (`fila_vazia_2026-10-22` em
+`content/.falhas_avisadas.json`, log não baixou agora — `Forbidden` no
+`results-receiver`, mas a causa já estava confirmada na checagem anterior
+pelo `get_job_logs`) — falta de filmagem, regra 6, não é bug de código.
+`SAUDE-DO-PROJETO.md`: "Nenhum erro aberto". `sentinela.py` só descartou
+cópia local gerada do `ESTADO-ATUAL.md` e realinhou HEAD com `origin/main`
+(sem commit pendente). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, 5ª semana sem filmagem nova) — já comunicado
+antes, não repito para não virar spam. Nenhum código alterado, nenhum
+recado novo mandado — silêncio.
+
 ## 🔍 22/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
