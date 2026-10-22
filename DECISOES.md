@@ -1,5 +1,21 @@
 ## Decisões e contexto
-## 🔍 22/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+## 🔍 22/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 runs mais recentes): `success` em 13:57:38Z, 08:09:47Z; só a `failure`
+crônica de 02:42:12Z, mesma causa já investigada e dedupada
+(`fila_vazia_2026-10-22` em `content/.falhas_avisadas.json`) — `sentinel.py`
+confirmado pelo código-fonte: `MIN_POSTS_FUTUROS = 2` e deduplicação diária
+por `chave = fila_vazia_{hoje}`, então só a 1ª falha do dia vira "problema"
+(exit 1), as seguintes no mesmo dia já caem em "aviso" e o job passa —
+comportamento intencional, não bug. `SAUDE-DO-PROJETO.md`: "Nenhum erro
+aberto". `content/recados.md` sem recado novo (todos `[x]`). `HEAD` já
+alinhado com `origin/main` (91183ac) após `git fetch`. Fila sem mudança: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, pronto há ~78500 min
+= ~54 dias esperando o Ramón aprovar/recusar) — falta de decisão/filmagem
+dele, regra 6, não é bug de código; já comunicado antes, não repito para
+não virar spam. Nenhum código alterado, nenhum recado novo mandado —
+silêncio.
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
 (5 runs mais recentes): `success` em 08:09:47Z; a `failure` de 02:42:12Z é a
