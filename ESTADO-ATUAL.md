@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 22/10/2026 00:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 22/10/2026 08:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-21T23:50:20Z schedule success
-2026-10-21T20:48:07Z schedule success
-2026-10-21T20:32:57Z push success
+2026-10-22T08:09:47Z schedule success
+2026-10-22T04:34:05Z push success
+2026-10-22T02:42:12Z schedule failure
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,18 +104,48 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+aafd57a checagem de rotina 22/10 08:3x (vigia da nuvem) - sem bug novo
+82532bf chore: atualiza estado da fila [skip ci]
+a823883 checagem de rotina 22/10 04:4x (vigia da nuvem) - sem bug novo
+077a899 chore: atualiza estado da fila [skip ci]
+b7cd460 chore: atualiza estado da fila [skip ci]
 d93c974 checagem de rotina 21/10 20:3x (vigia da nuvem) - sem bug novo
 4e21931 chore: atualiza manutenção [skip ci]
 4cde9c2 checagem de rotina 21/10 16:3x (vigia da nuvem) - sem bug novo
-a7ecc8e checagem de rotina 21/10 12:3x (vigia da nuvem) - sem bug novo
-be8d704 chore: atualiza estado da fila [skip ci]
-5f91f65 chore: atualiza estado da fila [skip ci]
-45893a0 checagem de rotina 21/10 08:3x (vigia da nuvem) - sem bug novo
-01f8b31 checagem de rotina 21/10 04:3x (vigia da nuvem) - sem bug novo
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+## 🔍 22/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 runs mais recentes): `success` em 08:09:47Z; só a `failure` crônica de
+02:42:12Z, mesma causa já investigada e dedupada (`fila_vazia_2026-10-22` em
+`content/.falhas_avisadas.json`) — falta de filmagem, regra 6, não é bug de
+código. `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto". `content/recados.md`
+sem recado novo (9 recados, todos `[x]`). Fila sem mudança: 7 `rejected` +
+1 `pending` (`2026-08-28_comida-servida`), 5ª semana sem filmagem nova —
+já comunicado antes, não repito para não virar spam. Nenhum código
+alterado, nenhum recado novo mandado — silêncio.
+
+## 🔍 22/10/2026 (checagem 04:4x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(8 runs mais recentes): só a `failure` de 02:42:12Z, causa "fila com so 0
+post(s) futuro(s) (minimo saudavel: 2)" — já investigada no log do job
+(`get_job_logs`, step "Sentinela") e dedupada (`fila_vazia_2026-10-22` em
+`content/.falhas_avisadas.json`, cadeia diária sem lacuna desde
+`fila_vazia_2026-08-25`); falta de filmagem, regra 6, não é bug de código.
+Os 7 runs anteriores (23:50:20Z, 20:48:07Z, 18:17:30Z, 17:28:03Z,
+12:07:42Z, 06:13:05Z) foram `success`. `SAUDE-DO-PROJETO.md`: "Nenhum erro
+aberto". `content/recados.md` sem recado novo (todos `[x]`). Fila sem
+mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, ainda
+esperando o Ramón aprovar/recusar) — decisão dele, não é bug. Essa fila
+vazia já foi comunicada a ele antes (ver linhas ~1540/3756/3783 deste
+arquivo); não repito recado para não virar spam de algo que ele já sabe e
+decide quando resolver. Nenhum código alterado, nenhum recado novo
+mandado — silêncio.
+
 ## 🔍 21/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
