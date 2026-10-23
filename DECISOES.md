@@ -1,4 +1,18 @@
 ## Decisões e contexto
+## 🔍 23/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh auth status` falhou (`GH_TOKEN`
+inválido nesta nuvem), então sem `gh run list`/`gh run view --log` agora;
+diagnóstico veio do próprio repo. `git log` mostra a mesma `failure` crônica
+de 00:17:10Z já registrada na checagem anterior (00:3x), intercalada com
+`success` — `content/.falhas_avisadas.json` já contém `fila_vazia_2026-10-23`
+(dedupe do `sentinel.py`, não bug novo). `SAUDE-DO-PROJETO.md`: "Nenhum erro
+aberto". `content/recados.md` sem recado novo. Fila sem mudança: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`), 5ª semana sem
+filmagem nova — falta de filmagem/decisão dele, regra 6, não é bug de
+código; já comunicado antes, não repito. Nenhum código alterado, nenhum
+recado novo mandado — silêncio.
+
 ## 🔍 23/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
