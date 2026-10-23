@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 22/10/2026 12:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 23/10/2026 00:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-22T08:33:14Z push success
-2026-10-22T08:09:47Z schedule success
-2026-10-22T04:34:05Z push success
+2026-10-23T00:17:10Z schedule failure
+2026-10-22T21:48:20Z schedule success
+2026-10-22T18:18:56Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,23 +104,56 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+2c41921 chore: atualiza estado da fila [skip ci]
+8960d15 chore: atualiza estado da fila [skip ci]
+cb8ff32 chore: atualiza manutenção [skip ci]
+d7bffeb checagem de rotina 22/10 16:3x (vigia da nuvem) - sem bug novo
+91183ac chore: atualiza estado da fila [skip ci]
+d96d09f checagem de rotina 22/10 12:3x (vigia da nuvem) - sem bug novo
 47344e3 checagem de rotina 22/10 08:3x (vigia da nuvem) - sem bug novo
 82532bf chore: atualiza estado da fila [skip ci]
-a823883 checagem de rotina 22/10 04:4x (vigia da nuvem) - sem bug novo
-077a899 chore: atualiza estado da fila [skip ci]
-b7cd460 chore: atualiza estado da fila [skip ci]
-d93c974 checagem de rotina 21/10 20:3x (vigia da nuvem) - sem bug novo
-4e21931 chore: atualiza manutenção [skip ci]
-4cde9c2 checagem de rotina 21/10 16:3x (vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
 M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
-## 🔍 22/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+## 🔍 23/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `failure` em 00:17:10Z é a mesma crônica de fila vazia —
+confirmada por `content/.falhas_avisadas.json` já conter
+`fila_vazia_2026-10-23` (deduplicada pelo `sentinel.py`, não bug); as 4
+execuções anteriores (22/10) foram `success`. `gh run view --log` deu
+`Forbidden` no `results-receiver` de novo, então a causa veio só da
+dedupe no repo, sem log bruto — mesma causa já confirmada em checagens
+anteriores com `get_job_logs`. `SAUDE-DO-PROJETO.md`: "Nenhum erro
+aberto". `content/recados.md` sem recado novo. Fila sem mudança: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`), 5ª semana sem
+filmagem nova — falta de filmagem/decisão dele, regra 6, não é bug de
+código; já comunicado antes, não repito. Nenhum código alterado, nenhum
+recado novo mandado — silêncio.
+
+## 🔍 22/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 runs mais recentes): `success` em 13:57:38Z, 08:09:47Z; só a `failure`
+crônica de 02:42:12Z, mesma causa já investigada e dedupada
+(`fila_vazia_2026-10-22` em `content/.falhas_avisadas.json`) — `sentinel.py`
+confirmado pelo código-fonte: `MIN_POSTS_FUTUROS = 2` e deduplicação diária
+por `chave = fila_vazia_{hoje}`, então só a 1ª falha do dia vira "problema"
+(exit 1), as seguintes no mesmo dia já caem em "aviso" e o job passa —
+comportamento intencional, não bug. `SAUDE-DO-PROJETO.md`: "Nenhum erro
+aberto". `content/recados.md` sem recado novo (todos `[x]`). `HEAD` já
+alinhado com `origin/main` (91183ac) após `git fetch`. Fila sem mudança: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, pronto há ~78500 min
+= ~54 dias esperando o Ramón aprovar/recusar) — falta de decisão/filmagem
+dele, regra 6, não é bug de código; já comunicado antes, não repito para
+não virar spam. Nenhum código alterado, nenhum recado novo mandado —
+silêncio.
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
 (5 runs mais recentes): `success` em 08:09:47Z; a `failure` de 02:42:12Z é a
