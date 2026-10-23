@@ -104,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+e808285 checagem de rotina 23/10 00:3x (vigia da nuvem) - sem bug novo
 2c41921 chore: atualiza estado da fila [skip ci]
 8960d15 chore: atualiza estado da fila [skip ci]
 cb8ff32 chore: atualiza manutenção [skip ci]
@@ -111,12 +112,6 @@ d7bffeb checagem de rotina 22/10 16:3x (vigia da nuvem) - sem bug novo
 91183ac chore: atualiza estado da fila [skip ci]
 d96d09f checagem de rotina 22/10 12:3x (vigia da nuvem) - sem bug novo
 47344e3 checagem de rotina 22/10 08:3x (vigia da nuvem) - sem bug novo
-82532bf chore: atualiza estado da fila [skip ci]
-```
-Alterações não commitadas:
-```
-M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
