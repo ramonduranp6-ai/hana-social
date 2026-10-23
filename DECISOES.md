@@ -1,4 +1,19 @@
 ## Decisões e contexto
+## 🔍 23/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(10 runs): só duas `failure`, 00:17:10Z e 02:42:12Z (dia anterior) — baixei o
+log de 00:17:10Z com `get_job_logs` e confirmei pela própria saída do
+`sentinel.py`: "fila com so 0 post(s) futuro(s)" é a causa, dedupada por dia
+(`content/.falhas_avisadas.json` já tem `fila_vazia_2026-10-23`); as 7 runs
+seguintes (05:07, 10:18 etc.) foram `success`. Comportamento intencional do
+código (1ª falha do dia vira "problema"/e-mail, as seguintes no mesmo dia
+caem em "aviso"), não bug. `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto".
+Fila sem mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+~79800 min esperando o Ramón aprovar/recusar) — falta de decisão/filmagem
+dele, regra 6, não é bug de código; já comunicado antes, não repito.
+Nenhum código alterado, nenhum recado novo mandado — silêncio.
+
 ## 🔍 23/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh auth status` falhou (`GH_TOKEN`
