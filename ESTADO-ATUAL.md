@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 23/10/2026 08:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 23/10/2026 16:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-23T05:07:12Z schedule success
-2026-10-23T00:17:10Z schedule failure
-2026-10-22T21:48:20Z schedule success
+2026-10-23T15:16:49Z schedule success
+2026-10-23T12:33:09Z push success
+2026-10-23T10:18:38Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,18 +104,47 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+3650beb checagem de rotina 23/10 12:3x (vigia da nuvem) - sem bug novo
+35daf21 chore: atualiza estado da fila [skip ci]
+e68b2de checagem de rotina 23/10 08:3x (vigia da nuvem) - sem bug novo
 71fb02e chore: atualiza estado da fila [skip ci]
 fe413bd chore: atualiza estado da fila [skip ci]
 e808285 checagem de rotina 23/10 00:3x (vigia da nuvem) - sem bug novo
 2c41921 chore: atualiza estado da fila [skip ci]
 8960d15 chore: atualiza estado da fila [skip ci]
-cb8ff32 chore: atualiza manutenção [skip ci]
-d7bffeb checagem de rotina 22/10 16:3x (vigia da nuvem) - sem bug novo
-91183ac chore: atualiza estado da fila [skip ci]
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+## 🔍 23/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(10 runs): só duas `failure`, 00:17:10Z e 02:42:12Z (dia anterior) — baixei o
+log de 00:17:10Z com `get_job_logs` e confirmei pela própria saída do
+`sentinel.py`: "fila com so 0 post(s) futuro(s)" é a causa, dedupada por dia
+(`content/.falhas_avisadas.json` já tem `fila_vazia_2026-10-23`); as 7 runs
+seguintes (05:07, 10:18 etc.) foram `success`. Comportamento intencional do
+código (1ª falha do dia vira "problema"/e-mail, as seguintes no mesmo dia
+caem em "aviso"), não bug. `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto".
+Fila sem mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+~79800 min esperando o Ramón aprovar/recusar) — falta de decisão/filmagem
+dele, regra 6, não é bug de código; já comunicado antes, não repito.
+Nenhum código alterado, nenhum recado novo mandado — silêncio.
+
+## 🔍 23/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh auth status` falhou (`GH_TOKEN`
+inválido nesta nuvem), então sem `gh run list`/`gh run view --log` agora;
+diagnóstico veio do próprio repo. `git log` mostra a mesma `failure` crônica
+de 00:17:10Z já registrada na checagem anterior (00:3x), intercalada com
+`success` — `content/.falhas_avisadas.json` já contém `fila_vazia_2026-10-23`
+(dedupe do `sentinel.py`, não bug novo). `SAUDE-DO-PROJETO.md`: "Nenhum erro
+aberto". `content/recados.md` sem recado novo. Fila sem mudança: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`), 5ª semana sem
+filmagem nova — falta de filmagem/decisão dele, regra 6, não é bug de
+código; já comunicado antes, não repito. Nenhum código alterado, nenhum
+recado novo mandado — silêncio.
+
 ## 🔍 23/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
