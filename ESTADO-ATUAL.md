@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 23/10/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 24/10/2026 00:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-23T15:16:49Z schedule success
-2026-10-23T12:33:09Z push success
-2026-10-23T10:18:38Z schedule success
+2026-10-23T22:26:55Z schedule success
+2026-10-23T20:32:31Z push success
+2026-10-23T19:23:29Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,18 +104,61 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+c284f1c Checagem 20:3x (vigia da nuvem): sem bug novo, silêncio
+ada43ad chore: atualiza manutenção [skip ci]
+6ef5c0f chore: atualiza estado da fila [skip ci]
+d691113 checagem de rotina 23/10 16:3x (vigia da nuvem) - sem bug novo
 3650beb checagem de rotina 23/10 12:3x (vigia da nuvem) - sem bug novo
 35daf21 chore: atualiza estado da fila [skip ci]
 e68b2de checagem de rotina 23/10 08:3x (vigia da nuvem) - sem bug novo
 71fb02e chore: atualiza estado da fila [skip ci]
-fe413bd chore: atualiza estado da fila [skip ci]
-e808285 checagem de rotina 23/10 00:3x (vigia da nuvem) - sem bug novo
-2c41921 chore: atualiza estado da fila [skip ci]
-8960d15 chore: atualiza estado da fila [skip ci]
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+## 🔍 24/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(8 runs mais recentes): `success` em 22:26:55Z, 19:23:29Z, 18:00:07Z,
+15:16:49Z, 10:18:38Z, 05:07:12Z, 21:48:20Z (dia anterior) — a única `failure`
+continua a mesma crônica de 00:17:10Z/23-10, já investigada e dedupada
+(`fila_vazia_2026-10-23` em `content/.falhas_avisadas.json`). `SAUDE-DO-
+PROJETO.md`: "Nenhum erro aberto". `content/recados.md` sem recado novo
+(todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`) — falta de decisão/filmagem dele, regra 6, já
+comunicado antes, não repito. Nenhum código alterado, nenhum recado novo
+mandado — silêncio.
+
+## 🔍 23/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 runs mais recentes): `success` em 19:23:29Z, 18:00:07Z, 15:16:49Z,
+10:18:38Z, 05:07:12Z — nenhuma `failure` nesta janela (a crônica de fila
+vazia de 00:17:10Z já segue dedupada em `content/.falhas_avisadas.json` com
+`fila_vazia_2026-10-23`). `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto".
+`content/recados.md` sem recado novo (todos `[x]`). Fila sem mudança: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`) — falta de
+decisão/filmagem dele, regra 6, já comunicado antes, não repito. Nenhum
+código alterado, nenhum recado novo mandado — silêncio.
+
+## 🔍 23/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 runs mais recentes): `success` em 15:16:49Z, 10:18:38Z, 05:07:12Z; a única
+`failure` é a mesma crônica de 00:17:10Z já investigada e dedupada
+(`fila_vazia_2026-10-23` em `content/.falhas_avisadas.json`, confirmado na
+checagem de 12:3x com `get_job_logs` — "fila com so 0 post(s) futuro(s)"),
+nada novo desde então. `SAUDE-DO-PROJETO.md`: "Nenhum erro aberto".
+`content/recados.md` sem recado novo (todos `[x]`). Fila sem mudança: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`) — falta de
+decisão/filmagem dele, regra 6, já comunicado antes, não repito. Nenhum
+código alterado, nenhum recado novo mandado — silêncio.
+
 ## 🔍 23/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
