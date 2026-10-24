@@ -1,4 +1,19 @@
 ## Decisões e contexto
+## 🔍 24/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 05:15:45Z, `failure` crônica em 00:54:49Z
+(mesma causa já investigada na checagem de 04:3x — `sentinel.py` reportando
+fila com 0 posts futuros, já dedupada em `content/.falhas_avisadas.json`),
+`success` em 22:26:55Z/19:23:29Z/18:00:07Z. Nada novo desde a última
+checagem. `SAUDE-DO-PROJETO.md`: sem linha de erro aberta (varredura de
+13/10, mas vazia = ok). `content/recados.md` sem recado novo (todos `[x]`).
+Fila sem mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+auditoria já `SEM OBJECAO`) — esperando o Ramón aprovar/recusar
+(`REQUIRE_APPROVAL=1`), regra 5 proíbe eu decidir isso; já comunicado antes
+em dezenas de checagens anteriores, não repito. Nenhum código alterado,
+nenhum recado novo mandado — silêncio.
+
 ## 🔍 24/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh auth status` ok nesta checagem;
