@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 24/10/2026 16:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 24/10/2026 20:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-24T15:59:14Z schedule success
-2026-10-24T13:45:03Z schedule success
-2026-10-24T12:33:20Z push success
+2026-10-24T19:36:51Z schedule success
+2026-10-24T17:07:12Z schedule success
+2026-10-24T17:04:07Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,18 +104,33 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+001a25d chore: atualiza estado da fila [skip ci]
+e54f9e4 checagem de rotina 24/10 16:3x (vigia da nuvem) - sem bug novo
 6a0fe95 chore: atualiza manutenção [skip ci]
 e02f067 checagem de rotina 24/10 12:3x (vigia da nuvem) - sem bug novo
 3ef56fa chore: atualiza estado da fila [skip ci]
 ff23557 checagem de rotina 24/10 08:3x (vigia da nuvem) - sem bug novo
 1efe24e checagem de rotina 24/10 04:3x (vigia da nuvem) - sem bug novo
 1f63fa8 chore: atualiza estado da fila [skip ci]
-28c79fb checagem de rotina 24/10 00:3x (vigia da nuvem) - sem bug novo
-c284f1c Checagem 20:3x (vigia da nuvem): sem bug novo, silêncio
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 24/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 15:59:14Z/13:45:03Z/12:33:20Z (push)/09:40:31Z,
+`failure` crônica em 00:54:49Z (mesma causa já investigada — `sentinel.py`
+reportando fila com 0 posts futuros, já dedupada em
+`content/.falhas_avisadas.json` como `fila_vazia_2026-10-24`). Nada novo
+desde a última checagem (12:3x). `SAUDE-DO-PROJETO.md`: sem linha de erro
+aberta (varredura de 13/10, vazia = ok). `content/recados.md` sem recado
+novo (todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, auditoria já `SEM OBJECAO`) — esperando o
+Ramón aprovar/recusar (`REQUIRE_APPROVAL=1`), regra 5 proíbe eu decidir
+isso; já comunicado antes em dezenas de checagens anteriores, não repito.
+Nenhum código alterado, nenhum recado novo mandado — silêncio.
 
 ## 🔍 24/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
 
