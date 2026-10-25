@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 25/10/2026 08:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 25/10/2026 20:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-25T05:01:21Z schedule success
-2026-10-25T04:33:02Z push success
-2026-10-25T00:32:47Z push success
+2026-10-25T20:12:13Z schedule success
+2026-10-25T17:43:39Z schedule success
+2026-10-25T17:18:16Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,18 +104,60 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+c47d092 checagem de rotina 25/10 16:3x (vigia da nuvem) - sem bug novo
+4d9e24f chore: atualiza manutenção [skip ci]
+a554bcc chore: atualiza estado da fila [skip ci]
+f8a9b4d checagem de rotina 25/10 12:3x (vigia da nuvem) - sem bug novo
+d1a0f71 checagem de rotina 25/10 08:3x (vigia da nuvem) - sem bug novo
 c64eb45 chore: atualiza estado da fila [skip ci]
 80c4f9e checagem de rotina 25/10 04:3x (vigia da nuvem) - sem bug novo
 4e74af1 checagem de rotina 25/10 00:3x (vigia da nuvem) - sem bug novo
-b967460 chore: atualiza estado da fila [skip ci]
-6e69672 checagem de rotina 24/10 20:3x (vigia da nuvem) - sem bug novo
-001a25d chore: atualiza estado da fila [skip ci]
-e54f9e4 checagem de rotina 24/10 16:3x (vigia da nuvem) - sem bug novo
-6a0fe95 chore: atualiza manutenção [skip ci]
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 25/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 14:08:01Z e 09:58:12Z (schedule), nenhuma
+falha nova desde a checagem anterior (12:3x) — a única `failure` da janela
+continua sendo a mesma de 00:25:11Z, já dedupada em
+`content/.falhas_avisadas.json` (`fila_vazia_2026-10-25`). `SAUDE-DO-
+PROJETO.md`: sem linha de erro aberta. `content/recados.md` sem recado
+novo (todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, auditoria já `SEM OBJECAO`) — esperando o
+Ramón aprovar/recusar, regra 5 proíbe eu decidir isso; já comunicado antes
+em dezenas de checagens anteriores, não repito. Nenhum código alterado,
+nenhum recado novo mandado — silêncio.
+
+## 🔍 25/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 09:58:12Z (schedule), nenhuma falha nova
+desde a checagem anterior (08:3x) — a única `failure` da janela continua
+sendo a mesma de 00:25:11Z, já dedupada em `content/.falhas_avisadas.json`
+(`fila_vazia_2026-10-25`), confirmado via `gh run view` (passo "Sentinela"
+morto por "fila com so 0 post(s) futuro(s)", exit 1 intencional). `SAUDE-
+DO-PROJETO.md`: sem linha de erro aberta. `content/recados.md` sem recado
+novo (todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, auditoria já `SEM OBJECAO`) — esperando o
+Ramón aprovar/recusar, regra 5 proíbe eu decidir; já comunicado antes em
+dezenas de checagens anteriores, não repito. Nenhum código alterado,
+nenhum recado novo mandado — silêncio.
+
+## 🔍 25/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 05:01:21Z (schedule), nenhuma falha nova desde
+a checagem anterior (04:3x) — a única `failure` da janela continua sendo a
+mesma de 00:25:11Z, já dedupada em `content/.falhas_avisadas.json`
+(`fila_vazia_2026-10-25`). `SAUDE-DO-PROJETO.md`: sem linha de erro aberta.
+`content/recados.md` sem recado novo (todos `[x]`). Fila sem mudança: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, auditoria já `SEM
+OBJECAO`) — esperando o Ramón aprovar/recusar, regra 5 proíbe eu decidir;
+já comunicado antes em dezenas de checagens anteriores, não repito. Nenhum
+código alterado, nenhum recado novo mandado — silêncio.
 
 ## 🔍 25/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
 
