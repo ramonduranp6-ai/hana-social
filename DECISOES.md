@@ -1,5 +1,19 @@
 ## Decisões e contexto
 
+## 🔍 25/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 14:08:01Z e 09:58:12Z (schedule), nenhuma
+falha nova desde a checagem anterior (12:3x) — a única `failure` da janela
+continua sendo a mesma de 00:25:11Z, já dedupada em
+`content/.falhas_avisadas.json` (`fila_vazia_2026-10-25`). `SAUDE-DO-
+PROJETO.md`: sem linha de erro aberta. `content/recados.md` sem recado
+novo (todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, auditoria já `SEM OBJECAO`) — esperando o
+Ramón aprovar/recusar, regra 5 proíbe eu decidir isso; já comunicado antes
+em dezenas de checagens anteriores, não repito. Nenhum código alterado,
+nenhum recado novo mandado — silêncio.
+
 ## 🔍 25/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
