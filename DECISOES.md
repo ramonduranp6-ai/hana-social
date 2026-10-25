@@ -1,5 +1,25 @@
 ## Decisões e contexto
 
+## 🔍 25/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `failure` em 00:25:11Z, `success` em
+22:09:15Z/19:36:51Z/17:07:12Z/17:04:07Z. Baixei o log da falha
+(run 40146615642) com `get_job_logs`: o passo "Sentinela" morreu com a
+mesma causa crônica já investigada em dezenas de checagens — `sentinel.py`
+reportou "fila com so 0 post(s) futuro(s) (minimo saudavel: 2)" e saiu com
+`exit 1`; comportamento intencional do sentinela (alarme de fila vazia),
+não bug de código. O push de estado da fila (passo seguinte) funcionou
+normalmente. Conferi o único post `pending` (`2026-08-28_comida-servida`,
+log do sentinela: "pronto ha 82705 min, ESPERANDO ELE aprovar/recusar") —
+`auditoria.veredito` continua "SEM OBJECAO", é aprovação manual dele mesmo
+(`REQUIRE_APPROVAL=1`), regra 5 proíbe eu decidir isso. `SAUDE-DO-
+PROJETO.md`: sem linha de erro aberta. `content/recados.md` sem recado
+novo (todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending` — falta de
+filmagem/decisão dele (regra 6), já comunicado antes em dezenas de
+checagens anteriores, não repito. Nenhum código alterado, nenhum recado
+novo mandado — silêncio.
+
 ## 🔍 24/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
