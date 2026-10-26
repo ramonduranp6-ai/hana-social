@@ -1,5 +1,18 @@
 ## Decisões e contexto
 
+## 🔍 26/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(10 mais recentes): `success` em 19:37:35Z, 18:41:43Z, 18:26:29Z, 11:58:55Z,
+05:39:15Z, 22:42:14Z, 20:12:13Z, 17:43:39Z e 17:18:16Z; a única `failure` da
+janela (00:54:13Z) continua sendo o mesmo gatilho intencional do sentinela
+(fila vazia de posts futuros), já dedupado em checagens anteriores — não
+repito a investigação. `SAUDE-DO-PROJETO.md`: sem linha de erro aberta.
+`content/recados.md`: sem recado novo (todos `[x]`). Fila sem mudança: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, auditoria já `SEM
+OBJECAO`) — esperando o Ramón aprovar/recusar, regra 5 proíbe eu decidir
+isso. Nenhum código alterado, nenhum recado novo mandado — silêncio.
+
 ## 🔍 26/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
