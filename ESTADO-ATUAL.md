@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 26/10/2026 12:40. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 26/10/2026 16:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-26T12:41:08Z push success
 2026-10-26T11:58:55Z schedule success
 2026-10-26T08:33:39Z push success
-2026-10-26T05:39:15Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+30a4510 checagem de rotina 26/10 12:3x (vigia da nuvem) - sem bug novo
 01f19af chore: atualiza estado da fila [skip ci]
 bde6815 checagem de rotina 26/10 08:3x (vigia da nuvem) - sem bug novo
 bbe869b checagem de rotina 26/10 04:3x (vigia da nuvem) - sem bug novo
@@ -111,7 +112,6 @@ bbe869b checagem de rotina 26/10 04:3x (vigia da nuvem) - sem bug novo
 778d53d checagem de rotina 26/10 00:3x (vigia da nuvem) - sem bug novo
 8519ede chore: atualiza estado da fila [skip ci]
 962125b checagem de rotina 25/10 20:3x (vigia da nuvem) - sem bug novo
-c47d092 checagem de rotina 25/10 16:3x (vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
@@ -121,6 +121,17 @@ M DECISOES.md
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 26/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(6 mais recentes): `success` em 11:58:55Z e nas 4 anteriores; a `failure` de
+00:54:13Z continua sendo o mesmo gatilho intencional do sentinela (fila vazia
+de posts futuros), já dedupado. `SAUDE-DO-PROJETO.md`: sem linha de erro
+aberta. `content/recados.md`: sem recado novo (todos `[x]`). Fila sem
+mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, auditoria já
+`SEM OBJECAO`) — esperando o Ramón aprovar/recusar, regra 5 proíbe eu decidir
+isso. Nenhum código alterado, nenhum recado novo mandado — silêncio.
 
 ## 🔍 26/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
 
