@@ -1,5 +1,20 @@
 ## Decisões e contexto
 
+## 🔍 27/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+nova `failure` em 01:45:11Z desde a checagem anterior (`actions_list`, não
+suposto). Log real conferido (`gh run view`, jobs): falhou no step
+"Sentinela" (`publisher/sentinel.py`), o mesmo alarme intencional de fila com
+0 posts futuros aprovados — já dedupado em `content/.falhas_avisadas.json`
+(`fila_vazia_2026-10-27` presente). Mesmo buraco de falta de CONTEÚDO aberto
+desde 25/08/2026 (64 dias seguidos na lista de dedupe), não é bug de código
+novo. `SAUDE-DO-PROJETO.md`: sem linha de erro aberta. `content/recados.md`:
+sem recado novo. Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, auditoria já `SEM OBJECAO`) — esperando o Ramón
+aprovar/recusar, regra 5 proíbe eu decidir isso. Nenhum código alterado,
+nenhum recado novo mandado — silêncio, mesmo motivo das checagens anteriores.
+
 ## 🔍 27/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
