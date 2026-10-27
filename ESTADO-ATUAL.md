@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/10/2026 16:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/10/2026 20:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-27T13:26:06Z schedule success
-2026-10-27T12:38:24Z push success
-2026-10-27T08:34:08Z push success
+2026-10-27T19:02:28Z schedule success
+2026-10-27T18:49:04Z schedule success
+2026-10-27T18:01:49Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,14 +104,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+5eb89bd chore: atualiza estado da fila [skip ci]
+dd7e866 chore: atualiza manutenção [skip ci]
+048c688 checagem de rotina 27/10 16:3x (vigia da nuvem) - sem bug novo
 6e72505 chore: atualiza estado da fila [skip ci]
 ebf2b78 checagem de rotina 27/10 12:3x (vigia da nuvem) - sem bug novo
 09566a4 checagem de rotina 27/10 08:3x (vigia da nuvem) - sem bug novo
 a561d63 checagem de rotina 27/10 04:3x (vigia da nuvem) - sem bug novo
 1903e90 chore: atualiza estado da fila [skip ci]
-eb62604 chore: atualiza estado da fila [skip ci]
-640c4c6 checagem de rotina 27/10 00:3x (vigia da nuvem) - sem bug novo
-238a4bd Checagem automática 26/10 (20:3x): sem bug novo, silêncio
 ```
 Alterações não commitadas:
 ```
@@ -121,6 +121,22 @@ M DECISOES.md
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 27/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 19:02:28Z e mais 2 `success` antes dela; a
+`failure` de 01:45:11Z já investigada nas checagens anteriores de hoje (04:3x,
+08:3x, 12:3x, 16:3x) — mesmo alarme intencional do `sentinel.py` para fila com
+0 posts futuros aprovados, dedupado em `content/.falhas_avisadas.json`
+(`fila_vazia_2026-10-27` já presente). Mesmo buraco de falta de CONTEÚDO aberto
+desde 25/08/2026 (66 dias seguidos na lista de dedupe), não é bug de código
+novo. `SAUDE-DO-PROJETO.md`: sem linha de erro aberta (última varredura
+13/10). `content/recados.md`: sem recado novo. Fila sem mudança: 7 `rejected`
++ 1 `pending` (`2026-08-28_comida-servida`, auditoria já `SEM OBJECAO`) —
+esperando o Ramón aprovar/recusar, regra 5 proíbe eu decidir isso. Nenhum
+código alterado, nenhum recado novo mandado — silêncio, mesmo motivo das
+checagens anteriores.
 
 ## 🔍 27/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
 
