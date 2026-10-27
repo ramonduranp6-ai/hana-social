@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/10/2026 12:38. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/10/2026 16:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-10-27T13:26:06Z schedule success
+2026-10-27T12:38:24Z push success
 2026-10-27T08:34:08Z push success
-2026-10-27T07:07:18Z schedule success
-2026-10-27T04:33:50Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,14 +104,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+6e72505 chore: atualiza estado da fila [skip ci]
+ebf2b78 checagem de rotina 27/10 12:3x (vigia da nuvem) - sem bug novo
 09566a4 checagem de rotina 27/10 08:3x (vigia da nuvem) - sem bug novo
 a561d63 checagem de rotina 27/10 04:3x (vigia da nuvem) - sem bug novo
 1903e90 chore: atualiza estado da fila [skip ci]
 eb62604 chore: atualiza estado da fila [skip ci]
 640c4c6 checagem de rotina 27/10 00:3x (vigia da nuvem) - sem bug novo
 238a4bd Checagem automática 26/10 (20:3x): sem bug novo, silêncio
-27c7872 chore: atualiza manutenção [skip ci]
-7dacc71 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
@@ -121,6 +121,21 @@ M DECISOES.md
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 27/10/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes, via `actions_list`): `success`×4 + a `failure` de
+01:45:11Z, já investigada nas quatro checagens anteriores de hoje — log
+conferido de novo (`get_job_logs`): mesmo alarme intencional do
+`sentinel.py` para fila com 0 posts futuros aprovados, dedupado em
+`content/.falhas_avisadas.json`. Mesmo buraco de falta de CONTEÚDO aberto
+desde 25/08/2026 (66 dias seguidos), não é bug de código novo. `content/
+recados.md`: sem recado novo. Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, auditoria já `SEM OBJECAO`) — esperando o
+Ramón aprovar/recusar, regra 5 proíbe eu decidir isso. Nenhum código
+alterado, nenhum recado novo mandado — silêncio, mesmo motivo das checagens
+anteriores.
 
 ## 🔍 27/10/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
 
