@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/10/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 28/10/2026 08:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-27T22:46:56Z schedule success
-2026-10-27T20:33:00Z push success
-2026-10-27T19:02:28Z schedule success
+2026-10-28T07:51:56Z schedule success
+2026-10-28T04:34:06Z push success
+2026-10-28T01:56:20Z schedule failure
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,18 +104,70 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+11293dd chore: atualiza estado da fila [skip ci]
+5310e9a checagem de rotina 28/10 04:3x (vigia da nuvem) - sem bug novo
+036d1c7 chore: atualiza estado da fila [skip ci]
+e383ca5 chore: atualiza estado da fila [skip ci]
+4bb2317 checagem de rotina 28/10 00:3x (vigia da nuvem) - sem bug novo
 f676a4d checagem de rotina 27/10 20:3x (vigia da nuvem) - sem bug novo
 5eb89bd chore: atualiza estado da fila [skip ci]
 dd7e866 chore: atualiza manutenção [skip ci]
-048c688 checagem de rotina 27/10 16:3x (vigia da nuvem) - sem bug novo
-6e72505 chore: atualiza estado da fila [skip ci]
-ebf2b78 checagem de rotina 27/10 12:3x (vigia da nuvem) - sem bug novo
-09566a4 checagem de rotina 27/10 08:3x (vigia da nuvem) - sem bug novo
-a561d63 checagem de rotina 27/10 04:3x (vigia da nuvem) - sem bug novo
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 28/10/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 07:51:56Z e as 3 anteriores a ela também
+`success`; a única `failure` do dia (01:56:20Z) é a mesma já registrada na
+checagem das 04:3x. `SAUDE-DO-PROJETO.md` sem erro aberto (última varredura
+13/10). `content/recados.md` sem recado novo. Fila sem mudança: 7 `rejected`
++ 1 `pending` (`2026-08-28_comida-servida`, auditoria já `SEM OBJECAO`) —
+esperando o Ramón aprovar/recusar, regra 5 proíbe eu decidir isso. Mesmo
+buraco de falta de CONTEÚDO aberto desde 25/08/2026 (69 dias em
+`content/.falhas_avisadas.json`), não é bug de código novo. Nenhum código
+alterado, nenhum recado novo mandado — silêncio, mesmo motivo das checagens
+anteriores.
+
+## 🔍 28/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `failure` em 01:56:20Z e `success`×4 antes dela — a
+`failure` é a checagem (`publisher/sentinel.py`) confirmada pela leitura dos
+jobs do run (step "Sentinela" vermelho, os demais verdes), mesmo alarme
+intencional para fila com 0 posts futuros aprovados, já dedupado em
+`content/.falhas_avisadas.json` (`fila_vazia_2026-10-28` presente desde essa
+execução — por isso as rodadas seguintes do dia voltam a ficar verdes).
+Download do log completo (`gh run view --log`) bloqueado pela política de
+rede deste container (`results-receiver.actions.githubusercontent.com` e o
+blob de armazenamento do Actions negados pelo proxy) — diagnóstico feito
+pelos jobs/steps da run (via API) e pelos arquivos do próprio repo
+(`sentinel.py`, `.falhas_avisadas.json`), sem inventar causa. Mesmo buraco de
+falta de CONTEÚDO aberto desde 25/08/2026 (68 dias seguidos na lista de
+dedupe), não é bug de código novo. `SAUDE-DO-PROJETO.md`: sem linha de erro
+aberta (última varredura 13/10). `content/recados.md`: sem recado novo. Fila
+sem mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+auditoria já `SEM OBJECAO`) — esperando o Ramón aprovar/recusar, regra 5
+proíbe eu decidir isso. Nenhum código alterado, nenhum recado novo mandado —
+silêncio, mesmo motivo das checagens anteriores.
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success`×5, inclusive a de 22:46:56Z. `SAUDE-DO-PROJETO.md`
+sem erro aberto (última varredura 13/10). `content/recados.md` sem recado
+novo. Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, auditoria já `SEM OBJECAO`) — esperando o
+Ramón aprovar/recusar, regra 5 proíbe eu decidir isso. Mesmo buraco de
+falta de CONTEÚDO aberto desde 25/08/2026 (agora 67 dias seguidos em
+`content/.falhas_avisadas.json`), não é bug de código novo. Nenhum código
+alterado, nenhum recado novo mandado — silêncio, mesmo motivo das
+checagens anteriores.
 
 ## 🔍 27/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
 
