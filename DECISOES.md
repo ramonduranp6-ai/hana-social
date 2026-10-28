@@ -1,6 +1,26 @@
 ## Decisões e contexto
 
-## 🔍 28/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+## 🔍 28/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `failure` em 01:56:20Z e `success`×4 antes dela — a
+`failure` é a checagem (`publisher/sentinel.py`) confirmada pela leitura dos
+jobs do run (step "Sentinela" vermelho, os demais verdes), mesmo alarme
+intencional para fila com 0 posts futuros aprovados, já dedupado em
+`content/.falhas_avisadas.json` (`fila_vazia_2026-10-28` presente desde essa
+execução — por isso as rodadas seguintes do dia voltam a ficar verdes).
+Download do log completo (`gh run view --log`) bloqueado pela política de
+rede deste container (`results-receiver.actions.githubusercontent.com` e o
+blob de armazenamento do Actions negados pelo proxy) — diagnóstico feito
+pelos jobs/steps da run (via API) e pelos arquivos do próprio repo
+(`sentinel.py`, `.falhas_avisadas.json`), sem inventar causa. Mesmo buraco de
+falta de CONTEÚDO aberto desde 25/08/2026 (68 dias seguidos na lista de
+dedupe), não é bug de código novo. `SAUDE-DO-PROJETO.md`: sem linha de erro
+aberta (última varredura 13/10). `content/recados.md`: sem recado novo. Fila
+sem mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+auditoria já `SEM OBJECAO`) — esperando o Ramón aprovar/recusar, regra 5
+proíbe eu decidir isso. Nenhum código alterado, nenhum recado novo mandado —
+silêncio, mesmo motivo das checagens anteriores.
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
 (5 mais recentes): `success`×5, inclusive a de 22:46:56Z. `SAUDE-DO-PROJETO.md`
