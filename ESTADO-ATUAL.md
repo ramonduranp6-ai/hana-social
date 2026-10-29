@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 28/10/2026 08:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 29/10/2026 20:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-28T07:51:56Z schedule success
-2026-10-28T04:34:06Z push success
-2026-10-28T01:56:20Z schedule failure
+2026-10-29T19:19:04Z schedule success
+2026-10-29T18:29:28Z schedule success
+2026-10-29T17:20:57Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,19 +104,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+a2033a8 chore: atualiza manutenção [skip ci]
+f4db1d8 chore: atualiza estado da fila [skip ci]
+4074a4c chore: atualiza estado da fila [skip ci]
+a6107d9 chore: atualiza manutenção [skip ci]
+754422d chore: atualiza estado da fila [skip ci]
+45c6cc3 checagem de rotina 28/10 08:3x (vigia da nuvem) - sem bug novo
 11293dd chore: atualiza estado da fila [skip ci]
 5310e9a checagem de rotina 28/10 04:3x (vigia da nuvem) - sem bug novo
-036d1c7 chore: atualiza estado da fila [skip ci]
-e383ca5 chore: atualiza estado da fila [skip ci]
-4bb2317 checagem de rotina 28/10 00:3x (vigia da nuvem) - sem bug novo
-f676a4d checagem de rotina 27/10 20:3x (vigia da nuvem) - sem bug novo
-5eb89bd chore: atualiza estado da fila [skip ci]
-dd7e866 chore: atualiza manutenção [skip ci]
-```
-Alterações não commitadas:
-```
-M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
