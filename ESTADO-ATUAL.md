@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 30/10/2026 00:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 30/10/2026 04:33. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-10-29T21:54:44Z schedule success
-2026-10-29T19:19:04Z schedule success
-2026-10-29T18:29:28Z schedule success
+2026-10-30T04:33:38Z push 
+2026-10-30T01:28:33Z schedule failure
+2026-10-30T00:34:08Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,25 +104,41 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+5951eed checagem de rotina 30/10 04:3x (vigia da nuvem) - sem bug novo
+4358244 chore: atualiza estado da fila [skip ci]
+cced994 checagem de rotina 30/10 00:3x (vigia da nuvem) - sem bug novo
 4a4ada4 chore: atualiza estado da fila [skip ci]
 bb97d80 checagem de rotina 29/10 20:3x (vigia da nuvem) - sem bug novo
 a2033a8 chore: atualiza manutenção [skip ci]
 f4db1d8 chore: atualiza estado da fila [skip ci]
 4074a4c chore: atualiza estado da fila [skip ci]
-a6107d9 chore: atualiza manutenção [skip ci]
-754422d chore: atualiza estado da fila [skip ci]
-45c6cc3 checagem de rotina 28/10 08:3x (vigia da nuvem) - sem bug novo
 ```
 Alterações não commitadas:
 ```
-M DECISOES.md
- M ESTADO-ATUAL.md
+M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
 
-## 🔍 30/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+## 🔍 30/10/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success`×4 (29/10) e a única `failure` do período
+(2026-10-30T01:28:33Z, run 40986066880) é o mesmo alarme intencional do
+Sentinela para fila com 0 posts futuros aprovados — confirmado lendo
+`publisher/sentinel.py` (linha 125, `MARCADOR_FALHAS_AVISADAS`): é o próprio
+script que grava a chave `fila_vazia_<data>` em `content/.falhas_avisadas.json`
+quando detecta a fila vazia, e `fila_vazia_2026-10-30` já está na lista — ou
+seja, o próprio robô já reconheceu e dedupou essa falha, não é bug novo.
+`SAUDE-DO-PROJETO.md`: sem linha de erro aberta (última varredura 13/10).
+`content/recados.md`: sem recado novo. Fila sem mudança: 7 `rejected` + 1
+`pending` (`2026-08-28_comida-servida`, auditoria já `SEM OBJECAO`) —
+esperando o Ramón aprovar/recusar, regra 5 proíbe eu decidir isso. Mesmo
+buraco de falta de CONTEÚDO aberto desde 25/08/2026 (68 dias seguidos na
+lista de dedupe), não é bug de código novo e já foi avisado muitas vezes
+antes — não repito o recado. Nenhum código alterado, nenhum recado novo
+mandado — silêncio, mesmo motivo das checagens anteriores.
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
 (5 mais recentes): `success`×4 (21:54:44Z, 19:19:04Z, 17:20:57Z e 10:59:28Z de
