@@ -1,5 +1,17 @@
 ## Decisões e contexto
 
+## 🔍 31/10/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): todas `success` (23:23:48Z, 19:47:40Z, 18:54:50Z,
+14:43:48Z, 07:35:56Z) — sem falha nova desde a última checagem.
+`content/recados.md`: sem recado novo. `SAUDE-DO-PROJETO.md`: sem erro aberto
+(última varredura 13/10). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`) — esperando o Ramón, regra 5 proíbe eu decidir.
+Buraco de CONTEÚDO aberto desde 25/08/2026 continua, já avisado muitas vezes
+— não repito o recado. Nenhum código alterado — silêncio, mesmo motivo das
+checagens anteriores.
+
 ## 🔍 30/10/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
