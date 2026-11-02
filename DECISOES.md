@@ -1,5 +1,20 @@
 ## Decisões e contexto
 
+## 🔍 02/11/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `failure` em 02:39:14Z, `success` em 00:32:51Z, 23:15:22Z
+(31/10... na verdade 01/11), 19:50:11Z, 18:39:13Z. A `failure` de 02:39:14Z é
+o mesmo alarme intencional do `sentinel.py`: passo "Rodar publicador" ✓, só
+o "Sentinela" ✗ por fila com 0 posts futuros aprovados (mínimo saudável: 2);
+o push do estado da fila funcionou normalmente (commit `d3e2091` do próprio
+robô). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, esperando o Ramón aprovar/recusar há ~94359
+min / ~65,5 dias — regra 5 proíbe eu decidir por ele). Buraco de CONTEÚDO
+aberto desde 25/08/2026 continua, já avisado muitas vezes — não repito o
+recado. Nenhum código alterado — silêncio, mesmo motivo das checagens
+anteriores.
+
 ## 🔍 02/11/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
