@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 02/11/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 02/11/2026 08:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-11-01T23:15:22Z schedule success
-2026-11-01T20:32:27Z push success
-2026-11-01T19:50:11Z schedule success
+2026-11-02T04:33:06Z push success
+2026-11-02T02:39:14Z schedule failure
+2026-11-02T00:32:51Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,23 +104,33 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+d79ef27 checagem de rotina 02/11 04:3x (vigia da nuvem) - sem bug novo
+d3e2091 chore: atualiza estado da fila [skip ci]
+f35836b checagem de rotina 02/11 00:3x (vigia da nuvem) - sem bug novo
 85febfb checagem de rotina 01/11 20:3x (vigia da nuvem) - sem bug novo
 84751f3 chore: atualiza manutenção [skip ci]
 d4bcd5b checagem de rotina 01/11 16:3x (vigia da nuvem) - sem bug novo
 9f08426 chore: atualiza estado da fila [skip ci]
 e89840f checagem de rotina 01/11 12:3x (vigia da nuvem) - sem bug novo
-83e4970 checagem de rotina 01/11 08:3x (vigia da nuvem) - sem bug novo
-f4a16d0 chore: atualiza estado da fila [skip ci]
-6893b92 checagem de rotina 01/11 04:3x (vigia da nuvem) - sem bug novo
-```
-Alterações não commitadas:
-```
-M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 02/11/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `failure` em 02:39:14Z, `success` em 00:32:51Z, 23:15:22Z
+(31/10... na verdade 01/11), 19:50:11Z, 18:39:13Z. A `failure` de 02:39:14Z é
+o mesmo alarme intencional do `sentinel.py`: passo "Rodar publicador" ✓, só
+o "Sentinela" ✗ por fila com 0 posts futuros aprovados (mínimo saudável: 2);
+o push do estado da fila funcionou normalmente (commit `d3e2091` do próprio
+robô). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, esperando o Ramón aprovar/recusar há ~94359
+min / ~65,5 dias — regra 5 proíbe eu decidir por ele). Buraco de CONTEÚDO
+aberto desde 25/08/2026 continua, já avisado muitas vezes — não repito o
+recado. Nenhum código alterado — silêncio, mesmo motivo das checagens
+anteriores.
 
 ## 🔍 02/11/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
 
