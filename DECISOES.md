@@ -1,5 +1,20 @@
 ## Decisões e contexto
 
+## 🔍 03/11/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `failure` em 02:30:57Z, `success` em 22:29:59Z, 20:26:42Z,
+10:22:12Z, `failure` em 02:39:14Z (02/11) — mesma dupla já confirmada na
+checagem das 04:3x, nada novo. Confirmei de novo no log da falha de
+02:30:57Z (`gh run view 41566592437 --log`): é o mesmo alarme intencional do
+`sentinel.py` — "fila com so 0 post(s) futuro(s)" — já investigado e
+deduplicado em todas as checagens anteriores, não um bug de código. Fila
+sem mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+esperando o Ramón aprovar/recusar há ~67 dias — regra 5 proíbe eu decidir
+por ele). Buraco de CONTEÚDO aberto desde 25/08/2026 continua, já avisado
+muitas vezes — não repito o recado. Nenhum código alterado — silêncio,
+mesmo motivo das checagens anteriores.
+
 ## 🔍 03/11/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
