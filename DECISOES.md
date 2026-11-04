@@ -1,5 +1,21 @@
 ## Decisões e contexto
 
+## 🔍 04/11/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh` nesta sessão de nuvem está
+com token inválido (`gh auth status` falha), então confirmei pela fonte
+local do próprio repo: `content/.falhas_avisadas.json` já tem
+`fila_vazia_2026-11-04` registrada (dedupe feito), e o `gh run list` do
+`estado.py` (que usa outro caminho de autenticação) mostra só a mesma
+dupla de sempre — `failure` em 02:50:29Z (alarme intencional do
+`sentinel.py`, "fila com so 0 post(s) futuro(s)", `MIN_POSTS_FUTUROS=2`,
+publisher/sentinel.py:42) e `success` nas demais execuções. Nenhuma falha
+nova, nenhum bug de código. Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, esperando o Ramón aprovar/recusar há ~68
+dias — regra 5 proíbe eu decidir por ele). Buraco de CONTEÚDO aberto desde
+25/08/2026 continua, já avisado muitas vezes — não repito o recado. Nenhum
+código alterado — silêncio, mesmo motivo das checagens anteriores.
+
 ## 🔍 04/11/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
