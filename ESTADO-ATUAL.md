@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 04/11/2026 04:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 04/11/2026 04:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -104,18 +104,32 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+023c147 chore: atualiza estado (regenerado pelo estado.py)
+8b2e16b checagem de rotina 04/11 04:3x (vigia da nuvem) - sem bug novo
 da7a9ff chore: atualiza estado da fila [skip ci]
 9dda1d4 checagem de rotina 04/11 00:3x (vigia da nuvem) - sem bug novo
 3e07575 checagem de rotina 03/11 20:1x (vigia da nuvem) - sem bug novo
 2388107 chore: atualiza estado da fila [skip ci]
 d5af911 chore: atualiza manutenção [skip ci]
 cdfb6c9 chore: atualiza estado da fila [skip ci]
-5a43d79 checagem de rotina 03/11 16:3x (vigia da nuvem) - sem bug novo
-852a99d checagem de rotina 03/11 12:3x (vigia da nuvem) - sem bug novo
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 04/11/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `failure` em 02:50:29Z, `success` em 00:32:58Z (03/11→04/11
+push), `success` em 22:54:20Z, 20:19:04Z, 17:57:03Z (03/11) — confirmei de
+novo no log (`gh run view 41763323110 --log`): mesmo alarme intencional do
+`sentinel.py`, "fila com so 0 post(s) futuro(s)", já investigado e
+deduplicado em todas as checagens anteriores, não bug de código. Nenhuma
+falha nova. Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, esperando o Ramón aprovar/recusar há ~68
+dias — regra 5 proíbe eu decidir por ele). Buraco de CONTEÚDO aberto desde
+25/08/2026 continua, já avisado muitas vezes — não repito o recado. Nenhum
+código alterado — silêncio, mesmo motivo das checagens anteriores.
 
 ## 🔍 04/11/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
 
