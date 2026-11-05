@@ -1,5 +1,18 @@
 ## Decisões e contexto
 
+## 🔍 05/11/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh` nesta sessão de nuvem está sem
+auth válido de novo; confirmei pelo GitHub MCP (`actions_list`
+`list_workflow_runs`, publish.yml): 4 `success` (23:49:36Z, 20:35:17Z,
+18:07:55Z, 10:13:54Z) e 1 `failure` em 02:50:29Z — mesmo alarme intencional do
+`sentinel.py`, "fila com so 0 post(s) futuro(s)", já deduplicado em
+`.falhas_avisadas.json` (`fila_vazia_2026-11-04`). Nenhuma falha nova. Fila
+sem mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+esperando o Ramón aprovar/recusar). Buraco de CONTEÚDO aberto desde
+25/08/2026 continua, já avisado muitas vezes — não repito o recado. Nenhum
+código alterado — silêncio, mesmo motivo das checagens anteriores.
+
 ## 🔍 04/11/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
