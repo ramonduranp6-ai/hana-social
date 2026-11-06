@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 05/11/2026 16:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 06/11/2026 04:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-11-05T12:52:05Z schedule success
-2026-11-05T12:32:43Z push success
-2026-11-05T08:32:57Z push success
+2026-11-06T01:00:08Z schedule failure
+2026-11-06T00:33:24Z push success
+2026-11-05T20:52:24Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,18 +104,45 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+f37d299 chore: atualiza estado da fila [skip ci]
+5bccde0 checagem de rotina 06/11 00:3x (vigia da nuvem) - sem bug novo
+8ed508e checagem de rotina 05/11 20:3x (vigia da nuvem) - sem bug novo
+47b7c05 chore: atualiza estado da fila [skip ci]
+92a48b9 chore: atualiza manutenção [skip ci]
+ff61d2d checagem de rotina 05/11 16:3x (vigia da nuvem) - sem bug novo
 4fbf9c2 chore: atualiza estado da fila [skip ci]
 3fe34b7 checagem de rotina 05/11 12:3x (vigia da nuvem) - sem bug novo
-48e617b checagem de rotina 05/11 08:3x (vigia da nuvem) - sem bug novo
-9a0c756 checagem de rotina 05/11 04:3x (vigia da nuvem) - sem bug novo
-163ce31 chore: atualiza estado da fila [skip ci]
-decb70a checagem de rotina 05/11 00:3x (vigia da nuvem) - sem bug novo
-a2ffc99 checagem de rotina 04/11 20:3x (vigia da nuvem) - sem bug novo
-c86a9ce chore: atualiza manutenção [skip ci]
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 06/11/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 20:52:24Z, 20:25:20Z e 12:52:05Z (05/11),
+mesma `failure` em 04:30:20Z de sempre (alarme intencional do `sentinel.py`,
+"fila com so 0 post(s) futuro(s)", confirmado via `gh run view 41968206703
+--log`, já deduplicado em `.falhas_avisadas.json` — `fila_vazia_2026-11-05`
+é só a entrada daquele dia). Nenhuma falha nova. `SAUDE-DO-PROJETO.md` sem
+erro aberto. Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, esperando o Ramón aprovar/recusar há ~70 dias
+— regra 5 proíbe eu decidir por ele). Buraco de CONTEÚDO aberto desde
+25/08/2026 continua, já avisado muitas vezes — não repito o recado. Nenhum
+código alterado — silêncio, mesmo motivo das checagens anteriores.
+
+## 🔍 05/11/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(3 mais recentes): `success` em 20:25:20Z e 12:52:05Z, mesma `failure` em
+04:30:20Z de sempre (alarme intencional do `sentinel.py`, "fila com so 0
+post(s) futuro(s)", já deduplicado em `.falhas_avisadas.json` desde
+25/08/2026 — `fila_vazia_2026-11-05` é só a entrada de hoje). Nenhuma falha
+nova. `SAUDE-DO-PROJETO.md` sem erro aberto. Fila sem mudança: 7 `rejected`
++ 1 `pending` (`2026-08-28_comida-servida`, esperando o Ramón aprovar/recusar
+há ~69 dias — regra 5 proíbe eu decidir por ele). Buraco de CONTEÚDO aberto
+desde 25/08/2026 continua, já avisado muitas vezes — não repito o recado.
+Nenhum código alterado — silêncio.
 
 ## 🔍 05/11/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
 
@@ -6652,3 +6679,12 @@ crescer exige Reels, hashtag de nicho e presença nos perfis grandes da raça.
 - [[estudo-virais-2026-08]]
 - [[garimpo-apify-2026-08-09]]
 - [[hipoteses-produto]]
+
+## 🔍 05/11/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+sem mudança: mesma `failure` em 04:30:20Z (alarme intencional do `sentinel.py`,
+fila vazia, já deduplicado), `success` em 12:52:05Z e antes disso. Fila sem
+mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, esperando o
+Ramón). Buraco de conteúdo continua, já avisado — não repito. Nenhum código
+alterado — silêncio.
