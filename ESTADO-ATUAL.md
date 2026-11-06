@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 06/11/2026 12:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 06/11/2026 16:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-11-06T16:04:04Z schedule success
+2026-11-06T12:32:50Z push success
 2026-11-06T08:08:45Z schedule success
-2026-11-06T01:00:08Z schedule failure
-2026-11-06T00:33:24Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,14 +104,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+b032660 chore: atualiza estado da fila [skip ci]
+6630d10 checagem de rotina 06/11 12:3x (vigia da nuvem) - sem bug novo
 aa1918d chore: atualiza estado da fila [skip ci]
 58c8a42 chore: atualiza estado da fila [skip ci]
 7229236 chore: atualiza estado da fila [skip ci]
 9df18b4 checagem de rotina 06/11 04:3x (vigia da nuvem) - sem bug novo
 f37d299 chore: atualiza estado da fila [skip ci]
 5bccde0 checagem de rotina 06/11 00:3x (vigia da nuvem) - sem bug novo
-8ed508e checagem de rotina 05/11 20:3x (vigia da nuvem) - sem bug novo
-47b7c05 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
@@ -121,6 +121,19 @@ M DECISOES.md
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 06/11/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 16:04:04Z e 08:08:45Z, mesma `failure` em
+01:00:08Z de sempre (run 42140805421, alarme intencional do `sentinel.py`,
+"fila com so 0 post(s) futuro(s)", já deduplicado em `.falhas_avisadas.json`
+desde a checagem anterior). Nenhuma falha nova. `SAUDE-DO-PROJETO.md` sem erro
+aberto. Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, esperando o Ramón aprovar/recusar há ~70 dias —
+regra 5 proíbe eu decidir por ele). Buraco de CONTEÚDO aberto desde
+25/08/2026 continua, já avisado muitas vezes — não repito o recado. Nenhum
+código alterado — silêncio, mesmo motivo das checagens anteriores.
 
 ## 🔍 06/11/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
 
