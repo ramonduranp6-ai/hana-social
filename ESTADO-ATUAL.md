@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 06/11/2026 08:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 06/11/2026 12:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -104,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+aa1918d chore: atualiza estado da fila [skip ci]
 58c8a42 chore: atualiza estado da fila [skip ci]
 7229236 chore: atualiza estado da fila [skip ci]
 9df18b4 checagem de rotina 06/11 04:3x (vigia da nuvem) - sem bug novo
@@ -111,11 +112,27 @@ f37d299 chore: atualiza estado da fila [skip ci]
 5bccde0 checagem de rotina 06/11 00:3x (vigia da nuvem) - sem bug novo
 8ed508e checagem de rotina 05/11 20:3x (vigia da nuvem) - sem bug novo
 47b7c05 chore: atualiza estado da fila [skip ci]
-92a48b9 chore: atualiza manutenção [skip ci]
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 06/11/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `failure` em 01:00:08Z é o mesmo alarme intencional do
+`sentinel.py` ("fila com so 0 post(s) futuro(s)"), confirmado via `gh run view
+42140805421 --log` — já deduplicado em `content/.falhas_avisadas.json`.
+`success` nos outros 4 runs (push do estado). Nenhuma falha nova. Fila sem
+mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, esperando o
+Ramón aprovar/recusar há ~70 dias). Buraco de CONTEÚDO aberto desde
+25/08/2026 continua, já avisado muitas vezes — não repito o recado. Nenhum
+código alterado — silêncio, mesmo motivo das checagens anteriores.
 
 ## 🔍 06/11/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
 
