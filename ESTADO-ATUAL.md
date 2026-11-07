@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 07/11/2026 08:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 07/11/2026 16:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-11-07T07:37:37Z schedule success
-2026-11-07T04:33:13Z push success
-2026-11-07T01:28:41Z schedule failure
+2026-11-07T14:32:46Z schedule success
+2026-11-07T12:32:40Z push success
+2026-11-07T08:32:38Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,23 +104,27 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+25283b8 checagem de rotina 07/11 12:3x (vigia da nuvem) - sem bug novo
+e75de81 checagem de rotina 07/11 08:3x (vigia da nuvem) - sem bug novo
 98d9cf5 checagem de rotina 07/11 04:3x (vigia da nuvem) - sem bug novo
 e511cd3 chore: atualiza estado da fila [skip ci]
 c0204e0 checagem de rotina 07/11 00:3x (vigia da nuvem) - sem bug novo
 64cd563 chore: atualiza estado da fila [skip ci]
 56d4a9e chore: atualiza manutenção [skip ci]
 e7e0040 checagem de rotina 06/11 16:3x (vigia da nuvem) - sem bug novo
-b032660 chore: atualiza estado da fila [skip ci]
-6630d10 checagem de rotina 06/11 12:3x (vigia da nuvem) - sem bug novo
-```
-Alterações não commitadas:
-```
-M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 07/11/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 07:37:37Z, 21:40:42Z, 20:08:00Z e 16:04:04Z,
+mesma `failure` em 01:28:41Z de sempre (run 42324266055, alarme intencional do
+`sentinel.py`, já deduplicado). Nenhuma falha nova desde a checagem de 08:3x.
+Fila sem mudança: 7 `rejected` + 1 `pending`, esperando o Ramón. Buraco de
+CONTEÚDO continua, já avisado — não repito. Nenhum código alterado.
 
 ## 🔍 07/11/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
 
