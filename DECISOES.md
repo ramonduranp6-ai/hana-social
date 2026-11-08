@@ -1,5 +1,14 @@
 ## Decisões e contexto
 
+## 🔍 08/11/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 22:51:54Z, 20:32:47Z (push), 19:12:53Z,
+18:22:39Z e 14:32:46Z — nenhuma falha nova desde a checagem de 20:3x.
+`SAUDE-DO-PROJETO.md` sem erro aberto. Fila sem mudança: 7 `rejected` + 1
+`pending` (`2026-08-28_comida-servida`, esperando o Ramón). Buraco de
+CONTEÚDO continua, já avisado — não repito. Nenhum código alterado.
+
 ## 🔍 07/11/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
