@@ -1,5 +1,15 @@
 ## Decisões e contexto
 
+## 🔍 08/11/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(8 mais recentes): `success` em 20:03:29Z e 18:33:17Z (novas desde a checagem
+de 16:3x), mesma `failure` em 01:57:46Z de sempre (já confirmada como o alarme
+intencional do `sentinel.py`, deduplicado). Nenhuma falha nova. Fila sem
+mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, esperando o
+Ramón). Buraco de CONTEÚDO desde 25/08/2026 continua, já avisado — não repito.
+Nenhum código alterado.
+
 ## 🔍 08/11/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`

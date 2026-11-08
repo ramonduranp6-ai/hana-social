@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 08/11/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 08/11/2026 20:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-11-08T15:41:01Z schedule success
-2026-11-08T12:33:01Z push success
-2026-11-08T08:38:45Z schedule success
+2026-11-08T20:03:29Z schedule success
+2026-11-08T18:33:17Z schedule success
+2026-11-08T17:56:26Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,14 +104,14 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+492072d chore: atualiza estado da fila [skip ci]
+51a8b21 chore: atualiza manutenção [skip ci]
+690f781 docs: registra checagem de vigia 08/11 16:3x (sem bug novo)
 c4efd2e docs: log checagem 12:3x — sem bug novo
 e1b1ace docs: registra checagem de vigia 08/11 08:3x (sem bug novo)
 4a341c4 checagem de rotina 08/11 04:3x (vigia da nuvem) - sem bug novo
 f8b7849 chore: atualiza estado da fila [skip ci]
 24ec338 checagem de rotina 08/11 00:3x (vigia da nuvem) - sem bug novo
-2412954 chore: atualiza estado da fila [skip ci]
-fca336a chore: registra checagem de rotina (vigia da nuvem) sem bug novo
-5db7f51 chore: atualiza estado da fila [skip ci]
 ```
 Alterações não commitadas:
 ```
@@ -121,6 +121,16 @@ M DECISOES.md
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 08/11/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(8 mais recentes): `success` em 20:03:29Z e 18:33:17Z (novas desde a checagem
+de 16:3x), mesma `failure` em 01:57:46Z de sempre (já confirmada como o alarme
+intencional do `sentinel.py`, deduplicado). Nenhuma falha nova. Fila sem
+mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, esperando o
+Ramón). Buraco de CONTEÚDO desde 25/08/2026 continua, já avisado — não repito.
+Nenhum código alterado.
 
 ## 🔍 08/11/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
 
