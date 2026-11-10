@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 09/11/2026 16:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 10/11/2026 00:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-11-09T12:22:40Z schedule success
-2026-11-09T08:36:53Z push success
-2026-11-09T04:33:13Z push success
+2026-11-09T23:12:01Z schedule success
+2026-11-09T22:35:09Z schedule success
+2026-11-09T22:24:17Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,18 +104,66 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+c60d6cf chore: atualiza estado da fila [skip ci]
+075d8ca chore: atualiza manutenção [skip ci]
+4981597 docs: checagem vigia 09/11 20:3x — sem bug novo, mesma fila vazia dedup
+1c090b1 docs: checagem vigia 09/11 16:3x — sem bug novo, fila vazia e pending ja dedup
 f26abca chore: atualiza estado da fila [skip ci]
 2b3cc1d chore: atualiza estado da fila [skip ci]
 5eca17e docs: checagem vigia 09/11 08:3x — sem bug novo, mesma falha de fila vazia dedup
 970c8be docs: checagem vigia 09/11 04:3x — sem bug novo, mesma falha de fila vazia dedup
-9b106cc chore: atualiza estado da fila [skip ci]
-c7c6e67 checagem de rotina 09/11 00:3x (vigia da nuvem) - sem bug novo
-75eeb15 docs: registra checagem de vigia 08/11 20:3x (sem bug novo)
-492072d chore: atualiza estado da fila [skip ci]
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 10/11/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 23:12:01Z e 22:35:09Z e 12:22:40Z, mesma
+`failure` em 03:53:41Z confirmada nas checagens anteriores como o alarme
+intencional do `sentinel.py` ("fila com so 0 post(s) futuro(s)"), já
+deduplicada em `content/.falhas_avisadas.json` (`fila_vazia_2026-11-09`).
+`SAUDE-DO-PROJETO.md` sem erro aberto. `content/recados.md` sem recado
+pendente. Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, esperando só a aprovação/recusa do Ramón —
+regra 5 proíbe eu decidir por ele). Buraco de CONTEÚDO aberto desde
+25/08/2026 continua, já avisado muitas vezes — não repito o recado. Nenhum
+código alterado.
+
+## 🔍 09/11/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 16:33:45Z (nova desde a checagem anterior),
+`success` em 12:22:40Z, `failure` em 03:53:41Z confirmada de novo via `gh run
+view --log` como o mesmo alarme intencional do `sentinel.py` ("fila com so 0
+post(s) futuro(s)"), já marcado em `content/.falhas_avisadas.json` — não é
+bug novo. `SAUDE-DO-PROJETO.md` sem erro aberto. Fila sem mudança: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, esperando só a
+aprovação/recusa do Ramón via Telegram há ~105022 min — regra 5 proíbe eu
+decidir por ele). Buraco de CONTEÚDO aberto desde 25/08/2026 continua, já
+avisado muitas vezes — não repito o recado. Nenhum código alterado.
+
+## 🔍 09/11/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(8 mais recentes): `success` em 12:22:40Z (nova desde a checagem anterior),
+`failure` em 03:53:41Z confirmada via `gh run view --log` como o mesmo alarme
+intencional do `sentinel.py` ("fila com so 0 post(s) futuro(s)"),
+`fila_vazia_2026-11-09` já em `content/.falhas_avisadas.json` desde a
+checagem de 04:3x — não é bug novo, não repito o aviso. Demais execuções
+`success`. `SAUDE-DO-PROJETO.md` sem erro aberto. Fila sem mudança: 7
+`rejected` + 1 `pending` (`2026-08-28_comida-servida`, com
+`auditoria.veredito` já preenchido "SEM OBJECAO" desde 28/08 — não é o bug de
+veredito faltando — esperando só a aprovação/recusa do Ramón via Telegram há
+~104513 min; regra 5 proíbe eu decidir por ele). Buraco de CONTEÚDO aberto
+desde 25/08/2026 continua, já avisado muitas vezes — não repito o recado.
+Nenhum código alterado.
 
 ## 🔍 09/11/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
 
