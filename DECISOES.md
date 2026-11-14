@@ -1,5 +1,23 @@
 ## Decisões e contexto
 
+## 🔍 14/11/2026 (checagem 00:3x-04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `failure` em 01:55:02Z (nova desde a checagem anterior),
+`success` em 21:44:23Z, 20:40:56Z, 15:37:37Z e 07:29:46Z (todas de 13/11).
+Confirmei via `gh run view 43543361808 --log`: o passo que falha é o mesmo
+`publisher/sentinel.py` de sempre, com o mesmo motivo já visto nos dias
+anteriores — "fila com so 0 post(s) futuro(s) (minimo saudavel: 2)". O job
+de salvar estado roda depois e dá push normal (`estado salvo (tentativa 1)`),
+então não há perda de estado nem bug de código: é só o alarme intencional de
+fila vazia, causado por falta de CONTEÚDO (filmagem), não por bug — sem
+acesso ao acervo local nem aos subagentes de produção aqui na nuvem, não há
+o que consertar sozinho. `SAUDE-DO-PROJETO.md` sem erro aberto. Fila sem
+mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`, esperando
+aprovação/recusa do Ramón). Buraco de CONTEÚDO aberto desde 25/08/2026
+continua, já avisado muitas vezes — não repito o recado. Nenhum código
+alterado.
+
 ## 🔍 13/11/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
