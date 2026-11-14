@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 13/11/2026 16:42. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 14/11/2026 00:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-11-13T15:37:37Z schedule success
-2026-11-13T12:33:21Z push success
-2026-11-13T07:29:46Z schedule success
+2026-11-13T21:44:23Z schedule success
+2026-11-13T20:40:56Z schedule success
+2026-11-13T20:32:43Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,23 +104,30 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+0479925 chore: atualiza estado da fila [skip ci]
+52f5de3 docs: checagem da vigia (13/11 20:3x) - sem bug novo
+e5adc0d chore: atualiza manutenção [skip ci]
+dcac6c4 docs: checagem da vigia (13/11 16:4x) - sem bug novo
 762a560 chore: atualiza estado da fila [skip ci]
 e1d3f53 docs: checagem da vigia (13/11 12:3x) - sem bug novo
 c207790 chore: atualiza estado da fila [skip ci]
 0c4ae54 docs: checagem da vigia (13/11 08:3x) - sem bug novo
-2a369e1 chore: atualiza estado da fila [skip ci]
-692bfc4 docs: checagem da vigia (13/11 04:3x) - sem bug novo
-6601677 chore: atualiza estado da fila [skip ci]
-93705c8 docs: checagem da vigia (13/11 00:3x) - sem bug novo
-```
-Alterações não commitadas:
-```
-M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 13/11/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 15:37:37Z (mais recente, sem mudança desde a
+checagem anterior), `success` em 07:29:46Z, e a `failure` de 00:35:58Z
+continua sendo o mesmo alarme intencional de fila vazia já deduplicado,
+sem repetição. `SAUDE-DO-PROJETO.md` sem erro aberto. `content/recados.md`
+sem recado pendente (todos `[x]`). Fila sem mudança: 7 `rejected` + 1
+`pending` (`2026-08-28_comida-servida`, esperando aprovação/recusa do
+Ramón). Buraco de CONTEÚDO aberto desde 25/08/2026 continua, já avisado
+muitas vezes — não repito o recado. Nenhum código alterado.
 
 ## 🔍 13/11/2026 (checagem 16:4x, vigia da nuvem) — sem bug novo
 
