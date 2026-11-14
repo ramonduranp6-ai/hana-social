@@ -1,5 +1,19 @@
 ## Decisões e contexto
 
+## 🔍 14/11/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 19:59:21Z (mais recente, novo desde a
+checagem anterior), `success` em 18:52:56Z e 18:07:28Z, `success` em
+15:14:23Z, a `failure` de 01:55:02Z continua sendo o mesmo alarme
+intencional de fila vazia já deduplicado e documentado nas checagens
+anteriores (mesmo motivo: "fila com so 0 post(s) futuro(s)"). `SAUDE-DO-
+PROJETO.md` sem erro aberto. `content/recados.md` sem recado pendente
+(todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, esperando aprovação/recusa do Ramón). Buraco
+de CONTEÚDO aberto desde 25/08/2026 continua, já avisado muitas vezes — não
+repito o recado. Nenhum código alterado.
+
 ## 🔍 14/11/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
