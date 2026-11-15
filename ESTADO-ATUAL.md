@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 14/11/2026 20:33. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 15/11/2026 12:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-11-14T19:59:21Z schedule success
-2026-11-14T18:52:56Z schedule success
-2026-11-14T18:07:28Z schedule success
+2026-11-15T12:06:34Z schedule success
+2026-11-15T08:32:35Z push success
+2026-11-15T04:33:51Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,22 +104,58 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+7ded8b4 docs: checagem da vigia (15/11 08:3x) - sem bug novo
+dbd5bf3 docs: checagem da vigia (15/11 04:3x) - sem bug novo
+9e53df1 chore: atualiza estado da fila [skip ci]
+a785849 docs: checagem da vigia (15/11 00:3x) - sem bug novo
+9470e3f docs: checagem da vigia (14/11 20:3x) - sem bug novo
 f32e1be chore: atualiza estado da fila [skip ci]
 7c11551 chore: atualiza manutenção [skip ci]
 8df1381 docs: checagem da vigia (14/11 16:3x) - sem bug novo
-0481e56 chore: atualiza estado da fila [skip ci]
-90438c0 chore: atualiza estado da fila [skip ci]
-4e60f13 docs: checagem da vigia (14/11 12:3x) - sem bug novo
-49a16a9 docs: checagem da vigia (14/11 08:3x) - sem bug novo
-ab95f93 chore: atualiza estado da fila [skip ci]
-```
-Alterações não commitadas:
-```
-M DECISOES.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 15/11/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 04:33:51Z (mais recente, novo desde a
+checagem anterior) e `success` em 00:32:23Z; a `failure` de 04:04:07Z
+continua sendo o mesmo alarme intencional do Sentinela ("fila com so 0
+post(s) futuro(s), minimo saudavel: 2"), confirmado de novo no `gh run view
+--log`: o passo "Salvar estado da fila" rodou e deu `success` normalmente
+depois (push `9e53df1` ok). Não é bug de código. `SAUDE-DO-PROJETO.md` sem
+erro aberto. `content/recados.md` sem recado pendente (todos `[x]`). Fila
+sem mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+esperando aprovação/recusa do Ramón). Buraco de CONTEÚDO aberto desde
+25/08/2026 continua, já avisado muitas vezes — não repito o recado. Nenhum
+código alterado.
+
+## 🔍 15/11/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): nova `failure` em 04:04:07Z desde a checagem anterior,
+confirmada por `gh run view --log`: é o mesmo alarme intencional do Sentinela
+("fila com so 0 post(s) futuro(s), minimo saudavel: 2"), não bug de código —
+o passo "Salvar estado da fila" rodou e deu `success` normalmente depois.
+`success` em 23:45:06Z continua sendo o mais recente sucesso de publicação.
+`SAUDE-DO-PROJETO.md` sem erro aberto. `content/recados.md` sem recado
+pendente (todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, esperando aprovação/recusa do Ramón). Buraco
+de CONTEÚDO aberto desde 25/08/2026 continua, já avisado muitas vezes — não
+repito o recado. Nenhum código alterado.
+
+## 🔍 15/11/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): `success` em 23:45:06Z (14/11, mais recente), `success`
+em 20:33:16Z e 19:59:21Z — nenhuma `failure` nova. `SAUDE-DO-PROJETO.md` sem
+erro aberto. `content/recados.md` sem recado pendente (todos `[x]`). Fila
+sem mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+esperando aprovação/recusa do Ramón). Buraco de CONTEÚDO aberto desde
+25/08/2026 continua, já avisado muitas vezes — não repito o recado. Nenhum
+código alterado.
 
 ## 🔍 14/11/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
 
