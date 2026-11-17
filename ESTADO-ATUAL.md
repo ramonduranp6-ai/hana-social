@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 17/11/2026 16:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 17/11/2026 20:34. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-11-17T16:32:42Z push success
 2026-11-17T12:33:03Z push success
 2026-11-17T12:12:22Z schedule success
-2026-11-17T08:32:33Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+2ca8855 docs: checagem da vigia (17/11 16:3x) - sem bug novo
 89f5ce1 chore: atualiza estado (vigia da nuvem 17/11 12:3x)
 63d2441 chore: atualiza estado da fila [skip ci]
 684e6d5 docs: checagem da vigia (17/11 08:3x) - sem bug novo
@@ -111,11 +112,26 @@ estava certo: ela está de costas do começo ao fim.
 9fd2fe8 chore: atualiza estado da fila [skip ci]
 ffae24e docs: checagem da vigia (17/11 00:3x) - sem bug novo
 150372b chore: atualiza manutenção [skip ci]
-33aa2ae chore: atualiza estado da fila [skip ci]
+```
+Alterações não commitadas:
+```
+M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 17/11/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): a mais recente (12:12:22Z) é `success`; a única `failure`
+da janela (03:19:02Z) já estava documentada nas checagens anteriores — mesmo
+alarme intencional do Sentinela de fila vazia. Nenhuma falha nova desde
+então. `SAUDE-DO-PROJETO.md` sem erro aberto. `content/recados.md` sem
+recado pendente (todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, esperando só aprovação/recusa do Ramón). Buraco
+de CONTEÚDO aberto desde 25/08/2026 continua, já avisado muitas vezes — não
+repito o recado. Nenhum código alterado.
 
 ## 🔍 17/11/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
 
