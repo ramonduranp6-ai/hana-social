@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 17/11/2026 08:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 17/11/2026 12:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-11-17T12:12:22Z schedule success
+2026-11-17T08:32:33Z push success
 2026-11-17T04:32:30Z push success
-2026-11-17T03:19:02Z schedule failure
-2026-11-17T00:32:51Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,18 +104,30 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+63d2441 chore: atualiza estado da fila [skip ci]
+684e6d5 docs: checagem da vigia (17/11 08:3x) - sem bug novo
 73612ce docs: checagem da vigia (17/11 04:3x) - sem bug novo
 9fd2fe8 chore: atualiza estado da fila [skip ci]
 ffae24e docs: checagem da vigia (17/11 00:3x) - sem bug novo
 150372b chore: atualiza manutenção [skip ci]
 33aa2ae chore: atualiza estado da fila [skip ci]
 0485dd0 chore: atualiza estado da fila [skip ci]
-d805e65 docs: checagem da vigia (16/11 16:3x) - sem bug novo
-4c76ed1 docs: checagem da vigia (16/11 12:3x) - sem bug novo
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 17/11/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): a mais recente (03:19:02Z) é `failure`, já documentada na
+checagem anterior — mesmo alarme intencional do Sentinela de fila vazia, sem
+relação com o passo "Salvar estado da fila". Nenhuma falha nova desde então.
+`SAUDE-DO-PROJETO.md` sem erro aberto. `content/recados.md` sem recado
+pendente (todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, esperando só aprovação/recusa do Ramón). Buraco
+de CONTEÚDO aberto desde 25/08/2026 continua, já avisado muitas vezes — não
+repito o recado. Nenhum código alterado.
 
 ## 🔍 17/11/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
 
