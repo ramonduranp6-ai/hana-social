@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 18/11/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 18/11/2026 04:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-11-17T21:56:41Z schedule success
-2026-11-17T21:09:27Z schedule success
-2026-11-17T20:57:52Z schedule success
+2026-11-18T02:59:22Z schedule success
+2026-11-18T00:33:43Z push success
+2026-11-18T00:33:24Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,18 +104,39 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+6931a1b chore: atualiza estado (vigia da nuvem 18/11 00:3x)
+4ce29af docs: checagem da vigia (18/11 00:3x) - sem bug novo
 7075a3a chore: atualiza estado da fila [skip ci]
 d636811 chore: atualiza manutenção [skip ci]
 732e008 chore: atualiza estado (vigia da nuvem 17/11 20:3x)
 2ca8855 docs: checagem da vigia (17/11 16:3x) - sem bug novo
 89f5ce1 chore: atualiza estado (vigia da nuvem 17/11 12:3x)
 63d2441 chore: atualiza estado da fila [skip ci]
-684e6d5 docs: checagem da vigia (17/11 08:3x) - sem bug novo
-73612ce docs: checagem da vigia (17/11 04:3x) - sem bug novo
+```
+Alterações não commitadas:
+```
+M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 18/11/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): a mais recente (21:56:41Z) é `success`; a única `failure`
+da janela (17/11 03:19:02Z) foi confirmada por `gh run view --log` como o
+mesmo alarme intencional do Sentinela de fila vazia (`fila com so 0
+post(s) futuro(s)`, exit 1 por design — ver comentário em
+`.github/workflows/publish.yml`), sem relação com o passo "Salvar estado da
+fila" (push ok). Nas rodadas seguintes do mesmo dia o sentinela já tinha
+`.falhas_avisadas.json` marcado e rebaixou para AVISO (não repete e-mail),
+confirmado lendo o log da rodada de 21:56. Nenhuma falha nova desde então.
+`SAUDE-DO-PROJETO.md` sem erro aberto. `content/recados.md` sem recado
+pendente (todos `[x]`). Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, esperando só aprovação/recusa do Ramón pelo
+Telegram, há ~81 dias). Buraco de CONTEÚDO aberto desde 25/08/2026 continua,
+já avisado muitas vezes — não repito o recado. Nenhum código alterado.
 
 ## 🔍 17/11/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
 
