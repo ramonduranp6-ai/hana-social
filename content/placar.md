@@ -1,17 +1,17 @@
 # Placar da Hana — o que cada post rendeu
 
 Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
-Última coleta: **2026-11-17** · fonte: API do Instagram.
+Última coleta: **2026-11-18** · fonte: API do Instagram.
 
 ## Seguidores
 
-**322** (+0 desde 2026-11-16)
+**322** (+0 desde 2026-11-17)
 
 ## Post a post (mais alcance em cima)
 
 | Post | Tipo | alcance | curtidas | comentários | salvos | compartilh. | views | seguidores ganhos |
 |---|---|---|---|---|---|---|---|---|
-| 2026-08-K_chegada-eloen | Reel | 1001 | 34 | 4 | 0 | 0 | 1349 | — |
+| 2026-08-K_chegada-eloen | Reel | 1001 | 34 | 4 | 0 | 0 | 1354 | — |
 | 2026-08-12_cenoura-filhote | Reel | 197 | 14 | 3 | 0 | 1 | 265 | — |
 | 2026-08-10_escolheu-o-canal | Reel | 186 | 11 | 0 | 0 | 0 | 281 | — |
 | 2026-08-14_regras-da-casa | Reel | 185 | 19 | 1 | 0 | 0 | 273 | — |
@@ -40,7 +40,6 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 
 | Data | Seguidores |
 |---|---|
-| 2026-11-06 | 326 |
 | 2026-11-07 | 325 |
 | 2026-11-08 | 325 |
 | 2026-11-09 | 323 |
@@ -52,6 +51,7 @@ Gerado por `publisher/metrics.py` a cada coleta. **Não editar à mão.**
 | 2026-11-15 | 323 |
 | 2026-11-16 | 322 |
 | 2026-11-17 | 322 |
+| 2026-11-18 | 322 |
 
 ## Limites desta coleta
 
