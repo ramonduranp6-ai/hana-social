@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 19/11/2026 16:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 19/11/2026 20:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-11-19T18:05:12Z schedule success
+2026-11-19T16:32:24Z push success
 2026-11-19T08:59:37Z schedule success
-2026-11-19T08:32:30Z push success
-2026-11-19T04:32:55Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+a19bb65 docs: registra checagem de rotina (19/11 16:3x) — sem bug novo
 8a895c4 docs: registra checagem de rotina (19/11 08:3x) — sem bug novo
 fd560b9 docs: registra checagem de rotina (19/11 04:3x) — sem bug novo
 82ba6dc chore: atualiza estado da fila [skip ci]
@@ -111,11 +112,41 @@ fd560b9 docs: registra checagem de rotina (19/11 04:3x) — sem bug novo
 4202ac3 docs: checagem da vigia (19/11 00:3x) - sem bug novo
 f867e56 chore: atualiza manutenção [skip ci]
 b7508bd chore: atualiza estado da fila [skip ci]
-56b5bb4 docs: checagem da vigia (18/11 20:3x) - sem bug novo
+```
+Alterações não commitadas:
+```
+M DECISOES.md
+ M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 19/11/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): a única `failure` da janela (19/11 01:20:36Z) confirmada
+de novo como o mesmo alarme intencional de fila vazia (dedupe diário já no
+código); as 2 execuções seguintes (18:05:12Z schedule, 08:59:37Z schedule)
+deram `success`. `SAUDE-DO-PROJETO.md` sem erro aberto, `content/recados.md`
+sem recado pendente sem resposta. Fila sem mudança: 7 `rejected` + 1
+`pending` (`2026-08-28_comida-servida`, aguardando só o Ramón). Buraco de
+CONTEÚDO desde 25/08/2026 continua, já avisado várias vezes — não repito o
+recado. Nenhum código alterado.
+
+## 🔍 19/11/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): a única `failure` da janela (19/11 01:20:36Z, já registrada
+nas checagens anteriores) confirmada de novo por `gh run view --log` como o
+mesmo alarme intencional do Sentinela de fila vazia (`fila com so 0 post(s)
+futuro(s)`), `exit 1` por design, dedupe diário já no código
+(`.falhas_avisadas.json` tem a chave de hoje). As 2 execuções seguintes
+(08:32:30Z push, 08:59:37Z schedule) deram `success`. `SAUDE-DO-PROJETO.md`
+sem erro aberto, `content/recados.md` sem recado pendente sem resposta. Fila
+sem mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+aguardando só o Ramón). Buraco de CONTEÚDO desde 25/08/2026 continua, já
+avisado várias vezes — não repito o recado. Nenhum código alterado.
 
 ## 🔍 19/11/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
 
