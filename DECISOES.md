@@ -1,5 +1,19 @@
 ## Decisões e contexto
 
+## 🔍 19/11/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): a única `failure` da janela (19/11 01:20:36Z, já registrada
+nas checagens anteriores) confirmada de novo por `gh run view --log` como o
+mesmo alarme intencional do Sentinela de fila vazia (`fila com so 0 post(s)
+futuro(s)`), `exit 1` por design, dedupe diário já no código
+(`.falhas_avisadas.json` tem a chave de hoje). As 2 execuções seguintes
+(08:32:30Z push, 08:59:37Z schedule) deram `success`. `SAUDE-DO-PROJETO.md`
+sem erro aberto, `content/recados.md` sem recado pendente sem resposta. Fila
+sem mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+aguardando só o Ramón). Buraco de CONTEÚDO desde 25/08/2026 continua, já
+avisado várias vezes — não repito o recado. Nenhum código alterado.
+
 ## 🔍 19/11/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
 
 Mesma checagem de rotina (`estado.py --mostrar`, `gh run list`/`run view --log`,
