@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 18/11/2026 20:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 19/11/2026 00:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-11-18T21:38:48Z schedule success
+2026-11-18T20:35:02Z schedule success
 2026-11-18T19:27:49Z schedule success
-2026-11-18T16:31:59Z push success
-2026-11-18T12:33:01Z push success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,18 +104,27 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+f867e56 chore: atualiza manutenção [skip ci]
+b7508bd chore: atualiza estado da fila [skip ci]
+56b5bb4 docs: checagem da vigia (18/11 20:3x) - sem bug novo
 c69e529 chore: atualiza estado da fila [skip ci]
 e2e92d8 docs: checagem da vigia (18/11 16:3x) - sem bug novo
 880e289 docs: checagem da vigia (18/11 12:3x) - sem bug novo
 50e5a87 chore: atualiza estado da fila [skip ci]
 919a6d6 chore: atualiza estado (vigia da nuvem 18/11 08:3x)
-cd02263 chore: atualiza estado (vigia da nuvem 18/11 04:3x)
-f398597 docs: checagem da vigia (18/11 04:3x) - sem bug novo
-6931a1b chore: atualiza estado (vigia da nuvem 18/11 00:3x)
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 18/11/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): todas `success`, a mais recente 19:27:49Z. `SAUDE-DO-PROJETO.md`
+sem erro aberto. Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando só o Ramón, ~83 dias). Buraco de
+CONTEÚDO desde 25/08/2026 continua, já avisado várias vezes — não repito o
+recado. Nenhum código alterado.
 
 ## 🔍 18/11/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
 
