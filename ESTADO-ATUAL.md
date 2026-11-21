@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 20/11/2026 20:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 21/11/2026 04:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
-2026-11-20T20:25:03Z schedule success
-2026-11-20T16:34:47Z schedule success
-2026-11-20T16:32:42Z push success
+2026-11-21T03:39:48Z schedule failure
+2026-11-21T00:33:28Z push success
+2026-11-20T22:52:59Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,23 +104,31 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+d5c1baf chore: atualiza estado da fila [skip ci]
+413fcc9 docs: checagem vigia de erros 21/11 00:3x — sem bug novo
+5cfc23f chore: atualiza estado da fila [skip ci]
+40c8550 docs: checagem vigia de erros 20/11 20:3x — sem bug novo
 db5d7f0 chore: atualiza manutenção [skip ci]
 7afce2c chore: atualiza estado da fila [skip ci]
 ad62532 chore: atualiza ESTADO-ATUAL.md (regenerado por estado.py)
 5202984 docs: checagem vigia de erros 20/11 16:3x — sem bug novo
-ca29b2f docs: checagem vigia de erros 20/11 12:3x — sem bug novo
-02fffe3 chore: atualiza ESTADO-ATUAL.md (regenerado por estado.py)
-8e423f4 docs: checagem vigia de erros 20/11 08:3x — sem bug novo
-d9fbcfe chore: atualiza estado da fila [skip ci]
-```
-Alterações não commitadas:
-```
-M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 21/11/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): a única `failure` da janela (20/11 00:44:38Z, já registrada
+nas checagens anteriores) confirmada de novo por `gh run view --log` como o
+mesmo alarme intencional do Sentinela de fila vazia, dedupe diário já no
+código; as execuções seguintes (16:34:47Z, 21:36:10Z, 22:52:59Z) deram
+`success`. `SAUDE-DO-PROJETO.md` sem erro aberto, `content/recados.md` sem
+recado pendente sem resposta. Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando só o Ramón aprovar/recusar no
+Telegram). Buraco de CONTEÚDO desde 25/08/2026 continua, já avisado várias
+vezes — não repito o recado. Nenhum código alterado.
 
 ## 🔍 20/11/2026 (checagem 20:3x, vigia da nuvem) — sem bug novo
 
