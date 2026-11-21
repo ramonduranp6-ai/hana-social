@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 21/11/2026 04:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 21/11/2026 08:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-11-21T04:32:36Z push success
 2026-11-21T03:39:48Z schedule failure
 2026-11-21T00:33:28Z push success
-2026-11-20T22:52:59Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,6 +104,7 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+d7a5eb9 docs: checagem vigia de erros 21/11 04:3x — sem bug novo
 d5c1baf chore: atualiza estado da fila [skip ci]
 413fcc9 docs: checagem vigia de erros 21/11 00:3x — sem bug novo
 5cfc23f chore: atualiza estado da fila [skip ci]
@@ -111,11 +112,24 @@ d5c1baf chore: atualiza estado da fila [skip ci]
 db5d7f0 chore: atualiza manutenção [skip ci]
 7afce2c chore: atualiza estado da fila [skip ci]
 ad62532 chore: atualiza ESTADO-ATUAL.md (regenerado por estado.py)
-5202984 docs: checagem vigia de erros 20/11 16:3x — sem bug novo
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 21/11/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): a única `failure` da janela (21/11 03:39:48Z) confirmada
+por `gh run view --log` como o mesmo alarme intencional do Sentinela de fila
+vazia (`fila com so 0 post(s) futuro(s)`), já deduplicado em
+`content/.falhas_avisadas.json` (`fila_vazia_2026-11-21`); as execuções
+seguintes (00:33:28Z, 21:36:10Z, 22:52:59Z, 16:34:47Z) deram `success`.
+`SAUDE-DO-PROJETO.md` sem erro aberto, `content/recados.md` sem recado
+pendente sem resposta. Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, aguardando só o Ramón aprovar/recusar no
+Telegram). Buraco de CONTEÚDO desde 25/08/2026 continua, já avisado várias
+vezes — não repito o recado. Nenhum código alterado.
 
 ## 🔍 21/11/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
 
