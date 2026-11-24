@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 24/11/2026 08:31. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 24/11/2026 12:31. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -104,18 +104,33 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+cb2e03d chore: atualiza estado da fila [skip ci]
+01c4aa5 docs: checagem vigia de erros 24/11 08:3x — sem bug novo
 78c0f42 chore: atualiza estado da fila [skip ci]
 cb9a163 chore: atualiza estado da fila [skip ci]
 8ab6735 docs: checagem vigia de erros 24/11 04:3x — sem bug novo
 21c67e7 chore: atualiza estado da fila [skip ci]
 fad85f0 chore: atualiza estado da fila [skip ci]
 42be678 docs: checagem vigia de erros 24/11 00:3x — sem bug novo
-179b262 chore: atualiza manutenção [skip ci]
-9488d2b chore: atualiza estado da fila [skip ci]
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 24/11/2026 (checagem 08:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(8 mais recentes): nenhuma `failure` nova desde a checagem anterior (04:3x) —
+a única `failure` da janela (24/11 01:18:54Z) continua confirmada via
+`gh run view --log` como o mesmo alarme intencional do Sentinela de fila vazia
+(`fila com so 0 post(s) futuro(s)`, chave `fila_vazia_2026-11-24` já em
+`content/.falhas_avisadas.json` — dedup funcionando); as execuções seguintes
+(04:32:07Z push, 05:04:48Z schedule) deram `success`. `SAUDE-DO-PROJETO.md`
+sem erro aberto, `content/recados.md` sem recado pendente sem resposta. Fila
+sem mudança: 7 `rejected` + 1 `pending` (`2026-08-28_comida-servida`,
+aguardando só o Ramón aprovar/recusar no Telegram). Buraco de CONTEÚDO desde
+25/08/2026 continua, já avisado várias vezes — não repito o recado. Nenhum
+código alterado.
 
 ## 🔍 24/11/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
 
