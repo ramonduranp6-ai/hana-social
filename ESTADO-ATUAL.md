@@ -1,6 +1,6 @@
 # ESTADO ATUAL — Hana Social
 
-Gerado automaticamente por `studio/estado.py` em 27/11/2026 00:32. **Não editar à mão** — para registrar
+Gerado automaticamente por `studio/estado.py` em 27/11/2026 04:32. **Não editar à mão** — para registrar
 decisões, use `DECISOES.md`.
 
 ## Fila (o que ainda vai ao ar)
@@ -26,9 +26,9 @@ decisões, use `DECISOES.md`.
 ## Automação
 Últimas execuções do publicador no GitHub:
 ```
+2026-11-27T03:24:02Z schedule failure
+2026-11-27T00:32:48Z push success
 2026-11-26T22:40:08Z schedule success
-2026-11-26T21:37:00Z schedule success
-2026-11-26T20:45:29Z schedule success
 ```
 - Vigia local (Agendador do Windows): próxima execução não encontrada
 - Token renovável automático: FALTA criar studio/.token
@@ -104,23 +104,29 @@ estava certo: ela está de costas do começo ao fim.
 
 ## Últimas mudanças no projeto
 ```
+e31d1d6 docs: checagem vigia de erros 27/11 04:3x — sem bug novo
+d995635 chore: atualiza estado da fila [skip ci]
+683a9f0 docs: checagem vigia de erros 27/11 00:3x — sem bug novo
 55d7745 chore: atualiza manutenção [skip ci]
 188de14 docs: checagem vigia de erros 26/11 20:3x — sem bug novo
 5caa4f0 docs: checagem 16:3x do vigia de erros — sem bug novo
 ff3f60e docs: checagem vigia de erros 26/11 12:3x — sem bug novo
 e9d5841 chore: atualiza estado da fila [skip ci]
-734f277 docs: checagem vigia de erros 26/11 08:3x — sem bug novo
-9f090ae docs: checagem vigia de erros 26/11 04:3x — sem bug novo
-9ae7595 chore: atualiza estado da fila [skip ci]
-```
-Alterações não commitadas:
-```
-M DECISOES.md
- M ESTADO-ATUAL.md
 ```
 
 ## Decisões e contexto
 ## Decisões e contexto
+
+## 🔍 27/11/2026 (checagem 04:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`:
+nova `failure` em 03:24:02Z (run `45933941853`), log lido — é o mesmo alarme
+intencional do Sentinela ("fila com 0 post(s) futuro(s)"), já dedup'd em
+`content/.falhas_avisadas.json` (`fila_vazia_2026-11-27`); o push do estado da
+fila dentro do próprio job teve sucesso. `SAUDE-DO-PROJETO.md` sem erro aberto,
+`content/recados.md` sem recado pendente sem resposta. Fila sem mudança: 7
+`rejected` + 1 `pending`. Buraco de CONTEÚDO desde 25/08/2026 continua, já
+avisado várias vezes — não repito o recado. Nenhum código alterado.
 
 ## 🔍 27/11/2026 (checagem 00:3x, vigia da nuvem) — sem bug novo
 
