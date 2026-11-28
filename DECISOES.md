@@ -1,5 +1,19 @@
 ## Decisões e contexto
 
+## 🔍 28/11/2026 (checagem 16:3x, vigia da nuvem) — sem bug novo
+
+`estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
+(5 mais recentes): nenhuma execução nova com falha real desde a checagem
+anterior (12:3x) — todas `schedule success`, última em 2026-11-28T12:36:22Z.
+`sentinela.py` só rodou auto-recuperação de um HEAD destacado da checkout
+local desta sessão (`git status` ficou limpo depois, nada para commitar).
+`SAUDE-DO-PROJETO.md` sem erro aberto, `content/recados.md` sem recado
+pendente sem resposta. Fila sem mudança: 7 `rejected` + 1 `pending`
+(`2026-08-28_comida-servida`, auditoria `SEM OBJECAO` já preenchida,
+aguardando só o Ramón aprovar/recusar). Buraco de CONTEÚDO desde 25/08/2026
+continua, já avisado várias vezes — não repito o recado. Nenhum código
+alterado.
+
 ## 🔍 28/11/2026 (checagem 12:3x, vigia da nuvem) — sem bug novo
 
 `estado.py --mostrar` sem ALARME no topo. `gh run list --workflow=publish.yml`
